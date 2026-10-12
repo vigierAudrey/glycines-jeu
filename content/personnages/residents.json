@@ -1,0 +1,66 @@
+{
+  "note": "Résidents fictifs de l'EHPAD Les Glycines, repris des cours du Bloc 2. Le champ repris_du_cours garde ce que les élèves connaissent déjà : ne rien ajouter de médical qui ne figure pas dans les cours.",
+  "residents": [
+    {
+      "id": "rose",
+      "civilite": "Mme",
+      "nom": "Rose",
+      "chambre": "chambre-rose",
+      "repris_du_cours": [
+        "Installation au fauteuil.",
+        "Apprécie le patio le matin.",
+        "Refuse les grands groupes.",
+        "Souhaite appeler sa sœur le mercredi."
+      ]
+    },
+    {
+      "id": "karim",
+      "civilite": "M.",
+      "nom": "Karim",
+      "chambre": "chambre-karim",
+      "repris_du_cours": [
+        "Toilette au lavabo avec une aide partielle.",
+        "Chambre équipée d'un lit médicalisé, d'un fauteuil et d'une salle d'eau."
+      ]
+    },
+    {
+      "id": "yvette",
+      "civilite": "Mme",
+      "nom": "Yvette",
+      "chambre": "chambre-yvette",
+      "repris_du_cours": [
+        "Comprend une consigne courte.",
+        "Lit une horloge simple.",
+        "Oublie une information récente.",
+        "Communication adaptée : phrase courte, une information à la fois, repère stable, répétition calme."
+      ]
+    },
+    {
+      "id": "denise",
+      "civilite": "Mme",
+      "nom": "Denise",
+      "chambre": "chambre-denise",
+      "repris_du_cours": [
+        "Comprend les consignes.",
+        "Pousse sur les accoudoirs, tient debout avec son aide et pivote elle-même.",
+        "Projet de personnalisation de sa chambre (plan, tri et rangement)."
+      ]
+    },
+    {
+      "id": "louis",
+      "civilite": "M.",
+      "nom": "Louis",
+      "chambre": "chambre-louis",
+      "repris_du_cours": [
+        "Nécessite un lève-personne et deux professionnels formés."
+      ]
+    },
+    {
+      "id": "andre",
+      "civilite": "M.",
+      "nom": "André",
+      "chambre": "chambre-andre",
+      "repris_du_cours": []
+    }
+  ]
+}

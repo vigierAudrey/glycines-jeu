@@ -1,0 +1,534 @@
+{
+  "diplome": "CAP Agent accompagnant au grand âge",
+  "bloc": "Bloc 2 : Promotion de l’autonomie de la personne dans son espace privé",
+  "texte_officiel": "Arrêté du 6 février 2023, publié au Journal officiel du 14 mars 2023",
+  "origine": "Extrait de MATRICE_REFERENTIEL_EXHAUSTIVE.json (cours CAP AAGA - Bloc 2, version 2026-08-16). Ne pas modifier à la main : c'est la source de vérité du jeu.",
+  "avertissement": "Le libellé CT3.4 est reconstitué à partir de la progression et de la ligne du tableau dont l’en-tête a été perdu lors de l’extraction ; les performances, critères, savoirs et limites sont transcrits des lignes 1417-1473.",
+  "niveaux": {
+    "N1": "Réalise avec aide constante.",
+    "N2": "Réalise avec guide ou relances.",
+    "N3": "Réalise en autonomie dans une situation connue.",
+    "N4": "Transfère à une situation nouvelle et justifie ses choix."
+  },
+  "competences": [
+    {
+      "code": "CT3.1",
+      "intitule": "Identifier le cadre de son intervention",
+      "performances_attendues": [
+        "Identifier et respecter ses obligations réglementaires et contractuelles.",
+        "Intervenir en respectant les limites de ses compétences.",
+        "Identifier les personnes et les lieux ressources.",
+        "Se situer en tant qu’acteur de prévention des risques professionnels.",
+        "Mettre en place des moyens de prévention d’incidents et d’accidents pour la personne âgée : identifier les risques et utiliser le matériel de sécurité adapté."
+      ],
+      "criteres_officiels": [
+        "Présentation du rôle des différents membres de l’établissement, du service et de l’équipe.",
+        "Recueil d’informations dans le respect de la discrétion, de la réserve et du secret professionnel.",
+        "Identification des ressources et des contraintes du cadre de l’intervention, dont celles relatives aux risques professionnels.",
+        "Repérage des enjeux de la prévention.",
+        "Identification des acteurs de la prévention.",
+        "Prise en compte de ces éléments pour la mise en œuvre de l’action.",
+        "Sélection pertinente de données et d’informations récentes et diversifiées.",
+        "Vérification de la fiabilité des sources d’information."
+      ],
+      "savoirs_associes": [
+        {
+          "intitule": "Établissements et structures d’accueil des personnes âgées",
+          "limites_connaissances": [
+            "À partir de situations de travail, relever le rôle des différents acteurs : structures et professionnels."
+          ]
+        },
+        {
+          "intitule": "Rôles et missions des personnels ; positions hiérarchiques et fonctionnelles",
+          "limites_connaissances": [
+            "Situer les membres, leurs rôles, les limites de fonction et les personnes ou lieux ressources dans des situations de travail."
+          ]
+        },
+        {
+          "intitule": "Cadre réglementaire ; projets d’établissement, de service et projet de vie",
+          "limites_connaissances": [
+            "Présenter le fonctionnement réglementaire d’une structure d’accueil de la personne âgée.",
+            "Illustrer par des exemples l’accompagnement quotidien de la personne âgée par les professionnels."
+          ]
+        },
+        {
+          "intitule": "Protection des majeurs vulnérables",
+          "limites_connaissances": [
+            "Présenter les principes généraux : types de mesures, juge des tutelles, notamment."
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CT3.2",
+      "intitule": "Prendre en compte le degré d’autonomie de la personne",
+      "performances_attendues": [
+        "Identifier les capacités de la personne âgée.",
+        "Prendre en compte les documents d’accompagnement, dont le projet de vie."
+      ],
+      "criteres_officiels": [
+        "Repérage du degré d’autonomie de la personne âgée et prise en compte de ces éléments pour la mise en œuvre de ses actions.",
+        "Sélection pertinente des données.",
+        "Utilisation d’informations récentes et diversifiées."
+      ],
+      "savoirs_associes": [
+        {
+          "intitule": "Vieillissement, perte d’autonomie et dépendance",
+          "limites_connaissances": [
+            "Repérer les modifications biologiques, cognitives et de l’état psychologique de la personne.",
+            "En déduire les conséquences pour la personne âgée."
+          ]
+        },
+        {
+          "intitule": "Outils d’évaluation de l’autonomie",
+          "limites_connaissances": [
+            "Repérer les facteurs énoncés dans les différents outils d’évaluation de l’autonomie."
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CT3.3",
+      "intitule": "Identifier les ressources et les contraintes techniques de son intervention",
+      "performances_attendues": [
+        "Repérer le contexte de l’activité : lieu, équipement, matériel et produits disponibles.",
+        "Exploiter les ressources techniques.",
+        "Alerter sur l’état du stock."
+      ],
+      "criteres_officiels": [
+        "Prise en compte du contexte de l’activité.",
+        "Application correcte des instructions réglementaires et des protocoles."
+      ],
+      "savoirs_associes": [
+        {
+          "intitule": "Déterminants liés à l’environnement qui facilitent ou limitent le déplacement",
+          "limites_connaissances": [
+            "Décrire les caractéristiques d’un environnement limitant ou facilitant."
+          ]
+        },
+        {
+          "intitule": "Adaptation et sécurisation de l’espace",
+          "limites_connaissances": [
+            "Décrire les caractéristiques d’un environnement matériel adapté et sécurisant pour les personnes âgées."
+          ]
+        },
+        {
+          "intitule": "Gestion des produits et matériels",
+          "limites_connaissances": [
+            "Identifier les besoins en matériels et produits de la personne.",
+            "Repérer les professionnels en charge de la gestion des stocks."
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CT3.4",
+      "intitule": "Prendre en compte les dimensions éthiques et déontologiques de son intervention",
+      "performances_attendues": [
+        "Respecter l’altérité de la personne âgée.",
+        "Respecter les règles professionnelles applicables au contexte."
+      ],
+      "criteres_officiels": [
+        "Absence de jugement.",
+        "Respect de la discrétion, de la réserve et du secret professionnels."
+      ],
+      "savoirs_associes": [
+        {
+          "intitule": "Charte des droits et libertés de la personne âgée, en situation de handicap ou de dépendance",
+          "limites_connaissances": [
+            "Présenter les principes de la charte."
+          ]
+        },
+        {
+          "intitule": "Principe de laïcité ; notions et repères d’éthique et de déontologie",
+          "limites_connaissances": [
+            "Appliquer ces repères à des situations professionnelles sans jugement."
+          ]
+        },
+        {
+          "intitule": "Secret professionnel et conditions de sa levée ; discrétion professionnelle ; secret partagé",
+          "limites_connaissances": [
+            "Distinguer les notions, les destinataires autorisés et les conditions de partage ou de levée dans des situations de travail."
+          ]
+        },
+        {
+          "intitule": "Valeurs, normes et règles professionnelles",
+          "limites_connaissances": [
+            "Identifier ses propres références pour ne pas influencer la mise en œuvre de ses activités.",
+            "Justifier les règles déontologiques appliquées.",
+            "Justifier les obligations liées à sa fonction envers la personne : valeurs, croyances, références culturelles et projet de vie ; respect de la vie privée.",
+            "Justifier les obligations envers la structure : projet d’établissement et règlement intérieur."
+          ]
+        },
+        {
+          "intitule": "Fin de vie et mort : aspects psychosociologiques et cultures de la mort ; accompagnement et problèmes éthiques ; directives anticipées",
+          "limites_connaissances": [
+            "Présenter l’approche de la mort dans différentes cultures et les réactions possibles de l’entourage.",
+            "Dans une situation donnée, participer à la mise en œuvre des directives anticipées."
+          ]
+        },
+        {
+          "intitule": "Bientraitance et maltraitance",
+          "limites_connaissances": [
+            "Identifier d’éventuels signes précurseurs de maltraitance en concertation avec les responsables de la structure.",
+            "Repérer les facteurs pouvant être à l’origine de maltraitance.",
+            "Identifier les ressources disponibles."
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CT4.1",
+      "intitule": "Communiquer avec la personne de manière appropriée",
+      "performances_attendues": [
+        "Susciter ou répondre à un processus d’interactions non verbales et verbales.",
+        "Établir des repères verbaux et non verbaux permettant la sécurisation de la personne âgée."
+      ],
+      "criteres_officiels": [
+        "Intervention et attitude adaptées pour amener la personne âgée à participer aux activités de la vie quotidienne.",
+        "Utilisation d’un ton, d’un vocabulaire ou d’un outil adapté au niveau de compréhension de la personne.",
+        "Adaptation du mode de relation à la situation de la personne âgée."
+      ],
+      "savoirs_associes": [
+        {
+          "intitule": "Communication avec le résident",
+          "limites_connaissances": [
+            "Justifier les outils et les méthodes utilisés pour adapter sa communication selon les capacités de la personne."
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CT4.2",
+      "intitule": "Prendre en compte les besoins et les attentes de la personne",
+      "performances_attendues": [
+        "Écouter la personne âgée.",
+        "Faire exprimer les besoins et les attentes de la personne âgée.",
+        "Repérer et justifier les besoins de la personne.",
+        "Répondre aux besoins et attentes de la personne âgée."
+      ],
+      "criteres_officiels": [
+        "Respect du projet de vie.",
+        "Écoute attentive de la personne.",
+        "Observation de ses habitudes."
+      ],
+      "savoirs_associes": [
+        {
+          "intitule": "Besoins et attentes de la personne âgée ; rythmes de vie",
+          "limites_connaissances": [
+            "Justifier les besoins et attentes.",
+            "Décrire le rythme de vie."
+          ]
+        },
+        {
+          "intitule": "Projet de vie",
+          "limites_connaissances": [
+            "Préciser la place de la personne et des différents acteurs dans la construction du projet.",
+            "Caractériser les étapes d’élaboration, de mise en place et de suivi du projet."
+          ]
+        }
+      ]
+    },
+    {
+      "code": "C2.1.1",
+      "intitule": "Réaliser une réfection de lit inoccupé",
+      "performances_attendues": [
+        "Choisir le matériel nécessaire à la réfection du lit.",
+        "Réaliser la technique de réfection du lit.",
+        "Trier le linge sale.",
+        "Éliminer les déchets."
+      ],
+      "criteres_officiels": [
+        "Respect des habitudes et des attentes de la personne.",
+        "Respect des règles d’hygiène, de sécurité et d’ergonomie.",
+        "Respect des protocoles et des fiches techniques.",
+        "Bionettoyage du lit."
+      ],
+      "savoirs_associes": [
+        {
+          "intitule": "Lits médicalisés, accessoires du lit, linge de lit",
+          "limites_connaissances": [
+            "Présenter les caractéristiques d’un lit médicalisé et leur intérêt.",
+            "Justifier les accessoires de lit adaptés.",
+            "Justifier le choix du type de réfection à réaliser.",
+            "Justifier les étapes de réalisation."
+          ]
+        }
+      ]
+    },
+    {
+      "code": "C2.1.2",
+      "intitule": "Favoriser le confort, le sommeil et le repos",
+      "performances_attendues": [
+        "Aménager et sécuriser l’espace pour favoriser le confort et le sommeil."
+      ],
+      "criteres_officiels": [
+        "Respect du rythme, des habitudes et des attentes de la personne.",
+        "Relation privilégiée et sécurisante.",
+        "Prise en compte du bien-être.",
+        "Relation favorisant l’autonomie.",
+        "Respect des règles d’hygiène, de sécurité et d’ergonomie.",
+        "Respect de la pudeur et de l’intimité.",
+        "Adaptation des gestes aux capacités et aux besoins de la personne âgée."
+      ],
+      "savoirs_associes": [
+        {
+          "intitule": "Conditions favorables à l’endormissement et au réveil",
+          "limites_connaissances": [
+            "Identifier les conditions favorisant un bon endormissement et la sécurité de la personne lors de son sommeil."
+          ]
+        }
+      ]
+    },
+    {
+      "code": "C2.1.3",
+      "intitule": "Contribuer aux activités motrices",
+      "performances_attendues": [
+        "Mettre en place un environnement sécurisé pour favoriser les déplacements.",
+        "Encourager la personne à maintenir une activité motrice.",
+        "Favoriser la mobilité."
+      ],
+      "criteres_officiels": [
+        "Respect du rythme, des habitudes et des attentes de la personne.",
+        "Relation privilégiée et sécurisante favorisant l’autonomie.",
+        "Prise en compte du bien-être.",
+        "Respect des règles d’hygiène, de sécurité et d’ergonomie.",
+        "Respect de la pudeur et de l’intimité.",
+        "Adaptation des gestes aux capacités et aux besoins de la personne âgée."
+      ],
+      "savoirs_associes": [
+        {
+          "intitule": "Pathologies de l’appareil locomoteur : arthrose, arthrite, ostéoporose, troubles de l’équilibre",
+          "limites_connaissances": [
+            "Indiquer les principales manifestations et adapter ses gestes professionnels."
+          ]
+        },
+        {
+          "intitule": "Matériel d’aide à la mobilisation et aux déplacements ; accompagnement à la marche",
+          "limites_connaissances": [
+            "Identifier le matériel facilitant l’autonomie et préciser ses conditions d’utilisation.",
+            "Justifier les modalités procédurales mises en œuvre pour les déplacements.",
+            "Justifier l’intérêt de maintenir une autonomie motrice chez la personne âgée."
+          ]
+        }
+      ]
+    },
+    {
+      "code": "C2.1.4",
+      "intitule": "Solliciter et aider la personne pour son bien-être socio-esthétique, se vêtir et se dévêtir et la prise des repas",
+      "performances_attendues": [
+        "Mettre en place un environnement adapté à la réalisation du bien-être socio-esthétique, du vêtir/dévêtir et de la prise des repas.",
+        "Accompagner, encourager et valoriser la personne."
+      ],
+      "criteres_officiels": [
+        "Respect du rythme, des habitudes et des attentes de la personne.",
+        "Relation privilégiée et sécurisante favorisant l’autonomie.",
+        "Prise en compte du bien-être.",
+        "Respect des règles d’hygiène, de sécurité et d’ergonomie.",
+        "Respect de la pudeur et de l’intimité.",
+        "Adaptation des gestes aux capacités et aux besoins de la personne âgée."
+      ],
+      "savoirs_associes": [
+        {
+          "intitule": "Matériels d’aide et accessoires ; aides techniques à l’habillage ; bas de contention",
+          "limites_connaissances": [
+            "Justifier l’utilisation du matériel ou de l’accessoire."
+          ]
+        }
+      ]
+    },
+    {
+      "code": "C2.1.5",
+      "intitule": "Préserver la continence",
+      "performances_attendues": [
+        "Mettre en place un environnement adapté à la préservation de la continence.",
+        "Accompagner, encourager et valoriser la personne."
+      ],
+      "criteres_officiels": [
+        "Respect du rythme, des habitudes et des attentes de la personne.",
+        "Relation privilégiée et sécurisante favorisant l’autonomie.",
+        "Prise en compte du bien-être.",
+        "Respect des règles d’hygiène, de sécurité et d’ergonomie.",
+        "Respect de la pudeur et de l’intimité.",
+        "Adaptation des gestes aux capacités et aux besoins de la personne âgée."
+      ],
+      "savoirs_associes": [
+        {
+          "intitule": "Aucun savoir associé distinct n’est isolé sous C2.1.5 dans l’extrait ; les savoirs sur l’incontinence urinaire et l’insuffisance rénale sont officiellement listés avec C2.1.6.",
+          "limites_connaissances": [
+            "Mobiliser le rythme, les habitudes, l’environnement, les aides autorisées, l’observation et la transmission sans poser de diagnostic ni se substituer aux professionnels compétents."
+          ]
+        }
+      ]
+    },
+    {
+      "code": "C2.1.6",
+      "intitule": "Surveiller l’état de la personne et intervenir en conséquence",
+      "performances_attendues": [
+        "Identifier les signes d’urgence et les signes d’alerte.",
+        "Observer les signes physiques ou comportementaux.",
+        "Transmettre les éléments observés."
+      ],
+      "criteres_officiels": [
+        "Respect des règles éthiques et du protocole.",
+        "Partage des observations avec l’équipe ou le service concerné.",
+        "Fidélité de la transmission des éléments observés.",
+        "Transmission des informations préoccupantes aux personnes compétentes."
+      ],
+      "savoirs_associes": [
+        {
+          "intitule": "Pathologies de l’appareil digestif",
+          "elements_exhaustifs": [
+            "vomissements",
+            "diarrhées",
+            "constipation"
+          ],
+          "limites_connaissances": [
+            "Indiquer les principales manifestations et proposer des adaptations de la pratique professionnelle."
+          ]
+        },
+        {
+          "intitule": "Pathologie métabolique",
+          "elements_exhaustifs": [
+            "diabète"
+          ],
+          "limites_connaissances": [
+            "Indiquer les principales manifestations et proposer des adaptations de la pratique professionnelle."
+          ]
+        },
+        {
+          "intitule": "Pathologies de l’appareil urinaire",
+          "elements_exhaustifs": [
+            "incontinence urinaire",
+            "insuffisance rénale"
+          ],
+          "limites_connaissances": [
+            "Indiquer les principales manifestations et proposer des adaptations de la pratique professionnelle."
+          ]
+        },
+        {
+          "intitule": "Pathologies cardio-vasculaires",
+          "elements_exhaustifs": [
+            "varices",
+            "phlébites"
+          ],
+          "limites_connaissances": [
+            "Indiquer les principales manifestations et proposer des adaptations de la pratique professionnelle."
+          ]
+        },
+        {
+          "intitule": "Pathologies du système nerveux et douleur",
+          "elements_exhaustifs": [
+            "éléments dépressifs",
+            "troubles neurocognitifs",
+            "maladie d’Alzheimer",
+            "maladie de Parkinson",
+            "douleur"
+          ],
+          "limites_connaissances": [
+            "Indiquer les principales manifestations et proposer des adaptations de la pratique professionnelle."
+          ]
+        },
+        {
+          "intitule": "Troubles cutanés",
+          "elements_exhaustifs": [
+            "troubles cutanés",
+            "escarres"
+          ],
+          "limites_connaissances": [
+            "Indiquer les principales manifestations et proposer des adaptations de la pratique professionnelle."
+          ]
+        },
+        {
+          "intitule": "Dénutrition",
+          "elements_exhaustifs": [
+            "dénutrition"
+          ],
+          "limites_connaissances": [
+            "Indiquer les principales manifestations et proposer des adaptations de la pratique professionnelle."
+          ]
+        },
+        {
+          "intitule": "Atteintes sensorielles",
+          "elements_exhaustifs": [
+            "surdité",
+            "cécité"
+          ],
+          "limites_connaissances": [
+            "Indiquer les principales manifestations et proposer des adaptations de la pratique professionnelle."
+          ]
+        }
+      ]
+    },
+    {
+      "code": "C2.2.1",
+      "intitule": "Nettoyer et décontaminer les espaces privés dans le cadre de l’entretien journalier et périodique",
+      "performances_attendues": [
+        "Identifier les revêtements et les matériaux.",
+        "Réaliser l’entretien courant des différentes pièces et du matériel.",
+        "Réaliser l’entretien périodique des espaces.",
+        "Repérer les dysfonctionnements et agir en conséquence."
+      ],
+      "criteres_officiels": [
+        "Adhésion de la personne.",
+        "Rangement adapté.",
+        "Nettoyage/bionettoyage respectueux du mobilier et des protocoles.",
+        "Choix du matériel et des produits adaptés et utilisation correcte.",
+        "Maintien du bon état des effets personnels.",
+        "Respect du temps.",
+        "Qualité du résultat.",
+        "Dysfonctionnements repérés et geste de première intervention.",
+        "Choix du professionnel relais adapté."
+      ],
+      "savoirs_associes": [
+        {
+          "intitule": "Revêtements et matériaux",
+          "limites_connaissances": [
+            "Justifier le choix des produits, des matériels et des modalités procédurales.",
+            "Mettre en relation les propriétés d’un revêtement avec la technique d’entretien adaptée."
+          ]
+        }
+      ]
+    },
+    {
+      "code": "C2.2.2",
+      "intitule": "Contribuer à la personnalisation de l’espace privé",
+      "performances_attendues": [
+        "Prendre en compte les souhaits de la personne et de sa famille.",
+        "Trier et classer les affaires personnelles et les consommables.",
+        "Stimuler les capacités intellectuelles et cognitives et les liens affectifs.",
+        "Proposer des solutions de personnalisation de l’espace."
+      ],
+      "criteres_officiels": [
+        "Écoute attentive et active de la personne et de sa famille.",
+        "Identification des habitudes et des souhaits de la personne.",
+        "Participation de la personne.",
+        "Sécurisation de l’espace.",
+        "Mobilisation des échanges épistolaires, d’internet, de l’appel téléphonique ou vidéo selon la situation."
+      ],
+      "savoirs_associes": [
+        {
+          "intitule": "Possibilités de personnalisation",
+          "limites_connaissances": [
+            "Proposer des solutions tenant compte des choix, envies et goûts.",
+            "Tenir compte des besoins et capacités.",
+            "Tenir compte du confort.",
+            "Tenir compte des contraintes de sécurité et du contexte de l’établissement."
+          ]
+        },
+        {
+          "intitule": "Rangement des effets personnels",
+          "limites_connaissances": [
+            "Justifier une solution de rangement adaptée aux besoins et aux souhaits de la personne."
+          ]
+        },
+        {
+          "intitule": "Communication avec l’entourage",
+          "limites_connaissances": [
+            "Justifier l’intérêt de maintenir le lien avec la famille."
+          ]
+        }
+      ]
+    }
+  ]
+}

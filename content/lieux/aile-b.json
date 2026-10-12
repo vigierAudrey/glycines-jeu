@@ -1,0 +1,113 @@
+{
+  "id": "aile-b",
+  "nom": "Les Glycines · Aile B",
+  "note": "Plan modifiable : chaque lettre de la grille est une case de 1 m sur 1 m. Une lettre = une zone (voir zones). Le point est une case vide, la lettre p est une porte.",
+  "grille": [
+    "RRRRKKKKYYYYDDDDMMMMMMMM",
+    "RRRRKKKKYYYYDDDDMMMMMMMM",
+    "RRRRKKKKYYYYDDDDMMMMMMMM",
+    "RRpRKKpKYYpYDDpDMMMpMMMM",
+    "CCCCCCCCCCCCCCCCCCCCCCCC",
+    "CCCCCCCCCCCCCCCCCCCCCCCC",
+    "LLpLAApAIIpIEppNNNpNNNNN",
+    "LLLLAAAAIIIIEEHNNNNNNNNN",
+    "LLLLAAAAIIIIEEHNNNNNNNNN",
+    "LLLLAAAAIIIIEEHNNNpNNNNN",
+    "...............PPPPPPPPP",
+    "...............PPPPPPPPP",
+    "...............PPPPPPPPP"
+  ],
+  "zones": {
+    "R": {
+      "id": "chambre-rose",
+      "nom": "Chambre de Mme Rose",
+      "type": "chambre",
+      "couleur": "#f4c2c2",
+      "resident": "rose"
+    },
+    "K": {
+      "id": "chambre-karim",
+      "nom": "Chambre de M. Karim",
+      "type": "chambre",
+      "couleur": "#c8d8f0",
+      "resident": "karim"
+    },
+    "Y": {
+      "id": "chambre-yvette",
+      "nom": "Chambre de Mme Yvette",
+      "type": "chambre",
+      "couleur": "#e6d3f2",
+      "resident": "yvette"
+    },
+    "D": {
+      "id": "chambre-denise",
+      "nom": "Chambre de Mme Denise",
+      "type": "chambre",
+      "couleur": "#f7e1b5",
+      "resident": "denise"
+    },
+    "L": {
+      "id": "chambre-louis",
+      "nom": "Chambre de M. Louis",
+      "type": "chambre",
+      "couleur": "#cfe8d6",
+      "resident": "louis"
+    },
+    "A": {
+      "id": "chambre-andre",
+      "nom": "Chambre de M. André",
+      "type": "chambre",
+      "couleur": "#f2d0b8",
+      "resident": "andre"
+    },
+    "M": {
+      "id": "salle-a-manger",
+      "nom": "Salle à manger",
+      "type": "collectif",
+      "couleur": "#fff1a8"
+    },
+    "N": {
+      "id": "salon",
+      "nom": "Salon et animation",
+      "type": "collectif",
+      "couleur": "#ffd6a5"
+    },
+    "I": {
+      "id": "poste-de-soins",
+      "nom": "Poste de soins",
+      "type": "service",
+      "couleur": "#b9e3f0"
+    },
+    "E": {
+      "id": "reserve",
+      "nom": "Réserve",
+      "type": "service",
+      "couleur": "#d9d4cc"
+    },
+    "H": {
+      "id": "local-menage",
+      "nom": "Local ménage",
+      "type": "service",
+      "couleur": "#c9c2e0"
+    },
+    "C": {
+      "id": "couloir",
+      "nom": "Couloir",
+      "type": "circulation",
+      "couleur": "#ecebe6"
+    },
+    "P": {
+      "id": "patio",
+      "nom": "Patio",
+      "type": "exterieur",
+      "couleur": "#a8d8a0"
+    },
+    "p": {
+      "id": "porte",
+      "nom": "Porte",
+      "type": "porte",
+      "couleur": "#d8d4c8"
+    }
+  },
+  "vide": "."
+}

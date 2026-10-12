@@ -1,0 +1,21 @@
+{
+  "id": "m00-exemple-chambre-karim",
+  "statut": "brouillon",
+  "titre": "Avant d'agir, je regarde",
+  "duree_min": 15,
+  "sequence_requise": "S2",
+  "lieu": "chambre-karim",
+  "personnages": ["karim", "joueur", "infirmiere", "ash"],
+  "competences": [
+    { "code": "CT3.3", "critere": "Prise en compte du contexte de l’activité." },
+    { "code": "CT3.1", "critere": "Identification des ressources et des contraintes du cadre de l’intervention, dont celles relatives aux risques professionnels." }
+  ],
+  "situation": "Il est 8 h. Vous entrez dans la chambre de M. Karim pour l'accompagner à sa toilette au lavabo, avec une aide partielle.",
+  "objectif_eleve": "Repérer dans la chambre ce qui facilite ou gêne l'activité, puis décider : agir, adapter ou alerter.",
+  "idees_de_reperages": [
+    "Sol mouillé devant le lavabo.",
+    "Sonnette hors de portée du lit.",
+    "Fauteuil sans les freins."
+  ],
+  "a_construire_en_phase_2": "Le format détaillé des étapes (observation, choix, relais, bilan) sera défini dans la phase 2 de la ROADMAP. Ce fichier sert d'exemple pour le validateur."
+}
