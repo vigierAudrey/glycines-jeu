@@ -33,7 +33,7 @@ Texte net, accessible, compatible avec la lecture à voix haute et les lecteurs 
 
 ## D-007 · Dépôt dans WSL, hors Nextcloud · 12/10/2026
 
-Le projet vit dans `~/dev/glycine/glycines-jeu/glycines-jeu` (WSL) avec un dépôt GitHub privé. Jamais dans `Documents\cours\` : `node_modules` contient des milliers de fichiers que Nextcloud synchroniserait.
+Le projet vit dans `~/dev/glycine/glycines-jeu/glycines-jeu` (WSL) avec un dépôt GitHub public. Jamais dans `Documents\cours\` : `node_modules` contient des milliers de fichiers que Nextcloud synchroniserait.
 
 ## D-008 · Rendu à la demande et étiquettes selon la densité · 12/10/2026
 

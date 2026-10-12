@@ -15,7 +15,7 @@ Légende : `[x]` fait · `[ ]` à faire · 🧑‍🏫 tâche pour Audrey (sans 
   🎓 Pourquoi un test automatique protège la règle « le référentiel est la source de vérité ».
 - [x] **0.4** Afficher l'aile B en 3D isométrique à partir du plan en données, avec les personnages immobiles, la rotation et la légende « Qui est qui ? ».
 - [x] **0.5** 🧑‍🏫 Installer le projet dans `~/dev/glycine/glycines-jeu/glycines-jeu`, installer pnpm, lancer `pnpm install` puis `pnpm dev`, ouvrir le jeu.
-- [ ] **0.6** 🧑‍🏫 Créer le dépôt git, faire le premier commit, le pousser sur un dépôt GitHub **privé**.
+- [x] **0.6** 🧑‍🏫 Créer le dépôt git, faire le premier commit, le pousser sur un dépôt GitHub public.
   🎓 git init, add, commit, push.
 - [ ] **0.7** 🧑‍🏫 Premier exercice : modifier la grille de `content/lieux/aile-b.json` (agrandir le patio, déplacer une porte) et observer le résultat.
 
