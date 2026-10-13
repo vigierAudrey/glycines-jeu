@@ -370,3 +370,21 @@ html, body {
 .releve li { display: flex; align-items: flex-start; gap: 4px; }
 .releve__sens { display: block; font-size: 0.85rem; color: #555b66; }
 .debriefing { margin: 0; padding-left: 22px; display: grid; gap: 6px; }
+
+/* Code de reprise (src/ui/progression.ts), sous la liste des missions. */
+.code-reprise { margin-top: 14px; padding-top: 10px; border-top: 1px solid #e6e2ec; font-size: 0.9rem; }
+.code-reprise h3 { margin: 0 0 4px; }
+.code-reprise__code { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 1.1rem; letter-spacing: 0.05em; user-select: all; }
+.code-reprise__formulaire { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 8px; }
+.code-reprise__formulaire label { display: grid; gap: 4px; flex: 1; min-width: 180px; }
+.code-reprise__formulaire input {
+  min-height: 44px;
+  padding: 0 10px;
+  font: inherit;
+  font-family: ui-monospace, Menlo, Consolas, monospace;
+  text-transform: uppercase;
+  border: 2px solid #d9d3e3;
+  border-radius: 10px;
+}
+.code-reprise__formulaire input:focus-visible { outline: 3px solid var(--violet); outline-offset: 1px; }
+.code-reprise__message { flex-basis: 100%; margin: 0; color: #9b3a1a; font-weight: 600; }

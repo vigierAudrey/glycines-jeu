@@ -16,6 +16,7 @@ import { ficheDe } from './regles/fiche';
 import { creerBulle } from './ui/bulle';
 import { monterInterface } from './ui/interface';
 import { monterMissions } from './ui/mission';
+import { suivreProgression } from './ui/progression';
 
 const contenu = chargerContenu();
 const lieu = contenu.lieux[0];
@@ -45,7 +46,12 @@ const agent = joueur && personnages.getObjectByName(`personnage-${joueur.id}`);
 const allerVers = agent ? brancherMarche(theatre, plan, agent) : undefined;
 
 // Missions : panneau d'étape, loupe, relais et relève. Elles font marcher l'agent vers une pièce ou une personne.
+// La progression (derniers niveaux) est gardée dans le navigateur ; le code de reprise la transporte.
+const progression = suivreProgression(contenu.missions);
 const missions = monterMissions(racineInterface, theatre, contenu, {
+  surFin: progression.enregistrer,
+  niveauxObtenus: progression.niveauxObtenus,
+  basDeListe: () => progression.blocCode(() => missions.ouvrirListe()),
   allerVersZone: (idZone) => {
     const zone = trouverZone(plan, idZone);
     if (zone && allerVers) {

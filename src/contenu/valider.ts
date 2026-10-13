@@ -67,10 +67,16 @@ export function validerContenu(contenu: Contenu): Probleme[] {
 
   // ---------- Missions ----------
   const idsMissions = new Set<string>();
+  const prefixes = new Set<string>();
   for (const m of contenu.missions) {
     const f = `scenarios/${m.id}`;
     if (idsMissions.has(m.id)) signaler(f, 'Identifiant de mission utilisé deux fois.');
     idsMissions.add(m.id);
+    // Le code de reprise désigne une mission par ce qui précède le premier tiret de son id (« m00 »).
+    const prefixe = m.id.split('-')[0];
+    if (!/^m\d{2}$/.test(prefixe)) signaler(f, `L'identifiant doit commencer par « m » et deux chiffres, puis un tiret (ex. m01-lever-rose).`);
+    if (prefixes.has(prefixe)) signaler(f, `Le préfixe « ${prefixe} » est déjà pris par une autre mission.`);
+    prefixes.add(prefixe);
     if (!['brouillon', 'valide'].includes(m.statut)) signaler(f, `Statut « ${m.statut} » inconnu (brouillon ou valide).`);
     if (!idsZones.has(m.lieu)) signaler(f, `Lieu « ${m.lieu} » introuvable.`);
     for (const id of m.personnages) if (!idsPersonnages.has(id)) signaler(f, `Personnage « ${id} » introuvable.`);

@@ -38,13 +38,15 @@ glycines-jeu/
 │   ├── regles/                   plan.ts (grille → zones, centres, murs), chemin.ts (recherche de chemin A*),
 │   │                             fiche.ts (nom et rôle d'une personne, pour la bulle),
 │   │                             etiquettes.ts (écarter les noms qui se chevauchent à l'écran),
-│   │                             mission.ts (moteur de mission : étapes, points, confiance, niveaux)
+│   │                             mission.ts (moteur de mission : étapes, points, confiance, niveaux),
+│   │                             sauvegarde.ts (progression et code de reprise)
 │   ├── scene3d/                  creerScene.ts (caméra, contrôles, boucle d'animation), construireAile.ts, personnages.ts,
 │   │                             toucher.ts (toucher bref ou glisser, raycasting), marche.ts (marche de l'agent),
 │   │                             meubles.ts (lit, fauteuil, lavabo, sonnette en formes simples),
 │   │                             ecartEtiquettes.ts (applique l'écart des noms après chaque dessin)
 │   └── ui/                       interface.ts (barre, boutons, légende), bulle.ts (bulle d'une personne touchée),
-│                                 mission.ts (liste des missions, panneau d'étape, loupe, jauge, relève)
+│                                 mission.ts (liste des missions, panneau d'étape, loupe, jauge, relève),
+│                                 progression.ts (sauvegarde dans le navigateur, bloc du code de reprise)
 ├── tools/valider-contenu.ts      la commande « pnpm valider »
 ├── tests/                        tests automatiques (Vitest)
 └── docs/                         ce dossier
@@ -98,6 +100,10 @@ Le champ `meubles` liste les meubles du plan, un par ligne :
 3. La **jauge de confiance** du résident reste en haut du panneau pendant toute la mission.
 4. Pour un **relais**, l'élève touche un professionnel dans l'aile : `main.ts` donne d'abord le toucher à la mission (`personneTouchee`), qui fait marcher l'agent vers lui.
 5. La **relève** donne le niveau de chaque compétence (avec le sens de N1 à N4 tiré du référentiel) et les questions de débriefing.
+
+### Sauvegarde et code de reprise
+
+À la fin d'une mission, les niveaux obtenus sont gardés dans le navigateur (`localStorage`, clé `glycines-progression-v1`), sur l'appareil seulement. Le **code de reprise** (en bas de la liste des missions) les résume : `M00-332.K7` veut dire « mission m00 : N3, N3, N2 » (dans l'ordre des compétences de la mission), et `K7` est une clé de contrôle qui repère une faute de frappe. Sur un autre appareil, l'élève tape ce code et retrouve ses niveaux. C'est pourquoi l'identifiant d'une mission commence par `m` et deux chiffres (`m01-…`), vérifié par `pnpm valider`.
 
 L'interface ne calcule rien : elle envoie la réponse au moteur (`repondre`) et affiche ce qu'il renvoie.
 

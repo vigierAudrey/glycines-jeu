@@ -61,3 +61,9 @@ Trois lignes par session : ce qui a été fait, ce qui reste à surveiller, la p
 - **Fait** : bouton Missions et liste ; panneau d'étape (dialogue verbal, paraverbal, non-verbal ; jauge de confiance) ; loupe avec repères de 44 px et cadrage animé de la pièce ; décisions Agir/Adapter/Alerter ; relais en touchant le bon professionnel ; relève avec niveaux et débriefing. Mission de M. Karim jouée de bout en bout dans Chromium à 390 px et 1280 px.
 - **À surveiller** : sur téléphone, deux repères voisins sont proches (cases adjacentes) ; le panneau du dialogue prend 60 % de la hauteur en portrait ; l'agent se pose sur la case de la personne rejointe.
 - **Prochaine tâche** : 2.7 (sauvegarde locale et code de reprise).
+
+## 13/10/2026 · Sauvegarde et code de reprise (tâche 2.7)
+
+- **Fait** : `src/regles/sauvegarde.ts` (code avec clé de contrôle, 5 tests), `src/ui/progression.ts` (localStorage protégé par try/catch, bloc du code sous la liste des missions), dernière relève affichée sur chaque mission ; règle de validation du préfixe `m00`. Vérifié dans Chromium : fin de mission → code `M00-333.GC`, reprise dans un navigateur vierge, faute de frappe refusée.
+- **À surveiller** : le code s'allonge d'environ 6 caractères par mission (14 missions : environ 90 caractères, à reconsidérer en phase 4).
+- **Prochaine tâche** : 2.8 (lecture à voix haute).

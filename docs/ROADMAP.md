@@ -40,7 +40,7 @@ Légende : `[x]` fait · `[ ]` à faire · 🧑‍🏫 tâche pour Audrey (sans 
 - [x] **2.4** Mode observation (loupe) : repérer des éléments dans une pièce.
 - [x] **2.5** Décision agir / adapter / alerter, et relais : aller jusqu'au bon professionnel.
 - [x] **2.6** Écran de relève de fin de mission : niveau par compétence et questions de débriefing.
-- [ ] **2.7** Sauvegarde locale et code de reprise (sans compte).
+- [x] **2.7** Sauvegarde locale et code de reprise (sans compte).
 - [ ] **2.8** Lecture à voix haute des textes (synthèse vocale du navigateur).
 
 ## Phase 2 bis · Habillage graphique

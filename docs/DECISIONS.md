@@ -84,3 +84,9 @@ On ne redessine que si la vue change (batterie des téléphones). Les étiquette
 - **Pourquoi** : texte net et lisible, boutons de 44 px, lecteurs d'écran, aucune donnée pédagogique dans `src/scene3d/`. Le moteur reste seul juge (points, niveaux).
 - **Sécurité** : le HTML est construit avec des gabarits ; tout texte venu de `content/` passe par `echapper()`.
 - **Ce qu'on abandonne pour l'instant** : un vrai écran d'accueil (tâche 4.2) ; la liste des missions en tient lieu.
+
+## D-016 · Sauvegarde sans compte : localStorage et code de reprise · 13/10/2026
+
+- **Décision** : la progression (dernier niveau par compétence et par mission) est gardée dans le `localStorage` du navigateur. Le code de reprise la résume (`M00-332.K7`) avec une clé de contrôle de 2 caractères.
+- **Pourquoi** : aucune donnée personnelle, aucun serveur, marche hors ligne (cahier des charges). Le code reste court : un chiffre par compétence.
+- **Limites** : ce n'est pas un secret (un élève peut inventer un code valide en comprenant le principe) ; si une mission change de compétences, les anciens codes de cette mission sont refusés avec un message clair. Le code ne garde que les niveaux, pas la confiance ni le détail des réponses.
