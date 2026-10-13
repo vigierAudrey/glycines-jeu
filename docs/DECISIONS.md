@@ -51,3 +51,9 @@ On ne redessine que si la vue change (batterie des téléphones). Les étiquette
 - **Pourquoi** : une marche fluide demande environ 60 images par seconde, mais redessiner en permanence viderait la batterie des téléphones.
 - **Conséquences** : toute animation future (caméra qui suit l'agent en 1.2, personnages animés en G.2) passe par `animer`. La recherche de chemin (A*, 8 directions, sans couper les coins) reste dans `src/regles/` et réutilise les murs calculés par `plan.ts` : un seul endroit décide où sont les murs.
 
+## D-011 · La caméra suit l'agent, mais l'élève garde la main · 13/10/2026
+
+- **Décision** : pendant une marche, le centre de la vue rejoint l'agent en douceur. Le suivi s'arrête dès que l'élève fait glisser la vue (ou touche « Recentrer ») et reprend au toucher suivant. Le zoom n'est jamais modifié par le suivi.
+- **Pourquoi** : sur téléphone en portrait, la vue est zoomée et l'agent sortirait vite de l'écran ; mais un élève qui veut regarder ailleurs ne doit pas être ramené de force.
+- **Comment** : le suivi est une animation de `theatre.animer` (D-010) ; il détecte un glisser en constatant que le centre de la vue n'est plus celui qu'il a posé à l'image précédente.
+- **Ce qu'on abandonne** : une « zone morte » (ne suivre que quand l'agent approche du bord), plus confortable sur grand écran mais plus complexe. À reconsidérer après le test sur téléphone (1.5).

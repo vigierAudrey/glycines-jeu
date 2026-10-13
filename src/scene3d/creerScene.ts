@@ -13,6 +13,8 @@ import { CSS2DRenderer } from 'three/addons/renderers/CSS2DRenderer.js';
 // Hauteur de la caméra : 35,26° au-dessus du sol donne une vraie vue isométrique.
 const ELEVATION = THREE.MathUtils.degToRad(35.264);
 const DISTANCE = 40;
+// Souplesse du suivi de l'agent : plus le nombre est grand, plus la caméra le rattrape vite.
+const SOUPLESSE_SUIVI = 3;
 
 /**
  * Une animation est appelée à chaque image avec le temps écoulé depuis l'image précédente (en secondes).
@@ -33,6 +35,8 @@ export interface Theatre {
   recentrer: () => void;
   /** Lance une animation : le jeu redessine en continu tant qu'au moins une animation tourne. */
   animer: (animation: Animation) => void;
+  /** La vue glisse en douceur pour garder cet objet (l'agent) au centre, jusqu'à ce qu'il s'arrête ou que l'élève fasse glisser la vue. */
+  suivre: (objet: THREE.Object3D) => void;
 }
 
 export function creerTheatre(conteneur: HTMLElement, centre: THREE.Vector3, tailleDuPlan: number): Theatre {
@@ -169,7 +173,45 @@ export function creerTheatre(conteneur: HTMLElement, centre: THREE.Vector3, tail
     demanderRendu();
   };
 
+  // ---------- Suivi de l'agent ----------
+  // À chaque image, le centre de la vue parcourt une fraction de l'écart qui le sépare de l'agent :
+  // grande quand l'agent est loin, petite quand il est proche. C'est ce qui donne un mouvement doux.
+  // Seul le centre de la vue bouge : le zoom et l'angle choisis par l'élève sont conservés.
+  let suivi: THREE.Object3D | null = null;
+  const centreVise = new THREE.Vector3(); // centre de la vue posé par le suivi à l'image précédente
+  const positionPrecedente = new THREE.Vector3(); // position de l'agent à l'image précédente
+  const animerSuivi: Animation = (secondes) => {
+    // Si le centre de la vue n'est plus celui que le suivi a posé, l'élève a fait glisser la vue
+    // (ou touché « Recentrer ») : on lui laisse la main.
+    if (!suivi || controles.target.distanceToSquared(centreVise) > 1e-6) {
+      suivi = null;
+      return false;
+    }
+    const ecartX = suivi.position.x - controles.target.x;
+    const ecartZ = suivi.position.z - controles.target.z;
+    const immobile = suivi.position.equals(positionPrecedente);
+    positionPrecedente.copy(suivi.position);
+    if (immobile && Math.hypot(ecartX, ecartZ) < 0.02) {
+      suivi = null; // l'agent est arrêté et la vue l'a rattrapé
+      return false;
+    }
+    // Fraction calculée à partir du temps écoulé : le mouvement a la même allure sur un écran à 60 ou 120 images par seconde.
+    const fraction = 1 - Math.exp(-SOUPLESSE_SUIVI * secondes);
+    controles.target.x += ecartX * fraction;
+    controles.target.z += ecartZ * fraction;
+    centreVise.copy(controles.target);
+    placerCamera();
+    return true;
+  };
+  const suivre = (objet: THREE.Object3D) => {
+    const dejaEnCours = suivi !== null;
+    suivi = objet;
+    centreVise.copy(controles.target);
+    positionPrecedente.copy(objet.position);
+    if (!dejaEnCours) animer(animerSuivi);
+  };
+
   recentrer();
   ajusterTaille();
-  return { scene, camera, surfaceTactile: renduEtiquettes.domElement, demanderRendu, tourner, recentrer, animer };
+  return { scene, camera, surfaceTactile: renduEtiquettes.domElement, demanderRendu, tourner, recentrer, animer, suivre };
 }

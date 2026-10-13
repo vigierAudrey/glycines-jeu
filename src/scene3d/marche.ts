@@ -55,6 +55,9 @@ export function brancherMarche(theatre: Theatre, plan: PlanCalcule, agent: THREE
     repere.position.set(arrivee.x, 0.01, arrivee.z);
     repere.visible = true;
 
+    // La caméra accompagne l'agent (même si l'élève avait fait glisser la vue ailleurs).
+    theatre.suivre(agent);
+
     // Si l'agent marchait déjà, l'animation en cours reprend simplement le nouveau chemin.
     if (!enMarche) {
       enMarche = true;
