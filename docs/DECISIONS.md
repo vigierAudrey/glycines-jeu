@@ -90,3 +90,9 @@ On ne redessine que si la vue change (batterie des téléphones). Les étiquette
 - **Décision** : la progression (dernier niveau par compétence et par mission) est gardée dans le `localStorage` du navigateur. Le code de reprise la résume (`M00-332.K7`) avec une clé de contrôle de 2 caractères.
 - **Pourquoi** : aucune donnée personnelle, aucun serveur, marche hors ligne (cahier des charges). Le code reste court : un chiffre par compétence.
 - **Limites** : ce n'est pas un secret (un élève peut inventer un code valide en comprenant le principe) ; si une mission change de compétences, les anciens codes de cette mission sont refusés avec un message clair. Le code ne garde que les niveaux, pas la confiance ni le détail des réponses.
+
+## D-017 · Déblocage par séquence choisie sur l'appareil, brouillons cachés en production · 13/10/2026
+
+- **Décision** : la séquence vue en cours (S1 à S7) se règle dans la liste des missions ou par l'adresse (`?sequence=S3`), et reste mémorisée sur l'appareil. Une mission est ouverte si sa `sequence_requise` est atteinte. Les missions `brouillon` ne s'affichent qu'en développement ou avec `?brouillons`.
+- **Pourquoi** : sans compte ni serveur, c'est l'enseignante qui donne le bon lien (ou la bonne consigne) à la classe. Un élève peut changer la séquence : ce n'est pas grave, le jeu n'est pas une évaluation certificative.
+- **Conséquence** : tant qu'aucune mission n'est `valide`, la version publiée n'affiche aucune mission (message « Aucune mission validée pour l'instant »).

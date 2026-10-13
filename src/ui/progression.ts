@@ -4,9 +4,11 @@
 
 import type { Mission } from '../contenu/types';
 import type { Bilan } from '../regles/mission';
+import { lireSequence } from '../regles/deblocage';
 import { decoderCode, encoderCode, enregistrerBilan, type Progression } from '../regles/sauvegarde';
 
 const CLE = 'glycines-progression-v1';
+const CLE_SEQUENCE = 'glycines-sequence';
 
 // Le stockage peut être interdit (navigation privée, réglages du navigateur) : le jeu marche quand même, sans mémoire.
 function lire(): Progression {
@@ -17,10 +19,20 @@ function lire(): Progression {
   }
 }
 function ecrire(progression: Progression): void {
+  ecrireTexte(CLE, JSON.stringify(progression));
+}
+function ecrireTexte(cle: string, valeur: string): void {
   try {
-    localStorage.setItem(CLE, JSON.stringify(progression));
+    localStorage.setItem(cle, valeur);
   } catch {
-    // stockage indisponible : la progression ne vit que pendant la partie
+    // stockage indisponible : la valeur ne vit que pendant la partie
+  }
+}
+function lireTexte(cle: string): string | null {
+  try {
+    return localStorage.getItem(cle);
+  } catch {
+    return null;
   }
 }
 
@@ -30,10 +42,16 @@ export interface SuiviProgression {
   niveauxObtenus: (idMission: string) => string | undefined;
   /** Bloc HTML du code de reprise. `rafraichir` est appelée après une reprise réussie. */
   blocCode: (rafraichir: () => void) => HTMLElement;
+  /** Séquence vue en cours. Un lien de l'enseignante peut la fixer : …/index.html?sequence=S3 */
+  sequenceVue: () => string;
+  changerSequence: (sequence: string) => void;
 }
 
 export function suivreProgression(missions: Mission[]): SuiviProgression {
   let progression = lire();
+  // Priorité : la séquence donnée dans l'adresse, puis celle mémorisée, sinon S1.
+  let sequence = lireSequence(new URLSearchParams(location.search).get('sequence')) ?? lireSequence(lireTexte(CLE_SEQUENCE)) ?? 'S1';
+  ecrireTexte(CLE_SEQUENCE, sequence);
 
   const blocCode = (rafraichir: () => void) => {
     const bloc = document.createElement('section');
@@ -98,5 +116,10 @@ export function suivreProgression(missions: Mission[]): SuiviProgression {
       return niveaux && Object.entries(niveaux).map(([code, n]) => `${code} ${n}`).join(' · ');
     },
     blocCode,
+    sequenceVue: () => sequence,
+    changerSequence: (s) => {
+      sequence = lireSequence(s) ?? sequence;
+      ecrireTexte(CLE_SEQUENCE, sequence);
+    },
   };
 }

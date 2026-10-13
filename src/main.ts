@@ -54,6 +54,10 @@ brancherVoix(racineInterface);
 const progression = suivreProgression(contenu.missions);
 const missions = monterMissions(racineInterface, theatre, contenu, {
   surFin: progression.enregistrer,
+  sequenceVue: progression.sequenceVue,
+  changerSequence: progression.changerSequence,
+  // Les brouillons ne sont visibles qu'en développement (pnpm dev) ou avec ?brouillons dans l'adresse.
+  avecBrouillons: import.meta.env.DEV || new URLSearchParams(location.search).has('brouillons'),
   niveauxObtenus: progression.niveauxObtenus,
   basDeListe: () => progression.blocCode(() => missions.ouvrirListe()),
   allerVersZone: (idZone) => {
@@ -92,3 +96,6 @@ ecouterTouchers(theatre, personnages.children, ({ personnage, sol }) => {
   bulle.fermer();
   if (sol && allerVers) allerVers(sol.x, sol.z);
 });
+
+// Au lancement, l'écran d'accueil propose les missions.
+missions.ouvrirListe(true);

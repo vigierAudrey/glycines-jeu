@@ -8,6 +8,7 @@
 import * as THREE from 'three';
 import type { Contenu, ElementObserve, Etape, Mission } from '../contenu/types';
 import { bilan, demarrerMission, etapeEnCours, repondre, type Bilan, type EtatMission, type Reponse } from '../regles/mission';
+import { estDebloquee, missionsAMontrer, SEQUENCES } from '../regles/deblocage';
 import type { Theatre } from '../scene3d/creerScene';
 
 /** Ce que l'interface des missions demande au reste du jeu (main.ts fait le lien avec la 3D). */
@@ -21,6 +22,11 @@ export interface LiensMission {
   surFin?: (bilan: Bilan) => void;
   /** Contenu ajouté sous la liste des missions (code de reprise…). */
   basDeListe?: () => HTMLElement | null;
+  /** Séquence de cours déjà vue par la classe (S1 à S7) et moyen de la changer. */
+  sequenceVue: () => string;
+  changerSequence: (sequence: string) => void;
+  /** Montrer aussi les missions en brouillon (pendant le développement). */
+  avecBrouillons: boolean;
   /** Niveaux déjà obtenus pour une mission, pour les afficher dans la liste. */
   niveauxObtenus?: (idMission: string) => string | undefined;
 }
@@ -28,8 +34,8 @@ export interface LiensMission {
 export interface InterfaceMission {
   /** Une personne a été touchée. Renvoie true si la mission s'en sert (étape « relais »). */
   personneTouchee: (id: string) => boolean;
-  /** Ouvre la liste des missions. */
-  ouvrirListe: () => void;
+  /** Ouvre la liste des missions (`accueil` : avec le mot de bienvenue). */
+  ouvrirListe: (accueil?: boolean) => void;
 }
 
 const CANAUX = [
@@ -301,27 +307,43 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
     fenetre.querySelector<HTMLElement>('button')?.focus();
   };
 
-  const ouvrirListe = () => {
+  // Écran d'accueil et liste des missions : rangées par séquence, verrouillées tant que la séquence n'a pas été vue.
+  const ouvrirListe = (accueil = false) => {
+    const sequenceVue = liens.sequenceVue();
+    const liste = missionsAMontrer(contenu.missions, liens.avecBrouillons);
     ouvrirFenetre(`
       <div class="fenetre__haut">
-        <h2>Missions</h2>
+        <h2>${accueil ? 'Une journée aux Glycines' : 'Missions'}</h2>
         <button type="button" class="bouton bouton--petit" data-action="fermer" aria-label="Fermer">×</button>
       </div>
+      ${accueil ? `<p class="a-lire">Vous êtes agent accompagnant au grand âge dans l'aile B de l'EHPAD Les Glycines. Choisissez une mission. Vous pouvez aussi fermer cette fenêtre pour explorer l'aile.</p>` : ''}
+      <label class="choix-sequence">Séquence vue en cours
+        <select name="sequence">
+          ${SEQUENCES.map((s) => `<option ${s === sequenceVue ? 'selected' : ''}>${s}</option>`).join('')}
+        </select>
+      </label>
+      ${liste.length === 0 ? '<p class="indice">Aucune mission validée pour l\'instant.</p>' : ''}
       <ul class="liste-missions">
-        ${contenu.missions.map((m) => {
+        ${liste.map((m) => {
           const niveaux = liens.niveauxObtenus?.(m.id);
+          const ouverte = estDebloquee(m, sequenceVue);
           return `
           <li>
-            <button type="button" class="carte-mission" data-mission="${echapper(m.id)}">
-              <strong>${echapper(m.titre)}</strong>
-              <span>${m.duree_min} min · séquence ${echapper(m.sequence_requise)}${m.statut === 'brouillon' ? ' · <em>brouillon</em>' : ''}</span>
+            <button type="button" class="carte-mission" data-mission="${echapper(m.id)}" ${ouverte ? '' : 'disabled'}>
+              <strong>${ouverte ? '' : '🔒 '}${echapper(m.titre)}</strong>
+              <span>${m.duree_min} min · ${ouverte ? `séquence ${echapper(m.sequence_requise)}` : `après la séquence ${echapper(m.sequence_requise)}`}${m.statut === 'brouillon' ? ' · <em>brouillon</em>' : ''}</span>
               ${niveaux ? `<span class="niveaux">Dernière relève : ${echapper(niveaux)}</span>` : ''}
             </button>
           </li>`;
         }).join('')}
       </ul>`);
+    fenetre.querySelector<HTMLSelectElement>('select[name="sequence"]')!.addEventListener('change', (e) => {
+      liens.changerSequence((e.target as HTMLSelectElement).value);
+      ouvrirListe(accueil);
+    });
     const bas = liens.basDeListe?.();
     if (bas) fenetre.querySelector('.fenetre__carte')!.append(bas);
+    if (accueil) racine.dispatchEvent(new CustomEvent('panneau-affiche', { detail: fenetre }));
   };
 
   const ouvrirReleve = (b: Bilan) => {

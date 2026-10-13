@@ -39,7 +39,8 @@ glycines-jeu/
 │   │                             fiche.ts (nom et rôle d'une personne, pour la bulle),
 │   │                             etiquettes.ts (écarter les noms qui se chevauchent à l'écran),
 │   │                             mission.ts (moteur de mission : étapes, points, confiance, niveaux),
-│   │                             sauvegarde.ts (progression et code de reprise)
+│   │                             sauvegarde.ts (progression et code de reprise),
+│   │                             deblocage.ts (missions ouvertes selon la séquence vue en cours)
 │   ├── scene3d/                  creerScene.ts (caméra, contrôles, boucle d'animation), construireAile.ts, personnages.ts,
 │   │                             toucher.ts (toucher bref ou glisser, raycasting), marche.ts (marche de l'agent),
 │   │                             meubles.ts (lit, fauteuil, lavabo, sonnette en formes simples),
@@ -96,7 +97,7 @@ Le champ `meubles` liste les meubles du plan, un par ligne :
 
 ## Jouer une mission (interface : `src/ui/mission.ts`)
 
-1. Le bouton **Missions** ouvre la liste (les brouillons sont signalés). Choisir une mission fait marcher l'agent vers son lieu.
+1. Au lancement, l'**écran d'accueil** présente le jeu et la liste des missions ; le bouton **Missions** la rouvre. Les missions sont rangées par séquence ; celles d'une séquence pas encore vue sont verrouillées 🔒. La séquence vue se choisit dans la liste, ou par un lien de l'enseignante : `…/index.html?sequence=S3` (mémorisée ensuite sur l'appareil). Les **brouillons** ne sont visibles qu'avec `pnpm dev` ou en ajoutant `?brouillons` à l'adresse. Choisir une mission fait marcher l'agent vers son lieu.
 2. Le **panneau du bas** montre l'étape : dialogue en 3 canaux, loupe, décision (badges Agir, Adapter, Alerter) ou relais. Après chaque réponse, il explique (« Bien joué » ou « À retenir »).
 3. La **jauge de confiance** du résident reste en haut du panneau pendant toute la mission.
 4. Pour un **relais**, l'élève touche un professionnel dans l'aile : `main.ts` donne d'abord le toucher à la mission (`personneTouchee`), qui fait marcher l'agent vers lui.
