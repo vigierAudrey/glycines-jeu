@@ -37,6 +37,10 @@ export interface Theatre {
   animer: (animation: Animation) => void;
   /** La vue glisse en douceur pour garder cet objet (l'agent) au centre, jusqu'à ce qu'il s'arrête ou que l'élève fasse glisser la vue. */
   suivre: (objet: THREE.Object3D) => void;
+  /** Position à l'écran, en pixels depuis le coin haut gauche de la vue, d'un point du monde 3D. */
+  versEcran: (point: THREE.Vector3) => { x: number; y: number };
+  /** Appelle cette fonction après chaque dessin (pour qu'un élément HTML suive un objet de la 3D). */
+  apresChaqueRendu: (fonction: () => void) => void;
 }
 
 export function creerTheatre(conteneur: HTMLElement, centre: THREE.Vector3, tailleDuPlan: number): Theatre {
@@ -76,11 +80,13 @@ export function creerTheatre(conteneur: HTMLElement, centre: THREE.Vector3, tail
   // ---------- Rendu à la demande ----------
   let renduPrevu = false;
   let boucleActive = false; // vrai pendant une animation (voir plus bas)
+  const apresRendu: (() => void)[] = [];
   const dessiner = () => {
     renduPrevu = false;
     majDensite();
     rendu.render(scene, camera);
     renduEtiquettes.render(scene, camera);
+    for (const fonction of apresRendu) fonction();
   };
   const demanderRendu = () => {
     if (boucleActive) return; // la boucle d'animation redessine déjà à chaque image
@@ -211,7 +217,16 @@ export function creerTheatre(conteneur: HTMLElement, centre: THREE.Vector3, tail
     if (!dejaEnCours) animer(animerSuivi);
   };
 
+  const projete = new THREE.Vector3();
+  const versEcran = (point: THREE.Vector3) => {
+    projete.copy(point).project(camera); // coordonnées de -1 à +1
+    return { x: ((projete.x + 1) / 2) * conteneur.clientWidth, y: ((1 - projete.y) / 2) * conteneur.clientHeight };
+  };
+
   recentrer();
   ajusterTaille();
-  return { scene, camera, surfaceTactile: renduEtiquettes.domElement, demanderRendu, tourner, recentrer, animer, suivre };
+  return {
+    scene, camera, surfaceTactile: renduEtiquettes.domElement, demanderRendu, tourner, recentrer, animer, suivre, versEcran,
+    apresChaqueRendu: (fonction) => apresRendu.push(fonction),
+  };
 }

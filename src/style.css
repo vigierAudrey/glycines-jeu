@@ -21,7 +21,9 @@ html, body {
 }
 
 .jeu { position: fixed; inset: 0; }
-.scene { position: absolute; inset: 0; touch-action: none; }
+/* isolation : les étiquettes reçoivent un z-index de Three.js ; on les enferme dans le calque 3D
+   pour qu'elles ne passent jamais devant l'interface (barre, bulle). */
+.scene { position: absolute; inset: 0; touch-action: none; isolation: isolate; }
 .scene canvas { display: block; }
 
 /* Calque des étiquettes : il reçoit les gestes (glisser, pincer) à la place du canvas qu'il recouvre. */
@@ -155,3 +157,46 @@ html, body {
   max-width: calc(100% - 16px);
   text-align: center;
 }
+
+/* Bulle qui présente une personne touchée. Sa position est calculée par src/ui/bulle.ts. */
+.bulle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: min(260px, calc(100% - 16px));
+  padding: 8px 48px 8px 12px; /* place à droite pour le bouton de fermeture */
+  background: #fff;
+  border: 2px solid var(--violet);
+  border-radius: 14px;
+  box-shadow: var(--ombre);
+  margin-top: -10px; /* laisse la place de la pointe */
+}
+.bulle[hidden] { display: none; }
+/* Pointe de la bulle, vers la personne. */
+.bulle::after {
+  content: '';
+  position: absolute;
+  left: calc(var(--pointe, 50%) - 8px);
+  bottom: -9px;
+  border: 8px solid transparent;
+  border-bottom: 0;
+  border-top-color: var(--violet);
+}
+.bulle__nom { margin: 0; font-weight: 700; font-size: 1rem; }
+.bulle__role { margin: 2px 0 0; font-size: 0.9rem; color: #444a55; }
+.bulle__fermer {
+  position: absolute;
+  top: 50%;
+  right: 2px;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  font-size: 1.4rem;
+  color: var(--encre);
+  cursor: pointer;
+}
+.bulle__fermer:hover { background: #efe9f7; }
+.bulle__fermer:focus-visible { outline: 3px solid var(--violet); outline-offset: -3px; }

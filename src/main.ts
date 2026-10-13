@@ -9,6 +9,9 @@ import { creerTheatre } from './scene3d/creerScene';
 import { construireAile } from './scene3d/construireAile';
 import { placerPersonnages } from './scene3d/personnages';
 import { brancherMarche } from './scene3d/marche';
+import { ecouterTouchers } from './scene3d/toucher';
+import { ficheDe } from './regles/fiche';
+import { creerBulle } from './ui/bulle';
 import { monterInterface } from './ui/interface';
 
 const contenu = chargerContenu();
@@ -22,9 +25,24 @@ const personnages = placerPersonnages(plan, contenu.residents, contenu.personnel
 theatre.scene.add(personnages);
 theatre.demanderRendu();
 
-// Toucher ou cliquer le sol fait marcher l'agent joué par l'élève.
+const racineInterface = document.querySelector<HTMLElement>('#interface')!;
+monterInterface(racineInterface, lieu.nom, theatre, contenu.personnel);
+const bulle = creerBulle(racineInterface, theatre);
+
+// Toucher ou cliquer :
+// - un personnage ouvre sa bulle (nom et rôle) ;
+// - le sol ferme la bulle et fait marcher l'agent joué par l'élève.
 const joueur = contenu.personnel.find((p) => p.joueur);
 const agent = joueur && personnages.getObjectByName(`personnage-${joueur.id}`);
-if (agent) brancherMarche(theatre, plan, agent);
+const allerVers = agent ? brancherMarche(theatre, plan, agent) : undefined;
 
-monterInterface(document.querySelector<HTMLElement>('#interface')!, lieu.nom, theatre, contenu.personnel);
+ecouterTouchers(theatre, personnages.children, ({ personnage, sol }) => {
+  const fiche = personnage && ficheDe(personnage.name.replace('personnage-', ''), contenu.residents, contenu.personnel);
+  if (personnage && fiche) {
+    bulle.ouvrir(personnage, fiche);
+    theatre.demanderRendu();
+    return;
+  }
+  bulle.fermer();
+  if (sol && allerVers) allerVers(sol.x, sol.z);
+});

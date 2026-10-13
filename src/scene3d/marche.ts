@@ -1,15 +1,16 @@
-// Marche de l'agent (« Vous ») : toucher une case du sol l'y fait aller à pied, sans traverser les murs.
+// Marche de l'agent (« Vous ») : il va à pied jusqu'à une case du sol, sans traverser les murs.
 // Le chemin est calculé par les règles (src/regles/chemin.ts) ; ici on ne fait que l'animer.
+// C'est main.ts qui décide quand marcher (un toucher du sol, mais pas un toucher de personnage).
 
 import * as THREE from 'three';
 import { caseEn, centreDe, trouverChemin } from '../regles/chemin';
 import type { PlanCalcule } from '../regles/plan';
 import type { Theatre } from './creerScene';
-import { ecouterTouchersDuSol } from './toucher';
 
 const VITESSE = 2.5; // mètres par seconde
 
-export function brancherMarche(theatre: Theatre, plan: PlanCalcule, agent: THREE.Object3D): void {
+/** Prépare la marche de l'agent et renvoie la fonction qui le fait aller jusqu'au point (x, z) du sol. */
+export function brancherMarche(theatre: Theatre, plan: PlanCalcule, agent: THREE.Object3D): (x: number, z: number) => void {
   // Repère posé sur la case visée, pour montrer que le toucher a été compris.
   const repere = new THREE.Mesh(new THREE.RingGeometry(0.22, 0.36, 32), new THREE.MeshBasicMaterial({ color: '#7b5ea7' }));
   repere.rotation.x = -Math.PI / 2; // à plat sur le sol
@@ -43,7 +44,7 @@ export function brancherMarche(theatre: Theatre, plan: PlanCalcule, agent: THREE
     return false; // arrivé : la boucle d'animation peut s'arrêter
   };
 
-  ecouterTouchersDuSol(theatre, (x, z) => {
+  return (x, z) => {
     const chemin = trouverChemin(plan, caseEn(agent.position.x, agent.position.z), caseEn(x, z));
     if (!chemin) return; // mur, vide ou pièce fermée : l'agent ne bouge pas
 
@@ -63,5 +64,5 @@ export function brancherMarche(theatre: Theatre, plan: PlanCalcule, agent: THREE
       enMarche = true;
       theatre.animer(avancer);
     }
-  });
+  };
 }

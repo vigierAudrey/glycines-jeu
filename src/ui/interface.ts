@@ -25,7 +25,7 @@ export function monterInterface(racine: HTMLElement, titre: string, theatre: The
       <p>Les résidents portent leur nom au-dessus de la tête.</p>
     </aside>
     <p class="conseil-paysage">Conseil : tournez votre téléphone pour jouer en paysage.</p>
-    <p class="aide">Toucher le sol pour marcher · glisser pour déplacer la vue · pincer ou molette pour zoomer</p>
+    <p class="aide">Toucher le sol pour marcher · toucher une personne pour la connaître · glisser pour déplacer la vue · pincer ou molette pour zoomer</p>
   `;
 
   const legende = racine.querySelector<HTMLElement>('#legende')!;

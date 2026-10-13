@@ -57,3 +57,10 @@ On ne redessine que si la vue change (batterie des téléphones). Les étiquette
 - **Pourquoi** : sur téléphone en portrait, la vue est zoomée et l'agent sortirait vite de l'écran ; mais un élève qui veut regarder ailleurs ne doit pas être ramené de force.
 - **Comment** : le suivi est une animation de `theatre.animer` (D-010) ; il détecte un glisser en constatant que le centre de la vue n'est plus celui qu'il a posé à l'image précédente.
 - **Ce qu'on abandonne** : une « zone morte » (ne suivre que quand l'agent approche du bord), plus confortable sur grand écran mais plus complexe. À reconsidérer après le test sur téléphone (1.5).
+
+## D-012 · Bulle des personnages : cible à l'écran, bulle en HTML · 13/10/2026
+
+- **Décision** : un personnage est « touché » si le doigt est à moins de 24 px de sa silhouette projetée à l'écran (pieds → étiquette), et non par un rayon qui doit frapper la figurine 3D. La bulle est un élément HTML du calque interface, replacé après chaque dessin, plutôt qu'une étiquette 3D (CSS2D).
+- **Pourquoi** : une figurine fait environ 10 px sur téléphone, bien en dessous des 44 px exigés par le cahier des charges. En HTML dans l'interface, la bulle reste au-dessus des étiquettes, peut contenir un vrai bouton de fermeture et est lue par les lecteurs d'écran (`role="status"`).
+- **Conséquence** : le calque 3D est isolé (`isolation: isolate`) pour que les z-index posés par Three.js sur les étiquettes ne passent jamais devant l'interface. `toucher.ts` ne décide plus rien : il dit ce qui est sous le doigt (personnage et/ou sol), `main.ts` choisit l'action.
+- **Ce qu'on abandonne** : rien de ce qui était prévu ; la bulle n'affiche que le nom et le rôle, jamais d'élément médical (règle `repris_du_cours`).

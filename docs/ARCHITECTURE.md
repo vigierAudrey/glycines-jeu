@@ -35,10 +35,11 @@ glycines-jeu/
 ├── src/
 │   ├── main.ts                   point d'entrée : branche les couches dans l'ordre
 │   ├── contenu/                  types.ts (forme des données), charger.ts, valider.ts
-│   ├── regles/                   plan.ts (grille → zones, centres, murs), chemin.ts (recherche de chemin A*)
+│   ├── regles/                   plan.ts (grille → zones, centres, murs), chemin.ts (recherche de chemin A*),
+│   │                             fiche.ts (nom et rôle d'une personne, pour la bulle)
 │   ├── scene3d/                  creerScene.ts (caméra, contrôles, boucle d'animation), construireAile.ts, personnages.ts,
 │   │                             toucher.ts (toucher bref ou glisser, raycasting), marche.ts (marche de l'agent)
-│   └── ui/interface.ts           barre, boutons, légende
+│   └── ui/                       interface.ts (barre, boutons, légende), bulle.ts (bulle d'une personne touchée)
 ├── tools/valider-contenu.ts      la commande « pnpm valider »
 ├── tests/                        tests automatiques (Vitest)
 └── docs/                         ce dossier
@@ -62,6 +63,8 @@ Les murs ne sont pas dessinés à la main : `src/regles/plan.ts` les calcule. Il
 - **Suivi de caméra** : quand l'agent marche, le centre de la vue parcourt à chaque image une fraction de l'écart qui le sépare de lui (grande fraction quand il est loin, petite quand il est proche), d'où un mouvement doux (`theatre.suivre(...)` dans `creerScene.ts`). Le zoom n'est pas touché. Si l'élève fait glisser la vue, le suivi s'arrête ; il reprend au prochain toucher du sol.
 - **Raycasting** : pour savoir ce qu'on touche à l'écran, on lance un rayon depuis la caméra à travers le pixel touché et on cherche où il rencontre le sol (`toucher.ts`).
 - **Toucher ou glisser** : un geste court (moins de 0,5 s), qui bouge de moins de 10 px et n'utilise qu'un doigt, est un toucher (l'agent marche). Sinon c'est un glisser ou un pincement (la vue bouge).
+- **Toucher un personnage** : une figurine fait à peine 10 px de large sur téléphone. Au lieu de viser la figurine en 3D, on la projette à l'écran (un trait des pieds au haut de l'étiquette) et on accepte un toucher à moins de 24 px de ce trait : la cible fait au moins 44 px. Si deux personnes sont proches, la plus proche du doigt gagne. Un personnage touché ouvre sa bulle ; sinon, le toucher fait marcher l'agent (`main.ts` décide).
+- **Bulle qui suit la 3D** : la bulle est du HTML dans le calque interface. Après chaque dessin (`theatre.apresChaqueRendu`), on calcule où se trouve la tête de la personne à l'écran (`theatre.versEcran`) et on y replace la bulle, retenue au bord de l'écran si besoin.
 - **A\*** (« A étoile ») : algorithme de plus court chemin sur la grille (`src/regles/chemin.ts`). Il explore d'abord les cases dont « chemin déjà fait + distance à vol d'oiseau restante » est le plus petit. On marche en 8 directions, jamais à travers un mur, et sans couper le coin d'un mur en diagonale.
 - **Étiquettes HTML (CSS2DRenderer)** : les noms au-dessus des têtes sont du vrai texte HTML, net et lisible, pas des pixels dans la 3D.
 - **Densité d'étiquettes** : selon le nombre de pixels par mètre à l'écran, le CSS masque les noms des chambres puis des pièces pour éviter les chevauchements (`data-densite` sur `#scene`).
