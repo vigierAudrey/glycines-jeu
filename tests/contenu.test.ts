@@ -49,3 +49,36 @@ describe('le validateur refuse', () => {
     expect(validerContenu(contenu).map((p) => p.message).join()).toMatch(/cadratin/);
   });
 });
+
+describe('le validateur refuse dans les étapes', () => {
+  const base = lireContenuDepuisDisque();
+  const mission = base.missions[0];
+  const avec = (changement: object) => validerContenu({ ...base, missions: [{ ...mission, ...changement }] as typeof base.missions })
+    .map((p) => p.message).join();
+
+  it('des points pour une compétence non visée', () => {
+    const etapes = structuredClone(mission.etapes);
+    (etapes[2] as { choix: { points?: object }[] }).choix[0].points = { 'C2.1.1': 1 };
+    expect(avec({ etapes })).toMatch(/non visée/);
+  });
+  it('une suite qui ne mène nulle part', () => {
+    const etapes = structuredClone(mission.etapes);
+    (etapes[2] as { choix: { suite?: string }[] }).choix[0].suite = 'nulle-part';
+    expect(avec({ etapes })).toMatch(/n'existe pas/);
+  });
+  it('un repère hors du lieu de la mission', () => {
+    const etapes = structuredClone(mission.etapes);
+    (etapes[1] as { elements: { colonne: number }[] }).elements[0].colonne = 20;
+    expect(avec({ etapes })).toMatch(/pas dans le lieu/);
+  });
+  it('un relais vers une personne inconnue', () => {
+    const etapes = structuredClone(mission.etapes);
+    (etapes[4] as { destinataire: string }).destinataire = 'medecin';
+    expect(avec({ etapes })).toMatch(/introuvable dans le personnel/);
+  });
+  it('une compétence visée jamais évaluée', () => {
+    const competences = [...mission.competences, { code: 'CT4.2', critere: 'Respect du projet de vie.' }];
+    expect(avec({ competences })).toMatch(/CT4.2 est visée/);
+  });
+  it('un débriefing trop court', () => expect(avec({ debriefing: ['Une seule ?'] })).toMatch(/2 ou 3 questions/));
+});

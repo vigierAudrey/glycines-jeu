@@ -8,14 +8,82 @@
   "personnages": ["karim", "joueur", "infirmiere", "ash"],
   "competences": [
     { "code": "CT3.3", "critere": "Prise en compte du contexte de l’activité." },
-    { "code": "CT3.1", "critere": "Identification des ressources et des contraintes du cadre de l’intervention, dont celles relatives aux risques professionnels." }
+    { "code": "CT3.1", "critere": "Identification des ressources et des contraintes du cadre de l’intervention, dont celles relatives aux risques professionnels." },
+    { "code": "CT4.1", "critere": "Intervention et attitude adaptées pour amener la personne âgée à participer aux activités de la vie quotidienne." }
   ],
   "situation": "Il est 8 h. Vous entrez dans la chambre de M. Karim pour l'accompagner à sa toilette au lavabo, avec une aide partielle.",
   "objectif_eleve": "Repérer dans la chambre ce qui facilite ou gêne l'activité, puis décider : agir, adapter ou alerter.",
-  "idees_de_reperages": [
-    "Sol mouillé devant le lavabo.",
-    "Sonnette hors de portée du lit.",
-    "Fauteuil sans les freins."
+  "note_pour_audrey": "Exemple qui sert à tester le moteur (phase 2). Textes à relire et corriger avant de passer le statut à valide (tâche 3.1).",
+  "etapes": [
+    {
+      "id": "entrer",
+      "type": "dialogue",
+      "consigne": "Vous arrivez devant la porte de M. Karim.",
+      "interlocuteur": "karim",
+      "replique": "Oui ? Entrez.",
+      "verbal": [
+        { "texte": "Bonjour M. Karim. Je viens pour votre toilette au lavabo. Vous êtes d'accord ?", "confiance": 2, "points": { "CT4.1": 2 }, "retour": "Vous vous présentez, vous expliquez et vous demandez son accord : il peut participer." },
+        { "texte": "Allez, on fait la toilette, on est pressés ce matin.", "confiance": -2, "retour": "M. Karim n'a pas le choix et sent qu'il dérange." },
+        { "texte": "Bonjour ! Toilette !", "confiance": -1, "points": { "CT4.1": 1 }, "retour": "Vous saluez, mais il ne sait pas ce qui va se passer ni si on lui demande son avis." }
+      ],
+      "paraverbal": [
+        { "texte": "Voix calme, débit posé.", "confiance": 1, "points": { "CT4.1": 1 }, "retour": "Le ton calme rassure et laisse le temps de comprendre." },
+        { "texte": "Voix forte et rapide.", "confiance": -1, "retour": "Un ton rapide et fort peut être vécu comme de la pression." },
+        { "texte": "Voix très basse, on m'entend à peine.", "confiance": 0, "retour": "Il risque de ne pas vous entendre : il faut parler distinctement." }
+      ],
+      "non_verbal": [
+        { "texte": "Je frappe, j'attends sa réponse, puis je me place face à lui.", "confiance": 1, "points": { "CT4.1": 1 }, "retour": "Vous respectez son espace privé et il vous voit arriver." },
+        { "texte": "J'entre directement et je vais au lavabo.", "confiance": -2, "retour": "La chambre est son domicile : on frappe et on attend la réponse." },
+        { "texte": "Je reste près de la porte, bras croisés.", "confiance": -1, "retour": "Les bras croisés et la distance donnent une impression de fermeture." }
+      ]
+    },
+    {
+      "id": "regarder",
+      "type": "observation",
+      "consigne": "Avant de commencer, regardez la chambre à la loupe. Touchez chaque repère et dites s'il facilite ou gêne la toilette.",
+      "elements": [
+        { "id": "sol-mouille", "libelle": "Le sol est mouillé devant le lavabo.", "colonne": 7, "rangee": 1, "effet": "gene", "points": { "CT3.3": 1, "CT3.1": 1 }, "retour": "Risque de glissade pour M. Karim et pour vous." },
+        { "id": "fauteuil-sans-freins", "libelle": "Le fauteuil n'a pas les freins mis.", "colonne": 7, "rangee": 2, "effet": "gene", "points": { "CT3.3": 1, "CT3.1": 1 }, "retour": "Un fauteuil qui roule peut provoquer une chute au moment de s'asseoir." },
+        { "id": "sonnette-loin", "libelle": "La sonnette est accrochée au mur, loin du lit.", "colonne": 5, "rangee": 0, "effet": "gene", "points": { "CT3.3": 1 }, "retour": "M. Karim doit pouvoir appeler à tout moment : la sonnette reste à portée de main." },
+        { "id": "affaires-pretes", "libelle": "Serviette, gant et trousse de toilette sont posés près du lavabo.", "colonne": 6, "rangee": 0, "effet": "facilite", "points": { "CT3.3": 1 }, "retour": "Le matériel prêt évite de laisser M. Karim seul pendant la toilette." },
+        { "id": "lit-bas", "libelle": "Le lit est en position basse.", "colonne": 4, "rangee": 1, "effet": "facilite", "points": { "CT3.3": 1 }, "retour": "Un lit bas facilite le lever en sécurité." }
+      ]
+    },
+    {
+      "id": "fauteuil",
+      "type": "decision",
+      "consigne": "Le fauteuil n'a pas les freins mis.",
+      "question": "Que faites-vous ?",
+      "choix": [
+        { "decision": "agir", "texte": "Je mets les freins avant toute aide.", "points": { "CT3.1": 2 }, "retour": "C'est dans votre rôle : vous sécurisez le matériel avant d'agir." },
+        { "decision": "adapter", "texte": "Je demande à M. Karim de faire attention en s'asseyant.", "retour": "Le risque reste là : c'est au professionnel de sécuriser le matériel." },
+        { "decision": "alerter", "texte": "Je vais chercher l'infirmière.", "retour": "Inutile ici : mettre les freins est dans votre rôle, et vous laissez M. Karim seul." }
+      ]
+    },
+    {
+      "id": "sol",
+      "type": "decision",
+      "consigne": "Le sol est mouillé devant le lavabo.",
+      "question": "Que faites-vous ?",
+      "choix": [
+        { "decision": "adapter", "texte": "J'essuie le sol pour sécuriser la toilette, puis je préviens la personne qui s'occupe de l'entretien.", "points": { "CT3.1": 2, "CT3.3": 1 }, "retour": "Vous sécurisez tout de suite, et vous transmettez pour qu'on trouve l'origine de l'eau." },
+        { "decision": "agir", "texte": "Je commence la toilette : M. Karim fera attention.", "retour": "Le risque de chute est connu et vous ne faites rien : ce n'est pas acceptable." },
+        { "decision": "alerter", "texte": "Je quitte la chambre pour chercher de l'aide.", "retour": "Vous pouvez d'abord sécuriser vous-même, sans laisser M. Karim seul face au risque." }
+      ]
+    },
+    {
+      "id": "prevenir",
+      "type": "relais",
+      "consigne": "Après la toilette, allez prévenir la bonne personne pour le sol mouillé.",
+      "destinataire": "ash",
+      "points": { "CT3.1": 1 },
+      "retour": "Julien (ASH) s'occupe de l'entretien : il va vérifier d'où vient l'eau.",
+      "retour_erreur": "Cette personne ne s'occupe pas de l'entretien des locaux. Qui s'en charge dans l'aile B ?"
+    }
   ],
-  "a_construire_en_phase_2": "Le format détaillé des étapes (observation, choix, relais, bilan) sera défini dans la phase 2 de la ROADMAP. Ce fichier sert d'exemple pour le validateur."
+  "debriefing": [
+    "Qu'avez-vous repéré dans la chambre avant de commencer, et pourquoi était-ce important ?",
+    "À qui avez-vous signalé le sol mouillé, et pourquoi à cette personne ?",
+    "Dans votre façon d'entrer, qu'est-ce qui a aidé M. Karim à participer ?"
+  ]
 }

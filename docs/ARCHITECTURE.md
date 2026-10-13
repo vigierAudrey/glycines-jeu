@@ -37,7 +37,8 @@ glycines-jeu/
 │   ├── contenu/                  types.ts (forme des données), charger.ts, valider.ts
 │   ├── regles/                   plan.ts (grille → zones, centres, murs), chemin.ts (recherche de chemin A*),
 │   │                             fiche.ts (nom et rôle d'une personne, pour la bulle),
-│   │                             etiquettes.ts (écarter les noms qui se chevauchent à l'écran)
+│   │                             etiquettes.ts (écarter les noms qui se chevauchent à l'écran),
+│   │                             mission.ts (moteur de mission : étapes, points, confiance, niveaux)
 │   ├── scene3d/                  creerScene.ts (caméra, contrôles, boucle d'animation), construireAile.ts, personnages.ts,
 │   │                             toucher.ts (toucher bref ou glisser, raycasting), marche.ts (marche de l'agent),
 │   │                             meubles.ts (lit, fauteuil, lavabo, sonnette en formes simples),
@@ -136,6 +137,35 @@ Si le mode « mirrored » n'est pas disponible (Windows 10) :
 - Fluidité pendant la marche (pas de saccades) ; le téléphone ne chauffe pas à l'arrêt.
 - Paysage et portrait ; les boutons font au moins un doigt de large.
 
-## Format d'une mission (provisoire, fixé en phase 2.1)
+## Format d'une mission (fixé en phase 2.1)
 
-Champs obligatoires aujourd'hui : `id`, `statut` (`brouillon` ou `valide`), `titre`, `duree_min` (20 max), `sequence_requise` (`S1` à `S7`), `lieu` (id de zone), `personnages` (ids), `competences` (liste de `{ code, critere }` avec le critère **mot pour mot**), `situation`, `objectif_eleve`. Le reste est libre jusqu'à la phase 2.
+Une mission est un fichier de `content/scenarios/`. Exemple complet : `m00-exemple-chambre-karim.json`.
+
+| Champ | Contenu |
+|---|---|
+| `id`, `titre`, `statut` | `statut` : `brouillon` ou `valide` (seule Audrey passe une mission à `valide`). |
+| `duree_min` | 20 au plus. |
+| `sequence_requise` | `S1` à `S7` : la séquence de cours que la mission suppose. |
+| `lieu` | id de la zone où se passe la mission (l'agent s'y rend au début). |
+| `personnages` | ids des résidents et du personnel concernés. |
+| `competences` | liste de `{ code, critere }`, critère **mot pour mot** du référentiel. |
+| `situation`, `objectif_eleve` | phrases courtes lues au début. |
+| `transfert` | facultatif. `true` si c'est une situation nouvelle : seul cas où N4 est possible. |
+| `confiance_depart` | facultatif, de 0 à 10 (5 par défaut). |
+| `etapes` | la suite des étapes (voir ci-dessous). |
+| `debriefing` | 2 ou 3 questions pour la relève de fin de mission. |
+
+### Les 4 types d'étapes
+
+Chaque étape a un `id`, un `type` et une `consigne`. Les **points** s'écrivent `{ "CT4.1": 2 }` : un entier de 0 à 3 par compétence, et seulement pour une compétence visée par la mission.
+
+- **`dialogue`** : `interlocuteur` (id), `replique` (facultatif), puis trois listes d'options : `verbal` (la phrase), `paraverbal` (le ton, le débit), `non_verbal` (la posture, le regard). L'élève choisit une option dans chaque liste. Chaque option a `texte`, `retour`, `confiance` (de -2 à +2) et parfois `points`.
+- **`observation`** (la loupe) : `elements`, chacun avec `id`, `libelle`, `colonne`, `rangee` (une case du lieu de la mission), `effet` (`facilite` ou `gene`), `retour` et `points`. L'élève touche chaque repère et dit s'il facilite ou gêne l'activité.
+- **`decision`** : `question` et `choix`, chacun avec `decision` (`agir`, `adapter` ou `alerter`), `texte`, `retour`, `points` et éventuellement `suite` (id de l'étape suivante, ou `fin`). Sans `suite`, on passe à l'étape d'après.
+- **`relais`** : `destinataire` (id du membre du personnel à rejoindre), `points` (gagnés seulement au premier essai), `retour` et `retour_erreur` (l'élève peut réessayer).
+
+### Les niveaux (moteur : `src/regles/mission.ts`)
+
+Pour chaque compétence, le moteur compare les points obtenus au maximum possible (le meilleur choix à chaque étape) : moins de 40 % → **N1**, moins de 70 % → **N2**, sinon **N3**. **N4** demande 90 % dans une mission marquée `transfert`. Il n'y a jamais de note globale.
+
+`pnpm valider` refuse : une étape sans identifiant unique, une `suite` qui ne mène nulle part, des points pour une compétence non visée, une compétence visée qui ne rapporte jamais de points, un repère hors du lieu, un relais vers une personne inconnue, un dialogue avec moins de 2 options par canal, un débriefing qui n'a pas 2 ou 3 questions.

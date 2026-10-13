@@ -34,8 +34,8 @@ Légende : `[x]` fait · `[ ]` à faire · 🧑‍🏫 tâche pour Audrey (sans 
 
 ## Phase 2 · Le moteur de mission
 
-- [ ] **2.1** Fixer le format d'une mission (étapes, choix, conséquences, compétences par étape) et l'écrire dans `docs/ARCHITECTURE.md`. Mettre à jour le validateur.
-- [ ] **2.2** Moteur de règles pur (sans 3D) : état de la mission, choix, points par compétence, niveaux N1 à N4. Tests unitaires.
+- [x] **2.1** Fixer le format d'une mission (étapes, choix, conséquences, compétences par étape) et l'écrire dans `docs/ARCHITECTURE.md`. Mettre à jour le validateur.
+- [x] **2.2** Moteur de règles pur (sans 3D) : état de la mission, choix, points par compétence, niveaux N1 à N4. Tests unitaires.
 - [ ] **2.3** Panneau de dialogue en bas d'écran (verbal, paraverbal, non-verbal) et jauge de confiance.
 - [ ] **2.4** Mode observation (loupe) : repérer des éléments dans une pièce.
 - [ ] **2.5** Décision agir / adapter / alerter, et relais : aller jusqu'au bon professionnel.

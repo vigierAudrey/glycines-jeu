@@ -6,7 +6,7 @@
 // ou un critère absent du référentiel est refusée.
 
 import { casesDuMeuble, LONGUEUR_MEUBLE, PAS } from '../regles/plan';
-import type { Contenu, Lieu } from './types';
+import type { Contenu, Lieu, Mission, Points } from './types';
 
 export interface Probleme {
   fichier: string;
@@ -85,6 +85,7 @@ export function validerContenu(contenu: Contenu): Probleme[] {
         signaler(f, `${cv.code} : le critère « ${cv.critere} » ne reprend pas mot pour mot un critère officiel.`);
       }
     }
+    validerEtapes(m, contenu, (message) => signaler(f, message));
   }
 
   // ---------- Style : pas de tiret cadratin dans les textes montrés aux élèves ----------
@@ -137,4 +138,93 @@ function validerMeubles(lieu: Lieu, signaler: (message: string) => void): void {
   });
 
   for (const s of sonnettes) if (!casesDeLits.has(s.cle)) signaler(`${s.nom} : une sonnette se pose sur un lit, à portée de main du résident.`);
+}
+
+/** Zone (id) de chaque case des lieux, sous la forme « colonne;rangée ». */
+function zonesDesCases(contenu: Contenu): Map<string, string> {
+  const zones = new Map<string, string>();
+  for (const lieu of contenu.lieux) {
+    lieu.grille.forEach((ligne, r) => [...ligne].forEach((cle, c) => {
+      const zone = lieu.zones[cle];
+      if (zone) zones.set(`${c};${r}`, zone.id);
+    }));
+  }
+  return zones;
+}
+
+/**
+ * Règles des étapes d'une mission (format décrit dans docs/ARCHITECTURE.md) :
+ * identifiants uniques, suites qui mènent à une étape existante, points donnés seulement
+ * pour les compétences visées par la mission, et chaque compétence visée évaluée au moins une fois.
+ */
+function validerEtapes(m: Mission, contenu: Contenu, signaler: (message: string) => void): void {
+  if (!Array.isArray(m.etapes) || m.etapes.length === 0) return signaler('Aucune étape.');
+  if (!Array.isArray(m.debriefing) || m.debriefing.length < 2 || m.debriefing.length > 3) signaler('Le débriefing compte 2 ou 3 questions.');
+
+  const codes = new Set(m.competences.map((c) => c.code));
+  const evaluees = new Set<string>();
+  const ids = new Set<string>();
+  const personnel = new Map(contenu.personnel.map((p) => [p.id, p]));
+  const zones = zonesDesCases(contenu);
+
+  const lirePoints = (ou: string, points?: Points) => {
+    for (const [code, n] of Object.entries(points ?? {})) {
+      if (!codes.has(code)) signaler(`${ou} : points en ${code}, compétence non visée par la mission.`);
+      if (!(Number.isInteger(n) && n >= 0 && n <= 3)) signaler(`${ou} : ${n} points en ${code} (entier de 0 à 3 attendu).`);
+      if (n > 0) evaluees.add(code);
+    }
+  };
+
+  for (const e of m.etapes) {
+    const ou = `Étape « ${e.id} »`;
+    if (ids.has(e.id)) signaler(`${ou} : identifiant utilisé deux fois.`);
+    ids.add(e.id);
+    switch (e.type) {
+      case 'dialogue':
+        if (!m.personnages.includes(e.interlocuteur)) signaler(`${ou} : interlocuteur « ${e.interlocuteur} » absent des personnages de la mission.`);
+        for (const canal of ['verbal', 'paraverbal', 'non_verbal'] as const) {
+          if (!(e[canal]?.length >= 2)) signaler(`${ou} : le canal ${canal} demande au moins 2 options.`);
+          for (const o of e[canal] ?? []) {
+            lirePoints(ou, o.points);
+            if (!(Number.isInteger(o.confiance) && Math.abs(o.confiance) <= 2)) signaler(`${ou} : confiance ${o.confiance} (entier de -2 à 2 attendu).`);
+          }
+        }
+        break;
+      case 'observation': {
+        if (!(e.elements?.length > 0)) signaler(`${ou} : aucun élément à repérer.`);
+        const idsElements = new Set<string>();
+        for (const el of e.elements ?? []) {
+          if (idsElements.has(el.id)) signaler(`${ou} : élément « ${el.id} » en double.`);
+          idsElements.add(el.id);
+          if (zones.get(`${el.colonne};${el.rangee}`) !== m.lieu) signaler(`${ou} : l'élément « ${el.id} » n'est pas dans le lieu de la mission.`);
+          if (!['facilite', 'gene'].includes(el.effet)) signaler(`${ou} : effet « ${el.effet} » inconnu (facilite ou gene).`);
+          lirePoints(ou, el.points);
+        }
+        break;
+      }
+      case 'decision':
+        if (!(e.choix?.length >= 2)) signaler(`${ou} : au moins 2 choix.`);
+        for (const o of e.choix ?? []) {
+          if (!['agir', 'adapter', 'alerter'].includes(o.decision)) signaler(`${ou} : décision « ${o.decision} » inconnue (agir, adapter ou alerter).`);
+          lirePoints(ou, o.points);
+        }
+        break;
+      case 'relais': {
+        const p = personnel.get(e.destinataire);
+        if (!p || p.joueur) signaler(`${ou} : destinataire « ${e.destinataire} » introuvable dans le personnel.`);
+        lirePoints(ou, e.points);
+        break;
+      }
+      default:
+        signaler(`${ou} : type « ${(e as { type: string }).type} » inconnu (dialogue, observation, decision ou relais).`);
+    }
+  }
+
+  for (const e of m.etapes) {
+    if (e.type !== 'decision') continue;
+    for (const o of e.choix ?? []) {
+      if (o.suite && o.suite !== 'fin' && !ids.has(o.suite)) signaler(`Étape « ${e.id} » : la suite « ${o.suite} » n'existe pas.`);
+    }
+  }
+  for (const code of codes) if (!evaluees.has(code)) signaler(`${code} est visée mais aucune étape ne lui donne de points.`);
 }

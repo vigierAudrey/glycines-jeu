@@ -70,3 +70,10 @@ On ne redessine que si la vue change (batterie des téléphones). Les étiquette
 - **Décision** : chaque meuble est une ligne du plan (`type`, `colonne`, `rangee`, `vers`). Les règles calculent les cases occupées (obstacles pour la marche) ; le décor dessine chaque type avec quelques boîtes (`src/scene3d/meubles.ts`).
 - **Pourquoi** : aucun fichier à télécharger, aucune nouvelle dépendance, rendu cohérent avec les murs et les personnages actuels, léger sur téléphone. Ajouter un meuble = ajouter une ligne de JSON, que `pnpm valider` contrôle.
 - **Ce qu'on abandonne pour l'instant** : les modèles glTF (Kenney.nl, Blender). Ils remplaceront une fonction de `MODELES` en phase 2 bis, après accord d'Audrey sur la source des fichiers.
+
+## D-014 · Format des missions et calcul des niveaux · 13/10/2026
+
+- **Décision** : une mission est une liste d'étapes de 4 types (`dialogue`, `observation`, `decision`, `relais`). Chaque réponse rapporte des points par compétence (0 à 3). Le niveau d'une compétence vient de la part des points obtenus sur le maximum possible : N1 (< 40 %), N2 (< 70 %), N3 ; N4 seulement dans une mission marquée `transfert`, avec 90 % au moins.
+- **Pourquoi** : 4 types suffisent pour les mécaniques du cahier des charges (loupe, dialogue en 3 canaux, agir/adapter/alerter, relais vers le bon professionnel). Un seul niveau par compétence, jamais de note globale (règle 4). N4 (« transfère à une situation nouvelle et justifie ») ne peut pas se prouver dans une mission connue.
+- **À valider par Audrey** : les seuils 40 % et 70 %, et l'usage de `transfert`. Ils se changent dans `niveau()` (`src/regles/mission.ts`).
+- **Ce qu'on abandonne pour l'instant** : les types « transmission » (trier fait, jugement, interprétation), « secret professionnel » et « protocole » du cahier des charges. Ils s'ajouteront comme nouveaux types d'étapes quand les missions de la phase 4 en auront besoin.

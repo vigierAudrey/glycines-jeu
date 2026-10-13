@@ -86,6 +86,78 @@ export interface CompetenceVisee {
   critere: string; // doit reprendre mot pour mot un critère officiel de la compétence
 }
 
+/** Points gagnés, par code de compétence. Ex. { "CT4.1": 2 }. */
+export type Points = Record<string, number>;
+
+/** Une réponse possible : ce qu'elle rapporte et ce qu'on dit à l'élève après l'avoir choisie. */
+export interface Option {
+  texte: string;
+  points?: Points;
+  retour: string; // explication montrée après le choix
+}
+
+/** Une option de dialogue fait aussi bouger la confiance du résident (de -2 à +2). */
+export interface OptionDialogue extends Option {
+  confiance: number;
+}
+
+export type Decision = 'agir' | 'adapter' | 'alerter';
+
+export interface OptionDecision extends Option {
+  decision: Decision;
+  suite?: string; // id de l'étape suivante si ce choix mène ailleurs (sinon : l'étape suivante dans la liste)
+}
+
+/** Un élément à repérer à la loupe, posé sur une case du plan. */
+export interface ElementObserve {
+  id: string;
+  libelle: string; // ce que l'élève voit en touchant le repère
+  colonne: number;
+  rangee: number;
+  effet: 'facilite' | 'gene'; // bonne réponse : cet élément facilite ou gêne l'activité
+  points?: Points; // gagnés si l'élève classe bien l'élément
+  retour: string;
+}
+
+interface EtapeCommune {
+  id: string;
+  consigne: string; // phrase courte affichée en haut du panneau
+}
+
+/** L'élève choisit sa phrase (verbal), son ton (paraverbal) et son attitude (non-verbal). */
+export interface EtapeDialogue extends EtapeCommune {
+  type: 'dialogue';
+  interlocuteur: string; // id du personnage
+  replique?: string; // ce que dit l'interlocuteur avant le choix
+  verbal: OptionDialogue[];
+  paraverbal: OptionDialogue[];
+  non_verbal: OptionDialogue[];
+}
+
+/** Mode loupe : l'élève touche chaque repère et dit s'il facilite ou gêne l'activité. */
+export interface EtapeObservation extends EtapeCommune {
+  type: 'observation';
+  elements: ElementObserve[];
+}
+
+/** Agir, adapter ou alerter. */
+export interface EtapeDecision extends EtapeCommune {
+  type: 'decision';
+  question: string;
+  choix: OptionDecision[];
+}
+
+/** L'élève va trouver le bon professionnel dans l'aile. */
+export interface EtapeRelais extends EtapeCommune {
+  type: 'relais';
+  destinataire: string; // id du membre du personnel attendu
+  points?: Points; // gagnés seulement au premier essai
+  retour: string; // dit quand l'élève trouve la bonne personne
+  retour_erreur: string; // dit quand il se trompe (il peut réessayer)
+}
+
+export type Etape = EtapeDialogue | EtapeObservation | EtapeDecision | EtapeRelais;
+
 export interface Mission {
   id: string;
   statut: 'brouillon' | 'valide';
@@ -97,7 +169,11 @@ export interface Mission {
   competences: CompetenceVisee[];
   situation: string;
   objectif_eleve: string;
-  [autre: string]: unknown; // champs libres tant que le format des étapes n'est pas fixé (phase 2)
+  transfert?: boolean; // vrai si la mission est une situation nouvelle : seul cas où le niveau N4 est possible
+  confiance_depart?: number; // de 0 à 10, 5 par défaut
+  etapes: Etape[];
+  debriefing: string[]; // 2 ou 3 questions pour la relève de fin de mission
+  [autre: string]: unknown; // champs libres (notes pour l'enseignante…)
 }
 
 export interface Contenu {
