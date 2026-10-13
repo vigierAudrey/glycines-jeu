@@ -5,9 +5,11 @@ Propriétaire : Audrey, enseignante et développeuse débutante. Elle veut **com
 
 ## Au début de chaque session
 
-1. Lis `docs/ROADMAP.md` et prends **la première tâche non cochée** (sauf si Audrey en désigne une autre). **Une seule tâche par session.**
+1. Lis `docs/ROADMAP.md` et prends **la première tâche non cochée** (sauf si Audrey en désigne une autre). Enchaîne ensuite les tâches suivantes tant que c'est possible, sans t'arrêter entre deux tâches.
 2. Lis `docs/ARCHITECTURE.md` et les fichiers concernés **avant** de modifier quoi que ce soit.
 3. Annonce en 2 ou 3 phrases ce que tu vas faire et quels fichiers tu vas toucher.
+
+**Audrey ne fait pas d'exercices de programmation.** Ne lui demande jamais de modifier le code ou le contenu elle-même : fais-le, puis explique-lui simplement ce qui a été ajouté. Les seules tâches qui lui reviennent sont celles qu'elle seule peut faire (valider un contenu pédagogique, tester avec des élèves, décider de publier).
 
 ## Règles d'architecture
 
@@ -29,5 +31,5 @@ Propriétaire : Audrey, enseignante et développeuse débutante. Elle veut **com
 1. `pnpm verifier` doit passer (types, contenu, tests, build).
 2. Si l'affichage a changé : vérifier dans le navigateur, sur ordinateur et à 390 px.
 3. Cocher la tâche dans `docs/ROADMAP.md`, ajouter une entrée de 3 lignes dans `docs/JOURNAL.md`, et une entrée dans `docs/DECISIONS.md` si un choix important a été fait.
-4. Expliquer à Audrey : **ce que fait le code → pourquoi → où il intervient → ce qui pourrait casser → comment le tester.** Puis lui poser **2 questions de compréhension**.
-5. Proposer le message de commit, **sans committer** : c'est Audrey qui committe (TESTER → VÉRIFIER → COMMIT).
+4. Faire un commit par tâche terminée (message clair en français). Pousser sur GitHub et publier seulement quand Audrey le demande.
+5. À la fin de la session, un **bilan global** pour Audrey, en mots simples : ce qui a été ajouté, où le voir dans le jeu, ce qui lui reste à décider. Pas de questions de compréhension.

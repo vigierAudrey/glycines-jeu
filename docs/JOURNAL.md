@@ -97,3 +97,8 @@ Trois lignes par session : ce qui a été fait, ce qui reste à surveiller, la p
 - **Fait** : droit `workflow` ajouté à `gh`, commits poussés, GitHub Pages activé (source : GitHub Actions), workflow lancé à la main : le jeu est en ligne sur https://vigieraudrey.github.io/glycines-jeu/. Audrey a joué la mission de M. Karim en entier sur son téléphone (`?brouillons&sequence=S2`).
 - **À surveiller** : avertissements de GitHub (actions en Node.js 20, passage à Ubuntu 26 le 19/10/2026) à traiter en mettant à jour les versions du workflow ; retours détaillés d'Audrey sur le confort au téléphone à noter.
 - **Prochaine tâche** : 1.6 (exercice d'Audrey), puis G.1 (charte visuelle) et 3.1 (rédaction des missions).
+
+## 13/10/2026 · Fin des exercices (tâche 1.6)
+
+- **Fait** : fauteuil de Mme Denise ajouté (colonne 15, rangée 2, tourné vers l'ouest, comme dans les autres chambres) ; consignes mises à jour dans CLAUDE.md, AGENTS.md, PROMPTS.md et la feuille de route (D-019).
+- **Prochaine tâche** : G.1 (maquettes de la charte visuelle).

@@ -128,6 +128,7 @@
     { "type": "lit", "colonne": 12, "rangee": 0, "vers": "sud" },
     { "type": "sonnette", "colonne": 12, "rangee": 0, "vers": "sud" },
     { "type": "lavabo", "colonne": 15, "rangee": 0, "vers": "sud" },
+    { "type": "fauteuil", "colonne": 15, "rangee": 2, "vers": "ouest" },
     { "type": "lit", "colonne": 0, "rangee": 9, "vers": "nord" },
     { "type": "sonnette", "colonne": 0, "rangee": 9, "vers": "nord" },
     { "type": "lavabo", "colonne": 3, "rangee": 9, "vers": "nord" },

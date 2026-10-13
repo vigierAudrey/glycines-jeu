@@ -64,7 +64,7 @@ glycines-jeu/
 Chaque caractère de `grille` est une case de 1 m × 1 m. Une lettre majuscule = une zone (décrite dans `zones`), `p` = une porte, `.` = rien.
 Les murs ne sont pas dessinés à la main : `src/regles/plan.ts` les calcule. Il pose un mur entre deux cases de zones différentes, sauf si l'une est une porte ou si les deux sont dehors.
 
-**Exercice** : remplace un `R` par un `p` sur le bord de la chambre de Mme Rose et regarde la nouvelle porte apparaître.
+**Exemple** : remplacer un `R` par un `p` sur le bord de la chambre de Mme Rose fait apparaître une nouvelle porte.
 
 ### Les meubles
 

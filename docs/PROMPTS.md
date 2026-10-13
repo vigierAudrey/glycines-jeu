@@ -12,9 +12,8 @@ Je suis débutante : explique les notions nouvelles quand tu les utilises.
 
 ```
 Lance pnpm verifier. Si tout passe : coche la tâche dans docs/ROADMAP.md,
-ajoute 3 lignes dans docs/JOURNAL.md, explique-moi ce que tu as fait
-(quoi, pourquoi, où, ce qui pourrait casser, comment tester),
-pose-moi 2 questions de compréhension et propose un message de commit.
+ajoute 3 lignes dans docs/JOURNAL.md, fais le commit,
+puis explique-moi simplement ce qui a été ajouté et où le voir dans le jeu.
 ```
 
 ## Quand le quota Claude est épuisé (relais Codex)

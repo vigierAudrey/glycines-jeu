@@ -102,3 +102,9 @@ On ne redessine que si la vue change (batterie des téléphones). Les étiquette
 - **Décision** : `public/sw.js` (une soixantaine de lignes) plutôt que `vite-plugin-pwa`. Il lit les pages pour trouver leurs fichiers et les met en cache ; réseau d'abord pour les pages, cache d'abord pour `assets/`. Publication par GitHub Pages avec un workflow **lancé à la main uniquement** (`workflow_dispatch`).
 - **Pourquoi** : pas de nouvelle dépendance (règle du projet), code lisible et commenté en français. Publier est un acte visible du public : c'est à Audrey de décider quand.
 - **Limites** : les anciens fichiers de `assets/` restent dans le cache après une mise à jour (quelques centaines de ko) ; changer `CACHE` dans `sw.js` (`glycines-v2`…) efface tout. Les icônes sont provisoires (grappe de glycine dessinée par un script) en attendant la charte G.1.
+
+## D-019 · Pas d'exercices pour Audrey · 13/10/2026
+
+- **Décision** : Audrey ne fait plus d'exercices de programmation (l'exercice 1.6 est fait par l'IA, G.4 et 3.1 sont confiées à l'IA). L'IA enchaîne les tâches, committe chaque tâche et termine par un bilan global en mots simples, sans questions de compréhension.
+- **Pourquoi** : demande d'Audrey : elle veut comprendre ce qui est ajouté, pas le coder elle-même.
+- **Ce qui reste à Audrey** : relire et valider les missions (statut `valide`), tester avec des élèves, choisir la charte, décider quand publier.

@@ -1,8 +1,8 @@
 # Feuille de route · Une journée aux Glycines
 
-**Règle : une session de travail = une tâche.** On coche la tâche quand `pnpm verifier` passe et que le résultat a été vu dans le navigateur (ordinateur et téléphone si l'affichage change).
+**Règle :** l'IA enchaîne les tâches et fait un bilan global à la fin. On coche une tâche quand `pnpm verifier` passe et que le résultat a été vu dans le navigateur (ordinateur et téléphone si l'affichage change). Audrey ne fait pas d'exercices de programmation : l'IA code, puis explique simplement ce qui a été ajouté.
 
-Légende : `[x]` fait · `[ ]` à faire · 🧑‍🏫 tâche pour Audrey (sans IA ou presque) · 🎓 ce que tu apprends
+Légende : `[x]` fait · `[ ]` à faire · 🧑‍🏫 ce qu'Audrey seule peut faire (valider un contenu pédagogique, tester avec des élèves) · 🎓 notion expliquée
 
 ---
 
@@ -29,7 +29,7 @@ Légende : `[x]` fait · `[ ]` à faire · 🧑‍🏫 tâche pour Audrey (sans 
   🎓 Faits en formes simples (boîtes). L'import d'un modèle glTF (Kenney.nl en CC0, ou Blender) est reporté à G.2 et G.4, avec l'accord d'Audrey.
 - [x] **1.5** Test sur un vrai téléphone (accès au serveur de WSL depuis le wifi, voir docs/ARCHITECTURE.md).
   Fait par la version publiée sur GitHub Pages (la procédure wifi reste dans `docs/ARCHITECTURE.md`).
-- [ ] **1.6** 🧑‍🏫 Ajouter toi-même un meuble dans la chambre de Mme Denise.
+- [x] **1.6** Fauteuil de Mme Denise ajouté dans le plan (l'exercice prévu pour Audrey est supprimé).
 - [x] **1.7** Lisibilité des étiquettes dans une petite fenêtre : éviter que deux noms proches se chevauchent (IDE et Cadre, Vous et AS) et qu'une étiquette passe sous la barre du haut (Mme Rose).
 
 ## Phase 2 · Le moteur de mission
@@ -48,11 +48,11 @@ Légende : `[x]` fait · `[ ]` à faire · 🧑‍🏫 tâche pour Audrey (sans 
 - [ ] **G.1** Choisir la charte visuelle (palette, style des personnages) sur 2 ou 3 maquettes.
 - [ ] **G.2** Personnages low-poly animés (marche, attente) avec tenues par métier et aides techniques des résidents.
 - [ ] **G.3** Sols texturés, fenêtres, portes, éclairage chaud ; contrôle de la fluidité sur téléphone.
-- [ ] **G.4** 🧑‍🏫 Modéliser dans Blender un objet métier (lève-personne ou chariot de soins) et l'importer.
+- [ ] **G.4** Un objet métier en 3D (lève-personne ou chariot de soins), fait par l'IA en formes simples ou repris d'un modèle libre de droits (avec l'accord d'Audrey).
 
 ## Phase 3 · Tranche verticale : « Le matin de M. Karim »
 
-- [ ] **3.1** 🧑‍🏫 Rédiger les 3 ou 4 missions (avec le référentiel sous les yeux), passer leur statut à `valide`.
+- [ ] **3.1** L'IA rédige les 3 ou 4 missions à partir du référentiel et des cours ; 🧑‍🏫 Audrey les relit, les corrige et passe leur statut à `valide`.
 - [ ] **3.2** Intégrer les missions et jouer la séquence complète.
 - [ ] **3.3** 🧑‍🏫 Test avec 2 ou 3 élèves : noter le temps, les blocages, ce qu'ils disent au débriefing.
 - [ ] **3.4** Corriger d'après le test.
