@@ -108,3 +108,9 @@ On ne redessine que si la vue change (batterie des téléphones). Les étiquette
 - **Décision** : Audrey ne fait plus d'exercices de programmation (l'exercice 1.6 est fait par l'IA, G.4 et 3.1 sont confiées à l'IA). L'IA enchaîne les tâches, committe chaque tâche et termine par un bilan global en mots simples, sans questions de compréhension.
 - **Pourquoi** : demande d'Audrey : elle veut comprendre ce qui est ajouté, pas le coder elle-même.
 - **Ce qui reste à Audrey** : relire et valider les missions (statut `valide`), tester avec des élèves, choisir la charte, décider quand publier.
+
+## D-020 · Charte visuelle : on garde « Glycine douce » · 13/10/2026
+
+- **Décision** : Audrey a d'abord choisi la charte C « Repères nets » (contours foncés, fond gris bleuté, fauteuils orange). Après l'avoir vue appliquée au jeu, elle préfère le style d'origine (A « Glycine douce ») : le commit de la charte C est annulé (`git revert`), il reste dans l'historique.
+- **Pourquoi** : rendu jugé moins agréable une fois dans le jeu.
+- **Plus tard** : personnages plus personnalisés (G.2), dans le style actuel.
