@@ -36,10 +36,12 @@ glycines-jeu/
 │   ├── main.ts                   point d'entrée : branche les couches dans l'ordre
 │   ├── contenu/                  types.ts (forme des données), charger.ts, valider.ts
 │   ├── regles/                   plan.ts (grille → zones, centres, murs), chemin.ts (recherche de chemin A*),
-│   │                             fiche.ts (nom et rôle d'une personne, pour la bulle)
+│   │                             fiche.ts (nom et rôle d'une personne, pour la bulle),
+│   │                             etiquettes.ts (écarter les noms qui se chevauchent à l'écran)
 │   ├── scene3d/                  creerScene.ts (caméra, contrôles, boucle d'animation), construireAile.ts, personnages.ts,
 │   │                             toucher.ts (toucher bref ou glisser, raycasting), marche.ts (marche de l'agent),
-│   │                             meubles.ts (lit, fauteuil, lavabo, sonnette en formes simples)
+│   │                             meubles.ts (lit, fauteuil, lavabo, sonnette en formes simples),
+│   │                             ecartEtiquettes.ts (applique l'écart des noms après chaque dessin)
 │   └── ui/                       interface.ts (barre, boutons, légende), bulle.ts (bulle d'une personne touchée)
 ├── tools/valider-contenu.ts      la commande « pnpm valider »
 ├── tests/                        tests automatiques (Vitest)
@@ -82,6 +84,7 @@ Le champ `meubles` liste les meubles du plan, un par ligne :
 - **Bulle qui suit la 3D** : la bulle est du HTML dans le calque interface. Après chaque dessin (`theatre.apresChaqueRendu`), on calcule où se trouve la tête de la personne à l'écran (`theatre.versEcran`) et on y replace la bulle, retenue au bord de l'écran si besoin.
 - **A\*** (« A étoile ») : algorithme de plus court chemin sur la grille (`src/regles/chemin.ts`). Il explore d'abord les cases dont « chemin déjà fait + distance à vol d'oiseau restante » est le plus petit. On marche en 8 directions, jamais à travers un mur, et sans couper le coin d'un mur en diagonale.
 - **Étiquettes HTML (CSS2DRenderer)** : les noms au-dessus des têtes sont du vrai texte HTML, net et lisible, pas des pixels dans la 3D.
+- **Écart des étiquettes** : après chaque dessin, on mesure le rectangle de chaque nom de personne à l'écran. De la plus basse à la plus haute, une étiquette qui en touche une autre monte juste au-dessus ; une étiquette qui passerait sous la barre du haut est descendue dessous (`src/regles/etiquettes.ts`, testé sans navigateur). Le décalage passe par la propriété CSS `translate`, qui s'ajoute au `transform` posé par Three.js.
 - **Densité d'étiquettes** : selon le nombre de pixels par mètre à l'écran, le CSS masque les noms des chambres puis des pièces pour éviter les chevauchements (`data-densite` sur `#scene`).
 
 ## Commandes
@@ -96,7 +99,42 @@ Le champ `meubles` liste les meubles du plan, un par ligne :
 
 ## Tester sur un téléphone (phase 1.5)
 
-`pnpm dev` écoute sur le réseau (`--host`), mais WSL2 isole son réseau de celui de Windows : le téléphone ne voit pas le serveur directement. Deux solutions seront documentées en phase 1.5 : activer le réseau « mirrored » de WSL, ou une redirection de port côté Windows.
+`pnpm dev` écoute sur le réseau (`--host`), mais WSL2 isole son réseau de celui de Windows : le téléphone ne voit pas le serveur directement. Le téléphone et l'ordinateur doivent être sur **le même wifi**.
+
+### Solution 1 (conseillée) : le réseau « mirrored » de WSL
+
+1. Sous Windows, ouvrir (ou créer) le fichier `C:\Users\<ton nom>\.wslconfig` et y écrire :
+   ```ini
+   [wsl2]
+   networkingMode=mirrored
+   ```
+2. Dans PowerShell : `wsl --shutdown`, puis rouvrir le terminal Ubuntu.
+3. Autoriser le port 5173 dans le pare-feu de Windows (PowerShell **en administrateur**) :
+   ```powershell
+   New-NetFirewallRule -DisplayName "Vite 5173" -Direction Inbound -LocalPort 5173 -Protocol TCP -Action Allow
+   ```
+   et, pour le pare-feu propre à WSL : `Set-NetFirewallHyperVVMSetting -Name '{40E0AC32-46A5-438A-A0B2-2B479E8F2E90}' -DefaultInboundAction Allow`
+4. `pnpm dev` : l'adresse « Network » affichée (par exemple `http://192.168.1.23:5173/`) est celle de l'ordinateur. La taper dans le navigateur du téléphone.
+
+### Solution 2 : une redirection de port côté Windows
+
+Si le mode « mirrored » n'est pas disponible (Windows 10) :
+
+1. Dans Ubuntu : `hostname -I` donne l'adresse de WSL (par exemple `172.20.5.10`).
+2. Dans PowerShell **en administrateur** :
+   ```powershell
+   netsh interface portproxy add v4tov4 listenport=5173 listenaddress=0.0.0.0 connectport=5173 connectaddress=172.20.5.10
+   ```
+   puis la règle de pare-feu de l'étape 3 ci-dessus.
+3. Dans PowerShell : `ipconfig` donne l'adresse wifi de Windows. Sur le téléphone : `http://<cette adresse>:5173/`.
+4. L'adresse de WSL change à chaque redémarrage : refaire l'étape 2 (supprimer l'ancienne avec `netsh interface portproxy reset`).
+
+### Ce qu'on vérifie sur le téléphone
+
+- Toucher le sol : l'agent marche ; glisser : la vue bouge ; pincer : zoom.
+- Toucher une personne : la bulle s'ouvre et se ferme avec ×.
+- Fluidité pendant la marche (pas de saccades) ; le téléphone ne chauffe pas à l'arrêt.
+- Paysage et portrait ; les boutons font au moins un doigt de large.
 
 ## Format d'une mission (provisoire, fixé en phase 2.1)
 

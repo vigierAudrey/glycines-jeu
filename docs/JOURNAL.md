@@ -43,3 +43,9 @@ Trois lignes par session : ce qui a été fait, ce qui reste à surveiller, la p
 - **Fait** : commit de la tâche 1.3. Champ `meubles` dans `aile-b.json` (lit, sonnette, lavabo, fauteuil dans chaque chambre, sauf le fauteuil de Mme Denise, gardé pour l'exercice 1.6) ; cases occupées calculées par `plan.ts`, évitées par A* et par le placement des personnages ; 5 règles de validation ; `src/scene3d/meubles.ts` dessine les meubles en boîtes. `pnpm verifier` OK (40 tests), vérifié dans Chromium à 1280 px et 390 px, marche, suivi et bulle toujours bons.
 - **À surveiller** : toucher un lit ne fait rien (l'agent ne va pas à côté) ; chaque meuble ajoute quelques dessins pour la carte graphique (environ 80 au total, à surveiller sur téléphone en 1.5) ; pas encore de modèle glTF.
 - **Prochaine tâche** : 1.5 (test sur un vrai téléphone).
+
+## 13/10/2026 · Téléphone (procédure) et étiquettes lisibles (tâches 1.5 en partie et 1.7)
+
+- **Fait** : commit de la tâche 1.4. Procédure d'accès depuis le téléphone écrite (réseau « mirrored » de WSL ou redirection de port). Les noms des personnes ne se chevauchent plus (IDE et Cadre, Vous et AS) et ne passent plus sous la barre du haut (`src/regles/etiquettes.ts`, 5 tests). Vérifié dans Chromium à 1280 px et 390 px.
+- **À surveiller** : un nom de personne peut encore couvrir un nom de pièce ; le bandeau « tournez votre téléphone » n'est pas pris en compte comme la barre.
+- **Prochaine tâche** : 1.5 (test réel par Audrey), puis 2.1.

@@ -9,6 +9,7 @@ import { creerTheatre } from './scene3d/creerScene';
 import { construireAile } from './scene3d/construireAile';
 import { construireMeubles } from './scene3d/meubles';
 import { placerPersonnages } from './scene3d/personnages';
+import { ecarterEtiquettesDesPersonnes } from './scene3d/ecartEtiquettes';
 import { brancherMarche } from './scene3d/marche';
 import { ecouterTouchers } from './scene3d/toucher';
 import { ficheDe } from './regles/fiche';
@@ -30,6 +31,10 @@ theatre.demanderRendu();
 const racineInterface = document.querySelector<HTMLElement>('#interface')!;
 monterInterface(racineInterface, lieu.nom, theatre, contenu.personnel);
 const bulle = creerBulle(racineInterface, theatre);
+// Les noms des personnes ne se chevauchent pas et ne passent pas sous la barre du haut.
+const barre = racineInterface.querySelector<HTMLElement>('.barre')!;
+ecarterEtiquettesDesPersonnes(theatre, personnages, () => barre.offsetTop + barre.offsetHeight + 4);
+theatre.demanderRendu();
 
 // Toucher ou cliquer :
 // - un personnage ouvre sa bulle (nom et rôle) ;
