@@ -9,7 +9,6 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { CSS2DRenderer } from 'three/addons/renderers/CSS2DRenderer.js';
-import { CHARTE } from './charte';
 
 // Hauteur de la caméra : 35,26° au-dessus du sol donne une vraie vue isométrique.
 const ELEVATION = THREE.MathUtils.degToRad(35.264);
@@ -51,7 +50,7 @@ export interface Theatre {
 
 export function creerTheatre(conteneur: HTMLElement, centre: THREE.Vector3, tailleDuPlan: number): Theatre {
   const scene = new THREE.Scene();
-  scene.background = new THREE.Color(CHARTE.fond);
+  scene.background = new THREE.Color('#f6f3ee');
 
   // Moteur de rendu WebGL. On limite la densité de pixels à 2 : au-delà, les téléphones chauffent sans gain visible.
   const rendu = new THREE.WebGLRenderer({ antialias: true });

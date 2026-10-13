@@ -46,8 +46,7 @@ glycines-jeu/
 │   ├── scene3d/                  creerScene.ts (caméra, contrôles, boucle d'animation), construireAile.ts, personnages.ts,
 │   │                             toucher.ts (toucher bref ou glisser, raycasting), marche.ts (marche de l'agent),
 │   │                             meubles.ts (lit, fauteuil, lavabo, sonnette en formes simples),
-│   │                             ecartEtiquettes.ts (applique l'écart des noms après chaque dessin),
-│   │                             charte.ts (couleurs du décor et contours foncés de la charte « Repères nets »)
+│   │                             ecartEtiquettes.ts (applique l'écart des noms après chaque dessin)
 │   └── ui/                       interface.ts (barre, boutons, légende), bulle.ts (bulle d'une personne touchée),
 │                                 mission.ts (liste des missions, panneau d'étape, loupe, jauge, relève),
 │                                 progression.ts (sauvegarde dans le navigateur, bloc du code de reprise),
@@ -99,7 +98,6 @@ Le champ `meubles` liste les meubles du plan, un par ligne :
 - **A\*** (« A étoile ») : algorithme de plus court chemin sur la grille (`src/regles/chemin.ts`). Il explore d'abord les cases dont « chemin déjà fait + distance à vol d'oiseau restante » est le plus petit. On marche en 8 directions, jamais à travers un mur, et sans couper le coin d'un mur en diagonale.
 - **Étiquettes HTML (CSS2DRenderer)** : les noms au-dessus des têtes sont du vrai texte HTML, net et lisible, pas des pixels dans la 3D.
 - **Écart des étiquettes** : après chaque dessin, on mesure le rectangle de chaque nom de personne à l'écran. De la plus basse à la plus haute, une étiquette qui en touche une autre monte juste au-dessus ; une étiquette qui passerait sous la barre du haut est descendue dessous (`src/regles/etiquettes.ts`, testé sans navigateur). Le décalage passe par la propriété CSS `translate`, qui s'ajoute au `transform` posé par Three.js.
-- **Contours (charte « Repères nets »)** : les arêtes des murs et des meubles sont tracées en traits foncés. Pour les murs et les cases du sol, tous les traits sont réunis en un seul objet (une seule commande à la carte graphique). Les personnages ont un liseré : une copie un peu plus grosse, foncée, dessinée derrière eux (`src/scene3d/charte.ts`).
 - **Densité d'étiquettes** : selon le nombre de pixels par mètre à l'écran, le CSS masque les noms des chambres puis des pièces pour éviter les chevauchements (`data-densite` sur `#scene`).
 
 ## Jouer une mission (interface : `src/ui/mission.ts`)

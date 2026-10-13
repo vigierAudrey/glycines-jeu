@@ -24,91 +24,91 @@
       "id": "chambre-rose",
       "nom": "Chambre de Mme Rose",
       "type": "chambre",
-      "couleur": "#ecd3d6",
+      "couleur": "#f4c2c2",
       "resident": "rose"
     },
     "K": {
       "id": "chambre-karim",
       "nom": "Chambre de M. Karim",
       "type": "chambre",
-      "couleur": "#d4dfef",
+      "couleur": "#c8d8f0",
       "resident": "karim"
     },
     "Y": {
       "id": "chambre-yvette",
       "nom": "Chambre de Mme Yvette",
       "type": "chambre",
-      "couleur": "#e5dcf0",
+      "couleur": "#e6d3f2",
       "resident": "yvette"
     },
     "D": {
       "id": "chambre-denise",
       "nom": "Chambre de Mme Denise",
       "type": "chambre",
-      "couleur": "#eee4cf",
+      "couleur": "#f7e1b5",
       "resident": "denise"
     },
     "L": {
       "id": "chambre-louis",
       "nom": "Chambre de M. Louis",
       "type": "chambre",
-      "couleur": "#d8e8e1",
+      "couleur": "#cfe8d6",
       "resident": "louis"
     },
     "A": {
       "id": "chambre-andre",
       "nom": "Chambre de M. André",
       "type": "chambre",
-      "couleur": "#ebdad0",
+      "couleur": "#f2d0b8",
       "resident": "andre"
     },
     "M": {
       "id": "salle-a-manger",
       "nom": "Salle à manger",
       "type": "collectif",
-      "couleur": "#f2ecc8"
+      "couleur": "#fff1a8"
     },
     "N": {
       "id": "salon",
       "nom": "Salon et animation",
       "type": "collectif",
-      "couleur": "#f2dec6"
+      "couleur": "#ffd6a5"
     },
     "I": {
       "id": "poste-de-soins",
       "nom": "Poste de soins",
       "type": "service",
-      "couleur": "#cce5ef"
+      "couleur": "#b9e3f0"
     },
     "E": {
       "id": "reserve",
       "nom": "Réserve",
       "type": "service",
-      "couleur": "#dedddb"
+      "couleur": "#d9d4cc"
     },
     "H": {
       "id": "local-menage",
       "nom": "Local ménage",
       "type": "service",
-      "couleur": "#d5d3e6"
+      "couleur": "#c9c2e0"
     },
     "C": {
       "id": "couloir",
       "nom": "Couloir",
       "type": "circulation",
-      "couleur": "#e8e9ea"
+      "couleur": "#ecebe6"
     },
     "P": {
       "id": "patio",
       "nom": "Patio",
       "type": "exterieur",
-      "couleur": "#c3dfc3"
+      "couleur": "#a8d8a0"
     },
     "p": {
       "id": "porte",
       "nom": "Porte",
       "type": "porte",
-      "couleur": "#ddddd9"
+      "couleur": "#d8d4c8"
     }
   },
   "meubles_note": "Chaque meuble est posé sur une case (colonne, rangée) et tourné « vers » nord, sud, est ou ouest. Le lit occupe 2 cases : la tête de lit sur la case indiquée, les pieds vers la direction. La sonnette se pose sur la tête du lit.",

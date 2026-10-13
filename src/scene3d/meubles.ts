@@ -9,20 +9,19 @@
 import * as THREE from 'three';
 import type { Direction, TypeMeuble } from '../contenu/types';
 import type { PlanCalcule } from '../regles/plan';
-import { CHARTE, contourner } from './charte';
 
 // Rotation autour de l'axe vertical pour tourner un modèle « vers le sud » dans chaque direction.
 const ROTATION: Record<Direction, number> = { sud: 0, est: Math.PI / 2, nord: Math.PI, ouest: -Math.PI / 2 };
 
 // Matériaux partagés entre tous les meubles : moins de travail pour la carte graphique.
 const matiere = (couleur: string) => new THREE.MeshLambertMaterial({ color: couleur });
-const BLANC = matiere(CHARTE.blanc);
-const DRAP = matiere(CHARTE.drap);
-const METAL = matiere(CHARTE.metal);
-const BOIS = matiere(CHARTE.cadreLit);
-const TISSU = matiere(CHARTE.fauteuil);
-const CHROME = matiere(CHARTE.chrome);
-const ROUGE = matiere(CHARTE.sonnette);
+const BLANC = matiere('#fbfbfa');
+const DRAP = matiere('#b9cde3');
+const METAL = matiere('#9aa5b1');
+const BOIS = matiere('#9b8468');
+const TISSU = matiere('#5f8f8a');
+const CHROME = matiere('#7d8590');
+const ROUGE = matiere('#d64545');
 
 /** Ajoute à un groupe une boîte de taille (largeur, hauteur, profondeur) centrée au point (x, y, z). */
 function boite(groupe: THREE.Group, materiau: THREE.Material, [l, h, p]: number[], [x, y, z]: number[]): void {
@@ -70,7 +69,6 @@ export function construireMeubles(plan: PlanCalcule): THREE.Group {
     const modele = new THREE.Group();
     modele.name = `meuble-${meuble.type}`;
     MODELES[meuble.type](modele);
-    contourner(modele);
     modele.position.set(meuble.colonne + 0.5, 0, meuble.rangee + 0.5);
     modele.rotation.y = ROTATION[meuble.vers];
     groupe.add(modele);
