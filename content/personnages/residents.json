@@ -1,11 +1,18 @@
 {
-  "note": "Résidents fictifs de l'EHPAD Les Glycines, repris des cours du Bloc 2. Le champ repris_du_cours garde ce que les élèves connaissent déjà : ne rien ajouter de médical qui ne figure pas dans les cours.",
+  "note": "Résidents fictifs de l'EHPAD Les Glycines, repris des cours du Bloc 2. Le champ repris_du_cours garde ce que les élèves connaissent déjà : ne rien ajouter de médical qui ne figure pas dans les cours. Le champ apparence (peau, cheveux, coiffure, gilet, lunettes) sert seulement à dessiner la figurine : on peut le changer librement.",
   "residents": [
     {
       "id": "rose",
       "civilite": "Mme",
       "nom": "Rose",
       "chambre": "chambre-rose",
+      "apparence": {
+        "peau": "#f0d2b6",
+        "cheveux": "#ece8e1",
+        "coiffure": "chignon",
+        "haut": "#d98a9a",
+        "lunettes": true
+      },
       "repris_du_cours": [
         "Installation au fauteuil.",
         "Apprécie le patio le matin.",
@@ -18,6 +25,12 @@
       "civilite": "M.",
       "nom": "Karim",
       "chambre": "chambre-karim",
+      "apparence": {
+        "peau": "#c99a72",
+        "cheveux": "#bdb8b0",
+        "coiffure": "court",
+        "haut": "#6f8fb8"
+      },
       "repris_du_cours": [
         "Toilette au lavabo avec une aide partielle.",
         "Chambre équipée d'un lit médicalisé, d'un fauteuil et d'une salle d'eau."
@@ -28,6 +41,13 @@
       "civilite": "Mme",
       "nom": "Yvette",
       "chambre": "chambre-yvette",
+      "apparence": {
+        "peau": "#e9c9a8",
+        "cheveux": "#d8d1c6",
+        "coiffure": "carre",
+        "haut": "#b39ad6",
+        "lunettes": true
+      },
       "repris_du_cours": [
         "Comprend une consigne courte.",
         "Lit une horloge simple.",
@@ -40,6 +60,12 @@
       "civilite": "Mme",
       "nom": "Denise",
       "chambre": "chambre-denise",
+      "apparence": {
+        "peau": "#a8764f",
+        "cheveux": "#efe9de",
+        "coiffure": "court",
+        "haut": "#e0b25a"
+      },
       "repris_du_cours": [
         "Comprend les consignes.",
         "Pousse sur les accoudoirs, tient debout avec son aide et pivote elle-même.",
@@ -51,6 +77,13 @@
       "civilite": "M.",
       "nom": "Louis",
       "chambre": "chambre-louis",
+      "apparence": {
+        "peau": "#e9c9a8",
+        "cheveux": "#cfcac2",
+        "coiffure": "degarni",
+        "haut": "#7aa58a",
+        "lunettes": true
+      },
       "repris_du_cours": [
         "Nécessite un lève-personne et deux professionnels formés."
       ]
@@ -60,6 +93,12 @@
       "civilite": "M.",
       "nom": "André",
       "chambre": "chambre-andre",
+      "apparence": {
+        "peau": "#e2b48c",
+        "cheveux": "#a9a39a",
+        "coiffure": "court",
+        "haut": "#c98a5e"
+      },
       "repris_du_cours": []
     }
   ]

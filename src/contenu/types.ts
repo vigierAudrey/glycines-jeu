@@ -61,11 +61,23 @@ export interface Lieu {
 
 // ---------- Personnages ----------
 
+export type Coiffure = 'court' | 'degarni' | 'carre' | 'long' | 'queue' | 'chignon';
+
+/** Apparence d'une figurine : rien de médical, seulement de quoi reconnaître la personne. */
+export interface Apparence {
+  peau: string; // #rrggbb
+  cheveux: string; // #rrggbb
+  coiffure: Coiffure;
+  haut?: string; // couleur du gilet ou du pull (résidents ; le personnel porte la couleur de son métier)
+  lunettes?: boolean;
+}
+
 export interface Resident {
   id: string;
   civilite: 'Mme' | 'M.';
   nom: string;
   chambre: string; // id de zone
+  apparence?: Apparence;
   repris_du_cours: string[];
 }
 
@@ -76,6 +88,7 @@ export interface MembrePersonnel {
   sigle: string;
   tenue: string; // couleur de tenue, format #rrggbb
   zone_habituelle: string; // id de zone
+  apparence?: Apparence;
   joueur?: boolean;
 }
 

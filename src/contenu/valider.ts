@@ -54,12 +54,22 @@ export function validerContenu(contenu: Contenu): Probleme[] {
     if (idsPersonnages.has(id)) signaler(fichier, `Identifiant « ${id} » utilisé deux fois.`);
     idsPersonnages.add(id);
   };
+  const COIFFURES = ['court', 'degarni', 'carre', 'long', 'queue', 'chignon'];
+  const validerApparence = (fichier: string, qui: string, a?: Contenu['residents'][number]['apparence']) => {
+    if (!a) return;
+    for (const [champ, couleur] of [['peau', a.peau], ['cheveux', a.cheveux], ['haut', a.haut]] as const) {
+      if (couleur !== undefined && !COULEUR.test(couleur)) signaler(fichier, `${qui} : couleur de ${champ} « ${couleur} » invalide (attendu #rrggbb).`);
+    }
+    if (!COIFFURES.includes(a.coiffure)) signaler(fichier, `${qui} : coiffure « ${a.coiffure} » inconnue (${COIFFURES.join(', ')}).`);
+  };
   for (const r of contenu.residents) {
     ajouterId('personnages/residents', r.id);
+    validerApparence('personnages/residents', `${r.civilite} ${r.nom}`, r.apparence);
     if (!idsZones.has(r.chambre)) signaler('personnages/residents', `${r.civilite} ${r.nom} : chambre « ${r.chambre} » introuvable dans les lieux.`);
   }
   for (const p of contenu.personnel) {
     ajouterId('personnages/personnel', p.id);
+    validerApparence('personnages/personnel', p.prenom, p.apparence);
     if (!COULEUR.test(p.tenue)) signaler('personnages/personnel', `${p.prenom} : couleur de tenue « ${p.tenue} » invalide.`);
     if (!idsZones.has(p.zone_habituelle)) signaler('personnages/personnel', `${p.prenom} : zone « ${p.zone_habituelle} » introuvable.`);
   }

@@ -107,3 +107,9 @@ Trois lignes par session : ce qui a été fait, ce qui reste à surveiller, la p
 
 - **Fait** : charte C essayée en ligne puis annulée à la demande d'Audrey (`git revert`) ; le jeu retrouve le style « Glycine douce ». G.1 cochée avec ce choix (D-020).
 - **Prochaine tâche** : G.2 (personnages personnalisés) ou 3.1 (missions), au choix d'Audrey.
+
+## 13/10/2026 · Personnages personnalisés (tâche G.2)
+
+- **Fait** : champ `apparence` (peau, cheveux, coiffure, gilet, lunettes) pour les 12 personnages, validé par `pnpm valider` ; figurines low-poly avec visage, 6 coiffures et lunettes ; résidents voûtés ; l'agent se tourne et balance bras et jambes en marchant. Vérifié dans Chromium (vue zoomée, agent en pleine marche).
+- **À surveiller** : fluidité sur téléphone ; les apparences ont été choisies par l'IA, Audrey peut les changer dans le JSON (ou le demander).
+- **Prochaine tâche** : 3.1 (rédaction des missions par l'IA, relecture par Audrey).

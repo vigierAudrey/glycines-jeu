@@ -114,3 +114,9 @@ On ne redessine que si la vue change (batterie des téléphones). Les étiquette
 - **Décision** : Audrey a d'abord choisi la charte C « Repères nets » (contours foncés, fond gris bleuté, fauteuils orange). Après l'avoir vue appliquée au jeu, elle préfère le style d'origine (A « Glycine douce ») : le commit de la charte C est annulé (`git revert`), il reste dans l'historique.
 - **Pourquoi** : rendu jugé moins agréable une fois dans le jeu.
 - **Plus tard** : personnages plus personnalisés (G.2), dans le style actuel.
+
+## D-021 · Personnages low-poly faits en formes simples, sans fichier 3D · 13/10/2026
+
+- **Décision** : les personnages sont construits dans le code avec des formes à facettes (boîtes, cylindres à 6 côtés, icosaèdres), d'après le champ `apparence` du contenu. Seul l'agent est animé (marche). Pas d'animation d'attente.
+- **Pourquoi** : aucune dépendance ni fichier à télécharger, rendu cohérent avec le style « Glycine douce », apparence modifiable dans le JSON. Une animation d'attente obligerait à redessiner l'écran en permanence (batterie des téléphones, D-008).
+- **Limites** : environ 20 petites pièces par personnage (environ 240 en tout) : fluidité à vérifier sur téléphone. Les aides techniques des résidents ne sont pas dessinées : elles relèvent du cours (`repris_du_cours`) et seront ajoutées quand Audrey les indiquera.

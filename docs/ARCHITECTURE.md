@@ -31,7 +31,7 @@ glycines-jeu/
 ├── content/
 │   ├── referentiel/bloc2.json    14 sous-compétences : NE PAS MODIFIER À LA MAIN
 │   ├── lieux/aile-b.json         le plan en grille de lettres
-│   ├── personnages/              residents.json, personnel.json
+│   ├── personnages/              residents.json, personnel.json (avec l'apparence de chaque figurine)
 │   └── scenarios/                une mission par fichier
 ├── src/
 │   ├── main.ts                   point d'entrée du jeu : branche les couches dans l'ordre
@@ -80,6 +80,20 @@ Le champ `meubles` liste les meubles du plan, un par ligne :
 
 `src/regles/plan.ts` calcule les cases occupées : on ne marche pas à travers un lit, un fauteuil ou un lavabo, et personne n'est posé dessus. La sonnette se pose sur la tête du lit et ne bloque rien. `pnpm valider` refuse un meuble posé sur une porte, qui dépasse de sa pièce, qui en chevauche un autre, ou une sonnette loin d'un lit.
 
+### L'apparence des personnages
+
+Dans `residents.json` et `personnel.json`, le champ `apparence` décrit chaque figurine :
+
+```json
+"apparence": { "peau": "#f0d2b6", "cheveux": "#ece8e1", "coiffure": "chignon", "haut": "#d98a9a", "lunettes": true }
+```
+
+- `coiffure` : `court`, `degarni`, `carre`, `long`, `queue` ou `chignon`.
+- `haut` : la couleur du gilet (résidents seulement ; le personnel porte la couleur de son métier, champ `tenue`).
+- `lunettes` : facultatif.
+
+Les résidents sont un peu voûtés et un peu plus petits. Rien de médical ici : seulement de quoi reconnaître chacun. `pnpm valider` refuse une couleur mal écrite ou une coiffure inconnue.
+
 ## Les notions 3D utilisées
 
 - **Scène** : la boîte qui contient tous les objets.
@@ -98,6 +112,7 @@ Le champ `meubles` liste les meubles du plan, un par ligne :
 - **A\*** (« A étoile ») : algorithme de plus court chemin sur la grille (`src/regles/chemin.ts`). Il explore d'abord les cases dont « chemin déjà fait + distance à vol d'oiseau restante » est le plus petit. On marche en 8 directions, jamais à travers un mur, et sans couper le coin d'un mur en diagonale.
 - **Étiquettes HTML (CSS2DRenderer)** : les noms au-dessus des têtes sont du vrai texte HTML, net et lisible, pas des pixels dans la 3D.
 - **Écart des étiquettes** : après chaque dessin, on mesure le rectangle de chaque nom de personne à l'écran. De la plus basse à la plus haute, une étiquette qui en touche une autre monte juste au-dessus ; une étiquette qui passerait sous la barre du haut est descendue dessous (`src/regles/etiquettes.ts`, testé sans navigateur). Le décalage passe par la propriété CSS `translate`, qui s'ajoute au `transform` posé par Three.js.
+- **Personnages low-poly** : chaque figurine est faite de formes simples à facettes (`flatShading`) : jambes, buste, bras, tête, yeux, cheveux, lunettes. Les jambes et les bras sont accrochés à des « articulations » (hanches, épaules) pour pouvoir pivoter. Pendant la marche, `poserMarche()` les balance en sens opposé selon la distance parcourue, et l'agent se tourne vers où il va (`marche.ts`). À l'arrêt, rien ne bouge : pas d'animation d'attente, pour garder le rendu à la demande.
 - **Densité d'étiquettes** : selon le nombre de pixels par mètre à l'écran, le CSS masque les noms des chambres puis des pièces pour éviter les chevauchements (`data-densite` sur `#scene`).
 
 ## Jouer une mission (interface : `src/ui/mission.ts`)

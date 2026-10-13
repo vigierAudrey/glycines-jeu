@@ -6,8 +6,11 @@ import * as THREE from 'three';
 import { caseEn, centreDe, trouverChemin } from '../regles/chemin';
 import type { PlanCalcule } from '../regles/plan';
 import type { Theatre } from './creerScene';
+import { poserMarche } from './personnages';
 
 const VITESSE = 2.5; // mètres par seconde
+const FOULEE = 7; // radians de balancement par mètre parcouru : environ un pas tous les 45 cm
+const VIRAGE = 12; // vitesse à laquelle l'agent se tourne vers où il va
 
 /** Prépare la marche de l'agent et renvoie la fonction qui le fait aller jusqu'au point (x, z) du sol. */
 export function brancherMarche(theatre: Theatre, plan: PlanCalcule, agent: THREE.Object3D): (x: number, z: number) => void {
@@ -19,6 +22,14 @@ export function brancherMarche(theatre: Theatre, plan: PlanCalcule, agent: THREE
 
   let etapes: { x: number; z: number }[] = []; // centres des cases qui restent à parcourir
   let enMarche = false;
+  let phase = 0; // avancée du balancement des bras et des jambes
+
+  // L'agent se tourne en douceur vers sa direction de marche (par le plus court côté).
+  const tourner = (angleVise: number, secondes: number) => {
+    let ecart = angleVise - agent.rotation.y;
+    ecart = Math.atan2(Math.sin(ecart), Math.cos(ecart)); // ramène l'écart entre -π et π
+    agent.rotation.y += ecart * Math.min(1, VIRAGE * secondes);
+  };
 
   // Appelée à chaque image par la boucle d'animation : l'agent avance de VITESSE × temps écoulé.
   const avancer = (secondes: number): boolean => {
@@ -28,6 +39,8 @@ export function brancherMarche(theatre: Theatre, plan: PlanCalcule, agent: THREE
       const dx = cible.x - agent.position.x;
       const dz = cible.z - agent.position.z;
       const distance = Math.hypot(dx, dz);
+      if (distance > 1e-6) tourner(Math.atan2(dx, dz), secondes);
+      phase += Math.min(distance, reste) * FOULEE;
       if (distance <= reste) {
         agent.position.set(cible.x, 0, cible.z); // case atteinte, on passe à la suivante
         etapes.shift();
@@ -38,7 +51,12 @@ export function brancherMarche(theatre: Theatre, plan: PlanCalcule, agent: THREE
         reste = 0;
       }
     }
-    if (etapes.length > 0) return true;
+    if (etapes.length > 0) {
+      poserMarche(agent, phase, 1);
+      return true;
+    }
+    poserMarche(agent, 0, 0); // arrivé : jambes et bras au repos
+    phase = 0;
     enMarche = false;
     repere.visible = false;
     return false; // arrivé : la boucle d'animation peut s'arrêter
