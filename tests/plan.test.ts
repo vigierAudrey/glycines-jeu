@@ -77,4 +77,45 @@ describe('positionDansZone', () => {
     const p1 = positionDansZone(zone, 1);
     expect(p0).not.toEqual(p1);
   });
+
+  it('ne pose jamais une personne sur un lit ou un fauteuil (aile B)', () => {
+    const plan = lirePlan(aileB as Lieu);
+    const occupees = new Set(plan.meubles.filter((m) => m.bloquant).flatMap((m) => m.cases.map((c) => `${c.colonne + 0.5};${c.rangee + 0.5}`)));
+    for (const zone of plan.zones) {
+      for (let n = 0; n < 4; n++) {
+        const { x, z } = positionDansZone(zone, n);
+        expect(occupees.has(`${x};${z}`)).toBe(false);
+      }
+    }
+  });
+});
+
+describe('meubles', () => {
+  const avecLit = lirePlan({ ...miniPlan, meubles: [{ type: 'lit', colonne: 2, rangee: 2, vers: 'est' }] });
+
+  it('un lit occupe 2 cases : la tête puis les pieds dans la direction « vers »', () => {
+    expect(avecLit.meubles[0].cases).toEqual([{ colonne: 2, rangee: 2 }, { colonne: 3, rangee: 2 }]);
+  });
+
+  it('les cases d’un meuble ne sont plus libres', () => {
+    const couloir = trouverZone(avecLit, 'c')!;
+    expect(couloir.cases).toHaveLength(4);
+    expect(couloir.casesLibres).toEqual([{ colonne: 0, rangee: 2 }, { colonne: 1, rangee: 2 }]);
+  });
+
+  it('la sonnette ne bloque pas le passage', () => {
+    const plan = lirePlan({ ...miniPlan, meubles: [{ type: 'sonnette', colonne: 0, rangee: 2, vers: 'sud' }] });
+    expect(trouverZone(plan, 'c')!.casesLibres).toHaveLength(4);
+  });
+
+  it('chaque chambre de l’aile B a un lit et une sonnette', () => {
+    const plan = lirePlan(aileB as Lieu);
+    for (const chambre of plan.zones.filter((z) => z.type === 'chambre')) {
+      const dans = (m: { cases: { colonne: number; rangee: number }[] }) =>
+        chambre.cases.some((c) => c.colonne === m.cases[0].colonne && c.rangee === m.cases[0].rangee);
+      const types = plan.meubles.filter(dans).map((m) => m.type);
+      expect(types, chambre.nom).toContain('lit');
+      expect(types, chambre.nom).toContain('sonnette');
+    }
+  });
 });

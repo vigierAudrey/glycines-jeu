@@ -38,7 +38,8 @@ glycines-jeu/
 │   ├── regles/                   plan.ts (grille → zones, centres, murs), chemin.ts (recherche de chemin A*),
 │   │                             fiche.ts (nom et rôle d'une personne, pour la bulle)
 │   ├── scene3d/                  creerScene.ts (caméra, contrôles, boucle d'animation), construireAile.ts, personnages.ts,
-│   │                             toucher.ts (toucher bref ou glisser, raycasting), marche.ts (marche de l'agent)
+│   │                             toucher.ts (toucher bref ou glisser, raycasting), marche.ts (marche de l'agent),
+│   │                             meubles.ts (lit, fauteuil, lavabo, sonnette en formes simples)
 │   └── ui/                       interface.ts (barre, boutons, légende), bulle.ts (bulle d'une personne touchée)
 ├── tools/valider-contenu.ts      la commande « pnpm valider »
 ├── tests/                        tests automatiques (Vitest)
@@ -51,6 +52,20 @@ Chaque caractère de `grille` est une case de 1 m × 1 m. Une lettre majuscule =
 Les murs ne sont pas dessinés à la main : `src/regles/plan.ts` les calcule. Il pose un mur entre deux cases de zones différentes, sauf si l'une est une porte ou si les deux sont dehors.
 
 **Exercice** : remplace un `R` par un `p` sur le bord de la chambre de Mme Rose et regarde la nouvelle porte apparaître.
+
+### Les meubles
+
+Le champ `meubles` liste les meubles du plan, un par ligne :
+
+```json
+{ "type": "lit", "colonne": 0, "rangee": 0, "vers": "sud" }
+```
+
+- `type` : `lit`, `fauteuil`, `lavabo` ou `sonnette`.
+- `colonne`, `rangee` : la case où le meuble est posé (on compte à partir de 0, en haut à gauche de la grille).
+- `vers` : le côté vers lequel il est tourné (`nord` = vers le haut de la grille, `sud`, `est` = vers la droite, `ouest`). Le lit occupe 2 cases : sa tête est sur la case indiquée, ses pieds vers `vers`. Un fauteuil ou un lavabo a le dos du côté opposé à `vers`.
+
+`src/regles/plan.ts` calcule les cases occupées : on ne marche pas à travers un lit, un fauteuil ou un lavabo, et personne n'est posé dessus. La sonnette se pose sur la tête du lit et ne bloque rien. `pnpm valider` refuse un meuble posé sur une porte, qui dépasse de sa pièce, qui en chevauche un autre, ou une sonnette loin d'un lit.
 
 ## Les notions 3D utilisées
 

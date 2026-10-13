@@ -39,6 +39,16 @@ export interface Zone {
   resident?: string; // id du résident pour une chambre
 }
 
+export type TypeMeuble = 'lit' | 'fauteuil' | 'lavabo' | 'sonnette';
+export type Direction = 'nord' | 'sud' | 'est' | 'ouest'; // nord = rangée 0, en haut de la grille ; est = vers la droite
+
+export interface Meuble {
+  type: TypeMeuble;
+  colonne: number; // case où est posé le meuble (pour le lit : la case de la tête de lit)
+  rangee: number;
+  vers: Direction; // côté vers lequel le meuble est tourné (pour le lit : le côté des pieds)
+}
+
 export interface Lieu {
   id: string;
   nom: string;
@@ -46,6 +56,7 @@ export interface Lieu {
   grille: string[]; // une chaîne par rangée, un caractère par case de 1 m
   zones: Record<string, Zone>; // clé = caractère de la grille
   vide: string; // caractère des cases vides
+  meubles?: Meuble[];
 }
 
 // ---------- Personnages ----------

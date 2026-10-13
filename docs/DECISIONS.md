@@ -64,3 +64,9 @@ On ne redessine que si la vue change (batterie des téléphones). Les étiquette
 - **Pourquoi** : une figurine fait environ 10 px sur téléphone, bien en dessous des 44 px exigés par le cahier des charges. En HTML dans l'interface, la bulle reste au-dessus des étiquettes, peut contenir un vrai bouton de fermeture et est lue par les lecteurs d'écran (`role="status"`).
 - **Conséquence** : le calque 3D est isolé (`isolation: isolate`) pour que les z-index posés par Three.js sur les étiquettes ne passent jamais devant l'interface. `toucher.ts` ne décide plus rien : il dit ce qui est sous le doigt (personnage et/ou sol), `main.ts` choisit l'action.
 - **Ce qu'on abandonne** : rien de ce qui était prévu ; la bulle n'affiche que le nom et le rôle, jamais d'élément médical (règle `repris_du_cours`).
+
+## D-013 · Meubles en formes simples, décrits en données · 13/10/2026
+
+- **Décision** : chaque meuble est une ligne du plan (`type`, `colonne`, `rangee`, `vers`). Les règles calculent les cases occupées (obstacles pour la marche) ; le décor dessine chaque type avec quelques boîtes (`src/scene3d/meubles.ts`).
+- **Pourquoi** : aucun fichier à télécharger, aucune nouvelle dépendance, rendu cohérent avec les murs et les personnages actuels, léger sur téléphone. Ajouter un meuble = ajouter une ligne de JSON, que `pnpm valider` contrôle.
+- **Ce qu'on abandonne pour l'instant** : les modèles glTF (Kenney.nl, Blender). Ils remplaceront une fonction de `MODELES` en phase 2 bis, après accord d'Audrey sur la source des fichiers.

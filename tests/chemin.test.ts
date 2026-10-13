@@ -76,6 +76,29 @@ describe('trouverChemin', () => {
   });
 });
 
+describe('trouverChemin avec des meubles', () => {
+  it('contourne un lit', () => {
+    // Un lit en travers du couloir, sur les colonnes 1 et 2 : il faut passer par… nulle part (couloir d'une case).
+    const bloque = lirePlan({ ...lieu, meubles: [{ type: 'lit', colonne: 1, rangee: 2, vers: 'est' }] });
+    expect(trouverChemin(bloque, ici(0, 2), ici(4, 2))).toBeNull();
+    // Avec un lit dans la chambre A, on peut toujours entrer par la porte et atteindre la case libre.
+    const chambre = lirePlan({ ...lieu, meubles: [{ type: 'lit', colonne: 0, rangee: 0, vers: 'sud' }] });
+    expect(trouverChemin(chambre, ici(4, 2), ici(1, 0))).not.toBeNull();
+  });
+
+  it('refuse d’arriver sur un meuble', () => {
+    const chambre = lirePlan({ ...lieu, meubles: [{ type: 'fauteuil', colonne: 0, rangee: 0, vers: 'sud' }] });
+    expect(trouverChemin(chambre, ici(4, 2), ici(0, 0))).toBeNull();
+  });
+
+  it('atteint toutes les cases libres de l’aile B depuis le couloir : aucun meuble ne ferme une pièce', () => {
+    const planAile = lirePlan(aileB as Lieu);
+    for (const zone of planAile.zones) {
+      for (const c of zone.casesLibres) expect(trouverChemin(planAile, ici(0, 4), c), `${zone.nom} (${c.colonne}, ${c.rangee})`).not.toBeNull();
+    }
+  });
+});
+
 describe('caseEn', () => {
   it('trouve la case qui contient un point du sol', () => {
     expect(caseEn(2.7, 0.1)).toEqual(ici(2, 0));

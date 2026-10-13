@@ -5,7 +5,8 @@
 // Règle d'or : le référentiel est la source de vérité. Une mission qui cite une compétence
 // ou un critère absent du référentiel est refusée.
 
-import type { Contenu } from './types';
+import { casesDuMeuble, LONGUEUR_MEUBLE, PAS } from '../regles/plan';
+import type { Contenu, Lieu } from './types';
 
 export interface Probleme {
   fichier: string;
@@ -44,6 +45,7 @@ export function validerContenu(contenu: Contenu): Probleme[] {
       if (zone.type !== 'porte' && !lieu.grille.some((l) => l.includes(cle))) signaler(f, `Zone « ${zone.nom} » déclarée mais absente de la grille.`);
       idsZones.add(zone.id);
     }
+    validerMeubles(lieu, (message) => signaler(f, message));
   }
 
   // ---------- Personnages ----------
@@ -97,4 +99,42 @@ export function validerContenu(contenu: Contenu): Probleme[] {
   }
 
   return problemes;
+}
+
+/**
+ * Règles des meubles : un type et une direction connus, posés entièrement dans une même pièce
+ * (pas sur une porte, pas dans le vide), sans se chevaucher, et une sonnette toujours posée sur un lit
+ * (elle doit rester à portée de main du résident).
+ */
+function validerMeubles(lieu: Lieu, signaler: (message: string) => void): void {
+  const occupees = new Map<string, string>(); // case → meuble qui l'occupe
+  const casesDeLits = new Set<string>();
+  const sonnettes: { nom: string; cle: string }[] = [];
+
+  (lieu.meubles ?? []).forEach((meuble, i) => {
+    const nom = `Meuble n° ${i + 1} (${meuble.type}, colonne ${meuble.colonne}, rangée ${meuble.rangee})`;
+    if (!(meuble.type in LONGUEUR_MEUBLE)) return signaler(`${nom} : type inconnu (lit, fauteuil, lavabo ou sonnette).`);
+    if (!(meuble.vers in PAS)) return signaler(`${nom} : direction « ${meuble.vers} » inconnue (nord, sud, est ou ouest).`);
+
+    const cases = casesDuMeuble(meuble);
+    const zones = new Set(cases.map((c) => lieu.grille[c.rangee]?.[c.colonne] ?? lieu.vide));
+    const zone = lieu.zones[[...zones][0]];
+    if (zones.size > 1) return signaler(`${nom} : il dépasse de sa pièce.`);
+    if (!zone) return signaler(`${nom} : il est posé hors du plan ou dans le vide.`);
+    if (zone.type === 'porte') return signaler(`${nom} : il est posé sur une porte.`);
+
+    for (const c of cases) {
+      const cle = `${c.colonne};${c.rangee}`;
+      if (meuble.type === 'sonnette') {
+        sonnettes.push({ nom, cle });
+        continue;
+      }
+      if (meuble.type === 'lit') casesDeLits.add(cle);
+      const deja = occupees.get(cle);
+      if (deja) signaler(`${nom} : il chevauche ${deja}.`);
+      occupees.set(cle, `le meuble n° ${i + 1} (${meuble.type})`);
+    }
+  });
+
+  for (const s of sonnettes) if (!casesDeLits.has(s.cle)) signaler(`${s.nom} : une sonnette se pose sur un lit, à portée de main du résident.`);
 }

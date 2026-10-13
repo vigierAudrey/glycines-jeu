@@ -111,5 +111,31 @@
       "couleur": "#d8d4c8"
     }
   },
+  "meubles_note": "Chaque meuble est posé sur une case (colonne, rangée) et tourné « vers » nord, sud, est ou ouest. Le lit occupe 2 cases : la tête de lit sur la case indiquée, les pieds vers la direction. La sonnette se pose sur la tête du lit.",
+  "meubles": [
+    { "type": "lit", "colonne": 0, "rangee": 0, "vers": "sud" },
+    { "type": "sonnette", "colonne": 0, "rangee": 0, "vers": "sud" },
+    { "type": "lavabo", "colonne": 3, "rangee": 0, "vers": "sud" },
+    { "type": "fauteuil", "colonne": 3, "rangee": 2, "vers": "ouest" },
+    { "type": "lit", "colonne": 4, "rangee": 0, "vers": "sud" },
+    { "type": "sonnette", "colonne": 4, "rangee": 0, "vers": "sud" },
+    { "type": "lavabo", "colonne": 7, "rangee": 0, "vers": "sud" },
+    { "type": "fauteuil", "colonne": 7, "rangee": 2, "vers": "ouest" },
+    { "type": "lit", "colonne": 8, "rangee": 0, "vers": "sud" },
+    { "type": "sonnette", "colonne": 8, "rangee": 0, "vers": "sud" },
+    { "type": "lavabo", "colonne": 11, "rangee": 0, "vers": "sud" },
+    { "type": "fauteuil", "colonne": 11, "rangee": 2, "vers": "ouest" },
+    { "type": "lit", "colonne": 12, "rangee": 0, "vers": "sud" },
+    { "type": "sonnette", "colonne": 12, "rangee": 0, "vers": "sud" },
+    { "type": "lavabo", "colonne": 15, "rangee": 0, "vers": "sud" },
+    { "type": "lit", "colonne": 0, "rangee": 9, "vers": "nord" },
+    { "type": "sonnette", "colonne": 0, "rangee": 9, "vers": "nord" },
+    { "type": "lavabo", "colonne": 3, "rangee": 9, "vers": "nord" },
+    { "type": "fauteuil", "colonne": 3, "rangee": 7, "vers": "ouest" },
+    { "type": "lit", "colonne": 4, "rangee": 9, "vers": "nord" },
+    { "type": "sonnette", "colonne": 4, "rangee": 9, "vers": "nord" },
+    { "type": "lavabo", "colonne": 7, "rangee": 9, "vers": "nord" },
+    { "type": "fauteuil", "colonne": 7, "rangee": 7, "vers": "ouest" }
+  ],
   "vide": "."
 }

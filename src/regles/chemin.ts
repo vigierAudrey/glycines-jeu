@@ -6,7 +6,7 @@
 // une à une jusqu'au départ : c'est le chemin le plus court.
 //
 // Règles de déplacement :
-// - on ne marche que sur les cases d'une zone (pas sur le vide) ;
+// - on ne marche que sur les cases libres d'une zone (pas sur le vide, pas à travers un lit ou un fauteuil) ;
 // - on passe d'une case à sa voisine seulement s'il n'y a pas de mur entre les deux (murs calculés par plan.ts) ;
 // - on peut aller en diagonale, mais sans « couper le coin » d'un mur : les deux cases voisines du coin doivent être accessibles.
 
@@ -34,7 +34,7 @@ export function centreDe(c: Case): { x: number; z: number } {
  * Renvoie null si l'arrivée n'est pas praticable ou si aucun chemin n'y mène.
  */
 export function trouverChemin(plan: PlanCalcule, depart: Case, arrivee: Case): Case[] | null {
-  const praticables = new Set(plan.zones.flatMap((z) => z.cases.map(cle)));
+  const praticables = new Set(plan.zones.flatMap((z) => z.casesLibres.map(cle)));
   const murs = new Set(plan.murs.map((m) => `${m.x};${m.z};${m.orientation}`));
   if (!praticables.has(cle(depart)) || !praticables.has(cle(arrivee))) return null;
 

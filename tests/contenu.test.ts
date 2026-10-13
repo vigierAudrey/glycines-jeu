@@ -32,6 +32,18 @@ describe('le validateur refuse', () => {
     expect(validerContenu(contenu).map((p) => p.message).join()).toMatch(/mot pour mot/);
   });
 
+  describe('un meuble mal posé', () => {
+    const lieu = base.lieux[0];
+    const avec = (meuble: object) => validerContenu({ ...base, lieux: [{ ...lieu, meubles: [...(lieu.meubles ?? []), meuble] }] as typeof base.lieux })
+      .map((p) => p.message).join();
+
+    it('sur une porte', () => expect(avec({ type: 'fauteuil', colonne: 2, rangee: 3, vers: 'sud' })).toMatch(/sur une porte/));
+    it('qui dépasse de sa pièce', () => expect(avec({ type: 'lit', colonne: 3, rangee: 1, vers: 'est' })).toMatch(/dépasse/));
+    it('sur un autre meuble', () => expect(avec({ type: 'fauteuil', colonne: 0, rangee: 1, vers: 'sud' })).toMatch(/chevauche/));
+    it('une sonnette loin du lit', () => expect(avec({ type: 'sonnette', colonne: 2, rangee: 1, vers: 'sud' })).toMatch(/portée de main/));
+    it('un type inconnu', () => expect(avec({ type: 'piano', colonne: 2, rangee: 1, vers: 'sud' })).toMatch(/type inconnu/));
+  });
+
   it('un tiret cadratin dans un texte élève', () => {
     const contenu = { ...base, missions: [{ ...mission, titre: 'Avant \u2014 après' }] };
     expect(validerContenu(contenu).map((p) => p.message).join()).toMatch(/cadratin/);
