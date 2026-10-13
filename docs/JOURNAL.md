@@ -91,3 +91,9 @@ Trois lignes par session : ce qui a été fait, ce qui reste à surveiller, la p
 - **Fait** : manifeste, icônes provisoires, `public/sw.js`, enregistrement dans `main.ts` (version construite seulement), workflow GitHub Pages manuel. Vérifié avec `pnpm preview` dans Chromium : copie de 11 fichiers, puis jeu et page enseignante rechargés hors ligne, sans erreur.
 - **À surveiller** : jamais publié pour l'instant (aucune mission `valide` : la version publiée n'en montrerait aucune) ; `pnpm/action-setup` lit la version de pnpm dans `package.json`.
 - **Prochaine tâche** : celles d'Audrey (1.5, 1.6, G.1, 3.1).
+
+## 13/10/2026 · Première publication et test sur téléphone (tâche 1.5)
+
+- **Fait** : droit `workflow` ajouté à `gh`, commits poussés, GitHub Pages activé (source : GitHub Actions), workflow lancé à la main : le jeu est en ligne sur https://vigieraudrey.github.io/glycines-jeu/. Audrey a joué la mission de M. Karim en entier sur son téléphone (`?brouillons&sequence=S2`).
+- **À surveiller** : avertissements de GitHub (actions en Node.js 20, passage à Ubuntu 26 le 19/10/2026) à traiter en mettant à jour les versions du workflow ; retours détaillés d'Audrey sur le confort au téléphone à noter.
+- **Prochaine tâche** : 1.6 (exercice d'Audrey), puis G.1 (charte visuelle) et 3.1 (rédaction des missions).

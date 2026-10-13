@@ -27,8 +27,8 @@ Légende : `[x]` fait · `[ ]` à faire · 🧑‍🏫 tâche pour Audrey (sans 
 - [x] **1.3** Toucher un personnage : une bulle s'ouvre avec son nom et son métier.
 - [x] **1.4** Meubles simples dans les chambres (lit, fauteuil, lavabo, sonnette) décrits en données dans le plan.
   🎓 Faits en formes simples (boîtes). L'import d'un modèle glTF (Kenney.nl en CC0, ou Blender) est reporté à G.2 et G.4, avec l'accord d'Audrey.
-- [ ] **1.5** Test sur un vrai téléphone (accès au serveur de WSL depuis le wifi, voir docs/ARCHITECTURE.md).
-  Procédure écrite dans `docs/ARCHITECTURE.md` ; reste le test sur le téléphone d'Audrey.
+- [x] **1.5** Test sur un vrai téléphone (accès au serveur de WSL depuis le wifi, voir docs/ARCHITECTURE.md).
+  Fait par la version publiée sur GitHub Pages (la procédure wifi reste dans `docs/ARCHITECTURE.md`).
 - [ ] **1.6** 🧑‍🏫 Ajouter toi-même un meuble dans la chambre de Mme Denise.
 - [x] **1.7** Lisibilité des étiquettes dans une petite fenêtre : éviter que deux noms proches se chevauchent (IDE et Cadre, Vous et AS) et qu'une étiquette passe sous la barre du haut (Mme Rose).
 
