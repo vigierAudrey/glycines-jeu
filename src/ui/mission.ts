@@ -10,6 +10,7 @@ import type { Contenu, ElementObserve, Etape, Mission } from '../contenu/types';
 import { bilan, demarrerMission, etapeEnCours, repondre, type Bilan, type EtatMission, type Reponse } from '../regles/mission';
 import { estDebloquee, missionsAMontrer, SEQUENCES } from '../regles/deblocage';
 import type { Theatre } from '../scene3d/creerScene';
+import { echapper } from './echapper';
 
 /** Ce que l'interface des missions demande au reste du jeu (main.ts fait le lien avec la 3D). */
 export interface LiensMission {
@@ -45,9 +46,6 @@ const CANAUX = [
 ] as const;
 
 const NOMS_DECISION = { agir: 'Agir', adapter: 'Adapter', alerter: 'Alerter' };
-
-export const echapper = (texte: string) =>
-  texte.replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]!);
 
 export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: Contenu, liens: LiensMission): InterfaceMission {
   const noms = new Map<string, string>([

@@ -79,3 +79,9 @@ Trois lignes par session : ce qui a été fait, ce qui reste à surveiller, la p
 - **Fait** : `src/regles/deblocage.ts` (3 tests) ; accueil au lancement avec mot de bienvenue, choix de la séquence, missions verrouillées 🔒, code de reprise ; `?sequence=S2` et `?brouillons` dans l'adresse. Vérifié dans Chromium à 390 px.
 - **À surveiller** : avec S1 par défaut, la mission d'exemple (S2) est verrouillée : ouvrir `http://localhost:5173/?sequence=S2` pour la jouer.
 - **Prochaine tâche** : 4.3 (page enseignante).
+
+## 13/10/2026 · Page enseignante (tâche 4.3, faite en avance)
+
+- **Fait** : `enseignante.html` + `src/enseignante.ts` (sans 3D, 4 ko) : missions rangées par séquence, critères, points maximum, réponses attendues, débriefing, lien de classe `?sequence=` ; feuille d'impression. Construction en deux pages (`vite.config.ts`). `echapper()` déplacé dans `src/ui/echapper.ts`. Vérifié dans Chromium à 390 px et 1280 px.
+- **À surveiller** : la page n'est pas protégée (les réponses attendues sont lisibles par qui connaît l'adresse) ; à ne pas donner aux élèves.
+- **Prochaine tâche** : 4.4 (hors ligne et publication).

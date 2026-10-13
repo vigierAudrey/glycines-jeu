@@ -61,7 +61,7 @@ Légende : `[x]` fait · `[ ]` à faire · 🧑‍🏫 tâche pour Audrey (sans 
 
 - [ ] **4.1** Au moins une mission par sous-compétence (14), dans l'ordre de la progression (S1 et S2 d'abord).
 - [x] **4.2** Écran d'accueil : choix de la mission, missions débloquées par séquence.
-- [ ] **4.3** Page enseignante : liste des missions, compétences, questions de débriefing à imprimer.
+- [x] **4.3** Page enseignante : liste des missions, compétences, questions de débriefing à imprimer.
 - [ ] **4.4** Mode hors ligne (PWA) et publication sur un hébergement statique.
 
 ## Phase 5 · Extensions

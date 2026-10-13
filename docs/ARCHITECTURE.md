@@ -23,7 +23,8 @@ content/*.json ──► src/contenu/charger.ts ──► src/regles/plan.ts ─
 ```
 glycines-jeu/
 ├── CLAUDE.md, AGENTS.md          consignes lues par Claude Code et Codex
-├── index.html                    la page : un calque 3D (#scene) et un calque interface (#interface)
+├── index.html                    la page du jeu : un calque 3D (#scene) et un calque interface (#interface)
+├── enseignante.html              la page enseignante (missions, réponses attendues, débriefing, lien de classe)
 ├── package.json                  dépendances et commandes (pnpm)
 ├── pnpm-workspace.yaml           réglages de pnpm (bibliothèques autorisées à s'installer)
 ├── vite.config.ts, tsconfig.json réglages de Vite et de TypeScript
@@ -33,7 +34,8 @@ glycines-jeu/
 │   ├── personnages/              residents.json, personnel.json
 │   └── scenarios/                une mission par fichier
 ├── src/
-│   ├── main.ts                   point d'entrée : branche les couches dans l'ordre
+│   ├── main.ts                   point d'entrée du jeu : branche les couches dans l'ordre
+│   ├── enseignante.ts, .css      page enseignante (sans 3D), imprimable
 │   ├── contenu/                  types.ts (forme des données), charger.ts, valider.ts
 │   ├── regles/                   plan.ts (grille → zones, centres, murs), chemin.ts (recherche de chemin A*),
 │   │                             fiche.ts (nom et rôle d'une personne, pour la bulle),
@@ -48,7 +50,8 @@ glycines-jeu/
 │   └── ui/                       interface.ts (barre, boutons, légende), bulle.ts (bulle d'une personne touchée),
 │                                 mission.ts (liste des missions, panneau d'étape, loupe, jauge, relève),
 │                                 progression.ts (sauvegarde dans le navigateur, bloc du code de reprise),
-│                                 voix.ts (lecture à voix haute avec la synthèse vocale du navigateur)
+│                                 voix.ts (lecture à voix haute avec la synthèse vocale du navigateur),
+│                                 echapper.ts (protège les textes insérés dans le HTML)
 ├── tools/valider-contenu.ts      la commande « pnpm valider »
 ├── tests/                        tests automatiques (Vitest)
 └── docs/                         ce dossier
@@ -112,6 +115,10 @@ Chaque panneau de mission et la relève ont un bouton 🔊. Il lit, dans l'ordre
 À la fin d'une mission, les niveaux obtenus sont gardés dans le navigateur (`localStorage`, clé `glycines-progression-v1`), sur l'appareil seulement. Le **code de reprise** (en bas de la liste des missions) les résume : `M00-332.K7` veut dire « mission m00 : N3, N3, N2 » (dans l'ordre des compétences de la mission), et `K7` est une clé de contrôle qui repère une faute de frappe. Sur un autre appareil, l'élève tape ce code et retrouve ses niveaux. C'est pourquoi l'identifiant d'une mission commence par `m` et deux chiffres (`m01-…`), vérifié par `pnpm valider`.
 
 L'interface ne calcule rien : elle envoie la réponse au moteur (`repondre`) et affiche ce qu'il renvoie.
+
+## Page enseignante (`enseignante.html`)
+
+Adresse : `http://localhost:5173/enseignante.html` (ou `enseignante.html` à côté de `index.html` une fois publié). Elle montre toutes les missions, brouillons compris : situation, compétences et critères, points maximum, **réponses attendues** étape par étape (la réponse qui rapporte le plus), questions de débriefing. Le bouton « Imprimer » donne une version papier sans le bloc du lien. Le bloc « Lien pour la classe » fabrique l'adresse `index.html?sequence=S…` à donner aux élèves. Elle n'est pas reliée au jeu : les élèves n'y ont pas accès par un bouton (mais elle n'est pas secrète).
 
 ## Commandes
 

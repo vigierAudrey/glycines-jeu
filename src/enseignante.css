@@ -1,0 +1,26 @@
+/* Page enseignante : lisible à l'écran, sobre à l'impression. */
+:root { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif; color: #1f2430; line-height: 1.45; }
+body { margin: 0; background: #f6f3ee; }
+.enseignante { max-width: 860px; margin: 0 auto; padding: 16px; }
+.entete { position: relative; padding-right: 120px; }
+h1 { font-size: 1.5rem; margin: 8px 0 4px; }
+h2 { font-size: 1.2rem; margin: 24px 0 8px; color: #7b5ea7; }
+h3 { font-size: 1.1rem; margin: 0; }
+h4 { font-size: 0.95rem; margin: 14px 0 4px; }
+section, .mission { background: #fff; border-radius: 12px; padding: 4px 16px 12px; margin: 12px 0; }
+.mission { border: 1px solid #e2d8f1; padding-top: 12px; }
+.meta { color: #555b66; font-size: 0.9rem; margin: 4px 0; }
+.points { color: #2f7d4f; font-size: 0.85rem; white-space: nowrap; }
+.brouillon { font-size: 0.75rem; font-weight: 700; background: #fff4d6; color: #8a5a00; padding: 2px 8px; border-radius: 999px; vertical-align: 2px; }
+.imprimer, select { min-height: 44px; padding: 0 14px; font: inherit; border-radius: 10px; border: 2px solid #d9d3e3; background: #efe9f7; cursor: pointer; }
+.imprimer { position: absolute; top: 8px; right: 0; font-weight: 700; }
+code { word-break: break-all; background: #f2eefa; padding: 4px 8px; border-radius: 6px; }
+summary { cursor: pointer; font-weight: 700; margin-top: 12px; min-height: 32px; }
+@media (max-width: 500px) { .entete { padding-right: 0; } .imprimer { position: static; } }
+@media print {
+  body { background: #fff; }
+  .imprimer, .lien-classe { display: none; }
+  section, .mission { padding: 0; margin: 0 0 12px; border: 0; }
+  .mission { break-inside: avoid-page; border-top: 1px solid #999; padding-top: 8px; }
+  h2 { color: #000; }
+}
