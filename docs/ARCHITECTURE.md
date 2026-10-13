@@ -46,7 +46,8 @@ glycines-jeu/
 │   │                             ecartEtiquettes.ts (applique l'écart des noms après chaque dessin)
 │   └── ui/                       interface.ts (barre, boutons, légende), bulle.ts (bulle d'une personne touchée),
 │                                 mission.ts (liste des missions, panneau d'étape, loupe, jauge, relève),
-│                                 progression.ts (sauvegarde dans le navigateur, bloc du code de reprise)
+│                                 progression.ts (sauvegarde dans le navigateur, bloc du code de reprise),
+│                                 voix.ts (lecture à voix haute avec la synthèse vocale du navigateur)
 ├── tools/valider-contenu.ts      la commande « pnpm valider »
 ├── tests/                        tests automatiques (Vitest)
 └── docs/                         ce dossier
@@ -100,6 +101,10 @@ Le champ `meubles` liste les meubles du plan, un par ligne :
 3. La **jauge de confiance** du résident reste en haut du panneau pendant toute la mission.
 4. Pour un **relais**, l'élève touche un professionnel dans l'aile : `main.ts` donne d'abord le toucher à la mission (`personneTouchee`), qui fait marcher l'agent vers lui.
 5. La **relève** donne le niveau de chaque compétence (avec le sens de N1 à N4 tiré du référentiel) et les questions de débriefing.
+
+### Lecture à voix haute
+
+Chaque panneau de mission et la relève ont un bouton 🔊. Il lit, dans l'ordre, les textes marqués `a-lire`, les titres des canaux du dialogue et les choix proposés, avec la voix française du navigateur (`speechSynthesis`, sans réseau). Un second appui arrête la lecture ; changer de panneau aussi. Si le navigateur ne sait pas parler, le bouton est caché. Pour qu'un nouveau texte soit lu, il suffit de lui donner la classe `a-lire`.
 
 ### Sauvegarde et code de reprise
 

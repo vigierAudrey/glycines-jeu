@@ -67,3 +67,9 @@ Trois lignes par session : ce qui a été fait, ce qui reste à surveiller, la p
 - **Fait** : `src/regles/sauvegarde.ts` (code avec clé de contrôle, 5 tests), `src/ui/progression.ts` (localStorage protégé par try/catch, bloc du code sous la liste des missions), dernière relève affichée sur chaque mission ; règle de validation du préfixe `m00`. Vérifié dans Chromium : fin de mission → code `M00-333.GC`, reprise dans un navigateur vierge, faute de frappe refusée.
 - **À surveiller** : le code s'allonge d'environ 6 caractères par mission (14 missions : environ 90 caractères, à reconsidérer en phase 4).
 - **Prochaine tâche** : 2.8 (lecture à voix haute).
+
+## 13/10/2026 · Lecture à voix haute (tâche 2.8)
+
+- **Fait** : `src/ui/voix.ts` ; bouton 🔊 dans le panneau de mission et la relève (lit consigne, réplique, canaux et choix ; second appui = stop ; arrêt au changement de panneau ou quand la page est masquée). Vérifié dans Chromium avec une synthèse simulée (le texte envoyé est le bon).
+- **À surveiller** : la voix réelle dépend de l'appareil (Windows, Android, iOS n'ont pas les mêmes voix françaises) : à écouter sur le téléphone en 1.5 ; la liste des voix peut être vide au tout premier appui sur certains navigateurs (voix par défaut utilisée).
+- **Prochaine tâche** : 1.5 (test sur téléphone par Audrey), 1.6 (exercice d'Audrey), puis G.1 (charte visuelle) ou 3.1 (rédaction des missions).

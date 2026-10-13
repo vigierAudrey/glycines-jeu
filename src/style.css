@@ -388,3 +388,6 @@ html, body {
 }
 .code-reprise__formulaire input:focus-visible { outline: 3px solid var(--violet); outline-offset: 1px; }
 .code-reprise__message { flex-basis: 100%; margin: 0; color: #9b3a1a; font-weight: 600; }
+
+/* Bouton 🔊 pendant la lecture (src/ui/voix.ts). */
+[data-action='lire'][aria-pressed='true'] { background: var(--violet); color: #fff; }

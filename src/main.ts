@@ -17,6 +17,7 @@ import { creerBulle } from './ui/bulle';
 import { monterInterface } from './ui/interface';
 import { monterMissions } from './ui/mission';
 import { suivreProgression } from './ui/progression';
+import { brancherVoix } from './ui/voix';
 
 const contenu = chargerContenu();
 const lieu = contenu.lieux[0];
@@ -46,6 +47,9 @@ const agent = joueur && personnages.getObjectByName(`personnage-${joueur.id}`);
 const allerVers = agent ? brancherMarche(theatre, plan, agent) : undefined;
 
 // Missions : panneau d'étape, loupe, relais et relève. Elles font marcher l'agent vers une pièce ou une personne.
+// Lecture à voix haute des panneaux de mission (bouton 🔊).
+brancherVoix(racineInterface);
+
 // La progression (derniers niveaux) est gardée dans le navigateur ; le code de reprise la transporte.
 const progression = suivreProgression(contenu.missions);
 const missions = monterMissions(racineInterface, theatre, contenu, {
