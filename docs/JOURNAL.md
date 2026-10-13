@@ -85,3 +85,9 @@ Trois lignes par session : ce qui a été fait, ce qui reste à surveiller, la p
 - **Fait** : `enseignante.html` + `src/enseignante.ts` (sans 3D, 4 ko) : missions rangées par séquence, critères, points maximum, réponses attendues, débriefing, lien de classe `?sequence=` ; feuille d'impression. Construction en deux pages (`vite.config.ts`). `echapper()` déplacé dans `src/ui/echapper.ts`. Vérifié dans Chromium à 390 px et 1280 px.
 - **À surveiller** : la page n'est pas protégée (les réponses attendues sont lisibles par qui connaît l'adresse) ; à ne pas donner aux élèves.
 - **Prochaine tâche** : 4.4 (hors ligne et publication).
+
+## 13/10/2026 · Hors ligne et publication (tâche 4.4, faite en avance)
+
+- **Fait** : manifeste, icônes provisoires, `public/sw.js`, enregistrement dans `main.ts` (version construite seulement), workflow GitHub Pages manuel. Vérifié avec `pnpm preview` dans Chromium : copie de 11 fichiers, puis jeu et page enseignante rechargés hors ligne, sans erreur.
+- **À surveiller** : jamais publié pour l'instant (aucune mission `valide` : la version publiée n'en montrerait aucune) ; `pnpm/action-setup` lit la version de pnpm dans `package.json`.
+- **Prochaine tâche** : celles d'Audrey (1.5, 1.6, G.1, 3.1).

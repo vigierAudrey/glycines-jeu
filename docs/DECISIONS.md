@@ -96,3 +96,9 @@ On ne redessine que si la vue change (batterie des téléphones). Les étiquette
 - **Décision** : la séquence vue en cours (S1 à S7) se règle dans la liste des missions ou par l'adresse (`?sequence=S3`), et reste mémorisée sur l'appareil. Une mission est ouverte si sa `sequence_requise` est atteinte. Les missions `brouillon` ne s'affichent qu'en développement ou avec `?brouillons`.
 - **Pourquoi** : sans compte ni serveur, c'est l'enseignante qui donne le bon lien (ou la bonne consigne) à la classe. Un élève peut changer la séquence : ce n'est pas grave, le jeu n'est pas une évaluation certificative.
 - **Conséquence** : tant qu'aucune mission n'est `valide`, la version publiée n'affiche aucune mission (message « Aucune mission validée pour l'instant »).
+
+## D-018 · Hors ligne avec un service worker écrit à la main ; publication manuelle · 13/10/2026
+
+- **Décision** : `public/sw.js` (une soixantaine de lignes) plutôt que `vite-plugin-pwa`. Il lit les pages pour trouver leurs fichiers et les met en cache ; réseau d'abord pour les pages, cache d'abord pour `assets/`. Publication par GitHub Pages avec un workflow **lancé à la main uniquement** (`workflow_dispatch`).
+- **Pourquoi** : pas de nouvelle dépendance (règle du projet), code lisible et commenté en français. Publier est un acte visible du public : c'est à Audrey de décider quand.
+- **Limites** : les anciens fichiers de `assets/` restent dans le cache après une mise à jour (quelques centaines de ko) ; changer `CACHE` dans `sw.js` (`glycines-v2`…) efface tout. Les icônes sont provisoires (grappe de glycine dessinée par un script) en attendant la charte G.1.

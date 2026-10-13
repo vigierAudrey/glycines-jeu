@@ -52,6 +52,8 @@ glycines-jeu/
 │                                 progression.ts (sauvegarde dans le navigateur, bloc du code de reprise),
 │                                 voix.ts (lecture à voix haute avec la synthèse vocale du navigateur),
 │                                 echapper.ts (protège les textes insérés dans le HTML)
+├── public/                       copié tel quel : manifest.webmanifest, sw.js (hors ligne), icônes
+├── .github/workflows/publier.yml publication sur GitHub Pages, lancée à la main seulement
 ├── tools/valider-contenu.ts      la commande « pnpm valider »
 ├── tests/                        tests automatiques (Vitest)
 └── docs/                         ce dossier
@@ -119,6 +121,27 @@ L'interface ne calcule rien : elle envoie la réponse au moteur (`repondre`) et 
 ## Page enseignante (`enseignante.html`)
 
 Adresse : `http://localhost:5173/enseignante.html` (ou `enseignante.html` à côté de `index.html` une fois publié). Elle montre toutes les missions, brouillons compris : situation, compétences et critères, points maximum, **réponses attendues** étape par étape (la réponse qui rapporte le plus), questions de débriefing. Le bouton « Imprimer » donne une version papier sans le bloc du lien. Le bloc « Lien pour la classe » fabrique l'adresse `index.html?sequence=S…` à donner aux élèves. Elle n'est pas reliée au jeu : les élèves n'y ont pas accès par un bouton (mais elle n'est pas secrète).
+
+## Jouer sans réseau (PWA)
+
+Une fois publié, le jeu s'installe comme une application (« Ajouter à l'écran d'accueil ») et marche sans réseau :
+
+- `public/manifest.webmanifest` donne le nom, les couleurs et les icônes de l'application ;
+- `public/sw.js` est un **service worker** : un petit programme que le navigateur garde à côté du jeu. À la première visite, il copie les pages et leurs fichiers ; ensuite, sans réseau, il sert ces copies. Les pages passent d'abord par le réseau (pour recevoir les mises à jour), les fichiers de `assets/` sont pris dans la copie (leur nom change à chaque version) ;
+- il n'est activé que dans la version construite (`pnpm build`), jamais avec `pnpm dev`.
+
+Pour le tester : `pnpm build`, puis `pnpm preview`, ouvrir l'adresse, puis couper le réseau (outils de développement du navigateur, onglet Réseau, « Hors ligne ») et recharger.
+
+## Publier le jeu (GitHub Pages)
+
+Le jeu construit (`dist/`) est un simple dossier de fichiers : n'importe quel hébergement statique convient. Avec GitHub Pages, gratuit pour un dépôt public :
+
+1. Sur GitHub, dans le dépôt : **Settings → Pages → Source : GitHub Actions** (une seule fois).
+2. Pousser les commits (`git push`).
+3. Onglet **Actions → Publier sur GitHub Pages → Run workflow**. Le workflow lance `pnpm verifier` puis publie `dist/`.
+4. Le jeu est à l'adresse `https://vigieraudrey.github.io/glycines-jeu/`, la page enseignante à `…/glycines-jeu/enseignante.html`.
+
+Rien n'est publié tant qu'on ne lance pas le workflow à la main. Seules les missions `valide` sont visibles dans la version publiée.
 
 ## Commandes
 

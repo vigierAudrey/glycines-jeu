@@ -99,3 +99,11 @@ ecouterTouchers(theatre, personnages.children, ({ personnage, sol }) => {
 
 // Au lancement, l'écran d'accueil propose les missions.
 missions.ouvrirListe(true);
+
+// Version publiée : un service worker garde une copie du jeu pour jouer sans réseau (public/sw.js).
+// Pas en développement : il garderait d'anciennes versions des fichiers pendant qu'on les modifie.
+if (import.meta.env.PROD && 'serviceWorker' in navigator) {
+  navigator.serviceWorker.register('./sw.js').catch(() => {
+    // pas de mode hors ligne (navigateur ancien, navigation privée…) : le jeu marche quand même en ligne
+  });
+}
