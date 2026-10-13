@@ -6,10 +6,11 @@ import * as THREE from 'three';
 import type { MembrePersonnel, Resident } from '../contenu/types';
 import { positionDansZone, trouverZone, type PlanCalcule } from '../regles/plan';
 import { etiquette } from './construireAile';
+import { CHARTE, lisere } from './charte';
 
 const corps = new THREE.CapsuleGeometry(0.22, 0.6, 4, 12);
 const tete = new THREE.SphereGeometry(0.17, 16, 12);
-const peau = new THREE.MeshLambertMaterial({ color: '#e9c9a8' });
+const peau = new THREE.MeshLambertMaterial({ color: CHARTE.peau });
 
 function figurine(couleur: string, texte: string, classe: string): THREE.Group {
   const groupe = new THREE.Group();
@@ -17,7 +18,8 @@ function figurine(couleur: string, texte: string, classe: string): THREE.Group {
   c.position.y = 0.52;
   const t = new THREE.Mesh(tete, peau);
   t.position.y = 1.08;
-  groupe.add(c, t, etiquette(texte, classe, new THREE.Vector3(0, 1.45, 0)));
+  // Un liseré foncé autour du corps et de la tête, comme les contours des meubles.
+  groupe.add(c, t, lisere(c), lisere(t), etiquette(texte, classe, new THREE.Vector3(0, 1.45, 0)));
   return groupe;
 }
 
@@ -37,7 +39,7 @@ export function placerPersonnages(plan: PlanCalcule, residents: Resident[], pers
     groupe.add(objet);
   };
 
-  for (const r of residents) poser(figurine('#f1efe9', `${r.civilite} ${r.nom}`, 'etiquette-resident'), r.id, r.chambre);
+  for (const r of residents) poser(figurine(CHARTE.tenueResident, `${r.civilite} ${r.nom}`, 'etiquette-resident'), r.id, r.chambre);
   for (const p of personnel) {
     const classe = p.joueur ? 'etiquette-joueur' : 'etiquette-personnel';
     poser(figurine(p.tenue, p.joueur ? 'Vous' : p.sigle, classe), p.id, p.zone_habituelle);

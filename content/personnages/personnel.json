@@ -1,7 +1,7 @@
 {
   "note": "Métiers présents dans l'aile B. Les prénoms sont fictifs et modifiables. La couleur de tenue sert à reconnaître le métier d'un coup d'œil, sur ordinateur comme sur téléphone.",
   "personnel": [
-    { "id": "joueur", "prenom": "Vous", "metier": "Agent accompagnant au grand âge", "sigle": "AAGA", "tenue": "#7b5ea7", "zone_habituelle": "couloir", "joueur": true },
+    { "id": "joueur", "prenom": "Vous", "metier": "Agent accompagnant au grand âge", "sigle": "AAGA", "tenue": "#5b3fa0", "zone_habituelle": "couloir", "joueur": true },
     { "id": "infirmiere", "prenom": "Claire", "metier": "Infirmière", "sigle": "IDE", "tenue": "#3d7cc9", "zone_habituelle": "poste-de-soins" },
     { "id": "aide-soignante", "prenom": "Nadia", "metier": "Aide-soignante", "sigle": "AS", "tenue": "#3fa66b", "zone_habituelle": "couloir" },
     { "id": "cadre", "prenom": "M. Lemoine", "metier": "Cadre de santé", "sigle": "Cadre", "tenue": "#2f3e4e", "zone_habituelle": "poste-de-soins" },

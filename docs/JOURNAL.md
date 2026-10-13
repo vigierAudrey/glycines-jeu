@@ -102,3 +102,9 @@ Trois lignes par session : ce qui a été fait, ce qui reste à surveiller, la p
 
 - **Fait** : fauteuil de Mme Denise ajouté (colonne 15, rangée 2, tourné vers l'ouest, comme dans les autres chambres) ; consignes mises à jour dans CLAUDE.md, AGENTS.md, PROMPTS.md et la feuille de route (D-019).
 - **Prochaine tâche** : G.1 (maquettes de la charte visuelle).
+
+## 13/10/2026 · Charte « Repères nets » (tâche G.1)
+
+- **Fait** : page de 3 maquettes ; Audrey choisit C. Appliquée au jeu : `src/scene3d/charte.ts` (couleurs, contours des murs, meubles et cases, liseré des personnages), couleurs des zones adoucies, tenue de l'AAGA, interface, icône de thème. Vérifié dans Chromium à 1280 px et 390 px (accueil et loupe).
+- **À surveiller** : fluidité sur téléphone avec les traits en plus (à regarder au prochain essai) ; repères de la loupe et fauteuils sont tous deux orange.
+- **Prochaine tâche** : G.2 (personnages personnalisés) quand Audrey le souhaite, ou 3.1 (missions).

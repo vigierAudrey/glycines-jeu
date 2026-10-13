@@ -45,8 +45,9 @@ Légende : `[x]` fait · `[ ]` à faire · 🧑‍🏫 ce qu'Audrey seule peut f
 
 ## Phase 2 bis · Habillage graphique
 
-- [ ] **G.1** Choisir la charte visuelle (palette, style des personnages) sur 2 ou 3 maquettes.
-- [ ] **G.2** Personnages low-poly animés (marche, attente) avec tenues par métier et aides techniques des résidents.
+- [x] **G.1** Choisir la charte visuelle (palette, style des personnages) sur 2 ou 3 maquettes.
+  Charte C « Repères nets » choisie et appliquée au décor (contours foncés, fond gris bleuté, fauteuils orange). Personnages plus personnalisés à faire en G.2.
+- [ ] **G.2** Personnages low-poly animés (marche, attente), plus personnalisés (visage, cheveux, silhouette selon l'âge), avec tenues par métier et aides techniques des résidents, dans le style « Repères nets ».
 - [ ] **G.3** Sols texturés, fenêtres, portes, éclairage chaud ; contrôle de la fluidité sur téléphone.
 - [ ] **G.4** Un objet métier en 3D (lève-personne ou chariot de soins), fait par l'IA en formes simples ou repris d'un modèle libre de droits (avec l'accord d'Audrey).
 
