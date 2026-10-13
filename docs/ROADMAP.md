@@ -17,11 +17,11 @@ Légende : `[x]` fait · `[ ]` à faire · 🧑‍🏫 tâche pour Audrey (sans 
 - [x] **0.5** 🧑‍🏫 Installer le projet dans `~/dev/glycine/glycines-jeu/glycines-jeu`, installer pnpm, lancer `pnpm install` puis `pnpm dev`, ouvrir le jeu.
 - [x] **0.6** 🧑‍🏫 Créer le dépôt git, faire le premier commit, le pousser sur un dépôt GitHub public.
   🎓 git init, add, commit, push.
-- [ ] **0.7** 🧑‍🏫 Premier exercice : modifier la grille de `content/lieux/aile-b.json` (agrandir le patio, déplacer une porte) et observer le résultat.
+- [x] **0.7** Premier exercice : modifier la grille de `content/lieux/aile-b.json` (agrandir le patio, ajouter une porte) et observer le résultat.
 
 ## Phase 1 · Se déplacer dans l'aile B
 
-- [ ] **1.1** Toucher ou cliquer une case du sol : l'agent s'y rend en marchant (recherche de chemin sur la grille, sans traverser les murs).
+- [x] **1.1** Toucher ou cliquer une case du sol : l'agent s'y rend en marchant (recherche de chemin sur la grille, sans traverser les murs).
   🎓 Le « raycasting » (trouver ce qu'on touche à l'écran) et l'algorithme A*.
 - [ ] **1.2** La caméra suit l'agent en douceur ; le zoom reste libre.
 - [ ] **1.3** Toucher un personnage : une bulle s'ouvre avec son nom et son métier.

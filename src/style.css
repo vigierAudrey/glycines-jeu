@@ -148,7 +148,10 @@ html, body {
   padding: 6px 12px;
   font-size: 0.8rem;
   background: var(--fond-panneau);
-  border-radius: 999px;
+  border-radius: 14px;
   box-shadow: var(--ombre);
-  white-space: nowrap;
+  /* Sur un petit écran, le texte passe à la ligne au lieu de sortir de l'écran. */
+  width: max-content;
+  max-width: calc(100% - 16px);
+  text-align: center;
 }

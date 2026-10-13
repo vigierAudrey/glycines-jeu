@@ -14,14 +14,25 @@ import { CSS2DRenderer } from 'three/addons/renderers/CSS2DRenderer.js';
 const ELEVATION = THREE.MathUtils.degToRad(35.264);
 const DISTANCE = 40;
 
+/**
+ * Une animation est appelée à chaque image avec le temps écoulé depuis l'image précédente (en secondes).
+ * Elle renvoie true pour continuer, false quand elle a fini.
+ */
+export type Animation = (secondes: number) => boolean;
+
 export interface Theatre {
   scene: THREE.Scene;
+  camera: THREE.OrthographicCamera;
+  /** Élément HTML qui reçoit les gestes (souris, doigts) au-dessus de la 3D. */
+  surfaceTactile: HTMLElement;
   /** Demande un nouveau dessin (le jeu ne redessine que lorsque quelque chose change, pour économiser la batterie). */
   demanderRendu: () => void;
   /** Tourne la vue d'un quart de tour : +1 sens horaire, -1 sens inverse. */
   tourner: (sens: 1 | -1) => void;
   /** Recentre la vue sur un point du plan et règle le zoom initial. */
   recentrer: () => void;
+  /** Lance une animation : le jeu redessine en continu tant qu'au moins une animation tourne. */
+  animer: (animation: Animation) => void;
 }
 
 export function creerTheatre(conteneur: HTMLElement, centre: THREE.Vector3, tailleDuPlan: number): Theatre {
@@ -60,6 +71,7 @@ export function creerTheatre(conteneur: HTMLElement, centre: THREE.Vector3, tail
 
   // ---------- Rendu à la demande ----------
   let renduPrevu = false;
+  let boucleActive = false; // vrai pendant une animation (voir plus bas)
   const dessiner = () => {
     renduPrevu = false;
     majDensite();
@@ -67,12 +79,38 @@ export function creerTheatre(conteneur: HTMLElement, centre: THREE.Vector3, tail
     renduEtiquettes.render(scene, camera);
   };
   const demanderRendu = () => {
+    if (boucleActive) return; // la boucle d'animation redessine déjà à chaque image
     if (!renduPrevu) {
       renduPrevu = true;
       requestAnimationFrame(dessiner);
     }
   };
   controles.addEventListener('change', demanderRendu);
+
+  // ---------- Boucle d'animation ----------
+  // Tant qu'une animation tourne (l'agent qui marche…), on redessine à chaque image de l'écran (environ 60 fois par seconde).
+  // Quand toutes les animations ont fini, la boucle s'arrête et on revient au rendu à la demande.
+  const animations = new Set<Animation>();
+  let instantPrecedent = 0;
+  const boucle = (instant: number) => {
+    // Temps écoulé depuis l'image précédente. Plafonné à 0,1 s : si l'onglet a été mis en pause, l'agent ne « saute » pas.
+    const secondes = Math.min(Math.max(instant - instantPrecedent, 0) / 1000, 0.1);
+    instantPrecedent = instant;
+    for (const animation of [...animations]) {
+      if (!animation(secondes)) animations.delete(animation);
+    }
+    dessiner();
+    if (animations.size > 0) requestAnimationFrame(boucle);
+    else boucleActive = false;
+  };
+  const animer = (animation: Animation) => {
+    animations.add(animation);
+    if (!boucleActive) {
+      boucleActive = true;
+      instantPrecedent = performance.now();
+      requestAnimationFrame(boucle);
+    }
+  };
 
   // ---------- Densité d'affichage ----------
   // Nombre de pixels à l'écran pour 1 m du plan. Quand la vue est petite (téléphone, zoom arrière),
@@ -133,5 +171,5 @@ export function creerTheatre(conteneur: HTMLElement, centre: THREE.Vector3, tail
 
   recentrer();
   ajusterTaille();
-  return { scene, demanderRendu, tourner, recentrer };
+  return { scene, camera, surfaceTactile: renduEtiquettes.domElement, demanderRendu, tourner, recentrer, animer };
 }

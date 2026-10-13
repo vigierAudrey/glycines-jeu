@@ -1,6 +1,6 @@
 // Figurines des personnages : un corps (capsule) et une tête (sphère).
 // Résidents : tenue claire et nom affiché. Personnel : couleur de tenue du métier et sigle affiché.
-// Pour l'instant les figurines sont immobiles ; le déplacement arrive en phase 1 (voir docs/ROADMAP.md).
+// Chaque figurine porte le nom « personnage-<id> » : on la retrouve avec getObjectByName (par exemple pour faire marcher l'agent).
 
 import * as THREE from 'three';
 import type { MembrePersonnel, Resident } from '../contenu/types';
@@ -26,7 +26,8 @@ export function placerPersonnages(plan: PlanCalcule, residents: Resident[], pers
   groupe.name = 'personnages';
   const occupation = new Map<string, number>(); // nombre de personnes déjà posées dans chaque zone
 
-  const poser = (objet: THREE.Object3D, idZone: string) => {
+  const poser = (objet: THREE.Object3D, id: string, idZone: string) => {
+    objet.name = `personnage-${id}`;
     const zone = trouverZone(plan, idZone);
     if (!zone) return;
     const n = occupation.get(idZone) ?? 0;
@@ -36,10 +37,10 @@ export function placerPersonnages(plan: PlanCalcule, residents: Resident[], pers
     groupe.add(objet);
   };
 
-  for (const r of residents) poser(figurine('#f1efe9', `${r.civilite} ${r.nom}`, 'etiquette-resident'), r.chambre);
+  for (const r of residents) poser(figurine('#f1efe9', `${r.civilite} ${r.nom}`, 'etiquette-resident'), r.id, r.chambre);
   for (const p of personnel) {
     const classe = p.joueur ? 'etiquette-joueur' : 'etiquette-personnel';
-    poser(figurine(p.tenue, p.joueur ? 'Vous' : p.sigle, classe), p.zone_habituelle);
+    poser(figurine(p.tenue, p.joueur ? 'Vous' : p.sigle, classe), p.id, p.zone_habituelle);
   }
   return groupe;
 }

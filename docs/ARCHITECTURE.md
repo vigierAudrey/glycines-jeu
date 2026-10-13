@@ -35,8 +35,9 @@ glycines-jeu/
 ├── src/
 │   ├── main.ts                   point d'entrée : branche les couches dans l'ordre
 │   ├── contenu/                  types.ts (forme des données), charger.ts, valider.ts
-│   ├── regles/plan.ts            grille → zones, centres, murs
-│   ├── scene3d/                  creerScene.ts (caméra, contrôles), construireAile.ts, personnages.ts
+│   ├── regles/                   plan.ts (grille → zones, centres, murs), chemin.ts (recherche de chemin A*)
+│   ├── scene3d/                  creerScene.ts (caméra, contrôles, boucle d'animation), construireAile.ts, personnages.ts,
+│   │                             toucher.ts (toucher bref ou glisser, raycasting), marche.ts (marche de l'agent)
 │   └── ui/interface.ts           barre, boutons, légende
 ├── tools/valider-contenu.ts      la commande « pnpm valider »
 ├── tests/                        tests automatiques (Vitest)
@@ -57,6 +58,10 @@ Les murs ne sont pas dessinés à la main : `src/regles/plan.ts` les calcule. Il
 - **Instances** : une même forme dessinée N fois en un seul appel à la carte graphique. On s'en sert pour les cases de sol et les murs, ce qui garde le jeu fluide sur téléphone.
 - **Caméra orthographique** : sans perspective. Placée à 35,26° au-dessus du sol et à 45° de côté, elle donne la vue isométrique.
 - **Rendu à la demande** : on ne redessine l'image que si quelque chose change (glisser, zoom, rotation). Sur téléphone, c'est de la batterie gagnée.
+- **Boucle d'animation** : pendant un mouvement (l'agent qui marche), on redessine à chaque image de l'écran (environ 60 fois par seconde) avec `requestAnimationFrame`. Chaque animation reçoit le temps écoulé et dit si elle continue. Quand plus rien ne bouge, la boucle s'arrête et on revient au rendu à la demande (`theatre.animer(...)` dans `creerScene.ts`).
+- **Raycasting** : pour savoir ce qu'on touche à l'écran, on lance un rayon depuis la caméra à travers le pixel touché et on cherche où il rencontre le sol (`toucher.ts`).
+- **Toucher ou glisser** : un geste court (moins de 0,5 s), qui bouge de moins de 10 px et n'utilise qu'un doigt, est un toucher (l'agent marche). Sinon c'est un glisser ou un pincement (la vue bouge).
+- **A\*** (« A étoile ») : algorithme de plus court chemin sur la grille (`src/regles/chemin.ts`). Il explore d'abord les cases dont « chemin déjà fait + distance à vol d'oiseau restante » est le plus petit. On marche en 8 directions, jamais à travers un mur, et sans couper le coin d'un mur en diagonale.
 - **Étiquettes HTML (CSS2DRenderer)** : les noms au-dessus des têtes sont du vrai texte HTML, net et lisible, pas des pixels dans la 3D.
 - **Densité d'étiquettes** : selon le nombre de pixels par mètre à l'écran, le CSS masque les noms des chambres puis des pièces pour éviter les chevauchements (`data-densite` sur `#scene`).
 

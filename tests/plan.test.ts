@@ -53,6 +53,21 @@ describe('lirePlan', () => {
     expect(trouverZone(plan, 'chambre-karim')).toBeDefined();
     expect(plan.murs.length).toBeGreaterThan(50);
   });
+
+  it('ouvre la deuxième porte entre le couloir et la salle à manger (aile B)', () => {
+    const plan = lirePlan(aileB as Lieu);
+    // La nouvelle porte est en colonne 22, rangée 3 : juste au-dessus du couloir (rangée 4).
+    expect((aileB as Lieu).grille[3][22]).toBe('p');
+    const bordsDeLaPorte = plan.murs.filter(
+      (m) => ((m.x === 22 || m.x === 23) && m.z === 3.5) || (m.x === 22.5 && (m.z === 3 || m.z === 4)),
+    );
+    expect(bordsDeLaPorte).toHaveLength(0);
+  });
+
+  it('a un patio de 5 rangées (aile B)', () => {
+    const patio = trouverZone(lirePlan(aileB as Lieu), 'patio')!;
+    expect(new Set(patio.cases.map((c) => c.rangee)).size).toBe(5);
+  });
 });
 
 describe('positionDansZone', () => {
