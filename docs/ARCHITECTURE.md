@@ -43,7 +43,8 @@ glycines-jeu/
 │   │                             toucher.ts (toucher bref ou glisser, raycasting), marche.ts (marche de l'agent),
 │   │                             meubles.ts (lit, fauteuil, lavabo, sonnette en formes simples),
 │   │                             ecartEtiquettes.ts (applique l'écart des noms après chaque dessin)
-│   └── ui/                       interface.ts (barre, boutons, légende), bulle.ts (bulle d'une personne touchée)
+│   └── ui/                       interface.ts (barre, boutons, légende), bulle.ts (bulle d'une personne touchée),
+│                                 mission.ts (liste des missions, panneau d'étape, loupe, jauge, relève)
 ├── tools/valider-contenu.ts      la commande « pnpm valider »
 ├── tests/                        tests automatiques (Vitest)
 └── docs/                         ce dossier
@@ -83,10 +84,22 @@ Le champ `meubles` liste les meubles du plan, un par ligne :
 - **Toucher ou glisser** : un geste court (moins de 0,5 s), qui bouge de moins de 10 px et n'utilise qu'un doigt, est un toucher (l'agent marche). Sinon c'est un glisser ou un pincement (la vue bouge).
 - **Toucher un personnage** : une figurine fait à peine 10 px de large sur téléphone. Au lieu de viser la figurine en 3D, on la projette à l'écran (un trait des pieds au haut de l'étiquette) et on accepte un toucher à moins de 24 px de ce trait : la cible fait au moins 44 px. Si deux personnes sont proches, la plus proche du doigt gagne. Un personnage touché ouvre sa bulle ; sinon, le toucher fait marcher l'agent (`main.ts` décide).
 - **Bulle qui suit la 3D** : la bulle est du HTML dans le calque interface. Après chaque dessin (`theatre.apresChaqueRendu`), on calcule où se trouve la tête de la personne à l'écran (`theatre.versEcran`) et on y replace la bulle, retenue au bord de l'écran si besoin.
+- **Cadrage d'une pièce** : pour la loupe, `theatre.cadrer(x, z, largeur)` amène la vue sur la pièce en 0,6 s et règle le zoom pour qu'elle occupe le haut de l'écran, au-dessus du panneau de la mission.
+- **Repères de la loupe** : comme la bulle, ce sont des boutons HTML de 44 px replacés après chaque dessin au-dessus de leur case (`src/ui/mission.ts`). Pas de 3D en plus.
 - **A\*** (« A étoile ») : algorithme de plus court chemin sur la grille (`src/regles/chemin.ts`). Il explore d'abord les cases dont « chemin déjà fait + distance à vol d'oiseau restante » est le plus petit. On marche en 8 directions, jamais à travers un mur, et sans couper le coin d'un mur en diagonale.
 - **Étiquettes HTML (CSS2DRenderer)** : les noms au-dessus des têtes sont du vrai texte HTML, net et lisible, pas des pixels dans la 3D.
 - **Écart des étiquettes** : après chaque dessin, on mesure le rectangle de chaque nom de personne à l'écran. De la plus basse à la plus haute, une étiquette qui en touche une autre monte juste au-dessus ; une étiquette qui passerait sous la barre du haut est descendue dessous (`src/regles/etiquettes.ts`, testé sans navigateur). Le décalage passe par la propriété CSS `translate`, qui s'ajoute au `transform` posé par Three.js.
 - **Densité d'étiquettes** : selon le nombre de pixels par mètre à l'écran, le CSS masque les noms des chambres puis des pièces pour éviter les chevauchements (`data-densite` sur `#scene`).
+
+## Jouer une mission (interface : `src/ui/mission.ts`)
+
+1. Le bouton **Missions** ouvre la liste (les brouillons sont signalés). Choisir une mission fait marcher l'agent vers son lieu.
+2. Le **panneau du bas** montre l'étape : dialogue en 3 canaux, loupe, décision (badges Agir, Adapter, Alerter) ou relais. Après chaque réponse, il explique (« Bien joué » ou « À retenir »).
+3. La **jauge de confiance** du résident reste en haut du panneau pendant toute la mission.
+4. Pour un **relais**, l'élève touche un professionnel dans l'aile : `main.ts` donne d'abord le toucher à la mission (`personneTouchee`), qui fait marcher l'agent vers lui.
+5. La **relève** donne le niveau de chaque compétence (avec le sens de N1 à N4 tiré du référentiel) et les questions de débriefing.
+
+L'interface ne calcule rien : elle envoie la réponse au moteur (`repondre`) et affiche ce qu'il renvoie.
 
 ## Commandes
 

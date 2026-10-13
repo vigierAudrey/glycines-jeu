@@ -4,7 +4,7 @@
 import * as THREE from 'three';
 import './style.css';
 import { chargerContenu } from './contenu/charger';
-import { lirePlan } from './regles/plan';
+import { lirePlan, positionDansZone, trouverZone } from './regles/plan';
 import { creerTheatre } from './scene3d/creerScene';
 import { construireAile } from './scene3d/construireAile';
 import { construireMeubles } from './scene3d/meubles';
@@ -15,6 +15,7 @@ import { ecouterTouchers } from './scene3d/toucher';
 import { ficheDe } from './regles/fiche';
 import { creerBulle } from './ui/bulle';
 import { monterInterface } from './ui/interface';
+import { monterMissions } from './ui/mission';
 
 const contenu = chargerContenu();
 const lieu = contenu.lieux[0];
@@ -43,8 +44,36 @@ const joueur = contenu.personnel.find((p) => p.joueur);
 const agent = joueur && personnages.getObjectByName(`personnage-${joueur.id}`);
 const allerVers = agent ? brancherMarche(theatre, plan, agent) : undefined;
 
+// Missions : panneau d'étape, loupe, relais et relève. Elles font marcher l'agent vers une pièce ou une personne.
+const missions = monterMissions(racineInterface, theatre, contenu, {
+  allerVersZone: (idZone) => {
+    const zone = trouverZone(plan, idZone);
+    if (zone && allerVers) {
+      const { x, z } = positionDansZone(zone, 1); // la case 0 est souvent celle du résident
+      allerVers(x, z);
+    }
+  },
+  cadrerZone: (idZone) => {
+    const zone = trouverZone(plan, idZone);
+    // La pièce apparaît dans le haut de l'écran, au-dessus du panneau de la mission.
+    if (!zone) return;
+    const cote = Math.max(...zone.cases.map((c) => Math.max(Math.abs(c.colonne + 0.5 - zone.centre.x), Math.abs(c.rangee + 0.5 - zone.centre.z)))) * 2 + 1;
+    theatre.cadrer(zone.centre.x, zone.centre.z, cote, 0.1);
+  },
+  allerVersPersonne: (id) => {
+    const personne = personnages.getObjectByName(`personnage-${id}`);
+    if (personne && allerVers) allerVers(personne.position.x, personne.position.z);
+  },
+});
+
 ecouterTouchers(theatre, personnages.children, ({ personnage, sol }) => {
-  const fiche = personnage && ficheDe(personnage.name.replace('personnage-', ''), contenu.residents, contenu.personnel);
+  const id = personnage?.name.replace('personnage-', '');
+  // Pendant une étape « relais », toucher un professionnel lui transmet l'information.
+  if (id && missions.personneTouchee(id)) {
+    bulle.fermer();
+    return;
+  }
+  const fiche = id && ficheDe(id, contenu.residents, contenu.personnel);
   if (personnage && fiche) {
     bulle.ouvrir(personnage, fiche);
     theatre.demanderRendu();

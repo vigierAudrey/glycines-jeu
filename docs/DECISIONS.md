@@ -77,3 +77,10 @@ On ne redessine que si la vue change (batterie des téléphones). Les étiquette
 - **Pourquoi** : 4 types suffisent pour les mécaniques du cahier des charges (loupe, dialogue en 3 canaux, agir/adapter/alerter, relais vers le bon professionnel). Un seul niveau par compétence, jamais de note globale (règle 4). N4 (« transfère à une situation nouvelle et justifie ») ne peut pas se prouver dans une mission connue.
 - **À valider par Audrey** : les seuils 40 % et 70 %, et l'usage de `transfert`. Ils se changent dans `niveau()` (`src/regles/mission.ts`).
 - **Ce qu'on abandonne pour l'instant** : les types « transmission » (trier fait, jugement, interprétation), « secret professionnel » et « protocole » du cahier des charges. Ils s'ajouteront comme nouveaux types d'étapes quand les missions de la phase 4 en auront besoin.
+
+## D-015 · Interface des missions en HTML, au-dessus de la 3D · 13/10/2026
+
+- **Décision** : panneau d'étape en bas d'écran, repères de loupe et relève sont du HTML (`src/ui/mission.ts`). Les repères suivent la vue comme la bulle (D-012). Pour la loupe, la vue cadre la pièce (`theatre.cadrer`). Pour le relais, l'élève touche le professionnel dans l'aile : on vérifie ainsi qu'il sait **qui** prévenir, pas seulement cocher un nom.
+- **Pourquoi** : texte net et lisible, boutons de 44 px, lecteurs d'écran, aucune donnée pédagogique dans `src/scene3d/`. Le moteur reste seul juge (points, niveaux).
+- **Sécurité** : le HTML est construit avec des gabarits ; tout texte venu de `content/` passe par `echapper()`.
+- **Ce qu'on abandonne pour l'instant** : un vrai écran d'accueil (tâche 4.2) ; la liste des missions en tient lieu.

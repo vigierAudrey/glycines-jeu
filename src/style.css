@@ -200,3 +200,173 @@ html, body {
 }
 .bulle__fermer:hover { background: #efe9f7; }
 .bulle__fermer:focus-visible { outline: 3px solid var(--violet); outline-offset: -3px; }
+
+/* ---------- Missions (src/ui/mission.ts) ---------- */
+
+/* Pendant une mission, le panneau prend la place de l'aide du bas. */
+.interface[data-mission] .aide { display: none; }
+
+.bouton:disabled { opacity: 0.45; cursor: not-allowed; }
+.bouton--petit { font-size: 1.2rem; padding: 0; }
+.bouton--principal {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  background: var(--violet);
+  color: #fff;
+}
+.bouton--principal:hover:not(:disabled) { background: #664b8f; }
+.bouton--mission { background: var(--violet); color: #fff; }
+.bouton--mission:hover { background: #664b8f; }
+
+/* Panneau d'étape, en bas de l'écran. */
+.panneau {
+  position: absolute;
+  left: 50%;
+  bottom: max(8px, env(safe-area-inset-bottom));
+  transform: translateX(-50%);
+  width: min(640px, calc(100% - 16px));
+  max-height: min(60%, 520px);
+  display: flex;
+  flex-direction: column;
+  background: var(--fond-panneau);
+  border-radius: 14px;
+  box-shadow: var(--ombre);
+  font-size: 0.95rem;
+}
+.panneau[hidden] { display: none; }
+/* Pendant la loupe, le panneau est plus bas pour laisser voir la pièce. */
+.panneau[data-etape='observation'] { max-height: min(40%, 320px); }
+.panneau__haut { display: flex; align-items: center; gap: 6px; padding: 6px 6px 0 14px; }
+.panneau__corps { overflow-y: auto; padding: 4px 14px 12px; overscroll-behavior: contain; }
+.panneau__titre { margin: 4px 0 6px; font-size: 1.1rem; }
+.panneau p { margin: 6px 0; }
+.consigne { font-weight: 600; }
+.replique { padding: 8px 12px; background: #f2eefa; border-radius: 10px; }
+.question { font-weight: 600; }
+.indice { color: #555b66; }
+.compteur { font-weight: 600; }
+
+.jauge { flex: 1; display: flex; align-items: center; gap: 8px; font-size: 0.85rem; font-weight: 600; }
+.jauge__barre { flex: 1; max-width: 200px; height: 12px; background: #e6e2ec; border-radius: 6px; overflow: hidden; }
+.jauge__niveau { display: block; height: 100%; background: linear-gradient(90deg, #d9822b, #3fa66b); transition: width 0.6s ease; }
+.panneau__haut .bouton--petit:first-of-type { margin-left: auto; }
+
+.canal { border: 0; margin: 8px 0 0; padding: 0; display: grid; gap: 6px; }
+.canal legend { font-weight: 700; padding: 0; margin-bottom: 4px; }
+.canal__sous { font-weight: 400; color: #555b66; font-size: 0.85rem; }
+
+.choix {
+  display: block;
+  width: 100%;
+  min-height: 44px;
+  padding: 8px 12px;
+  text-align: left;
+  font: inherit;
+  color: var(--encre);
+  background: #fff;
+  border: 2px solid #d9d3e3;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.choix:hover { border-color: var(--violet); }
+.choix:focus-visible { outline: 3px solid var(--violet); outline-offset: 2px; }
+.choix[aria-pressed='true'] { border-color: var(--violet); background: #efe9f7; font-weight: 600; }
+.choix--decision { margin-top: 6px; }
+.rangee-boutons { display: flex; gap: 8px; }
+.rangee-boutons .choix { text-align: center; }
+.loupe { padding: 8px 12px; background: #fff8e6; border-radius: 10px; }
+
+.badge {
+  display: inline-block;
+  min-width: 2.6em;
+  padding: 1px 8px;
+  margin-right: 6px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-align: center;
+  color: #fff;
+}
+.badge--agir { background: #2f7d4f; }
+.badge--adapter { background: #a35f12; }
+.badge--alerter { background: #b03a3a; }
+.badge--N1 { background: #8a8f98; }
+.badge--N2 { background: #a35f12; }
+.badge--N3 { background: #2f7d4f; }
+.badge--N4 { background: var(--violet); }
+
+.retour { font-weight: 700; }
+.retour--bien { color: #2f7d4f; }
+.retour--erreur { color: #9b3a1a; }
+.retours { margin: 4px 0; padding-left: 20px; display: grid; gap: 4px; }
+
+/* Repères de la loupe : boutons ronds de 44 px posés sur la pièce (placés par src/ui/mission.ts). */
+.reperes { position: absolute; inset: 0; pointer-events: none; }
+.repere {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  background: rgba(232, 137, 43, 0.92);
+  box-shadow: var(--ombre);
+  font-size: 1.1rem;
+  cursor: pointer;
+  pointer-events: auto;
+  animation: pulsation 1.6s ease-in-out infinite;
+}
+.repere--classe { background: rgba(123, 94, 167, 0.85); animation: none; }
+.repere--ouvert { border-color: var(--encre); }
+.repere:focus-visible { outline: 3px solid var(--violet); outline-offset: 2px; }
+@keyframes pulsation { 50% { box-shadow: 0 0 0 6px rgba(232, 137, 43, 0.3); } }
+@media (prefers-reduced-motion: reduce) { .repere { animation: none; } .jauge__niveau { transition: none; } }
+
+/* Fenêtre centrée : liste des missions et relève de fin de mission. */
+.fenetre {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 8px;
+  background: rgba(31, 36, 48, 0.35);
+}
+.fenetre[hidden] { display: none; }
+.fenetre__carte {
+  width: min(560px, 100%);
+  max-height: calc(100% - 16px);
+  overflow-y: auto;
+  padding: 12px 16px 16px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: var(--ombre);
+}
+.fenetre__haut { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.fenetre__haut h2 { margin: 0; font-size: 1.15rem; }
+.fenetre h3 { margin: 14px 0 6px; font-size: 1rem; }
+.liste-missions { list-style: none; margin: 10px 0 0; padding: 0; display: grid; gap: 8px; }
+.carte-mission {
+  display: grid;
+  gap: 2px;
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 12px;
+  text-align: left;
+  font: inherit;
+  color: var(--encre);
+  background: #f7f4fb;
+  border: 2px solid #e2d8f1;
+  border-radius: 12px;
+  cursor: pointer;
+}
+.carte-mission:hover { border-color: var(--violet); }
+.carte-mission span { font-size: 0.85rem; color: #555b66; }
+.carte-mission .niveaux { color: #2f7d4f; font-weight: 600; }
+.releve { list-style: none; margin: 8px 0 0; padding: 0; display: grid; gap: 10px; }
+.releve li { display: flex; align-items: flex-start; gap: 4px; }
+.releve__sens { display: block; font-size: 0.85rem; color: #555b66; }
+.debriefing { margin: 0; padding-left: 22px; display: grid; gap: 6px; }

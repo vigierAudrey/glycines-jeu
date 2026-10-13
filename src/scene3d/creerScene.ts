@@ -37,6 +37,11 @@ export interface Theatre {
   animer: (animation: Animation) => void;
   /** La vue glisse en douceur pour garder cet objet (l'agent) au centre, jusqu'à ce qu'il s'arrête ou que l'élève fasse glisser la vue. */
   suivre: (objet: THREE.Object3D) => void;
+  /**
+   * Amène la vue en douceur sur le point (x, z) du sol, avec un zoom qui montre bien une pièce de `largeur` mètres de côté.
+   * `remonter` (de 0 à 0,5) fait apparaître le point plus haut à l'écran, pour laisser la place au panneau du bas.
+   */
+  cadrer: (x: number, z: number, largeur: number, remonter?: number) => void;
   /** Position à l'écran, en pixels depuis le coin haut gauche de la vue, d'un point du monde 3D. */
   versEcran: (point: THREE.Vector3) => { x: number; y: number };
   /** Appelle cette fonction après chaque dessin (pour qu'un élément HTML suive un objet de la 3D). */
@@ -217,6 +222,33 @@ export function creerTheatre(conteneur: HTMLElement, centre: THREE.Vector3, tail
     if (!dejaEnCours) animer(animerSuivi);
   };
 
+  // ---------- Cadrage d'une pièce (missions) ----------
+  const cadrer = (x: number, z: number, largeur: number, remonter = 0) => {
+    suivi = null;
+    // Zoom choisi pour que la pièce (vue en biais, sa diagonale fait largeur × 1,41 m) occupe environ
+    // 85 % de la largeur de l'écran, ou 60 % de sa hauteur (le panneau du bas en cache une partie).
+    const pixelsVoulus = Math.min(conteneur.clientWidth * 0.85, conteneur.clientHeight * 0.6) / (largeur * Math.SQRT2);
+    const pixelsAuZoom1 = conteneur.clientHeight / (camera.top - camera.bottom);
+    const zoomVise = THREE.MathUtils.clamp(pixelsVoulus / pixelsAuZoom1, controles.minZoom, controles.maxZoom);
+    // Direction « vers le haut de l'écran », à plat sur le sol : de la caméra vers le centre de la vue.
+    const avant = new THREE.Vector3().subVectors(controles.target, camera.position).setY(0).normalize();
+    // Hauteur de l'écran en mètres de sol (le sol est vu en biais, d'où la division par sin(élévation)).
+    const hauteurSol = (camera.top - camera.bottom) / zoomVise / Math.sin(ELEVATION);
+    const vise = new THREE.Vector3(x, 0, z).addScaledVector(avant, -remonter * hauteurSol);
+    const depart = controles.target.clone();
+    const zoomDepart = camera.zoom;
+    let t = 0;
+    animer((secondes) => {
+      t = Math.min(1, t + secondes / 0.6);
+      const doux = t * t * (3 - 2 * t); // départ et arrivée en douceur
+      controles.target.lerpVectors(depart, vise, doux);
+      camera.zoom = zoomDepart + (zoomVise - zoomDepart) * doux;
+      camera.updateProjectionMatrix();
+      placerCamera();
+      return t < 1;
+    });
+  };
+
   const projete = new THREE.Vector3();
   const versEcran = (point: THREE.Vector3) => {
     projete.copy(point).project(camera); // coordonnées de -1 à +1
@@ -226,7 +258,7 @@ export function creerTheatre(conteneur: HTMLElement, centre: THREE.Vector3, tail
   recentrer();
   ajusterTaille();
   return {
-    scene, camera, surfaceTactile: renduEtiquettes.domElement, demanderRendu, tourner, recentrer, animer, suivre, versEcran,
+    scene, camera, surfaceTactile: renduEtiquettes.domElement, demanderRendu, tourner, recentrer, animer, suivre, cadrer, versEcran,
     apresChaqueRendu: (fonction) => apresRendu.push(fonction),
   };
 }

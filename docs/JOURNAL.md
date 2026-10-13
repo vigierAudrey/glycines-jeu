@@ -55,3 +55,9 @@ Trois lignes par session : ce qui a été fait, ce qui reste à surveiller, la p
 - **Fait** : 4 types d'étapes décrits dans `types.ts` et `docs/ARCHITECTURE.md` ; 9 nouvelles règles du validateur (6 tests) ; mission d'exemple de M. Karim complétée (toujours en brouillon) ; moteur pur `src/regles/mission.ts` (état, réponses, confiance, niveaux N1 à N4, bilan ; 9 tests). `pnpm verifier` OK (60 tests).
 - **À surveiller** : les textes de la mission d'exemple sont à relire par Audrey ; seuils des niveaux à valider (D-014).
 - **Prochaine tâche** : 2.3 (panneau de dialogue et jauge de confiance).
+
+## 13/10/2026 · Jouer une mission (tâches 2.3 à 2.6)
+
+- **Fait** : bouton Missions et liste ; panneau d'étape (dialogue verbal, paraverbal, non-verbal ; jauge de confiance) ; loupe avec repères de 44 px et cadrage animé de la pièce ; décisions Agir/Adapter/Alerter ; relais en touchant le bon professionnel ; relève avec niveaux et débriefing. Mission de M. Karim jouée de bout en bout dans Chromium à 390 px et 1280 px.
+- **À surveiller** : sur téléphone, deux repères voisins sont proches (cases adjacentes) ; le panneau du dialogue prend 60 % de la hauteur en portrait ; l'agent se pose sur la case de la personne rejointe.
+- **Prochaine tâche** : 2.7 (sauvegarde locale et code de reprise).
