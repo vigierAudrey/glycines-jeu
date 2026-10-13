@@ -15,6 +15,11 @@ pnpm dev           # lance le jeu ; ouvrir l'adresse « Local » affichée (http
 
 Avant chaque commit : `pnpm verifier`.
 
+Adresses utiles pendant le développement :
+
+- `http://localhost:5173/?sequence=S2` : le jeu, avec les missions de la séquence S2 ouvertes ;
+- `http://localhost:5173/enseignante.html` : la page enseignante (missions, réponses attendues, débriefing, lien pour la classe).
+
 ## Documents
 
 - [Cahier des charges](docs/CAHIER_DES_CHARGES.md) : ce que le jeu doit faire, et ne pas faire
