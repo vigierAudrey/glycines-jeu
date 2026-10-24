@@ -125,3 +125,8 @@ Trois lignes par session : ce qui a été fait, ce qui reste à surveiller, la p
 - **Fait** : Audrey a trouvé les portes incohérentes (vantail entrouvert de travers, couleur du bois trop proche des lits) et les fenêtres pas réalistes (un bug les cachait : le cadre, plus grand dans les 3 dimensions et centré au même endroit que la vitre, la recouvrait entièrement). Portes refaites ouvertes à angle droit (comme sur un plan), couleur vert-gris distincte du bois des lits, montants et linteau autour du passage. Fenêtres refaites avec un cadre en 4 montants autour de la vitre (qui ne la cachent plus), une croisée et un rebord. `pnpm verifier` OK (70 tests), revérifié dans Chromium, plusieurs zooms et une rotation de la vue.
 - **À surveiller** : une fenêtre se lit bien sur les murs qui font face à la caméra, moins sur ceux vus presque de profil (la vue isométrique) ; c'est inhérent à ce style de décor, pas un bug.
 - **Prochaine tâche** : relecture par Audrey ; sinon G.4 ou 3.1.
+
+## 24/10/2026 · Portes alignées sur le vrai mur (deuxième retour d'Audrey sur G.3)
+
+- **Fait** : Audrey a repéré un espace entre le montant de la porte et le mur voisin. Cause : la porte était placée au centre de sa case (par exemple z = 3,5) au lieu du bord réel du mur manquant (z = 4), un écart de 0,5 m. `calculerPortes` (`src/regles/plan.ts`) regarde maintenant de quel côté la case de porte prolonge sa pièce (son voisin est ou ouest, nord ou sud selon le sens) pour placer la porte sur le bon bord ; 2 tests mis à jour ou ajoutés. `pnpm verifier` OK (71 tests), revérifié dans Chromium au même endroit que la capture d'Audrey : les montants touchent maintenant les murs.
+- **Prochaine tâche** : relecture par Audrey ; sinon G.4 ou 3.1.

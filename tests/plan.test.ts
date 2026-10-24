@@ -69,15 +69,24 @@ describe('lirePlan', () => {
     expect(new Set(patio.cases.map((c) => c.rangee)).size).toBe(5);
   });
 
-  it('retrouve le sens de passage de chaque porte', () => {
+  it('retrouve le sens de passage de chaque porte, aligné sur le mur manquant (pas le centre de la case)', () => {
     const plan = lirePlan(miniPlan);
-    // « p » (colonne 0, rangée 1) relie la chambre A (nord) au couloir (sud) : passage nord-sud.
-    const p = plan.portes.find((p) => p.x === 0.5 && p.z === 1.5);
-    expect(p?.orientation).toBe('le-long-de-x');
-    // « t » (colonne 2, rangée 1) relie la chambre B (nord) au couloir (sud) : même sens.
-    const t = plan.portes.find((p) => p.x === 2.5 && p.z === 1.5);
+    // « p » (colonne 0, rangée 1) prolonge la chambre A (son voisin est, même rangée) et ouvre vers le
+    // couloir au sud : le mur manquant est donc à la rangée 1-2 (z = 2), pas au centre de la case (z = 1,5).
+    const p = plan.portes.find((p) => p.x === 0.5);
+    expect(p).toEqual({ x: 0.5, z: 2, orientation: 'le-long-de-x' });
+    const t = plan.portes.find((p) => p.x === 2.5);
     expect(t?.orientation).toBe('le-long-de-x');
     expect(plan.portes).toHaveLength(2);
+  });
+
+  it('place la porte entre le poste de soins et le couloir sur le vrai bord du mur (aile B)', () => {
+    const plan = lirePlan(aileB as Lieu);
+    // Colonne 10, rangée 6 : la porte prolonge le poste de soins (sa rangée) et ouvre vers le couloir, au nord (z = 6).
+    // (la colonne 10 a aussi la porte de la chambre de Mme Yvette, à la rangée 3 : on précise la zone pour l'écarter.)
+    expect(aileB.grille[6][10]).toBe('p');
+    const porte = plan.portes.find((p) => p.x === 10.5 && p.z > 5);
+    expect(porte).toEqual({ x: 10.5, z: 6, orientation: 'le-long-de-x' });
   });
 
   it('marque un mur « extérieur » s’il borde une case vide (aile B)', () => {

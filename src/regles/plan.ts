@@ -53,9 +53,13 @@ export interface Mur {
   exterieur: boolean; // vrai si le mur borde une case vide : un mur qui donne sur l'extérieur peut recevoir une fenêtre
 }
 
-/** Une porte occupe une case entière (type « porte ») : aucun mur n'y est posé. */
+/**
+ * Une porte occupe une case entière (type « porte ») : aucun mur n'y est posé.
+ * (x, z) est le point où se trouverait le mur manquant (comme pour un `Mur`), pas le centre de la case :
+ * le dessin (vantail, montants) s'aligne ainsi exactement sur le bord réel du mur voisin, sans décalage.
+ */
 export interface Porte {
-  x: number; // centre de la case
+  x: number;
   z: number;
   orientation: 'le-long-de-x' | 'le-long-de-z'; // sens du passage qu'elle ouvre, comme pour un mur
 }
@@ -146,6 +150,11 @@ function calculerMurs(lieu: Lieu, largeur: number, profondeur: number): Mur[] {
  * Une case de type « porte » n'a de mur sur aucun bord (voir `besoinDeMur`) : on retrouve le sens du passage
  * qu'elle ouvre en comparant ses voisins opposés. S'ils diffèrent au nord et au sud, la porte relie ces deux
  * pièces (passage nord-sud) ; sinon on regarde est et ouest.
+ *
+ * La case de porte prolonge toujours, dans sa propre rangée (ou colonne), la pièce qu'elle dessert : on le
+ * voit à son voisin est ou ouest (nord ou sud pour un passage est-ouest), qui porte la même zone. Le mur
+ * manquant n'est donc pas au centre de la case mais du côté opposé à cette pièce, là où se trouverait le
+ * mur réel si ce n'était pas une porte.
  */
 function calculerPortes(lieu: Lieu, largeur: number, profondeur: number): Porte[] {
   const cleEn = (colonne: number, rangee: number): string => lieu.grille[rangee]?.[colonne] ?? lieu.vide;
@@ -158,8 +167,20 @@ function calculerPortes(lieu: Lieu, largeur: number, profondeur: number): Porte[
       if (typeDe(cleEn(c, r)) !== 'porte') continue;
       const nord = idDe(cleEn(c, r - 1));
       const sud = idDe(cleEn(c, r + 1));
-      const orientation = nord !== sud ? 'le-long-de-x' : 'le-long-de-z';
-      portes.push({ x: c + 0.5, z: r + 0.5, orientation });
+      if (nord !== sud) {
+        const ouest = cleEn(c - 1, r);
+        const est = cleEn(c + 1, r);
+        const chezSoi = typeDe(ouest) !== 'porte' && idDe(ouest) !== 'vide' ? idDe(ouest) : idDe(est);
+        const z = chezSoi === sud ? r : r + 1; // le mur manquant est du côté qui ne prolonge pas la pièce
+        portes.push({ x: c + 0.5, z, orientation: 'le-long-de-x' });
+      } else {
+        const nordCle = cleEn(c, r - 1);
+        const sudCle = cleEn(c, r + 1);
+        const chezSoi = typeDe(nordCle) !== 'porte' && idDe(nordCle) !== 'vide' ? idDe(nordCle) : idDe(sudCle);
+        const est = idDe(cleEn(c + 1, r));
+        const x = chezSoi === est ? c : c + 1;
+        portes.push({ x, z: r + 0.5, orientation: 'le-long-de-z' });
+      }
     }
   }
   return portes;
