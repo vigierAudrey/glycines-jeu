@@ -39,7 +39,7 @@ export interface Zone {
   resident?: string; // id du résident pour une chambre
 }
 
-export type TypeMeuble = 'lit' | 'fauteuil' | 'lavabo' | 'sonnette';
+export type TypeMeuble = 'lit' | 'fauteuil' | 'lavabo' | 'sonnette' | 'leve_personne';
 export type Direction = 'nord' | 'sud' | 'est' | 'ouest'; // nord = rangée 0, en haut de la grille ; est = vers la droite
 
 export interface Meuble {

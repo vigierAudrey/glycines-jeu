@@ -60,6 +60,23 @@ const MODELES: Record<TypeMeuble, (g: THREE.Group) => void> = {
     poire.position.set(0.3, 0.72, -0.18);
     g.add(poire);
   },
+  // Lève-personne : un socle en U sur roulettes (pour passer sous un lit ou un fauteuil), un mât,
+  // une flèche qui avance vers le résident et une barre d'accroche pour le harnais.
+  leve_personne: (g) => {
+    boite(g, METAL, [0.08, 0.06, 0.7], [-0.26, 0.03, 0.05]); // pied avant gauche
+    boite(g, METAL, [0.08, 0.06, 0.7], [0.26, 0.03, 0.05]); // pied avant droit
+    boite(g, METAL, [0.56, 0.06, 0.08], [0, 0.03, -0.33]); // traverse arrière, sous le mât
+    for (const [x, z] of [[-0.26, -0.33], [0.26, -0.33], [-0.26, 0.38], [0.26, 0.38]]) {
+      boite(g, CHROME, [0.08, 0.06, 0.08], [x, 0.03, z]); // 4 roulettes
+    }
+    boite(g, METAL, [0.07, 0.85, 0.07], [0, 0.46, -0.33]); // mât vertical
+    boite(g, CHROME, [0.04, 0.45, 0.04], [0.1, 0.4, -0.28]); // vérin, le long du mât
+    boite(g, METAL, [0.06, 0.06, 0.85], [0, 0.85, 0.1]); // flèche, vers le résident
+    boite(g, CHROME, [0.45, 0.03, 0.03], [0, 0.62, 0.5]); // barre d'accroche pour le harnais
+    const arret = new THREE.Mesh(new THREE.SphereGeometry(0.035, 10, 8), ROUGE);
+    arret.position.set(0, 0.65, -0.33); // bouton d'arrêt d'urgence, sur le mât
+    g.add(arret);
+  },
 };
 
 export function construireMeubles(plan: PlanCalcule): THREE.Group {

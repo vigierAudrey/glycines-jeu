@@ -50,7 +50,7 @@ Légende : `[x]` fait · `[ ]` à faire · 🧑‍🏫 ce qu'Audrey seule peut f
 - [x] **G.2** Personnages low-poly animés (marche, attente), plus personnalisés (visage, cheveux, silhouette selon l'âge), avec tenues par métier.
   Fait : visage, 6 coiffures, lunettes, gilets des résidents, silhouette voûtée, marche animée de l'agent. Pas d'animation d'attente (batterie) ; aides techniques des résidents (canne, déambulateur…) à ajouter seulement si les cours les mentionnent.
 - [x] **G.3** Sols texturés, fenêtres, portes, éclairage chaud ; contrôle de la fluidité sur téléphone.
-- [ ] **G.4** Un objet métier en 3D (lève-personne ou chariot de soins), fait par l'IA en formes simples ou repris d'un modèle libre de droits (avec l'accord d'Audrey).
+- [x] **G.4** Un objet métier en 3D (lève-personne ou chariot de soins), fait par l'IA en formes simples ou repris d'un modèle libre de droits (avec l'accord d'Audrey).
 
 ## Phase 3 · Tranche verticale : « Le matin de M. Karim »
 

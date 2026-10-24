@@ -130,7 +130,7 @@ function validerMeubles(lieu: Lieu, signaler: (message: string) => void): void {
 
   (lieu.meubles ?? []).forEach((meuble, i) => {
     const nom = `Meuble n° ${i + 1} (${meuble.type}, colonne ${meuble.colonne}, rangée ${meuble.rangee})`;
-    if (!(meuble.type in LONGUEUR_MEUBLE)) return signaler(`${nom} : type inconnu (lit, fauteuil, lavabo ou sonnette).`);
+    if (!(meuble.type in LONGUEUR_MEUBLE)) return signaler(`${nom} : type inconnu (lit, fauteuil, lavabo, sonnette ou leve_personne).`);
     if (!(meuble.vers in PAS)) return signaler(`${nom} : direction « ${meuble.vers} » inconnue (nord, sud, est ou ouest).`);
 
     const cases = casesDuMeuble(meuble);

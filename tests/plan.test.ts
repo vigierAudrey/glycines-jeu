@@ -147,4 +147,18 @@ describe('meubles', () => {
       expect(types, chambre.nom).toContain('sonnette');
     }
   });
+
+  it('un lève-personne bloque le passage comme un fauteuil (1 case)', () => {
+    const plan = lirePlan({ ...miniPlan, meubles: [{ type: 'leve_personne', colonne: 0, rangee: 2, vers: 'sud' }] });
+    expect(plan.meubles[0].cases).toEqual([{ colonne: 0, rangee: 2 }]);
+    expect(plan.meubles[0].bloquant).toBe(true);
+  });
+
+  it('la chambre de M. Louis a un lève-personne, comme le dit son cours (repris_du_cours)', () => {
+    const plan = lirePlan(aileB as Lieu);
+    const chambre = trouverZone(plan, 'chambre-louis')!;
+    const dans = (m: { cases: { colonne: number; rangee: number }[] }) =>
+      chambre.cases.some((c) => c.colonne === m.cases[0].colonne && c.rangee === m.cases[0].rangee);
+    expect(plan.meubles.filter(dans).map((m) => m.type)).toContain('leve_personne');
+  });
 });

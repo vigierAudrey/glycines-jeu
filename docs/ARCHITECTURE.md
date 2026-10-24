@@ -74,11 +74,11 @@ Le champ `meubles` liste les meubles du plan, un par ligne :
 { "type": "lit", "colonne": 0, "rangee": 0, "vers": "sud" }
 ```
 
-- `type` : `lit`, `fauteuil`, `lavabo` ou `sonnette`.
+- `type` : `lit`, `fauteuil`, `lavabo`, `sonnette` ou `leve_personne`.
 - `colonne`, `rangee` : la case où le meuble est posé (on compte à partir de 0, en haut à gauche de la grille).
-- `vers` : le côté vers lequel il est tourné (`nord` = vers le haut de la grille, `sud`, `est` = vers la droite, `ouest`). Le lit occupe 2 cases : sa tête est sur la case indiquée, ses pieds vers `vers`. Un fauteuil ou un lavabo a le dos du côté opposé à `vers`.
+- `vers` : le côté vers lequel il est tourné (`nord` = vers le haut de la grille, `sud`, `est` = vers la droite, `ouest`). Le lit occupe 2 cases : sa tête est sur la case indiquée, ses pieds vers `vers`. Un fauteuil, un lavabo ou un lève-personne a le dos du côté opposé à `vers`.
 
-`src/regles/plan.ts` calcule les cases occupées : on ne marche pas à travers un lit, un fauteuil ou un lavabo, et personne n'est posé dessus. La sonnette se pose sur la tête du lit et ne bloque rien. `pnpm valider` refuse un meuble posé sur une porte, qui dépasse de sa pièce, qui en chevauche un autre, ou une sonnette loin d'un lit.
+`src/regles/plan.ts` calcule les cases occupées : on ne marche pas à travers un lit, un fauteuil, un lavabo ou un lève-personne, et personne n'est posé dessus. La sonnette se pose sur la tête du lit et ne bloque rien. `pnpm valider` refuse un meuble posé sur une porte, qui dépasse de sa pièce, qui en chevauche un autre, ou une sonnette loin d'un lit.
 
 ### L'apparence des personnages
 

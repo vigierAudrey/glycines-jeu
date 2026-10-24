@@ -25,8 +25,8 @@ export interface MeubleDuPlan extends Meuble {
 }
 
 /** Nombre de cases occupées par chaque meuble, dans la direction « vers ». */
-export const LONGUEUR_MEUBLE: Record<TypeMeuble, number> = { lit: 2, fauteuil: 1, lavabo: 1, sonnette: 1 };
-export const MEUBLE_BLOQUANT: Record<TypeMeuble, boolean> = { lit: true, fauteuil: true, lavabo: true, sonnette: false };
+export const LONGUEUR_MEUBLE: Record<TypeMeuble, number> = { lit: 2, fauteuil: 1, lavabo: 1, sonnette: 1, leve_personne: 1 };
+export const MEUBLE_BLOQUANT: Record<TypeMeuble, boolean> = { lit: true, fauteuil: true, lavabo: true, sonnette: false, leve_personne: true };
 
 /** Pas d'une case dans chaque direction. */
 export const PAS: Record<Direction, { colonne: number; rangee: number }> = {

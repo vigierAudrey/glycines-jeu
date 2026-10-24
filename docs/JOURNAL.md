@@ -130,3 +130,9 @@ Trois lignes par session : ce qui a été fait, ce qui reste à surveiller, la p
 
 - **Fait** : Audrey a repéré un espace entre le montant de la porte et le mur voisin. Cause : la porte était placée au centre de sa case (par exemple z = 3,5) au lieu du bord réel du mur manquant (z = 4), un écart de 0,5 m. `calculerPortes` (`src/regles/plan.ts`) regarde maintenant de quel côté la case de porte prolonge sa pièce (son voisin est ou ouest, nord ou sud selon le sens) pour placer la porte sur le bon bord ; 2 tests mis à jour ou ajoutés. `pnpm verifier` OK (71 tests), revérifié dans Chromium au même endroit que la capture d'Audrey : les montants touchent maintenant les murs.
 - **Prochaine tâche** : relecture par Audrey ; sinon G.4 ou 3.1.
+
+## 24/10/2026 · Lève-personne en 3D (tâche G.4)
+
+- **Fait** : nouveau type de meuble `leve_personne` (socle en U sur 4 roulettes, mât, vérin, flèche et barre d'accroche pour le harnais, en formes simples comme les autres meubles ; bouton d'arrêt d'urgence rouge, comme la sonnette). Posé dans la chambre de M. Louis, le seul résident dont le cours dit « Nécessite un lève-personne et deux professionnels formés » (`repris_du_cours`). `pnpm verifier` OK (73 tests, dont un qui relie ce meuble au cours de M. Louis), vérifié dans Chromium à 1280 px (zoomé sur la chambre) et 390 px, aucune erreur console. La phase 2 bis « Habillage graphique » est maintenant complète (G.1 à G.4).
+- **À surveiller** : aucune autre chambre n'a de lève-personne (seul M. Louis en a besoin d'après son cours) ; le modèle est en formes simples, pas un fichier 3D téléchargé (cohérent avec D-021).
+- **Prochaine tâche** : 3.1 (rédaction des missions par l'IA, relecture par Audrey) : toutes les phases 0, 1, 2 et 2 bis sont maintenant cochées.
