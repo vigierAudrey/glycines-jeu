@@ -3,7 +3,7 @@
   "statut": "brouillon",
   "titre": "Debout, à son rythme",
   "duree_min": 15,
-  "sequence_requise": "S2",
+  "sequence_requise": "S6",
   "lieu": "chambre-denise",
   "personnages": ["denise", "joueur", "animatrice"],
   "competences": [
@@ -13,7 +13,7 @@
   ],
   "situation": "Il est le matin. Mme Denise comprend les consignes ; elle pousse sur les accoudoirs, tient debout avec son aide et pivote elle-même. Elle a un projet de personnalisation de sa chambre.",
   "objectif_eleve": "L'aider à se lever en la laissant faire ce qu'elle sait faire, puis la faire participer à son projet de chambre.",
-  "note_pour_audrey": "Brouillon rédigé pour la tâche 3.1, à partir du repris_du_cours de Mme Denise. À relire avant de passer le statut à valide.",
+  "note_pour_audrey": "Brouillon rédigé pour la tâche 3.1, à partir du repris_du_cours de Mme Denise. Séquence corrigée en S6 (le lever actif est vu en S4 séance 3, le projet de chambre en S6 séance 3 : la mission suppose les deux, donc la plus avancée des deux). À relire avant de passer le statut à valide.",
   "etapes": [
     {
       "id": "lever",

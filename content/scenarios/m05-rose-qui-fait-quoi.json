@@ -1,0 +1,76 @@
+{
+  "id": "m05-rose-qui-fait-quoi",
+  "statut": "brouillon",
+  "titre": "Ce qui relève de mon rôle",
+  "duree_min": 15,
+  "sequence_requise": "S1",
+  "lieu": "chambre-rose",
+  "personnages": ["rose", "joueur", "infirmiere"],
+  "competences": [
+    { "code": "CT3.1", "critere": "Identification des ressources et des contraintes du cadre de l’intervention, dont celles relatives aux risques professionnels." },
+    { "code": "CT3.3", "critere": "Prise en compte du contexte de l’activité." }
+  ],
+  "situation": "Mme Rose vous demande un soin qui ne relève pas de votre rôle d'agent accompagnant.",
+  "objectif_eleve": "Expliquer votre limite, transmettre la demande à la bonne personne, puis sécuriser un danger rencontré dans l'aile sans en créer un autre.",
+  "note_pour_audrey": "Brouillon rédigé pour la tâche 3.1, à partir de la situation professionnelle de votre séquence 1, séance 2 (« qui fait quoi, obligations, limites et prévention ») : Mme Rose demande un soin hors du rôle de l'agent, un carton gêne le couloir, le stock de gants est presque vide. Compétences reprises telles qu'indiquées dans cette séance (CT3.1 principale, CT3.3 en appui). À relire avant de passer le statut à valide.",
+  "etapes": [
+    {
+      "id": "demande",
+      "type": "dialogue",
+      "consigne": "Mme Rose vous demande un soin.",
+      "interlocuteur": "rose",
+      "replique": "Vous pourriez me faire un soin ? Ce serait plus simple si c'était vous.",
+      "verbal": [
+        { "texte": "Ce soin ne relève pas de mon rôle. Je transmets votre demande à l'infirmière tout de suite.", "confiance": 1, "points": { "CT3.1": 2 }, "retour": "Vous expliquez votre limite sans la laisser sans réponse, et vous transmettez à la bonne personne." },
+        { "texte": "Bien sûr, je m'en occupe.", "confiance": 2, "retour": "Ce soin ne relève pas de votre rôle : le faire quand même dépasse vos compétences, même si cela semble rendre service." },
+        { "texte": "Non, ce n'est pas à moi de faire ça.", "confiance": -2, "retour": "Vous refusez sans expliquer ni transmettre : Mme Rose reste sans réponse." }
+      ],
+      "paraverbal": [
+        { "texte": "Voix calme, je prends le temps d'expliquer.", "confiance": 1, "points": { "CT3.1": 1 }, "retour": "Expliquer calmement une limite est plus rassurant qu'un simple refus." },
+        { "texte": "Voix sèche.", "confiance": -2, "retour": "Un ton sec peut faire penser que sa demande dérange." },
+        { "texte": "Voix hésitante.", "confiance": -1, "retour": "L'hésitation ne montre pas clairement que vous allez transmettre sa demande." }
+      ],
+      "non_verbal": [
+        { "texte": "Je reste face à elle en lui répondant.", "confiance": 1, "points": { "CT3.1": 1 }, "retour": "Rester face à elle montre que vous prenez sa demande au sérieux, même si vous la transmettez." },
+        { "texte": "Je réponds en sortant déjà de la chambre.", "confiance": -1, "retour": "Elle peut avoir l'impression d'être congédiée plutôt qu'écoutée." },
+        { "texte": "Je hausse les épaules.", "confiance": -2, "retour": "Ce geste peut paraître désintéressé face à sa demande." }
+      ]
+    },
+    {
+      "id": "carton",
+      "type": "decision",
+      "consigne": "En sortant de la chambre, un carton gêne le passage dans le couloir.",
+      "question": "Que faites-vous ?",
+      "choix": [
+        { "decision": "agir", "texte": "Je range le carton contre le mur, hors du passage, puis je signale qui doit s'en occuper.", "points": { "CT3.3": 2, "CT3.1": 1 }, "retour": "Écarter un carton reste dans vos limites : vous sécurisez le passage sans créer un autre danger, et vous transmettez." },
+        { "decision": "adapter", "texte": "Je le laisse : les résidents feront attention en passant.", "retour": "Le danger reste là pour tous les résidents qui passent dans le couloir." },
+        { "decision": "alerter", "texte": "Je vais chercher le cadre de santé avant de toucher au carton.", "retour": "Écarter un carton du passage est dans vos limites : ce n'est pas la peine d'aller chercher quelqu'un pour cela." }
+      ]
+    },
+    {
+      "id": "stock",
+      "type": "decision",
+      "consigne": "Vous remarquez que le stock de gants est presque vide.",
+      "question": "Que faites-vous ?",
+      "choix": [
+        { "decision": "alerter", "texte": "Je signale le stock bas au responsable identifié.", "points": { "CT3.1": 1, "CT3.3": 1 }, "retour": "Signaler un stock bas évite une rupture qui empêcherait d'appliquer les protocoles." },
+        { "decision": "agir", "texte": "Je prends ce qu'il reste sans rien dire.", "retour": "Sans transmission, le stock finira par manquer sans que personne ne le sache à temps." },
+        { "decision": "adapter", "texte": "J'attends la prochaine livraison, ça devrait suffire.", "retour": "Le risque de rupture n'est pas écarté si personne n'est prévenu." }
+      ]
+    },
+    {
+      "id": "transmettre",
+      "type": "relais",
+      "consigne": "Allez transmettre à l'infirmière la demande de soin de Mme Rose.",
+      "destinataire": "infirmiere",
+      "points": { "CT3.1": 1 },
+      "retour": "Claire, infirmière, peut répondre à la demande de Mme Rose.",
+      "retour_erreur": "Cette personne ne peut pas réaliser ce soin. Qui, dans l'aile B, en a la responsabilité ?"
+    }
+  ],
+  "debriefing": [
+    "Pourquoi n'avez-vous pas réalisé vous-même le soin demandé par Mme Rose ?",
+    "Pourquoi avez-vous pu écarter le carton vous-même, mais pas réaliser le soin ?",
+    "Pourquoi fallait-il signaler le stock de gants presque vide ?"
+  ]
+}
