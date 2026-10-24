@@ -50,6 +50,14 @@ export interface Mur {
   x: number;
   z: number;
   orientation: 'le-long-de-x' | 'le-long-de-z';
+  exterieur: boolean; // vrai si le mur borde une case vide : un mur qui donne sur l'extérieur peut recevoir une fenêtre
+}
+
+/** Une porte occupe une case entière (type « porte ») : aucun mur n'y est posé. */
+export interface Porte {
+  x: number; // centre de la case
+  z: number;
+  orientation: 'le-long-de-x' | 'le-long-de-z'; // sens du passage qu'elle ouvre, comme pour un mur
 }
 
 export interface PlanCalcule {
@@ -57,6 +65,7 @@ export interface PlanCalcule {
   profondeur: number; // nombre de rangées
   zones: ZoneDuPlan[];
   murs: Mur[];
+  portes: Porte[];
   meubles: MeubleDuPlan[];
 }
 
@@ -92,7 +101,14 @@ export function lirePlan(lieu: Lieu): PlanCalcule {
   const occupees = new Set(meubles.filter((m) => m.bloquant).flatMap((m) => m.cases.map(({ colonne, rangee }) => `${colonne};${rangee}`)));
   for (const zone of parCle.values()) zone.casesLibres = zone.cases.filter((c) => !occupees.has(`${c.colonne};${c.rangee}`));
 
-  return { largeur, profondeur, zones: [...parCle.values()], murs: calculerMurs(lieu, largeur, profondeur), meubles };
+  return {
+    largeur,
+    profondeur,
+    zones: [...parCle.values()],
+    murs: calculerMurs(lieu, largeur, profondeur),
+    portes: calculerPortes(lieu, largeur, profondeur),
+    meubles,
+  };
 }
 
 /**
@@ -113,11 +129,40 @@ function calculerMurs(lieu: Lieu, largeur: number, profondeur: number): Mur[] {
   for (let r = -1; r < profondeur; r++) {
     for (let c = -1; c < largeur; c++) {
       const ici = cleEn(c, r);
-      if (besoinDeMur(ici, cleEn(c + 1, r))) murs.push({ x: c + 1, z: r + 0.5, orientation: 'le-long-de-z' });
-      if (besoinDeMur(ici, cleEn(c, r + 1))) murs.push({ x: c + 0.5, z: r + 1, orientation: 'le-long-de-x' });
+      const voisinEst = cleEn(c + 1, r);
+      if (besoinDeMur(ici, voisinEst)) {
+        murs.push({ x: c + 1, z: r + 0.5, orientation: 'le-long-de-z', exterieur: typeDe(ici) === 'vide' || typeDe(voisinEst) === 'vide' });
+      }
+      const voisinSud = cleEn(c, r + 1);
+      if (besoinDeMur(ici, voisinSud)) {
+        murs.push({ x: c + 0.5, z: r + 1, orientation: 'le-long-de-x', exterieur: typeDe(ici) === 'vide' || typeDe(voisinSud) === 'vide' });
+      }
     }
   }
   return murs;
+}
+
+/**
+ * Une case de type « porte » n'a de mur sur aucun bord (voir `besoinDeMur`) : on retrouve le sens du passage
+ * qu'elle ouvre en comparant ses voisins opposés. S'ils diffèrent au nord et au sud, la porte relie ces deux
+ * pièces (passage nord-sud) ; sinon on regarde est et ouest.
+ */
+function calculerPortes(lieu: Lieu, largeur: number, profondeur: number): Porte[] {
+  const cleEn = (colonne: number, rangee: number): string => lieu.grille[rangee]?.[colonne] ?? lieu.vide;
+  const typeDe = (cle: string) => (cle === lieu.vide ? 'vide' : lieu.zones[cle]?.type ?? 'vide');
+  const idDe = (cle: string) => (cle === lieu.vide ? 'vide' : (lieu.zones[cle]?.id ?? 'vide'));
+
+  const portes: Porte[] = [];
+  for (let r = 0; r < profondeur; r++) {
+    for (let c = 0; c < largeur; c++) {
+      if (typeDe(cleEn(c, r)) !== 'porte') continue;
+      const nord = idDe(cleEn(c, r - 1));
+      const sud = idDe(cleEn(c, r + 1));
+      const orientation = nord !== sud ? 'le-long-de-x' : 'le-long-de-z';
+      portes.push({ x: c + 0.5, z: r + 0.5, orientation });
+    }
+  }
+  return portes;
 }
 
 export function trouverZone(plan: PlanCalcule, idZone: string): ZoneDuPlan | undefined {

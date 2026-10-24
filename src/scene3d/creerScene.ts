@@ -67,9 +67,10 @@ export function creerTheatre(conteneur: HTMLElement, centre: THREE.Vector3, tail
   camera.near = 0.1;
   camera.far = 200;
 
-  // Éclairage simple et peu coûteux : une lumière d'ambiance ciel/sol et un « soleil ». Pas d'ombres en temps réel.
-  scene.add(new THREE.HemisphereLight('#ffffff', '#b8b0a0', 2.2));
-  const soleil = new THREE.DirectionalLight('#ffffff', 1.4);
+  // Éclairage simple et peu coûteux : une lumière d'ambiance ciel/sol et un « soleil », tous deux teintés chaud
+  // (ciel légèrement orangé, sol brun doré) pour l'ambiance « fin de journée » voulue pour l'aile. Pas d'ombres en temps réel.
+  scene.add(new THREE.HemisphereLight('#fff1dc', '#b89b72', 2.2));
+  const soleil = new THREE.DirectionalLight('#ffe4b8', 1.4);
   soleil.position.set(-10, 25, 15);
   scene.add(soleil);
 

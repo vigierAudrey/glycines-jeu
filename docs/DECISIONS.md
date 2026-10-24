@@ -120,3 +120,9 @@ On ne redessine que si la vue change (batterie des téléphones). Les étiquette
 - **Décision** : les personnages sont construits dans le code avec des formes à facettes (boîtes, cylindres à 6 côtés, icosaèdres), d'après le champ `apparence` du contenu. Seul l'agent est animé (marche). Pas d'animation d'attente.
 - **Pourquoi** : aucune dépendance ni fichier à télécharger, rendu cohérent avec le style « Glycine douce », apparence modifiable dans le JSON. Une animation d'attente obligerait à redessiner l'écran en permanence (batterie des téléphones, D-008).
 - **Limites** : environ 20 petites pièces par personnage (environ 240 en tout) : fluidité à vérifier sur téléphone. Les aides techniques des résidents ne sont pas dessinées : elles relèvent du cours (`repris_du_cours`) et seront ajoutées quand Audrey les indiquera.
+
+## D-022 · Textures dessinées en code, fenêtres et portes décoratives (sans dépendance) · 24/10/2026
+
+- **Décision** : les sols sont texturés avec de petits motifs dessinés sur un `<canvas>` au lancement du jeu (parquet, carrelage, mouchetis), pas des images téléchargées. Les fenêtres sont des rectangles de verre posés sur la face des murs qui donnent sur l'extérieur (pas un vrai trou dans le mur) ; les portes sont un battant en bois entrouvert posé sur un gond, son sens (nord-sud ou est-ouest) étant déduit des deux pièces qu'il relie (nouveau champ `portes` dans `src/regles/plan.ts`, testé sans navigateur).
+- **Pourquoi** : aucune dépendance ni fichier à télécharger (règle du projet) ; cohérent avec la maquette « murs bas coupés » déjà choisie ; garde le rendu rapide (une texture par type de pièce, réutilisée partout, pas une par case).
+- **Limites** : pas de fenêtre sur les murs du patio (il n'est pas marqué comme un bord du bâtiment) ; la porte reste toujours entrouverte, elle ne s'anime pas quand l'agent passe.

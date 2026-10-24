@@ -68,6 +68,26 @@ describe('lirePlan', () => {
     const patio = trouverZone(lirePlan(aileB as Lieu), 'patio')!;
     expect(new Set(patio.cases.map((c) => c.rangee)).size).toBe(5);
   });
+
+  it('retrouve le sens de passage de chaque porte', () => {
+    const plan = lirePlan(miniPlan);
+    // « p » (colonne 0, rangée 1) relie la chambre A (nord) au couloir (sud) : passage nord-sud.
+    const p = plan.portes.find((p) => p.x === 0.5 && p.z === 1.5);
+    expect(p?.orientation).toBe('le-long-de-x');
+    // « t » (colonne 2, rangée 1) relie la chambre B (nord) au couloir (sud) : même sens.
+    const t = plan.portes.find((p) => p.x === 2.5 && p.z === 1.5);
+    expect(t?.orientation).toBe('le-long-de-x');
+    expect(plan.portes).toHaveLength(2);
+  });
+
+  it('marque un mur « extérieur » s’il borde une case vide (aile B)', () => {
+    const plan = lirePlan(aileB as Lieu);
+    expect(plan.murs.some((m) => m.exterieur)).toBe(true);
+    expect(plan.murs.some((m) => !m.exterieur)).toBe(true);
+    // Le mur entre la chambre de Mme Rose (en bord de grille) et l'extérieur de la grille est marqué « extérieur ».
+    const bordDuBatiment = plan.murs.find((m) => m.x === 0 && m.z === 0.5);
+    expect(bordDuBatiment?.exterieur).toBe(true);
+  });
 });
 
 describe('positionDansZone', () => {

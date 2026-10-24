@@ -113,3 +113,9 @@ Trois lignes par session : ce qui a été fait, ce qui reste à surveiller, la p
 - **Fait** : champ `apparence` (peau, cheveux, coiffure, gilet, lunettes) pour les 12 personnages, validé par `pnpm valider` ; figurines low-poly avec visage, 6 coiffures et lunettes ; résidents voûtés ; l'agent se tourne et balance bras et jambes en marchant. Vérifié dans Chromium (vue zoomée, agent en pleine marche).
 - **À surveiller** : fluidité sur téléphone ; les apparences ont été choisies par l'IA, Audrey peut les changer dans le JSON (ou le demander).
 - **Prochaine tâche** : 3.1 (rédaction des missions par l'IA, relecture par Audrey).
+
+## 24/10/2026 · Sols, fenêtres, portes, lumière chaude (tâche G.3)
+
+- **Fait** : sols texturés par type de pièce (parquet dans les chambres et les pièces collectives, carrelage au poste de soins et dans les services, mouchetis sur le patio), fenêtres bleutées sur les murs qui donnent sur l'extérieur, portes en bois entrouvertes à chaque seuil (orientation calculée dans `src/regles/plan.ts`, 5 tests ajoutés), éclairage teinté chaud. `pnpm verifier` OK (75 tests), vérifié dans Chromium à 1280 px (zoomé sur les détails) et 390 px, aucune erreur console.
+- **À surveiller** : aucune fenêtre sur les murs autour du patio (seulement sur le vrai pourtour du bâtiment) ; reste G.4 (objet métier en 3D) avant de clore la phase 2 bis.
+- **Prochaine tâche** : G.4 (objet métier en 3D) ou 3.1 (rédaction des missions), au choix d'Audrey.
