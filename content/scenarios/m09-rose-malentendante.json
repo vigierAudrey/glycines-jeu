@@ -1,0 +1,65 @@
+{
+  "id": "m09-rose-malentendante",
+  "statut": "brouillon",
+  "titre": "Se placer face à elle",
+  "duree_min": 15,
+  "sequence_requise": "S5",
+  "lieu": "chambre-rose",
+  "personnages": ["rose", "joueur", "infirmiere"],
+  "competences": [
+    { "code": "CT4.1", "critere": "Utilisation d’un ton, d’un vocabulaire ou d’un outil adapté au niveau de compréhension de la personne." },
+    { "code": "C2.1.6", "critere": "Fidélité de la transmission des éléments observés." }
+  ],
+  "situation": "Vous parlez à Mme Rose depuis la porte, dans le bruit du couloir : elle ne répond pas. Elle est malentendante.",
+  "objectif_eleve": "Adapter votre façon de lui parler, puis transmettre ce que vous observez.",
+  "note_pour_audrey": "Brouillon rédigé pour la tâche 3.1, à partir de la situation professionnelle de votre séquence 5, séance 3 (« peau, escarres, dénutrition, surdité et cécité »), exercice interactif : « Mme Rose, malentendante, ne répond pas quand tu lui parles depuis la porte, dans le bruit du couloir. » Compétences CT4.1 (adaptation de la communication à la surdité) et C2.1.6 (transmission fidèle). À relire avant de passer le statut à valide.",
+  "etapes": [
+    {
+      "id": "entretien",
+      "type": "dialogue",
+      "consigne": "Mme Rose ne répond pas quand vous lui parlez depuis la porte.",
+      "interlocuteur": "rose",
+      "replique": "...",
+      "verbal": [
+        { "texte": "Je m'approche, je me place face à elle, puis je répète ma phrase.", "confiance": 2, "points": { "CT4.1": 2 }, "retour": "Vous vous placez dans son champ de vision avant de répéter : elle peut mieux vous comprendre." },
+        { "texte": "Je répète la même phrase, plus fort, depuis la porte.", "confiance": -1, "retour": "Parler plus fort sans qu'elle vous voie ne suffit pas toujours." },
+        { "texte": "Je laisse, elle m'entendra bien à un moment.", "confiance": -2, "retour": "Elle n'a pas reçu l'information dont elle a besoin." }
+      ],
+      "paraverbal": [
+        { "texte": "Je parle distinctement, sans crier.", "confiance": 1, "points": { "CT4.1": 1 }, "retour": "Articuler distinctement aide davantage que crier." },
+        { "texte": "Je chuchote.", "confiance": -1, "retour": "Elle risque de ne pas vous entendre du tout." },
+        { "texte": "Je parle très vite.", "confiance": -1, "retour": "Un débit trop rapide est plus difficile à suivre, surtout avec une gêne auditive." }
+      ],
+      "non_verbal": [
+        { "texte": "Je m'assure qu'elle voit bien mon visage avant de parler.", "confiance": 1, "retour": "Voir votre visage l'aide à comprendre, en plus du son." },
+        { "texte": "Je reste de profil en lui parlant.", "confiance": -1, "retour": "De profil, elle vous entend et vous voit moins bien." },
+        { "texte": "Je lui parle en lui tournant le dos.", "confiance": -2, "retour": "Elle ne peut ni vous voir ni bien vous entendre ainsi." }
+      ]
+    },
+    {
+      "id": "constat",
+      "type": "decision",
+      "consigne": "Vous remarquez que Mme Rose répond de moins en moins quand on lui parle de loin ou sans se placer face à elle.",
+      "question": "Que faites-vous ?",
+      "choix": [
+        { "decision": "agir", "texte": "Je transmets cette observation à l'équipe, avec la situation précise.", "points": { "C2.1.6": 3 }, "retour": "Vous transmettez un fait observé, fidèlement, au professionnel compétent." },
+        { "decision": "adapter", "texte": "Je n'en parle pas, ce n'est pas très important.", "retour": "Un changement observé se transmet, même s'il semble mineur." },
+        { "decision": "alerter", "texte": "Je dis aux autres résidents qu'elle devient sourde.", "retour": "Vous ne posez pas vous-même ce type de constat ; vous observez des faits et vous les transmettez au bon professionnel." }
+      ]
+    },
+    {
+      "id": "transmettre",
+      "type": "relais",
+      "consigne": "Allez transmettre votre observation à l'infirmière.",
+      "destinataire": "infirmiere",
+      "points": { "C2.1.6": 1 },
+      "retour": "Claire, infirmière, peut suivre cette observation.",
+      "retour_erreur": "Cette personne ne peut pas suivre cette observation. Qui, dans l'aile B, en a la responsabilité ?"
+    }
+  ],
+  "debriefing": [
+    "Pourquoi s'approcher et se placer face à elle plutôt que de parler plus fort depuis la porte ?",
+    "Pourquoi avez-vous transmis votre observation plutôt que de la garder pour vous ?",
+    "Pourquoi n'avez-vous pas dit vous-même qu'elle devient sourde ?"
+  ]
+}

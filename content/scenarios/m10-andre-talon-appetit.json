@@ -1,0 +1,64 @@
+{
+  "id": "m10-andre-talon-appetit",
+  "statut": "brouillon",
+  "titre": "Un matin à surveiller pour M. André",
+  "duree_min": 15,
+  "sequence_requise": "S5",
+  "lieu": "chambre-andre",
+  "personnages": ["andre", "joueur", "infirmiere"],
+  "competences": [
+    { "code": "C2.1.6", "critere": "Fidélité de la transmission des éléments observés." },
+    { "code": "CT3.3", "critere": "Application correcte des instructions réglementaires et des protocoles." }
+  ],
+  "situation": "Au lever de M. André, vous remarquez une rougeur à son talon droit, et le relevé des repas montre qu'il mange à peine la moitié de ses repas depuis trois jours.",
+  "objectif_eleve": "Observer ces deux faits sans les interpréter, appliquer les mesures de prévention prévues, puis transmettre.",
+  "note_pour_audrey": "Brouillon rédigé pour la tâche 3.1, à partir de la situation professionnelle de votre séquence 5, séance 3 (« peau, escarres, dénutrition, surdité et cécité »), exercice interactif : « Au lever, tu remarques une rougeur au talon droit de M. André. Le relevé montre qu'il mange à peine la moitié de ses repas depuis trois jours. » Compétences C2.1.6 (transmission fidèle) et CT3.3 (application du protocole de prévention). À relire avant de passer le statut à valide.",
+  "etapes": [
+    {
+      "id": "observer",
+      "type": "observation",
+      "consigne": "Avant d'aider M. André, regardez ce qui l'entoure à la loupe.",
+      "elements": [
+        { "id": "talon", "libelle": "Une rougeur est visible sur son talon droit.", "colonne": 7, "rangee": 7, "effet": "gene", "points": { "C2.1.6": 1 }, "retour": "Une rougeur qui persiste sur une zone d'appui doit être surveillée et transmise." },
+        { "id": "plateau", "libelle": "Le plateau du petit-déjeuner est presque entier, comme hier et avant-hier.", "colonne": 5, "rangee": 7, "effet": "gene", "points": { "C2.1.6": 1 }, "retour": "Une baisse des prises alimentaires sur plusieurs jours est un fait à transmettre." },
+        { "id": "coussin", "libelle": "Un coussin de prévention est en place sous son talon.", "colonne": 7, "rangee": 6, "effet": "facilite", "points": { "CT3.3": 1 }, "retour": "Cette mesure de prévention est déjà prévue par le protocole." }
+      ]
+    },
+    {
+      "id": "constat",
+      "type": "decision",
+      "consigne": "Vous avez repéré une rougeur au talon et une baisse d'appétit qui durent depuis trois jours.",
+      "question": "Que faites-vous ?",
+      "choix": [
+        { "decision": "agir", "texte": "Je transmets ces deux observations ensemble, avec les faits précis, à la personne compétente.", "points": { "C2.1.6": 3 }, "retour": "Une rougeur et une baisse d'appétit qui durent se transmettent ensemble et rapidement." },
+        { "decision": "adapter", "texte": "Je surveille encore quelques jours avant d'en parler.", "retour": "Ces deux faits réunis ne doivent pas attendre pour être transmis." },
+        { "decision": "alerter", "texte": "Je note moi-même qu'il fait une escarre, sans en parler à personne.", "retour": "Vous ne posez pas vous-même ce constat ; vous observez des faits et vous les transmettez." }
+      ]
+    },
+    {
+      "id": "prevention",
+      "type": "decision",
+      "consigne": "Au moment d'installer M. André, quelle mesure appliquez-vous ?",
+      "question": "Que faites-vous ?",
+      "choix": [
+        { "decision": "agir", "texte": "J'applique l'installation et les changements de position prévus par le protocole, sans décider seule d'un soin.", "points": { "CT3.3": 2 }, "retour": "Vous participez aux mesures de prévention prévues, dans les limites de votre rôle." },
+        { "decision": "adapter", "texte": "Je laisse comme c'est, ce n'est pas très grave.", "retour": "La prévention prévue doit être appliquée, pas laissée de côté." },
+        { "decision": "alerter", "texte": "Je traite moi-même la rougeur avec une crème.", "retour": "Traiter une plaie ne relève pas de votre rôle ; vous participez à la prévention, pas au soin." }
+      ]
+    },
+    {
+      "id": "transmettre",
+      "type": "relais",
+      "consigne": "Allez transmettre vos observations à l'infirmière.",
+      "destinataire": "infirmiere",
+      "points": { "C2.1.6": 1 },
+      "retour": "Claire, infirmière, peut suivre ces observations.",
+      "retour_erreur": "Cette personne ne peut pas suivre ces observations. Qui, dans l'aile B, en a la responsabilité ?"
+    }
+  ],
+  "debriefing": [
+    "Quels sont les deux faits que vous avez observés chez M. André ?",
+    "Pourquoi les avez-vous transmis ensemble, sans attendre ?",
+    "Pourquoi n'avez-vous pas traité la rougeur vous-même ?"
+  ]
+}

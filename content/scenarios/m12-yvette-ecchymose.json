@@ -1,0 +1,65 @@
+{
+  "id": "m12-yvette-ecchymose",
+  "statut": "brouillon",
+  "titre": "Ce qu'elle vous confie",
+  "duree_min": 15,
+  "sequence_requise": "S5",
+  "lieu": "chambre-yvette",
+  "personnages": ["yvette", "joueur", "cadre"],
+  "competences": [
+    { "code": "CT3.4", "critere": "Respect de la discrétion, de la réserve et du secret professionnels." },
+    { "code": "C2.1.6", "critere": "Transmission des informations préoccupantes aux personnes compétentes." }
+  ],
+  "situation": "En aidant Mme Yvette à mettre son gilet, vous voyez une ecchymose sur son bras. Elle murmure : « Ne dites rien, sinon il va encore crier. » Le planning de l'aile est très tendu cette semaine.",
+  "objectif_eleve": "L'écouter sans jugement, sans lui promettre un secret que vous ne pouvez pas garder, puis transmettre ce que vous avez vu et entendu à la personne compétente.",
+  "note_pour_audrey": "Brouillon rédigé pour la tâche 3.1, à partir de la situation professionnelle de votre séquence 5, séance 6 (« bientraitance, maltraitance : repérer, protéger et alerter »), exercice interactif : « Mme Yvette, d'habitude souriante, reste dans sa chambre. En l'aidant à mettre son gilet, tu vois une ecchymose sur son bras. Elle murmure : Ne dis rien, sinon il va encore crier. Le planning de l'aile est très tendu cette semaine. » Sujet sensible choisi avec votre accord explicite : rédigé tel que dans le cours, sans identifier qui est « il ». Compétences CT3.4 et C2.1.6, telles qu'indiquées dans cette séance. À relire avant de passer le statut à valide.",
+  "etapes": [
+    {
+      "id": "confidence",
+      "type": "dialogue",
+      "consigne": "Mme Yvette vient de vous confier quelque chose d'inquiétant.",
+      "interlocuteur": "yvette",
+      "replique": "Ne dites rien, sinon il va encore crier.",
+      "verbal": [
+        { "texte": "Je reste avec vous. Ce que vous me dites est important, et je dois en parler à la personne qui peut vous protéger.", "confiance": 1, "points": { "CT3.4": 2 }, "retour": "Vous l'écoutez sans jugement, et vous êtes honnête : vous ne pouvez pas promettre de ne rien dire quand sa sécurité est en jeu." },
+        { "texte": "D'accord, je ne dirai rien à personne.", "confiance": 2, "retour": "Promettre le secret n'est pas possible ici : ce qui met sa sécurité en jeu doit être transmis pour la protéger." },
+        { "texte": "Qui vous a fait ça ? Dites-moi tout maintenant.", "confiance": -2, "retour": "La presser de répondre tout de suite peut l'effrayer davantage ; mieux vaut d'abord la rassurer." }
+      ],
+      "paraverbal": [
+        { "texte": "Voix douce et posée.", "confiance": 1, "points": { "CT3.4": 1 }, "retour": "Un ton calme, sans jugement, l'aide à se sentir écoutée." },
+        { "texte": "Voix insistante.", "confiance": -1, "retour": "L'insistance peut l'effrayer plutôt que la rassurer." },
+        { "texte": "Voix neutre, comme si de rien n'était.", "confiance": -1, "retour": "Minimiser ce qu'elle vient de confier ne l'aide pas." }
+      ],
+      "non_verbal": [
+        { "texte": "Je reste assise près d'elle, calme, sans la bousculer.", "confiance": 1, "retour": "Votre présence calme favorise la confidence." },
+        { "texte": "Je m'éloigne rapidement, mal à l'aise.", "confiance": -2, "retour": "S'éloigner peut lui donner l'impression d'être abandonnée avec son inquiétude." },
+        { "texte": "Je regarde son bras fixement sans rien dire.", "confiance": -1, "retour": "Un silence trop long, sans parole rassurante, peut la mettre encore plus mal à l'aise." }
+      ]
+    },
+    {
+      "id": "transmettre",
+      "type": "decision",
+      "consigne": "Le planning de l'aile est très tendu cette semaine.",
+      "question": "Que faites-vous ?",
+      "choix": [
+        { "decision": "agir", "texte": "Je transmets ce que j'ai vu et entendu, avec les mots exacts de Mme Yvette, au responsable, selon le protocole.", "points": { "C2.1.6": 3 }, "retour": "Les faits et les paroles exactes sont transmis rapidement : un planning tendu est un facteur possible, jamais une excuse pour ne pas transmettre." },
+        { "decision": "adapter", "texte": "J'attends de voir si ça se reproduit avant d'en parler.", "retour": "Une marque inexpliquée et une parole comme celle-ci se transmettent sans attendre." },
+        { "decision": "alerter", "texte": "Je vais moi-même demander des comptes à la personne que Mme Yvette désigne par « il ».", "retour": "Ce n'est pas à vous de mener cette démarche : vous transmettez au responsable, qui suit le protocole de signalement." }
+      ]
+    },
+    {
+      "id": "signaler",
+      "type": "relais",
+      "consigne": "Allez transmettre ce que vous avez vu et entendu à la bonne personne.",
+      "destinataire": "cadre",
+      "points": { "C2.1.6": 1 },
+      "retour": "M. Lemoine, cadre de santé, peut suivre le protocole de signalement.",
+      "retour_erreur": "Cette personne ne peut pas suivre un signalement de ce type. Qui, dans l'aile B, en a la responsabilité ?"
+    }
+  ],
+  "debriefing": [
+    "Pourquoi ne pouviez-vous pas promettre à Mme Yvette de ne rien dire ?",
+    "Qu'avez-vous transmis, et avec quels mots exactement ?",
+    "Pourquoi le planning tendu de la semaine n'excuse-t-il pas d'attendre pour transmettre ?"
+  ]
+}

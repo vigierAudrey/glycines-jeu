@@ -1,0 +1,56 @@
+{
+  "id": "m11-yvette-cherche-chambre",
+  "statut": "brouillon",
+  "titre": "Mme Yvette cherche sa chambre",
+  "duree_min": 15,
+  "sequence_requise": "S5",
+  "lieu": "chambre-yvette",
+  "personnages": ["yvette", "joueur"],
+  "competences": [
+    { "code": "CT4.1", "critere": "Adaptation du mode de relation à la situation de la personne âgée." },
+    { "code": "C2.1.6", "critere": "Partage des observations avec l’équipe ou le service concerné." }
+  ],
+  "situation": "Mme Yvette cherche sa chambre depuis dix minutes dans le couloir.",
+  "objectif_eleve": "L'accompagner calmement avec un repère simple, puis partager ce changement avec l'équipe.",
+  "note_pour_audrey": "Brouillon rédigé pour la tâche 3.1, à partir de la situation professionnelle de votre séquence 5, séance 2 (« dépression, troubles neurocognitifs, Alzheimer, Parkinson et douleur »), exercice interactif : « Mme Yvette cherche sa chambre depuis dix minutes. » Compétences CT4.1 (mode de relation adapté) et C2.1.6 (partage de l'observation). Aucun nom de maladie n'est utilisé dans le jeu, conformément à la règle du jeu de ne jamais poser de diagnostic. À relire avant de passer le statut à valide.",
+  "etapes": [
+    {
+      "id": "accompagner",
+      "type": "dialogue",
+      "consigne": "Vous trouvez Mme Yvette dans le couloir, un peu perdue.",
+      "interlocuteur": "yvette",
+      "replique": "Je ne sais plus où est ma chambre...",
+      "verbal": [
+        { "texte": "Je vous accompagne, c'est par ici, votre chambre avec la porte bleue.", "confiance": 2, "points": { "CT4.1": 2 }, "retour": "Vous donnez un repère simple et vous l'accompagnez calmement, sans la brusquer." },
+        { "texte": "Mais si, vous le savez bien, c'est par là.", "confiance": -2, "retour": "La contredire fermement peut la mettre en échec plutôt que l'aider." },
+        { "texte": "Suivez-moi.", "confiance": -1, "retour": "Une consigne seule, sans réassurance ni repère, peut être insuffisante." }
+      ],
+      "paraverbal": [
+        { "texte": "Voix calme, je laisse le temps.", "confiance": 1, "points": { "CT4.1": 1 }, "retour": "Le calme et le temps laissé rassurent." },
+        { "texte": "Voix pressée.", "confiance": -1, "retour": "La précipitation peut l'inquiéter davantage." },
+        { "texte": "Voix forte.", "confiance": -1, "retour": "Un ton fort n'aide pas à se repérer, et peut inquiéter." }
+      ],
+      "non_verbal": [
+        { "texte": "Je me place à côté d'elle et je lui propose mon bras.", "confiance": 1, "retour": "Cette proximité rassurante l'aide à se laisser accompagner." },
+        { "texte": "Je la pousse légèrement en avant.", "confiance": -2, "retour": "La pousser ne respecte pas son rythme et peut l'inquiéter." },
+        { "texte": "Je marche loin devant elle.", "confiance": -1, "retour": "Rester proche est plus sécurisant que de marcher devant." }
+      ]
+    },
+    {
+      "id": "transmettre",
+      "type": "decision",
+      "consigne": "Mme Yvette cherchait sa chambre depuis dix minutes avant que vous ne la trouviez.",
+      "question": "Que faites-vous une fois qu'elle est installée ?",
+      "choix": [
+        { "decision": "agir", "texte": "Je la raccompagne, puis je partage ce changement avec l'équipe.", "points": { "C2.1.6": 3 }, "retour": "Vous partagez une observation utile avec l'équipe, sans attendre." },
+        { "decision": "adapter", "texte": "Je la raccompagne et je n'en parle à personne.", "retour": "Ce changement mérite d'être partagé avec l'équipe, même s'il semble passager." },
+        { "decision": "alerter", "texte": "Je préviens tout de suite le médecin coordonnateur, avant même de la raccompagner.", "retour": "Raccompagnez-la d'abord calmement ; le partage avec l'équipe peut suivre, sans urgence excessive." }
+      ]
+    }
+  ],
+  "debriefing": [
+    "Pourquoi avez-vous donné un repère simple plutôt que de la corriger ?",
+    "Pourquoi avoir partagé cette observation avec l'équipe ?",
+    "Qu'auriez-vous changé si elle avait refusé de vous suivre ?"
+  ]
+}

@@ -17,7 +17,8 @@
         "Installation au fauteuil.",
         "Apprécie le patio le matin.",
         "Refuse les grands groupes.",
-        "Souhaite appeler sa sœur le mercredi."
+        "Souhaite appeler sa sœur le mercredi.",
+        "Malentendante : répond mieux si on se place face à elle avant de lui parler."
       ]
     },
     {
@@ -52,7 +53,8 @@
         "Comprend une consigne courte.",
         "Lit une horloge simple.",
         "Oublie une information récente.",
-        "Communication adaptée : phrase courte, une information à la fois, repère stable, répétition calme."
+        "Communication adaptée : phrase courte, une information à la fois, repère stable, répétition calme.",
+        "Peut se sentir désorientée et chercher sa chambre."
       ]
     },
     {
@@ -99,7 +101,11 @@
         "coiffure": "court",
         "haut": "#c98a5e"
       },
-      "repris_du_cours": []
+      "repris_du_cours": [
+        "Peut mettre du temps à se lever du fauteuil.",
+        "Une rougeur peut apparaître sur une zone d'appui comme le talon, à surveiller.",
+        "Peut manger moins que d'habitude certains jours."
+      ]
     }
   ]
 }
