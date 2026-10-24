@@ -1,0 +1,79 @@
+{
+  "id": "m06-denise-arrivee",
+  "statut": "brouillon",
+  "titre": "Mme Denise arrive aux Glycines",
+  "duree_min": 15,
+  "sequence_requise": "S1",
+  "lieu": "chambre-denise",
+  "personnages": ["denise", "joueur", "cadre"],
+  "competences": [
+    { "code": "CT3.1", "critere": "Vérification de la fiabilité des sources d’information." },
+    { "code": "CT3.2", "critere": "Repérage du degré d’autonomie de la personne âgée et prise en compte de ces éléments pour la mise en œuvre de ses actions." },
+    { "code": "CT3.3", "critere": "Prise en compte du contexte de l’activité." }
+  ],
+  "situation": "Mme Denise arrive aux Glycines. Son dossier, un échange avec sa fille et l'observation de la chambre donnent des informations complémentaires.",
+  "objectif_eleve": "Recueillir des informations fiables, ajuster l'aide à ses capacités, et signaler les contraintes de la chambre.",
+  "note_pour_audrey": "Brouillon rédigé pour la tâche 3.1, à partir de la situation professionnelle de votre séquence 1, séance 7 (« accueillir un nouveau résident : évaluation et transfert »). Compétences reprises telles qu'indiquées dans cette séance (CT3.1 principale, CT3.2 et CT3.3 en appui). À relire avant de passer le statut à valide.",
+  "etapes": [
+    {
+      "id": "arrivee",
+      "type": "dialogue",
+      "consigne": "Mme Denise vient d'arriver dans sa nouvelle chambre.",
+      "interlocuteur": "denise",
+      "replique": "Bonjour, je viens d'arriver, c'est un peu déroutant.",
+      "verbal": [
+        { "texte": "Bonjour Mme Denise, bienvenue. Pour bien vous accompagner, pourriez-vous me dire vos habitudes ?", "confiance": 2, "points": { "CT3.1": 2 }, "retour": "Vous recueillez une information récente directement auprès d'elle, en plus de son dossier." },
+        { "texte": "Tout est déjà écrit dans votre dossier, ne vous inquiétez pas.", "confiance": -1, "retour": "Le dossier ne remplace pas ce que la personne peut dire elle-même." },
+        { "texte": "Bonjour.", "confiance": 0, "retour": "Un accueil minimal, sans recueillir d'information récente." }
+      ],
+      "paraverbal": [
+        { "texte": "Voix chaleureuse, je prends le temps de l'accueillir.", "confiance": 1, "retour": "Un accueil chaleureux rassure dans un moment déroutant." },
+        { "texte": "Voix neutre, pressée.", "confiance": -1, "retour": "Un premier accueil pressé peut ajouter à son sentiment d'être déroutée." },
+        { "texte": "Voix hésitante.", "confiance": 0, "retour": "L'hésitation ne rassure pas vraiment pour un premier accueil." }
+      ],
+      "non_verbal": [
+        { "texte": "Je regarde la chambre avec elle en même temps que je l'accueille.", "confiance": 1, "points": { "CT3.3": 1 }, "retour": "Vous repérez déjà le contexte de la chambre pendant l'accueil." },
+        { "texte": "Je reste tournée vers la porte, prête à partir.", "confiance": -2, "retour": "Cette attitude ne montre pas de disponibilité pour l'accueillir." },
+        { "texte": "Je range des affaires sans la regarder.", "confiance": -1, "retour": "Elle peut avoir l'impression de ne pas compter autant que le rangement." }
+      ]
+    },
+    {
+      "id": "note-anonyme",
+      "type": "decision",
+      "consigne": "Une note non signée, laissée dans le couloir, affirme que Mme Denise « refuse tout ».",
+      "question": "Que faites-vous ?",
+      "choix": [
+        { "decision": "agir", "texte": "Je vérifie cette information auprès de Mme Denise elle-même et de sa fille avant d'en tenir compte.", "points": { "CT3.1": 3 }, "retour": "Une note anonyme non vérifiée n'est pas un fait fiable : vous vérifiez à la source." },
+        { "decision": "adapter", "texte": "Je la note dans un coin, au cas où, sans la vérifier.", "retour": "Une information non vérifiée ne doit pas être utilisée comme un fait, même notée de côté." },
+        { "decision": "alerter", "texte": "Je transmets la note comme un fait avéré au cadre de santé.", "retour": "Vous transmettez une information non vérifiée comme si elle était certaine." }
+      ]
+    },
+    {
+      "id": "aide-graduee",
+      "type": "decision",
+      "consigne": "Mme Denise peut faire certains gestes seule, et a besoin d'aide pour d'autres.",
+      "question": "Que proposez-vous ?",
+      "choix": [
+        { "decision": "adapter", "texte": "Je laisse faire ce qu'elle peut réaliser seule, et je complète seulement ce qui est nécessaire.", "points": { "CT3.2": 3 }, "retour": "Vous ajustez l'aide à ses capacités réelles, sans faire à sa place ce qu'elle peut faire." },
+        { "decision": "agir", "texte": "Je fais tout moi-même, ce sera plus rapide pour son premier jour.", "retour": "Faire à sa place ce qu'elle peut réaliser ne respecte pas son degré d'autonomie." },
+        { "decision": "alerter", "texte": "Je préviens l'infirmière avant de l'aider pour quoi que ce soit.", "retour": "Ajuster une aide graduée aux gestes du quotidien fait partie de votre rôle." }
+      ]
+    },
+    {
+      "id": "contrainte-chambre",
+      "type": "decision",
+      "consigne": "En installant Mme Denise, vous repérez que la chambre n'est pas encore tout à fait prête pour ses besoins.",
+      "question": "Que faites-vous ?",
+      "choix": [
+        { "decision": "agir", "texte": "Je signale la contrainte au bon professionnel, avec une transmission précise et datée.", "points": { "CT3.3": 2, "CT3.1": 1 }, "retour": "Vous transmettez un fait précis au professionnel compétent, comme le demande votre rôle." },
+        { "decision": "adapter", "texte": "On s'arrangera avec ce qu'il y a pour le moment.", "retour": "Une contrainte repérée doit être transmise, pas seulement contournée." },
+        { "decision": "alerter", "texte": "Je n'en parle à personne, ça finira par se régler.", "retour": "Sans transmission, la contrainte risque de rester sans solution." }
+      ]
+    }
+  ],
+  "debriefing": [
+    "Pourquoi n'avez-vous pas tenu compte directement de la note anonyme ?",
+    "Comment avez-vous choisi ce que vous laissiez faire seule à Mme Denise ?",
+    "Qu'avez-vous transmis à propos de la chambre, et à qui ?"
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "id": "m08-denise-petit-fils",
+  "statut": "brouillon",
+  "titre": "Garder le lien avec son petit-fils",
+  "duree_min": 15,
+  "sequence_requise": "S6",
+  "lieu": "chambre-denise",
+  "personnages": ["denise", "joueur", "animatrice"],
+  "competences": [
+    { "code": "C2.2.2", "critere": "Mobilisation des échanges épistolaires, d’internet, de l’appel téléphonique ou vidéo selon la situation." },
+    { "code": "CT4.2", "critere": "Écoute attentive de la personne." }
+  ],
+  "situation": "Mme Denise aimerait garder le lien avec son petit-fils, mais les horaires ne sont pas simples.",
+  "objectif_eleve": "L'écouter sur ce lien, puis proposer un moyen de communication adapté sans le lui imposer.",
+  "note_pour_audrey": "Brouillon rédigé pour la tâche 3.1, à partir de la situation professionnelle de votre séquence 6, séance 4 (« stimulation cognitive, liens affectifs et communication avec l'entourage »). Compétences reprises telles qu'indiquées dans cette séance (C2.2.2 principale, CT4.2 en appui). À relire avant de passer le statut à valide.",
+  "etapes": [
+    {
+      "id": "souvenirs",
+      "type": "dialogue",
+      "consigne": "Vous regardez des photos avec Mme Denise.",
+      "interlocuteur": "denise",
+      "replique": "Mon petit-fils me manque, mais les horaires ne sont pas simples entre nous.",
+      "verbal": [
+        { "texte": "Qu'aimeriez-vous lui dire ou lui montrer ? On peut choisir ensemble le moyen le plus simple pour vous deux.", "confiance": 2, "points": { "CT4.2": 2, "C2.2.2": 1 }, "retour": "Vous l'écoutez et vous cherchez une solution avec elle, sans décider à sa place." },
+        { "texte": "Il devrait vous appeler plus souvent.", "confiance": -1, "retour": "Un jugement sur son petit-fils, pas une écoute de ce qu'elle souhaite." },
+        { "texte": "On passera un coup de fil sans le prévenir, ce sera une surprise.", "confiance": -2, "retour": "Vous décidez à sa place, sans tenir compte du décalage d'horaires qu'elle vient de mentionner." }
+      ],
+      "paraverbal": [
+        { "texte": "Voix douce, je prends le temps de l'écouter.", "confiance": 1, "retour": "Prendre le temps montre que son lien avec son petit-fils compte." },
+        { "texte": "Je réponds en rangeant les photos.", "confiance": -1, "retour": "Elle peut avoir l'impression de ne pas être vraiment écoutée." },
+        { "texte": "Voix distraite.", "confiance": -1, "retour": "Un ton distrait ne montre pas une vraie écoute." }
+      ],
+      "non_verbal": [
+        { "texte": "Je regarde les photos avec elle.", "confiance": 1, "retour": "Partager ce moment favorise l'échange sur ce lien affectif." },
+        { "texte": "Je consulte l'heure pendant qu'elle parle.", "confiance": -2, "retour": "Montre un manque de disponibilité pour l'écouter." },
+        { "texte": "Je reste debout, dos tourné.", "confiance": -1, "retour": "Une attitude qui ne favorise pas l'échange." }
+      ]
+    },
+    {
+      "id": "moyen",
+      "type": "decision",
+      "consigne": "Il y a un décalage d'horaires entre Mme Denise et son petit-fils.",
+      "question": "Que proposez-vous ?",
+      "choix": [
+        { "decision": "agir", "texte": "Je propose un courrier ou une vidéo qu'elle peut regarder quand elle veut, en plus d'un appel si les horaires s'accordent un jour.", "points": { "C2.2.2": 3 }, "retour": "Chaque moyen a ses avantages : le courrier peut être relu, la vidéo ajoute l'image, l'appel reste possible selon les horaires." },
+        { "decision": "adapter", "texte": "Je choisis moi-même le moyen le plus pratique pour l'équipe.", "retour": "Le moyen choisi doit tenir compte de ses souhaits et de ses capacités, pas seulement de l'organisation de l'équipe." },
+        { "decision": "alerter", "texte": "Je laisse sa fille s'occuper entièrement de ce lien.", "retour": "Vous pouvez accompagner ce lien dans votre rôle, sans le laisser entièrement à la famille." }
+      ]
+    },
+    {
+      "id": "respect-choix",
+      "type": "decision",
+      "consigne": "Cette semaine, Mme Denise ne vous demande pas de contact avec son petit-fils.",
+      "question": "Que faites-vous ?",
+      "choix": [
+        { "decision": "adapter", "texte": "Je respecte son choix cette semaine, sans lui imposer un contact.", "points": { "CT4.2": 2 }, "retour": "Maintenir le lien se fait selon les souhaits de la personne, sans l'imposer." },
+        { "decision": "agir", "texte": "Je programme un appel quand même, ce sera bien pour elle.", "retour": "Imposer un contact ne respecte pas son souhait de cette semaine." },
+        { "decision": "alerter", "texte": "Je signale à l'animatrice qu'elle doit être incitée à garder le lien à tout prix.", "retour": "Le lien se maintient selon ses souhaits, pas en la poussant contre son avis." }
+      ]
+    }
+  ],
+  "debriefing": [
+    "Qu'avez-vous écouté chez Mme Denise avant de proposer un moyen de communication ?",
+    "Pourquoi avoir proposé plusieurs moyens plutôt qu'un seul ?",
+    "Pourquoi avez-vous respecté son choix de ne pas avoir de contact cette semaine ?"
+  ]
+}

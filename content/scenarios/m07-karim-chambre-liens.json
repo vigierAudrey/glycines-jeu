@@ -1,0 +1,90 @@
+{
+  "id": "m07-karim-chambre-liens",
+  "statut": "brouillon",
+  "titre": "La chambre de M. Karim",
+  "duree_min": 15,
+  "sequence_requise": "S3",
+  "lieu": "chambre-karim",
+  "personnages": ["karim", "joueur"],
+  "competences": [
+    { "code": "C2.2.2", "critere": "Identification des habitudes et des souhaits de la personne." },
+    { "code": "C2.1.1", "critere": "Respect des habitudes et des attentes de la personne." },
+    { "code": "C2.1.2", "critere": "Respect du rythme, des habitudes et des attentes de la personne." }
+  ],
+  "situation": "M. Karim tient à sa radio, à son carnet de recettes et aux appels du dimanche avec sa sœur. Sa fille propose d'ajouter plusieurs cadres, mais M. Karim veut garder une chambre dégagée.",
+  "objectif_eleve": "Respecter les souhaits de M. Karim pour sa chambre et ses habitudes, en tenant compte de la proposition de sa fille sans décider à sa place.",
+  "note_pour_audrey": "Brouillon rédigé pour la tâche 3.1, à partir de la situation professionnelle de votre séquence 3, séance 2 (« chambre de M. Karim : lit, habitudes, effets personnels et liens »). Compétences reprises telles qu'indiquées dans cette séance (C2.2.2 principale, C2.1.1 et C2.1.2 en appui). À relire avant de passer le statut à valide.",
+  "etapes": [
+    {
+      "id": "echange",
+      "type": "dialogue",
+      "consigne": "M. Karim vous parle de la proposition de sa fille.",
+      "interlocuteur": "karim",
+      "replique": "Ma fille voudrait mettre plusieurs cadres, mais moi je préfère que ça reste dégagé.",
+      "verbal": [
+        { "texte": "C'est votre chambre : on garde ce qui compte pour vous, et on peut trouver une place pour quelques cadres si vous le souhaitez.", "confiance": 2, "points": { "C2.2.2": 2 }, "retour": "Vous respectez son souhait d'une chambre dégagée, tout en recherchant un compromis avec lui, sans décider à sa place." },
+        { "texte": "Votre fille a raison, un peu de décoration fait du bien.", "confiance": -2, "retour": "Vous donnez la priorité à la proposition familiale plutôt qu'au souhait de M. Karim." },
+        { "texte": "On verra plus tard.", "confiance": -1, "retour": "Son souhait n'est pas pris en compte." }
+      ],
+      "paraverbal": [
+        { "texte": "Voix posée, j'écoute jusqu'au bout.", "confiance": 1, "points": { "C2.2.2": 1 }, "retour": "Prendre le temps d'écouter montre que son souhait compte." },
+        { "texte": "Je réponds tout de suite sans le laisser finir.", "confiance": -1, "retour": "Il n'a pas eu le temps d'exprimer complètement son souhait." },
+        { "texte": "Voix distraite.", "confiance": -1, "retour": "Un ton distrait ne montre pas une vraie écoute." }
+      ],
+      "non_verbal": [
+        { "texte": "Je m'assieds un instant près de lui pour en parler.", "confiance": 1, "retour": "Se mettre à son niveau favorise l'échange sur sa chambre." },
+        { "texte": "Je range des affaires en même temps qu'il parle.", "confiance": -1, "retour": "Il peut avoir l'impression de ne pas être vraiment écouté." },
+        { "texte": "Je reste debout, prête à repartir.", "confiance": -1, "retour": "Votre attitude ne montre pas que vous avez le temps de l'écouter." }
+      ]
+    },
+    {
+      "id": "freins",
+      "type": "decision",
+      "consigne": "Avant de refaire le lit médicalisé de M. Karim, vous remarquez que les freins n'ont pas été vérifiés.",
+      "question": "Que faites-vous ?",
+      "choix": [
+        { "decision": "agir", "texte": "Je vérifie les freins du lit avant d'intervenir.", "points": { "C2.1.1": 3 }, "retour": "Vérifier les freins avant la réfection fait partie des habitudes à respecter pour intervenir sur un lit médicalisé." },
+        { "decision": "adapter", "texte": "Je commence directement, ça ira.", "retour": "Ne pas vérifier les freins d'un lit médicalisé avant d'intervenir n'est pas sûr." },
+        { "decision": "alerter", "texte": "Je préviens la maintenance avant de toucher au lit.", "retour": "Vérifier des freins fait partie de votre rôle, ce n'est pas la peine d'aller chercher quelqu'un pour cela." }
+      ]
+    },
+    {
+      "id": "rangement",
+      "type": "decision",
+      "consigne": "M. Karim veut garder sa radio, son carnet de recettes et son téléphone accessibles, sans encombrer le passage autour du lit médicalisé.",
+      "question": "Que faites-vous ?",
+      "choix": [
+        { "decision": "agir", "texte": "Je les installe à portée de main, sans gêner le passage autour du lit.", "points": { "C2.2.2": 2, "C2.1.1": 1 }, "retour": "Vous respectez ses habitudes et ses effets personnels, tout en gardant le passage dégagé." },
+        { "decision": "adapter", "texte": "Je les range dans un tiroir fermé pour que ce soit net.", "retour": "Ce n'est plus accessible comme il le souhaite au quotidien." },
+        { "decision": "alerter", "texte": "Je demande à sa fille de choisir leur place.", "retour": "C'est à M. Karim de choisir la place de ses propres effets." }
+      ]
+    },
+    {
+      "id": "dimanche",
+      "type": "dialogue",
+      "consigne": "M. Karim vous parle de ses habitudes de la semaine.",
+      "interlocuteur": "karim",
+      "replique": "Le dimanche, j'aime appeler ma sœur. Et je me lève tôt, vers cinq heures.",
+      "verbal": [
+        { "texte": "Je note que le dimanche est important pour votre appel, et que vous vous levez tôt : on en tient compte.", "confiance": 2, "points": { "C2.1.2": 2, "C2.2.2": 1 }, "retour": "Vous prenez en compte son rythme et son habitude du dimanche, et vous les transmettez pour qu'ils soient respectés." },
+        { "texte": "D'accord.", "confiance": 0, "retour": "Vous écoutez, mais rien n'est transmis pour que ce rythme soit suivi." },
+        { "texte": "On verra ça avec l'équipe plus tard, ce n'est pas urgent.", "confiance": -1, "retour": "Son rythme et son habitude du dimanche sont mis de côté." }
+      ],
+      "paraverbal": [
+        { "texte": "Je m'arrête, voix attentive.", "confiance": 1, "points": { "C2.1.2": 1 }, "retour": "S'arrêter pour l'écouter montre que son rythme compte." },
+        { "texte": "Je réponds en continuant autre chose.", "confiance": -1, "retour": "Il peut avoir l'impression de ne pas être entendu." },
+        { "texte": "Voix distraite.", "confiance": -1, "retour": "Un ton distrait ne montre pas que vous l'écoutez vraiment." }
+      ],
+      "non_verbal": [
+        { "texte": "Je le regarde et j'acquiesce pendant qu'il parle.", "confiance": 1, "retour": "Cette attitude montre que vous suivez ce qu'il explique." },
+        { "texte": "Je regarde ailleurs pendant qu'il parle.", "confiance": -2, "retour": "Il peut sentir que son habitude n'intéresse pas." },
+        { "texte": "Je reste debout, prête à repartir.", "confiance": -1, "retour": "Votre attitude montre que vous n'avez pas vraiment le temps de l'écouter." }
+      ]
+    }
+  ],
+  "debriefing": [
+    "Comment avez-vous respecté le souhait de M. Karim face à la proposition de sa fille ?",
+    "Pourquoi avez-vous vérifié les freins avant de toucher au lit médicalisé ?",
+    "Qu'avez-vous retenu de ses habitudes du dimanche et du matin ?"
+  ]
+}
