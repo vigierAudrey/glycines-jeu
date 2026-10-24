@@ -139,61 +139,101 @@ function dessinerTexture(type: TypeZone): THREE.Texture | undefined {
 }
 
 // ---------- Fenêtres ----------
-const LARGEUR_FENETRE = 0.6;
-const HAUTEUR_FENETRE = 0.45;
-const materiauCadre = new THREE.MeshLambertMaterial({ color: '#fdfcf9' });
-const materiauVitre = new THREE.MeshLambertMaterial({ color: '#cdeaf4', transparent: true, opacity: 0.6 });
+// Une vitre, un cadre formé de 4 montants tout AUTOUR d'elle (jamais une plaque pleine par-dessus,
+// sinon elle la cache entièrement), une croisée et un rebord qui dépasse du mur, pour bien se lire comme une fenêtre.
+const LARGEUR_FENETRE = 0.56;
+const HAUTEUR_FENETRE = 0.4;
+const EPAISSEUR_CADRE = 0.055;
+const materiauCadre = new THREE.MeshLambertMaterial({ color: '#f7f3e8' });
+const materiauVitre = new THREE.MeshLambertMaterial({ color: '#8fcfe8', transparent: true, opacity: 0.6 });
+const PROFONDEUR_VITRAGE = EPAISSEUR_MUR * 1.08; // dépasse un peu des deux côtés du mur, pour ne pas être caché dedans
+
+const geometrieVitre = new THREE.BoxGeometry(LARGEUR_FENETRE, HAUTEUR_FENETRE, PROFONDEUR_VITRAGE * 0.7);
+const geometrieMontantHorizontal = new THREE.BoxGeometry(LARGEUR_FENETRE + EPAISSEUR_CADRE * 2, EPAISSEUR_CADRE, PROFONDEUR_VITRAGE);
+const geometrieMontantVertical = new THREE.BoxGeometry(EPAISSEUR_CADRE, HAUTEUR_FENETRE, PROFONDEUR_VITRAGE);
+const geometrieCroiseeVerticale = new THREE.BoxGeometry(0.035, HAUTEUR_FENETRE, PROFONDEUR_VITRAGE * 0.75);
+const geometrieCroiseeHorizontale = new THREE.BoxGeometry(LARGEUR_FENETRE, 0.035, PROFONDEUR_VITRAGE * 0.75);
+const geometrieRebord = new THREE.BoxGeometry(LARGEUR_FENETRE + EPAISSEUR_CADRE * 4, 0.05, EPAISSEUR_MUR * 2);
 
 function fenetre(m: Mur): THREE.Group {
   const groupe = new THREE.Group();
   groupe.name = 'fenetre';
 
-  const cadre = new THREE.Mesh(new THREE.BoxGeometry(LARGEUR_FENETRE + 0.08, HAUTEUR_FENETRE + 0.08, EPAISSEUR_MUR * 1.02), materiauCadre);
-  const vitre = new THREE.Mesh(new THREE.BoxGeometry(LARGEUR_FENETRE, HAUTEUR_FENETRE, EPAISSEUR_MUR * 1.1), materiauVitre);
-  groupe.add(cadre, vitre);
-  groupe.position.set(m.x, HAUTEUR_MUR * 0.55, m.z);
+  groupe.add(new THREE.Mesh(geometrieVitre, materiauVitre));
+  groupe.add(new THREE.Mesh(geometrieCroiseeVerticale, materiauCadre));
+  groupe.add(new THREE.Mesh(geometrieCroiseeHorizontale, materiauCadre));
+
+  // Les 4 montants du cadre, à l'extérieur du rectangle de la vitre : ils ne la recouvrent jamais.
+  for (const y of [HAUTEUR_FENETRE / 2 + EPAISSEUR_CADRE / 2, -HAUTEUR_FENETRE / 2 - EPAISSEUR_CADRE / 2]) {
+    const montant = new THREE.Mesh(geometrieMontantHorizontal, materiauCadre);
+    montant.position.y = y;
+    groupe.add(montant);
+  }
+  for (const x of [LARGEUR_FENETRE / 2 + EPAISSEUR_CADRE / 2, -LARGEUR_FENETRE / 2 - EPAISSEUR_CADRE / 2]) {
+    const montant = new THREE.Mesh(geometrieMontantVertical, materiauCadre);
+    montant.position.x = x;
+    groupe.add(montant);
+  }
+
+  const rebord = new THREE.Mesh(geometrieRebord, materiauCadre);
+  rebord.position.y = -HAUTEUR_FENETRE / 2 - EPAISSEUR_CADRE - 0.03;
+  groupe.add(rebord);
+
+  groupe.position.set(m.x, HAUTEUR_MUR * 0.52, m.z);
   if (m.orientation === 'le-long-de-z') groupe.rotation.y = Math.PI / 2;
   return groupe;
 }
 
 // ---------- Portes ----------
-const LARGEUR_PORTE = 0.8;
+// Un vantail ouvert à angle droit (comme sur un plan d'architecte) plutôt qu'entrouvert de travers :
+// à angle droit, il se lit tout de suite comme « une porte ouverte », pas comme un objet qui flotte.
+// Deux montants et un linteau dessinent le cadre du passage, pour que l'ouverture dans le mur soit nette.
+const LARGEUR_PORTE = 0.72;
 const HAUTEUR_PORTE = HAUTEUR_MUR * 0.85;
-const ANGLE_OUVERTURE = THREE.MathUtils.degToRad(62);
-const materiauVantail = new THREE.MeshLambertMaterial({ color: '#b08763' });
+const ANGLE_OUVERTURE = Math.PI / 2;
+const materiauVantail = new THREE.MeshLambertMaterial({ color: '#8fa6a0' }); // vert-gris, net et distinct du bois des lits
+const materiauPoignee = new THREE.MeshLambertMaterial({ color: '#6b7a76' });
 const materiauMontant = new THREE.MeshLambertMaterial({ color: '#fbfaf7' });
-const geometrieVantail = new THREE.BoxGeometry(LARGEUR_PORTE, HAUTEUR_PORTE, 0.05);
-const geometrieMontant = new THREE.BoxGeometry(0.08, HAUTEUR_MUR, 0.08);
+const geometrieVantail = new THREE.BoxGeometry(LARGEUR_PORTE, HAUTEUR_PORTE, 0.045);
+const geometrieMontant = new THREE.BoxGeometry(0.1, HAUTEUR_MUR, 0.1);
+const geometrieLinteau = new THREE.BoxGeometry(1, 0.08, 0.1);
+const geometriePoignee = new THREE.SphereGeometry(0.025, 8, 6);
 
-/** Un vantail entrouvert, posé sur un gond à l'un des bords de la case de porte, plus deux montants. */
+/** Un vantail ouvert à angle droit, posé sur un gond à l'un des bords de la case de porte, plus le cadre du passage. */
 function porteEntrouverte(p: Porte): THREE.Group {
   const groupe = new THREE.Group();
   groupe.name = 'porte';
 
   const vantail = new THREE.Mesh(geometrieVantail, materiauVantail);
   vantail.position.set(LARGEUR_PORTE / 2, 0, 0); // le gond (origine du pivot) reste à l'un des bouts de la case
+  const poignee = new THREE.Mesh(geometriePoignee, materiauPoignee);
+  poignee.position.set(LARGEUR_PORTE - 0.08, 0, 0.03);
+  vantail.add(poignee);
 
   const pivot = new THREE.Group();
   pivot.add(vantail);
   pivot.position.y = HAUTEUR_PORTE / 2;
 
   if (p.orientation === 'le-long-de-x') {
-    pivot.position.x = p.x - LARGEUR_PORTE / 2;
-    pivot.position.z = p.z;
+    pivot.position.set(p.x - LARGEUR_PORTE / 2, pivot.position.y, p.z);
     pivot.rotation.y = ANGLE_OUVERTURE;
   } else {
-    pivot.position.x = p.x;
-    pivot.position.z = p.z - LARGEUR_PORTE / 2;
+    pivot.position.set(p.x, pivot.position.y, p.z - LARGEUR_PORTE / 2);
     pivot.rotation.y = Math.PI / 2 + ANGLE_OUVERTURE;
   }
   groupe.add(pivot);
 
+  // Cadre du passage : un montant à chaque bord de la case, un linteau par-dessus.
   const demiLargeur = p.orientation === 'le-long-de-x' ? new THREE.Vector3(0.5, 0, 0) : new THREE.Vector3(0, 0, 0.5);
   for (const sens of [-1, 1]) {
     const montant = new THREE.Mesh(geometrieMontant, materiauMontant);
     montant.position.set(p.x + demiLargeur.x * sens, HAUTEUR_MUR / 2, p.z + demiLargeur.z * sens);
     groupe.add(montant);
   }
+  const linteau = new THREE.Mesh(geometrieLinteau, materiauMontant);
+  linteau.position.set(p.x, HAUTEUR_MUR, p.z);
+  if (p.orientation === 'le-long-de-z') linteau.rotation.y = Math.PI / 2;
+  groupe.add(linteau);
 
   return groupe;
 }

@@ -119,3 +119,9 @@ Trois lignes par session : ce qui a été fait, ce qui reste à surveiller, la p
 - **Fait** : sols texturés par type de pièce (parquet dans les chambres et les pièces collectives, carrelage au poste de soins et dans les services, mouchetis sur le patio), fenêtres bleutées sur les murs qui donnent sur l'extérieur, portes en bois entrouvertes à chaque seuil (orientation calculée dans `src/regles/plan.ts`, 5 tests ajoutés), éclairage teinté chaud. `pnpm verifier` OK (75 tests), vérifié dans Chromium à 1280 px (zoomé sur les détails) et 390 px, aucune erreur console.
 - **À surveiller** : aucune fenêtre sur les murs autour du patio (seulement sur le vrai pourtour du bâtiment) ; reste G.4 (objet métier en 3D) avant de clore la phase 2 bis.
 - **Prochaine tâche** : G.4 (objet métier en 3D) ou 3.1 (rédaction des missions), au choix d'Audrey.
+
+## 24/10/2026 · Correction des portes et fenêtres (retour d'Audrey sur la tâche G.3)
+
+- **Fait** : Audrey a trouvé les portes incohérentes (vantail entrouvert de travers, couleur du bois trop proche des lits) et les fenêtres pas réalistes (un bug les cachait : le cadre, plus grand dans les 3 dimensions et centré au même endroit que la vitre, la recouvrait entièrement). Portes refaites ouvertes à angle droit (comme sur un plan), couleur vert-gris distincte du bois des lits, montants et linteau autour du passage. Fenêtres refaites avec un cadre en 4 montants autour de la vitre (qui ne la cachent plus), une croisée et un rebord. `pnpm verifier` OK (70 tests), revérifié dans Chromium, plusieurs zooms et une rotation de la vue.
+- **À surveiller** : une fenêtre se lit bien sur les murs qui font face à la caméra, moins sur ceux vus presque de profil (la vue isométrique) ; c'est inhérent à ce style de décor, pas un bug.
+- **Prochaine tâche** : relecture par Audrey ; sinon G.4 ou 3.1.
