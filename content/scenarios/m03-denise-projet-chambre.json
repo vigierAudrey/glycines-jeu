@@ -1,0 +1,79 @@
+{
+  "id": "m03-denise-projet-chambre",
+  "statut": "brouillon",
+  "titre": "Debout, à son rythme",
+  "duree_min": 15,
+  "sequence_requise": "S2",
+  "lieu": "chambre-denise",
+  "personnages": ["denise", "joueur", "animatrice"],
+  "competences": [
+    { "code": "C2.1.3", "critere": "Adaptation des gestes aux capacités et aux besoins de la personne âgée." },
+    { "code": "CT4.2", "critere": "Respect du projet de vie." },
+    { "code": "C2.2.2", "critere": "Participation de la personne." }
+  ],
+  "situation": "Il est le matin. Mme Denise comprend les consignes ; elle pousse sur les accoudoirs, tient debout avec son aide et pivote elle-même. Elle a un projet de personnalisation de sa chambre.",
+  "objectif_eleve": "L'aider à se lever en la laissant faire ce qu'elle sait faire, puis la faire participer à son projet de chambre.",
+  "note_pour_audrey": "Brouillon rédigé pour la tâche 3.1, à partir du repris_du_cours de Mme Denise. À relire avant de passer le statut à valide.",
+  "etapes": [
+    {
+      "id": "lever",
+      "type": "dialogue",
+      "consigne": "Mme Denise est assise dans son fauteuil et va se lever.",
+      "interlocuteur": "denise",
+      "replique": "Je suis prête à me lever.",
+      "verbal": [
+        { "texte": "Mme Denise, prenez appui sur les accoudoirs quand vous êtes prête, je reste à côté.", "confiance": 2, "points": { "C2.1.3": 2 }, "retour": "Vous la laissez pousser elle-même sur les accoudoirs et pivoter, comme elle sait le faire, en restant présente pour la sécurité." },
+        { "texte": "Je vous lève.", "confiance": -1, "retour": "Elle tient debout avec son aide et pivote elle-même : la lever sans la laisser faire ne respecte pas ses capacités." },
+        { "texte": "Allez-y, dépêchez-vous.", "confiance": -1, "retour": "Un ton pressant, sans expliquer le geste." }
+      ],
+      "paraverbal": [
+        { "texte": "Voix calme, j'explique chaque étape.", "confiance": 1, "points": { "C2.1.3": 1 }, "retour": "Expliquer chaque étape aide à se repérer dans le mouvement." },
+        { "texte": "Je ne dis rien pendant le geste.", "confiance": -1, "retour": "Sans un mot, elle peut être surprise par le mouvement." },
+        { "texte": "Voix pressée.", "confiance": -1, "retour": "La précipitation ne respecte pas son rythme." }
+      ],
+      "non_verbal": [
+        { "texte": "Je reste proche, mains prêtes à la soutenir sans la devancer.", "confiance": 1, "points": { "C2.1.3": 1 }, "retour": "Vous êtes prête à intervenir sans faire le geste à sa place." },
+        { "texte": "Je me tiens loin, occupée ailleurs.", "confiance": -2, "retour": "Elle a besoin de votre présence pour la sécurité du mouvement." },
+        { "texte": "Je la tiens fermement dès le départ.", "confiance": -1, "retour": "Vous la privez de faire le mouvement qu'elle sait faire seule." }
+      ]
+    },
+    {
+      "id": "projet-chambre",
+      "type": "dialogue",
+      "consigne": "Une fois debout, Mme Denise vous parle de son projet.",
+      "interlocuteur": "denise",
+      "replique": "J'aimerais ranger mes affaires et refaire un peu ma chambre.",
+      "verbal": [
+        { "texte": "Je vous écoute, dites-moi ce que vous aimeriez changer.", "confiance": 2, "points": { "CT4.2": 2, "C2.2.2": 1 }, "retour": "Vous l'écoutez et vous l'invitez à dire ses souhaits pour son projet." },
+        { "texte": "On verra ça plus tard.", "confiance": -2, "retour": "Son projet de personnalisation est mis de côté." },
+        { "texte": "Qu'est-ce que vous voulez changer ?", "confiance": 1, "points": { "C2.2.2": 1 }, "retour": "Une question directe qui recueille son souhait, mais avec moins d'écoute que la première option." }
+      ],
+      "paraverbal": [
+        { "texte": "Je m'arrête, je prends le temps de l'écouter.", "confiance": 1, "points": { "CT4.2": 1 }, "retour": "S'arrêter montre que son projet compte." },
+        { "texte": "Je continue à ranger sans m'arrêter.", "confiance": -1, "retour": "Elle peut avoir l'impression de ne pas être entendue." },
+        { "texte": "Je réponds en sortant de la chambre.", "confiance": -2, "retour": "Elle n'est plus écoutée du tout." }
+      ],
+      "non_verbal": [
+        { "texte": "Je m'assieds près d'elle pour parler du projet.", "confiance": 1, "points": { "C2.2.2": 1 }, "retour": "Se mettre à son niveau pour parler de son projet favorise sa participation." },
+        { "texte": "Je reste debout, dos tourné.", "confiance": -2, "retour": "Une attitude qui ne favorise pas l'échange." },
+        { "texte": "Je regarde ma montre pendant qu'elle parle.", "confiance": -1, "retour": "Montre un manque de disponibilité pour l'écouter." }
+      ]
+    },
+    {
+      "id": "tri",
+      "type": "decision",
+      "consigne": "Mme Denise veut trier et ranger ses affaires personnelles pour son projet de chambre.",
+      "question": "Que faites-vous ?",
+      "choix": [
+        { "decision": "agir", "texte": "Je l'aide à trier avec elle, en lui laissant choisir ce qu'elle garde.", "points": { "C2.2.2": 2 }, "retour": "Elle participe aux choix : c'est son projet de personnalisation." },
+        { "decision": "adapter", "texte": "Je trie moi-même ses affaires pendant qu'elle se repose.", "retour": "C'est son projet : elle doit participer aux choix de tri et de rangement." },
+        { "decision": "alerter", "texte": "Je préviens l'animatrice pour qu'elle s'en occupe à ma place.", "retour": "Ce n'est pas la bonne situation : trier avec elle fait partie de ce que vous pouvez faire." }
+      ]
+    }
+  ],
+  "debriefing": [
+    "Qu'avez-vous laissé faire à Mme Denise pendant le lever, et pourquoi ?",
+    "Comment avez-vous pris en compte son projet de personnalisation de sa chambre ?",
+    "Pourquoi l'avez-vous fait participer au tri de ses affaires ?"
+  ]
+}

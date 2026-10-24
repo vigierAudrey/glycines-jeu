@@ -1,0 +1,79 @@
+{
+  "id": "m02-yvette-consigne-courte",
+  "statut": "brouillon",
+  "titre": "Une consigne à la fois",
+  "duree_min": 15,
+  "sequence_requise": "S2",
+  "lieu": "chambre-yvette",
+  "personnages": ["yvette", "joueur", "aide-soignante"],
+  "competences": [
+    { "code": "CT4.1", "critere": "Utilisation d’un ton, d’un vocabulaire ou d’un outil adapté au niveau de compréhension de la personne." },
+    { "code": "CT3.2", "critere": "Repérage du degré d’autonomie de la personne âgée et prise en compte de ces éléments pour la mise en œuvre de ses actions." },
+    { "code": "CT4.2", "critere": "Écoute attentive de la personne." }
+  ],
+  "situation": "Il est le matin. Mme Yvette comprend une consigne courte, lit une horloge simple, mais oublie une information récente.",
+  "objectif_eleve": "Donner une consigne adaptée, puis réagir calmement si Mme Yvette l'a déjà oubliée.",
+  "note_pour_audrey": "Brouillon rédigé pour la tâche 3.1, à partir du repris_du_cours de Mme Yvette. À relire avant de passer le statut à valide.",
+  "etapes": [
+    {
+      "id": "consigne",
+      "type": "dialogue",
+      "consigne": "Vous entrez dans la chambre de Mme Yvette.",
+      "interlocuteur": "yvette",
+      "replique": "Oui ?",
+      "verbal": [
+        { "texte": "Mme Yvette, il est l'heure du petit-déjeuner. On y va ?", "confiance": 2, "points": { "CT4.1": 2 }, "retour": "Une phrase courte avec une seule information : adaptée à ce qu'elle comprend." },
+        { "texte": "Alors Mme Yvette, on se lève, on s'habille et on va à la salle à manger pour le petit-déjeuner.", "confiance": -1, "retour": "Plusieurs informations à la fois : plus difficile à suivre pour elle." },
+        { "texte": "Debout !", "confiance": -1, "retour": "Trop brusque, sans explication." }
+      ],
+      "paraverbal": [
+        { "texte": "Je parle calmement, en articulant.", "confiance": 1, "points": { "CT4.1": 1 }, "retour": "Un débit calme facilite la compréhension d'une consigne courte." },
+        { "texte": "Je parle vite.", "confiance": -1, "retour": "Trop rapide pour une consigne qu'elle doit retenir." },
+        { "texte": "Je chuchote.", "confiance": 0, "retour": "Elle risque de ne pas bien entendre." }
+      ],
+      "non_verbal": [
+        { "texte": "Je montre l'horloge de la chambre en même temps que je parle.", "confiance": 1, "points": { "CT3.2": 1 }, "retour": "L'horloge, qu'elle sait lire, est un repère stable qui l'aide à se situer dans le temps." },
+        { "texte": "Je montre la porte sans rien dire.", "confiance": 0, "retour": "Un geste seul, sans la phrase, peut ne pas suffire." },
+        { "texte": "Je tourne le dos en parlant.", "confiance": -2, "retour": "Elle a besoin de vous voir pour bien suivre la consigne." }
+      ]
+    },
+    {
+      "id": "oubli",
+      "type": "dialogue",
+      "consigne": "Une minute plus tard, Mme Yvette a oublié ce que vous venez de lui dire.",
+      "interlocuteur": "yvette",
+      "replique": "On va où déjà ?",
+      "verbal": [
+        { "texte": "On va à la salle à manger pour le petit-déjeuner, comme je vous l'ai déjà dit.", "confiance": -1, "retour": "Lui rappeler qu'elle a déjà oublié peut la mettre en difficulté." },
+        { "texte": "On va à la salle à manger pour le petit-déjeuner.", "confiance": 2, "points": { "CT3.2": 2, "CT4.2": 1 }, "retour": "Vous répétez calmement la même information courte, sans lui reprocher d'avoir oublié : c'est attendu avec elle." },
+        { "texte": "Vous ne vous souvenez jamais de rien.", "confiance": -2, "retour": "Un jugement blessant : oublier une information récente n'est pas une faute pour elle." }
+      ],
+      "paraverbal": [
+        { "texte": "Même ton calme que la première fois.", "confiance": 1, "points": { "CT4.2": 1 }, "retour": "La répétition calme, sans agacement, est ce qui l'aide." },
+        { "texte": "Ton agacé.", "confiance": -2, "retour": "L'agacement peut l'inquiéter et ne l'aide pas à comprendre." },
+        { "texte": "Ton ironique.", "confiance": -2, "retour": "L'ironie n'a pas sa place et peut la blesser." }
+      ],
+      "non_verbal": [
+        { "texte": "Je reste près d'elle, visage détendu.", "confiance": 1, "points": { "CT4.2": 1 }, "retour": "Votre calme visible la rassure." },
+        { "texte": "Je lève les yeux au ciel.", "confiance": -2, "retour": "Cette attitude montre de l'agacement, à éviter." },
+        { "texte": "Je m'éloigne en répondant.", "confiance": -1, "retour": "Rester proche aide à l'écoute et à la compréhension." }
+      ]
+    },
+    {
+      "id": "lever",
+      "type": "decision",
+      "consigne": "Mme Yvette commence à se lever seule depuis son fauteuil.",
+      "question": "Que faites-vous ?",
+      "choix": [
+        { "decision": "adapter", "texte": "Je reste à côté, prête à l'aider si besoin, mais je la laisse faire.", "points": { "CT3.2": 2 }, "retour": "Vous prenez en compte ce qu'elle sait encore faire seule." },
+        { "decision": "agir", "texte": "Je la lève moi-même tout de suite.", "retour": "Elle comprend une consigne courte et peut participer : laissez-lui le temps d'essayer." },
+        { "decision": "alerter", "texte": "Je vais chercher l'aide-soignante avant qu'elle ne se lève.", "retour": "Ce n'est pas nécessaire ici : rester à côté suffit pour la sécurité." }
+      ]
+    }
+  ],
+  "debriefing": [
+    "Comment avez-vous formulé votre consigne pour qu'elle reste courte et simple ?",
+    "Qu'avez-vous fait quand Mme Yvette a oublié ce que vous veniez de lui dire ?",
+    "Pourquoi l'avez-vous laissée se lever elle-même, à son rythme ?"
+  ]
+}

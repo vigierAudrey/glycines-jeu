@@ -1,0 +1,66 @@
+{
+  "id": "m04-louis-leve-personne",
+  "statut": "brouillon",
+  "titre": "Pas seule avec le lève-personne",
+  "duree_min": 15,
+  "sequence_requise": "S2",
+  "lieu": "chambre-louis",
+  "personnages": ["louis", "joueur", "aide-soignante"],
+  "competences": [
+    { "code": "CT3.1", "critere": "Identification des ressources et des contraintes du cadre de l’intervention, dont celles relatives aux risques professionnels." },
+    { "code": "C2.1.3", "critere": "Respect des règles d’hygiène, de sécurité et d’ergonomie." },
+    { "code": "CT4.1", "critere": "Adaptation du mode de relation à la situation de la personne âgée." }
+  ],
+  "situation": "Il est le matin. M. Louis nécessite un lève-personne et deux professionnels formés pour être levé.",
+  "objectif_eleve": "Reconnaître qu'il faut être deux pour ce transfert, et aller chercher un collègue formé avant de commencer.",
+  "note_pour_audrey": "Brouillon rédigé pour la tâche 3.1, à partir du repris_du_cours de M. Louis. À relire avant de passer le statut à valide.",
+  "etapes": [
+    {
+      "id": "entrer",
+      "type": "dialogue",
+      "consigne": "Vous entrez dans la chambre de M. Louis, qui est encore au lit.",
+      "interlocuteur": "louis",
+      "replique": "Bonjour.",
+      "verbal": [
+        { "texte": "Bonjour M. Louis. Je vais chercher un collègue formé, pour vous lever avec le lève-personne en toute sécurité.", "confiance": 2, "points": { "CT4.1": 2, "CT3.1": 1 }, "retour": "Vous expliquez ce qui va se passer et vous prévoyez d'être deux, comme il le faut pour ce transfert." },
+        { "texte": "Bonjour, je vous lève toute seule, ça ira.", "confiance": -2, "retour": "Le lève-personne demande deux professionnels formés : seule, ce n'est pas sécurisé." },
+        { "texte": "On verra plus tard.", "confiance": -1, "retour": "M. Louis attend sans savoir ce qui va se passer." }
+      ],
+      "paraverbal": [
+        { "texte": "Voix posée, j'explique calmement.", "confiance": 1, "points": { "CT4.1": 1 }, "retour": "Un ton posé rassure avant un transfert avec du matériel." },
+        { "texte": "Voix hésitante.", "confiance": 0, "retour": "L'hésitation peut inquiéter avant un transfert." },
+        { "texte": "Voix pressée.", "confiance": -1, "retour": "La précipitation n'est pas adaptée avant un transfert qui demande deux personnes." }
+      ],
+      "non_verbal": [
+        { "texte": "Je vérifie que le lève-personne est bien à côté du lit avant de sortir chercher de l'aide.", "confiance": 1, "points": { "CT3.1": 1 }, "retour": "Vous repérez la ressource matérielle nécessaire au transfert." },
+        { "texte": "Je sors directement sans rien vérifier.", "confiance": 0, "retour": "Vérifier le matériel disponible fait partie de la préparation." },
+        { "texte": "Je reste les bras croisés devant lui.", "confiance": -1, "retour": "Une attitude fermée, peu rassurante avant un transfert." }
+      ]
+    },
+    {
+      "id": "seule-ou-collegue",
+      "type": "decision",
+      "consigne": "Le moment est venu de lever M. Louis du lit.",
+      "question": "Que faites-vous ?",
+      "choix": [
+        { "decision": "agir", "texte": "Je vais chercher un collègue formé avant de commencer le transfert avec le lève-personne.", "points": { "CT3.1": 3, "C2.1.3": 2 }, "retour": "M. Louis nécessite un lève-personne et deux professionnels formés : vous respectez cette règle de sécurité." },
+        { "decision": "adapter", "texte": "Je commence seule, doucement.", "retour": "Commencer seule un transfert qui demande deux professionnels formés n'est pas sécurisé, même doucement." },
+        { "decision": "alerter", "texte": "J'actionne la sonnette d'urgence sans rien dire à M. Louis.", "retour": "Vous pouvez chercher de l'aide en expliquant la situation à M. Louis, sans l'inquiéter inutilement." }
+      ]
+    },
+    {
+      "id": "prevenir",
+      "type": "relais",
+      "consigne": "Allez chercher la collègue qui pourra vous aider pour le transfert avec le lève-personne.",
+      "destinataire": "aide-soignante",
+      "points": { "CT3.1": 1 },
+      "retour": "Nadia, aide-soignante, peut vous accompagner pour ce transfert à deux.",
+      "retour_erreur": "Cette personne ne peut pas vous aider pour ce transfert. Qui pourrait être formée et disponible dans l'aile B ?"
+    }
+  ],
+  "debriefing": [
+    "Pourquoi M. Louis ne peut-il pas être levé par une seule personne ?",
+    "Qu'avez-vous vérifié avant d'aller chercher de l'aide ?",
+    "À qui vous êtes-vous adressé pour le transfert, et pourquoi ?"
+  ]
+}

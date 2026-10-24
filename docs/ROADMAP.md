@@ -54,7 +54,8 @@ Légende : `[x]` fait · `[ ]` à faire · 🧑‍🏫 ce qu'Audrey seule peut f
 
 ## Phase 3 · Tranche verticale : « Le matin de M. Karim »
 
-- [ ] **3.1** L'IA rédige les 3 ou 4 missions à partir du référentiel et des cours ; 🧑‍🏫 Audrey les relit, les corrige et passe leur statut à `valide`.
+- [x] **3.1** L'IA rédige les 3 ou 4 missions à partir du référentiel et des cours ; 🧑‍🏫 Audrey les relit, les corrige et passe leur statut à `valide`.
+  4 missions rédigées en brouillon (m01 à m04), une par résident ayant du contenu dans `repris_du_cours` (Rose, Yvette, Denise, Louis). M. André n'a pas de mission : son `repris_du_cours` est vide. 🧑‍🏫 À faire par Audrey : relire les 4 missions (dans le jeu avec `?brouillons&sequence=S2`, ou sur la page enseignante) et passer leur statut à `valide` dans chaque fichier une fois corrigées.
 - [ ] **3.2** Intégrer les missions et jouer la séquence complète.
 - [ ] **3.3** 🧑‍🏫 Test avec 2 ou 3 élèves : noter le temps, les blocages, ce qu'ils disent au débriefing.
 - [ ] **3.4** Corriger d'après le test.

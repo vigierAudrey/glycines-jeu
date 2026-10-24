@@ -1,0 +1,79 @@
+{
+  "id": "m01-rose-patio-matin",
+  "statut": "brouillon",
+  "titre": "Le patio avant le groupe",
+  "duree_min": 15,
+  "sequence_requise": "S2",
+  "lieu": "chambre-rose",
+  "personnages": ["rose", "joueur", "animatrice"],
+  "competences": [
+    { "code": "C2.1.3", "critere": "Respect du rythme, des habitudes et des attentes de la personne." },
+    { "code": "CT4.2", "critere": "Observation de ses habitudes." },
+    { "code": "CT4.1", "critere": "Intervention et attitude adaptées pour amener la personne âgée à participer aux activités de la vie quotidienne." }
+  ],
+  "situation": "Il est le matin. Mme Rose aime s'installer au fauteuil pour aller au patio à cette heure-là.",
+  "objectif_eleve": "Proposer l'habitude du matin de Mme Rose, puis respecter ses choix pendant la matinée.",
+  "note_pour_audrey": "Brouillon rédigé pour la tâche 3.1, à partir du repris_du_cours de Mme Rose. À relire avant de passer le statut à valide.",
+  "etapes": [
+    {
+      "id": "arrivee",
+      "type": "dialogue",
+      "consigne": "Vous entrez dans la chambre de Mme Rose.",
+      "interlocuteur": "rose",
+      "replique": "Oh, déjà debout ?",
+      "verbal": [
+        { "texte": "Bonjour Mme Rose. Je vous installe au fauteuil pour aller au patio, comme vous aimez le matin ?", "confiance": 2, "points": { "CT4.1": 2, "C2.1.3": 1 }, "retour": "Vous proposez l'habitude qu'elle aime le matin et vous lui demandez son accord." },
+        { "texte": "On y va, je vous mets au fauteuil.", "confiance": -1, "points": { "C2.1.3": 1 }, "retour": "Vous l'installez, mais sans lui proposer ce qu'elle aime ni lui demander son avis." },
+        { "texte": "Mme Rose, debout, on se dépêche.", "confiance": -2, "retour": "Aucune proposition adaptée à ses habitudes, et un ton pressant." }
+      ],
+      "paraverbal": [
+        { "texte": "Voix douce, je prends le temps.", "confiance": 1, "points": { "CT4.1": 1 }, "retour": "Un ton calme favorise sa participation." },
+        { "texte": "Voix neutre, rapide.", "confiance": 0, "retour": "Correct, mais un peu rapide pour un début de matinée." },
+        { "texte": "Voix impatiente.", "confiance": -2, "retour": "Elle peut se sentir bousculée dès le matin." }
+      ],
+      "non_verbal": [
+        { "texte": "Je me place à sa hauteur avant de lui parler.", "confiance": 1, "points": { "C2.1.3": 1 }, "retour": "Se mettre à sa hauteur facilite l'échange et la sécurité du transfert au fauteuil." },
+        { "texte": "Je reste debout derrière le fauteuil sans la regarder.", "confiance": -1, "retour": "Elle ne vous voit pas venir, ce qui peut l'inquiéter." },
+        { "texte": "Je commence à pousser le fauteuil sans prévenir.", "confiance": -2, "retour": "Prévenir avant de bouger le fauteuil évite la surprise et le risque de chute." }
+      ]
+    },
+    {
+      "id": "groupe",
+      "type": "decision",
+      "consigne": "L'animatrice propose à Mme Rose de rejoindre le groupe d'animation après le patio. Mme Rose refuse les grands groupes.",
+      "question": "Que faites-vous ?",
+      "choix": [
+        { "decision": "agir", "texte": "Je transmets à l'animatrice que Mme Rose préfère rester au patio, comme elle en a l'habitude.", "points": { "CT4.2": 3 }, "retour": "Vous respectez son habitude connue et vous informez l'animatrice sans la forcer." },
+        { "decision": "adapter", "texte": "Je lui redemande si elle veut peut-être essayer un petit moment.", "retour": "Elle a déjà exprimé son refus des grands groupes : inutile d'insister." },
+        { "decision": "alerter", "texte": "Je vais chercher le cadre de santé pour qu'il décide à sa place.", "retour": "Ce n'est pas la bonne situation : respecter un refus déjà connu fait partie de votre rôle." }
+      ]
+    },
+    {
+      "id": "soeur",
+      "type": "dialogue",
+      "consigne": "Au patio, Mme Rose vous parle d'une de ses habitudes.",
+      "interlocuteur": "rose",
+      "replique": "Vous savez, j'aime appeler ma sœur le mercredi.",
+      "verbal": [
+        { "texte": "C'est une bonne habitude, je transmets pour qu'on y pense le mercredi.", "confiance": 2, "points": { "CT4.2": 1, "C2.1.3": 1 }, "retour": "Vous prenez en compte son habitude et vous la transmettez pour qu'elle soit respectée." },
+        { "texte": "Ah oui, d'accord.", "confiance": 0, "retour": "Vous écoutez, mais rien n'est transmis pour que l'habitude soit suivie." },
+        { "texte": "On verra ça plus tard.", "confiance": -2, "retour": "Son habitude est mise de côté." }
+      ],
+      "paraverbal": [
+        { "texte": "Je m'arrête, voix attentive.", "confiance": 1, "points": { "CT4.1": 1 }, "retour": "S'arrêter pour l'écouter montre que son habitude compte." },
+        { "texte": "Je réponds en continuant à m'occuper d'autre chose.", "confiance": -1, "retour": "Elle peut avoir l'impression de ne pas être entendue." },
+        { "texte": "Voix distraite.", "confiance": -1, "retour": "Un ton distrait ne montre pas que vous l'écoutez vraiment." }
+      ],
+      "non_verbal": [
+        { "texte": "Je m'assieds un instant près d'elle pour l'écouter.", "confiance": 1, "points": { "CT4.2": 1 }, "retour": "Se mettre à son niveau favorise l'échange sur ses habitudes." },
+        { "texte": "Je reste debout, prête à repartir.", "confiance": -1, "retour": "Votre attitude montre que vous n'avez pas vraiment le temps de l'écouter." },
+        { "texte": "Je regarde ailleurs pendant qu'elle parle.", "confiance": -2, "retour": "Elle peut sentir que son habitude n'intéresse pas." }
+      ]
+    }
+  ],
+  "debriefing": [
+    "Qu'avez-vous proposé à Mme Rose pour respecter son habitude du matin ?",
+    "Pourquoi avez-vous respecté son refus de rejoindre le groupe d'animation ?",
+    "Qu'avez-vous fait de son souhait d'appeler sa sœur le mercredi ?"
+  ]
+}
