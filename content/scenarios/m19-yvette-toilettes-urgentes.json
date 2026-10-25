@@ -1,0 +1,76 @@
+{
+  "id": "m19-yvette-toilettes-urgentes",
+  "statut": "brouillon",
+  "titre": "Une demande qui ne peut pas attendre",
+  "duree_min": 15,
+  "sequence_requise": "S4",
+  "lieu": "chambre-yvette",
+  "personnages": ["joueur", "yvette", "ash"],
+  "competences": [
+    { "code": "C2.1.5", "critere": "Relation privilégiée et sécurisante favorisant l’autonomie." },
+    { "code": "CT3.3", "critere": "Prise en compte du contexte de l’activité." }
+  ],
+  "situation": "Mme Yvette va habituellement aux toilettes au réveil et avant le déjeuner. Là, en dehors de ces horaires, elle vous dit qu'elle doit y aller vite. Un tapis relevé gêne le trajet et la porte de la salle d'eau ferme mal.",
+  "objectif_eleve": "Répondre sans délai à sa demande, sécuriser son trajet dans vos limites, et protéger son intimité.",
+  "note_pour_audrey": "Brouillon ajouté pour couvrir C2.1.5 (tâche 4.1), à partir de la situation professionnelle de votre séquence 4, séance 7 (« préserver la continence : environnement, habitudes et intimité ») : Mme Yvette demande à aller aux toilettes en dehors de ses horaires habituels, un tapis relevé gêne le trajet, la porte ferme mal. Compétences reprises telles qu'indiquées dans cette séance (C2.1.5 principale, CT3.3 en appui, repris de la liste « En appui : CT4.1, CT3.3 »). À relire avant de passer le statut à valide.",
+  "etapes": [
+    {
+      "id": "demande-urgente",
+      "type": "dialogue",
+      "consigne": "Mme Yvette vous dit, en dehors de ses horaires habituels, qu'elle doit aller aux toilettes vite.",
+      "interlocuteur": "yvette",
+      "replique": "Je dois y aller, vite !",
+      "verbal": [
+        { "texte": "Je vous accompagne tout de suite.", "confiance": 2, "points": { "C2.1.5": 2 }, "retour": "Vous répondez sans délai, même si ce n'est pas l'horaire habituel." },
+        { "texte": "On verra dans un moment, ce n'est pas encore l'heure.", "confiance": -2, "retour": "Faire attendre une demande de ce type par convenance ne respecte pas son besoin." },
+        { "texte": "Vous êtes sûre que vous ne pouvez pas patienter un peu ?", "confiance": -1, "retour": "Mieux vaut répondre vite plutôt que mettre sa demande en doute." }
+      ],
+      "paraverbal": [
+        { "texte": "Je réponds avec un ton calme, sans la presser.", "confiance": 1, "points": { "C2.1.5": 1 }, "retour": "Un ton calme rassure, sans l'infantiliser ni la presser." },
+        { "texte": "Ton agacé, parce que ce n'est pas l'heure prévue.", "confiance": -2, "retour": "L'agacement n'a pas sa place devant une demande de ce type." },
+        { "texte": "Ton très pressé.", "confiance": -1, "retour": "La précipitation peut l'inquiéter." }
+      ],
+      "non_verbal": [
+        { "texte": "Je l'aide tout de suite à se lever, à son rythme.", "confiance": 1, "points": { "C2.1.5": 1 }, "retour": "Vous l'accompagnez sans la bousculer." },
+        { "texte": "Je termine ce que je faisais avant de m'en occuper.", "confiance": -2, "retour": "Une demande de ce type ne peut pas attendre." },
+        { "texte": "Je m'éloigne pour prévenir quelqu'un d'autre d'abord.", "confiance": -1, "retour": "Vous pouvez répondre vous-même à cette demande simple." }
+      ]
+    },
+    {
+      "id": "tapis",
+      "type": "decision",
+      "consigne": "En l'accompagnant, un tapis relevé gêne le trajet vers la salle d'eau.",
+      "question": "Que faites-vous ?",
+      "choix": [
+        { "decision": "agir", "texte": "Je l'aplatis tout de suite pour sécuriser le passage, puis je signale ce qui l'a soulevé.", "points": { "CT3.3": 2 }, "retour": "Vous sécurisez l'environnement dans vos limites, puis vous transmettez." },
+        { "decision": "adapter", "texte": "Je lui dis de faire attention en marchant dessus.", "retour": "L'obstacle reste là pour tous ses déplacements." },
+        { "decision": "alerter", "texte": "Je vais chercher quelqu'un avant de toucher au tapis.", "retour": "Aplatir un tapis relevé reste dans vos limites." }
+      ]
+    },
+    {
+      "id": "porte",
+      "type": "decision",
+      "consigne": "La porte de la salle d'eau ferme mal : elle ne protège plus bien son intimité pendant que vous l'installez.",
+      "question": "Que faites-vous ?",
+      "choix": [
+        { "decision": "agir", "texte": "Je reste juste devant, hors de vue, pour qu'elle garde son intimité, et je signalerai la porte.", "points": { "C2.1.5": 2 }, "retour": "Vous protégez sa pudeur avec les moyens disponibles, sans réparer vous-même la porte." },
+        { "decision": "adapter", "texte": "Je laisse la porte comme ça, ce n'est pas très grave.", "retour": "Son intimité n'est alors plus protégée pendant un moment qui le demande." },
+        { "decision": "alerter", "texte": "Je répare la fermeture moi-même avant de la laisser.", "retour": "Réparer une porte ne fait pas partie de votre rôle : il faut le signaler." }
+      ]
+    },
+    {
+      "id": "signaler-porte",
+      "type": "relais",
+      "consigne": "Allez signaler la porte qui ferme mal à la bonne personne.",
+      "destinataire": "ash",
+      "points": { "CT3.3": 1 },
+      "retour": "Julien, agent de service hospitalier, peut vérifier cette porte.",
+      "retour_erreur": "Cette personne ne s'occupe pas de l'entretien des locaux. Qui s'en charge dans l'aile B ?"
+    }
+  ],
+  "debriefing": [
+    "Pourquoi avez-vous répondu tout de suite à sa demande, même hors de son horaire habituel ?",
+    "Pourquoi avez-vous protégé son intimité sans réparer la porte vous-même ?",
+    "Qu'avez-vous signalé, et à qui ?"
+  ]
+}

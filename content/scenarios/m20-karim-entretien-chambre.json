@@ -1,0 +1,67 @@
+{
+  "id": "m20-karim-entretien-chambre",
+  "statut": "brouillon",
+  "titre": "Nettoyer sans déranger",
+  "duree_min": 15,
+  "sequence_requise": "S3",
+  "lieu": "chambre-karim",
+  "personnages": ["joueur", "karim"],
+  "competences": [
+    { "code": "C2.2.1", "critere": "Adhésion de la personne." },
+    { "code": "C2.2.2", "critere": "Identification des habitudes et des souhaits de la personne." }
+  ],
+  "situation": "M. Karim accepte l'entretien journalier de sa chambre, à condition de garder son carnet de recettes accessible, et souhaite utiliser sa salle d'eau dans trente minutes.",
+  "objectif_eleve": "Rechercher son accord, organiser l'entretien dans l'ordre prévu, et protéger ses effets personnels.",
+  "note_pour_audrey": "Brouillon ajouté pour couvrir C2.2.1 (tâche 4.1), à partir de la situation professionnelle de votre séquence 3, séance 7 (« TP entretien journalier : chambre, salle d'eau et surfaces ») : M. Karim accepte l'entretien mais veut garder son carnet de recettes accessible et sa salle d'eau dans trente minutes. Compétences reprises telles qu'indiquées dans cette séance (C2.2.1 principale, C2.2.2 en appui). À relire avant de passer le statut à valide.",
+  "etapes": [
+    {
+      "id": "accord",
+      "type": "dialogue",
+      "consigne": "Vous arrivez pour l'entretien journalier de la chambre de M. Karim.",
+      "interlocuteur": "karim",
+      "replique": "D'accord, mais j'aimerais garder mon carnet de recettes à portée de main, et j'ai besoin de la salle d'eau dans une demi-heure.",
+      "verbal": [
+        { "texte": "Je vous explique ce que je vais faire, et je vous demande où déposer votre carnet en attendant.", "confiance": 2, "points": { "C2.2.1": 2 }, "retour": "Vous recherchez son accord et respectez son effet personnel." },
+        { "texte": "Je commence tout de suite, vous me direz si ça vous gêne.", "confiance": -1, "retour": "Mieux vaut rechercher son accord avant de commencer." },
+        { "texte": "Je range votre carnet dans un tiroir, ce sera plus pratique.", "confiance": -2, "retour": "Un effet personnel se déplace avec son accord, à l'endroit qu'il choisit." }
+      ],
+      "paraverbal": [
+        { "texte": "Je précise que je serai prête avant les trente minutes.", "confiance": 1, "points": { "C2.2.1": 1 }, "retour": "Respecter le temps annoncé fait partie du bon déroulement de l'entretien." },
+        { "texte": "Je ne dis rien sur le temps nécessaire.", "confiance": 0, "retour": "Préciser le temps nécessaire le rassure sur sa salle d'eau." },
+        { "texte": "Je dis que ça prendra le temps qu'il faudra.", "confiance": -1, "retour": "Il attend sa salle d'eau dans trente minutes : le temps annoncé compte pour lui." }
+      ],
+      "non_verbal": [
+        { "texte": "Je lui montre où je vais déposer temporairement ses affaires.", "confiance": 1, "points": { "C2.2.2": 1 }, "retour": "Lui montrer où vous rangez ses affaires le rassure sur leur accessibilité." },
+        { "texte": "Je déplace ses affaires sans les lui montrer.", "confiance": -1, "retour": "Il a besoin de savoir où se trouvent ses affaires." },
+        { "texte": "Je commence sans aucun geste vers lui.", "confiance": -1, "retour": "Un geste vers lui montre que vous tenez compte de sa présence." }
+      ]
+    },
+    {
+      "id": "organisation",
+      "type": "decision",
+      "consigne": "Vous préparez votre chariot avant de commencer l'entretien.",
+      "question": "Par quoi commencez-vous ?",
+      "choix": [
+        { "decision": "agir", "texte": "Je traite d'abord les surfaces hautes et le fond de la chambre, puis je me rapproche de la sortie.", "points": { "C2.2.1": 2 }, "retour": "Vous respectez l'ordre prévu : du plus propre vers le plus sale, du haut vers le bas, du fond vers la sortie." },
+        { "decision": "adapter", "texte": "Je commence par la salle d'eau, ce sera plus rapide.", "retour": "Cet ordre ne respecte pas la progression prévue par le protocole." },
+        { "decision": "alerter", "texte": "J'attends qu'un collègue commence à ma place.", "retour": "Cette tâche fait partie de votre rôle." }
+      ]
+    },
+    {
+      "id": "carnet",
+      "type": "decision",
+      "consigne": "Le carnet de recettes de M. Karim est posé sur la table que vous devez nettoyer.",
+      "question": "Que faites-vous ?",
+      "choix": [
+        { "decision": "agir", "texte": "Je lui demande où le poser pendant que je nettoie la table, puis je le remets à la place qu'il choisit.", "points": { "C2.2.2": 2 }, "retour": "Vous protégez son effet personnel et le remettez à la place qu'il a choisie." },
+        { "decision": "adapter", "texte": "Je le pose par terre le temps de nettoyer.", "retour": "Un effet personnel mérite un endroit propre et accessible, pas le sol." },
+        { "decision": "alerter", "texte": "Je le range dans un tiroir fermé pour qu'il ne gêne plus.", "retour": "Vous décidez alors à sa place d'un endroit qu'il n'a pas choisi." }
+      ]
+    }
+  ],
+  "debriefing": [
+    "Pourquoi avez-vous demandé son accord avant de commencer l'entretien ?",
+    "Dans quel ordre avez-vous traité la chambre, et pourquoi ?",
+    "Qu'avez-vous fait du carnet de recettes de M. Karim ?"
+  ]
+}

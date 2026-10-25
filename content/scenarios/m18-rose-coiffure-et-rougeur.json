@@ -1,0 +1,66 @@
+{
+  "id": "m18-rose-coiffure-et-rougeur",
+  "statut": "brouillon",
+  "titre": "Son choix, pas le vôtre",
+  "duree_min": 15,
+  "sequence_requise": "S4",
+  "lieu": "chambre-rose",
+  "personnages": ["joueur", "rose", "infirmiere"],
+  "competences": [
+    { "code": "C2.1.4", "critere": "Respect du rythme, des habitudes et des attentes de la personne." },
+    { "code": "CT4.1", "critere": "Intervention et attitude adaptées pour amener la personne âgée à participer aux activités de la vie quotidienne." },
+    { "code": "C2.1.6", "critere": "Fidélité de la transmission des éléments observés." }
+  ],
+  "situation": "Avant son rendez-vous, Mme Rose veut se coiffer et utiliser sa crème pour les mains habituelle. Elle refuse le parfum proposé par une camarade.",
+  "objectif_eleve": "Respecter son choix et son rythme, puis réagir correctement si vous observez quelque chose d'inhabituel.",
+  "note_pour_audrey": "Brouillon ajouté pour couvrir C2.1.4 (tâche 4.1), à partir de la situation professionnelle de votre séquence 4, séance 4 (« bien-être socio-esthétique : choix, image de soi et valorisation ») : Mme Rose veut se coiffer et mettre sa crème habituelle, refuse un parfum, présente une petite rougeur près d'un ongle. Compétences reprises telles qu'indiquées dans cette séance (C2.1.4 principale, CT4.1 en appui) ; C2.1.6 ajoutée pour la transmission de la rougeur, comme dans d'autres missions. À relire avant de passer le statut à valide.",
+  "etapes": [
+    {
+      "id": "preparation",
+      "type": "dialogue",
+      "consigne": "Mme Rose se prépare avant son rendez-vous.",
+      "interlocuteur": "rose",
+      "replique": "J'aimerais me coiffer et mettre ma crème, avant d'y aller.",
+      "verbal": [
+        { "texte": "Qu'est-ce que vous aimeriez pour vous préparer aujourd'hui ?", "confiance": 2, "points": { "C2.1.4": 2 }, "retour": "Vous recherchez son choix avant de commencer." },
+        { "texte": "Je vous mets un peu de parfum, ça sentira bon pour votre rendez-vous.", "confiance": -2, "retour": "Elle refuse ce parfum : il faut respecter son refus immédiatement." },
+        { "texte": "On n'a pas beaucoup de temps, on fait vite.", "confiance": -1, "retour": "La précipitation ne respecte pas son rythme." }
+      ],
+      "paraverbal": [
+        { "texte": "Je parle calmement, en lui laissant le temps de répondre.", "confiance": 1, "points": { "CT4.1": 1 }, "retour": "Un ton calme l'encourage à participer à son rythme." },
+        { "texte": "Je parle vite, pressée.", "confiance": -1, "retour": "La précipitation n'aide pas à la faire participer." },
+        { "texte": "Je ne dis rien, je commence directement.", "confiance": -1, "retour": "Commencer sans lui parler ne l'invite pas à participer." }
+      ],
+      "non_verbal": [
+        { "texte": "Je place le miroir et sa trousse à sa portée avant de commencer.", "confiance": 1, "points": { "C2.1.4": 1 }, "retour": "Le matériel accessible lui permet de réaliser elle-même les gestes qu'elle peut faire." },
+        { "texte": "Je commence sans lui montrer le matériel.", "confiance": -1, "retour": "Elle ne peut pas participer si elle ne voit pas ce qui est disponible." },
+        { "texte": "Je reste debout derrière elle sans la regarder.", "confiance": -1, "retour": "Elle a besoin de vous voir pour échanger sur ce qu'elle souhaite." }
+      ]
+    },
+    {
+      "id": "rougeur",
+      "type": "decision",
+      "consigne": "En l'aidant à se coiffer, vous remarquez une petite rougeur inhabituelle près d'un ongle.",
+      "question": "Que faites-vous ?",
+      "choix": [
+        { "decision": "agir", "texte": "Je continue la coiffure sans intervenir sur cette zone, et je transmettrai l'observation.", "points": { "CT4.1": 1 }, "retour": "Vous n'intervenez pas sur une zone inconnue : ce n'est pas un soin que vous réalisez. Vous transmettrez l'observation." },
+        { "decision": "adapter", "texte": "Je mets un peu de sa crème sur la rougeur pour voir si ça passe.", "retour": "Vous n'appliquez pas de produit sur une zone observée sans savoir ce qu'elle est : ce n'est pas prévu par votre rôle." },
+        { "decision": "alerter", "texte": "Je lui dis que c'est sûrement une infection.", "retour": "Vous observez un fait ; vous ne posez pas vous-même ce type de constat." }
+      ]
+    },
+    {
+      "id": "transmettre",
+      "type": "relais",
+      "consigne": "Allez transmettre votre observation à la bonne personne.",
+      "destinataire": "infirmiere",
+      "points": { "C2.1.6": 1 },
+      "retour": "Claire, infirmière, peut suivre cette observation.",
+      "retour_erreur": "Cette personne ne peut pas suivre cette observation. Qui, dans l'aile B, en a la responsabilité ?"
+    }
+  ],
+  "debriefing": [
+    "Pourquoi avez-vous respecté son refus du parfum ?",
+    "Pourquoi n'avez-vous pas appliqué de crème sur la rougeur vous-même ?",
+    "À qui avez-vous transmis votre observation, et pourquoi ?"
+  ]
+}
