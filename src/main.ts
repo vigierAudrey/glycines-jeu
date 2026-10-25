@@ -8,7 +8,7 @@ import { lirePlan, positionDansZone, trouverZone } from './regles/plan';
 import { creerTheatre } from './scene3d/creerScene';
 import { construireAile } from './scene3d/construireAile';
 import { construireMeubles } from './scene3d/meubles';
-import { placerPersonnages } from './scene3d/personnages';
+import { placerPersonnages, poserRespiration } from './scene3d/personnages';
 import { ecarterEtiquettesDesPersonnes } from './scene3d/ecartEtiquettes';
 import { brancherMarche } from './scene3d/marche';
 import { ecouterTouchers } from './scene3d/toucher';
@@ -30,6 +30,15 @@ theatre.scene.add(construireMeubles(plan));
 const personnages = placerPersonnages(plan, contenu.residents, contenu.personnel);
 theatre.scene.add(personnages);
 theatre.demanderRendu();
+
+// Respiration douce de tous les personnages à l'arrêt (résidents, personnel, agent), à cadence réduite
+// pour rester léger sur téléphone (voir docs/DECISIONS.md).
+let tempsRespiration = 0;
+theatre.animerLentement((secondes) => {
+  tempsRespiration += secondes;
+  for (const figurine of personnages.children) poserRespiration(figurine, tempsRespiration);
+  return true;
+}, 10);
 
 const racineInterface = document.querySelector<HTMLElement>('#interface')!;
 monterInterface(racineInterface, lieu.nom, theatre, contenu.personnel);

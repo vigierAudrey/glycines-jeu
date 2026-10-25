@@ -35,6 +35,12 @@ export interface Theatre {
   recentrer: () => void;
   /** Lance une animation : le jeu redessine en continu tant qu'au moins une animation tourne. */
   animer: (animation: Animation) => void;
+  /**
+   * Comme `animer`, mais à une cadence réduite (moins d'images par seconde) : pour une animation discrète
+   * qui doit tourner en continu (la respiration des personnages à l'arrêt) sans redessiner à 60 images par
+   * seconde en permanence, ce qui coûterait trop de batterie sur téléphone.
+   */
+  animerLentement: (animation: Animation, imagesParSeconde: number) => void;
   /** La vue glisse en douceur pour garder cet objet (l'agent) au centre, jusqu'à ce qu'il s'arrête ou que l'élève fasse glisser la vue. */
   suivre: (objet: THREE.Object3D) => void;
   /**
@@ -126,6 +132,20 @@ export function creerTheatre(conteneur: HTMLElement, centre: THREE.Vector3, tail
       instantPrecedent = performance.now();
       requestAnimationFrame(boucle);
     }
+  };
+
+  // ---------- Animation à cadence réduite ----------
+  // Un `setInterval`, pas `requestAnimationFrame` : on choisit nous-mêmes une cadence basse (quelques
+  // images par seconde), bien assez pour un balancement lent, sans redessiner en continu à 60 im/s.
+  const animerLentement = (animation: Animation, imagesParSeconde: number) => {
+    let precedent = performance.now();
+    const id = setInterval(() => {
+      const maintenant = performance.now();
+      const secondes = (maintenant - precedent) / 1000;
+      precedent = maintenant;
+      if (animation(secondes)) demanderRendu();
+      else clearInterval(id);
+    }, 1000 / imagesParSeconde);
   };
 
   // ---------- Densité d'affichage ----------
@@ -259,7 +279,7 @@ export function creerTheatre(conteneur: HTMLElement, centre: THREE.Vector3, tail
   recentrer();
   ajusterTaille();
   return {
-    scene, camera, surfaceTactile: renduEtiquettes.domElement, demanderRendu, tourner, recentrer, animer, suivre, cadrer, versEcran,
+    scene, camera, surfaceTactile: renduEtiquettes.domElement, demanderRendu, tourner, recentrer, animer, animerLentement, suivre, cadrer, versEcran,
     apresChaqueRendu: (fonction) => apresRendu.push(fonction),
   };
 }

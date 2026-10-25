@@ -58,6 +58,7 @@ export function brancherMarche(theatre: Theatre, plan: PlanCalcule, agent: THREE
     poserMarche(agent, 0, 0); // arrivé : jambes et bras au repos
     phase = 0;
     enMarche = false;
+    agent.userData.enMarche = false; // la respiration (personnages.ts) peut reprendre
     repere.visible = false;
     return false; // arrivé : la boucle d'animation peut s'arrêter
   };
@@ -80,6 +81,7 @@ export function brancherMarche(theatre: Theatre, plan: PlanCalcule, agent: THREE
     // Si l'agent marchait déjà, l'animation en cours reprend simplement le nouveau chemin.
     if (!enMarche) {
       enMarche = true;
+      agent.userData.enMarche = true; // suspend la respiration (personnages.ts) pendant la marche
       theatre.animer(avancer);
     }
   };

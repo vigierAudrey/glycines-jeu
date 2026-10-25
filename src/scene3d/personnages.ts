@@ -138,6 +138,8 @@ function figurine(a: Apparence, haut: string, pantalon: string, agee: boolean, t
 
   if (agee) corps.scale.setScalar(0.95);
   groupe.userData.membres = { jambes, bras, corps } satisfies Membres;
+  // Décalage de phase tiré au hasard : les personnages ne respirent pas tous en même temps.
+  groupe.userData.dephasageRespiration = Math.random() * Math.PI * 2;
   groupe.add(etiquette(texte, classe, new THREE.Vector3(0, 1.45, 0)));
   return groupe;
 }
@@ -155,6 +157,24 @@ export function poserMarche(figurine: THREE.Object3D, phase: number, intensite: 
   m.bras[0].rotation.x = -balancement * 0.8;
   m.bras[1].rotation.x = balancement * 0.8;
   m.corps.position.y = Math.abs(Math.sin(phase)) * 0.03 * intensite; // petit rebond à chaque pas
+}
+
+const VITESSE_RESPIRATION = 1.1; // radians par seconde : un cycle complet toutes les 5 à 6 secondes
+const AMPLITUDE_RESPIRATION = 0.012; // mètres : un très léger soulèvement, pour rester discret
+const AMPLITUDE_BALANCEMENT = 0.015; // radians : un très léger balancement d'un pied sur l'autre
+
+/**
+ * Respiration douce d'un personnage à l'arrêt : un léger soulèvement du buste et un balancement discret,
+ * à une cadence réduite (voir `theatre.animerLentement`), pour qu'il ne paraisse jamais figé sans
+ * redessiner l'écran en continu à 60 images par seconde (coûteux en batterie sur téléphone).
+ * Sans effet pendant la marche (l'agent a alors sa propre pose, posée par `poserMarche`).
+ */
+export function poserRespiration(figurine: THREE.Object3D, temps: number): void {
+  const m = figurine.userData.membres as Membres | undefined;
+  if (!m || figurine.userData.enMarche) return;
+  const phase = temps * VITESSE_RESPIRATION + (figurine.userData.dephasageRespiration as number);
+  m.corps.position.y = Math.max(0, Math.sin(phase)) * AMPLITUDE_RESPIRATION;
+  m.corps.rotation.z = Math.sin(phase * 0.5) * AMPLITUDE_BALANCEMENT;
 }
 
 export function placerPersonnages(plan: PlanCalcule, residents: Resident[], personnel: MembrePersonnel[]): THREE.Group {
