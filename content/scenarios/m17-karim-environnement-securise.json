@@ -1,0 +1,87 @@
+{
+  "id": "m17-karim-environnement-securise",
+  "statut": "brouillon",
+  "titre": "Juste ce qu'il faut d'aide",
+  "duree_min": 18,
+  "sequence_requise": "S1",
+  "lieu": "chambre-karim",
+  "personnages": ["joueur", "karim", "ash"],
+  "competences": [
+    { "code": "CT3.2", "critere": "Repérage du degré d’autonomie de la personne âgée et prise en compte de ces éléments pour la mise en œuvre de ses actions." },
+    { "code": "CT3.3", "critere": "Prise en compte du contexte de l’activité." }
+  ],
+  "situation": "M. Karim réalise seul sa toilette du visage, a besoin d'une aide partielle pour choisir ses vêtements et se déplace avec une canne. Une table gêne son trajet dans la chambre.",
+  "objectif_eleve": "Ajuster l'aide à ce qu'il peut faire seul, et sécuriser l'environnement dans vos limites.",
+  "note_pour_audrey": "Brouillon ajouté pour compléter la couverture de la séquence 1 (tâche 4.1), à partir de la situation professionnelle de votre séquence 1, séance 6 (« degré d'autonomie, AGGIR et environnement facilitant ») : M. Karim se déplace avec une canne et une table gêne son trajet. Compétences reprises telles qu'indiquées dans cette séance (CT3.2 principale, CT3.3 en appui). À relire avant de passer le statut à valide.",
+  "etapes": [
+    {
+      "id": "accueil-karim",
+      "type": "dialogue",
+      "consigne": "Vous entrez dans la chambre de M. Karim, qui vient de terminer sa toilette du visage.",
+      "interlocuteur": "karim",
+      "replique": "Bonjour, j'ai fait ma toilette du visage moi-même ce matin.",
+      "verbal": [
+        { "texte": "Très bien M. Karim. Pour vos vêtements, voulez-vous choisir et je vous aide pour le reste ?", "confiance": 2, "points": { "CT3.2": 2 }, "retour": "Vous laissez ce qu'il réalise seul et vous proposez une aide ajustée pour le choix des vêtements." },
+        { "texte": "Je vais tout préparer et vous habiller, ça ira plus vite.", "confiance": -1, "retour": "Faire à sa place ce qu'il peut réaliser ou choisir ne respecte pas son autonomie." },
+        { "texte": "Bonjour.", "confiance": 0, "retour": "Un accueil minimal, sans tenir compte de ce qu'il vient de faire seul." }
+      ],
+      "paraverbal": [
+        { "texte": "Voix encourageante, qui valorise ce qu'il a fait seul.", "confiance": 1, "points": { "CT3.2": 1 }, "retour": "Valoriser ce qu'il fait seul encourage sa participation." },
+        { "texte": "Voix neutre, sans relever ce qu'il a fait.", "confiance": 0, "retour": "Ne pas relever ce qu'il a fait seul laisse passer une occasion de l'encourager." },
+        { "texte": "Voix pressée.", "confiance": -1, "retour": "La précipitation n'est pas adaptée à ce moment." }
+      ],
+      "non_verbal": [
+        { "texte": "Je le regarde et j'attends sa réponse avant d'agir.", "confiance": 1, "points": { "CT3.2": 1 }, "retour": "Attendre sa réponse lui laisse la place de choisir." },
+        { "texte": "Je commence déjà à sortir des vêtements sans lui demander.", "confiance": -2, "retour": "Agir avant de lui demander ne respecte pas ce qu'il peut choisir seul." },
+        { "texte": "Je reste près de la porte.", "confiance": -1, "retour": "Rester à distance ne montre pas votre disponibilité." }
+      ]
+    },
+    {
+      "id": "regarder-chambre",
+      "type": "observation",
+      "consigne": "Avant d'aider M. Karim à se déplacer, regardez la chambre à la loupe. Touchez chaque repère et dites s'il facilite ou gêne son trajet.",
+      "elements": [
+        { "id": "table-passage", "libelle": "Une table est posée dans le passage, sur le trajet de M. Karim.", "colonne": 5, "rangee": 3, "effet": "gene", "points": { "CT3.3": 1 }, "retour": "Un obstacle sur le trajet d'une personne qui se déplace avec une canne augmente le risque de chute." },
+        { "id": "fil-lampe", "libelle": "Le fil d'une lampe traverse le sol près du lit.", "colonne": 4, "rangee": 1, "effet": "gene", "points": { "CT3.3": 1 }, "retour": "Un fil au sol est un risque de chute supplémentaire." },
+        { "id": "eclairage-couloir", "libelle": "Un éclairage net marque le chemin entre le lit et la salle d'eau.", "colonne": 7, "rangee": 0, "effet": "facilite", "points": { "CT3.3": 1 }, "retour": "Un bon éclairage facilite un déplacement sûr." },
+        { "id": "lit-position-basse", "libelle": "Le lit est en position basse.", "colonne": 6, "rangee": 1, "effet": "facilite", "points": { "CT3.3": 1 }, "retour": "Un lit bas facilite un lever et un déplacement en sécurité." }
+      ]
+    },
+    {
+      "id": "table-passage-decision",
+      "type": "decision",
+      "consigne": "La table posée dans le passage gêne le trajet de M. Karim, qui se déplace avec une canne.",
+      "question": "Que faites-vous ?",
+      "choix": [
+        { "decision": "agir", "texte": "Je déplace la table hors du passage, puis je signale ce changement.", "points": { "CT3.3": 2 }, "retour": "Vous sécurisez l'environnement dans vos limites, et vous transmettez la modification." },
+        { "decision": "adapter", "texte": "Je lui dis de faire attention en passant.", "retour": "L'obstacle reste là pour tous ses déplacements." },
+        { "decision": "alerter", "texte": "Je vais chercher quelqu'un avant de toucher à la table.", "retour": "Déplacer une table hors du passage reste dans vos limites." }
+      ]
+    },
+    {
+      "id": "aide-vetements",
+      "type": "decision",
+      "consigne": "M. Karim a besoin d'une aide partielle pour choisir ses vêtements.",
+      "question": "Que proposez-vous ?",
+      "choix": [
+        { "decision": "agir", "texte": "Je le laisse choisir et je l'aide seulement pour les gestes qu'il ne peut pas faire.", "points": { "CT3.2": 3 }, "retour": "Vous ajustez l'aide à ce qu'il peut réellement faire, sans faire à sa place ce qui n'est pas nécessaire." },
+        { "decision": "adapter", "texte": "Je choisis moi-même ses vêtements, c'est plus simple.", "retour": "Choisir à sa place ce qu'il peut décider ne respecte pas son autonomie." },
+        { "decision": "alerter", "texte": "J'attends l'aide-soignante pour ce choix.", "retour": "Aider M. Karim à choisir ses vêtements reste dans votre rôle." }
+      ]
+    },
+    {
+      "id": "signaler-table",
+      "type": "relais",
+      "consigne": "Allez signaler le déplacement de la table et le fil au sol à la bonne personne.",
+      "destinataire": "ash",
+      "points": { "CT3.3": 1 },
+      "retour": "Julien, agent de service hospitalier, peut vérifier d'où venaient ces gênes et éviter qu'elles se reproduisent.",
+      "retour_erreur": "Cette personne ne s'occupe pas de l'entretien des locaux. Qui s'en charge dans l'aile B ?"
+    }
+  ],
+  "debriefing": [
+    "Qu'avez-vous laissé M. Karim faire seul, et pourquoi ?",
+    "Pourquoi avez-vous déplacé la table vous-même plutôt que d'aller chercher quelqu'un ?",
+    "Comment avez-vous ajusté votre aide pour le choix de ses vêtements ?"
+  ]
+}

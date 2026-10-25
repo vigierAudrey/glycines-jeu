@@ -1,0 +1,76 @@
+{
+  "id": "m13-information-fiable-famille",
+  "statut": "brouillon",
+  "titre": "Vérifier avant de répondre à une famille",
+  "duree_min": 15,
+  "sequence_requise": "S1",
+  "lieu": "poste-de-soins",
+  "personnages": ["joueur", "cadre", "infirmiere"],
+  "competences": [
+    { "code": "CT3.1", "critere": "Vérification de la fiabilité des sources d’information." },
+    { "code": "CT3.1", "critere": "Présentation du rôle des différents membres de l’établissement, du service et de l’équipe." }
+  ],
+  "situation": "Le fils d'une personne qui pourrait arriver aux Glycines a appelé. Il hésite, car deux pages internet lui donnent des informations différentes sur l'établissement.",
+  "objectif_eleve": "Aider à vérifier la fiabilité des deux sources, puis présenter le rôle réel de l'établissement sans promettre une prise en charge qui n'a pas été vérifiée.",
+  "note_pour_audrey": "Brouillon ajouté pour compléter la couverture de la séquence 1 (tâche 4.1), à partir de la situation professionnelle de votre séquence 1, séance 1 (« structures d'accueil et fiabilité des informations ») : une famille compare deux sources différentes avant de se décider. Compétence reprise telle qu'indiquée dans cette séance (CT3.1, deux critères). À relire avant de passer le statut à valide.",
+  "etapes": [
+    {
+      "id": "cadre-demande",
+      "type": "dialogue",
+      "consigne": "M. Lemoine, cadre de santé, vous montre deux documents avant de rappeler la famille.",
+      "interlocuteur": "cadre",
+      "replique": "Un fils a appelé : il hésite entre nous et un autre établissement pour sa mère. Il a deux pages internet différentes sous les yeux. Vous pouvez m'aider à vérifier avant que je le rappelle ?",
+      "verbal": [
+        { "texte": "Oui, montrez-moi les deux documents, je vérifie l'auteur et la date avant de vous dire ce qui me semble fiable.", "confiance": 2, "points": { "CT3.1": 2 }, "retour": "Vous proposez de vérifier la source avant de l'utiliser, comme le demande votre rôle." },
+        { "texte": "Prenez celle qui dit le plus de bien de l'établissement.", "confiance": -2, "retour": "Le contenu flatteur ne dit rien sur la fiabilité d'une source." },
+        { "texte": "Je ne sais pas, ce n'est pas mon rôle de m'en occuper.", "confiance": -1, "retour": "Vérifier une information avec une personne ressource fait partie de votre rôle, même si la décision finale revient au cadre." }
+      ],
+      "paraverbal": [
+        { "texte": "Voix posée, je montre que je prends le temps d'examiner les documents.", "confiance": 1, "points": { "CT3.1": 1 }, "retour": "Prendre le temps d'examiner une source évite une conclusion trop rapide." },
+        { "texte": "Voix précipitée, je veux vite passer à autre chose.", "confiance": -1, "retour": "La précipitation n'aide pas à vérifier correctement une source." },
+        { "texte": "Voix hésitante, je ne sais pas par où commencer.", "confiance": 0, "retour": "L'hésitation ne montre pas encore une méthode de vérification." }
+      ],
+      "non_verbal": [
+        { "texte": "Je m'installe à côté de M. Lemoine pour lire les deux documents avec lui.", "confiance": 1, "points": { "CT3.1": 1 }, "retour": "Lire les documents ensemble permet de comparer auteur, date et objectif." },
+        { "texte": "Je reste debout près de la porte, prêt à partir.", "confiance": -1, "retour": "Cette attitude ne montre pas de disponibilité pour vérifier les documents." },
+        { "texte": "Je regarde mon téléphone pendant qu'il parle.", "confiance": -2, "retour": "Cela peut donner l'impression que la demande ne vous intéresse pas." }
+      ]
+    },
+    {
+      "id": "comparer-sources",
+      "type": "decision",
+      "consigne": "Le premier document est un extrait du site officiel de l'établissement, daté de ce mois. Le second est une publication anonyme sur un réseau social, sans date.",
+      "question": "Que faites-vous ?",
+      "choix": [
+        { "decision": "agir", "texte": "Je retiens en priorité le document officiel et daté, et je signale que la publication anonyme doit être vérifiée.", "points": { "CT3.1": 3 }, "retour": "Vous choisissez la source identifiable et récente, et vous ne traitez pas la publication anonyme comme un fait établi." },
+        { "decision": "adapter", "texte": "Je garde les deux informations, elles se complètent sûrement.", "retour": "Une publication anonyme non datée ne se recoupe pas avec un document officiel seulement parce qu'elle existe." },
+        { "decision": "alerter", "texte": "Je transmets les deux documents sans donner mon avis au cadre de santé.", "retour": "Vous pouvez déjà distinguer une source fiable d'une source à vérifier : c'est utile de le dire." }
+      ]
+    },
+    {
+      "id": "presenter-sans-promettre",
+      "type": "decision",
+      "consigne": "Vous rédigez avec M. Lemoine la réponse à donner au fils, sur ce que propose l'établissement.",
+      "question": "Que proposez-vous d'écrire ?",
+      "choix": [
+        { "decision": "agir", "texte": "Je décris les missions réelles de l'établissement et je précise qu'un rendez-vous d'évaluation confirmera si elles correspondent aux besoins de sa mère.", "points": { "CT3.1": 2 }, "retour": "Vous présentez le rôle exact de l'établissement sans promettre une prise en charge qui n'a pas été vérifiée." },
+        { "decision": "adapter", "texte": "J'écris que l'établissement répond à tous les besoins, pour le rassurer.", "retour": "Promettre une prise en charge non vérifiée peut tromper la famille." },
+        { "decision": "alerter", "texte": "Je ne réponds rien avant d'avoir vu la mère moi-même.", "retour": "Présenter le rôle général de l'établissement est possible sans attendre une évaluation que vous ne menez pas vous-même." }
+      ]
+    },
+    {
+      "id": "soin-medical",
+      "type": "relais",
+      "consigne": "Le fils demande aussi si des soins infirmiers quotidiens sont assurés sur place. Allez vérifier cette information précise auprès de la bonne personne.",
+      "destinataire": "infirmiere",
+      "points": { "CT3.1": 1 },
+      "retour": "Claire, infirmière, peut confirmer précisément l'organisation des soins.",
+      "retour_erreur": "Cette personne ne peut pas confirmer l'organisation des soins infirmiers. Qui, dans l'aile B, en est responsable ?"
+    }
+  ],
+  "debriefing": [
+    "Pourquoi avez-vous retenu le document officiel daté plutôt que la publication anonyme ?",
+    "Qu'avez-vous évité de promettre à la famille, et pourquoi ?",
+    "Pourquoi avez-vous transmis la question sur les soins infirmiers à l'infirmière plutôt que d'y répondre vous-même ?"
+  ]
+}

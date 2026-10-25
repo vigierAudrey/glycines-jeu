@@ -18,7 +18,11 @@
         "Apprécie le patio le matin.",
         "Refuse les grands groupes.",
         "Souhaite appeler sa sœur le mercredi.",
-        "Malentendante : répond mieux si on se place face à elle avant de lui parler."
+        "Malentendante : répond mieux si on se place face à elle avant de lui parler.",
+        "Marche plus lentement depuis plusieurs mois.",
+        "Peut se montrer triste depuis un décès.",
+        "Peut présenter une confusion inhabituelle et soudaine, à transmettre rapidement, sans généraliser à partir de ses autres changements progressifs.",
+        "Peut ne plus souhaiter participer à l'atelier jardin, en lien avec son refus des grands groupes."
       ]
     },
     {
@@ -34,7 +38,9 @@
       },
       "repris_du_cours": [
         "Toilette au lavabo avec une aide partielle.",
-        "Chambre équipée d'un lit médicalisé, d'un fauteuil et d'une salle d'eau."
+        "Chambre équipée d'un lit médicalisé, d'un fauteuil et d'une salle d'eau.",
+        "Se déplace avec une canne.",
+        "A besoin d'une aide partielle pour choisir ses vêtements."
       ]
     },
     {
@@ -54,7 +60,8 @@
         "Lit une horloge simple.",
         "Oublie une information récente.",
         "Communication adaptée : phrase courte, une information à la fois, repère stable, répétition calme.",
-        "Peut se sentir désorientée et chercher sa chambre."
+        "Peut se sentir désorientée et chercher sa chambre.",
+        "Fait l'objet d'une mesure de tutelle, qui ne porte pas sur ses choix du quotidien."
       ]
     },
     {

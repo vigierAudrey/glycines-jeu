@@ -1,0 +1,76 @@
+{
+  "id": "m15-yvette-tutelle-choix",
+  "statut": "brouillon",
+  "titre": "Un choix qui reste le sien",
+  "duree_min": 15,
+  "sequence_requise": "S1",
+  "lieu": "chambre-yvette",
+  "personnages": ["joueur", "yvette", "cadre"],
+  "competences": [
+    { "code": "CT3.1", "critere": "Prise en compte de ces éléments pour la mise en œuvre de l’action." },
+    { "code": "CT3.4", "critere": "Absence de jugement." }
+  ],
+  "situation": "Mme Yvette, sous tutelle, veut choisir une tenue différente de celle préparée. Elle vous demande aussi si sa tutelle l'empêche de décider de ce genre de choses.",
+  "objectif_eleve": "Respecter son choix quotidien sans jugement, situer ce qui relève de ses droits, et transmettre sans interpréter un document juridique qui ne vous est pas destiné.",
+  "note_pour_audrey": "Brouillon ajouté pour compléter la couverture de la séquence 1 (tâche 4.1), à partir de la situation professionnelle de votre séquence 1, séance 4 (« protéger les majeurs sans décider à leur place ») : Mme Yvette veut choisir une tenue différente de celle préparée. Compétences reprises telles qu'indiquées dans cette séance (CT3.1 principale, CT3.4 en appui). À relire avant de passer le statut à valide.",
+  "etapes": [
+    {
+      "id": "choix-tenue",
+      "type": "dialogue",
+      "consigne": "Mme Yvette désigne une autre tenue que celle préparée.",
+      "interlocuteur": "yvette",
+      "replique": "Je ne veux pas mettre cette robe, je préfère celle-là.",
+      "verbal": [
+        { "texte": "Bien sûr Mme Yvette, c'est votre choix, je vous aide à la mettre.", "confiance": 2, "points": { "CT3.4": 2 }, "retour": "Vous respectez son choix quotidien, qui reste le sien même avec une mesure de protection." },
+        { "texte": "Non, c'est celle-ci qui a été préparée pour vous, il faut la mettre.", "confiance": -2, "retour": "Le choix d'une tenue reste un choix quotidien de Mme Yvette, pas une décision de l'équipe." },
+        { "texte": "Si vous voulez, mais ce n'est pas très assorti.", "confiance": -1, "retour": "Ce commentaire porte un jugement sur son choix." }
+      ],
+      "paraverbal": [
+        { "texte": "Voix souriante, je l'accompagne sans discuter son choix.", "confiance": 1, "points": { "CT3.4": 1 }, "retour": "Un ton souriant accompagne son choix sans le remettre en question." },
+        { "texte": "Voix hésitante, comme si son choix posait problème.", "confiance": -1, "retour": "L'hésitation peut laisser penser que son choix n'est pas accepté." },
+        { "texte": "Voix ferme, comme pour la convaincre de changer d'avis.", "confiance": -2, "retour": "Un ton ferme pour la faire changer d'avis ne respecte pas son choix." }
+      ],
+      "non_verbal": [
+        { "texte": "Je prends la tenue qu'elle désigne sans attendre.", "confiance": 1, "points": { "CT3.4": 1 }, "retour": "Ce geste montre que son choix est accepté sans discussion." },
+        { "texte": "Je reste avec la première tenue dans les mains, sans bouger.", "confiance": -1, "retour": "Rester immobile avec l'autre tenue peut laisser penser que son choix n'est pas pris en compte." },
+        { "texte": "Je secoue la tête en signe de désapprobation.", "confiance": -2, "retour": "Ce geste exprime un jugement sur son choix." }
+      ]
+    },
+    {
+      "id": "question-juridique",
+      "type": "decision",
+      "consigne": "En l'aidant, Mme Yvette vous demande si sa tutelle l'empêche de choisir ses vêtements.",
+      "question": "Que lui répondez-vous ?",
+      "choix": [
+        { "decision": "agir", "texte": "Je lui explique que ce choix du quotidien reste le sien, et que la tutelle ne porte pas sur ce type de décision.", "points": { "CT3.1": 2 }, "retour": "Vous situez correctement ce qui relève de ses droits quotidiens, sans interpréter la mesure au-delà de ce que vous savez." },
+        { "decision": "adapter", "texte": "Je lui dis que je ne sais pas et que ça n'a pas d'importance.", "retour": "Une réponse vague ne la rassure pas sur un droit qui reste le sien." },
+        { "decision": "alerter", "texte": "Je lui dis que sa tutelle décide de tout, y compris ses vêtements.", "retour": "Cela dépasse ce que vous pouvez affirmer, et ce n'est pas exact pour un choix du quotidien." }
+      ]
+    },
+    {
+      "id": "document-juridique",
+      "type": "decision",
+      "consigne": "Vous remarquez une enveloppe d'un document juridique sur sa table, qu'elle n'a pas ouverte.",
+      "question": "Que faites-vous ?",
+      "choix": [
+        { "decision": "agir", "texte": "Je transmets l'existence de ce document au professionnel compétent, sans l'ouvrir moi-même.", "points": { "CT3.1": 2 }, "retour": "Un document juridique est transmis à la personne compétente, sans interprétation de votre part." },
+        { "decision": "adapter", "texte": "Je l'ouvre pour voir si c'est important.", "retour": "Ouvrir un document juridique qui ne vous est pas destiné ne relève pas de votre rôle." },
+        { "decision": "alerter", "texte": "Je la laisse là, ce n'est pas mon problème.", "retour": "Repérer et transmettre un document juridique reçu fait partie de votre vigilance professionnelle." }
+      ]
+    },
+    {
+      "id": "orienter-demande",
+      "type": "relais",
+      "consigne": "Allez transmettre l'existence de ce document à la bonne personne.",
+      "destinataire": "cadre",
+      "points": { "CT3.1": 1 },
+      "retour": "M. Lemoine, cadre de santé, peut orienter vers la personne compétente pour ce document.",
+      "retour_erreur": "Cette personne ne peut pas orienter cette demande. Qui, dans l'aile B, peut faire le lien avec la personne compétente ?"
+    }
+  ],
+  "debriefing": [
+    "Pourquoi avez-vous laissé Mme Yvette choisir sa tenue malgré sa tutelle ?",
+    "Qu'avez-vous évité de dire quand elle vous a interrogé sur ce que change sa tutelle ?",
+    "Pourquoi avez-vous transmis le document juridique plutôt que de l'ouvrir vous-même ?"
+  ]
+}

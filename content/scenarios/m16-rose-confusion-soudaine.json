@@ -1,0 +1,76 @@
+{
+  "id": "m16-rose-confusion-soudaine",
+  "statut": "brouillon",
+  "titre": "Un changement inhabituel",
+  "duree_min": 15,
+  "sequence_requise": "S1",
+  "lieu": "chambre-rose",
+  "personnages": ["joueur", "rose", "infirmiere"],
+  "competences": [
+    { "code": "CT3.2", "critere": "Utilisation d’informations récentes et diversifiées." },
+    { "code": "C2.1.6", "critere": "Fidélité de la transmission des éléments observés." }
+  ],
+  "situation": "Mme Rose marche plus lentement depuis plusieurs mois et entend moins bien dans le groupe : vous le savez déjà. Ce matin, elle paraît soudain confuse.",
+  "objectif_eleve": "Distinguer ce changement soudain des évolutions progressives déjà connues, puis transmettre une observation factuelle, sans diagnostic.",
+  "note_pour_audrey": "Brouillon ajouté pour compléter la couverture de la séquence 1 (tâche 4.1), à partir de la situation professionnelle de votre séquence 1, séance 5 (« vieillissement : observer sans généraliser ») : Mme Rose paraît soudain confuse ce matin, alors que sa marche plus lente et son audition réduite sont déjà connues. Compétences reprises telles qu'indiquées dans cette séance (CT3.2 principale, C2.1.6 en appui). À relire avant de passer le statut à valide.",
+  "etapes": [
+    {
+      "id": "rose-confuse",
+      "type": "dialogue",
+      "consigne": "Vous entrez dans la chambre de Mme Rose, qui vous regarde sans vous reconnaître.",
+      "interlocuteur": "rose",
+      "replique": "Qui êtes-vous ? Je... je ne sais plus où je suis.",
+      "verbal": [
+        { "texte": "Je suis votre aide habituelle, Mme Rose. Vous êtes dans votre chambre, aux Glycines. Je reste avec vous.", "confiance": 2, "retour": "Vous la rassurez avec des repères simples et clairs, sans la presser." },
+        { "texte": "Mme Rose, voyons, vous me connaissez bien.", "confiance": -1, "retour": "Insister sur le fait qu'elle devrait vous reconnaître ne la rassure pas." },
+        { "texte": "Attendez, je reviens.", "confiance": -2, "retour": "La laisser seule en plein moment de confusion peut l'inquiéter davantage." }
+      ],
+      "paraverbal": [
+        { "texte": "Voix calme et posée.", "confiance": 1, "retour": "Une voix calme aide à la rassurer dans ce moment inhabituel." },
+        { "texte": "Voix inquiète, qui montre mon trouble.", "confiance": -1, "retour": "Montrer votre propre inquiétude peut ajouter à la sienne." },
+        { "texte": "Voix forte, comme pour la réveiller.", "confiance": -2, "retour": "Une voix forte n'est pas adaptée à un moment de confusion." }
+      ],
+      "non_verbal": [
+        { "texte": "Je reste à sa hauteur, visible, sans geste brusque.", "confiance": 1, "retour": "Rester visible et sans geste brusque est sécurisant." },
+        { "texte": "Je m'agite autour d'elle en cherchant quoi faire.", "confiance": -1, "retour": "L'agitation autour d'elle peut accentuer sa confusion." },
+        { "texte": "Je sors de la chambre en la laissant seule.", "confiance": -2, "retour": "La laisser seule dans la confusion n'est pas sécurisant." }
+      ]
+    },
+    {
+      "id": "habituel-ou-nouveau",
+      "type": "decision",
+      "consigne": "Mme Rose marche plus lentement depuis plusieurs mois et entend moins bien : vous le savez déjà. Mais cette confusion, ce matin, est nouvelle.",
+      "question": "Que faites-vous de cette observation ?",
+      "choix": [
+        { "decision": "agir", "texte": "Je distingue ce qui est connu depuis longtemps de ce qui est nouveau ce matin, et je note les faits précisément.", "points": { "CT3.2": 3 }, "retour": "Vous séparez un changement progressif déjà connu d'un signe inhabituel, sans tout mélanger." },
+        { "decision": "adapter", "texte": "Comme elle vieillit, c'est normal qu'elle soit parfois confuse, je n'y prête pas plus attention.", "retour": "Un changement soudain ne doit pas être mis sur le compte du vieillissement en général." },
+        { "decision": "alerter", "texte": "Je décide moi-même qu'elle fait un malaise grave et j'agis en conséquence.", "retour": "Observer et transmettre les faits, sans poser vous-même un diagnostic, reste votre rôle." }
+      ]
+    },
+    {
+      "id": "transmission-factuelle",
+      "type": "decision",
+      "consigne": "Vous devez transmettre ce que vous avez observé ce matin.",
+      "question": "Que transmettez-vous ?",
+      "choix": [
+        { "decision": "agir", "texte": "Je transmets les faits observés, avec l'heure, sans donner de cause ni de diagnostic.", "points": { "C2.1.6": 3 }, "retour": "Une transmission fidèle et datée des faits permet à l'infirmière d'évaluer la situation." },
+        { "decision": "adapter", "texte": "Je transmets que Mme Rose devient sénile.", "retour": "Ce mot porte un jugement qui n'est pas un fait observé." },
+        { "decision": "alerter", "texte": "Je ne transmets rien, ça passera avec le temps.", "retour": "Un changement soudain et inhabituel doit être transmis rapidement." }
+      ]
+    },
+    {
+      "id": "signaler-infirmiere",
+      "type": "relais",
+      "consigne": "Allez transmettre votre observation à la bonne personne.",
+      "destinataire": "infirmiere",
+      "points": { "C2.1.6": 1 },
+      "retour": "Claire, infirmière, peut évaluer la confusion signalée.",
+      "retour_erreur": "Cette personne ne peut pas évaluer un changement soudain de l'état de Mme Rose. Qui, dans l'aile B, en est responsable ?"
+    }
+  ],
+  "debriefing": [
+    "Pourquoi avez-vous distingué la marche plus lente et l'audition réduite de la confusion de ce matin ?",
+    "Qu'avez-vous évité de dire en transmettant votre observation ?",
+    "Pourquoi avez-vous transmis à l'infirmière plutôt que d'attendre ?"
+  ]
+}

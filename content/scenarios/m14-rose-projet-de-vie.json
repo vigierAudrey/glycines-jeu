@@ -1,0 +1,76 @@
+{
+  "id": "m14-rose-projet-de-vie",
+  "statut": "brouillon",
+  "titre": "Un souhait qui a changé",
+  "duree_min": 15,
+  "sequence_requise": "S1",
+  "lieu": "chambre-rose",
+  "personnages": ["joueur", "rose", "animatrice"],
+  "competences": [
+    { "code": "CT3.1", "critere": "Prise en compte de ces éléments pour la mise en œuvre de l’action." },
+    { "code": "CT4.2", "critere": "Respect du projet de vie." }
+  ],
+  "situation": "Mme Rose vous annonce qu'elle ne souhaite plus participer à l'atelier jardin, un refus des grands groupes qu'elle exprime déjà d'habitude.",
+  "objectif_eleve": "Respecter ce souhait, proposer une activité en lien avec ses habitudes, puis transmettre le changement pour que son projet de vie soit actualisé.",
+  "note_pour_audrey": "Brouillon ajouté pour compléter la couverture de la séquence 1 (tâche 4.1), à partir de la situation professionnelle de votre séquence 1, séance 3 (« projets d'établissement, de service et de vie ») : Mme Rose ne souhaite plus participer à l'atelier jardin. Compétences reprises telles qu'indiquées dans cette séance (CT3.1 principale, CT4.2 en appui). À relire avant de passer le statut à valide.",
+  "etapes": [
+    {
+      "id": "souhait-rose",
+      "type": "dialogue",
+      "consigne": "Mme Rose vous parle de l'atelier jardin.",
+      "interlocuteur": "rose",
+      "replique": "Je ne veux plus aller à l'atelier jardin. Ça ne me dit plus rien.",
+      "verbal": [
+        { "texte": "D'accord Mme Rose, je note votre souhait et je le transmets pour qu'on ajuste votre projet de vie.", "confiance": 2, "points": { "CT4.2": 2 }, "retour": "Vous respectez son souhait actuel et vous le faites remonter pour une mise à jour." },
+        { "texte": "Mais vous aimiez bien jardiner avant, il faut y retourner.", "confiance": -2, "retour": "Le souhait actuel de Mme Rose doit être respecté, même s'il a changé." },
+        { "texte": "Bon, d'accord.", "confiance": 0, "retour": "Vous acceptez son souhait, mais sans dire que vous allez le transmettre." }
+      ],
+      "paraverbal": [
+        { "texte": "Voix attentive, je prends le temps de l'écouter.", "confiance": 1, "points": { "CT4.2": 1 }, "retour": "Une écoute attentive montre que son souhait est pris au sérieux." },
+        { "texte": "Voix pressée, je passe vite à autre chose.", "confiance": -1, "retour": "La précipitation ne montre pas une réelle écoute." },
+        { "texte": "Voix étonnée, comme si c'était impossible.", "confiance": -1, "retour": "S'étonner peut laisser penser que son souhait n'est pas légitime." }
+      ],
+      "non_verbal": [
+        { "texte": "Je m'assois près d'elle pour l'écouter.", "confiance": 1, "points": { "CT4.2": 1 }, "retour": "Se mettre à son niveau favorise une écoute attentive." },
+        { "texte": "Je continue de ranger sans m'arrêter.", "confiance": -1, "retour": "Continuer une autre tâche peut lui donner l'impression de ne pas être écoutée." },
+        { "texte": "Je hausse les épaules.", "confiance": -2, "retour": "Ce geste peut paraître désintéressé face à son souhait." }
+      ]
+    },
+    {
+      "id": "proposer-alternative",
+      "type": "decision",
+      "consigne": "Mme Rose ne veut plus de l'atelier jardin, mais elle apprécie le patio le matin.",
+      "question": "Que proposez-vous ?",
+      "choix": [
+        { "decision": "agir", "texte": "Je lui propose d'aller au patio à la place, selon ce qu'elle apprécie déjà.", "points": { "CT4.2": 2 }, "retour": "Vous proposez une activité en lien avec ses habitudes connues, dans votre rôle." },
+        { "decision": "adapter", "texte": "Je ne propose rien, elle restera seule dans sa chambre ce matin.", "retour": "Son souhait de ne plus jardiner ne veut pas dire qu'elle ne souhaite plus aucune activité agréable." },
+        { "decision": "alerter", "texte": "J'attends que l'animatrice décide pour elle sans rien lui proposer.", "retour": "Proposer une activité adaptée à ses habitudes connues reste dans votre rôle." }
+      ]
+    },
+    {
+      "id": "transmettre-projet",
+      "type": "decision",
+      "consigne": "Vous devez faire remonter ce changement pour que le projet de vie de Mme Rose soit actualisé.",
+      "question": "Que transmettez-vous ?",
+      "choix": [
+        { "decision": "agir", "texte": "Je transmets le refus de l'atelier jardin et la préférence pour le patio, avec la date.", "points": { "CT3.1": 2 }, "retour": "Vous transmettez une information précise et datée pour que l'équipe actualise le projet de vie." },
+        { "decision": "adapter", "texte": "Je transmets seulement qu'elle a refusé une activité, sans dire laquelle ni pourquoi.", "retour": "Une transmission imprécise ne permet pas d'adapter correctement le projet de vie." },
+        { "decision": "alerter", "texte": "Je ne transmets rien, elle en reparlera elle-même à la prochaine réunion.", "retour": "Le projet de vie ne peut pas s'adapter si l'équipe n'est pas informée." }
+      ]
+    },
+    {
+      "id": "adapter-programme",
+      "type": "relais",
+      "consigne": "Allez transmettre ce changement à la personne qui organise le programme d'activités.",
+      "destinataire": "animatrice",
+      "points": { "CT3.1": 1 },
+      "retour": "Inès, animatrice, peut adapter le programme de Mme Rose.",
+      "retour_erreur": "Cette personne ne gère pas le programme d'animation. Qui s'en occupe dans l'aile B ?"
+    }
+  ],
+  "debriefing": [
+    "Pourquoi avez-vous respecté le souhait de Mme Rose même s'il a changé ?",
+    "Qu'avez-vous transmis à propos de ce changement, et pourquoi fallait-il être précis ?",
+    "À qui avez-vous transmis ce changement, et pourquoi à cette personne ?"
+  ]
+}
