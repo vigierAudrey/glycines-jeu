@@ -184,3 +184,9 @@ Trois lignes par session : ce qui a été fait, ce qui reste à surveiller, la p
 - **Fait** : à la demande d'Audrey (les personnages avaient l'air statiques), résidents, personnel et agent respirent légèrement à l'arrêt (léger soulèvement du buste et balancement, décalage de phase aléatoire par personnage). Nouvelle fonction `theatre.animerLentement` (cadence choisie, 10 images par seconde, séparée de la boucle à 60 im/s de la marche) pour rester léger en batterie, après qu'Audrey a choisi ce compromis parmi 3 niveaux proposés. `pnpm verifier` OK (94 tests, rien de cassé) ; navigateur indisponible dans cet environnement (voir tâche 3.2) pour une vérification visuelle directe.
 - **À surveiller** : à vérifier par Audrey dans le navigateur, sur ordinateur et sur téléphone, que le mouvement reste discret et que l'autonomie de la batterie n'est pas visiblement affectée.
 - **Prochaine tâche** : celles d'Audrey (valider m13 à m20, tester la respiration), puis 3.3.
+
+## 25/10/2026 · Clignement des yeux et regard de côté
+
+- **Fait** : à la demande d'Audrey d'aller plus loin dans le même sens, chaque personnage à l'arrêt cligne maintenant des yeux de temps en temps et tourne parfois la tête un instant vers un angle au hasard avant de revenir, chacun avec son propre minuteur aléatoire (pas de synchronisation entre personnages). Ajouté dans la même boucle à cadence réduite que la respiration (10 images par seconde) : aucun coût supplémentaire en batterie. `pnpm verifier` OK (94 tests).
+- **À surveiller** : à vérifier par Audrey dans le navigateur que les deux mouvements (yeux, tête) restent discrets et ne gênent pas la lecture des étiquettes de noms ; navigateur indisponible dans cet environnement pour une vérification visuelle directe.
+- **Prochaine tâche** : celles d'Audrey (valider m13 à m20, tester la respiration et ces nouveaux mouvements), puis 3.3.

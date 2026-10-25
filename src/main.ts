@@ -36,7 +36,7 @@ theatre.demanderRendu();
 let tempsRespiration = 0;
 theatre.animerLentement((secondes) => {
   tempsRespiration += secondes;
-  for (const figurine of personnages.children) poserRespiration(figurine, tempsRespiration);
+  for (const figurine of personnages.children) poserRespiration(figurine, tempsRespiration, secondes);
   return true;
 }, 10);
 

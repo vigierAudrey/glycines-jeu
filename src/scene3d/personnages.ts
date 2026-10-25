@@ -88,11 +88,13 @@ function coiffure(a: Apparence): THREE.Group {
   return g;
 }
 
-/** Les parties qui bougent pendant la marche, gardées pour les animer. */
+/** Les parties qui bougent pendant la marche ou la respiration, gardées pour les animer. */
 interface Membres {
   jambes: [THREE.Object3D, THREE.Object3D];
   bras: [THREE.Object3D, THREE.Object3D];
   corps: THREE.Object3D;
+  tete: THREE.Object3D;
+  yeux: [THREE.Object3D, THREE.Object3D];
 }
 
 function figurine(a: Apparence, haut: string, pantalon: string, agee: boolean, texte: string, classe: string): THREE.Group {
@@ -129,7 +131,11 @@ function figurine(a: Apparence, haut: string, pantalon: string, agee: boolean, t
   tete.position.y = 0.62;
   buste.add(tete);
   tete.add(maillage(FORMES.tete, a.peau));
-  for (const x of [-0.05, 0.05]) tete.add(maillage(FORMES.oeil, YEUX, x, 0.01, 0.138));
+  const yeux = [-0.05, 0.05].map((x) => {
+    const oeil = maillage(FORMES.oeil, YEUX, x, 0.01, 0.138);
+    tete.add(oeil);
+    return oeil;
+  }) as [THREE.Mesh, THREE.Mesh];
   tete.add(coiffure(a));
   if (a.lunettes) {
     for (const x of [-0.052, 0.052]) tete.add(maillage(FORMES.verre, YEUX, x, 0.01, 0.15));
@@ -137,9 +143,16 @@ function figurine(a: Apparence, haut: string, pantalon: string, agee: boolean, t
   }
 
   if (agee) corps.scale.setScalar(0.95);
-  groupe.userData.membres = { jambes, bras, corps } satisfies Membres;
+  groupe.userData.membres = { jambes, bras, corps, tete, yeux } satisfies Membres;
   // Décalage de phase tiré au hasard : les personnages ne respirent pas tous en même temps.
   groupe.userData.dephasageRespiration = Math.random() * Math.PI * 2;
+  // Comptes à rebours (en secondes) avant le prochain clignement et le prochain regard, tirés au hasard
+  // pour que les personnages ne clignent pas des yeux ni ne tournent la tête tous ensemble.
+  groupe.userData.minuteurClignement = 2 + Math.random() * 4;
+  groupe.userData.finClignement = 0;
+  groupe.userData.minuteurRegard = 4 + Math.random() * 8;
+  groupe.userData.regardProgres = -1; // -1 : pas de regard en cours
+  groupe.userData.regardAngle = 0;
   groupe.add(etiquette(texte, classe, new THREE.Vector3(0, 1.45, 0)));
   return groupe;
 }
@@ -162,19 +175,61 @@ export function poserMarche(figurine: THREE.Object3D, phase: number, intensite: 
 const VITESSE_RESPIRATION = 1.1; // radians par seconde : un cycle complet toutes les 5 à 6 secondes
 const AMPLITUDE_RESPIRATION = 0.012; // mètres : un très léger soulèvement, pour rester discret
 const AMPLITUDE_BALANCEMENT = 0.015; // radians : un très léger balancement d'un pied sur l'autre
+const DUREE_CLIGNEMENT = 0.12; // secondes : les yeux restent fermés très brièvement
+const DUREE_REGARD = 2.2; // secondes : durée totale d'un regard (tourner, tenir, revenir)
+
+/** Amortissement doux (0 à 1 à 0 à 1) : lent au début et à la fin, comme le suivi de caméra. */
+const lisse = (x: number) => Math.max(0, Math.min(1, x)) ** 2 * (3 - 2 * Math.max(0, Math.min(1, x)));
 
 /**
- * Respiration douce d'un personnage à l'arrêt : un léger soulèvement du buste et un balancement discret,
- * à une cadence réduite (voir `theatre.animerLentement`), pour qu'il ne paraisse jamais figé sans
- * redessiner l'écran en continu à 60 images par seconde (coûteux en batterie sur téléphone).
- * Sans effet pendant la marche (l'agent a alors sa propre pose, posée par `poserMarche`).
+ * Respiration douce d'un personnage à l'arrêt : léger soulèvement du buste et balancement discret,
+ * clignement des yeux de temps en temps, et de temps en temps un regard de côté (tête qui se tourne
+ * un instant puis revient). Tout cela à une cadence réduite (voir `theatre.animerLentement`), pour
+ * qu'il ne paraisse jamais figé sans redessiner l'écran en continu à 60 images par seconde (coûteux
+ * en batterie sur téléphone). Sans effet pendant la marche (l'agent a alors sa propre pose, posée
+ * par `poserMarche`).
  */
-export function poserRespiration(figurine: THREE.Object3D, temps: number): void {
+export function poserRespiration(figurine: THREE.Object3D, temps: number, secondes: number): void {
   const m = figurine.userData.membres as Membres | undefined;
   if (!m || figurine.userData.enMarche) return;
-  const phase = temps * VITESSE_RESPIRATION + (figurine.userData.dephasageRespiration as number);
+  const d = figurine.userData;
+
+  const phase = temps * VITESSE_RESPIRATION + (d.dephasageRespiration as number);
   m.corps.position.y = Math.max(0, Math.sin(phase)) * AMPLITUDE_RESPIRATION;
   m.corps.rotation.z = Math.sin(phase * 0.5) * AMPLITUDE_BALANCEMENT;
+
+  // Clignement des yeux : un compte à rebours, puis les yeux restent aplatis un bref instant.
+  if (d.finClignement > 0) {
+    d.finClignement -= secondes;
+    if (d.finClignement <= 0) for (const oeil of m.yeux) oeil.scale.y = 1;
+  } else {
+    d.minuteurClignement -= secondes;
+    if (d.minuteurClignement <= 0) {
+      for (const oeil of m.yeux) oeil.scale.y = 0.08;
+      d.finClignement = DUREE_CLIGNEMENT;
+      d.minuteurClignement = 2 + Math.random() * 5;
+    }
+  }
+
+  // Regard de côté : la tête tourne un instant vers un angle tiré au hasard, puis revient.
+  if (d.regardProgres >= 0) {
+    d.regardProgres += secondes / DUREE_REGARD;
+    if (d.regardProgres >= 1) {
+      d.regardProgres = -1;
+      m.tete.rotation.y = 0;
+    } else {
+      const t = d.regardProgres;
+      const ecart = t < 0.25 ? lisse(t / 0.25) : t < 0.75 ? 1 : lisse((1 - t) / 0.25);
+      m.tete.rotation.y = d.regardAngle * ecart;
+    }
+  } else {
+    d.minuteurRegard -= secondes;
+    if (d.minuteurRegard <= 0) {
+      d.regardAngle = (Math.random() - 0.5) * 0.8;
+      d.regardProgres = 0;
+      d.minuteurRegard = 7 + Math.random() * 10;
+    }
+  }
 }
 
 export function placerPersonnages(plan: PlanCalcule, residents: Resident[], personnel: MembrePersonnel[]): THREE.Group {
