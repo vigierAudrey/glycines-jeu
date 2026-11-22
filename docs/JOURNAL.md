@@ -280,3 +280,9 @@ Trois lignes par session : ce qui a été fait, ce qui reste à surveiller, la p
 - **Fait** : 26 mots du métier (projet de vie, tutelle, protocole, seuil d'alerte, intimité…) se touchent dans les textes des missions et ouvrent leur définition, reprise mot pour mot de la rubrique « Lexique » de la séance (source affichée). Liste complète sur la page enseignante. 3 tests, `pnpm verifier` OK (118 tests).
 - **À surveiller** : termes médicaux volontairement exclus ; Audrey relit la liste.
 - **Prochaine tâche** : P.17 (aide en arabe, voir 5.3).
+
+## 22/11/2026 · Aide en arabe (tâche P.17) : mise en attente
+
+- **Fait** : rien de codé. La tâche attend une personne arabophone pour relire les traductions, la marche à suivre est écrite dans la feuille de route.
+- **À surveiller** : des traductions faites par l'IA et jamais relues ne doivent pas arriver devant les élèves.
+- **Prochaine tâche** : Phase 4 bis terminée sauf P.17 ; suite : tâches 🧑‍🏫 (validation des brouillons, test élèves), puis Phase 5.

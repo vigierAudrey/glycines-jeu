@@ -113,6 +113,7 @@ Règle commune : toute nouvelle activité s'appuie sur une situation réelle des
 - [x] **P.16** Lexique du métier : les mots clés des textes (« transmission », « projet de vie »…) se touchent et ouvrent une définition courte, tirée des cours. 🧑‍🏫 Audrey valide les définitions.
   Fait : `content/lexique.json`, 26 mots repris mot pour mot des rubriques « Lexique » des séances (termes médicaux exclus). Reste pour Audrey : relire la liste (page enseignante).
 - [ ] **P.17** Aide en arabe : voir 5.3 (consignes et lexique d'abord).
+  En attente : des traductions faites par l'IA ne doivent pas arriver devant les élèves sans relecture par un arabophone (collègue, parent, élève avancé). Dès qu'une personne relectrice est trouvée : ajouter un champ `ar` aux mots de `content/lexique.json` et aux consignes de l'interface, avec un bouton « عربي » qui affiche la traduction sous le texte français.
 
 ## Phase 5 · Extensions
 
