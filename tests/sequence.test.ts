@@ -25,6 +25,10 @@ function reponseParfaite(etape: Etape): Reponse {
       return { type: 'relais', destinataire: etape.destinataire };
     case 'transmission':
       return { type: 'transmission', classements: Object.fromEntries(etape.phrases.map((ph) => [ph.id, ph.nature])) };
+    case 'ordre':
+      return { type: 'ordre', ordre: etape.elements.map((el) => el.id) };
+    case 'selection':
+      return { type: 'selection', choisis: etape.elements.filter((el) => el.attendu).map((el) => el.id) };
   }
 }
 

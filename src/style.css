@@ -278,6 +278,12 @@ html, body {
 .rangee-boutons { display: flex; gap: 8px; }
 .rangee-boutons .choix { text-align: center; }
 .rangee-boutons--trois { flex-wrap: wrap; }
+/* Protocole (P.4) et sélection (P.5, P.6) : un bouton par ligne, le rang ou la case à gauche. */
+.choix--ordre, .choix--coche { display: flex; align-items: center; gap: 8px; text-align: left; width: 100%; }
+.rang { flex: 0 0 28px; height: 28px; border-radius: 50%; border: 2px solid var(--violet); display: grid; place-items: center; font-weight: 700; color: var(--violet); }
+.choix--ordre[aria-pressed="true"] .rang { background: var(--violet); color: #fff; }
+.coche { flex: 0 0 auto; font-size: 1.3em; }
+.stock { white-space: nowrap; }
 .rangee-boutons--trois .choix { flex: 1 1 90px; }
 .loupe { padding: 8px 12px; background: #fff8e6; border-radius: 10px; }
 

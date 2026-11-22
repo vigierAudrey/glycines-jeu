@@ -41,6 +41,12 @@ function etapeEnHtml(e: Etape, i: number): string {
     case 'transmission':
       return `${titre}<p><em>Transmission.</em> Tri attendu (seuls les faits observés sont transmis) :</p>
         <ul>${e.phrases.map((ph) => `<li>« ${echapper(ph.texte)} » → <strong>${NOMS_NATURE[ph.nature]}</strong> <span class="points">${pointsEnTexte(ph.points)}</span></li>`).join('')}</ul>`;
+    case 'ordre':
+      return `${titre}<p><em>Protocole.</em> Ordre attendu (mélangé à l'écran) :</p>
+        <ol>${e.elements.map((el) => `<li>${echapper(el.texte)} <span class="points">${pointsEnTexte(el.points)}</span></li>`).join('')}</ol>`;
+    case 'selection':
+      return `${titre}<p><em>${echapper(e.question)}</em> Réponses attendues :</p>
+        <ul>${e.elements.map((el) => `<li>${echapper(el.texte)}${el.stock !== undefined ? ` (stock ${el.stock}, seuil ${el.seuil})` : ''} → <strong>${el.attendu ? 'à cocher' : 'à laisser'}</strong> <span class="points">${pointsEnTexte(el.points)}</span></li>`).join('')}</ul>`;
   }
 }
 

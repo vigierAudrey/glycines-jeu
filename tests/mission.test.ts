@@ -130,3 +130,25 @@ describe('étape transmission (tâche P.3)', () => {
     expect(r.retours.at(-1)).toContain('sénile');
   });
 });
+
+describe('protocole et sélection (tâches P.4 et P.5)', () => {
+  const m21 = lireContenuDepuisDisque().missions.find((m) => m.id === 'm21-karim-entretien-methode')!;
+  const [chariot, protocole] = m21.etapes;
+  if (chariot.type !== 'selection' || protocole.type !== 'ordre') throw new Error('m21 : sélection puis protocole attendus');
+
+  it('cocher un produit à laisser coûte son point et le signale', () => {
+    const choisis = chariot.elements.map((el) => el.id); // tout coché, y compris le flacon sans étiquette
+    const r = repondre(m21, demarrerMission(m21), { type: 'selection', choisis });
+    expect(r.reussi).toBe(false);
+    expect(r.etat.points['C2.2.1']).toBe(chariot.elements.filter((el) => el.attendu).length);
+  });
+
+  it('un protocole en partie inversé donne les points des seules étapes bien placées', () => {
+    const avant: EtatMission = { ...demarrerMission(m21), etape: protocole.id };
+    const ids = protocole.elements.map((el) => el.id);
+    const inverse = [ids[1], ids[0], ...ids.slice(2)];
+    const r = repondre(m21, avant, { type: 'ordre', ordre: inverse });
+    expect(r.etat.points['C2.2.1']).toBe(ids.length - 2);
+    expect(r.retours.join(' ')).toContain('L\'ordre attendu');
+  });
+});

@@ -1,0 +1,55 @@
+{
+  "id": "m21-karim-entretien-methode",
+  "statut": "brouillon",
+  "titre": "L'entretien de la chambre, avec méthode",
+  "duree_min": 10,
+  "sequence_requise": "S3",
+  "lieu": "chambre-karim",
+  "personnages": ["joueur", "karim"],
+  "competences": [
+    { "code": "C2.2.1", "critere": "Choix du matériel et des produits adaptés et utilisation correcte." }
+  ],
+  "situation": "M. Karim accepte l'entretien journalier de sa chambre. Il souhaite garder son carnet de recettes sur la table et utiliser sa salle d'eau dans trente minutes.",
+  "objectif_eleve": "Préparer le bon matériel, puis remettre dans l'ordre les étapes du protocole d'entretien journalier.",
+  "note_pour_audrey": "Brouillon écrit pour les tâches P.4 (protocole à ordonner) et P.5 (matériel et produits), d'après votre séance S3-07 (TP entretien journalier) : situation professionnelle, liste « Matériel », « Étapes » 1 à 14 (regroupées ici en 8) et « Vigilances » (ne jamais mélanger, ne jamais transvaser dans un contenant non identifié ; grille qualité : olfactif sans masquer par parfum). Le jeu prépare le TP, il ne le remplace pas. À relire avant de passer le statut à valide.",
+  "etapes": [
+    {
+      "id": "chariot",
+      "type": "selection",
+      "consigne": "Vous préparez votre chariot avant d'entrer chez M. Karim.",
+      "question": "Cochez ce que vous mettez sur votre chariot.",
+      "elements": [
+        { "id": "chariot-propre", "texte": "Un chariot propre, avec la zone propre séparée de la collecte", "attendu": true, "points": { "C2.2.1": 1 }, "retour": "Le propre et le sale ne se touchent pas." },
+        { "id": "lavettes", "texte": "Des lavettes propres pliables, selon le code couleur local", "attendu": true, "points": { "C2.2.1": 1 }, "retour": "Une face propre par zone, et un matériel distinct pour les sanitaires." },
+        { "id": "produit-etiquete", "texte": "Le détergent-désinfectant prévu, étiqueté, dosé selon la fiche", "attendu": true, "points": { "C2.2.1": 1 }, "retour": "L'étiquette donne le dosage, les EPI et le temps de contact." },
+        { "id": "epi", "texte": "Les EPI prescrits par l'étiquette et le protocole", "attendu": true, "points": { "C2.2.1": 1 }, "retour": "C'est l'étiquette du produit et le protocole qui disent quels EPI porter." },
+        { "id": "panneau-sol", "texte": "Le panneau de signalisation d'un sol humide", "attendu": true, "points": { "C2.2.1": 1 }, "retour": "M. Karim se déplace dans sa chambre : un sol humide doit être signalé." },
+        { "id": "tracabilite", "texte": "Le plan d'entretien et le document de traçabilité", "attendu": true, "points": { "C2.2.1": 1 }, "retour": "On consulte le plan avant, et on trace ce qui a été fait après." },
+        { "id": "flacon-sans-etiquette", "texte": "Un flacon sans étiquette, dans lequel j'ai transvasé du produit", "attendu": false, "points": { "C2.2.1": 1 }, "retour": "On ne transvase jamais un produit dans un contenant non identifié." },
+        { "id": "deux-produits", "texte": "Un deuxième produit, à mélanger avec le premier pour que ce soit plus efficace", "attendu": false, "points": { "C2.2.1": 1 }, "retour": "On ne mélange jamais les produits." },
+        { "id": "parfum", "texte": "Un parfum d'ambiance pour masquer les odeurs", "attendu": false, "points": { "C2.2.1": 1 }, "retour": "Une chambre propre ne sent rien d'anormal : on ne masque pas une odeur par un parfum." }
+      ]
+    },
+    {
+      "id": "protocole",
+      "type": "ordre",
+      "consigne": "Remettez les étapes de l'entretien journalier dans l'ordre.",
+      "elements": [
+        { "id": "consulter", "texte": "Consulter le plan d'entretien, l'étiquette du produit et les transmissions.", "points": { "C2.2.1": 1 } },
+        { "id": "adhesion", "texte": "Expliquer l'intervention à M. Karim, rechercher son adhésion et lui demander où poser son carnet.", "points": { "C2.2.1": 1 } },
+        { "id": "mains-epi", "texte": "Faire l'hygiène des mains, mettre les EPI et préparer le produit au bon dosage, sans mélange.", "points": { "C2.2.1": 1 } },
+        { "id": "chambre", "texte": "Nettoyer la chambre du haut vers le bas et du fond vers la sortie, en commençant par le moins sale.", "points": { "C2.2.1": 1 } },
+        { "id": "salle-eau", "texte": "Traiter la salle d'eau avec le matériel dédié, les sanitaires en dernier.", "points": { "C2.2.1": 1 } },
+        { "id": "sol", "texte": "Laver le sol du fond vers la sortie, sans détremper.", "points": { "C2.2.1": 1 } },
+        { "id": "remettre", "texte": "Contrôler le résultat et remettre le carnet de M. Karim à la place convenue avec lui.", "points": { "C2.2.1": 1 } },
+        { "id": "tracer", "texte": "Retirer les EPI, ranger le matériel, se laver les mains, puis tracer et transmettre.", "points": { "C2.2.1": 1 } }
+      ],
+      "retour": "On avance du propre vers le sale et du fond vers la sortie, pour ne jamais ramener le sale sur ce qui est propre. Et M. Karim est consulté avant de commencer."
+    }
+  ],
+  "debriefing": [
+    "Pourquoi avez-vous laissé le flacon sans étiquette et le deuxième produit ?",
+    "Pourquoi les sanitaires et le sol viennent-ils à la fin ?",
+    "À quel moment avez-vous parlé à M. Karim, et pourquoi à ce moment-là ?"
+  ]
+}

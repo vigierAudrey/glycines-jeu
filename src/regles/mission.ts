@@ -34,7 +34,9 @@ export type Reponse =
   | { type: 'observation'; classements: Record<string, 'facilite' | 'gene'> } // id de l'élément → avis de l'élève
   | { type: 'decision'; choix: number }
   | { type: 'relais'; destinataire: string } // id du membre du personnel rejoint
-  | { type: 'transmission'; classements: Record<string, NaturePhrase> }; // id de la phrase → nature choisie
+  | { type: 'transmission'; classements: Record<string, NaturePhrase> } // id de la phrase → nature choisie
+  | { type: 'ordre'; ordre: string[] } // ids des éléments, dans l'ordre choisi par l'élève
+  | { type: 'selection'; choisis: string[] }; // ids des éléments cochés
 
 export interface Resultat {
   etat: EtatMission;
@@ -97,6 +99,9 @@ export function pointsMaxEtape(etape: Etape): Points {
       return { ...etape.points };
     case 'transmission':
       return etape.phrases.reduce((total, ph) => ajouter(total, ph.points), {} as Points);
+    case 'ordre':
+    case 'selection':
+      return (etape.elements as { points?: Points }[]).reduce((total, el) => ajouter(total, el.points), {} as Points);
   }
 }
 
@@ -134,6 +139,15 @@ function textesChoisis(etape: Etape, reponse: Reponse): string[] {
     case 'transmission': {
       const r = reponse as Extract<Reponse, { type: 'transmission' }>;
       return etape.phrases.map((ph) => `« ${ph.texte} » : ${r.classements[ph.id] ? NOMS_NATURE[r.classements[ph.id]] : 'non classée'}`);
+    }
+    case 'ordre': {
+      const r = reponse as Extract<Reponse, { type: 'ordre' }>;
+      return r.ordre.map((id, i) => `${i + 1}. ${etape.elements.find((el) => el.id === id)?.texte ?? id}`);
+    }
+    case 'selection': {
+      const r = reponse as Extract<Reponse, { type: 'selection' }>;
+      const pris = etape.elements.filter((el) => r.choisis.includes(el.id)).map((el) => `Coché : ${el.texte}`);
+      return pris.length ? pris : ['Rien coché'];
     }
   }
 }
@@ -231,6 +245,41 @@ function repondreEtape(mission: Mission, etat: EtatMission, reponse: Reponse): R
       // La transmission de l'élève : les phrases qu'il a gardées comme faits observés.
       const gardees = etape.phrases.filter((ph) => r.classements[ph.id] === 'fait').map((ph) => `« ${ph.texte} »`);
       retours.push(gardees.length ? `Votre transmission : ${gardees.join(' ')}` : 'Vous n\'avez gardé aucun fait observé : il n\'y a rien à transmettre.');
+      return {
+        etat: { ...etat, etape: suivante(mission, etape), points: ajouter(etat.points, gagnes), essais: 0 },
+        retours,
+        reussi: identiques(gagnes, max),
+        aRevoir: manquantes(gagnes, max),
+      };
+    }
+    case 'ordre': {
+      const r = reponse as Extract<Reponse, { type: 'ordre' }>;
+      let gagnes: Points = {};
+      etape.elements.forEach((el, rang) => {
+        if (r.ordre[rang] === el.id) gagnes = ajouter(gagnes, el.points);
+      });
+      const bienPlaces = etape.elements.filter((el, rang) => r.ordre[rang] === el.id).length;
+      const retours = [
+        `${bienPlaces} étape${bienPlaces > 1 ? 's' : ''} sur ${etape.elements.length} à la bonne place.`,
+        ...(bienPlaces < etape.elements.length ? ['L\'ordre attendu :', ...etape.elements.map((el, i) => `${i + 1}. ${el.texte}`)] : []),
+        etape.retour,
+      ];
+      return {
+        etat: { ...etat, etape: suivante(mission, etape), points: ajouter(etat.points, gagnes), essais: 0 },
+        retours,
+        reussi: identiques(gagnes, max),
+        aRevoir: manquantes(gagnes, max),
+      };
+    }
+    case 'selection': {
+      const r = reponse as Extract<Reponse, { type: 'selection' }>;
+      let gagnes: Points = {};
+      const retours = etape.elements.map((el) => {
+        const pris = r.choisis.includes(el.id);
+        const bien = pris === el.attendu;
+        if (bien) gagnes = ajouter(gagnes, el.points);
+        return `${bien ? '✔' : '✘'} ${el.texte} : ${el.attendu ? 'à prendre' : 'à laisser'}. ${el.retour}`;
+      });
       return {
         etat: { ...etat, etape: suivante(mission, etape), points: ajouter(etat.points, gagnes), essais: 0 },
         retours,

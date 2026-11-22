@@ -186,7 +186,39 @@ export interface EtapeTransmission extends EtapeCommune {
   phrases: PhraseTransmission[];
 }
 
-export type Etape = EtapeDialogue | EtapeObservation | EtapeDecision | EtapeRelais | EtapeTransmission;
+/** Une étape d'un protocole, à remettre à sa place. */
+export interface ElementOrdre {
+  id: string;
+  texte: string;
+  points?: Points; // gagnés si l'élément est placé à son rang
+}
+
+/** Protocole : l'élève remet les étapes dans l'ordre. Les éléments sont écrits dans le bon ordre ; l'écran les mélange. */
+export interface EtapeOrdre extends EtapeCommune {
+  type: 'ordre';
+  elements: ElementOrdre[];
+  retour: string; // explication montrée après la réponse
+}
+
+/** Un élément à prendre ou à laisser (matériel, produit, ligne de stock à signaler…). */
+export interface ElementSelection {
+  id: string;
+  texte: string;
+  attendu: boolean; // bonne réponse : à prendre (true) ou à laisser (false)
+  stock?: number; // pour une fiche de stock : quantité en réserve…
+  seuil?: number; // … et seuil d'alerte (affichés dans un tableau)
+  points?: Points; // gagnés si l'élève a bien pris ou bien laissé l'élément
+  retour: string;
+}
+
+/** Sélection : l'élève coche ce qu'il faut prendre (matériel, produits) ou signaler (stocks). */
+export interface EtapeSelection extends EtapeCommune {
+  type: 'selection';
+  question: string;
+  elements: ElementSelection[];
+}
+
+export type Etape = EtapeDialogue | EtapeObservation | EtapeDecision | EtapeRelais | EtapeTransmission | EtapeOrdre | EtapeSelection;
 
 export interface Mission {
   id: string;

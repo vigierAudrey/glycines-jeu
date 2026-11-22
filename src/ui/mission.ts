@@ -10,6 +10,7 @@ import type { Contenu, ElementObserve, Etape, Mission, NaturePhrase } from '../c
 import { bilan, demarrerMission, etapeEnCours, repondre, type Bilan, type EtatMission, type Reponse } from '../regles/mission';
 import { estDebloquee, missionsAMontrer, SEQUENCES } from '../regles/deblocage';
 import type { Theatre } from '../scene3d/creerScene';
+import { melangerSansOrdreDeDepart } from '../regles/hasard';
 import { echapper } from './echapper';
 
 /** Ce que l'interface des missions demande au reste du jeu (main.ts fait le lien avec la 3D). */
@@ -89,6 +90,9 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
   let classements: Record<string, 'facilite' | 'gene'> = {};
   let elementOuvert: ElementObserve | null = null;
   let natures: Record<string, NaturePhrase> = {};
+  let ordreAffiche: string[] = []; // protocole : éléments mélangés, dans l'ordre où ils sont montrés
+  let ordreChoisi: string[] = []; // protocole : éléments touchés par l'élève, dans l'ordre
+  let choisis = new Set<string>(); // sélection : éléments cochés
 
   const etape = (): Etape | undefined => (mission && etat ? etapeEnCours(mission, etat) : undefined);
   const residentDeLaMission = () => mission?.personnages.find((id) => residents.has(id));
@@ -172,6 +176,33 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
           <p class="compteur">Phrases triées : ${faites} / ${e.phrases.length}</p>
           <button type="button" class="bouton bouton--principal" data-action="valider-transmission" ${faites === e.phrases.length ? '' : 'disabled'}>Je transmets les faits</button>`;
       }
+      case 'ordre': {
+        if (ordreAffiche.length !== e.elements.length) ordreAffiche = melangerSansOrdreDeDepart(e.elements.map((el) => el.id));
+        const complet = ordreChoisi.length === e.elements.length;
+        return `
+          <p class="indice">Touchez les étapes dans l'ordre où vous les faites. Touchez une étape numérotée pour l'enlever.</p>
+          ${ordreAffiche.map((id) => {
+            const el = e.elements.find((x) => x.id === id)!;
+            const rang = ordreChoisi.indexOf(id);
+            return `
+            <button type="button" class="choix choix--ordre" aria-pressed="${rang >= 0}" data-ordre="${echapper(id)}">
+              <span class="rang" aria-hidden="true">${rang >= 0 ? rang + 1 : ''}</span> <span class="a-lire">${echapper(el.texte)}</span>
+            </button>`;
+          }).join('')}
+          <div class="rangee-boutons">
+            <button type="button" class="bouton bouton--texte" data-action="recommencer-ordre" ${ordreChoisi.length ? '' : 'disabled'}>Recommencer</button>
+            <button type="button" class="bouton bouton--principal" data-action="valider-ordre" ${complet ? '' : 'disabled'}>Valider mon ordre</button>
+          </div>`;
+      }
+      case 'selection':
+        return `
+          <p class="question a-lire">${echapper(e.question)}</p>
+          ${e.elements.map((el) => `
+            <button type="button" class="choix choix--coche" aria-pressed="${choisis.has(el.id)}" data-selection="${echapper(el.id)}">
+              <span class="coche" aria-hidden="true">${choisis.has(el.id) ? '☑' : '☐'}</span>
+              <span class="a-lire">${echapper(el.texte)}${el.stock !== undefined ? ` <span class="stock">· en réserve : <strong>${el.stock}</strong> · seuil d'alerte : <strong>${el.seuil}</strong></span>` : ''}</span>
+            </button>`).join('')}
+          <button type="button" class="bouton bouton--principal" data-action="valider-selection">Valider</button>`;
       case 'relais':
         return `
           <p class="indice">Touchez dans l'aile la personne à prévenir. Le bouton « Qui est qui ? » peut vous aider.</p>
@@ -269,6 +300,9 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
     dialogue = {};
     classements = {};
     natures = {};
+    ordreAffiche = [];
+    ordreChoisi = [];
+    choisis = new Set();
     elementOuvert = null;
     messageRelais = '';
     if (etat.etape === null) {
@@ -289,6 +323,9 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
     dialogue = {};
     classements = {};
     natures = {};
+    ordreAffiche = [];
+    ordreChoisi = [];
+    choisis = new Set();
     elementOuvert = null;
     messageRelais = '';
     fenetre.hidden = true;
@@ -324,6 +361,18 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
       natures[d.phrase] = d.nature as NaturePhrase;
       afficher();
     } else if (d.action === 'valider-transmission') envoyer({ type: 'transmission', classements: natures });
+    else if (d.ordre) {
+      ordreChoisi = ordreChoisi.includes(d.ordre) ? ordreChoisi.filter((id) => id !== d.ordre) : [...ordreChoisi, d.ordre];
+      afficher();
+    } else if (d.action === 'recommencer-ordre') {
+      ordreChoisi = [];
+      afficher();
+    } else if (d.action === 'valider-ordre') envoyer({ type: 'ordre', ordre: ordreChoisi });
+    else if (d.selection) {
+      if (choisis.has(d.selection)) choisis.delete(d.selection);
+      else choisis.add(d.selection);
+      afficher();
+    } else if (d.action === 'valider-selection') envoyer({ type: 'selection', choisis: [...choisis] });
     else if (d.decision !== undefined && e?.type === 'decision') envoyer({ type: 'decision', choix: Number(d.decision) });
   });
 

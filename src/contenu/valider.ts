@@ -244,8 +244,32 @@ function validerEtapes(m: Mission, contenu: Contenu, signaler: (message: string)
         if (!(e.phrases ?? []).some((ph) => ph.nature !== 'fait')) signaler(`${ou} : au moins une phrase doit être un jugement ou une interprétation, à écarter.`);
         break;
       }
+      case 'ordre': {
+        if (!(e.elements?.length >= 3)) signaler(`${ou} : un protocole demande au moins 3 étapes à ordonner.`);
+        const idsOrdre = new Set<string>();
+        for (const el of e.elements ?? []) {
+          if (idsOrdre.has(el.id)) signaler(`${ou} : élément « ${el.id} » en double.`);
+          idsOrdre.add(el.id);
+          lirePoints(ou, el.points);
+        }
+        if (!e.retour) signaler(`${ou} : il manque le retour.`);
+        break;
+      }
+      case 'selection': {
+        if (!(e.elements?.length >= 3)) signaler(`${ou} : une sélection demande au moins 3 éléments.`);
+        const idsSel = new Set<string>();
+        for (const el of e.elements ?? []) {
+          if (idsSel.has(el.id)) signaler(`${ou} : élément « ${el.id} » en double.`);
+          idsSel.add(el.id);
+          if (typeof el.attendu !== 'boolean') signaler(`${ou} : l'élément « ${el.id} » doit dire s'il est attendu (true ou false).`);
+          if ((el.stock === undefined) !== (el.seuil === undefined)) signaler(`${ou} : l'élément « ${el.id} » a un stock sans seuil, ou l'inverse.`);
+          lirePoints(ou, el.points);
+        }
+        if (!(e.elements ?? []).some((el) => el.attendu) || !(e.elements ?? []).some((el) => !el.attendu)) signaler(`${ou} : il faut au moins un élément à prendre et un à laisser.`);
+        break;
+      }
       default:
-        signaler(`${ou} : type « ${(e as { type: string }).type} » inconnu (dialogue, observation, decision, relais ou transmission).`);
+        signaler(`${ou} : type « ${(e as { type: string }).type} » inconnu (dialogue, observation, decision, relais, transmission, ordre ou selection).`);
     }
   }
 

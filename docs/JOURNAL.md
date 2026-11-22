@@ -208,3 +208,9 @@ Trois lignes par session : ce qui a été fait, ce qui reste à surveiller, la p
 - **Fait** : nouveau type d'étape `transmission` (moteur, validateur, panneau, page enseignante, tests). L'élève trie des phrases en Fait, Jugement ou Interprétation (définitions rappelées en haut) ; le retour affiche sa transmission, faite des phrases qu'il a gardées comme faits (un jugement gardé par erreur s'y voit). Première utilisation dans `m16` (Mme Rose, confusion soudaine), d'après votre séance S1-05, activité 3 « Habituel ou alerte ? » (« rédige une transmission factuelle ») et S1-02 (« une transmission décrit des faits observés ») : l'ancienne décision « Que transmettez-vous ? » est remplacée par un tri de 6 phrases tirées de la mission. `pnpm verifier` OK (98 tests).
 - **À surveiller** : m16 est en brouillon, à relire (les 6 phrases). Navigateur indisponible ici pour une vérification visuelle.
 - **Prochaine tâche** : P.4 (Protocole : remettre les étapes dans l'ordre).
+
+## 22/11/2026 · Activités « Protocole » et « Matériel et produits » (tâches P.4 et P.5)
+
+- **Fait** : deux nouveaux types d'étapes, `ordre` (toucher les étapes dans l'ordre, chacune numérotée ; « Recommencer » ; l'ordre attendu est montré en cas d'erreur) et `selection` (cocher ce qu'on prend, laisser le reste ; prévu aussi pour les stocks avec `stock` et `seuil`). Nouvelle mission brouillon `m21-karim-entretien-methode` (S3, C2.2.1 « Choix du matériel et des produits adaptés et utilisation correcte. ») d'après votre fiche protocole S3-07 : 9 objets pour le chariot (dont 3 pièges tirés des vigilances : flacon transvasé sans étiquette, mélange de produits, parfum pour masquer) et les 14 étapes regroupées en 8. `pnpm verifier` OK (103 tests).
+- **À surveiller** : m21 à relire (surtout le regroupement des 14 étapes en 8). Navigateur indisponible ici.
+- **Prochaine tâche** : P.6 (Réserve et stocks).
