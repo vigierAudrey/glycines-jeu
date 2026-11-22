@@ -10,7 +10,7 @@ import type { Contenu, ElementObserve, Etape, Mission, NaturePhrase } from '../c
 import { bilan, demarrerMission, etapeEnCours, repondre, type Bilan, type EtatMission, type Reponse } from '../regles/mission';
 import { estDebloquee, missionsAMontrer, SEQUENCES } from '../regles/deblocage';
 import type { Theatre } from '../scene3d/creerScene';
-import { melangerSansOrdreDeDepart } from '../regles/hasard';
+import { melanger, melangerSansOrdreDeDepart } from '../regles/hasard';
 import { echapper } from './echapper';
 
 /** Ce que l'interface des missions demande au reste du jeu (main.ts fait le lien avec la 3D). */
@@ -91,6 +91,17 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
   let elementOuvert: ElementObserve | null = null;
   let natures: Record<string, NaturePhrase> = {};
   let ordreAffiche: string[] = []; // protocole : éléments mélangés, dans l'ordre où ils sont montrés
+  // Réponses montrées dans un ordre tiré au hasard à chaque partie (P.10), pour qu'on ne retienne pas
+  // « c'est toujours la deuxième ». Le moteur reçoit toujours les indices d'origine : seul l'affichage change.
+  const ordresTires = new Map<string, number[]>();
+  const dansLOrdreTire = <T,>(cle: string, liste: readonly T[]): { el: T; i: number }[] => {
+    let ordre = ordresTires.get(cle);
+    if (!ordre || ordre.length !== liste.length) {
+      ordre = melanger(liste.map((_, i) => i));
+      ordresTires.set(cle, ordre);
+    }
+    return ordre.map((i) => ({ el: liste[i], i }));
+  };
   let ordreChoisi: string[] = []; // protocole : éléments touchés par l'élève, dans l'ordre
   let choisis = new Set<string>(); // sélection : éléments cochés
   let rangements: Record<string, string> = {}; // tri : élément → catégorie
@@ -132,7 +143,7 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
           ${CANAUX.map((c) => `
             <fieldset class="canal">
               <legend>${c.titre} <span class="canal__sous">(${c.sous})</span></legend>
-              ${e[c.cle].map((o, i) => `
+              ${dansLOrdreTire(`${e.id}:${c.cle}`, e[c.cle]).map(({ el: o, i }) => `
                 <button type="button" class="choix" aria-pressed="${dialogue[c.cle] === i}"
                         data-canal="${c.cle}" data-i="${i}">${echapper(o.texte)}</button>`).join('')}
             </fieldset>`).join('')}
@@ -158,7 +169,7 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
       case 'decision':
         return `
           <p class="question a-lire">${echapper(e.question)}</p>
-          ${e.choix.map((o, i) => `
+          ${dansLOrdreTire(e.id, e.choix).map(({ el: o, i }) => `
             <button type="button" class="choix choix--decision" data-decision="${i}">
               <span class="badge badge--${o.decision}">${NOMS_DECISION[o.decision]}</span> ${echapper(o.texte)}
             </button>`).join('')}`;
@@ -166,7 +177,7 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
         const faites = e.phrases.filter((ph) => natures[ph.id]).length;
         return `
           <p class="indice a-lire"><strong>Fait observé</strong> : ce que j'ai vu ou entendu. <strong>Jugement</strong> : un avis sur la personne. <strong>Interprétation</strong> : une cause ou une explication que je suppose.</p>
-          ${e.phrases.map((ph) => `
+          ${dansLOrdreTire(e.id, e.phrases).map(({ el: ph }) => `
             <fieldset class="canal">
               <legend class="a-lire">« ${echapper(ph.texte)} »</legend>
               <div class="rangee-boutons rangee-boutons--trois">
@@ -198,7 +209,7 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
       case 'selection':
         return `
           <p class="question a-lire">${echapper(e.question)}</p>
-          ${e.elements.map((el) => `
+          ${dansLOrdreTire(e.id, e.elements).map(({ el }) => `
             <button type="button" class="choix choix--coche" aria-pressed="${choisis.has(el.id)}" data-selection="${echapper(el.id)}">
               <span class="coche" aria-hidden="true">${choisis.has(el.id) ? '☑' : '☐'}</span>
               <span class="a-lire">${echapper(el.texte)}${el.stock !== undefined ? ` <span class="stock">· en réserve : <strong>${el.stock}</strong> · seuil d'alerte : <strong>${el.seuil}</strong></span>` : ''}</span>
@@ -208,7 +219,7 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
         const ranges = e.elements.filter((el) => rangements[el.id]).length;
         return `
           <ul class="categories">${e.categories.map((c) => `<li class="a-lire"><strong>${echapper(c.libelle)}</strong>${c.aide ? ` : ${echapper(c.aide)}` : ''}</li>`).join('')}</ul>
-          ${e.elements.map((el) => `
+          ${dansLOrdreTire(e.id, e.elements).map(({ el }) => `
             <fieldset class="canal">
               <legend class="a-lire">${echapper(el.texte)}</legend>
               <div class="rangee-boutons rangee-boutons--trois">
@@ -341,6 +352,7 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
     mission = m;
     etat = demarrerMission(m);
     phase = 'intro';
+    ordresTires.clear();
     dialogue = {};
     classements = {};
     natures = {};

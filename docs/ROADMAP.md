@@ -96,7 +96,7 @@ Règle commune : toute nouvelle activité s'appuie sur une situation réelle des
 
 ### Rejouer et relier les missions
 
-- [ ] **P.10** Ordre des réponses mélangé à chaque partie, pour qu'on ne retienne pas « c'est toujours la deuxième ».
+- [x] **P.10** Ordre des réponses mélangé à chaque partie, pour qu'on ne retienne pas « c'est toujours la deuxième ».
 - [ ] **P.11** Variantes d'une même mission (moment de la journée, humeur du résident) tirées au hasard, écrites d'après les cours.
 - [ ] **P.12** Conséquences plus tard : un oubli dans une mission (tapis non signalé…) réapparaît au début d'une mission suivante, gardé dans le navigateur seulement.
 

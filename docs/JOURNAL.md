@@ -238,3 +238,9 @@ Trois lignes par session : ce qui a été fait, ce qui reste à surveiller, la p
 - **Fait** : nouvelle mission brouillon `m25-rose-fille-secret` (S2, CT3.4) d'après S2-06 : répondre à la fille de Mme Rose sans communiquer de diagnostic, aller prévenir l'infirmière, puis trier 4 demandes en « taire et orienter / transmettre à l'équipe / alerter » (corrections de l'activité 2 reprises). Utilise les activités existantes (aucun code nouveau). `pnpm verifier` OK.
 - **À surveiller** : la fille de Mme Rose n'est qu'un texte (pas de personnage 3D).
 - **Prochaine tâche** : P.10 (ordre des réponses mélangé).
+
+## 22/11/2026 · Réponses mélangées (tâche P.10)
+
+- **Fait** : les choix des décisions, les répliques des dialogues, les phrases de transmission et les éléments à cocher ou à trier sont montrés dans un ordre tiré au hasard, le même pendant toute la partie, nouveau à chaque partie. Le moteur et les points ne changent pas (indices d'origine). Les catégories du tri gardent leur ordre logique. `pnpm verifier` OK.
+- **À surveiller** : aucun texte de mission ne doit dire « la réponse ci-dessus » (vérifié : aucun).
+- **Prochaine tâche** : P.11 (variantes d'une mission).
