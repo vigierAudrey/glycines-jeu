@@ -19,7 +19,7 @@ export function monterInterface(racine: HTMLElement, titre: string, theatre: The
       <h2>Le personnel de l'aile B</h2>
       <ul>
         ${personnel
-          .map((p) => `<li><span class="pastille" style="background:${p.tenue}"></span><strong>${p.joueur ? 'Vous' : p.sigle}</strong> ${p.metier}${p.joueur ? '' : ` (${p.prenom})`}</li>`)
+          .map((p) => `<li><span class="pastille" style="background:${p.tenue}"></span>${p.picto ? `<span class="picto" aria-hidden="true">${p.picto}</span>` : ''}<strong>${p.joueur ? 'Vous' : p.sigle}</strong> ${p.metier}${p.joueur ? '' : ` (${p.prenom})`}</li>`)
           .join('')}
       </ul>
       <p>Les résidents portent leur nom au-dessus de la tête.</p>

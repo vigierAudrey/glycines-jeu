@@ -1,11 +1,11 @@
 {
-  "note": "Métiers présents dans l'aile B. Les prénoms sont fictifs et modifiables. La couleur de tenue sert à reconnaître le métier d'un coup d'œil, sur ordinateur comme sur téléphone.",
+  "note": "Métiers présents dans l'aile B. Les prénoms sont fictifs et modifiables. La couleur de tenue et le pictogramme servent à reconnaître le métier d'un coup d'œil, sur ordinateur comme sur téléphone.",
   "personnel": [
-    { "id": "joueur", "prenom": "Vous", "metier": "Agent accompagnant au grand âge", "sigle": "AAGA", "tenue": "#7b5ea7", "zone_habituelle": "couloir", "apparence": { "peau": "#e2b48c", "cheveux": "#5a3d2b", "coiffure": "court" }, "joueur": true},
-    { "id": "infirmiere", "prenom": "Claire", "metier": "Infirmière", "sigle": "IDE", "tenue": "#3d7cc9", "zone_habituelle": "poste-de-soins", "apparence": { "peau": "#f0d2b6", "cheveux": "#d9b45f", "coiffure": "queue" } },
-    { "id": "aide-soignante", "prenom": "Nadia", "metier": "Aide-soignante", "sigle": "AS", "tenue": "#3fa66b", "zone_habituelle": "couloir", "apparence": { "peau": "#a8764f", "cheveux": "#2e211b", "coiffure": "chignon" } },
-    { "id": "cadre", "prenom": "M. Lemoine", "metier": "Cadre de santé", "sigle": "Cadre", "tenue": "#2f3e4e", "zone_habituelle": "poste-de-soins", "apparence": { "peau": "#e9c9a8", "cheveux": "#3b3029", "coiffure": "court", "lunettes": true} },
-    { "id": "ash", "prenom": "Julien", "metier": "Agent de service hospitalier", "sigle": "ASH", "tenue": "#8a8f98", "zone_habituelle": "local-menage", "apparence": { "peau": "#c99a72", "cheveux": "#4a3426", "coiffure": "court" } },
-    { "id": "animatrice", "prenom": "Inès", "metier": "Animatrice", "sigle": "Anim", "tenue": "#e8892b", "zone_habituelle": "salon", "apparence": { "peau": "#e2b48c", "cheveux": "#1f1a17", "coiffure": "long" } }
+    { "id": "joueur", "picto": "🙋", "prenom": "Vous", "metier": "Agent accompagnant au grand âge", "sigle": "AAGA", "tenue": "#7b5ea7", "zone_habituelle": "couloir", "apparence": { "peau": "#e2b48c", "cheveux": "#5a3d2b", "coiffure": "court" }, "joueur": true},
+    { "id": "infirmiere", "picto": "🩺", "prenom": "Claire", "metier": "Infirmière", "sigle": "IDE", "tenue": "#3d7cc9", "zone_habituelle": "poste-de-soins", "apparence": { "peau": "#f0d2b6", "cheveux": "#d9b45f", "coiffure": "queue" } },
+    { "id": "aide-soignante", "picto": "🤝", "prenom": "Nadia", "metier": "Aide-soignante", "sigle": "AS", "tenue": "#3fa66b", "zone_habituelle": "couloir", "apparence": { "peau": "#a8764f", "cheveux": "#2e211b", "coiffure": "chignon" } },
+    { "id": "cadre", "picto": "📋", "prenom": "M. Lemoine", "metier": "Cadre de santé", "sigle": "Cadre", "tenue": "#2f3e4e", "zone_habituelle": "poste-de-soins", "apparence": { "peau": "#e9c9a8", "cheveux": "#3b3029", "coiffure": "court", "lunettes": true} },
+    { "id": "ash", "picto": "🧹", "prenom": "Julien", "metier": "Agent de service hospitalier", "sigle": "ASH", "tenue": "#8a8f98", "zone_habituelle": "local-menage", "apparence": { "peau": "#c99a72", "cheveux": "#4a3426", "coiffure": "court" } },
+    { "id": "animatrice", "picto": "🎨", "prenom": "Inès", "metier": "Animatrice", "sigle": "Anim", "tenue": "#e8892b", "zone_habituelle": "salon", "apparence": { "peau": "#e2b48c", "cheveux": "#1f1a17", "coiffure": "long" } }
   ]
 }

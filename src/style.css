@@ -438,3 +438,7 @@ html, body {
 .mode-classe .panneau { width: min(1100px, calc(100% - 16px)); max-height: min(78%, 900px); font-size: 1.45rem; }
 .mode-classe .panneau .choix, .mode-classe .panneau .bouton { font-size: 1.3rem; }
 .mode-classe .fenetre__carte { font-size: 1.35rem; width: min(1100px, 100%); }
+
+/* Pictogrammes (P.15) */
+.picto { margin-right: 4px; }
+.metiers { display: flex; flex-wrap: wrap; gap: 4px 12px; list-style: none; padding: 0; margin: 4px 0; font-size: .9rem; }

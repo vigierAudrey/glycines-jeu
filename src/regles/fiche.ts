@@ -14,7 +14,7 @@ export function ficheDe(id: string, residents: Resident[], personnel: MembrePers
   if (resident) return { nom: `${resident.civilite} ${resident.nom}`, role: resident.civilite === 'Mme' ? 'Résidente' : 'Résident' };
 
   const membre = personnel.find((p) => p.id === id);
-  if (membre) return { nom: membre.joueur ? 'Vous' : membre.prenom, role: `${membre.metier} (${membre.sigle})` };
+  if (membre) return { nom: membre.joueur ? 'Vous' : membre.prenom, role: `${membre.picto ? `${membre.picto} ` : ''}${membre.metier} (${membre.sigle})` };
 
   return undefined;
 }

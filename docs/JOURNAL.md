@@ -268,3 +268,9 @@ Trois lignes par session : ce qui a été fait, ce qui reste à surveiller, la p
 - **Fait** : avec `?classe` dans l'adresse, le jeu passe en grands caractères et, après chaque réponse, affiche « Débattez en classe » puis un bouton « Révéler la correction ». La page enseignante donne ce lien à côté du lien élèves. `pnpm verifier` OK.
 - **À surveiller** : tailles choisies sans vidéoprojecteur sous la main : à ajuster après un premier essai en classe.
 - **Prochaine tâche** : P.15 (pictogrammes).
+
+## 22/11/2026 · Pictogrammes (tâche P.15)
+
+- **Fait** : ✋ Agir, 🔄 Adapter, 📣 Alerter sur les choix ; un pictogramme par métier (🩺 infirmière, 🤝 aide-soignante, 📋 cadre, 🧹 ASH, 🎨 animatrice) dans « Qui est qui ? », la bulle et pendant un relais (liste des métiers). Emojis du système : aucune dépendance. `pnpm verifier` OK.
+- **À surveiller** : le rendu des emojis varie selon le téléphone.
+- **Prochaine tâche** : P.16 (lexique du métier).

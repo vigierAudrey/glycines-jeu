@@ -14,7 +14,7 @@ describe('ficheDe', () => {
   });
 
   it('présente un professionnel par son prénom, son métier et son sigle', () => {
-    expect(ficheDe('infirmiere', residents, personnel)).toEqual({ nom: 'Claire', role: 'Infirmière (IDE)' });
+    expect(ficheDe('infirmiere', residents, personnel)).toEqual({ nom: 'Claire', role: '🩺 Infirmière (IDE)' });
   });
 
   it('présente le personnage joué par « Vous »', () => {

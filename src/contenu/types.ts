@@ -87,6 +87,7 @@ export interface MembrePersonnel {
   metier: string;
   sigle: string;
   tenue: string; // couleur de tenue, format #rrggbb
+  picto?: string; // pictogramme du métier, pour les élèves qui lisent difficilement (P.15)
   zone_habituelle: string; // id de zone
   apparence?: Apparence;
   joueur?: boolean;

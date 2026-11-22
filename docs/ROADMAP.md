@@ -109,7 +109,7 @@ Règle commune : toute nouvelle activité s'appuie sur une situation réelle des
 
 ### Aider les élèves qui lisent difficilement
 
-- [ ] **P.15** Pictogrammes sur les choix (agir, adapter, alerter) et sur les métiers à rejoindre pour un relais.
+- [x] **P.15** Pictogrammes sur les choix (agir, adapter, alerter) et sur les métiers à rejoindre pour un relais.
 - [ ] **P.16** Lexique du métier : les mots clés des textes (« transmission », « projet de vie »…) se touchent et ouvrent une définition courte, tirée des cours. 🧑‍🏫 Audrey valide les définitions.
 - [ ] **P.17** Aide en arabe : voir 5.3 (consignes et lexique d'abord).
 

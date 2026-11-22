@@ -54,6 +54,8 @@ const CANAUX = [
 ] as const;
 
 const NOMS_DECISION = { agir: 'Agir', adapter: 'Adapter', alerter: 'Alerter' };
+// Pictogrammes (P.15) : repérer le type de décision sans tout lire.
+const PICTOS_DECISION = { agir: '✋', adapter: '🔄', alerter: '📣' };
 
 export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: Contenu, liens: LiensMission): InterfaceMission {
   const noms = new Map<string, string>([
@@ -183,7 +185,7 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
           <p class="question a-lire">${echapper(e.question)}</p>
           ${dansLOrdreTire(e.id, e.choix).map(({ el: o, i }) => `
             <button type="button" class="choix choix--decision" data-decision="${i}">
-              <span class="badge badge--${o.decision}">${NOMS_DECISION[o.decision]}</span> ${echapper(o.texte)}
+              <span class="badge badge--${o.decision}"><span aria-hidden="true">${PICTOS_DECISION[o.decision]}</span> ${NOMS_DECISION[o.decision]}</span> ${echapper(o.texte)}
             </button>`).join('')}`;
       case 'transmission': {
         const faites = e.phrases.filter((ph) => natures[ph.id]).length;
@@ -245,6 +247,7 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
       case 'relais':
         return `
           <p class="indice">Touchez dans l'aile la personne à prévenir. Le bouton « Qui est qui ? » peut vous aider.</p>
+          <ul class="metiers">${contenu.personnel.filter((p) => !p.joueur).map((p) => `<li class="a-lire"><span aria-hidden="true">${p.picto ?? ''}</span> ${echapper(p.metier)}</li>`).join('')}</ul>
           ${messageRelais ? `<p class="retour retour--erreur a-lire">${echapper(messageRelais)}</p>` : ''}`;
     }
   };
