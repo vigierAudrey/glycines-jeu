@@ -1,0 +1,199 @@
+{
+  "id": "m28-pse-postures-a-risque",
+  "statut": "brouillon",
+  "discipline": "PSE",
+  "titre": "PSE · Quelles postures abîment mon corps ?",
+  "duree_min": 10,
+  "sequence_requise": "S2",
+  "lieu": "couloir",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "PSE-C5",
+      "critere": "Identifier les facteurs de risque en relation avec l’activité physique dans une activité de travail."
+    }
+  ],
+  "situation": "Aux Glycines, vous aidez des résidents à se lever et à passer du lit au fauteuil. Ces gestes reviennent plusieurs fois dans la journée. En fin de service, vous sentez votre dos et vos épaules tirer. Votre tutrice vous demande d'observer vos postures avant d'agir.",
+  "objectif_eleve": "Distinguer travail statique et dynamique, repérer les postures à risque, puis appliquer une mini-démarche de prévention.",
+  "note_pour_audrey": "Brouillon écrit pour la tâche 5.1c, d'après votre séance PSE S2-01 (« Statique / dynamique, postures à risque ») : situation de départ, activités 1 à 3 et leurs corrections. Les postures sûres viennent du « Je retiens » de S2-03. Le fil rouge du cours (transferts de Mme Rose et M. André) est raconté sans nom, pour ne pas ajouter d'information aux profils des résidents. Critère : objectif ciblé du module C5, mot pour mot. À relire avant de passer le statut à valide.",
+  "etapes": [
+    {
+      "id": "statique-dynamique",
+      "type": "tri",
+      "consigne": "Statique ou dynamique ? Classez chaque activité.",
+      "categories": [
+        {
+          "id": "statique",
+          "libelle": "Travail statique",
+          "aide": "posture maintenue"
+        },
+        {
+          "id": "dynamique",
+          "libelle": "Travail dynamique",
+          "aide": "mouvement répété"
+        }
+      ],
+      "elements": [
+        {
+          "id": "penche",
+          "texte": "Rester immobile, penché au-dessus du lit, pendant un soin",
+          "categorie": "statique",
+          "points": {
+            "PSE-C5": 1
+          },
+          "retour": "Le corps reste dans la même position : c'est un travail statique. Il fatigue aussi."
+        },
+        {
+          "id": "fauteuil",
+          "texte": "Marcher en poussant un fauteuil roulant dans le couloir",
+          "categorie": "dynamique",
+          "points": {
+            "PSE-C5": 1
+          },
+          "retour": "Le corps est en mouvement : c'est un travail dynamique."
+        },
+        {
+          "id": "transferts",
+          "texte": "Aider plusieurs résidents à se lever, plusieurs fois dans la journée",
+          "categorie": "dynamique",
+          "points": {
+            "PSE-C5": 1
+          },
+          "retour": "Un effort répété : c'est un travail dynamique, qui fatigue à force de se répéter."
+        }
+      ]
+    },
+    {
+      "id": "postures",
+      "type": "selection",
+      "consigne": "Votre tutrice vous montre des vignettes.",
+      "question": "Cochez les postures à risque pour votre corps.",
+      "elements": [
+        {
+          "id": "dos-rond",
+          "texte": "Dos rond pour attraper quelque chose au sol",
+          "attendu": true,
+          "points": {
+            "PSE-C5": 1
+          },
+          "retour": "Le dos courbé met le bas du dos en difficulté."
+        },
+        {
+          "id": "bras-en-l-air",
+          "texte": "Bras en l'air pour ranger en hauteur",
+          "attendu": true,
+          "points": {
+            "PSE-C5": 1
+          },
+          "retour": "Les bras éloignés du corps sollicitent les épaules."
+        },
+        {
+          "id": "torsion",
+          "texte": "Torsion du tronc en tenant une charge",
+          "attendu": true,
+          "points": {
+            "PSE-C5": 1
+          },
+          "retour": "La torsion est une posture à risque pour le dos."
+        },
+        {
+          "id": "charge-loin",
+          "texte": "Charge tenue loin du corps",
+          "attendu": true,
+          "points": {
+            "PSE-C5": 1
+          },
+          "retour": "Plus la charge est loin, plus l'effort est grand."
+        },
+        {
+          "id": "dos-droit",
+          "texte": "Dos droit, jambes pliées, charge près du corps",
+          "attendu": false,
+          "points": {
+            "PSE-C5": 1
+          },
+          "retour": "C'est la posture qui protège le dos."
+        },
+        {
+          "id": "pieds-ecartes",
+          "texte": "Pieds écartés pour être stable",
+          "attendu": false,
+          "points": {
+            "PSE-C5": 1
+          },
+          "retour": "Une base stable protège du déséquilibre."
+        }
+      ]
+    },
+    {
+      "id": "mini-demarche",
+      "type": "ordre",
+      "consigne": "Remettez dans l'ordre la mini-démarche de prévention.",
+      "elements": [
+        {
+          "id": "danger",
+          "texte": "Identifier le danger.",
+          "points": {
+            "PSE-C5": 1
+          }
+        },
+        {
+          "id": "dommage",
+          "texte": "Repérer le dommage possible.",
+          "points": {
+            "PSE-C5": 1
+          }
+        },
+        {
+          "id": "mesure",
+          "texte": "Proposer une mesure de prévention.",
+          "points": {
+            "PSE-C5": 1
+          }
+        },
+        {
+          "id": "justifier",
+          "texte": "Justifier avec un mot-clé.",
+          "points": {
+            "PSE-C5": 1
+          }
+        }
+      ],
+      "retour": "Je repère le danger avant de faire le geste, puis le dommage possible, puis la mesure qui protège."
+    },
+    {
+      "id": "chambre-encombree",
+      "type": "decision",
+      "consigne": "On vous demande un transfert du lit au fauteuil, sans aide technique, dans une chambre encombrée.",
+      "question": "Que faites-vous ?",
+      "si_oubli": "Avant un transfert : préparer l'espace, demander de l'aide, utiliser l'aide technique prévue. Un geste rapide mais dangereux n'est pas professionnel.",
+      "choix": [
+        {
+          "decision": "agir",
+          "texte": "Je prépare l'espace, je rapproche le fauteuil, je demande de l'aide et j'utilise l'aide technique prévue.",
+          "points": {
+            "PSE-C5": 2
+          },
+          "retour": "Danger : effort et posture. Dommage : douleur ou accident. Prévention : préparer, rapprocher, demander de l'aide, utiliser une aide technique."
+        },
+        {
+          "decision": "agir",
+          "texte": "Je fais vite, seul, pour ne pas faire attendre.",
+          "retour": "Seul, dans une chambre encombrée, vous risquez une torsion, une douleur ou une chute."
+        },
+        {
+          "decision": "adapter",
+          "texte": "Je soulève en tournant le tronc pour aller plus vite.",
+          "retour": "La torsion du tronc avec une charge est une posture à risque."
+        }
+      ]
+    }
+  ],
+  "debriefing": [
+    "Quelle différence faites-vous entre travail statique et travail dynamique ?",
+    "Citez deux postures à risque et la zone du corps qu'elles mettent en danger.",
+    "Que préparez-vous avant un transfert, et pourquoi ?"
+  ]
+}

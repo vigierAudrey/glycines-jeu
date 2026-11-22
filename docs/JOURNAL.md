@@ -322,3 +322,9 @@ Trois lignes par session : ce qui a été fait, ce qui reste à surveiller, la p
 - **Fait** : deux missions PSE en brouillon. `m26` : enquête sur la chronologie, 5 maillons de la chaîne de transmission, mesure qui casse la chaîne (S3-02). `m27` : 12 mesures à classer en protection collective ou individuelle, priorité au collectif (art. L. 4121-2), 7 étapes de la friction, proposition pour la réunion (S3-03). Vérifié à 390 px.
 - **À surveiller** : les noms de résidents du cours (gastro-entérite) sont remplacés par « une résidente de l'aile B » : aucune maladie ajoutée aux profils du jeu.
 - **Prochaine tâche** : 5.1c (activité physique et TMS, d'après PSE S2).
+
+## 22/11/2026 · PSE : activité physique et TMS (tâche 5.1c)
+
+- **Fait** : `m28` (statique ou dynamique, postures à risque, mini-démarche, transfert dans une chambre encombrée, d'après S2-01) et `m29` (lève-personne de M. Louis, principes d'économie d'effort, aide adaptée, douleur qui revient, d'après S2-02 et S2-03). `pnpm verifier` OK (124 tests).
+- **À surveiller** : le cours parle de M. André pour le transfert ; le jeu prend M. Louis, dont le profil dit déjà « lève-personne et deux professionnels formés ».
+- **Prochaine tâche** : 5.1d (acteurs de prévention, suivi médical, vaccination, d'après PSE S4).

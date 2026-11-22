@@ -120,7 +120,8 @@ Règle commune : toute nouvelle activité s'appuie sur une situation réelle des
   - [x] **5.1a** Référentiel PSE en données (`content/referentiel/pse.json`, modules C4 à C7 mot pour mot) ; missions `discipline: "PSE"`, toujours ouvertes, dans une rubrique « PSE » de la liste.
   - [x] **5.1b** Mission PSE « risque biologique » (C4) d'après PSE S3 (chaîne de transmission, protection).
     Fait : `m26` (chaîne de transmission, d'après S3-02) et `m27` (protection collective et individuelle, friction, d'après S3-03).
-  - [ ] **5.1c** Mission PSE « activité physique et TMS » (C5) d'après PSE S2.
+  - [x] **5.1c** Mission PSE « activité physique et TMS » (C5) d'après PSE S2.
+    Fait : `m28` (postures à risque, S2-01) et `m29` (économie d'effort, aides, douleur, S2-02 et S2-03).
   - [ ] **5.1d** Mission PSE « acteurs de prévention, suivi médical et vaccination » (C6, C7) d'après PSE S4.
 - [ ] **5.2** Bloc 1 : cuisine, lingerie, entretien des espaces collectifs.
 - [-] **5.3** ~~Aide en arabe~~ : abandonnée (D-032).

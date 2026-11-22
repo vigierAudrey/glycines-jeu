@@ -1,0 +1,174 @@
+{
+  "id": "m29-pse-economiser-ses-efforts",
+  "statut": "brouillon",
+  "discipline": "PSE",
+  "titre": "PSE · Aider sans me blesser",
+  "duree_min": 10,
+  "sequence_requise": "S2",
+  "lieu": "chambre-louis",
+  "personnages": [
+    "joueur",
+    "louis",
+    "aide-soignante"
+  ],
+  "competences": [
+    {
+      "code": "PSE-C5",
+      "critere": "Proposer des mesures de protection adaptées au risque en prenant en compte le caractère chronique ou immédiat du risque d’atteinte."
+    }
+  ],
+  "situation": "Aux Glycines, M. Louis doit passer du lit au fauteuil : il nécessite un lève-personne et deux professionnels formés. Vous trouvez que le lève-personne prend trop de temps. Votre tutrice rappelle : un geste rapide mais dangereux n'est pas professionnel.",
+  "objectif_eleve": "Appliquer les principes d'économie d'effort, choisir l'aide adaptée, et agir tôt quand la douleur apparaît.",
+  "note_pour_audrey": "Brouillon écrit pour la tâche 5.1c, d'après vos séances PSE S2-03 (« TP gestes et postures ») : situation, principes du TP, activité 3 (aides adaptées) ; et S2-02 (« TMS et fatigue musculaire ») : « Je dois agir tôt : signaler, adapter le geste, utiliser une aide ». Le cours parle de M. André ; le jeu prend M. Louis, dont le profil dit déjà « lève-personne et deux professionnels formés ». Les situations des aides reprennent les définitions du lexique Bloc 2 S4-02. Critère : objectif ciblé du module C5, mot pour mot. À relire avant de passer le statut à valide.",
+  "etapes": [
+    {
+      "id": "leve-personne",
+      "type": "decision",
+      "consigne": "Le lève-personne vous semble trop long à installer.",
+      "question": "Que faites-vous ?",
+      "choix": [
+        {
+          "decision": "agir",
+          "texte": "J'utilise le lève-personne, avec la collègue formée, comme prévu pour M. Louis.",
+          "points": {
+            "PSE-C5": 2
+          },
+          "retour": "Le matériel prévu et le binôme protègent votre dos et la sécurité de M. Louis."
+        },
+        {
+          "decision": "agir",
+          "texte": "Je le transfère seul, à la force des bras : ce sera plus rapide.",
+          "retour": "Un geste rapide mais dangereux n'est pas professionnel : risque de TMS, d'accident et de chute pour M. Louis."
+        },
+        {
+          "decision": "adapter",
+          "texte": "Je demande à M. Louis de se lever un peu tout seul.",
+          "retour": "M. Louis nécessite un lève-personne : on ne lui demande pas ce qu'il ne peut pas faire."
+        }
+      ]
+    },
+    {
+      "id": "economie-effort",
+      "type": "ordre",
+      "consigne": "Remettez dans l'ordre les principes d'économie d'effort du TP.",
+      "elements": [
+        {
+          "id": "pres",
+          "texte": "Se placer près de la personne ou de la charge.",
+          "points": {
+            "PSE-C5": 1
+          }
+        },
+        {
+          "id": "dos-droit",
+          "texte": "Garder le dos droit et plier les jambes.",
+          "points": {
+            "PSE-C5": 1
+          }
+        },
+        {
+          "id": "pieds",
+          "texte": "Écarter les pieds pour être stable.",
+          "points": {
+            "PSE-C5": 1
+          }
+        },
+        {
+          "id": "glisser",
+          "texte": "Faire glisser plutôt que soulever quand c'est possible.",
+          "points": {
+            "PSE-C5": 1
+          }
+        },
+        {
+          "id": "communiquer",
+          "texte": "Communiquer avec le résident et le binôme.",
+          "points": {
+            "PSE-C5": 1
+          }
+        }
+      ],
+      "retour": "On protège le dos en préparant, en se rapprochant, en évitant torsion et soulèvement inutile."
+    },
+    {
+      "id": "aide-adaptee",
+      "type": "tri",
+      "consigne": "Pour chaque situation, choisissez l'aide adaptée.",
+      "categories": [
+        {
+          "id": "drap",
+          "libelle": "Drap de glisse"
+        },
+        {
+          "id": "verticalisateur",
+          "libelle": "Verticalisateur"
+        },
+        {
+          "id": "leve",
+          "libelle": "Lève-personne"
+        }
+      ],
+      "elements": [
+        {
+          "id": "remonter",
+          "texte": "Remonter une personne dans son lit, sans la soulever",
+          "categorie": "drap",
+          "points": {
+            "PSE-C5": 1
+          },
+          "retour": "Le drap de glisse sert à repositionner : il réduit les frottements."
+        },
+        {
+          "id": "debout",
+          "texte": "Aider une personne qui porte encore son poids à se mettre debout",
+          "categorie": "verticalisateur",
+          "points": {
+            "PSE-C5": 1
+          },
+          "retour": "Le verticalisateur aide à la mise debout, si la personne porte encore son poids."
+        },
+        {
+          "id": "transfert",
+          "texte": "Transférer une personne qui ne porte pas son poids, du lit au fauteuil",
+          "categorie": "leve",
+          "points": {
+            "PSE-C5": 1
+          },
+          "retour": "Le lève-personne permet un transfert sécurisé, selon la notice et le protocole."
+        }
+      ]
+    },
+    {
+      "id": "douleur",
+      "type": "decision",
+      "consigne": "Après plusieurs transferts, vous avez mal aux épaules et au bas du dos. Le lendemain, la douleur revient dès le début du service.",
+      "question": "Que faites-vous ?",
+      "si_oubli": "La douleur est un signal d'alerte : on agit tôt (signaler, adapter le geste, utiliser une aide) avant qu'un TMS devienne durable.",
+      "choix": [
+        {
+          "decision": "alerter",
+          "texte": "Je le signale tôt, j'adapte mes gestes et j'utilise les aides techniques.",
+          "points": {
+            "PSE-C5": 2
+          },
+          "retour": "La douleur est un signal d'alerte : agir tôt évite qu'un TMS devienne durable."
+        },
+        {
+          "decision": "agir",
+          "texte": "Je continue comme avant : c'est normal dans ce métier.",
+          "retour": "Un TMS peut devenir durable si le geste à risque se répète : arrêt de travail, accompagnement moins sûr."
+        },
+        {
+          "decision": "adapter",
+          "texte": "J'évite les transferts et je les laisse aux collègues sans rien dire.",
+          "retour": "Sans le signaler, rien n'est adapté, et l'équipe est désorganisée."
+        }
+      ]
+    }
+  ],
+  "debriefing": [
+    "Pourquoi le lève-personne n'est-il pas une perte de temps ?",
+    "Citez trois principes d'économie d'effort.",
+    "Pourquoi faut-il signaler une douleur qui revient ?"
+  ]
+}
