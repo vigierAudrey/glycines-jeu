@@ -1,0 +1,87 @@
+{
+  "id": "m122-denise-sonnette-hors-de-portee",
+  "statut": "brouillon",
+  "titre": "Une sonnette hors de portée",
+  "duree_min": 15,
+  "sequence_requise": "S5",
+  "lieu": "chambre-denise",
+  "personnages": ["joueur", "denise", "cadre"],
+  "competences": [
+    { "code": "CT3.4", "critere": "Absence de jugement." },
+    { "code": "C2.1.6", "critere": "Transmission des informations préoccupantes aux personnes compétentes." }
+  ],
+  "situation": "Le planning est très tendu cette semaine. En entrant chez Mme Denise, vous voyez sa sonnette posée loin d'elle, sur la commode. Elle vous dit qu'un professionnel remplaçant la tutoie, la presse et lui a dit : « Vous sonnez trop. »",
+  "objectif_eleve": "Prendre sa parole au sérieux, séparer les faits des jugements, protéger, puis alerter le responsable sans mener l'enquête vous-même.",
+  "note_pour_audrey": "Brouillon (tâche T.3, deuxième mission bientraitance après m12), d'après votre séquence 5, séance 6 (« bientraitance, maltraitance : repérer, protéger et alerter ») : séparer faits, hypothèses et jugements ; planning tendu = facteur possible, jamais excuse ; rassurer sans promettre le secret ; alerter le responsable ; ne pas confronter seul ni enquêter. Complément, hors cours : la situation de Mme Denise (sonnette hors de portée, paroles d'un remplaçant), choisie pour montrer qu'une absence d'action peut aussi porter atteinte. Le remplaçant n'est pas un personnage du jeu. La ressource exacte (cadre de santé) est à adapter à votre établissement.",
+  "etapes": [
+    {
+      "id": "proteger",
+      "type": "decision",
+      "consigne": "Mme Denise se déplace avec un déambulateur. La sonnette est sur la commode, loin de son fauteuil.",
+      "question": "Que faites-vous d'abord ?",
+      "choix": [
+        { "decision": "agir", "texte": "Je remets la sonnette à sa portée et je vérifie avec elle qu'elle peut l'atteindre.", "points": { "C2.1.6": 1 }, "retour": "Vous protégez d'abord : sans sonnette, elle ne peut pas appeler à l'aide." },
+        { "decision": "adapter", "texte": "Je lui dis de m'appeler en criant si besoin.", "retour": "Elle reste sans moyen d'appel fiable : la protection passe avant tout." },
+        { "decision": "alerter", "texte": "Je laisse la sonnette où elle est pour montrer au cadre comment je l'ai trouvée.", "retour": "Vous n'avez pas à garder une preuve : sa sécurité passe en premier, vous décrirez ce que vous avez vu." }
+      ]
+    },
+    {
+      "id": "ecouter-denise",
+      "type": "dialogue",
+      "consigne": "Mme Denise baisse la voix.",
+      "interlocuteur": "denise",
+      "replique": "Je ne veux pas d'ennuis. Ne le répétez à personne, d'accord ?",
+      "verbal": [
+        { "texte": "Vous avez bien fait de me le dire. Je ne peux pas garder ça pour moi : je vais en parler au responsable pour vous protéger.", "confiance": 2, "points": { "CT3.4": 2 }, "retour": "Vous la rassurez sans promettre le secret : une parole préoccupante doit être transmise." },
+        { "texte": "D'accord, je ne dirai rien, promis.", "confiance": -1, "retour": "Promettre le secret vous empêcherait d'alerter : on ne le promet jamais dans cette situation." },
+        { "texte": "Vous exagérez sûrement, il est juste débordé.", "confiance": -2, "retour": "Vous jugez sa parole et vous excusez les faits : le planning tendu n'est jamais une excuse." }
+      ],
+      "paraverbal": [
+        { "texte": "Voix calme et basse, comme la sienne.", "confiance": 1, "points": { "CT3.4": 1 }, "retour": "Rester calme l'aide à se sentir en sécurité." },
+        { "texte": "Voix indignée.", "confiance": -1, "retour": "Votre colère peut l'inquiéter davantage." },
+        { "texte": "Questions rapides et insistantes.", "confiance": -2, "retour": "On n'interroge pas de façon insistante : vous écoutez, vous n'enquêtez pas." }
+      ],
+      "non_verbal": [
+        { "texte": "Je m'assieds à sa hauteur et je ferme la porte.", "confiance": 1, "points": { "CT3.4": 1 }, "retour": "Vous protégez son intimité pendant qu'elle parle." },
+        { "texte": "Je note tout devant elle sur mon téléphone.", "confiance": -1, "retour": "Vous noterez ses mots exacts ensuite, sur le support prévu, pas sur votre téléphone." },
+        { "texte": "Je reste debout près de la porte ouverte.", "confiance": -1, "retour": "D'autres personnes peuvent entendre." }
+      ]
+    },
+    {
+      "id": "faits-jugements",
+      "type": "transmission",
+      "consigne": "Préparez ce que vous allez dire au cadre de santé.",
+      "phrases": [
+        { "id": "sonnette", "texte": "À 10 h, la sonnette de Mme Denise était sur la commode, hors de sa portée.", "nature": "fait", "points": { "C2.1.6": 1 }, "retour": "Heure, lieu, ce que vous avez vu : c'est un fait." },
+        { "id": "paroles", "texte": "Mme Denise m'a dit : « Il me tutoie, il me presse, il m'a dit : vous sonnez trop. »", "nature": "fait", "points": { "C2.1.6": 1 }, "retour": "Ses mots exacts, entre guillemets, sont un fait à transmettre." },
+        { "id": "mechant", "texte": "Ce remplaçant est méchant.", "nature": "jugement", "points": { "CT3.4": 1 }, "retour": "C'est un jugement sur une personne : vous transmettez des faits." },
+        { "id": "expres", "texte": "Il a sûrement éloigné la sonnette exprès.", "nature": "interpretation", "points": { "C2.1.6": 1 }, "retour": "Vous supposez une intention que vous n'avez pas vue." }
+      ]
+    },
+    {
+      "id": "confronter",
+      "type": "decision",
+      "consigne": "En sortant, vous croisez le remplaçant dans le couloir.",
+      "question": "Que faites-vous ?",
+      "choix": [
+        { "decision": "alerter", "texte": "Je ne lui en parle pas et je vais tout de suite voir le cadre de santé.", "points": { "C2.1.6": 2, "CT3.4": 1 }, "retour": "Vous ne confrontez pas seul la personne mise en cause et vous alertez sans délai." },
+        { "decision": "agir", "texte": "Je lui demande des explications pour comprendre ce qui s'est passé.", "retour": "Ce n'est pas à vous de mener l'enquête : cela peut aussi mettre Mme Denise en difficulté." },
+        { "decision": "adapter", "texte": "J'attends la fin de la semaine, quand le planning sera moins chargé.", "retour": "Une parole préoccupante s'alerte sans délai." }
+      ]
+    },
+    {
+      "id": "alerter-cadre",
+      "type": "relais",
+      "consigne": "Allez alerter le responsable prévu par l'établissement.",
+      "destinataire": "cadre",
+      "points": { "C2.1.6": 1 },
+      "retour": "M. Lemoine, cadre de santé, reçoit l'alerte et décide de la suite selon le protocole.",
+      "retour_erreur": "Cette personne n'est pas la responsable à alerter. Qui encadre l'équipe de l'aile B ?"
+    }
+  ],
+  "debriefing": [
+    "Pourquoi n'avez-vous pas promis le secret à Mme Denise ?",
+    "Le planning tendu explique-t-il ce qui s'est passé ? L'excuse-t-il ?",
+    "Pourquoi ne fallait-il pas parler vous-même au remplaçant ?"
+  ]
+}

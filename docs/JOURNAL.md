@@ -436,3 +436,9 @@ Trois lignes par session : ce qui a été fait, ce qui reste à surveiller, la p
 - **Fait** : `m119` (S2-05 : laïcité, charte, absence de jugement, recueil discret) et `m120` (S1-02 : flaque dans le couloir, enjeux et acteurs de la prévention). Trois critères CT3.1 jamais cités ; premier QCM dans une mission, vérifié à 390 px. `pnpm verifier` OK (220 tests).
 - **À surveiller** : missions en brouillon, à valider par Audrey.
 - **Prochaine tâche** : T.3 (fin de vie, bientraitance).
+
+## 22/11/2026 · Fin de vie et bientraitance (tâche T.3)
+
+- **Fait** : `m121` (S5-05, directives anticipées de M. André, sans dire qu'il est en fin de vie) et `m122` (S5-06, sonnette hors de portée et paroles d'un remplaçant, qui n'est pas un personnage du jeu). `pnpm verifier` OK (222 tests).
+- **À surveiller** : missions en brouillon ; la ressource d'alerte (cadre de santé) est à adapter à l'établissement.
+- **Prochaine tâche** : T.4 (réfection de lit inoccupé).

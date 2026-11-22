@@ -134,7 +134,8 @@ Bilan : les 14 compétences ont toutes au moins une mission, mais seulement 31 c
   Fait : `m118` (réévaluation de l'autonomie de M. Karim : choisir les informations utiles et récentes, ne pas calculer le GIR, classer les quatre structures), en brouillon.
 - [x] **T.2** Droits, charte, laïcité, éthique et déontologie (CT3.4) ; recueil d'informations dans le respect du secret, enjeux et acteurs de la prévention (CT3.1) (S2-05, S1-02).
   Fait : `m119` (objet religieux de Mme Rose, laïcité, principes de la charte, souhait de M. Karim recueilli avec discrétion) et `m120` (flaque dans le couloir : sécuriser, acteurs et enjeux de la prévention), en brouillon.
-- [ ] **T.3** Fin de vie, cultures de la mort, directives anticipées (CT3.4) ; bientraitance et maltraitance, deuxième mission (S5-05, S5-06).
+- [x] **T.3** Fin de vie, cultures de la mort, directives anticipées (CT3.4) ; bientraitance et maltraitance, deuxième mission (S5-05, S5-06).
+  Fait : `m121` (les volontés de M. André : écouter, je fais / je transmets / je ne décide pas, cultures sans stéréotype, divergence familiale) et `m122` (sonnette de Mme Denise hors de portée, parole d'un remplaçant : protéger, ne pas promettre le secret, faits et jugements, alerter sans enquêter), en brouillon.
 - [ ] **T.4** Réfection de lit inoccupé : hygiène et ergonomie, protocoles, bionettoyage du lit (C2.1.1) (S3-03, S3-04).
 - [ ] **T.5** Confort, sommeil et repos du résident : endormissement et réveil (C2.1.2) (S3-05).
 - [ ] **T.6** Socio-esthétique, habillage et aides techniques, prise des repas (C2.1.4), chacun avec un autre critère (S4-04, S4-05, S4-06).

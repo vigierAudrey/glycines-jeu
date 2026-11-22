@@ -1,0 +1,96 @@
+{
+  "id": "m121-andre-directives-anticipees",
+  "statut": "brouillon",
+  "titre": "Les volontés de M. André",
+  "duree_min": 18,
+  "sequence_requise": "S5",
+  "lieu": "chambre-andre",
+  "personnages": ["joueur", "andre", "infirmiere"],
+  "competences": [
+    { "code": "CT3.4", "critere": "Absence de jugement." },
+    { "code": "CT4.1", "critere": "Adaptation du mode de relation à la situation de la personne âgée." }
+  ],
+  "situation": "M. André a rédigé ses directives anticipées. Ce matin, pendant que vous l'aidez à s'installer, il se met à parler de la mort et de ce qu'il souhaite.",
+  "objectif_eleve": "Écouter sans juger ni imposer vos références, savoir ce que vous faites, ce que vous transmettez et ce que vous ne décidez pas.",
+  "note_pour_audrey": "Brouillon (tâche T.3), d'après votre séquence 5, séance 5 (« fin de vie, cultures de la mort et directives anticipées ») : activité 2 « Directives d'André » (classer ce que l'agent fait, transmet et ne décide pas), activité 1 (besoin de présence, silence, rite souhaité, divergence familiale) et le « Je retiens ». Rien n'indique que M. André soit en fin de vie : il parle seulement de ses volontés. Complément, hors cours : ses paroles (« je veux qu'on respecte ce que j'ai écrit ») et la demande de sa famille, sans contenu médical.",
+  "etapes": [
+    {
+      "id": "andre-parle",
+      "type": "dialogue",
+      "consigne": "M. André pose sa main sur la vôtre.",
+      "interlocuteur": "andre",
+      "replique": "Vous savez, j'ai tout écrit. Le jour où ça n'ira plus, je veux qu'on respecte ce que j'ai écrit.",
+      "verbal": [
+        { "texte": "Vous voulez qu'on respecte vos volontés. Voulez-vous m'en parler un peu ?", "confiance": 2, "points": { "CT4.1": 2, "CT3.4": 1 }, "retour": "Vous reformulez et vous lui laissez le choix de parler ou non : c'est une écoute sans jugement." },
+        { "texte": "Ne pensez pas à ça, vous avez encore de belles années.", "confiance": -2, "retour": "Vous coupez la parole sur un sujet important pour lui : il peut ne plus oser en parler." },
+        { "texte": "À votre place, je ferais plutôt comme dans ma famille.", "confiance": -2, "retour": "Vous imposez vos propres références : ses volontés lui appartiennent." }
+      ],
+      "paraverbal": [
+        { "texte": "Voix douce, je laisse des silences.", "confiance": 1, "points": { "CT4.1": 1 }, "retour": "Le silence laisse à la personne le temps de dire ce qu'elle veut, ou de se taire." },
+        { "texte": "Voix enjouée pour détendre l'atmosphère.", "confiance": -1, "retour": "Un ton enjoué ne correspond pas à ce qu'il est en train de dire." },
+        { "texte": "Voix rapide, je veux vite passer à autre chose.", "confiance": -1, "retour": "Il peut sentir que le sujet vous met mal à l'aise." }
+      ],
+      "non_verbal": [
+        { "texte": "Je m'assieds près de lui et je laisse ma main sous la sienne.", "confiance": 1, "points": { "CT4.1": 1 }, "retour": "Votre présence calme est déjà une réponse." },
+        { "texte": "Je continue de ranger la chambre en l'écoutant.", "confiance": -1, "retour": "Il peut penser que ce qu'il dit compte peu." },
+        { "texte": "Je retire vite ma main.", "confiance": -1, "retour": "Ce geste peut être vécu comme un rejet." }
+      ]
+    },
+    {
+      "id": "faire-transmettre-decider",
+      "type": "tri",
+      "consigne": "Après l'échange, vous faites le point sur votre rôle. Rangez chaque action.",
+      "categories": [
+        { "id": "je-fais", "libelle": "Je fais" },
+        { "id": "je-transmets", "libelle": "Je transmets" },
+        { "id": "je-ne-decide-pas", "libelle": "Je ne décide pas" }
+      ],
+      "elements": [
+        { "id": "ecouter", "texte": "Écouter M. André quand il parle de ses volontés.", "categorie": "je-fais", "points": { "CT3.4": 1 }, "retour": "La présence et l'écoute font partie de votre rôle." },
+        { "id": "confort", "texte": "Assurer le confort prévu par l'équipe.", "categorie": "je-fais", "points": { "CT3.4": 1 }, "retour": "Vous appliquez le confort prévu par l'équipe." },
+        { "id": "nouvelle-volonte", "texte": "Un souhait nouveau qu'il vient d'exprimer.", "categorie": "je-transmets", "points": { "CT3.4": 1 }, "retour": "Un souhait nouveau se transmet, avec ses mots exacts." },
+        { "id": "question-famille", "texte": "Une question de sa famille sur un traitement.", "categorie": "je-transmets", "points": { "CT3.4": 1 }, "retour": "Les questions sur les soins vont à l'infirmière." },
+        { "id": "modifier-soins", "texte": "Changer une décision de soins pour suivre ce qu'il a écrit.", "categorie": "je-ne-decide-pas", "points": { "CT3.4": 1 }, "retour": "Vous ne prenez pas de décision médicale et vous ne modifiez pas les décisions de soins." },
+        { "id": "lire-directives", "texte": "Interpréter ses directives anticipées pour l'équipe.", "categorie": "je-ne-decide-pas", "points": { "CT3.4": 1 }, "retour": "Les directives sont lues et appliquées par l'équipe responsable, pas interprétées par vous seul." }
+      ]
+    },
+    {
+      "id": "reactions-entourage",
+      "type": "qcm",
+      "consigne": "Le lendemain, un collègue vous dit : « Dans sa culture, ils font toujours comme ça face à la mort. »",
+      "question": "Que retenez-vous ?",
+      "options": [
+        { "texte": "Les cultures donnent des repères, mais les souhaits de chaque personne se demandent et se vérifient.", "juste": true },
+        { "texte": "Il suffit de connaître la religion d'une personne pour savoir ce qu'elle veut." },
+        { "texte": "Toutes les familles réagissent de la même façon : par la tristesse." }
+      ],
+      "points": { "CT3.4": 1 },
+      "retour": "On ne réduit pas une personne à une culture ou une religion, et aucune réaction (tristesse, colère, retrait, besoin de parler ou de silence) n'est automatique."
+    },
+    {
+      "id": "famille-divergence",
+      "type": "decision",
+      "consigne": "Dans le couloir, un proche de M. André vous dit, agacé : « Ses papiers, on n'est pas tous d'accord dans la famille. Vous, vous en pensez quoi ? »",
+      "question": "Que répondez-vous ?",
+      "choix": [
+        { "decision": "agir", "texte": "J'écoute, je ne donne pas mon avis, et je lui propose d'en parler avec l'infirmière et le cadre.", "points": { "CT3.4": 2, "CT4.1": 1 }, "retour": "Vous accueillez sa colère sans juger ni prendre parti, et vous orientez vers les personnes ressources." },
+        { "decision": "adapter", "texte": "Je lui dis ce que M. André m'a confié pour le rassurer.", "retour": "Ce que M. André vous a confié ne se répète pas à la famille : vous le transmettez à l'équipe." },
+        { "decision": "alerter", "texte": "Je lui réponds que sa famille devrait respecter ce que M. André a écrit, un point c'est tout.", "retour": "C'est un jugement : la divergence familiale est une réaction possible, à accueillir sans prendre parti." }
+      ]
+    },
+    {
+      "id": "transmettre-claire",
+      "type": "relais",
+      "consigne": "Allez transmettre ce que M. André vous a dit, et la question de sa famille.",
+      "destinataire": "infirmiere",
+      "points": { "CT4.1": 1 },
+      "retour": "Claire, infirmière, connaît le dossier de M. André et peut organiser un échange avec la famille.",
+      "retour_erreur": "Cette personne ne suit pas le dossier de soins de M. André. Qui, dans l'aile B, en est chargée ?"
+    }
+  ],
+  "debriefing": [
+    "Qu'avez-vous fait quand M. André a parlé de la mort ?",
+    "Qu'est-ce que vous ne décidez jamais, même si la personne vous le demande ?",
+    "Pourquoi ne faut-il pas réduire une personne à sa culture ?"
+  ]
+}
