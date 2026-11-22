@@ -237,6 +237,7 @@ Chaque étape a un `id`, un `type`, une `consigne` et, si besoin, un `document` 
 - **`transmission`** : `phrases`, chacune avec `id`, `texte`, `nature` (`fait`, `jugement` ou `interpretation`), `retour` et `points`. L'élève trie chaque phrase ; le retour montre « sa » transmission, faite des phrases qu'il a gardées comme faits. Au moins 3 phrases, au moins un fait et au moins une phrase à écarter.
 - **`ordre`** (protocole) : `elements` écrits **dans le bon ordre** (`id`, `texte`, `points`) et un `retour`. L'écran les mélange (`src/regles/hasard.ts`) ; l'élève les touche dans l'ordre. Chaque élément placé à son rang rapporte ses points ; sinon l'ordre attendu est montré.
 - **`selection`** (matériel, produits, stocks) : `question` et `elements` (`id`, `texte`, `attendu` : `true` à cocher, `false` à laisser, `retour`, `points`). Pour une fiche de stock, chaque élément peut avoir `stock` et `seuil`, affichés à côté du texte. Un point par élément bien coché ou bien laissé.
+- **`tri`** (ranger, classer) : `categories` (`id`, `libelle`, `aide` facultative) et `elements` (`id`, `texte`, `categorie` : id de la bonne catégorie, `retour`, `points`). L'élève range chaque élément dans une catégorie.
 
 Après une réponse incomplète, le panneau rappelle le **critère officiel** des compétences qui n'ont pas eu tous leurs points (`aRevoir`, calculé par le moteur). Le moteur garde aussi le **parcours** de l'élève (ce qu'il a choisi à chaque étape), repris dans la **fiche de fin de mission** à imprimer (bouton 🖨 de la relève, styles `@media print` de `style.css`).
 

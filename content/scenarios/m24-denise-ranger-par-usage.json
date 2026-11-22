@@ -1,0 +1,67 @@
+{
+  "id": "m24-denise-ranger-par-usage",
+  "statut": "brouillon",
+  "titre": "Ranger la chambre de Mme Denise",
+  "duree_min": 15,
+  "sequence_requise": "S6",
+  "lieu": "chambre-denise",
+  "personnages": ["joueur", "denise"],
+  "competences": [
+    { "code": "C2.2.2", "critere": "Identification des habitudes et des souhaits de la personne." },
+    { "code": "CT4.2", "critere": "Respect du projet de vie." }
+  ],
+  "situation": "Mme Denise entre dans une chambre plus petite. Elle se déplace avec un déambulateur, lève difficilement les bras et veut garder ses photos, sa couture et sa tisane. Sa fille veut un rangement « net ».",
+  "objectif_eleve": "Ranger les affaires de Mme Denise selon leur fréquence d'usage, garder le chemin dégagé, et respecter ses souhaits.",
+  "note_pour_audrey": "Brouillon écrit pour la tâche P.8, d'après votre séance S6-03 (« Projet chambre de Mme Denise : plan, tri et rangement justifiés ») et son activité interactive : situation, 8 objets à classer par fréquence d'usage, ordre de la démarche (5 étapes) et les 3 réponses au désaccord avec la fille, repris tels quels. Le fait « déambulateur, lève difficilement les bras, veut garder ses photos, sa couture et sa tisane » a été ajouté au repris_du_cours de Mme Denise. Compétences de la séance (C2.2.2 principale, CT4.2 en appui). À relire avant de passer le statut à valide.",
+  "etapes": [
+    {
+      "id": "par-frequence",
+      "type": "tri",
+      "consigne": "Rangez chaque objet selon la fréquence où Mme Denise l'utilise.",
+      "categories": [
+        { "id": "jour", "libelle": "Chaque jour", "aide": "à portée de main" },
+        { "id": "semaine", "libelle": "Chaque semaine", "aide": "accessible" },
+        { "id": "rarement", "libelle": "Rarement", "aide": "rangé plus loin" }
+      ],
+      "elements": [
+        { "id": "tisane", "texte": "Tisane et tasse", "categorie": "jour", "points": { "C2.2.2": 1 }, "retour": "Elle la prend chaque jour et lève difficilement les bras : pas en haut du placard." },
+        { "id": "lunettes", "texte": "Lunettes", "categorie": "jour", "points": { "C2.2.2": 1 }, "retour": "Un objet de tous les jours reste à portée de main." },
+        { "id": "mouchoirs", "texte": "Mouchoirs", "categorie": "jour", "points": { "C2.2.2": 1 }, "retour": "Un objet de tous les jours reste à portée de main." },
+        { "id": "couture", "texte": "Nécessaire de couture", "categorie": "semaine", "points": { "C2.2.2": 1 }, "retour": "Elle tient à sa couture : elle reste accessible." },
+        { "id": "linge", "texte": "Linge de rechange", "categorie": "semaine", "points": { "C2.2.2": 1 }, "retour": "Utilisé régulièrement : rangé de façon accessible." },
+        { "id": "albums", "texte": "Albums photos", "categorie": "semaine", "points": { "C2.2.2": 1 }, "retour": "Ses souvenirs restent accessibles." },
+        { "id": "valise", "texte": "Valise vide", "categorie": "rarement", "points": { "C2.2.2": 1 }, "retour": "Rarement utilisée : rangée plus loin, hors du passage." },
+        { "id": "autre-saison", "texte": "Vêtements de l'autre saison", "categorie": "rarement", "points": { "C2.2.2": 1 }, "retour": "Pas utiles en ce moment : rangés plus loin." }
+      ]
+    },
+    {
+      "id": "photos-et-fille",
+      "type": "decision",
+      "consigne": "La fille de Mme Denise propose de ranger toutes les photos dans un carton, pour que la chambre soit plus nette.",
+      "question": "Que faites-vous ?",
+      "choix": [
+        { "decision": "adapter", "texte": "Je demande à Mme Denise quelles photos elle veut garder visibles, je les place sans gêner le passage et j'explique ce choix à sa fille.", "points": { "CT4.2": 2, "C2.2.2": 1 }, "retour": "La parole de la personne d'abord, la sécurité du passage, et un arbitrage expliqué à la famille." },
+        { "decision": "agir", "texte": "J'accepte, cela fera plus propre.", "retour": "On viderait la chambre de son histoire." },
+        { "decision": "agir", "texte": "Je refuse sèchement la demande de sa fille.", "retour": "La famille est écoutée : l'arbitrage s'explique." }
+      ]
+    },
+    {
+      "id": "demarche",
+      "type": "ordre",
+      "consigne": "Remettez dans l'ordre la démarche du projet de chambre.",
+      "elements": [
+        { "id": "lire", "texte": "Lire les données : capacités, habitudes, souhaits.", "points": { "CT4.2": 1 } },
+        { "id": "trier", "texte": "Trier affaires et consommables avec Mme Denise.", "points": { "CT4.2": 1 } },
+        { "id": "classer", "texte": "Classer par usage et fréquence.", "points": { "CT4.2": 1 } },
+        { "id": "placer", "texte": "Placer les objets et dégager le chemin.", "points": { "CT4.2": 1 } },
+        { "id": "justifier", "texte": "Justifier les choix et arbitrer un désaccord.", "points": { "CT4.2": 1 } }
+      ],
+      "retour": "On part des données de la personne, on trie avec elle, et on sécurise sans vider la chambre de son histoire."
+    }
+  ],
+  "debriefing": [
+    "Pourquoi la tisane ne va-t-elle pas en haut du placard ?",
+    "Comment avez-vous répondu à la fille de Mme Denise, et pourquoi ?",
+    "Pourquoi le chemin entre le lit, la porte et le sanitaire doit-il rester dégagé ?"
+  ]
+}

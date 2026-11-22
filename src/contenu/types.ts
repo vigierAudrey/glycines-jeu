@@ -225,7 +225,29 @@ export interface EtapeSelection extends EtapeCommune {
   elements: ElementSelection[];
 }
 
-export type Etape = EtapeDialogue | EtapeObservation | EtapeDecision | EtapeRelais | EtapeTransmission | EtapeOrdre | EtapeSelection;
+/** Une case où ranger des éléments (ex. « Chaque jour : à portée de main »). */
+export interface CategorieTri {
+  id: string;
+  libelle: string;
+  aide?: string; // précision courte sous le libellé
+}
+
+export interface ElementTri {
+  id: string;
+  texte: string;
+  categorie: string; // id de la bonne catégorie
+  points?: Points;
+  retour: string;
+}
+
+/** Tri : l'élève range chaque élément dans une catégorie (rangement d'une chambre, fréquence d'usage…). */
+export interface EtapeTri extends EtapeCommune {
+  type: 'tri';
+  categories: CategorieTri[];
+  elements: ElementTri[];
+}
+
+export type Etape = EtapeDialogue | EtapeObservation | EtapeDecision | EtapeRelais | EtapeTransmission | EtapeOrdre | EtapeSelection | EtapeTri;
 
 export interface Mission {
   id: string;

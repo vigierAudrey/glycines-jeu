@@ -269,8 +269,21 @@ function validerEtapes(m: Mission, contenu: Contenu, signaler: (message: string)
         if (!(e.elements ?? []).some((el) => el.attendu) || !(e.elements ?? []).some((el) => !el.attendu)) signaler(`${ou} : il faut au moins un élément à prendre et un à laisser.`);
         break;
       }
+      case 'tri': {
+        const cats = new Set((e.categories ?? []).map((c) => c.id));
+        if (cats.size < 2) signaler(`${ou} : un tri demande au moins 2 catégories.`);
+        if (!(e.elements?.length >= 3)) signaler(`${ou} : un tri demande au moins 3 éléments.`);
+        const idsTri = new Set<string>();
+        for (const el of e.elements ?? []) {
+          if (idsTri.has(el.id)) signaler(`${ou} : élément « ${el.id} » en double.`);
+          idsTri.add(el.id);
+          if (!cats.has(el.categorie)) signaler(`${ou} : l'élément « ${el.id} » va dans une catégorie inconnue (« ${el.categorie} »).`);
+          lirePoints(ou, el.points);
+        }
+        break;
+      }
       default:
-        signaler(`${ou} : type « ${(e as { type: string }).type} » inconnu (dialogue, observation, decision, relais, transmission, ordre ou selection).`);
+        signaler(`${ou} : type « ${(e as { type: string }).type} » inconnu (dialogue, observation, decision, relais, transmission, ordre, selection ou tri).`);
     }
   }
 

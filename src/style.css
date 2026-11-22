@@ -284,6 +284,7 @@ html, body {
 .choix--ordre[aria-pressed="true"] .rang { background: var(--violet); color: #fff; }
 .coche { flex: 0 0 auto; font-size: 1.3em; }
 .stock { white-space: nowrap; }
+.categories { margin: 0 0 6px; padding-left: 18px; }
 .rangee-boutons--trois .choix { flex: 1 1 90px; }
 .loupe { padding: 8px 12px; background: #fff8e6; border-radius: 10px; }
 

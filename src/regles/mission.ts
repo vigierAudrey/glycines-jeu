@@ -36,7 +36,8 @@ export type Reponse =
   | { type: 'relais'; destinataire: string } // id du membre du personnel rejoint
   | { type: 'transmission'; classements: Record<string, NaturePhrase> } // id de la phrase → nature choisie
   | { type: 'ordre'; ordre: string[] } // ids des éléments, dans l'ordre choisi par l'élève
-  | { type: 'selection'; choisis: string[] }; // ids des éléments cochés
+  | { type: 'selection'; choisis: string[] } // ids des éléments cochés
+  | { type: 'tri'; rangements: Record<string, string> }; // id de l'élément → id de la catégorie choisie
 
 export interface Resultat {
   etat: EtatMission;
@@ -101,6 +102,7 @@ export function pointsMaxEtape(etape: Etape): Points {
       return etape.phrases.reduce((total, ph) => ajouter(total, ph.points), {} as Points);
     case 'ordre':
     case 'selection':
+    case 'tri':
       return (etape.elements as { points?: Points }[]).reduce((total, el) => ajouter(total, el.points), {} as Points);
   }
 }
@@ -148,6 +150,11 @@ function textesChoisis(etape: Etape, reponse: Reponse): string[] {
       const r = reponse as Extract<Reponse, { type: 'selection' }>;
       const pris = etape.elements.filter((el) => r.choisis.includes(el.id)).map((el) => `Coché : ${el.texte}`);
       return pris.length ? pris : ['Rien coché'];
+    }
+    case 'tri': {
+      const r = reponse as Extract<Reponse, { type: 'tri' }>;
+      const nom = (id: string) => etape.categories.find((c) => c.id === id)?.libelle ?? 'non rangé';
+      return etape.elements.map((el) => `${el.texte} → ${nom(r.rangements[el.id])}`);
     }
   }
 }
@@ -279,6 +286,22 @@ function repondreEtape(mission: Mission, etat: EtatMission, reponse: Reponse): R
         const bien = pris === el.attendu;
         if (bien) gagnes = ajouter(gagnes, el.points);
         return `${bien ? '✔' : '✘'} ${el.texte} : ${el.attendu ? 'à prendre' : 'à laisser'}. ${el.retour}`;
+      });
+      return {
+        etat: { ...etat, etape: suivante(mission, etape), points: ajouter(etat.points, gagnes), essais: 0 },
+        retours,
+        reussi: identiques(gagnes, max),
+        aRevoir: manquantes(gagnes, max),
+      };
+    }
+    case 'tri': {
+      const r = reponse as Extract<Reponse, { type: 'tri' }>;
+      let gagnes: Points = {};
+      const nom = (id: string) => etape.categories.find((c) => c.id === id)?.libelle ?? '';
+      const retours = etape.elements.map((el) => {
+        const bien = r.rangements[el.id] === el.categorie;
+        if (bien) gagnes = ajouter(gagnes, el.points);
+        return `${bien ? '✔' : '✘'} ${el.texte} → ${nom(el.categorie)}. ${el.retour}`;
       });
       return {
         etat: { ...etat, etape: suivante(mission, etape), points: ajouter(etat.points, gagnes), essais: 0 },

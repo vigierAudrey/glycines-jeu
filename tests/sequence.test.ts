@@ -29,6 +29,8 @@ function reponseParfaite(etape: Etape): Reponse {
       return { type: 'ordre', ordre: etape.elements.map((el) => el.id) };
     case 'selection':
       return { type: 'selection', choisis: etape.elements.filter((el) => el.attendu).map((el) => el.id) };
+    case 'tri':
+      return { type: 'tri', rangements: Object.fromEntries(etape.elements.map((el) => [el.id, el.categorie])) };
   }
 }
 

@@ -93,6 +93,7 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
   let ordreAffiche: string[] = []; // protocole : éléments mélangés, dans l'ordre où ils sont montrés
   let ordreChoisi: string[] = []; // protocole : éléments touchés par l'élève, dans l'ordre
   let choisis = new Set<string>(); // sélection : éléments cochés
+  let rangements: Record<string, string> = {}; // tri : élément → catégorie
 
   const etape = (): Etape | undefined => (mission && etat ? etapeEnCours(mission, etat) : undefined);
   const residentDeLaMission = () => mission?.personnages.find((id) => residents.has(id));
@@ -203,6 +204,21 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
               <span class="a-lire">${echapper(el.texte)}${el.stock !== undefined ? ` <span class="stock">· en réserve : <strong>${el.stock}</strong> · seuil d'alerte : <strong>${el.seuil}</strong></span>` : ''}</span>
             </button>`).join('')}
           <button type="button" class="bouton bouton--principal" data-action="valider-selection">Valider</button>`;
+      case 'tri': {
+        const ranges = e.elements.filter((el) => rangements[el.id]).length;
+        return `
+          <ul class="categories">${e.categories.map((c) => `<li class="a-lire"><strong>${echapper(c.libelle)}</strong>${c.aide ? ` : ${echapper(c.aide)}` : ''}</li>`).join('')}</ul>
+          ${e.elements.map((el) => `
+            <fieldset class="canal">
+              <legend class="a-lire">${echapper(el.texte)}</legend>
+              <div class="rangee-boutons rangee-boutons--trois">
+                ${e.categories.map((c) => `
+                  <button type="button" class="choix" aria-pressed="${rangements[el.id] === c.id}" data-tri="${echapper(el.id)}" data-categorie="${echapper(c.id)}">${echapper(c.libelle)}</button>`).join('')}
+              </div>
+            </fieldset>`).join('')}
+          <p class="compteur">Rangés : ${ranges} / ${e.elements.length}</p>
+          <button type="button" class="bouton bouton--principal" data-action="valider-tri" ${ranges === e.elements.length ? '' : 'disabled'}>Valider mon rangement</button>`;
+      }
       case 'relais':
         return `
           <p class="indice">Touchez dans l'aile la personne à prévenir. Le bouton « Qui est qui ? » peut vous aider.</p>
@@ -307,6 +323,7 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
     ordreAffiche = [];
     ordreChoisi = [];
     choisis = new Set();
+    rangements = {};
     elementOuvert = null;
     messageRelais = '';
     if (etat.etape === null) {
@@ -330,6 +347,7 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
     ordreAffiche = [];
     ordreChoisi = [];
     choisis = new Set();
+    rangements = {};
     elementOuvert = null;
     messageRelais = '';
     fenetre.hidden = true;
@@ -377,6 +395,10 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
       else choisis.add(d.selection);
       afficher();
     } else if (d.action === 'valider-selection') envoyer({ type: 'selection', choisis: [...choisis] });
+    else if (d.tri && d.categorie) {
+      rangements[d.tri] = d.categorie;
+      afficher();
+    } else if (d.action === 'valider-tri') envoyer({ type: 'tri', rangements });
     else if (d.decision !== undefined && e?.type === 'decision') envoyer({ type: 'decision', choix: Number(d.decision) });
   });
 

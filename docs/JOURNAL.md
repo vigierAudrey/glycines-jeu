@@ -226,3 +226,9 @@ Trois lignes par session : ce qui a été fait, ce qui reste à surveiller, la p
 - **Fait** : toute étape peut afficher un `document` (📋 titre et lignes, lu à voix haute, repris sur la page enseignante). Nouvelle mission brouillon `m23-seize-heures-deux-imprevus` (S7, CT3.1 et C2.1.6, marquée transfert donc N4 possible), d'après S7-05 « 24 heures aux Glycines » et son activité interactive : planning de l'après-midi, imprévus de 16 h (refus de Mme Denise, rougeur nouvelle de M. André), les 3 organisations et les 5 étapes « traiter un imprévu » reprises telles quelles, puis transmission, relais à l'infirmière et réponse au refus. `pnpm verifier` OK (105 tests).
 - **À surveiller** : la tâche prévoyait une « relève du matin », absente de vos cours ; remplacée par ce planning de S7-05. Deux phrases à écarter dans la transmission (« Ce n'est sûrement pas grave », « Il a dû se cogner quelque part ») sont écrites par l'IA comme exemples de jugement et d'interprétation : à relire.
 - **Prochaine tâche** : P.8 (Personnaliser une chambre).
+
+## 22/11/2026 · Activité « Tri » et rangement de la chambre de Mme Denise (tâche P.8)
+
+- **Fait** : nouveau type d'étape général `tri` (catégories au choix ; servira aussi ailleurs). Nouvelle mission brouillon `m24-denise-ranger-par-usage` (S6, C2.2.2 et CT4.2) d'après S6-03 et son activité interactive : 8 objets à ranger « chaque jour / chaque semaine / rarement », désaccord avec la fille sur les photos, démarche en 5 étapes, tout repris tel quel. Ajout au `repris_du_cours` de Mme Denise : déambulateur, lève difficilement les bras, veut garder photos, couture et tisane. `pnpm verifier` OK.
+- **À surveiller** : le placement « sur le plan 3D » (glisser les objets dans la chambre) n'est pas fait : le tri en boutons est plus sûr sur téléphone. À reprendre si Audrey le souhaite après le test élèves.
+- **Prochaine tâche** : P.9 (Secret professionnel).
