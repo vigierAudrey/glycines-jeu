@@ -59,7 +59,7 @@ function missionEnHtml(m: Mission): string {
     <article class="mission">
       <header>
         <h3>${echapper(m.titre)} ${m.statut === 'brouillon' ? '<span class="brouillon">brouillon</span>' : ''}</h3>
-        <p class="meta">${echapper(m.id)} · séquence ${echapper(m.sequence_requise)} · ${m.duree_min} min · ${echapper(lieux.get(m.lieu) ?? m.lieu)}${m.transfert ? ' · situation de transfert (N4 possible)' : ''}</p>
+        <p class="meta">${echapper(m.id)} · ${m.discipline === 'PSE' ? 'PSE, ' : ''}séquence ${echapper(m.sequence_requise)} · ${m.duree_min} min · ${echapper(lieux.get(m.lieu) ?? m.lieu)}${m.transfert ? ' · situation de transfert (N4 possible)' : ''}</p>
       </header>
       <p><strong>Situation :</strong> ${echapper(m.situation)}</p>
       ${m.variantes?.length ? `<p><strong>Variantes tirées au hasard</strong> (mêmes réponses attendues) :</p>

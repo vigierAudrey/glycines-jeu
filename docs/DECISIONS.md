@@ -188,3 +188,9 @@ On ne redessine que si la vue change (batterie des téléphones). Les étiquette
 - **Décision** : (1) l'application reste en français seulement : P.17 et 5.3 sont abandonnées. (2) Aux Glycines, M. Lemoine, cadre de santé, est chargé des stocks (relais de `m22`). (3) Le contenu peut compléter les cours, dans le sens du référentiel et du CAP AAGA.
 - **Pourquoi** : choix d'Audrey du 22/11/2026.
 - **Comment** : règles ajoutées dans CLAUDE.md ; chaque complément est signalé « complément, hors cours » dans `note_pour_audrey`.
+
+## D-033 · La PSE dans le jeu : un second référentiel, des missions toujours ouvertes · 22/11/2026
+
+- **Décision** : la PSE a son propre fichier `content/referentiel/pse.json` (modules C4 à C7, objectifs ciblés recopiés mot pour mot), à côté de `bloc2.json` qui reste intouché. Les missions PSE (`discipline: "PSE"`) sont toujours ouvertes et rangées dans une rubrique à part.
+- **Pourquoi** : la progression de PSE n'est pas celle du Bloc 2, et le sélecteur « séquence vue » ne concerne que le Bloc 2. Le programme de PSE n'a pas de niveaux N1 à N4 : on garde ceux du jeu pour que la relève reste la même (signalé dans le fichier).
+- **Comment** : validateur (pas de mélange des compétences), `estDebloquee`, liste des missions, page enseignante.

@@ -277,6 +277,7 @@ export interface Mission {
   transfert?: boolean; // vrai si la mission est une situation nouvelle : seul cas où le niveau N4 est possible
   confiance_depart?: number; // de 0 à 10, 5 par défaut
   etapes: Etape[];
+  discipline?: 'PSE'; // absent = Bloc 2 ; « PSE » = mission de prévention-santé-environnement (référentiel pse.json)
   variantes?: VarianteMission[]; // autres contextes possibles, tirés au hasard avec la version de base
   debriefing: string[]; // 2 ou 3 questions pour la relève de fin de mission
   [autre: string]: unknown; // champs libres (notes pour l'enseignante…)
@@ -296,4 +297,5 @@ export interface Contenu {
   personnel: MembrePersonnel[];
   missions: Mission[];
   lexique?: EntreeLexique[]; // mots du métier qui se touchent dans les textes (P.16)
+  referentielPse?: Referentiel; // programme de PSE (modules C4 à C7), pour les missions `discipline: 'PSE'` (5.1)
 }

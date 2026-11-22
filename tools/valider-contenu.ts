@@ -22,6 +22,7 @@ export function lireContenuDepuisDisque(racine = 'content'): Contenu {
     personnel: lire('personnages/personnel.json').personnel,
     missions: lireDossier('scenarios'),
     lexique: lire('lexique.json').mots,
+    referentielPse: lire('referentiel/pse.json'),
   };
 }
 

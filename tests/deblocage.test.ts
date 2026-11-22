@@ -5,6 +5,12 @@ import { estDebloquee, lireSequence, missionsAMontrer } from '../src/regles/debl
 const mission = (id: string, sequence_requise: string, statut: 'brouillon' | 'valide' = 'valide') => ({ id, sequence_requise, statut }) as Mission;
 
 describe('déblocage des missions', () => {
+  it('ouvre toujours une mission de PSE, rangée après le Bloc 2', () => {
+    const pse = { ...mission('m90', 'S5'), discipline: 'PSE' } as Mission;
+    expect(estDebloquee(pse, 'S1')).toBe(true);
+    expect(missionsAMontrer([pse, mission('m02', 'S7')], false).map((m) => m.id)).toEqual(['m02', 'm90']);
+  });
+
   it('ouvre une mission quand sa séquence a été vue', () => {
     expect(estDebloquee(mission('m01', 'S2'), 'S2')).toBe(true);
     expect(estDebloquee(mission('m01', 'S2'), 'S5')).toBe(true);

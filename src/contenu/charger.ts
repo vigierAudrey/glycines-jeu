@@ -8,6 +8,7 @@ import aileB from '../../content/lieux/aile-b.json';
 import residents from '../../content/personnages/residents.json';
 import personnel from '../../content/personnages/personnel.json';
 import lexique from '../../content/lexique.json';
+import referentielPse from '../../content/referentiel/pse.json';
 
 // Toutes les missions du dossier content/scenarios sont prises automatiquement.
 const fichiersMissions = import.meta.glob<Mission>('../../content/scenarios/*.json', { eager: true, import: 'default' });
@@ -20,5 +21,6 @@ export function chargerContenu(): Contenu {
     personnel: personnel.personnel as MembrePersonnel[],
     missions: Object.values(fichiersMissions),
     lexique: lexique.mots as EntreeLexique[],
+    referentielPse: referentielPse as Referentiel,
   };
 }

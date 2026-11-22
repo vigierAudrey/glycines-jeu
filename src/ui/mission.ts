@@ -564,14 +564,17 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
       </label>
       ${liste.length === 0 ? '<p class="indice">Aucune mission validée pour l\'instant.</p>' : ''}
       <ul class="liste-missions">
-        ${liste.map((m) => {
+        ${liste.map((m, n) => {
           const niveaux = liens.niveauxObtenus?.(m.id);
           const ouverte = estDebloquee(m, sequenceVue);
-          return `
+          const pse = m.discipline === 'PSE';
+          const titrePse = pse && liste[n - 1]?.discipline !== 'PSE'
+            ? `<li><h3 class="liste-missions__titre">PSE · Prévention santé environnement</h3></li>` : '';
+          return `${titrePse}
           <li>
             <button type="button" class="carte-mission" data-mission="${echapper(m.id)}" ${ouverte ? '' : 'disabled'}>
               <strong>${ouverte ? '' : '🔒 '}${echapper(m.titre)}</strong>
-              <span>${m.duree_min} min · ${ouverte ? `séquence ${echapper(m.sequence_requise)}` : `après la séquence ${echapper(m.sequence_requise)}`}${m.statut === 'brouillon' ? ' · <em>brouillon</em>' : ''}</span>
+              <span>${m.duree_min} min · ${pse ? `PSE, séquence ${echapper(m.sequence_requise)}` : ouverte ? `séquence ${echapper(m.sequence_requise)}` : `après la séquence ${echapper(m.sequence_requise)}`}${m.statut === 'brouillon' ? ' · <em>brouillon</em>' : ''}</span>
               ${niveaux ? `<span class="niveaux">Dernière relève : ${echapper(niveaux)}</span>` : ''}
             </button>
           </li>`;

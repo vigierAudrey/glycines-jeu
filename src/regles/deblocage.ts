@@ -8,7 +8,9 @@ export const SEQUENCES = ['S1', 'S2', 'S3', 'S4', 'S5', 'S6', 'S7'] as const;
 
 const rang = (sequence: string) => SEQUENCES.indexOf(sequence as (typeof SEQUENCES)[number]);
 
+/** Les missions de PSE ne dépendent pas de la progression du Bloc 2 : elles sont toujours ouvertes. */
 export function estDebloquee(mission: Mission, sequenceVue: string): boolean {
+  if (mission.discipline === 'PSE') return true;
   return rang(mission.sequence_requise) <= rang(sequenceVue);
 }
 
@@ -16,7 +18,7 @@ export function estDebloquee(mission: Mission, sequenceVue: string): boolean {
 export function missionsAMontrer(missions: Mission[], avecBrouillons: boolean): Mission[] {
   return missions
     .filter((m) => avecBrouillons || m.statut === 'valide')
-    .sort((a, b) => rang(a.sequence_requise) - rang(b.sequence_requise) || a.id.localeCompare(b.id));
+    .sort((a, b) => Number(a.discipline === 'PSE') - Number(b.discipline === 'PSE') || rang(a.sequence_requise) - rang(b.sequence_requise) || a.id.localeCompare(b.id));
 }
 
 /** Lit une séquence écrite par un humain (« s3 », « S3 ») ; undefined si elle n'existe pas. */

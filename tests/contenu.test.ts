@@ -26,6 +26,12 @@ describe('le validateur refuse', () => {
     expect(validerContenu(contenu).map((p) => p.message).join()).toMatch(/absente du référentiel/);
   });
 
+  it('une compétence PSE dans une mission du Bloc 2', () => {
+    const pse = base.referentielPse!.competences[0];
+    const contenu = { ...base, missions: [{ ...mission, competences: [{ code: pse.code, critere: pse.criteres_officiels[0] }] }] };
+    expect(validerContenu(contenu).map((p) => p.message).join()).toMatch(/seulement des compétences PSE/);
+  });
+
   it('un critère reformulé', () => {
     const critere = mission.competences[0].critere.replace('Prise en compte', 'Prendre en compte');
     const contenu = { ...base, missions: [{ ...mission, competences: [{ code: mission.competences[0].code, critere }] }] };

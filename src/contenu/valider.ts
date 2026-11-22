@@ -21,11 +21,11 @@ export function validerContenu(contenu: Contenu): Probleme[] {
   const signaler = (fichier: string, message: string) => problemes.push({ fichier, message });
 
   // ---------- Référentiel ----------
-  const competences = new Map(contenu.referentiel.competences.map((c) => [c.code, c]));
-  if (competences.size !== contenu.referentiel.competences.length) {
+  const competences = new Map([...contenu.referentiel.competences, ...(contenu.referentielPse?.competences ?? [])].map((c) => [c.code, c]));
+  if (competences.size !== contenu.referentiel.competences.length + (contenu.referentielPse?.competences.length ?? 0)) {
     signaler('referentiel', 'Deux compétences portent le même code.');
   }
-  for (const c of contenu.referentiel.competences) {
+  for (const c of [...contenu.referentiel.competences, ...(contenu.referentielPse?.competences ?? [])]) {
     if (c.criteres_officiels.length === 0) signaler('referentiel', `${c.code} n'a aucun critère officiel.`);
   }
 
@@ -103,6 +103,11 @@ export function validerContenu(contenu: Contenu): Probleme[] {
     if (!(m.duree_min > 0 && m.duree_min <= 20)) signaler(f, `Durée de ${m.duree_min} min : une mission dure 20 min au plus.`);
     if (!/^S[1-7]$/.test(m.sequence_requise)) signaler(f, `Séquence requise « ${m.sequence_requise} » invalide (S1 à S7).`);
     if (m.competences.length === 0) signaler(f, 'Aucune compétence visée.');
+    if (m.discipline !== undefined && m.discipline !== 'PSE') signaler(f, `Discipline « ${m.discipline} » inconnue (PSE ou rien pour le Bloc 2).`);
+    for (const cv of m.competences) {
+      const estPse = cv.code.startsWith('PSE-');
+      if (estPse !== (m.discipline === 'PSE')) signaler(f, `${cv.code} : une mission PSE vise seulement des compétences PSE, une mission du Bloc 2 seulement des compétences du Bloc 2.`);
+    }
     for (const cv of m.competences) {
       const comp = competences.get(cv.code);
       if (!comp) {

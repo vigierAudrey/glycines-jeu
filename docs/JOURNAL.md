@@ -310,3 +310,9 @@ Trois lignes par session : ce qui a été fait, ce qui reste à surveiller, la p
 - **Fait** : actions GitHub de publication passées aux versions récentes (Node 24), pour supprimer l'avertissement « Node.js 20 is deprecated ». Après chaque réponse dans une question à la fois, le focus va sur la question suivante (clavier, lecteur d'écran).
 - **À surveiller** : les nouvelles versions des actions seront testées à la prochaine publication.
 - **Prochaine tâche** : 5.1 (PSE), découpée en sous-tâches.
+
+## 22/11/2026 · PSE : référentiel et rubrique (tâche 5.1a)
+
+- **Fait** : `content/referentiel/pse.json` (modules C4 à C7 du programme de PSE, mot pour mot), missions `discipline: "PSE"` toujours ouvertes, rubrique « PSE » dans la liste, mention sur la page enseignante (D-033). 2 tests, `pnpm verifier` OK (120 tests).
+- **À surveiller** : le programme de PSE n'a pas de niveaux N1 à N4 ; on garde ceux du jeu.
+- **Prochaine tâche** : 5.1b (mission risque biologique d'après PSE S3).

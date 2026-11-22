@@ -1,0 +1,123 @@
+{
+  "diplome": "CAP (tous secteurs) · enseigné en CAP Agent accompagnant au grand âge",
+  "bloc": "Prévention-santé-environnement (PSE) · thématique C : l’individu dans son milieu professionnel",
+  "texte_officiel": "Annexe « Prévention-santé-environnement · Classes préparant au certificat d’aptitude professionnelle » (programme de 2019, Ministère de l’Éducation nationale et de la Jeunesse)",
+  "origine": "Objectifs ciblés et notions clés des modules C4 à C7, recopiés mot pour mot de spe641annexe1105406pdf-85401 (dossier REFERENTIEL_CAP_PSE d’Audrey). Ne pas modifier à la main.",
+  "avertissement": "Le programme de PSE ne définit pas de niveaux N1 à N4 : les niveaux ci-dessous sont ceux du jeu (repris du Bloc 2), pour que la relève reste la même. Les « critères » d’une mission PSE sont les objectifs ciblés du module.",
+  "niveaux": {
+    "N1": "Réalise avec aide constante.",
+    "N2": "Réalise avec guide ou relances.",
+    "N3": "Réalise en autonomie dans une situation connue.",
+    "N4": "Transfère à une situation nouvelle et justifie ses choix."
+  },
+  "competences": [
+    {
+      "code": "PSE-C4",
+      "intitule": "Module C4 : La démarche de prévention appliquée à un risque spécifique au métier",
+      "performances_attendues": [],
+      "criteres_officiels": [
+        "Repérer la prépondérance d’un risque spécifique à un secteur professionnel donné parmi un ensemble de risques.",
+        "Appliquer une démarche d’analyse simple ou à l’aide d’outils méthodologiques au risque du secteur professionnel lors d’une activité au poste de travail.",
+        "Mettre en évidence les effets physio-pathologiques du risque.",
+        "Proposer des mesures de protection collective et individuelle à partir d’une sélection."
+      ],
+      "savoirs_associes": [
+        {
+          "intitule": "Notions clés associées",
+          "limites_connaissances": [
+            "Risque spécifique",
+            "Classification des risques",
+            "Processus",
+            "Dommage potentiel",
+            "Démarche",
+            "Effets physio-pathologiques",
+            "Santé",
+            "Protection collective",
+            "Protection individuelle"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "PSE-C5",
+      "intitule": "Module C5 : Les risques liés à l’activité physique du métier",
+      "performances_attendues": [],
+      "criteres_officiels": [
+        "Identifier les facteurs de risque en relation avec l’activité physique dans une activité de travail.",
+        "Repérer les dommages possibles consécutifs à l’activité physique lors de la mise en œuvre d’une activité de travail.",
+        "Proposer des mesures de protection adaptées au risque en prenant en compte le caractère chronique ou immédiat du risque d’atteinte."
+      ],
+      "savoirs_associes": [
+        {
+          "intitule": "Notions clés associées",
+          "limites_connaissances": [
+            "Activité physique",
+            "Statique",
+            "Dynamique",
+            "Posture",
+            "Fatigue musculaire",
+            "Troubles musculo-squelettiques",
+            "Troubles ou maladies chroniques",
+            "Accidents",
+            "Protection collective",
+            "Protection individuelle",
+            "Sécurité physique",
+            "Ergonomie",
+            "Économie d’effort"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "PSE-C6",
+      "intitule": "Module C6 : Les acteurs et les organismes de la prévention",
+      "performances_attendues": [],
+      "criteres_officiels": [
+        "Identifier les acteurs de prévention interne à l’entreprise.",
+        "Expliquer les rôles du comité social et économique (CSE) liées à la santé et sécurité au travail.",
+        "Identifier les missions du service de santé au travail.",
+        "Identifier les missions des acteurs de prévention extérieurs à l’entreprise."
+      ],
+      "savoirs_associes": [
+        {
+          "intitule": "Notions clés associées",
+          "limites_connaissances": [
+            "Prévention",
+            "« Salarié compétent » pour la protection et la prévention des risques professionnels (PPRP).",
+            "Instance représentative",
+            "Médecin du travail",
+            "Intervenants en prévention des risques professionnels (IPRP)",
+            "Inspection du travail"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "PSE-C7",
+      "intitule": "Module C7 : Le suivi médical des salariés et la vaccination",
+      "performances_attendues": [],
+      "criteres_officiels": [
+        "Énoncer les intérêts des visites médicales du salarié.",
+        "Expliquer le principe de la vaccination.",
+        "Expliquer l’intérêt de la vaccination pour l’individu, pour la collectivité."
+      ],
+      "savoirs_associes": [
+        {
+          "intitule": "Notions clés associées",
+          "limites_connaissances": [
+            "Aptitudes au travail",
+            "Suivi médical individuel",
+            "Protection de la santé",
+            "Micro-organisme",
+            "Virulence atténuée",
+            "Antigène",
+            "Anticorps",
+            "Protection individuelle",
+            "Protection collective",
+            "Vaccin obligatoire"
+          ]
+        }
+      ]
+    }
+  ]
+}

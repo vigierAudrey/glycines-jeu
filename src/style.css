@@ -459,3 +459,6 @@ html, body {
 .pastille-question { min-width: 44px; min-height: 44px; border-radius: 22px; border: 2px solid #ddd5ea; background: #fff; font: inherit; font-weight: 600; cursor: pointer; color: inherit; }
 .pastille-question[aria-current="true"] { border-color: #6a4c93; background: #efe8f7; }
 .pastille-question:disabled { opacity: .45; cursor: default; }
+
+/* Rubrique PSE dans la liste des missions (5.1) */
+.liste-missions__titre { margin: 12px 0 4px; font-size: 1rem; }
