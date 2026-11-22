@@ -29,6 +29,7 @@ export interface Resultat {
   etat: EtatMission;
   retours: string[]; // explications à montrer à l'élève
   reussi: boolean; // vrai si la réponse rapporte tous les points possibles de l'étape
+  aRevoir: string[]; // codes des compétences de l'étape qui n'ont pas reçu tous leurs points (pour rappeler leur critère)
 }
 
 const CONFIANCE_MAX = 10;
@@ -49,6 +50,10 @@ const identiques = (a: Points, b: Points) => {
   const codes = new Set([...Object.keys(a), ...Object.keys(b)]);
   return [...codes].every((c) => (a[c] ?? 0) === (b[c] ?? 0));
 };
+
+/** Compétences pour lesquelles l'élève a gagné moins que le maximum de l'étape. */
+const manquantes = (gagnes: Points, max: Points): string[] =>
+  Object.keys(max).filter((c) => max[c] > 0 && (gagnes[c] ?? 0) < max[c]);
 
 export function etapeEnCours(mission: Mission, etat: EtatMission): Etape | undefined {
   return mission.etapes.find((e) => e.id === etat.etape);
@@ -121,6 +126,7 @@ export function repondre(mission: Mission, etat: EtatMission, reponse: Reponse):
         },
         retours: options.map((o) => o.retour),
         reussi: identiques(gagnes, max),
+        aRevoir: manquantes(gagnes, max),
       };
     }
     case 'observation': {
@@ -135,6 +141,7 @@ export function repondre(mission: Mission, etat: EtatMission, reponse: Reponse):
         etat: { ...etat, etape: suivante(mission, etape), points: ajouter(etat.points, gagnes), essais: 0 },
         retours,
         reussi: identiques(gagnes, max),
+        aRevoir: manquantes(gagnes, max),
       };
     }
     case 'decision': {
@@ -151,19 +158,21 @@ export function repondre(mission: Mission, etat: EtatMission, reponse: Reponse):
         },
         retours: [choix.retour],
         reussi: identiques(choix.points ?? {}, max),
+        aRevoir: manquantes(choix.points ?? {}, max),
       };
     }
     case 'relais': {
       const r = reponse as Extract<Reponse, { type: 'relais' }>;
       if (r.destinataire !== etape.destinataire) {
         // On reste sur l'étape : l'élève peut chercher la bonne personne.
-        return { etat: { ...etat, essais: etat.essais + 1 }, retours: [etape.retour_erreur], reussi: false };
+        return { etat: { ...etat, essais: etat.essais + 1 }, retours: [etape.retour_erreur], reussi: false, aRevoir: manquantes({}, max) };
       }
       const gagnes = etat.essais === 0 ? etape.points : {}; // les points ne comptent qu'au premier essai
       return {
         etat: { ...etat, etape: suivante(mission, etape), points: ajouter(etat.points, gagnes), essais: 0 },
         retours: [etape.retour],
         reussi: etat.essais === 0,
+        aRevoir: manquantes(gagnes ?? {}, max),
       };
     }
   }

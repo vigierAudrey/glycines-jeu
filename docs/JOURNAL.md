@@ -190,3 +190,9 @@ Trois lignes par session : ce qui a été fait, ce qui reste à surveiller, la p
 - **Fait** : à la demande d'Audrey d'aller plus loin dans le même sens, chaque personnage à l'arrêt cligne maintenant des yeux de temps en temps et tourne parfois la tête un instant vers un angle au hasard avant de revenir, chacun avec son propre minuteur aléatoire (pas de synchronisation entre personnages). Ajouté dans la même boucle à cadence réduite que la respiration (10 images par seconde) : aucun coût supplémentaire en batterie. `pnpm verifier` OK (94 tests).
 - **À surveiller** : à vérifier par Audrey dans le navigateur que les deux mouvements (yeux, tête) restent discrets et ne gênent pas la lecture des étiquettes de noms ; navigateur indisponible dans cet environnement pour une vérification visuelle directe.
 - **Prochaine tâche** : celles d'Audrey (valider m13 à m20, tester la respiration et ces nouveaux mouvements), puis 3.3.
+
+## 22/11/2026 · Le « pourquoi » après une réponse incomplète (tâche P.1)
+
+- **Fait** : le moteur (`src/regles/mission.ts`) renvoie maintenant `aRevoir`, la liste des compétences de l'étape qui n'ont pas eu tous leurs points. Sous « À retenir », un encadré « 📘 Ce qu'on attend d'un professionnel » rappelle leur critère officiel, pris dans la mission (donc mot pour mot du référentiel, rien d'inventé). Lu à voix haute comme le reste. `pnpm verifier` OK (un test de plus).
+- **À surveiller** : navigateur indisponible dans cet environnement ; à regarder par Audrey en se trompant volontairement dans une mission.
+- **Prochaine tâche** : P.2 (fiche de fin de mission à imprimer).

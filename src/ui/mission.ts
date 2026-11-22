@@ -82,6 +82,7 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
   let phase: 'intro' | 'etape' | 'retour' = 'intro';
   let retours: string[] = [];
   let reussi = false;
+  let aRevoir: string[] = [];
   let messageRelais = '';
   // Réponses en cours de saisie.
   let dialogue: Record<string, number> = {};
@@ -100,6 +101,18 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
            aria-label="Confiance de ${echapper(qui ?? 'la personne')} : ${etat.confiance} sur 10">
         <span class="jauge__nom">Confiance${qui ? ` de ${echapper(qui)}` : ''}</span>
         <span class="jauge__barre"><span class="jauge__niveau" style="width:${etat.confiance * 10}%"></span></span>
+      </div>`;
+  };
+
+  // ---------- Le « pourquoi » : critère officiel des compétences pas tout à fait réussies ----------
+  const criteresARevoir = () => {
+    if (!mission || reussi) return '';
+    const lignes = mission.competences.filter((c) => aRevoir.includes(c.code));
+    if (!lignes.length) return '';
+    return `
+      <div class="pourquoi">
+        <p class="pourquoi__titre a-lire">📘 Ce qu'on attend d'un professionnel :</p>
+        <ul>${lignes.map((c) => `<li class="a-lire"><strong>${echapper(c.code)}</strong> ${echapper(c.critere)}</li>`).join('')}</ul>
       </div>`;
   };
 
@@ -171,6 +184,7 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
       corps = `
         <p class="retour ${reussi ? 'retour--bien' : 'retour--erreur'} a-lire">${reussi ? 'Bien joué.' : 'À retenir :'}</p>
         <ul class="retours">${retours.map((r) => `<li class="a-lire">${echapper(r)}</li>`).join('')}</ul>
+        ${criteresARevoir()}
         <button type="button" class="bouton bouton--principal" data-action="continuer">${etat.etape ? 'Continuer' : 'Voir la relève'}</button>`;
     } else if (e) {
       corps = `<p class="consigne a-lire">${echapper(e.consigne)}</p>${contenuEtape(e)}`;
@@ -223,6 +237,7 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
     etat = resultat.etat;
     retours = resultat.retours;
     reussi = resultat.reussi;
+    aRevoir = resultat.aRevoir;
     phase = 'retour';
     afficher();
   };

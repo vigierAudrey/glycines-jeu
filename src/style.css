@@ -302,6 +302,10 @@ html, body {
 .retour--bien { color: #2f7d4f; }
 .retour--erreur { color: #9b3a1a; }
 .retours { margin: 4px 0; padding-left: 20px; display: grid; gap: 4px; }
+/* Le « pourquoi » : critère officiel rappelé après une réponse incomplète (tâche P.1). */
+.pourquoi { margin: 8px 0; padding: 8px 10px; border-left: 4px solid var(--violet); background: #f4effa; border-radius: 6px; }
+.pourquoi__titre { margin: 0 0 4px; font-weight: 600; }
+.pourquoi ul { margin: 0; padding-left: 18px; display: grid; gap: 4px; }
 
 /* Repères de la loupe : boutons ronds de 44 px posés sur la pièce (placés par src/ui/mission.ts). */
 .reperes { position: absolute; inset: 0; pointer-events: none; }

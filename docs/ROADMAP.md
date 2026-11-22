@@ -77,7 +77,7 @@ Règle commune : toute nouvelle activité s'appuie sur une situation réelle des
 
 ### Mieux expliquer après chaque choix
 
-- [ ] **P.1** Le « pourquoi » : après une réponse incomplète, le retour rappelle le critère officiel du référentiel concerné (pris automatiquement dans la mission, rien d'inventé).
+- [x] **P.1** Le « pourquoi » : après une réponse incomplète, le retour rappelle le critère officiel du référentiel concerné (pris automatiquement dans la mission, rien d'inventé).
 - [ ] **P.2** Fiche de fin de mission à imprimer ou enregistrer en PDF : niveaux par compétence, critères, ce que l'élève a choisi, questions de débriefing avec des lignes pour répondre. À ranger dans un carnet de bord (stage, oral).
 
 ### Nouvelles activités (types d'étapes : moteur, validateur, écran, page enseignante, tests)

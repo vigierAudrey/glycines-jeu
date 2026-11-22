@@ -43,6 +43,15 @@ describe('moteur de mission', () => {
     expect(mal.retours).toHaveLength(3);
   });
 
+  it('une réponse incomplète signale les compétences à revoir, une réponse parfaite aucune', () => {
+    const bien = repondre(karim, demarrerMission(karim), parcoursParfait[0] as Reponse);
+    expect(bien.aRevoir).toEqual([]);
+    const mal = repondre(karim, demarrerMission(karim), { type: 'dialogue', verbal: 1, paraverbal: 1, non_verbal: 1 });
+    expect(mal.aRevoir.length).toBeGreaterThan(0);
+    const codes = karim.competences.map((c) => c.code);
+    expect(mal.aRevoir.every((c) => codes.includes(c))).toBe(true);
+  });
+
   it('l\'observation compte un point par élément bien classé', () => {
     const etat = jouer(karim, [parcoursParfait[0], { type: 'observation', classements: { 'sol-mouille': 'gene', 'lit-bas': 'gene' } }]);
     expect(etat.points['CT3.3']).toBe(1);
