@@ -4,7 +4,7 @@
 
 **Reprendre après une coupure (forfait épuisé) :** dire simplement « continue la feuille de route ». L'IA reprend la première tâche `[~]` (commencée), sinon la première `[ ]` qui n'est pas 🧑‍🏫. Une tâche commencée mais pas finie est marquée `[~]` avec une ligne « Reste à faire : … » juste en dessous.
 
-Légende : `[x]` fait · `[~]` commencé · `[ ]` à faire · 🧑‍🏫 ce qu'Audrey seule peut faire (valider un contenu pédagogique, tester avec des élèves) · 🎓 notion expliquée
+Légende : `[x]` fait · `[~]` commencé · `[ ]` à faire · `[-]` abandonné · 🧑‍🏫 ce qu'Audrey seule peut faire (valider un contenu pédagogique, tester avec des élèves) · 🎓 notion expliquée
 
 ---
 
@@ -86,7 +86,7 @@ Règle commune : toute nouvelle activité s'appuie sur une situation réelle des
 - [x] **P.4** **Protocole** : remettre les étapes dans l'ordre (C2.1.1, C2.2.1). Le jeu prépare le TP, il ne le remplace pas.
 - [x] **P.5** **Matériel et produits** : choisir ce qu'il faut (et écarter ce qui ne convient pas) avant un soin ou un entretien.
 - [x] **P.6** **Réserve et stocks** : comparer stock et seuil, cocher ce qu'il faut signaler sur la fiche d'alerte (CT3.3).
-  Fait : `m22`. 🧑‍🏫 Audrey dit qui est « chargé des stocks » aux Glycines si elle veut une étape relais.
+  Fait : `m22`, avec un relais vers M. Lemoine, cadre de santé, chargé des stocks.
 - [x] **P.7** **Relève et imprévus** : un document (planning, transmissions) peut s'afficher dans n'importe quelle étape ; l'élève le lit puis choisit par quoi commencer (CT3.1).
   Fait : `m23` (16 h, deux imprévus) d'après S7-05. Vos cours n'ont pas de « relève du matin » avec des transmissions de nuit : à écrire plus tard si vous en faites une séance.
 - [x] **P.8** **Personnaliser une chambre** : placer les objets du résident selon ses souhaits (C2.2.2, C2.1.2).
@@ -112,11 +112,10 @@ Règle commune : toute nouvelle activité s'appuie sur une situation réelle des
 - [x] **P.15** Pictogrammes sur les choix (agir, adapter, alerter) et sur les métiers à rejoindre pour un relais.
 - [x] **P.16** Lexique du métier : les mots clés des textes (« transmission », « projet de vie »…) se touchent et ouvrent une définition courte, tirée des cours. 🧑‍🏫 Audrey valide les définitions.
   Fait : `content/lexique.json`, 26 mots repris mot pour mot des rubriques « Lexique » des séances (termes médicaux exclus). Reste pour Audrey : relire la liste (page enseignante).
-- [ ] **P.17** Aide en arabe : voir 5.3 (consignes et lexique d'abord).
-  En attente : des traductions faites par l'IA ne doivent pas arriver devant les élèves sans relecture par un arabophone (collègue, parent, élève avancé). Dès qu'une personne relectrice est trouvée : ajouter un champ `ar` aux mots de `content/lexique.json` et aux consignes de l'interface, avec un bouton « عربي » qui affiche la traduction sous le texte français.
+- [-] **P.17** ~~Aide en arabe~~ : abandonnée (décision d'Audrey du 22/11/2026, D-032 : pas d'arabe dans l'application).
 
 ## Phase 5 · Extensions
 
 - [ ] **5.1** PSE du CAP.
 - [ ] **5.2** Bloc 1 : cuisine, lingerie, entretien des espaces collectifs.
-- [ ] **5.3** Aide en arabe (option).
+- [-] **5.3** ~~Aide en arabe~~ : abandonnée (D-032).

@@ -182,3 +182,9 @@ On ne redessine que si la vue change (batterie des téléphones). Les étiquette
 - **Décision** : une mission peut avoir des `variantes` (situation et consignes d'étapes réécrites). Au lancement, la version de base ou une variante est tirée au hasard. Les choix, les retours et les points restent ceux de la mission de base.
 - **Pourquoi** : rejouer une mission sans pouvoir réciter le texte, sans multiplier les corrections à valider et sans risque d'inventer un savoir. Le contexte doit venir des cours (pas d'humeur de résident inventée).
 - **Comment** : `src/regles/variantes.ts` (`tirerVariante`, `appliquerVariante`), règles dans `src/contenu/valider.ts`, liste sur la page enseignante. Première variante : `m09` (chambre peu éclairée, S5-03).
+
+## D-032 · Pas d'arabe dans l'application ; le cadre de santé gère les stocks ; les cours peuvent être complétés · 22/11/2026
+
+- **Décision** : (1) l'application reste en français seulement : P.17 et 5.3 sont abandonnées. (2) Aux Glycines, M. Lemoine, cadre de santé, est chargé des stocks (relais de `m22`). (3) Le contenu peut compléter les cours, dans le sens du référentiel et du CAP AAGA.
+- **Pourquoi** : choix d'Audrey du 22/11/2026.
+- **Comment** : règles ajoutées dans CLAUDE.md ; chaque complément est signalé « complément, hors cours » dans `note_pour_audrey`.

@@ -17,7 +17,9 @@ Propriétaire : Audrey, enseignante et développeuse débutante. Elle veut **com
 
 - `content/` = données pédagogiques uniquement. `src/regles/` et `src/contenu/` = logique pure, **aucun import de `three`**. `src/scene3d/` = Three.js, **aucune donnée pédagogique en dur**. `src/ui/` = HTML/CSS.
 - **Ne jamais modifier `content/referentiel/bloc2.json`.** C'est la source de vérité.
-- Une mission cite ses critères **mot pour mot** depuis le référentiel. Ne jamais inventer une compétence, un critère, un savoir, ni un élément médical sur un résident (voir `repris_du_cours`).
+- Une mission cite ses critères **mot pour mot** depuis le référentiel. Ne jamais inventer une compétence, un critère, ni un élément médical sur un résident (voir `repris_du_cours`).
+- On peut **compléter les cours** (situations, variantes, rappels, contextes nouveaux) à condition de rester dans le sens du référentiel et du CAP AAGA : rôle de l'agent, limites, transmission au bon professionnel. Signaler chaque ajout qui ne vient pas d'une séance dans `note_pour_audrey` (« complément, hors cours »).
+- Pas d'arabe ni d'autre langue dans l'application (D-032).
 - Aucun diagnostic dans le jeu : l'élève observe, adapte dans son rôle, transmet.
 - Pas de nouvelle dépendance sans l'expliquer et sans l'accord d'Audrey. Préférer gratuit, open source, léger.
 - Pas de réécriture massive d'une partie qui fonctionne.

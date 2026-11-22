@@ -286,3 +286,9 @@ Trois lignes par session : ce qui a été fait, ce qui reste à surveiller, la p
 - **Fait** : rien de codé. La tâche attend une personne arabophone pour relire les traductions, la marche à suivre est écrite dans la feuille de route.
 - **À surveiller** : des traductions faites par l'IA et jamais relues ne doivent pas arriver devant les élèves.
 - **Prochaine tâche** : Phase 4 bis terminée sauf P.17 ; suite : tâches 🧑‍🏫 (validation des brouillons, test élèves), puis Phase 5.
+
+## 22/11/2026 · Cadre de santé chargé des stocks, pas d'arabe (D-032)
+
+- **Fait** : `m22` a une étape relais vers M. Lemoine, cadre de santé, chargé des stocks. P.17 et 5.3 (arabe) abandonnées. CLAUDE.md : le contenu peut compléter les cours dans le sens du référentiel, et chaque complément est signalé.
+- **À surveiller** : rien.
+- **Prochaine tâche** : relecture avant de pousser sur GitHub.

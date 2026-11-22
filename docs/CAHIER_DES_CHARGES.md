@@ -55,7 +55,7 @@ Le jeu entraîne les **compétences du référentiel** par des mises en situatio
 | Hors ligne | Le jeu fonctionne sans réseau une fois chargé (PWA prévue en phase 4). |
 | Sauvegarde | Automatique à la fin de chaque mission, dans le navigateur. Reprise sur un autre appareil par un **code de reprise** à recopier. |
 | RGPD | Aucun compte, aucun nom d'élève, aucun traceur, aucun service tiers. |
-| Accessibilité | Texte HTML (pas de texte dessiné dans la 3D), lecture à voix haute des dialogues (synthèse vocale du navigateur), icônes, phrases courtes. Aide en arabe envisagée plus tard. |
+| Accessibilité | Texte HTML (pas de texte dessiné dans la 3D), lecture à voix haute des dialogues (synthèse vocale du navigateur), icônes, phrases courtes, pictogrammes, lexique du métier touchable. Pas d'aide en arabe (décision D-032). |
 | Coût | 0 €. Outils libres et gratuits. Hébergement statique (aucun serveur applicatif) quand on publiera. |
 
 ## 7. Ce que le jeu ne fait pas
