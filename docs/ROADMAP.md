@@ -82,7 +82,7 @@ Règle commune : toute nouvelle activité s'appuie sur une situation réelle des
 
 ### Nouvelles activités (types d'étapes : moteur, validateur, écran, page enseignante, tests)
 
-- [ ] **P.3** **Transmission** : l'élève trie des phrases en « fait observé », « jugement » ou « interprétation », puis garde seulement ce qui doit être transmis (C2.1.6, CT3.4). Ajoutée dans une ou deux missions qui s'y prêtent (rougeur de Mme Rose, confusion soudaine…).
+- [x] **P.3** **Transmission** : l'élève trie des phrases en « fait observé », « jugement » ou « interprétation », puis garde seulement ce qui doit être transmis (C2.1.6, CT3.4). Ajoutée dans une ou deux missions qui s'y prêtent (rougeur de Mme Rose, confusion soudaine…).
 - [ ] **P.4** **Protocole** : remettre les étapes dans l'ordre (C2.1.1, C2.2.1). Le jeu prépare le TP, il ne le remplace pas.
 - [ ] **P.5** **Matériel et produits** : choisir ce qu'il faut (et écarter ce qui ne convient pas) avant un soin ou un entretien.
 - [ ] **P.6** **Réserve et stocks** : comparer stock et seuil, cocher ce qu'il faut signaler sur la fiche d'alerte (CT3.3).

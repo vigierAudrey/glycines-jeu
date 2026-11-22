@@ -277,6 +277,8 @@ html, body {
 .choix--decision { margin-top: 6px; }
 .rangee-boutons { display: flex; gap: 8px; }
 .rangee-boutons .choix { text-align: center; }
+.rangee-boutons--trois { flex-wrap: wrap; }
+.rangee-boutons--trois .choix { flex: 1 1 90px; }
 .loupe { padding: 8px 12px; background: #fff8e6; border-radius: 10px; }
 
 .badge {

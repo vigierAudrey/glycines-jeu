@@ -23,6 +23,8 @@ function reponseParfaite(etape: Etape): Reponse {
       return { type: 'decision', choix: 0 };
     case 'relais':
       return { type: 'relais', destinataire: etape.destinataire };
+    case 'transmission':
+      return { type: 'transmission', classements: Object.fromEntries(etape.phrases.map((ph) => [ph.id, ph.nature])) };
   }
 }
 

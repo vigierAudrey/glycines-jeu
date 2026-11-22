@@ -5,7 +5,9 @@
 // L'interface lui donne la réponse de l'élève ; il renvoie le nouvel état et les retours à afficher.
 // L'état n'est jamais modifié : chaque réponse fabrique un nouvel état (plus simple à tester et à sauvegarder).
 
-import type { Decision, Etape, Mission, Points } from '../contenu/types';
+import type { Decision, Etape, Mission, NaturePhrase, Points } from '../contenu/types';
+
+export const NOMS_NATURE: Record<NaturePhrase, string> = { fait: 'fait observé', jugement: 'jugement', interpretation: 'interprétation' };
 
 export type Niveau = 'N1' | 'N2' | 'N3' | 'N4';
 
@@ -31,7 +33,8 @@ export type Reponse =
   | { type: 'dialogue'; verbal: number; paraverbal: number; non_verbal: number } // numéros des options choisies
   | { type: 'observation'; classements: Record<string, 'facilite' | 'gene'> } // id de l'élément → avis de l'élève
   | { type: 'decision'; choix: number }
-  | { type: 'relais'; destinataire: string }; // id du membre du personnel rejoint
+  | { type: 'relais'; destinataire: string } // id du membre du personnel rejoint
+  | { type: 'transmission'; classements: Record<string, NaturePhrase> }; // id de la phrase → nature choisie
 
 export interface Resultat {
   etat: EtatMission;
@@ -92,6 +95,8 @@ export function pointsMaxEtape(etape: Etape): Points {
       return etape.choix.reduce((max, o) => maximum(max, o.points), {} as Points);
     case 'relais':
       return { ...etape.points };
+    case 'transmission':
+      return etape.phrases.reduce((total, ph) => ajouter(total, ph.points), {} as Points);
   }
 }
 
@@ -126,6 +131,10 @@ function textesChoisis(etape: Etape, reponse: Reponse): string[] {
       return [etape.choix[(reponse as Extract<Reponse, { type: 'decision' }>).choix].texte];
     case 'relais':
       return [(reponse as Extract<Reponse, { type: 'relais' }>).destinataire];
+    case 'transmission': {
+      const r = reponse as Extract<Reponse, { type: 'transmission' }>;
+      return etape.phrases.map((ph) => `« ${ph.texte} » : ${r.classements[ph.id] ? NOMS_NATURE[r.classements[ph.id]] : 'non classée'}`);
+    }
   }
 }
 
@@ -209,6 +218,24 @@ function repondreEtape(mission: Mission, etat: EtatMission, reponse: Reponse): R
         retours: [etape.retour],
         reussi: etat.essais === 0,
         aRevoir: manquantes(gagnes ?? {}, max),
+      };
+    }
+    case 'transmission': {
+      const r = reponse as Extract<Reponse, { type: 'transmission' }>;
+      let gagnes: Points = {};
+      const retours = etape.phrases.map((ph) => {
+        const bien = r.classements[ph.id] === ph.nature;
+        if (bien) gagnes = ajouter(gagnes, ph.points);
+        return `${bien ? '✔' : '✘'} « ${ph.texte} » est ${ph.nature === 'interpretation' ? 'une' : 'un'} ${NOMS_NATURE[ph.nature]}. ${ph.retour}`;
+      });
+      // La transmission de l'élève : les phrases qu'il a gardées comme faits observés.
+      const gardees = etape.phrases.filter((ph) => r.classements[ph.id] === 'fait').map((ph) => `« ${ph.texte} »`);
+      retours.push(gardees.length ? `Votre transmission : ${gardees.join(' ')}` : 'Vous n\'avez gardé aucun fait observé : il n\'y a rien à transmettre.');
+      return {
+        etat: { ...etat, etape: suivante(mission, etape), points: ajouter(etat.points, gagnes), essais: 0 },
+        retours,
+        reussi: identiques(gagnes, max),
+        aRevoir: manquantes(gagnes, max),
       };
     }
   }

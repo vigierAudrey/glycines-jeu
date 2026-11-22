@@ -6,7 +6,7 @@ import './enseignante.css';
 import { chargerContenu } from './contenu/charger';
 import type { Etape, Mission, Option, Points } from './contenu/types';
 import { SEQUENCES } from './regles/deblocage';
-import { pointsMaxMission } from './regles/mission';
+import { NOMS_NATURE, pointsMaxMission } from './regles/mission';
 import { echapper } from './ui/echapper';
 
 const contenu = chargerContenu();
@@ -38,6 +38,9 @@ function etapeEnHtml(e: Etape, i: number): string {
     }
     case 'relais':
       return `${titre}<p><em>Relais.</em> Personne à rejoindre : <strong>${echapper(noms.get(e.destinataire) ?? e.destinataire)}</strong> <span class="points">${pointsEnTexte(e.points)}</span></p>`;
+    case 'transmission':
+      return `${titre}<p><em>Transmission.</em> Tri attendu (seuls les faits observés sont transmis) :</p>
+        <ul>${e.phrases.map((ph) => `<li>« ${echapper(ph.texte)} » → <strong>${NOMS_NATURE[ph.nature]}</strong> <span class="points">${pointsEnTexte(ph.points)}</span></li>`).join('')}</ul>`;
   }
 }
 

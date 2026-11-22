@@ -226,7 +226,7 @@ Une mission est un fichier de `content/scenarios/`. Exemple complet : `m00-exemp
 | `etapes` | la suite des étapes (voir ci-dessous). |
 | `debriefing` | 2 ou 3 questions pour la relève de fin de mission. |
 
-### Les 4 types d'étapes
+### Les types d'étapes
 
 Chaque étape a un `id`, un `type` et une `consigne`. Les **points** s'écrivent `{ "CT4.1": 2 }` : un entier de 0 à 3 par compétence, et seulement pour une compétence visée par la mission.
 
@@ -234,9 +234,12 @@ Chaque étape a un `id`, un `type` et une `consigne`. Les **points** s'écrivent
 - **`observation`** (la loupe) : `elements`, chacun avec `id`, `libelle`, `colonne`, `rangee` (une case du lieu de la mission), `effet` (`facilite` ou `gene`), `retour` et `points`. L'élève touche chaque repère et dit s'il facilite ou gêne l'activité.
 - **`decision`** : `question` et `choix`, chacun avec `decision` (`agir`, `adapter` ou `alerter`), `texte`, `retour`, `points` et éventuellement `suite` (id de l'étape suivante, ou `fin`). Sans `suite`, on passe à l'étape d'après.
 - **`relais`** : `destinataire` (id du membre du personnel à rejoindre), `points` (gagnés seulement au premier essai), `retour` et `retour_erreur` (l'élève peut réessayer).
+- **`transmission`** : `phrases`, chacune avec `id`, `texte`, `nature` (`fait`, `jugement` ou `interpretation`), `retour` et `points`. L'élève trie chaque phrase ; le retour montre « sa » transmission, faite des phrases qu'il a gardées comme faits. Au moins 3 phrases, au moins un fait et au moins une phrase à écarter.
+
+Après une réponse incomplète, le panneau rappelle le **critère officiel** des compétences qui n'ont pas eu tous leurs points (`aRevoir`, calculé par le moteur). Le moteur garde aussi le **parcours** de l'élève (ce qu'il a choisi à chaque étape), repris dans la **fiche de fin de mission** à imprimer (bouton 🖨 de la relève, styles `@media print` de `style.css`).
 
 ### Les niveaux (moteur : `src/regles/mission.ts`)
 
 Pour chaque compétence, le moteur compare les points obtenus au maximum possible (le meilleur choix à chaque étape) : moins de 40 % → **N1**, moins de 70 % → **N2**, sinon **N3**. **N4** demande 90 % dans une mission marquée `transfert`. Il n'y a jamais de note globale.
 
-`pnpm valider` refuse : une étape sans identifiant unique, une `suite` qui ne mène nulle part, des points pour une compétence non visée, une compétence visée qui ne rapporte jamais de points, un repère hors du lieu, un relais vers une personne inconnue, un dialogue avec moins de 2 options par canal, un débriefing qui n'a pas 2 ou 3 questions.
+`pnpm valider` refuse : une étape sans identifiant unique, une `suite` qui ne mène nulle part, des points pour une compétence non visée, une compétence visée qui ne rapporte jamais de points, un repère hors du lieu, une transmission sans fait ou sans phrase à écarter, un relais vers une personne inconnue, un dialogue avec moins de 2 options par canal, un débriefing qui n'a pas 2 ou 3 questions.

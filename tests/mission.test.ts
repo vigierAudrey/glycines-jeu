@@ -108,3 +108,25 @@ describe('niveaux', () => {
     expect(niveau(8, 10, true)).toBe('N3');
   });
 });
+
+describe('étape transmission (tâche P.3)', () => {
+  const m16 = lireContenuDepuisDisque().missions.find((m) => m.id === 'm16-rose-confusion-soudaine')!;
+  const etape = m16.etapes.find((e) => e.type === 'transmission')!;
+  if (etape.type !== 'transmission') throw new Error('m16 doit contenir une étape transmission');
+  const avant: EtatMission = { ...demarrerMission(m16), etape: etape.id };
+
+  it('un tri exact donne tous les points et la transmission ne garde que les faits', () => {
+    const r = repondre(m16, avant, { type: 'transmission', classements: Object.fromEntries(etape.phrases.map((ph) => [ph.id, ph.nature])) });
+    expect(r.reussi).toBe(true);
+    const derniere = r.retours.at(-1)!;
+    for (const ph of etape.phrases) expect(derniere.includes(ph.texte)).toBe(ph.nature === 'fait');
+  });
+
+  it('un jugement gardé comme fait se retrouve dans la transmission et coûte un point', () => {
+    const classements = Object.fromEntries(etape.phrases.map((ph) => [ph.id, ph.nature === 'jugement' ? 'fait' : ph.nature])) as Record<string, 'fait' | 'jugement' | 'interpretation'>;
+    const r = repondre(m16, avant, { type: 'transmission', classements });
+    expect(r.reussi).toBe(false);
+    expect(r.aRevoir).toEqual(['C2.1.6']);
+    expect(r.retours.at(-1)).toContain('sénile');
+  });
+});

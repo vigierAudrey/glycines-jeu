@@ -202,3 +202,9 @@ Trois lignes par session : ce qui a été fait, ce qui reste à surveiller, la p
 - **Fait** : le moteur garde le `parcours` de l'élève (pour chaque étape terminée : ce qu'il a choisi, réussi ou non). Sur la relève, le bouton « 🖨 Imprimer ma fiche » ouvre l'impression du navigateur (papier ou « Enregistrer en PDF ») avec une page propre : nom et date à écrire à la main, situation, niveaux et critères, choix étape par étape, questions de débriefing avec des lignes, « Ce que je retiens pour mon stage ». Rien n'est envoyé ni gardé en plus. `pnpm verifier` OK (96 tests).
 - **À surveiller** : navigateur indisponible ici ; à essayer par Audrey sur ordinateur et téléphone (l'aperçu avant impression suffit).
 - **Prochaine tâche** : P.3 (activité Transmission).
+
+## 22/11/2026 · Nouvelle activité « Transmission » (tâche P.3)
+
+- **Fait** : nouveau type d'étape `transmission` (moteur, validateur, panneau, page enseignante, tests). L'élève trie des phrases en Fait, Jugement ou Interprétation (définitions rappelées en haut) ; le retour affiche sa transmission, faite des phrases qu'il a gardées comme faits (un jugement gardé par erreur s'y voit). Première utilisation dans `m16` (Mme Rose, confusion soudaine), d'après votre séance S1-05, activité 3 « Habituel ou alerte ? » (« rédige une transmission factuelle ») et S1-02 (« une transmission décrit des faits observés ») : l'ancienne décision « Que transmettez-vous ? » est remplacée par un tri de 6 phrases tirées de la mission. `pnpm verifier` OK (98 tests).
+- **À surveiller** : m16 est en brouillon, à relire (les 6 phrases). Navigateur indisponible ici pour une vérification visuelle.
+- **Prochaine tâche** : P.4 (Protocole : remettre les étapes dans l'ordre).

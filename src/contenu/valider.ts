@@ -231,8 +231,21 @@ function validerEtapes(m: Mission, contenu: Contenu, signaler: (message: string)
         lirePoints(ou, e.points);
         break;
       }
+      case 'transmission': {
+        if (!(e.phrases?.length >= 3)) signaler(`${ou} : une transmission demande au moins 3 phrases à trier.`);
+        const idsPhrases = new Set<string>();
+        for (const ph of e.phrases ?? []) {
+          if (idsPhrases.has(ph.id)) signaler(`${ou} : phrase « ${ph.id} » en double.`);
+          idsPhrases.add(ph.id);
+          if (!['fait', 'jugement', 'interpretation'].includes(ph.nature)) signaler(`${ou} : nature « ${ph.nature} » inconnue (fait, jugement ou interpretation).`);
+          lirePoints(ou, ph.points);
+        }
+        if (!(e.phrases ?? []).some((ph) => ph.nature === 'fait')) signaler(`${ou} : au moins une phrase doit être un fait observé, à transmettre.`);
+        if (!(e.phrases ?? []).some((ph) => ph.nature !== 'fait')) signaler(`${ou} : au moins une phrase doit être un jugement ou une interprétation, à écarter.`);
+        break;
+      }
       default:
-        signaler(`${ou} : type « ${(e as { type: string }).type} » inconnu (dialogue, observation, decision ou relais).`);
+        signaler(`${ou} : type « ${(e as { type: string }).type} » inconnu (dialogue, observation, decision, relais ou transmission).`);
     }
   }
 

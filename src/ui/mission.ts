@@ -6,7 +6,7 @@
 // Sécurité : tout texte venu de content/ passe par echapper() avant d'être inséré dans le HTML.
 
 import * as THREE from 'three';
-import type { Contenu, ElementObserve, Etape, Mission } from '../contenu/types';
+import type { Contenu, ElementObserve, Etape, Mission, NaturePhrase } from '../contenu/types';
 import { bilan, demarrerMission, etapeEnCours, repondre, type Bilan, type EtatMission, type Reponse } from '../regles/mission';
 import { estDebloquee, missionsAMontrer, SEQUENCES } from '../regles/deblocage';
 import type { Theatre } from '../scene3d/creerScene';
@@ -88,6 +88,7 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
   let dialogue: Record<string, number> = {};
   let classements: Record<string, 'facilite' | 'gene'> = {};
   let elementOuvert: ElementObserve | null = null;
+  let natures: Record<string, NaturePhrase> = {};
 
   const etape = (): Etape | undefined => (mission && etat ? etapeEnCours(mission, etat) : undefined);
   const residentDeLaMission = () => mission?.personnages.find((id) => residents.has(id));
@@ -156,6 +157,21 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
             <button type="button" class="choix choix--decision" data-decision="${i}">
               <span class="badge badge--${o.decision}">${NOMS_DECISION[o.decision]}</span> ${echapper(o.texte)}
             </button>`).join('')}`;
+      case 'transmission': {
+        const faites = e.phrases.filter((ph) => natures[ph.id]).length;
+        return `
+          <p class="indice a-lire"><strong>Fait observé</strong> : ce que j'ai vu ou entendu. <strong>Jugement</strong> : un avis sur la personne. <strong>Interprétation</strong> : une cause ou une explication que je suppose.</p>
+          ${e.phrases.map((ph) => `
+            <fieldset class="canal">
+              <legend class="a-lire">« ${echapper(ph.texte)} »</legend>
+              <div class="rangee-boutons rangee-boutons--trois">
+                ${(['fait', 'jugement', 'interpretation'] as const).map((n) => `
+                  <button type="button" class="choix" aria-pressed="${natures[ph.id] === n}" data-phrase="${echapper(ph.id)}" data-nature="${n}">${n === 'fait' ? 'Fait' : n === 'jugement' ? 'Jugement' : 'Interprétation'}</button>`).join('')}
+              </div>
+            </fieldset>`).join('')}
+          <p class="compteur">Phrases triées : ${faites} / ${e.phrases.length}</p>
+          <button type="button" class="bouton bouton--principal" data-action="valider-transmission" ${faites === e.phrases.length ? '' : 'disabled'}>Je transmets les faits</button>`;
+      }
       case 'relais':
         return `
           <p class="indice">Touchez dans l'aile la personne à prévenir. Le bouton « Qui est qui ? » peut vous aider.</p>
@@ -252,6 +268,7 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
     if (!mission || !etat) return;
     dialogue = {};
     classements = {};
+    natures = {};
     elementOuvert = null;
     messageRelais = '';
     if (etat.etape === null) {
@@ -271,6 +288,7 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
     phase = 'intro';
     dialogue = {};
     classements = {};
+    natures = {};
     elementOuvert = null;
     messageRelais = '';
     fenetre.hidden = true;
@@ -302,6 +320,10 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
       elementOuvert = null;
       afficher();
     } else if (d.action === 'valider-observation') envoyer({ type: 'observation', classements });
+    else if (d.phrase && d.nature) {
+      natures[d.phrase] = d.nature as NaturePhrase;
+      afficher();
+    } else if (d.action === 'valider-transmission') envoyer({ type: 'transmission', classements: natures });
     else if (d.decision !== undefined && e?.type === 'decision') envoyer({ type: 'decision', choix: Number(d.decision) });
   });
 

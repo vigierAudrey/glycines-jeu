@@ -49,13 +49,15 @@
     },
     {
       "id": "transmission-factuelle",
-      "type": "decision",
-      "consigne": "Vous devez transmettre ce que vous avez observé ce matin.",
-      "question": "Que transmettez-vous ?",
-      "choix": [
-        { "decision": "agir", "texte": "Je transmets les faits observés, avec l'heure, sans donner de cause ni de diagnostic.", "points": { "C2.1.6": 3 }, "retour": "Une transmission fidèle et datée des faits permet à l'infirmière d'évaluer la situation." },
-        { "decision": "adapter", "texte": "Je transmets que Mme Rose devient sénile.", "retour": "Ce mot porte un jugement qui n'est pas un fait observé." },
-        { "decision": "alerter", "texte": "Je ne transmets rien, ça passera avec le temps.", "retour": "Un changement soudain et inhabituel doit être transmis rapidement." }
+      "type": "transmission",
+      "consigne": "Avant d'aller voir l'infirmière, préparez votre transmission : gardez seulement les faits observés ce matin.",
+      "phrases": [
+        { "id": "qui-etes-vous", "texte": "Ce matin, Mme Rose m'a demandé : « Qui êtes-vous ? »", "nature": "fait", "points": { "C2.1.6": 1 }, "retour": "Ses mots exacts, rapportés fidèlement : c'est ce que vous avez entendu." },
+        { "id": "ou-je-suis", "texte": "Elle a dit : « Je ne sais plus où je suis. »", "nature": "fait", "points": { "C2.1.6": 1 }, "retour": "Une parole relevée telle quelle, sans la commenter." },
+        { "id": "pas-reconnue", "texte": "Ce matin, elle ne m'a pas reconnue, alors qu'elle me reconnaît d'habitude.", "nature": "fait", "points": { "C2.1.6": 1 }, "retour": "Vous comparez à ce qui est habituel : c'est ce qui rend le changement visible pour l'infirmière." },
+        { "id": "senile", "texte": "Mme Rose devient sénile.", "nature": "jugement", "points": { "C2.1.6": 1 }, "retour": "Ce mot porte un jugement sur la personne : il ne dit pas ce que vous avez observé." },
+        { "id": "c-est-l-age", "texte": "C'est normal, c'est l'âge.", "nature": "interpretation", "points": { "C2.1.6": 1 }, "retour": "Vous supposez une cause. Un changement soudain ne doit pas être mis sur le compte du vieillissement en général." },
+        { "id": "malaise", "texte": "Elle fait sûrement un malaise.", "nature": "interpretation", "points": { "C2.1.6": 1 }, "retour": "C'est une explication supposée, presque un diagnostic : ce n'est pas votre rôle. Vous transmettez les faits." }
       ]
     },
     {

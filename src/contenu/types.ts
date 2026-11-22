@@ -169,7 +169,24 @@ export interface EtapeRelais extends EtapeCommune {
   retour_erreur: string; // dit quand il se trompe (il peut réessayer)
 }
 
-export type Etape = EtapeDialogue | EtapeObservation | EtapeDecision | EtapeRelais;
+/** Nature d'une phrase pour une transmission : seul le fait observé se transmet tel quel. */
+export type NaturePhrase = 'fait' | 'jugement' | 'interpretation';
+
+export interface PhraseTransmission {
+  id: string;
+  texte: string;
+  nature: NaturePhrase; // bonne réponse
+  points?: Points; // gagnés si l'élève classe bien la phrase
+  retour: string;
+}
+
+/** Transmission : l'élève trie des phrases (fait observé, jugement, interprétation) ; seuls les faits sont transmis. */
+export interface EtapeTransmission extends EtapeCommune {
+  type: 'transmission';
+  phrases: PhraseTransmission[];
+}
+
+export type Etape = EtapeDialogue | EtapeObservation | EtapeDecision | EtapeRelais | EtapeTransmission;
 
 export interface Mission {
   id: string;
