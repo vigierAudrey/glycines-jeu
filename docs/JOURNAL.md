@@ -442,3 +442,9 @@ Trois lignes par session : ce qui a été fait, ce qui reste à surveiller, la p
 - **Fait** : `m121` (S5-05, directives anticipées de M. André, sans dire qu'il est en fin de vie) et `m122` (S5-06, sonnette hors de portée et paroles d'un remplaçant, qui n'est pas un personnage du jeu). `pnpm verifier` OK (222 tests).
 - **À surveiller** : missions en brouillon ; la ressource d'alerte (cadre de santé) est à adapter à l'établissement.
 - **Prochaine tâche** : T.4 (réfection de lit inoccupé).
+
+## 22/11/2026 · Réfection de lit inoccupé (tâche T.4)
+
+- **Fait** : `m123` (S3-03, protocole et bionettoyage du lit) et `m124` (S3-04, trois imprévus, ergonomie, transmission sans diagnostic de panne). Deux critères C2.1.1 jamais cités. `pnpm verifier` OK (224 tests).
+- **À surveiller** : missions en brouillon.
+- **Prochaine tâche** : T.5 (sommeil et repos).

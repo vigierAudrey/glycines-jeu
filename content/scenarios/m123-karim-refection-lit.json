@@ -1,0 +1,109 @@
+{
+  "id": "m123-karim-refection-lit",
+  "statut": "brouillon",
+  "titre": "Refaire le lit de M. Karim",
+  "duree_min": 18,
+  "sequence_requise": "S3",
+  "lieu": "chambre-karim",
+  "personnages": ["joueur", "karim"],
+  "competences": [
+    { "code": "C2.1.1", "critere": "Respect des protocoles, des fiches techniques." },
+    { "code": "C2.1.1", "critere": "Bionettoyage du lit." }
+  ],
+  "situation": "M. Karim part à une activité. Il a donné son accord pour que vous changiez le linge de son lit pendant son absence.",
+  "objectif_eleve": "Préparer le matériel, suivre l'ordre du protocole, séparer le propre du sale et bionettoyer le lit selon l'étiquette du produit.",
+  "note_pour_audrey": "Brouillon (tâche T.4), d'après votre séquence 3, séance 3 (« TP réfection de lit inoccupé : démonstration et réalisation guidée ») : matériel, protocole en 15 étapes résumé en 7, points critiques (linge sale non secoué, propre vers sale, haut vers bas, pas de pulvérisation sur les commandes, temps de contact). Deux critères C2.1.1 encore jamais cités. Complément, hors cours : la courte réplique de M. Karim avant de partir.",
+  "etapes": [
+    {
+      "id": "accord-karim",
+      "type": "dialogue",
+      "consigne": "M. Karim s'apprête à partir à l'activité, avec sa canne.",
+      "interlocuteur": "karim",
+      "replique": "Vous allez refaire mon lit pendant que je ne suis pas là ?",
+      "verbal": [
+        { "texte": "Oui, si vous êtes d'accord. Comment aimez-vous trouver votre lit et vos affaires en rentrant ?", "confiance": 2, "points": { "C2.1.1": 2 }, "retour": "Vous recherchez son accord et ses habitudes de couchage avant de commencer, comme le demande le protocole." },
+        { "texte": "Oui, je vais tout changer et ranger comme on fait d'habitude ici.", "confiance": -1, "retour": "Vous ne demandez ni son accord ni ses habitudes." },
+        { "texte": "Oui.", "confiance": 0, "retour": "Une réponse sans demander ses habitudes de couchage." }
+      ],
+      "paraverbal": [
+        { "texte": "Voix claire et tranquille.", "confiance": 1, "points": { "C2.1.1": 1 }, "retour": "Il comprend bien ce que vous allez faire." },
+        { "texte": "Voix pressée, je veux qu'il parte vite.", "confiance": -1, "retour": "Il peut se sentir de trop dans sa propre chambre." },
+        { "texte": "Voix très basse.", "confiance": 0, "retour": "Il risque de ne pas bien entendre votre question." }
+      ],
+      "non_verbal": [
+        { "texte": "Je lui ouvre la porte et je dégage son passage.", "confiance": 1, "points": { "C2.1.1": 1 }, "retour": "Il part en sécurité avec sa canne." },
+        { "texte": "Je commence à défaire le lit pendant qu'il parle.", "confiance": -2, "retour": "Vous agissez avant son accord." },
+        { "texte": "Je regarde le chariot sans le regarder, lui.", "confiance": -1, "retour": "Il peut penser que sa réponse ne compte pas." }
+      ]
+    },
+    {
+      "id": "chariot",
+      "type": "selection",
+      "consigne": "Vous préparez votre chariot avant d'entrer.",
+      "question": "Cochez ce que vous emportez.",
+      "elements": [
+        { "id": "linge-propre", "texte": "Le linge propre prévu (drap-housse, drap, taie, couverture selon ses habitudes).", "attendu": true, "points": { "C2.1.1": 1 }, "retour": "Juste le linge prévu, protégé sur le chariot." },
+        { "id": "sac-linge", "texte": "Le sac à linge sale de la filière prévue.", "attendu": true, "points": { "C2.1.1": 1 }, "retour": "Le linge sale va directement dans le sac, jamais au sol." },
+        { "id": "produit", "texte": "Le produit de bionettoyage compatible avec le lit, étiqueté, au dosage indiqué.", "attendu": true, "points": { "C2.1.1": 1 }, "retour": "Produit identifié, compatible, avec sa fiche technique." },
+        { "id": "lavettes", "texte": "Des lavettes propres de la bonne couleur.", "attendu": true, "points": { "C2.1.1": 1 }, "retour": "Le code couleur évite de mélanger les zones." },
+        { "id": "reserve-linge", "texte": "Une grosse réserve de draps à laisser dans la chambre, au cas où.", "attendu": false, "points": { "C2.1.1": 1 }, "retour": "Pas de réserve excessive de linge dans la chambre." },
+        { "id": "deux-produits", "texte": "Deux produits à mélanger pour que ce soit plus efficace.", "attendu": false, "points": { "C2.1.1": 1 }, "retour": "On ne mélange jamais des produits." }
+      ]
+    },
+    {
+      "id": "protocole",
+      "type": "ordre",
+      "consigne": "Remettez les grandes étapes du protocole dans l'ordre.",
+      "elements": [
+        { "id": "controler", "texte": "Contrôler le lit, le câble et les freins ; placer le matériel propre sans le poser au sol.", "points": { "C2.1.1": 1 } },
+        { "id": "mains-epi", "texte": "Hygiène des mains et équipements de protection prévus.", "points": { "C2.1.1": 1 } },
+        { "id": "retirer", "texte": "Retirer le linge sans le secouer et le mettre aussitôt dans le sac.", "points": { "C2.1.1": 1 } },
+        { "id": "bionettoyer", "texte": "Bionettoyer le lit du plus propre vers le plus sale, du haut vers le bas.", "points": { "C2.1.1": 1 } },
+        { "id": "mains-propre", "texte": "Hygiène des mains, puis prendre le linge propre.", "points": { "C2.1.1": 1 } },
+        { "id": "poser", "texte": "Poser le linge propre centré, tendu, selon ses habitudes.", "points": { "C2.1.1": 1 } },
+        { "id": "finir", "texte": "Remettre le lit en position prévue, vérifier l'appel malade, ranger, tracer.", "points": { "C2.1.1": 1 } }
+      ],
+      "retour": "On contrôle et on prépare, on retire le sale, on nettoie le lit, on se lave les mains, puis on pose le propre et on vérifie."
+    },
+    {
+      "id": "linge-sale",
+      "type": "decision",
+      "consigne": "Vous retirez le drap utilisé. Le sac à linge est resté de l'autre côté du lit.",
+      "question": "Que faites-vous ?",
+      "choix": [
+        { "decision": "agir", "texte": "Je roule le drap sans le secouer, loin de ma tenue, et je fais le tour du lit pour le mettre dans le sac.", "points": { "C2.1.1": 2 }, "retour": "Ne pas secouer limite la dispersion des micro-organismes et des poussières." },
+        { "decision": "adapter", "texte": "Je le pose par terre un instant, je le mettrai dans le sac à la fin.", "retour": "Le linge sale ne se pose jamais au sol ni sur le mobilier." },
+        { "decision": "alerter", "texte": "Je le secoue au-dessus du sac pour qu'il prenne moins de place.", "retour": "Secouer le linge sale disperse les micro-organismes." }
+      ]
+    },
+    {
+      "id": "commandes",
+      "type": "decision",
+      "consigne": "Vous arrivez à la télécommande du lit pendant le bionettoyage.",
+      "question": "Comment la nettoyez-vous ?",
+      "choix": [
+        { "decision": "agir", "texte": "Avec une face propre de ma lavette pliée, imprégnée de produit, sans pulvériser directement dessus.", "points": { "C2.1.1": 2 }, "retour": "On ne pulvérise pas directement sur les commandes électriques." },
+        { "decision": "adapter", "texte": "Je pulvérise le produit directement dessus, c'est plus rapide.", "retour": "Le liquide peut abîmer une commande électrique et créer un danger." },
+        { "decision": "alerter", "texte": "Je ne la nettoie pas, c'est électrique.", "retour": "La commande fait partie des éléments du lit à bionettoyer, avec la bonne méthode." }
+      ]
+    },
+    {
+      "id": "temps-contact",
+      "type": "qcm",
+      "consigne": "Le produit est appliqué sur le lit.",
+      "question": "Qu'est-ce qui fixe le temps pendant lequel le produit doit rester sur la surface ?",
+      "options": [
+        { "texte": "L'étiquette, la fiche technique et le protocole.", "juste": true },
+        { "texte": "Le temps qu'il me reste avant le retour de M. Karim." },
+        { "texte": "On essuie tout de suite, sinon le lit reste humide." }
+      ],
+      "points": { "C2.1.1": 1 },
+      "retour": "Le temps de contact est indiqué sur l'étiquette ou la fiche technique : sans lui, le produit n'a pas l'effet annoncé."
+    }
+  ],
+  "debriefing": [
+    "Pourquoi avez-vous demandé ses habitudes à M. Karim avant de commencer ?",
+    "Pourquoi ne faut-il jamais secouer le linge sale ?",
+    "Où trouvez-vous le temps de contact d'un produit ?"
+  ]
+}

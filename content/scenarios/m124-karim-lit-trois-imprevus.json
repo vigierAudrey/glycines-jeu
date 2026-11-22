@@ -1,0 +1,69 @@
+{
+  "id": "m124-karim-lit-trois-imprevus",
+  "statut": "brouillon",
+  "titre": "Un lit, trois imprévus",
+  "duree_min": 15,
+  "sequence_requise": "S3",
+  "lieu": "chambre-karim",
+  "personnages": ["joueur", "cadre"],
+  "competences": [
+    { "code": "C2.1.1", "critere": "Respect des règles d’hygiène et de sécurité, d’ergonomie." },
+    { "code": "C2.1.6", "critere": "Fidélité de la transmission des éléments observés." }
+  ],
+  "situation": "Avant le retour de M. Karim, vous refaites son lit seul. Une taie propre est tachée, un emballage vide est resté sur la table, le frein gauche semble ne pas bloquer la roue, et un flacon n'a plus d'étiquette lisible.",
+  "objectif_eleve": "Distinguer ce que vous corrigez dans votre rôle, ce que vous arrêtez et sécurisez, et ce que vous transmettez, sans réparer ni diagnostiquer.",
+  "note_pour_audrey": "Brouillon (tâche T.4), d'après votre séquence 3, séance 4 (« TP réfection de lit inoccupé : autonomie, linge et déchets ») : les quatre imprévus de l'activité 1, la hauteur de travail, la transmission sur le frein (date/heure, lieu, fait, action, destinataire, sans diagnostic de panne) et le relais responsable puis maintenance. Complément, hors cours : l'heure et l'action notées dans les phrases de la transmission.",
+  "etapes": [
+    {
+      "id": "imprevus",
+      "type": "tri",
+      "consigne": "Rangez chaque imprévu selon ce que vous faites.",
+      "categories": [
+        { "id": "corriger", "libelle": "Je corrige dans mon rôle" },
+        { "id": "securiser", "libelle": "J'arrête, je sécurise et j'alerte" }
+      ],
+      "elements": [
+        { "id": "taie", "texte": "Une taie propre, mais tachée avant usage.", "categorie": "corriger", "points": { "C2.1.1": 1 }, "retour": "Je l'écarte du circuit propre selon la procédure, je la remplace et je le signale." },
+        { "id": "emballage", "texte": "Un emballage vide, non souillé, sur la table.", "categorie": "corriger", "points": { "C2.1.1": 1 }, "retour": "Je le trie dans la filière de déchets prévue." },
+        { "id": "frein", "texte": "Le frein gauche ne bloque pas bien la roue.", "categorie": "securiser", "points": { "C2.1.1": 1 }, "retour": "Je n'utilise pas le lit comme si le frein marchait : je sécurise, je ne répare pas, j'alerte." },
+        { "id": "flacon", "texte": "Un flacon de produit sans étiquette lisible.", "categorie": "securiser", "points": { "C2.1.1": 1 }, "retour": "Un produit non identifiable ne s'utilise pas : je l'isole si c'est prévu et je signale." }
+      ]
+    },
+    {
+      "id": "hauteur",
+      "type": "decision",
+      "consigne": "Le lit est en position basse. Vous allez poser le drap-housse.",
+      "question": "Comment vous installez-vous ?",
+      "choix": [
+        { "decision": "agir", "texte": "Je monte le lit à hauteur de travail, je rapproche le linge et je fais le tour du lit plutôt que de me pencher.", "points": { "C2.1.1": 2 }, "retour": "Hauteur adaptée, charge rapprochée, pas de torsion : vous protégez votre dos." },
+        { "decision": "adapter", "texte": "Je reste en position basse et je me penche, ça ira plus vite.", "retour": "Gagner du temps ne justifie jamais un geste qui abîme le dos." },
+        { "decision": "alerter", "texte": "J'attends qu'un collègue vienne m'aider pour un lit vide.", "retour": "Avec la bonne hauteur et en faisant le tour du lit, vous pouvez le faire seul en sécurité." }
+      ]
+    },
+    {
+      "id": "transmission-frein",
+      "type": "transmission",
+      "consigne": "Préparez votre transmission sur le frein.",
+      "phrases": [
+        { "id": "fait-frein", "texte": "Aujourd'hui à 10 h, chambre de M. Karim : le frein gauche du lit ne bloque pas la roue.", "nature": "fait", "points": { "C2.1.6": 1 }, "retour": "Date, heure, lieu, ce que vous avez constaté : c'est précis." },
+        { "id": "action", "texte": "J'ai laissé le lit en position basse et je ne l'ai pas déplacé.", "nature": "fait", "points": { "C2.1.6": 1 }, "retour": "L'action réalisée fait partie d'une transmission utile." },
+        { "id": "cable", "texte": "Le câble du frein doit être cassé.", "nature": "interpretation", "points": { "C2.1.6": 1 }, "retour": "C'est un diagnostic de panne : vous décrivez, le service technique cherche la cause." },
+        { "id": "vieux", "texte": "Ce lit est trop vieux, il faudrait le changer.", "nature": "jugement", "points": { "C2.1.6": 1 }, "retour": "Votre avis sur le lit n'aide pas à régler le problème." }
+      ]
+    },
+    {
+      "id": "alerter-responsable",
+      "type": "relais",
+      "consigne": "Allez transmettre le défaut du frein au responsable, qui fera intervenir la maintenance.",
+      "destinataire": "cadre",
+      "points": { "C2.1.6": 1 },
+      "retour": "M. Lemoine, cadre de santé, reçoit la transmission et fait intervenir le service technique.",
+      "retour_erreur": "Cette personne ne fait pas intervenir la maintenance. Qui est responsable de l'aile B ?"
+    }
+  ],
+  "debriefing": [
+    "Qu'avez-vous corrigé vous-même, et qu'avez-vous transmis ?",
+    "Pourquoi ne faut-il pas écrire « le câble est cassé » ?",
+    "Comment avez-vous protégé votre dos pendant la réfection ?"
+  ]
+}
