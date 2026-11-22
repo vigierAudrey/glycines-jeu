@@ -114,6 +114,22 @@ Règle commune : toute nouvelle activité s'appuie sur une situation réelle des
   Fait : `content/lexique.json`, 26 mots repris mot pour mot des rubriques « Lexique » des séances (termes médicaux exclus). Reste pour Audrey : relire la liste (page enseignante).
 - [-] **P.17** ~~Aide en arabe~~ : abandonnée (décision d'Audrey du 22/11/2026, D-032 : pas d'arabe dans l'application).
 
+## Phase 4 ter · Couvrir tout le référentiel du Bloc 2 (bilan du 22/11/2026)
+
+Bilan : les 14 compétences ont toutes au moins une mission, mais seulement 31 critères sur 71 sont évalués, et plusieurs notions (savoirs associés) ne sont jamais travaillées. Détail dans `docs/VERIFICATION_REFERENTIEL.md`. Chaque mission écrite d'après la séance du cours indiquée, avec un critère encore jamais cité.
+
+- [ ] **T.1** Structures d'accueil et outils d'évaluation de l'autonomie (AGGIR) : CT3.1 « Sélection pertinente des données, informations récentes et diversifiées », CT3.2 « Sélection pertinente des données » (S1-01, S1-06).
+- [ ] **T.2** Droits, charte, laïcité, éthique et déontologie (CT3.4) ; recueil d'informations dans le respect du secret, enjeux et acteurs de la prévention (CT3.1) (S2-05, S1-02).
+- [ ] **T.3** Fin de vie, cultures de la mort, directives anticipées (CT3.4) ; bientraitance et maltraitance, deuxième mission (S5-05, S5-06).
+- [ ] **T.4** Réfection de lit inoccupé : hygiène et ergonomie, protocoles, bionettoyage du lit (C2.1.1) (S3-03, S3-04).
+- [ ] **T.5** Confort, sommeil et repos du résident : endormissement et réveil (C2.1.2) (S3-05).
+- [ ] **T.6** Socio-esthétique, habillage et aides techniques, prise des repas (C2.1.4), chacun avec un autre critère (S4-04, S4-05, S4-06).
+- [ ] **T.7** Continence : habitudes, pudeur et intimité (C2.1.5), deuxième mission (S4-07).
+- [ ] **T.8** Signes à observer : appareils digestif, urinaire, cardio-vasculaire, diabète, sans diagnostic (C2.1.6 « Respect des règles éthiques et du protocole ») (S5-01).
+- [ ] **T.9** Entretien : rangement, qualité du résultat, dysfonctionnement et relais, effets personnels (C2.2.1), entretien périodique (S3-08, S3-09).
+- [ ] **T.10** Personnalisation : écoute de la personne et de sa famille, sécurisation de l'espace (C2.2.2) (S5-07, S6-02).
+- [ ] **T.11** Critères communs de C2.1.2 à C2.1.5 encore jamais cités (relation privilégiée et sécurisante, bien-être, pudeur, adaptation des gestes) : à répartir dans les missions T.4 à T.7.
+
 ## Phase 5 · Extensions
 
 - [x] **5.1** PSE du CAP (thématique C, la plus proche du métier en EHPAD), en sous-tâches :

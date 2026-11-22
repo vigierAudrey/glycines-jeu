@@ -38,3 +38,12 @@ Dans le JO, C2.1.2 à C2.1.5 partagent une même case de critères (7 critères)
 Missions mises à jour : m00, m01, m02, m04, m05, m06, m08, m09, m16, m17, m18, m19 (« Relation privilégiée et sécurisante »), m21, m22.
 
 Reste : les « performances attendues » de `bloc2.json` (non citées par les missions) gardent quelques reformulations de la matrice.
+
+## Couverture du Bloc 2 par les missions (22/11/2026, 26 missions)
+
+- **Compétences** : 14 sur 14 ont au moins une mission. Peu couvertes : C2.1.1, C2.1.2, C2.1.4, C2.1.5 (une mission chacune).
+- **Critères** : 31 sur 71 sont évalués (une mission évalue un seul critère par compétence). Couverts en entier : CT3.3, CT3.4, CT4.1, CT4.2. Très peu : C2.1.2 (1/7), C2.1.4 (1/7), C2.1.5 (1/7), C2.2.1 (2/9), C2.1.1 (1/4).
+- **Notions jamais travaillées** : structures d'accueil, outils d'évaluation de l'autonomie (AGGIR), charte des droits et libertés, laïcité et éthique, fin de vie et directives anticipées, conditions de l'endormissement et du réveil, pathologies digestives, urinaires, cardio-vasculaires et diabète (signes à observer).
+- **Notions peu travaillées** : protection des majeurs (1 mission), bientraitance (1), socio-esthétique (1), dénutrition (1), prise des repas, continence, habillage (2 à 3).
+
+Plan pour tout couvrir : Phase 4 ter de la feuille de route (T.1 à T.11), d'après les séances correspondantes des cours.

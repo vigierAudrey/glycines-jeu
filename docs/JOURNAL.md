@@ -394,3 +394,9 @@ Trois lignes par session : ce qui a été fait, ce qui reste à surveiller, la p
 - **Fait** : à la demande d'Audrey, les 34 missions en brouillon (Bloc 2 m13 à m25, PSE m26 à m46) passent au statut « valide » : elles sont visibles par les élèves dans le jeu en ligne après publication.
 - **À surveiller** : les champs `note_pour_audrey` gardent l'historique de chaque mission.
 - **Prochaine tâche** : bilan de couverture du référentiel Bloc 2.
+
+## 22/11/2026 · Couverture du référentiel Bloc 2
+
+- **Fait** : mesure de la couverture : 14 compétences sur 14, mais 31 critères sur 71 et plusieurs notions jamais travaillées (AGGIR, charte, laïcité, fin de vie, sommeil du résident, pathologies digestives, urinaires, cardio-vasculaires). Plan ajouté à la feuille de route : Phase 4 ter (T.1 à T.11).
+- **À surveiller** : une mission n'évalue qu'un critère par compétence : il faut plusieurs missions par compétence pour couvrir tous les critères.
+- **Prochaine tâche** : T.1.
