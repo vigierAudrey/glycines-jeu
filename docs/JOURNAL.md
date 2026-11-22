@@ -232,3 +232,9 @@ Trois lignes par session : ce qui a été fait, ce qui reste à surveiller, la p
 - **Fait** : nouveau type d'étape général `tri` (catégories au choix ; servira aussi ailleurs). Nouvelle mission brouillon `m24-denise-ranger-par-usage` (S6, C2.2.2 et CT4.2) d'après S6-03 et son activité interactive : 8 objets à ranger « chaque jour / chaque semaine / rarement », désaccord avec la fille sur les photos, démarche en 5 étapes, tout repris tel quel. Ajout au `repris_du_cours` de Mme Denise : déambulateur, lève difficilement les bras, veut garder photos, couture et tisane. `pnpm verifier` OK.
 - **À surveiller** : le placement « sur le plan 3D » (glisser les objets dans la chambre) n'est pas fait : le tri en boutons est plus sûr sur téléphone. À reprendre si Audrey le souhaite après le test élèves.
 - **Prochaine tâche** : P.9 (Secret professionnel).
+
+## 22/11/2026 · Secret professionnel : la fille de Mme Rose (tâche P.9)
+
+- **Fait** : nouvelle mission brouillon `m25-rose-fille-secret` (S2, CT3.4) d'après S2-06 : répondre à la fille de Mme Rose sans communiquer de diagnostic, aller prévenir l'infirmière, puis trier 4 demandes en « taire et orienter / transmettre à l'équipe / alerter » (corrections de l'activité 2 reprises). Utilise les activités existantes (aucun code nouveau). `pnpm verifier` OK.
+- **À surveiller** : la fille de Mme Rose n'est qu'un texte (pas de personnage 3D).
+- **Prochaine tâche** : P.10 (ordre des réponses mélangé).

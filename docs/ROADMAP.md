@@ -91,7 +91,8 @@ Règle commune : toute nouvelle activité s'appuie sur une situation réelle des
   Fait : `m23` (16 h, deux imprévus) d'après S7-05. Vos cours n'ont pas de « relève du matin » avec des transmissions de nuit : à écrire plus tard si vous en faites une séance.
 - [x] **P.8** **Personnaliser une chambre** : placer les objets du résident selon ses souhaits (C2.2.2, C2.1.2).
   Fait : activité générale `tri` et mission `m24` (Mme Denise, rangement par fréquence d'usage) d'après S6-03.
-- [ ] **P.9** **Secret professionnel** : une mission où un proche ou un autre résident pose une question ; l'élève choisit de taire, transmettre ou alerter (CT3.4), d'après une séance réelle.
+- [x] **P.9** **Secret professionnel** : une mission où un proche ou un autre résident pose une question ; l'élève choisit de taire, transmettre ou alerter (CT3.4), d'après une séance réelle.
+  Fait : `m25` d'après S2-06.
 
 ### Rejouer et relier les missions
 
