@@ -21,6 +21,11 @@ export function missionsAMontrer(missions: Mission[], avecBrouillons: boolean): 
     .sort((a, b) => Number(a.discipline === 'PSE') - Number(b.discipline === 'PSE') || rang(a.sequence_requise) - rang(b.sequence_requise) || a.id.localeCompare(b.id));
 }
 
+/** Une mission appartient à une famille si l'une de ses compétences commence par le préfixe de la famille. */
+export function dansFamille(mission: Mission, prefixe: string | null): boolean {
+  return !prefixe || mission.competences.some((c) => c.code.startsWith(prefixe));
+}
+
 /** Lit une séquence écrite par un humain (« s3 », « S3 ») ; undefined si elle n'existe pas. */
 export function lireSequence(texte: string | null | undefined): string | undefined {
   const s = texte?.trim().toUpperCase();

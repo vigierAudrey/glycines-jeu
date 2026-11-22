@@ -114,6 +114,16 @@ Règle commune : toute nouvelle activité s'appuie sur une situation réelle des
   Fait : `content/lexique.json`, 26 mots repris mot pour mot des rubriques « Lexique » des séances (termes médicaux exclus). Reste pour Audrey : relire la liste (page enseignante).
 - [-] **P.17** ~~Aide en arabe~~ : abandonnée (décision d'Audrey du 22/11/2026, D-032 : pas d'arabe dans l'application).
 
+## Phase 4 quater · Bloc 2 : choisir par type d'action, varier les activités (demande du 22/11/2026)
+
+À faire avant la Phase 4 ter, en plusieurs fois si besoin.
+
+- [x] **Q.1** Liste du Bloc 2 : filtrer les missions par type d'action, d'après les 4 familles du référentiel (CT3 recueillir les informations, CT4 relation avec le résident, C2.1 actes de la vie quotidienne, C2.2 entretenir et personnaliser), en plus de la séquence.
+- [ ] **Q.2** Nouveaux types d'étapes pour travailler les savoirs : QCM (une bonne réponse parmi plusieurs) et association (relier un mot à sa définition). Nouveau format « entraînement » : court (3 à 5 min), sans déplacement dans l'aile.
+- [ ] **Q.3** Écran de choix du format dans chaque matière : « Missions dans l'aile » ou « Entraînements rapides ».
+- [ ] **Q.4** Entraînements du Bloc 2, séance par séance (S1 à S7), à partir des activités interactives des cours (QCM, vrai/faux, associations, classements).
+- [ ] **Q.5** Entraînements de PSE, séance par séance, de la même façon.
+
 ## Phase 4 ter · Couvrir tout le référentiel du Bloc 2 (bilan du 22/11/2026)
 
 Bilan : les 14 compétences ont toutes au moins une mission, mais seulement 31 critères sur 71 sont évalués, et plusieurs notions (savoirs associés) ne sont jamais travaillées. Détail dans `docs/VERIFICATION_REFERENTIEL.md`. Chaque mission écrite d'après la séance du cours indiquée, avec un critère encore jamais cité.

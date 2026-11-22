@@ -29,6 +29,12 @@ export function validerContenu(contenu: Contenu): Probleme[] {
     if (c.criteres_officiels.length === 0) signaler('referentiel', `${c.code} n'a aucun critère officiel.`);
   }
 
+  // ---------- Familles du Bloc 2 ----------
+  for (const c of contenu.referentiel.competences) {
+    const dans = (contenu.familles ?? []).filter((f) => c.code.startsWith(f.prefixe));
+    if (contenu.familles && dans.length !== 1) signaler('referentiel/familles-bloc2', `${c.code} doit appartenir à une seule famille (trouvé : ${dans.length}).`);
+  }
+
   // ---------- Lexique ----------
   const motsVus = new Set<string>();
   for (const l of contenu.lexique ?? []) {

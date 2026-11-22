@@ -1,10 +1,18 @@
 import { describe, expect, it } from 'vitest';
 import type { Mission } from '../src/contenu/types';
-import { estDebloquee, lireSequence, missionsAMontrer } from '../src/regles/deblocage';
+import { dansFamille, estDebloquee, lireSequence, missionsAMontrer } from '../src/regles/deblocage';
 
 const mission = (id: string, sequence_requise: string, statut: 'brouillon' | 'valide' = 'valide') => ({ id, sequence_requise, statut }) as Mission;
 
 describe('déblocage des missions', () => {
+  it('range une mission dans une famille selon ses compétences', () => {
+    const m = { competences: [{ code: 'CT4.1', critere: '' }, { code: 'C2.1.6', critere: '' }] } as unknown as Mission;
+    expect(dansFamille(m, 'CT4.')).toBe(true);
+    expect(dansFamille(m, 'C2.1.')).toBe(true);
+    expect(dansFamille(m, 'C2.2.')).toBe(false);
+    expect(dansFamille(m, null)).toBe(true);
+  });
+
   it('ouvre toujours une mission de PSE, rangée après le Bloc 2', () => {
     const pse = { ...mission('m90', 'S5'), discipline: 'PSE' } as Mission;
     expect(estDebloquee(pse, 'S1')).toBe(true);

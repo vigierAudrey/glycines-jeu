@@ -1,0 +1,9 @@
+{
+  "note": "Familles de compétences du Bloc 2, titres recopiés du référentiel CAP AAGA (JO du 14 mars 2023). Elles servent à choisir les missions par type d'action (tâche Q.1). « court » est le libellé affiché sur le bouton.",
+  "familles": [
+    { "id": "CT3", "prefixe": "CT3.", "court": "Recueillir les informations", "titre": "Recueillir les informations, s’informer sur les éléments du contexte et de la situation professionnels" },
+    { "id": "CT4", "prefixe": "CT4.", "court": "Relation avec le résident", "titre": "Établir une relation bienveillante et sécurisante avec le résident" },
+    { "id": "C2.1", "prefixe": "C2.1.", "court": "Actes de la vie quotidienne", "titre": "Promouvoir l’autonomie dans les actes essentiels de la vie quotidienne" },
+    { "id": "C2.2", "prefixe": "C2.2.", "court": "Entretenir et personnaliser", "titre": "Entretenir et personnaliser la sphère privée" }
+  ]
+}

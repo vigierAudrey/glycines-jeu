@@ -400,3 +400,9 @@ Trois lignes par session : ce qui a été fait, ce qui reste à surveiller, la p
 - **Fait** : mesure de la couverture : 14 compétences sur 14, mais 31 critères sur 71 et plusieurs notions jamais travaillées (AGGIR, charte, laïcité, fin de vie, sommeil du résident, pathologies digestives, urinaires, cardio-vasculaires). Plan ajouté à la feuille de route : Phase 4 ter (T.1 à T.11).
 - **À surveiller** : une mission n'évalue qu'un critère par compétence : il faut plusieurs missions par compétence pour couvrir tous les critères.
 - **Prochaine tâche** : T.1.
+
+## 22/11/2026 · Choisir les missions du Bloc 2 par type d'action (tâche Q.1)
+
+- **Fait** : dans la liste du Bloc 2, boutons « Toutes », « Recueillir les informations », « Relation avec le résident », « Actes de la vie quotidienne », « Entretenir et personnaliser » (les 4 familles du référentiel, titres officiels dans `familles-bloc2.json`), avec le nombre de missions. Vérifié à 390 px.
+- **À surveiller** : une mission qui travaille deux familles apparaît dans les deux.
+- **Prochaine tâche** : Q.2 (QCM, association, format entraînement).

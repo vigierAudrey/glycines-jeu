@@ -477,3 +477,9 @@ html, body {
 .bilan__ligne .badge, .bilan__vide { flex: 0 0 auto; min-width: 64px; text-align: center; }
 .bilan__vide { font-size: .8rem; opacity: .6; padding-top: 2px; }
 .bilan__detail { display: block; font-size: .85rem; opacity: .8; margin-top: 2px; }
+
+/* Q.1 : choisir les missions du Bloc 2 par type d'action (familles du référentiel) */
+.familles { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0 4px; }
+.famille { min-height: 44px; padding: 6px 12px; border-radius: 22px; border: 2px solid #ddd5ea; background: #fff; font: inherit; font-size: .9rem; color: inherit; cursor: pointer; }
+.famille[aria-pressed="true"] { border-color: #6a4c93; background: #efe8f7; font-weight: 600; }
+.famille__nombre { display: inline-block; min-width: 1.6em; padding: 0 4px; border-radius: 10px; background: #f0ecf5; font-size: .8rem; }

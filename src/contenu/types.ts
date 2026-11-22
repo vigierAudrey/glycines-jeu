@@ -290,6 +290,14 @@ export interface EntreeLexique {
   source: string; // séance, ex. « S2-10 »
 }
 
+/** Famille de compétences du Bloc 2 (CT3, CT4, C2.1, C2.2), pour choisir les missions par type d'action. */
+export interface FamilleCompetences {
+  id: string;
+  prefixe: string; // début des codes de la famille, ex. « CT3. »
+  court: string; // libellé du bouton
+  titre: string; // titre officiel
+}
+
 export interface Contenu {
   referentiel: Referentiel;
   lieux: Lieu[];
@@ -297,5 +305,6 @@ export interface Contenu {
   personnel: MembrePersonnel[];
   missions: Mission[];
   lexique?: EntreeLexique[]; // mots du métier qui se touchent dans les textes (P.16)
+  familles?: FamilleCompetences[]; // familles du Bloc 2 (Q.1)
   referentielPse?: Referentiel; // programme de PSE (modules C4 à C7), pour les missions `discipline: 'PSE'` (5.1)
 }

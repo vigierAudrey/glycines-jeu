@@ -8,7 +8,7 @@
 import * as THREE from 'three';
 import type { Contenu, ElementObserve, Etape, Mission, NaturePhrase } from '../contenu/types';
 import { bilan, demarrerMission, etapeEnCours, repondre, type Bilan, type EtatMission, type Niveau, type Reponse } from '../regles/mission';
-import { estDebloquee, missionsAMontrer, SEQUENCES } from '../regles/deblocage';
+import { dansFamille, estDebloquee, missionsAMontrer, SEQUENCES } from '../regles/deblocage';
 import type { Theatre } from '../scene3d/creerScene';
 import { melanger, melangerSansOrdreDeDepart } from '../regles/hasard';
 import { tirerVariante } from '../regles/variantes';
@@ -555,6 +555,7 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
   // mélangent pas. Bloc 2 : missions rangées par séquence, verrouillées tant que la séquence n'a pas été vue.
   // PSE : missions toujours ouvertes. Le choix de matière est gardé pendant la partie.
   let matiere: 'bloc2' | 'pse' | null = null;
+  let famille: string | null = null; // Q.1 : préfixe de la famille choisie (« CT3. »…), ou toutes
   let accueilEnCours = false;
   const carteMission = (m: Mission, sequenceVue: string) => {
     const niveaux = liens.niveauxObtenus?.(m.id);
@@ -597,13 +598,20 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
         </button>
       </div>`);
     } else {
-      const liste = matiere === 'pse' ? pse : bloc2;
+      const familles = contenu.familles ?? [];
+      const liste = matiere === 'pse' ? pse : bloc2.filter((m) => dansFamille(m, famille));
+      const titreFamille = familles.find((f) => f.prefixe === famille)?.titre;
       ouvrirFenetre(`${haut}
       ${matiere === 'bloc2' ? `<label class="choix-sequence">Séquence vue en cours
         <select name="sequence">
           ${SEQUENCES.map((s) => `<option ${s === sequenceVue ? 'selected' : ''}>${s}</option>`).join('')}
         </select>
-      </label>` : '<p class="indice">Les missions de PSE sont toujours ouvertes.</p>'}
+      </label>
+      <div class="familles" role="group" aria-label="Type d'action">
+        <button type="button" class="famille" aria-pressed="${famille === null}" data-famille="">Toutes <span class="famille__nombre">${bloc2.length}</span></button>
+        ${familles.map((f) => `<button type="button" class="famille" aria-pressed="${famille === f.prefixe}" data-famille="${echapper(f.prefixe)}">${echapper(f.court)} <span class="famille__nombre">${bloc2.filter((m) => dansFamille(m, f.prefixe)).length}</span></button>`).join('')}
+      </div>
+      ${titreFamille ? `<p class="indice">${echapper(titreFamille)}</p>` : ''}` : '<p class="indice">Les missions de PSE sont toujours ouvertes.</p>'}
       ${liste.length === 0 ? '<p class="indice">Aucune mission validée pour l\'instant.</p>' : ''}
       <ul class="liste-missions">${liste.map((m) => carteMission(m, sequenceVue)).join('')}</ul>`);
       fenetre.querySelector<HTMLSelectElement>('select[name="sequence"]')?.addEventListener('change', (e) => {
@@ -762,6 +770,11 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
     if (cible.dataset.action === 'fermer') fenetre.hidden = true;
     if (cible.dataset.matiere === 'bloc2' || cible.dataset.matiere === 'pse') {
       matiere = cible.dataset.matiere;
+      ouvrirListe(accueilEnCours);
+      return;
+    }
+    if (cible.dataset.famille !== undefined) {
+      famille = cible.dataset.famille || null;
       ouvrirListe(accueilEnCours);
       return;
     }
