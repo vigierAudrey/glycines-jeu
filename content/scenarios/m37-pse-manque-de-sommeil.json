@@ -1,0 +1,247 @@
+{
+  "id": "m37-pse-manque-de-sommeil",
+  "statut": "brouillon",
+  "discipline": "PSE",
+  "titre": "Manquer de sommeil : quels risques ?",
+  "duree_min": 10,
+  "sequence_requise": "S5",
+  "lieu": "couloir",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "PSE-A2",
+      "critere": "Identifier les effets et les conséquences professionnelles et sociales du manque de sommeil."
+    }
+  ],
+  "situation": "Cette semaine aux Glycines, un collègue alterne des postes du matin (début à 6 h) et des postes du soir (fin à 21 h 30). Jeudi, il a failli se tromper de chariot de soins tant il somnolait. L'infirmière lui propose de faire le point sur son sommeil.",
+  "objectif_eleve": "Comprendre comment se forme une dette de sommeil et repérer ses effets sur la santé, le travail et les résidents.",
+  "note_pour_audrey": "Brouillon écrit pour la tâche 5.1g, d'après votre séance PSE S5-02 (« Manquer de sommeil : quels risques pour moi et pour mes résidents ? ») et son activité interactive : situation, frise de la dette de sommeil, 9 cartes à classer, vrai/faux et les 3 propositions de la mission (repris tels quels). Noa du cours devient « un collègue » ; la carte « Moins de patience avec M. André » devient « avec un résident ». Critère : objectif ciblé du module A2, mot pour mot. À relire avant de passer le statut à valide.",
+  "etapes": [
+    {
+      "id": "dette",
+      "type": "ordre",
+      "consigne": "Remettez dans l'ordre la semaine de votre collègue.",
+      "elements": [
+        {
+          "id": "poste-du-soir-jusqu-a-21-h-3",
+          "texte": "Poste du soir jusqu'à 21 h 30.",
+          "points": {
+            "PSE-A2": 1
+          }
+        },
+        {
+          "id": "coucher-tardif-vers-1-h",
+          "texte": "Coucher tardif vers 1 h.",
+          "points": {
+            "PSE-A2": 1
+          }
+        },
+        {
+          "id": "lever-a-4-h-45",
+          "texte": "Lever à 4 h 45.",
+          "points": {
+            "PSE-A2": 1
+          }
+        },
+        {
+          "id": "nuit-de-3-h-30-dette-de-somm",
+          "texte": "Nuit de 3 h 30 : dette de sommeil.",
+          "points": {
+            "PSE-A2": 1
+          }
+        },
+        {
+          "id": "somnolence-et-risque-d-erreu",
+          "texte": "Somnolence et risque d'erreur au poste du matin.",
+          "points": {
+            "PSE-A2": 1
+          }
+        }
+      ],
+      "retour": "L'enchaînement poste du soir puis poste du matin raccourcit fortement la nuit."
+    },
+    {
+      "id": "effets",
+      "type": "tri",
+      "consigne": "Classez chaque effet du manque de sommeil.",
+      "categories": [
+        {
+          "id": "sante",
+          "libelle": "Ma santé",
+          "aide": "effets sur moi"
+        },
+        {
+          "id": "travail",
+          "libelle": "Mon travail",
+          "aide": "erreurs et accidents"
+        },
+        {
+          "id": "autres",
+          "libelle": "Les résidents et les autres",
+          "aide": "effets sur les autres"
+        }
+      ],
+      "elements": [
+        {
+          "id": "defenses-affaiblies",
+          "texte": "Défenses affaiblies",
+          "categorie": "sante",
+          "points": {
+            "PSE-A2": 1
+          },
+          "retour": "Le manque de sommeil entraîne somnolence, baisse d'attention, irritabilité et défenses affaiblies."
+        },
+        {
+          "id": "irritabilite",
+          "texte": "Irritabilité",
+          "categorie": "sante",
+          "points": {
+            "PSE-A2": 1
+          },
+          "retour": "Le manque de sommeil entraîne somnolence, baisse d'attention, irritabilité et défenses affaiblies."
+        },
+        {
+          "id": "prise-de-poids-favorisee",
+          "texte": "Prise de poids favorisée",
+          "categorie": "sante",
+          "points": {
+            "PSE-A2": 1
+          },
+          "retour": "Le manque de sommeil entraîne somnolence, baisse d'attention, irritabilité et défenses affaiblies."
+        },
+        {
+          "id": "erreur-de-transmission",
+          "texte": "Erreur de transmission",
+          "categorie": "travail",
+          "points": {
+            "PSE-A2": 1
+          },
+          "retour": "Au travail, il provoque erreurs, oublis, gestes moins sûrs, accidents du travail et de trajet."
+        },
+        {
+          "id": "gestes-moins-surs-pendant-un",
+          "texte": "Gestes moins sûrs pendant un transfert",
+          "categorie": "travail",
+          "points": {
+            "PSE-A2": 1
+          },
+          "retour": "Au travail, il provoque erreurs, oublis, gestes moins sûrs, accidents du travail et de trajet."
+        },
+        {
+          "id": "somnolence-au-volant",
+          "texte": "Somnolence au volant",
+          "categorie": "travail",
+          "points": {
+            "PSE-A2": 1
+          },
+          "retour": "Au travail, il provoque erreurs, oublis, gestes moins sûrs, accidents du travail et de trajet."
+        },
+        {
+          "id": "moins-de-patience-avec-un-re",
+          "texte": "Moins de patience avec un résident",
+          "categorie": "autres",
+          "points": {
+            "PSE-A2": 1
+          },
+          "retour": "C'est un risque pour moi et pour les résidents."
+        },
+        {
+          "id": "risque-de-chute-d-un-residen",
+          "texte": "Risque de chute d'un résident",
+          "categorie": "autres",
+          "points": {
+            "PSE-A2": 1
+          },
+          "retour": "C'est un risque pour moi et pour les résidents."
+        },
+        {
+          "id": "tensions-dans-l-equipe",
+          "texte": "Tensions dans l'équipe",
+          "categorie": "autres",
+          "points": {
+            "PSE-A2": 1
+          },
+          "retour": "C'est un risque pour moi et pour les résidents."
+        }
+      ]
+    },
+    {
+      "id": "conseil",
+      "type": "decision",
+      "consigne": "Votre collègue vous demande ce qu'il pourrait changer.",
+      "question": "Que lui proposez-vous ?",
+      "choix": [
+        {
+          "decision": "adapter",
+          "texte": "Se coucher dès le retour du poste du soir, sans écrans, et demander au planning d'éviter l'enchaînement soir puis matin.",
+          "points": {
+            "PSE-A2": 2
+          },
+          "retour": "Une mesure individuelle et une mesure d'organisation."
+        },
+        {
+          "decision": "agir",
+          "texte": "Ne rien changer, ça passera.",
+          "retour": "La dette de sommeil s'accumule."
+        },
+        {
+          "decision": "agir",
+          "texte": "Prendre deux boissons énergisantes le matin.",
+          "retour": "Elles masquent la fatigue et perturbent le sommeil."
+        }
+      ],
+      "si_oubli": "Moins de 7 heures de sommeil : une dette s'accumule. Couchez-vous tôt sans écrans, et le planning peut éviter l'enchaînement soir puis matin."
+    },
+    {
+      "id": "vrai",
+      "type": "selection",
+      "consigne": "Pour finir, vérifiez vos connaissances.",
+      "question": "Cochez les phrases vraies.",
+      "elements": [
+        {
+          "id": "un-adulte-a-besoin-d-au-moin",
+          "texte": "Un adulte a besoin d'au moins 7 heures de sommeil, en général.",
+          "attendu": true,
+          "points": {
+            "PSE-A2": 1
+          },
+          "retour": "Vrai : repère de l'Inserm."
+        },
+        {
+          "id": "la-somnolence-augmente-le-ri",
+          "texte": "La somnolence augmente le risque d'accident de trajet.",
+          "attendu": true,
+          "points": {
+            "PSE-A2": 1
+          },
+          "retour": "Vrai : elle diminue la vigilance."
+        },
+        {
+          "id": "le-cafe-le-soir-aide-a-mieux",
+          "texte": "Le café le soir aide à mieux dormir.",
+          "attendu": false,
+          "points": {
+            "PSE-A2": 1
+          },
+          "retour": "Faux : la caféine perturbe le sommeil."
+        },
+        {
+          "id": "une-sieste-de-deux-heures-av",
+          "texte": "Une sieste de deux heures avant de dormir est conseillée.",
+          "attendu": false,
+          "points": {
+            "PSE-A2": 1
+          },
+          "retour": "Faux : une sieste courte, de 20 minutes."
+        }
+      ]
+    }
+  ],
+  "debriefing": [
+    "Qu'est-ce qu'une dette de sommeil ?",
+    "Pourquoi le manque de sommeil est-il un risque pour les résidents ?",
+    "Quelle mesure peut prendre le planning ?"
+  ]
+}

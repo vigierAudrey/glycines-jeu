@@ -1,0 +1,242 @@
+{
+  "id": "m39-pse-erreurs-alimentaires",
+  "statut": "brouillon",
+  "discipline": "PSE",
+  "titre": "La journée alimentaire d'une collègue",
+  "duree_min": 10,
+  "sequence_requise": "S5",
+  "lieu": "salle-a-manger",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "PSE-A7",
+      "critere": "Identifier, à partir de compositions et de répartitions de repas, les erreurs fréquentes et proposer des améliorations."
+    }
+  ],
+  "situation": "Dans le vestiaire des Glycines, deux collègues comparent leurs journées. L'une : « Le matin je ne mange rien, pas le temps. » L'autre : « Boisson énergisante à 6 h, sinon je n'avance pas. » La diététicienne propose à l'équipe d'analyser la journée de la première.",
+  "objectif_eleve": "Repérer les erreurs alimentaires fréquentes et proposer une amélioration réaliste.",
+  "note_pour_audrey": "Brouillon écrit pour la tâche 5.1g, d'après votre séance PSE S5-04 (« Repérer les erreurs alimentaires et proposer des améliorations ») et son activité interactive : situation, 8 cartes à classer par erreur, cercle vicieux du saut de repas, vrai/faux et les 3 propositions de la mission (repris tels quels). Lisa du cours devient « une collègue ». Critère : objectif ciblé du module A7, mot pour mot. À relire avant de passer le statut à valide.",
+  "etapes": [
+    {
+      "id": "erreurs",
+      "type": "tri",
+      "consigne": "Quelle erreur pour chaque carte ?",
+      "categories": [
+        {
+          "id": "saut",
+          "libelle": "Saut de repas",
+          "aide": "repas oublié"
+        },
+        {
+          "id": "grignotage",
+          "libelle": "Grignotage",
+          "aide": "hors des repas"
+        },
+        {
+          "id": "exces",
+          "libelle": "Excès",
+          "aide": "trop de sucre, de gras, de sel"
+        },
+        {
+          "id": "carences",
+          "libelle": "Carences",
+          "aide": "ce qui manque"
+        }
+      ],
+      "elements": [
+        {
+          "id": "rien-au-petit-dejeuner",
+          "texte": "Rien au petit-déjeuner",
+          "categorie": "saut",
+          "points": {
+            "PSE-A7": 1
+          },
+          "retour": "Sauter un repas entraîne fringales et grignotages sucrés."
+        },
+        {
+          "id": "pas-de-dejeuner-avant-14-h",
+          "texte": "Pas de déjeuner avant 14 h",
+          "categorie": "saut",
+          "points": {
+            "PSE-A7": 1
+          },
+          "retour": "Sauter un repas entraîne fringales et grignotages sucrés."
+        },
+        {
+          "id": "biscuits-a-11-h-30",
+          "texte": "Biscuits à 11 h 30",
+          "categorie": "grignotage",
+          "points": {
+            "PSE-A7": 1
+          },
+          "retour": "Le grignotage se fait hors des repas, souvent sucré."
+        },
+        {
+          "id": "bonbons-devant-la-tele",
+          "texte": "Bonbons devant la télé",
+          "categorie": "grignotage",
+          "points": {
+            "PSE-A7": 1
+          },
+          "retour": "Le grignotage se fait hors des repas, souvent sucré."
+        },
+        {
+          "id": "pizza-entiere-et-soda",
+          "texte": "Pizza entière et soda",
+          "categorie": "exces",
+          "points": {
+            "PSE-A7": 1
+          },
+          "retour": "Les excès de sucre, de gras ou de sel ont des conséquences à long terme."
+        },
+        {
+          "id": "kebab-frites",
+          "texte": "Kebab-frites",
+          "categorie": "exces",
+          "points": {
+            "PSE-A7": 1
+          },
+          "retour": "Les excès de sucre, de gras ou de sel ont des conséquences à long terme."
+        },
+        {
+          "id": "aucun-fruit-ni-legume",
+          "texte": "Aucun fruit ni légume",
+          "categorie": "carences",
+          "points": {
+            "PSE-A7": 1
+          },
+          "retour": "Les carences : ce qui manque (fruits, légumes, eau)."
+        },
+        {
+          "id": "moins-d-un-demi-litre-d-eau",
+          "texte": "Moins d'un demi-litre d'eau",
+          "categorie": "carences",
+          "points": {
+            "PSE-A7": 1
+          },
+          "retour": "Les carences : ce qui manque (fruits, légumes, eau)."
+        }
+      ]
+    },
+    {
+      "id": "cercle",
+      "type": "ordre",
+      "consigne": "Remettez dans l'ordre le cercle vicieux.",
+      "elements": [
+        {
+          "id": "pas-de-petit-dejeuner",
+          "texte": "Pas de petit-déjeuner.",
+          "points": {
+            "PSE-A7": 1
+          }
+        },
+        {
+          "id": "fringale-en-fin-de-matinee",
+          "texte": "Fringale en fin de matinée.",
+          "points": {
+            "PSE-A7": 1
+          }
+        },
+        {
+          "id": "grignotage-sucre",
+          "texte": "Grignotage sucré.",
+          "points": {
+            "PSE-A7": 1
+          }
+        },
+        {
+          "id": "pic-puis-chute-d-energie",
+          "texte": "Pic puis chute d'énergie.",
+          "points": {
+            "PSE-A7": 1
+          }
+        },
+        {
+          "id": "nouveau-grignotage",
+          "texte": "Nouveau grignotage.",
+          "points": {
+            "PSE-A7": 1
+          }
+        }
+      ],
+      "retour": "Sauter un repas entraîne fringales et grignotages sucrés : c'est un cercle vicieux."
+    },
+    {
+      "id": "ameliorer",
+      "type": "decision",
+      "consigne": "La collègue vous demande une idée simple pour son poste du matin.",
+      "question": "Que lui proposez-vous ?",
+      "choix": [
+        {
+          "decision": "adapter",
+          "texte": "Un petit-déjeuner rapide (pain complet, fruit, laitage) et, à la pause, fruit, yaourt et eau.",
+          "points": {
+            "PSE-A7": 2
+          },
+          "retour": "Amélioration réaliste et équilibrée, qui respecte ses contraintes."
+        },
+        {
+          "decision": "agir",
+          "texte": "Ne plus manger du tout le matin.",
+          "retour": "Le saut de repas aggrave le problème."
+        },
+        {
+          "decision": "agir",
+          "texte": "Deux boissons énergisantes au lieu d'une.",
+          "retour": "Plus de sucre et de caféine."
+        }
+      ]
+    },
+    {
+      "id": "vrai",
+      "type": "selection",
+      "consigne": "Pour finir, vérifiez vos connaissances.",
+      "question": "Cochez les phrases vraies.",
+      "elements": [
+        {
+          "id": "sauter-le-petit-dejeuner-fav",
+          "texte": "Sauter le petit-déjeuner favorise le grignotage.",
+          "attendu": true,
+          "points": {
+            "PSE-A7": 1
+          },
+          "retour": "Vrai : la fringale pousse vers le sucre."
+        },
+        {
+          "id": "une-boisson-energisante-remp",
+          "texte": "Une boisson énergisante remplace un repas.",
+          "attendu": false,
+          "points": {
+            "PSE-A7": 1
+          },
+          "retour": "Faux : elle masque la fatigue sans nourrir vraiment."
+        },
+        {
+          "id": "un-exces-repete-de-sucre-peu",
+          "texte": "Un excès répété de sucre peut favoriser le diabète de type 2.",
+          "attendu": true,
+          "points": {
+            "PSE-A7": 1
+          },
+          "retour": "Vrai : c'est une conséquence à long terme."
+        },
+        {
+          "id": "une-journee-trop-riche-ne-pe",
+          "texte": "Une journée trop riche ne peut pas avoir de carences.",
+          "attendu": false,
+          "points": {
+            "PSE-A7": 1
+          },
+          "retour": "Faux : elle peut manquer de vitamines et de fibres."
+        }
+      ]
+    }
+  ],
+  "debriefing": [
+    "Citez trois erreurs alimentaires fréquentes.",
+    "Pourquoi sauter le petit-déjeuner pousse-t-il à grignoter ?",
+    "Quelle amélioration réaliste avez-vous proposée ?"
+  ]
+}

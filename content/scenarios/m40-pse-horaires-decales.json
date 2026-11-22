@@ -1,0 +1,222 @@
+{
+  "id": "m40-pse-horaires-decales",
+  "statut": "brouillon",
+  "discipline": "PSE",
+  "titre": "Bien manger avec des horaires décalés",
+  "duree_min": 10,
+  "sequence_requise": "S5",
+  "lieu": "salle-a-manger",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "PSE-A7",
+      "critere": "Effectuer un choix alimentaire raisonné parmi plusieurs propositions en tenant compte des contraintes professionnelles."
+    }
+  ],
+  "situation": "Semaine chargée aux Glycines : un collègue travaille lundi et mardi à 6 h, jeudi et vendredi le soir. Au self et aux distributeurs, il faut choisir vite. L'équipe s'inquiète aussi pour un résident de 84 ans, ancien boulanger : il ne touche presque plus à son plateau du soir et a perdu 3 kg en deux mois.",
+  "objectif_eleve": "Choisir des repas adaptés à ses horaires, organiser repas et sommeil, et réagir à la perte de poids d'un résident.",
+  "note_pour_audrey": "Brouillon écrit pour la tâche 5.1g, d'après votre séance PSE S5-05 (« Choisir malin avec des horaires décalés, pour moi et pour… ») et son activité interactive : situation, 6 cartes choix adapté ou non, journée d'un poste du matin, vrai/faux et les 3 propositions de la mission (repris tels quels). Le résident de 84 ans du cours (M. Karim) reste anonyme : on n'ajoute pas de perte de poids au profil de M. Karim dans le jeu. Critère : objectif ciblé du module A7, mot pour mot. À relire avant de passer le statut à valide.",
+  "etapes": [
+    {
+      "id": "choix",
+      "type": "tri",
+      "consigne": "Choix adapté avant un poste, ou non ?",
+      "categories": [
+        {
+          "id": "adapte",
+          "libelle": "Choix adapté",
+          "aide": "énergie durable, vigilance"
+        },
+        {
+          "id": "non",
+          "libelle": "Choix non adapté",
+          "aide": "somnolence ou coup de fatigue"
+        }
+      ],
+      "elements": [
+        {
+          "id": "riz-complet-poulet-legumes-e",
+          "texte": "Riz complet, poulet, légumes, eau",
+          "categorie": "adapte",
+          "points": {
+            "PSE-A7": 1
+          },
+          "retour": "Énergie durable (féculents complets, protéines), fruits, légumes et eau."
+        },
+        {
+          "id": "fruit-et-yaourt-a-la-pause",
+          "texte": "Fruit et yaourt à la pause",
+          "categorie": "adapte",
+          "points": {
+            "PSE-A7": 1
+          },
+          "retour": "Énergie durable (féculents complets, protéines), fruits, légumes et eau."
+        },
+        {
+          "id": "pain-complet-et-fromage",
+          "texte": "Pain complet et fromage",
+          "categorie": "adapte",
+          "points": {
+            "PSE-A7": 1
+          },
+          "retour": "Énergie durable (féculents complets, protéines), fruits, légumes et eau."
+        },
+        {
+          "id": "lasagnes-frites-mousse-soda",
+          "texte": "Lasagnes, frites, mousse, soda",
+          "categorie": "non",
+          "points": {
+            "PSE-A7": 1
+          },
+          "retour": "Trop gras ou trop sucré : somnolence ou coup de fatigue."
+        },
+        {
+          "id": "boisson-energisante",
+          "texte": "Boisson énergisante",
+          "categorie": "non",
+          "points": {
+            "PSE-A7": 1
+          },
+          "retour": "Trop gras ou trop sucré : somnolence ou coup de fatigue."
+        },
+        {
+          "id": "sandwich-charcuterie-et-chip",
+          "texte": "Sandwich charcuterie et chips",
+          "categorie": "non",
+          "points": {
+            "PSE-A7": 1
+          },
+          "retour": "Trop gras ou trop sucré : somnolence ou coup de fatigue."
+        }
+      ]
+    },
+    {
+      "id": "journee",
+      "type": "ordre",
+      "consigne": "Remettez dans l'ordre une journée de poste du matin.",
+      "elements": [
+        {
+          "id": "lever-et-petit-dejeuner-a-5-",
+          "texte": "Lever et petit-déjeuner à 5 h.",
+          "points": {
+            "PSE-A7": 1
+          }
+        },
+        {
+          "id": "collation-a-la-pause-de-9-h-",
+          "texte": "Collation à la pause de 9 h 45.",
+          "points": {
+            "PSE-A7": 1
+          }
+        },
+        {
+          "id": "dejeuner-equilibre-a-14-h",
+          "texte": "Déjeuner équilibré à 14 h.",
+          "points": {
+            "PSE-A7": 1
+          }
+        },
+        {
+          "id": "sieste-courte-vers-15-h",
+          "texte": "Sieste courte vers 15 h.",
+          "points": {
+            "PSE-A7": 1
+          }
+        },
+        {
+          "id": "diner-leger-a-19-h-30",
+          "texte": "Dîner léger à 19 h 30.",
+          "points": {
+            "PSE-A7": 1
+          }
+        },
+        {
+          "id": "coucher-vers-21-h-45",
+          "texte": "Coucher vers 21 h 45.",
+          "points": {
+            "PSE-A7": 1
+          }
+        }
+      ],
+      "retour": "En horaires décalés, j'organise repas et sommeil ensemble."
+    },
+    {
+      "id": "resident",
+      "type": "decision",
+      "consigne": "Le résident de 84 ans laisse encore son plateau du soir. Il a perdu 3 kg en deux mois.",
+      "question": "Que proposez-vous à l'équipe ?",
+      "choix": [
+        {
+          "decision": "alerter",
+          "texte": "Proposer une collation tôt le matin, quand il est réveillé, enrichir ou avancer le dîner, et transmettre son poids à l'équipe.",
+          "points": {
+            "PSE-A7": 2
+          },
+          "retour": "Action adaptée à son rythme, et transmise : la perte de poids est un signal d'alerte."
+        },
+        {
+          "decision": "agir",
+          "texte": "Le forcer à finir son plateau à 18 h 45.",
+          "retour": "On ne respecte pas son rythme."
+        },
+        {
+          "decision": "agir",
+          "texte": "Ne rien dire, il mangera plus tard.",
+          "retour": "La perte de poids doit être transmise."
+        }
+      ],
+      "si_oubli": "Chez la personne âgée, la perte de poids est un signal d'alerte de dénutrition à transmettre à l'équipe."
+    },
+    {
+      "id": "vrai",
+      "type": "selection",
+      "consigne": "Pour finir, vérifiez vos connaissances.",
+      "question": "Cochez les phrases vraies.",
+      "elements": [
+        {
+          "id": "la-perte-de-poids-d-un-resid",
+          "texte": "La perte de poids d'un résident est un signal à transmettre.",
+          "attendu": true,
+          "points": {
+            "PSE-A7": 1
+          },
+          "retour": "Vrai : elle peut annoncer une dénutrition."
+        },
+        {
+          "id": "un-menu-tres-gras-est-ideal-",
+          "texte": "Un menu très gras est idéal avant un poste du soir.",
+          "attendu": false,
+          "points": {
+            "PSE-A7": 1
+          },
+          "retour": "Faux : il favorise la somnolence."
+        },
+        {
+          "id": "une-collation-est-prevue-et-",
+          "texte": "Une collation est prévue et équilibrée.",
+          "attendu": true,
+          "points": {
+            "PSE-A7": 1
+          },
+          "retour": "Vrai : contrairement au grignotage."
+        },
+        {
+          "id": "il-faut-toujours-imposer-l-h",
+          "texte": "Il faut toujours imposer l'heure du dîner au résident.",
+          "attendu": false,
+          "points": {
+            "PSE-A7": 1
+          },
+          "retour": "Faux : adapter au rythme de la personne est une prévention."
+        }
+      ]
+    }
+  ],
+  "debriefing": [
+    "Que choisissez-vous avant un poste pour rester vigilant ?",
+    "Comment organisez-vous repas et sommeil la veille d'un poste du matin ?",
+    "Pourquoi la perte de poids d'un résident doit-elle être transmise ?"
+  ]
+}

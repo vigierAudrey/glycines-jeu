@@ -1,0 +1,207 @@
+{
+  "id": "m36-pse-une-nuit-de-sommeil",
+  "statut": "brouillon",
+  "discipline": "PSE",
+  "titre": "Une nuit de sommeil : à quoi ça sert ?",
+  "duree_min": 10,
+  "sequence_requise": "S5",
+  "lieu": "couloir",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "PSE-A2",
+      "critere": "Présenter les rôles du sommeil."
+    }
+  ],
+  "situation": "Aux Glycines, vous alternez des postes du matin (prise de poste à 6 h) et des postes du soir. Ce matin, vous bâillez pendant les transmissions. Une collègue vous dit : « Tu as raté ton sommeil profond, ça se voit ! » Vous voulez comprendre ce qui se passe dans le corps pendant la nuit.",
+  "objectif_eleve": "Remettre dans l'ordre les phases d'un cycle de sommeil et relier chaque phase à son rôle.",
+  "note_pour_audrey": "Brouillon écrit pour la tâche 5.1g, d'après votre séance PSE S5-01 (« Une nuit de sommeil : cycles, phases et rôles ») et son activité interactive : situation, ordre des phases, 6 cartes sommeil profond ou paradoxal, vrai/faux et les 3 réponses de la mission (repris tels quels). Critère : objectif ciblé du module A2, mot pour mot. À relire avant de passer le statut à valide.",
+  "etapes": [
+    {
+      "id": "cycle",
+      "type": "ordre",
+      "consigne": "Remettez dans l'ordre les phases d'un cycle de sommeil.",
+      "elements": [
+        {
+          "id": "endormissement",
+          "texte": "Endormissement",
+          "points": {
+            "PSE-A2": 1
+          }
+        },
+        {
+          "id": "sommeil-lent-leger",
+          "texte": "Sommeil lent léger",
+          "points": {
+            "PSE-A2": 1
+          }
+        },
+        {
+          "id": "sommeil-lent-profond",
+          "texte": "Sommeil lent profond",
+          "points": {
+            "PSE-A2": 1
+          }
+        },
+        {
+          "id": "sommeil-paradoxal",
+          "texte": "Sommeil paradoxal",
+          "points": {
+            "PSE-A2": 1
+          }
+        }
+      ],
+      "retour": "Une nuit compte 3 à 6 cycles d'environ 90 minutes, qui enchaînent ces phases."
+    },
+    {
+      "id": "roles",
+      "type": "tri",
+      "consigne": "Quel rôle pour chaque phase ?",
+      "categories": [
+        {
+          "id": "profond",
+          "libelle": "Sommeil lent profond",
+          "aide": "récupération physique"
+        },
+        {
+          "id": "paradoxal",
+          "libelle": "Sommeil paradoxal",
+          "aide": "récupération mentale"
+        }
+      ],
+      "elements": [
+        {
+          "id": "reparation-des-muscles-et-de",
+          "texte": "Réparation des muscles et des tissus",
+          "categorie": "profond",
+          "points": {
+            "PSE-A2": 1
+          },
+          "retour": "Le sommeil lent profond assure la récupération physique."
+        },
+        {
+          "id": "defenses-renforcees",
+          "texte": "Défenses renforcées",
+          "categorie": "profond",
+          "points": {
+            "PSE-A2": 1
+          },
+          "retour": "Le sommeil lent profond assure la récupération physique."
+        },
+        {
+          "id": "le-corps-est-tres-difficile-",
+          "texte": "Le corps est très difficile à réveiller",
+          "categorie": "profond",
+          "points": {
+            "PSE-A2": 1
+          },
+          "retour": "Le sommeil lent profond assure la récupération physique."
+        },
+        {
+          "id": "tri-des-souvenirs-de-la-jour",
+          "texte": "Tri des souvenirs de la journée",
+          "categorie": "paradoxal",
+          "points": {
+            "PSE-A2": 1
+          },
+          "retour": "Le sommeil paradoxal assure la récupération mentale (mémoire, émotions)."
+        },
+        {
+          "id": "reves-et-gestion-des-emotion",
+          "texte": "Rêves et gestion des émotions",
+          "categorie": "paradoxal",
+          "points": {
+            "PSE-A2": 1
+          },
+          "retour": "Le sommeil paradoxal assure la récupération mentale (mémoire, émotions)."
+        },
+        {
+          "id": "le-cerveau-est-tres-actif",
+          "texte": "Le cerveau est très actif",
+          "categorie": "paradoxal",
+          "points": {
+            "PSE-A2": 1
+          },
+          "retour": "Le sommeil paradoxal assure la récupération mentale (mémoire, émotions)."
+        }
+      ]
+    },
+    {
+      "id": "collegue",
+      "type": "decision",
+      "consigne": "Un collègue qui se couche à 2 h dit : « Du moment que je dors 7 heures, l'heure ne compte pas. »",
+      "question": "Que lui répondez-vous ?",
+      "choix": [
+        {
+          "decision": "adapter",
+          "texte": "Le sommeil profond est surtout en début de nuit et suit l'horloge interne : en te couchant à 2 h, tu en perds une partie et tu récupères moins.",
+          "points": {
+            "PSE-A2": 2
+          },
+          "retour": "Lien entre l'horloge interne, le sommeil profond et la récupération."
+        },
+        {
+          "decision": "agir",
+          "texte": "Tu as raison, seule la durée compte.",
+          "retour": "L'heure du coucher compte aussi."
+        },
+        {
+          "decision": "agir",
+          "texte": "Dors seulement le week-end.",
+          "retour": "Le sommeil ne se stocke pas ainsi."
+        }
+      ]
+    },
+    {
+      "id": "vrai",
+      "type": "selection",
+      "consigne": "Pour finir, vérifiez vos connaissances.",
+      "question": "Cochez les phrases vraies.",
+      "elements": [
+        {
+          "id": "une-nuit-compte-plusieurs-cy",
+          "texte": "Une nuit compte plusieurs cycles de sommeil.",
+          "attendu": true,
+          "points": {
+            "PSE-A2": 1
+          },
+          "retour": "Vrai : 3 à 6 cycles d'environ 90 minutes."
+        },
+        {
+          "id": "la-lumiere-des-ecrans-aide-a",
+          "texte": "La lumière des écrans aide à s'endormir.",
+          "attendu": false,
+          "points": {
+            "PSE-A2": 1
+          },
+          "retour": "Faux : elle freine la mélatonine."
+        },
+        {
+          "id": "le-sommeil-profond-domine-en",
+          "texte": "Le sommeil profond domine en fin de nuit.",
+          "attendu": false,
+          "points": {
+            "PSE-A2": 1
+          },
+          "retour": "Faux : il domine en début de nuit."
+        },
+        {
+          "id": "le-sommeil-paradoxal-aide-la",
+          "texte": "Le sommeil paradoxal aide la mémoire.",
+          "attendu": true,
+          "points": {
+            "PSE-A2": 1
+          },
+          "retour": "Vrai : le cerveau trie les souvenirs."
+        }
+      ]
+    }
+  ],
+  "debriefing": [
+    "Quelles sont les phases d'un cycle de sommeil ?",
+    "Quel est le rôle du sommeil profond ? du sommeil paradoxal ?",
+    "Pourquoi se coucher trop tard fait-il perdre du sommeil récupérateur ?"
+  ]
+}

@@ -1,0 +1,239 @@
+{
+  "id": "m38-pse-besoins-alimentaires",
+  "statut": "brouillon",
+  "discipline": "PSE",
+  "titre": "Ça cale, mais ça couvre mes besoins ?",
+  "duree_min": 10,
+  "sequence_requise": "S5",
+  "lieu": "salle-a-manger",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "PSE-A7",
+      "critere": "Repérer les besoins nutritionnels en lien avec l’état physiologique."
+    }
+  ],
+  "situation": "À la pause de 10 h aux Glycines, un collègue avale un soda et une barre chocolatée : « ça cale ». La diététicienne, venue évaluer les menus des résidents, sourit : « Ça remplit, mais ça ne couvre pas tes besoins. » Il croyait qu'il suffisait de ne plus avoir faim.",
+  "objectif_eleve": "Classer les nutriments selon les besoins qu'ils couvrent, et comprendre que les besoins changent avec l'âge.",
+  "note_pour_audrey": "Brouillon écrit pour la tâche 5.1g, d'après votre séance PSE S5-03 (« Mes besoins alimentaires : manger, c'est couvrir des besoins ») et son activité interactive : situation, 9 cartes à classer par besoin, trajet de l'aliment au nutriment, vrai/faux et les 3 réponses de la mission (repris tels quels). La question de la collègue sur la résidente âgée est une mise en contexte (complément, hors cours) des réponses de la mission. Critère : objectif ciblé du module A7, mot pour mot. À relire avant de passer le statut à valide.",
+  "etapes": [
+    {
+      "id": "besoins",
+      "type": "tri",
+      "consigne": "Quel besoin couvre chaque carte ?",
+      "categories": [
+        {
+          "id": "energie",
+          "libelle": "Énergétiques",
+          "aide": "le carburant"
+        },
+        {
+          "id": "construction",
+          "libelle": "De construction",
+          "aide": "construire et réparer"
+        },
+        {
+          "id": "fonction",
+          "libelle": "Fonctionnels",
+          "aide": "faire fonctionner et protéger"
+        }
+      ],
+      "elements": [
+        {
+          "id": "glucides",
+          "texte": "Glucides",
+          "categorie": "energie",
+          "points": {
+            "PSE-A7": 1
+          },
+          "retour": "Besoins énergétiques : glucides, lipides."
+        },
+        {
+          "id": "lipides",
+          "texte": "Lipides",
+          "categorie": "energie",
+          "points": {
+            "PSE-A7": 1
+          },
+          "retour": "Besoins énergétiques : glucides, lipides."
+        },
+        {
+          "id": "tenir-debout-tout-le-poste",
+          "texte": "Tenir debout tout le poste",
+          "categorie": "energie",
+          "points": {
+            "PSE-A7": 1
+          },
+          "retour": "Besoins énergétiques : glucides, lipides."
+        },
+        {
+          "id": "proteines",
+          "texte": "Protéines",
+          "categorie": "construction",
+          "points": {
+            "PSE-A7": 1
+          },
+          "retour": "Besoins de construction : protéines, calcium."
+        },
+        {
+          "id": "calcium",
+          "texte": "Calcium",
+          "categorie": "construction",
+          "points": {
+            "PSE-A7": 1
+          },
+          "retour": "Besoins de construction : protéines, calcium."
+        },
+        {
+          "id": "cicatrisation-d-une-plaie",
+          "texte": "Cicatrisation d'une plaie",
+          "categorie": "construction",
+          "points": {
+            "PSE-A7": 1
+          },
+          "retour": "Besoins de construction : protéines, calcium."
+        },
+        {
+          "id": "vitamines",
+          "texte": "Vitamines",
+          "categorie": "fonction",
+          "points": {
+            "PSE-A7": 1
+          },
+          "retour": "Besoins fonctionnels : vitamines, minéraux, fibres, eau."
+        },
+        {
+          "id": "fibres",
+          "texte": "Fibres",
+          "categorie": "fonction",
+          "points": {
+            "PSE-A7": 1
+          },
+          "retour": "Besoins fonctionnels : vitamines, minéraux, fibres, eau."
+        },
+        {
+          "id": "eau",
+          "texte": "Eau",
+          "categorie": "fonction",
+          "points": {
+            "PSE-A7": 1
+          },
+          "retour": "Besoins fonctionnels : vitamines, minéraux, fibres, eau."
+        }
+      ]
+    },
+    {
+      "id": "trajet",
+      "type": "ordre",
+      "consigne": "Remettez dans l'ordre le trajet d'un aliment.",
+      "elements": [
+        {
+          "id": "je-mange-un-aliment",
+          "texte": "Je mange un aliment.",
+          "points": {
+            "PSE-A7": 1
+          }
+        },
+        {
+          "id": "la-digestion-le-decoupe-en-n",
+          "texte": "La digestion le découpe en nutriments.",
+          "points": {
+            "PSE-A7": 1
+          }
+        },
+        {
+          "id": "les-nutriments-passent-dans-",
+          "texte": "Les nutriments passent dans le sang.",
+          "points": {
+            "PSE-A7": 1
+          }
+        },
+        {
+          "id": "le-sang-les-distribue-aux-or",
+          "texte": "Le sang les distribue aux organes.",
+          "points": {
+            "PSE-A7": 1
+          }
+        }
+      ],
+      "retour": "Un aliment est ce que je mange ; un nutriment est ce que la digestion en extrait et que le sang distribue."
+    },
+    {
+      "id": "residente",
+      "type": "decision",
+      "consigne": "Une collègue dit d'une résidente âgée : « Elle bouge peu, elle n'a plus besoin de grand-chose. Une soupe suffit le soir. »",
+      "question": "Que lui répondez-vous ?",
+      "choix": [
+        {
+          "decision": "adapter",
+          "texte": "Ses besoins en énergie baissent, mais elle a toujours besoin de protéines et de calcium pour ses muscles et ses os ; sinon, risque de dénutrition et de chutes.",
+          "points": {
+            "PSE-A7": 2
+          },
+          "retour": "Besoins maintenus et risque expliqué."
+        },
+        {
+          "decision": "agir",
+          "texte": "Tu as raison, une soupe suffit.",
+          "retour": "Les besoins de construction restent élevés."
+        },
+        {
+          "decision": "agir",
+          "texte": "Donne-lui surtout des bonbons.",
+          "retour": "Ce ne sont pas les besoins à couvrir."
+        }
+      ]
+    },
+    {
+      "id": "vrai",
+      "type": "selection",
+      "consigne": "Pour finir, vérifiez vos connaissances.",
+      "question": "Cochez les phrases vraies.",
+      "elements": [
+        {
+          "id": "un-yaourt-est-un-nutriment",
+          "texte": "Un yaourt est un nutriment.",
+          "attendu": false,
+          "points": {
+            "PSE-A7": 1
+          },
+          "retour": "Faux : c'est un aliment ; le calcium est un nutriment."
+        },
+        {
+          "id": "les-besoins-varient-avec-l-a",
+          "texte": "Les besoins varient avec l'âge et l'activité.",
+          "attendu": true,
+          "points": {
+            "PSE-A7": 1
+          },
+          "retour": "Vrai : ce sont des facteurs de variation."
+        },
+        {
+          "id": "le-pnns-recommande-au-moins-",
+          "texte": "Le PNNS recommande au moins 5 fruits et légumes par jour.",
+          "attendu": true,
+          "points": {
+            "PSE-A7": 1
+          },
+          "retour": "Vrai : repère de Santé publique France."
+        },
+        {
+          "id": "une-personne-agee-n-a-plus-b",
+          "texte": "Une personne âgée n'a plus besoin de protéines.",
+          "attendu": false,
+          "points": {
+            "PSE-A7": 1
+          },
+          "retour": "Faux : ses besoins en protéines restent élevés."
+        }
+      ]
+    }
+  ],
+  "debriefing": [
+    "Quelle différence entre un aliment et un nutriment ?",
+    "Citez un nutriment de chaque type de besoin.",
+    "Pourquoi une personne âgée a-t-elle toujours besoin de protéines ?"
+  ]
+}

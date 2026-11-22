@@ -376,3 +376,9 @@ Trois lignes par session : ce qui a été fait, ce qui reste à surveiller, la p
 - **Fait** : `m34` (CDI, CDD ou apprentissage : 6 extraits et situations, ce qu'on lit avant de signer, S1-01) et `m35` (extrait de contrat, 9 cartes droits et obligations, conseil à une nouvelle collègue, S1-02).
 - **À surveiller** : Lina du cours devient « une nouvelle collègue ».
 - **Prochaine tâche** : 5.1g (PSE S5 : sommeil et alimentation).
+
+## 22/11/2026 · PSE : sommeil et alimentation (tâche 5.1g)
+
+- **Fait** : cinq missions d'après PSE S5 : `m36` cycles et rôles du sommeil, `m37` dette de sommeil et ses effets, `m38` besoins alimentaires, `m39` erreurs alimentaires et cercle vicieux, `m40` choix en horaires décalés et perte de poids d'un résident.
+- **À surveiller** : le résident de 84 ans qui perd du poids (M. Karim dans le cours) reste anonyme ; Noa et Lisa deviennent « un collègue », « une collègue ».
+- **Prochaine tâche** : 5.1h (PSE S6 : budget, assurance, achats).
