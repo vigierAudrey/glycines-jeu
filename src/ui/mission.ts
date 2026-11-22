@@ -234,7 +234,11 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
         ${criteresARevoir()}
         <button type="button" class="bouton bouton--principal" data-action="continuer">${etat.etape ? 'Continuer' : 'Voir la relève'}</button>`;
     } else if (e) {
-      corps = `<p class="consigne a-lire">${echapper(e.consigne)}</p>${contenuEtape(e)}`;
+      const doc = e.document
+        ? `<div class="document"><p class="document__titre a-lire">📋 ${echapper(e.document.titre)}</p>
+             <ul>${e.document.lignes.map((l) => `<li class="a-lire">${echapper(l)}</li>`).join('')}</ul></div>`
+        : '';
+      corps = `${doc}<p class="consigne a-lire">${echapper(e.consigne)}</p>${contenuEtape(e)}`;
     }
     panneau.innerHTML = `
       <div class="panneau__haut">

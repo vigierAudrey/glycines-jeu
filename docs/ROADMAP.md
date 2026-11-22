@@ -87,7 +87,8 @@ Règle commune : toute nouvelle activité s'appuie sur une situation réelle des
 - [x] **P.5** **Matériel et produits** : choisir ce qu'il faut (et écarter ce qui ne convient pas) avant un soin ou un entretien.
 - [x] **P.6** **Réserve et stocks** : comparer stock et seuil, cocher ce qu'il faut signaler sur la fiche d'alerte (CT3.3).
   Fait : `m22`. 🧑‍🏫 Audrey dit qui est « chargé des stocks » aux Glycines si elle veut une étape relais.
-- [ ] **P.7** **Relève du matin** : lire de courtes transmissions de la nuit (document affiché dans l'étape), puis choisir par quoi commencer (CT3.1). Une nouvelle mission d'après les cours.
+- [x] **P.7** **Relève et imprévus** : un document (planning, transmissions) peut s'afficher dans n'importe quelle étape ; l'élève le lit puis choisit par quoi commencer (CT3.1).
+  Fait : `m23` (16 h, deux imprévus) d'après S7-05. Vos cours n'ont pas de « relève du matin » avec des transmissions de nuit : à écrire plus tard si vous en faites une séance.
 - [ ] **P.8** **Personnaliser une chambre** : placer les objets du résident selon ses souhaits (C2.2.2, C2.1.2).
 - [ ] **P.9** **Secret professionnel** : une mission où un proche ou un autre résident pose une question ; l'élève choisit de taire, transmettre ou alerter (CT3.4), d'après une séance réelle.
 

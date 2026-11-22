@@ -1,0 +1,89 @@
+{
+  "id": "m23-seize-heures-deux-imprevus",
+  "statut": "brouillon",
+  "titre": "16 h : deux imprévus en même temps",
+  "duree_min": 15,
+  "sequence_requise": "S7",
+  "lieu": "couloir",
+  "personnages": ["joueur", "denise", "andre", "infirmiere"],
+  "competences": [
+    { "code": "CT3.1", "critere": "Prise en compte de ces éléments pour la mise en œuvre de l’action." },
+    { "code": "C2.1.6", "critere": "Fidélité de la transmission des éléments observés." }
+  ],
+  "transfert": true,
+  "situation": "Votre équipe gère l'aile B des Glycines pendant 24 heures. À 16 h, deux imprévus arrivent en même temps : Mme Denise refuse l'appel vidéo prévu, et M. André a une nouvelle rougeur au talon.",
+  "objectif_eleve": "Lire le planning, traiter d'abord ce qui touche la santé, respecter le choix de Mme Denise, puis tracer.",
+  "note_pour_audrey": "Brouillon écrit pour la tâche P.7, d'après votre séance S7-05 (« Tâche complexe : 24 heures aux Glycines ») et son activité interactive : cartes de l'après-midi, imprévus de 16 h, exercice 3 « Traiter un imprévu, dans l'ordre » (5 étapes reprises telles quelles), « Mission chez les Glycines » (3 organisations reprises telles quelles) et le document « Une situation qui touche la sécurité ou la santé est transmise en priorité ». Vos cours ne contiennent pas de « relève du matin » avec des transmissions de nuit : la relève est remplacée par la lecture du planning de l'après-midi. Mission marquée « transfert » (N4 possible), comme le demande la séance. À relire avant de passer le statut à valide.",
+  "etapes": [
+    {
+      "id": "organisation",
+      "type": "decision",
+      "consigne": "Lisez le planning et les deux imprévus.",
+      "document": {
+        "titre": "Planning de l'après-midi · aile B",
+        "lignes": [
+          "Entretien journalier de la salle d'eau.",
+          "Boîte à souvenirs avec Mme Denise.",
+          "Appel vidéo prévu pour Mme Denise.",
+          "16 h · Mme Denise refuse l'appel vidéo prévu.",
+          "16 h · M. André a une nouvelle rougeur au talon.",
+          "Rappel : une situation qui touche la sécurité ou la santé est transmise en priorité."
+        ]
+      },
+      "question": "Deux imprévus arrivent en même temps. Quelle organisation est la plus juste ?",
+      "choix": [
+        { "decision": "alerter", "texte": "Transmettre tout de suite la rougeur de M. André, respecter le refus de Mme Denise en proposant un autre moment, puis tracer.", "points": { "CT3.1": 3 }, "retour": "Priorité à la santé, respect du choix de Mme Denise, et une trace." },
+        { "decision": "agir", "texte": "Terminer d'abord l'appel vidéo, puis voir la rougeur demain.", "retour": "Le refus de Mme Denise est ignoré, et la santé de M. André attend." },
+        { "decision": "agir", "texte": "Soigner la rougeur soi-même pour gagner du temps.", "retour": "Vous ne traitez pas une plaie : ce n'est pas votre rôle. Vous transmettez." }
+      ]
+    },
+    {
+      "id": "dans-l-ordre",
+      "type": "ordre",
+      "consigne": "Remettez dans l'ordre votre façon de traiter un imprévu.",
+      "elements": [
+        { "id": "reperer", "texte": "Repérer l'imprévu et les faits.", "points": { "CT3.1": 1 } },
+        { "id": "securite-sante", "texte": "Identifier ce qui touche la sécurité ou la santé.", "points": { "CT3.1": 1 } },
+        { "id": "transmettre", "texte": "Transmettre en priorité au professionnel compétent.", "points": { "CT3.1": 1 } },
+        { "id": "adapter", "texte": "Adapter l'autre mission avec la personne.", "points": { "CT3.1": 1 } },
+        { "id": "tracer", "texte": "Tracer dans le journal qui a fait quoi.", "points": { "CT3.1": 1 } }
+      ],
+      "retour": "On repère, on traite d'abord ce qui touche la santé, puis on adapte le reste avec la personne, et on garde une trace individuelle."
+    },
+    {
+      "id": "transmission-andre",
+      "type": "transmission",
+      "consigne": "Préparez ce que vous allez dire à l'infirmière sur M. André.",
+      "phrases": [
+        { "id": "rougeur", "texte": "À 16 h, j'ai vu une rougeur nouvelle au talon de M. André.", "nature": "fait", "points": { "C2.1.6": 1 }, "retour": "L'heure, le lieu, ce que vous avez vu : c'est précis." },
+        { "id": "pas-grave", "texte": "Ce n'est sûrement pas grave.", "nature": "jugement", "points": { "C2.1.6": 1 }, "retour": "Ce n'est pas à vous d'évaluer la gravité : vous transmettez ce que vous avez vu." },
+        { "id": "chaussons", "texte": "Il a dû se cogner quelque part.", "nature": "interpretation", "points": { "C2.1.6": 1 }, "retour": "Vous supposez une cause : on ne pose pas d'explication sans l'avoir vérifiée." }
+      ]
+    },
+    {
+      "id": "prevenir-infirmiere",
+      "type": "relais",
+      "consigne": "Allez transmettre en priorité la rougeur de M. André.",
+      "destinataire": "infirmiere",
+      "points": { "C2.1.6": 1 },
+      "retour": "Claire, infirmière, évalue la rougeur de M. André.",
+      "retour_erreur": "Cette personne n'est pas la professionnelle compétente pour une rougeur nouvelle. Qui, dans l'aile B, l'est ?"
+    },
+    {
+      "id": "refus-denise",
+      "type": "decision",
+      "consigne": "Vous revenez vers Mme Denise, qui ne veut pas de l'appel vidéo maintenant.",
+      "question": "Que faites-vous ?",
+      "choix": [
+        { "decision": "adapter", "texte": "Je respecte son refus, je lui propose un autre moment, et je le note.", "points": { "CT3.1": 2 }, "retour": "Le contact ne s'impose pas : vous adaptez avec elle, et vous gardez une trace." },
+        { "decision": "agir", "texte": "J'insiste : l'appel était prévu, sa famille attend.", "retour": "Le refus de Mme Denise est respecté : on ne lui impose pas l'appel." },
+        { "decision": "agir", "texte": "J'annule l'appel sans rien noter.", "retour": "Sans trace, l'équipe et la famille ne savent pas ce qui s'est passé ni ce qui a été proposé." }
+      ]
+    }
+  ],
+  "debriefing": [
+    "Pourquoi avez-vous traité la rougeur de M. André avant l'appel de Mme Denise ?",
+    "Qu'avez-vous proposé à Mme Denise, et pourquoi ?",
+    "Qu'avez-vous écrit dans votre trace individuelle ?"
+  ]
+}

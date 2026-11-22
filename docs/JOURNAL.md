@@ -220,3 +220,9 @@ Trois lignes par session : ce qui a été fait, ce qui reste à surveiller, la p
 - **Fait** : nouvelle mission brouillon `m22-reserve-seuil-alerte` (S2, CT3.3 et CT3.1), fidèle à votre séance S2-10 : l'élève lit l'état de la réserve (quantité et seuil affichés à côté de chaque article), coche les gants M et les protections de nuit, trace dans le cahier de suivi, remplit la fiche d'alerte avant le week-end et fait avec ce qui reste sans remplacer un produit. Utilise l'activité `selection` de P.5 (aucun code nouveau). `pnpm verifier` OK (104 tests).
 - **À surveiller** : pas d'étape relais, car aucun personnage n'est « chargé des stocks » dans le jeu (à décider par Audrey).
 - **Prochaine tâche** : P.7 (Relève du matin).
+
+## 22/11/2026 · Documents dans les étapes et mission « 16 h : deux imprévus » (tâche P.7)
+
+- **Fait** : toute étape peut afficher un `document` (📋 titre et lignes, lu à voix haute, repris sur la page enseignante). Nouvelle mission brouillon `m23-seize-heures-deux-imprevus` (S7, CT3.1 et C2.1.6, marquée transfert donc N4 possible), d'après S7-05 « 24 heures aux Glycines » et son activité interactive : planning de l'après-midi, imprévus de 16 h (refus de Mme Denise, rougeur nouvelle de M. André), les 3 organisations et les 5 étapes « traiter un imprévu » reprises telles quelles, puis transmission, relais à l'infirmière et réponse au refus. `pnpm verifier` OK (105 tests).
+- **À surveiller** : la tâche prévoyait une « relève du matin », absente de vos cours ; remplacée par ce planning de S7-05. Deux phrases à écarter dans la transmission (« Ce n'est sûrement pas grave », « Il a dû se cogner quelque part ») sont écrites par l'IA comme exemples de jugement et d'interprétation : à relire.
+- **Prochaine tâche** : P.8 (Personnaliser une chambre).

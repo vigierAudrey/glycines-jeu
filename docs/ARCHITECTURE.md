@@ -228,7 +228,7 @@ Une mission est un fichier de `content/scenarios/`. Exemple complet : `m00-exemp
 
 ### Les types d'étapes
 
-Chaque étape a un `id`, un `type` et une `consigne`. Les **points** s'écrivent `{ "CT4.1": 2 }` : un entier de 0 à 3 par compétence, et seulement pour une compétence visée par la mission.
+Chaque étape a un `id`, un `type`, une `consigne` et, si besoin, un `document` à lire (`titre` et `lignes` : planning, transmissions, fiche), affiché au-dessus de la consigne. Les **points** s'écrivent `{ "CT4.1": 2 }` : un entier de 0 à 3 par compétence, et seulement pour une compétence visée par la mission.
 
 - **`dialogue`** : `interlocuteur` (id), `replique` (facultatif), puis trois listes d'options : `verbal` (la phrase), `paraverbal` (le ton, le débit), `non_verbal` (la posture, le regard). L'élève choisit une option dans chaque liste. Chaque option a `texte`, `retour`, `confiance` (de -2 à +2) et parfois `points`.
 - **`observation`** (la loupe) : `elements`, chacun avec `id`, `libelle`, `colonne`, `rangee` (une case du lieu de la mission), `effet` (`facilite` ou `gene`), `retour` et `points`. L'élève touche chaque repère et dit s'il facilite ou gêne l'activité.

@@ -132,9 +132,16 @@ export interface ElementObserve {
   retour: string;
 }
 
+/** Un document à lire pendant l'étape (planning, transmissions, fiche…), affiché au-dessus de la consigne. */
+export interface DocumentEtape {
+  titre: string;
+  lignes: string[];
+}
+
 interface EtapeCommune {
   id: string;
   consigne: string; // phrase courte affichée en haut du panneau
+  document?: DocumentEtape;
 }
 
 /** L'élève choisit sa phrase (verbal), son ton (paraverbal) et son attitude (non-verbal). */
