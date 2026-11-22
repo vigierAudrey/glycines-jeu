@@ -1,0 +1,320 @@
+{
+  "id": "m57-entrainement-s2-04",
+  "statut": "valide",
+  "format": "entrainement",
+  "titre": "Projet de vie et personnalisation de l’espace privé",
+  "duree_min": 5,
+  "sequence_requise": "S2",
+  "lieu": "salon",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "C2.2.2",
+      "critere": "Identification des habitudes et des souhaits de la personne."
+    }
+  ],
+  "situation": "Entraînement rapide sur les notions de la séance S2-04 : Projet de vie et personnalisation de l’espace privé.",
+  "objectif_eleve": "Réviser les notions de la séance : répondre vite et juste, puis lire les corrections.",
+  "note_pour_audrey": "Entraînement généré pour la tâche Q.4 à partir de l'activité interactive de votre séance S2-04 (exercices repris tels quels, sans réécriture). Compétence : la compétence principale de la séance ; critère choisi par l'IA parmi les critères officiels de cette compétence (celui qui partage le plus de mots avec les exercices) : à vérifier.",
+  "etapes": [
+    {
+      "id": "tri-1",
+      "type": "tri",
+      "consigne": "Classez chaque carte.",
+      "categories": [
+        {
+          "id": "c-est-mme-rose-qui-d",
+          "libelle": "C’est Mme Rose qui décide"
+        },
+        {
+          "id": "la-famille-apporte-u",
+          "libelle": "La famille apporte une information ou un souhait"
+        },
+        {
+          "id": "l-equipe-organise-av",
+          "libelle": "L’équipe organise, avec son accord"
+        },
+        {
+          "id": "pratique-a-eviter",
+          "libelle": "Pratique à éviter"
+        }
+      ],
+      "elements": [
+        {
+          "id": "garder-ou-non-son-carnet-d",
+          "texte": "Garder ou non son carnet d’adresses.",
+          "categorie": "c-est-mme-rose-qui-d",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : C’est Mme Rose qui décide."
+        },
+        {
+          "id": "ma-mere-a-toujours-aime-le",
+          "texte": "« Ma mère a toujours aimé les plantes vertes. »",
+          "categorie": "la-famille-apporte-u",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : La famille apporte une information ou un souhait."
+        },
+        {
+          "id": "verifier-que-le-passage-ve",
+          "texte": "Vérifier que le passage vers la salle d’eau reste libre.",
+          "categorie": "l-equipe-organise-av",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : L’équipe organise, avec son accord."
+        },
+        {
+          "id": "retirer-un-effet-personnel",
+          "texte": "Retirer un effet personnel parce que la famille le demande.",
+          "categorie": "pratique-a-eviter",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : Pratique à éviter."
+        },
+        {
+          "id": "choisir-quelles-photos-son",
+          "texte": "Choisir quelles photos sont affichées et où.",
+          "categorie": "c-est-mme-rose-qui-d",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : C’est Mme Rose qui décide."
+        },
+        {
+          "id": "elle-voyait-mal-de-loin-de",
+          "texte": "« Elle voyait mal de loin déjà avant d’entrer ici. »",
+          "categorie": "la-famille-apporte-u",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : La famille apporte une information ou un souhait."
+        },
+        {
+          "id": "ranger-les-consommables-se",
+          "texte": "Ranger les consommables selon les règles de la structure.",
+          "categorie": "l-equipe-organise-av",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : L’équipe organise, avec son accord."
+        },
+        {
+          "id": "reamenager-la-chambre-pend",
+          "texte": "Réaménager la chambre pendant que Mme Rose est à l’animation.",
+          "categorie": "pratique-a-eviter",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : Pratique à éviter."
+        },
+        {
+          "id": "accepter-ou-refuser-la-tel",
+          "texte": "Accepter ou refuser la télévision dans sa chambre.",
+          "categorie": "c-est-mme-rose-qui-d",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : C’est Mme Rose qui décide."
+        },
+        {
+          "id": "apporter-des-cadres-et-des",
+          "texte": "Apporter des cadres et des photos de famille.",
+          "categorie": "la-famille-apporte-u",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : La famille apporte une information ou un souhait."
+        }
+      ]
+    },
+    {
+      "id": "selection-2",
+      "type": "selection",
+      "consigne": "Vrai ou faux ?",
+      "question": "Cochez les phrases vraies.",
+      "elements": [
+        {
+          "id": "le-projet-de-vie-est-ecrit",
+          "texte": "Le projet de vie est écrit une fois pour toutes à l’entrée du résident.",
+          "attendu": false,
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Faux : Il est construit avec la personne et il évolue : on observe, on évalue, on ajuste."
+        },
+        {
+          "id": "la-famille-peut-decider-se",
+          "texte": "La famille peut décider seule de retirer le carnet d’adresses de Mme Rose.",
+          "attendu": false,
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Faux : C’est un effet personnel. Le choix et l’accord de Mme Rose sont recherchés et respectés."
+        },
+        {
+          "id": "affaires-personnelles-et-c",
+          "texte": "Affaires personnelles et consommables se rangent séparément.",
+          "attendu": true,
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Vrai : Pour les retrouver, les protéger et respecter les règles de rangement de la structure."
+        },
+        {
+          "id": "un-objet-personnel-peut-et",
+          "texte": "Un objet personnel peut être placé n’importe où du moment que la personne le choisit.",
+          "attendu": false,
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Faux : Le choix de la personne est la règle, mais la sécurité reste une limite : passage libre, pas de risque de chute."
+        },
+        {
+          "id": "la-famille-n-a-aucune-plac",
+          "texte": "La famille n’a aucune place dans le projet de vie.",
+          "attendu": false,
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Faux : Elle apporte des informations et des souhaits précieux. Elle ne remplace pas le choix de la personne."
+        },
+        {
+          "id": "une-activite-de-stimulatio",
+          "texte": "Une activité de stimulation doit s’appuyer sur une capacité que la personne a encore.",
+          "attendu": true,
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Vrai : Sinon l’activité met en échec. Mme Rose lit avec ses lunettes : légender un album est adapté."
+        }
+      ]
+    },
+    {
+      "id": "qcm-3",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Que fais-tu ?",
+      "options": [
+        {
+          "texte": "Tu installes la télévision, c’est un cadeau."
+        },
+        {
+          "texte": "Tu demandes à Mme Rose si elle en veut une, et où elle la souhaite.",
+          "juste": true
+        },
+        {
+          "texte": "Tu refuses catégoriquement au nom du règlement."
+        }
+      ],
+      "points": {
+        "C2.2.2": 1
+      },
+      "retour": "La question se pose à Mme Rose. Ensuite seulement on regarde la faisabilité technique et la sécurité."
+    },
+    {
+      "id": "qcm-4",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Où ranges-tu les lunettes de Mme Rose ?",
+      "options": [
+        {
+          "texte": "Dans l’armoire, en hauteur, pour qu’elles ne tombent pas."
+        },
+        {
+          "texte": "Sur le chevet, à portée de main depuis le lit et le fauteuil.",
+          "juste": true
+        },
+        {
+          "texte": "Dans le tiroir du bureau à l’entrée de la chambre."
+        }
+      ],
+      "points": {
+        "C2.2.2": 1
+      },
+      "retour": "Un objet d’usage fréquent se range à portée : c’est ce qui préserve l’autonomie. Un objet rare peut aller plus loin."
+    },
+    {
+      "id": "qcm-5",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Où poses-tu la plante apportée par sa fille ?",
+      "options": [
+        {
+          "texte": "Au sol, près du passage vers la salle d’eau."
+        },
+        {
+          "texte": "Sur le rebord de la fenêtre, si Mme Rose est d’accord et si elle ne gêne pas la vue sur le patio.",
+          "juste": true
+        },
+        {
+          "texte": "Sur le chevet, à la place des lunettes."
+        }
+      ],
+      "points": {
+        "C2.2.2": 1
+      },
+      "retour": "Rien au sol dans un passage. Et on vérifie avec Mme Rose que la plante ne lui cache pas ce qu’elle voulait voir."
+    },
+    {
+      "id": "ordre-6",
+      "type": "ordre",
+      "consigne": "Remettez dans l'ordre.",
+      "elements": [
+        {
+          "id": "recueillir-les-besoins-att",
+          "texte": "Recueillir les besoins, attentes, habitudes et rythmes de la personne.",
+          "points": {
+            "C2.2.2": 1
+          }
+        },
+        {
+          "id": "analyser-ces-informations-",
+          "texte": "Analyser ces informations avec l’équipe.",
+          "points": {
+            "C2.2.2": 1
+          }
+        },
+        {
+          "id": "fixer-des-objectifs-avec-l",
+          "texte": "Fixer des objectifs avec la personne.",
+          "points": {
+            "C2.2.2": 1
+          }
+        },
+        {
+          "id": "mettre-en-place-les-action",
+          "texte": "Mettre en place les actions décidées.",
+          "points": {
+            "C2.2.2": 1
+          }
+        },
+        {
+          "id": "observer-ce-qui-se-passe-r",
+          "texte": "Observer ce qui se passe réellement.",
+          "points": {
+            "C2.2.2": 1
+          }
+        },
+        {
+          "id": "evaluer-et-ajuster-le-proj",
+          "texte": "Évaluer et ajuster le projet.",
+          "points": {
+            "C2.2.2": 1
+          }
+        }
+      ],
+      "retour": "Ordre repris de la séance S2-04."
+    }
+  ],
+  "debriefing": [
+    "Quelle notion de cette séance avez-vous le mieux réussie ?",
+    "Quelle notion devez-vous revoir, et dans quel document du cours ?"
+  ]
+}

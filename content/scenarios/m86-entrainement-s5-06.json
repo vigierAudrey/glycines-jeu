@@ -1,0 +1,330 @@
+{
+  "id": "m86-entrainement-s5-06",
+  "statut": "valide",
+  "format": "entrainement",
+  "titre": "Bientraitance, maltraitance : repérer, protéger et alerter",
+  "duree_min": 5,
+  "sequence_requise": "S5",
+  "lieu": "salon",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "CT3.4",
+      "critere": "Absence de jugement."
+    }
+  ],
+  "situation": "Entraînement rapide sur les notions de la séance S5-06 : Bientraitance, maltraitance : repérer, protéger et alerter.",
+  "objectif_eleve": "Réviser les notions de la séance : répondre vite et juste, puis lire les corrections.",
+  "note_pour_audrey": "Entraînement généré pour la tâche Q.4 à partir de l'activité interactive de votre séance S5-06 (exercices repris tels quels, sans réécriture). Compétence : la compétence principale de la séance ; critère choisi par l'IA parmi les critères officiels de cette compétence (celui qui partage le plus de mots avec les exercices) : à vérifier.",
+  "etapes": [
+    {
+      "id": "association-1",
+      "type": "association",
+      "consigne": "Reliez chaque mot à sa définition.",
+      "paires": [
+        {
+          "id": "bientraitance",
+          "terme": "bientraitance",
+          "definition": "démarche collective qui respecte droits, choix, sécurité et singularité",
+          "points": {
+            "CT3.4": 1
+          }
+        },
+        {
+          "id": "maltraitance",
+          "terme": "maltraitance",
+          "definition": "acte, parole ou absence d’action qui porte atteinte à une personne",
+          "points": {
+            "CT3.4": 1
+          }
+        },
+        {
+          "id": "signe-precurseur",
+          "terme": "signe précurseur",
+          "definition": "élément qui doit conduire à la vigilance et à la concertation",
+          "points": {
+            "CT3.4": 1
+          }
+        },
+        {
+          "id": "ressource",
+          "terme": "ressource",
+          "definition": "personne, service ou procédure mobilisable pour agir",
+          "points": {
+            "CT3.4": 1
+          }
+        },
+        {
+          "id": "circuit-d-alerte",
+          "terme": "circuit d’alerte",
+          "definition": "chemin prévu par la structure pour transmettre une situation préoccupante",
+          "points": {
+            "CT3.4": 1
+          }
+        },
+        {
+          "id": "parole-exacte",
+          "terme": "parole exacte",
+          "definition": "mots de la personne notés sans les modifier",
+          "points": {
+            "CT3.4": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "tri-2",
+      "type": "tri",
+      "consigne": "Classez chaque carte.",
+      "categories": [
+        {
+          "id": "fait",
+          "libelle": "Fait"
+        },
+        {
+          "id": "facteur-possible",
+          "libelle": "Facteur possible"
+        },
+        {
+          "id": "jugement",
+          "libelle": "Jugement"
+        }
+      ],
+      "elements": [
+        {
+          "id": "ecchymose-sur-le-bras-de-m",
+          "texte": "Ecchymose sur le bras de Mme Yvette.",
+          "categorie": "fait",
+          "points": {
+            "CT3.4": 1
+          },
+          "retour": "Réponse attendue : Fait."
+        },
+        {
+          "id": "ne-dis-rien-sinon-il-va-en",
+          "texte": "« Ne dis rien, sinon il va encore crier. »",
+          "categorie": "fait",
+          "points": {
+            "CT3.4": 1
+          },
+          "retour": "Réponse attendue : Fait."
+        },
+        {
+          "id": "elle-reste-dans-sa-chambre",
+          "texte": "Elle reste dans sa chambre, ce qui est inhabituel.",
+          "categorie": "fait",
+          "points": {
+            "CT3.4": 1
+          },
+          "retour": "Réponse attendue : Fait."
+        },
+        {
+          "id": "planning-tres-tendu-cette-",
+          "texte": "Planning très tendu cette semaine.",
+          "categorie": "facteur-possible",
+          "points": {
+            "CT3.4": 1
+          },
+          "retour": "Réponse attendue : Facteur possible."
+        },
+        {
+          "id": "equipe-en-sous-effectif",
+          "texte": "Équipe en sous-effectif.",
+          "categorie": "facteur-possible",
+          "points": {
+            "CT3.4": 1
+          },
+          "retour": "Réponse attendue : Facteur possible."
+        },
+        {
+          "id": "elle-exagere-toujours",
+          "texte": "« Elle exagère toujours. »",
+          "categorie": "jugement",
+          "points": {
+            "CT3.4": 1
+          },
+          "retour": "Réponse attendue : Jugement."
+        },
+        {
+          "id": "ce-collegue-est-mechant",
+          "texte": "« Ce collègue est méchant. »",
+          "categorie": "jugement",
+          "points": {
+            "CT3.4": 1
+          },
+          "retour": "Réponse attendue : Jugement."
+        },
+        {
+          "id": "elle-a-du-se-cogner-toute-",
+          "texte": "« Elle a dû se cogner toute seule. »",
+          "categorie": "jugement",
+          "points": {
+            "CT3.4": 1
+          },
+          "retour": "Réponse attendue : Jugement."
+        }
+      ]
+    },
+    {
+      "id": "ordre-3",
+      "type": "ordre",
+      "consigne": "Remettez dans l'ordre.",
+      "elements": [
+        {
+          "id": "ecouter-calmement-mme-yvet",
+          "texte": "Écouter calmement Mme Yvette.",
+          "points": {
+            "CT3.4": 1
+          }
+        },
+        {
+          "id": "la-rassurer-sans-promettre",
+          "texte": "La rassurer sans promettre le secret.",
+          "points": {
+            "CT3.4": 1
+          }
+        },
+        {
+          "id": "noter-ses-mots-exacts-et-l",
+          "texte": "Noter ses mots exacts et les faits observés.",
+          "points": {
+            "CT3.4": 1
+          }
+        },
+        {
+          "id": "alerter-sans-delai-le-resp",
+          "texte": "Alerter sans délai le responsable prévu.",
+          "points": {
+            "CT3.4": 1
+          }
+        }
+      ],
+      "retour": "Ordre repris de la séance S5-06."
+    },
+    {
+      "id": "selection-4",
+      "type": "selection",
+      "consigne": "Vrai ou faux ?",
+      "question": "Cochez les phrases vraies.",
+      "elements": [
+        {
+          "id": "je-peux-promettre-a-mme-yv",
+          "texte": "Je peux promettre à Mme Yvette de garder le secret.",
+          "attendu": false,
+          "points": {
+            "CT3.4": 1
+          },
+          "retour": "Faux : Je la rassure sans promettre le secret."
+        },
+        {
+          "id": "je-note-ses-mots-exacts",
+          "texte": "Je note ses mots exacts.",
+          "attendu": true,
+          "points": {
+            "CT3.4": 1
+          },
+          "retour": "Vrai : Paroles exactes et faits observés."
+        },
+        {
+          "id": "je-vais-demander-des-expli",
+          "texte": "Je vais demander des explications au collègue mis en cause.",
+          "attendu": false,
+          "points": {
+            "CT3.4": 1
+          },
+          "retour": "Faux : Je ne confronte pas seul et je ne mène pas d’enquête."
+        },
+        {
+          "id": "un-planning-tendu-excuse-l",
+          "texte": "Un planning tendu excuse les cris.",
+          "attendu": false,
+          "points": {
+            "CT3.4": 1
+          },
+          "retour": "Faux : C’est un facteur possible, jamais une excuse."
+        },
+        {
+          "id": "l-absence-d-action-peut-et",
+          "texte": "L’absence d’action peut être une forme de maltraitance.",
+          "attendu": true,
+          "points": {
+            "CT3.4": 1
+          },
+          "retour": "Vrai : Acte, parole ou absence d’action."
+        }
+      ]
+    },
+    {
+      "id": "qcm-5",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Face à une parole préoccupante, je…",
+      "options": [
+        {
+          "texte": "l’ignore"
+        },
+        {
+          "texte": "la prends au sérieux",
+          "juste": true
+        },
+        {
+          "texte": "en ris"
+        }
+      ],
+      "points": {
+        "CT3.4": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S5-06 si besoin."
+    },
+    {
+      "id": "qcm-6",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "L’ecchymose sur le bras est…",
+      "options": [
+        {
+          "texte": "un jugement"
+        },
+        {
+          "texte": "une excuse"
+        },
+        {
+          "texte": "un fait observé",
+          "juste": true
+        }
+      ],
+      "points": {
+        "CT3.4": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S5-06 si besoin."
+    },
+    {
+      "id": "qcm-7",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "J’alerte…",
+      "options": [
+        {
+          "texte": "sans délai le responsable prévu",
+          "juste": true
+        },
+        {
+          "texte": "uniquement les autres résidents"
+        },
+        {
+          "texte": "la semaine suivante"
+        }
+      ],
+      "points": {
+        "CT3.4": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S5-06 si besoin."
+    }
+  ],
+  "debriefing": [
+    "Quelle notion de cette séance avez-vous le mieux réussie ?",
+    "Quelle notion devez-vous revoir, et dans quel document du cours ?"
+  ]
+}

@@ -1,0 +1,333 @@
+{
+  "id": "m94-entrainement-s6-05",
+  "statut": "valide",
+  "format": "entrainement",
+  "titre": "Présentation et évaluation du projet personnalisé",
+  "duree_min": 5,
+  "sequence_requise": "S6",
+  "lieu": "salon",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "C2.2.2",
+      "critere": "Écoute attentive, active de la personne et de sa famille."
+    }
+  ],
+  "situation": "Entraînement rapide sur les notions de la séance S6-05 : Présentation et évaluation du projet personnalisé.",
+  "objectif_eleve": "Réviser les notions de la séance : répondre vite et juste, puis lire les corrections.",
+  "note_pour_audrey": "Entraînement généré pour la tâche Q.4 à partir de l'activité interactive de votre séance S6-05 (exercices repris tels quels, sans réécriture). Compétence : la compétence principale de la séance ; critère choisi par l'IA parmi les critères officiels de cette compétence (celui qui partage le plus de mots avec les exercices) : à vérifier.",
+  "etapes": [
+    {
+      "id": "association-1",
+      "type": "association",
+      "consigne": "Reliez chaque mot à sa définition.",
+      "paires": [
+        {
+          "id": "soutenance",
+          "terme": "soutenance",
+          "definition": "présentation argumentée d’un projet",
+          "points": {
+            "C2.2.2": 1
+          }
+        },
+        {
+          "id": "transfert",
+          "terme": "transfert",
+          "definition": "utilisation d’une compétence dans une situation nouvelle",
+          "points": {
+            "C2.2.2": 1
+          }
+        },
+        {
+          "id": "arbitrage",
+          "terme": "arbitrage",
+          "definition": "choix expliqué entre plusieurs contraintes",
+          "points": {
+            "C2.2.2": 1
+          }
+        },
+        {
+          "id": "imprevu",
+          "terme": "imprévu",
+          "definition": "élément nouveau qui oblige à adapter l’action",
+          "points": {
+            "C2.2.2": 1
+          }
+        },
+        {
+          "id": "limite",
+          "terme": "limite",
+          "definition": "ce que la solution ne règle pas",
+          "points": {
+            "C2.2.2": 1
+          }
+        },
+        {
+          "id": "justification",
+          "terme": "justification",
+          "definition": "raison appuyée sur une donnée précise",
+          "points": {
+            "C2.2.2": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "tri-2",
+      "type": "tri",
+      "consigne": "Classez chaque carte.",
+      "categories": [
+        {
+          "id": "je-garde",
+          "libelle": "Je garde"
+        },
+        {
+          "id": "j-adapte",
+          "libelle": "J’adapte"
+        }
+      ],
+      "elements": [
+        {
+          "id": "chemin-lit-porte-et-sanita",
+          "texte": "Chemin lit, porte et sanitaire dégagé.",
+          "categorie": "je-garde",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : Je garde."
+        },
+        {
+          "id": "tisane-a-portee-de-main",
+          "texte": "Tisane à portée de main.",
+          "categorie": "je-garde",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : Je garde."
+        },
+        {
+          "id": "couture-dans-une-boite-acc",
+          "texte": "Couture dans une boîte accessible.",
+          "categorie": "je-garde",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : Je garde."
+        },
+        {
+          "id": "consommables-classes-et-re",
+          "texte": "Consommables classés et repérés.",
+          "categorie": "je-garde",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : Je garde."
+        },
+        {
+          "id": "emplacement-du-fauteuil-in",
+          "texte": "Emplacement du fauteuil instable.",
+          "categorie": "j-adapte",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : J’adapte."
+        },
+        {
+          "id": "place-des-photos-selon-son",
+          "texte": "Place des photos selon son nouvel avis.",
+          "categorie": "j-adapte",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : J’adapte."
+        },
+        {
+          "id": "assise-de-repos-pres-de-la",
+          "texte": "Assise de repos près de la fenêtre.",
+          "categorie": "j-adapte",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : J’adapte."
+        },
+        {
+          "id": "explication-donnee-a-sa-fi",
+          "texte": "Explication donnée à sa fille.",
+          "categorie": "j-adapte",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : J’adapte."
+        }
+      ]
+    },
+    {
+      "id": "ordre-3",
+      "type": "ordre",
+      "consigne": "Remettez dans l'ordre.",
+      "elements": [
+        {
+          "id": "presenter-la-situation-de-",
+          "texte": "Présenter la situation de Mme Denise.",
+          "points": {
+            "C2.2.2": 1
+          }
+        },
+        {
+          "id": "exposer-la-solution-retenu",
+          "texte": "Exposer la solution retenue.",
+          "points": {
+            "C2.2.2": 1
+          }
+        },
+        {
+          "id": "justifier-les-choix-par-le",
+          "texte": "Justifier les choix par les données.",
+          "points": {
+            "C2.2.2": 1
+          }
+        },
+        {
+          "id": "indiquer-les-limites-de-la",
+          "texte": "Indiquer les limites de la solution.",
+          "points": {
+            "C2.2.2": 1
+          }
+        },
+        {
+          "id": "adapter-le-projet-face-a-l",
+          "texte": "Adapter le projet face à l’imprévu.",
+          "points": {
+            "C2.2.2": 1
+          }
+        }
+      ],
+      "retour": "Ordre repris de la séance S6-05."
+    },
+    {
+      "id": "selection-4",
+      "type": "selection",
+      "consigne": "Vrai ou faux ?",
+      "question": "Cochez les phrases vraies.",
+      "elements": [
+        {
+          "id": "un-projet-ne-se-modifie-pl",
+          "texte": "Un projet ne se modifie plus une fois présenté.",
+          "attendu": false,
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Faux : Je peux le modifier face à une donnée nouvelle."
+        },
+        {
+          "id": "le-changement-d-avis-de-mm",
+          "texte": "Le changement d’avis de Mme Denise compte.",
+          "attendu": true,
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Vrai : Elle participe aux choix."
+        },
+        {
+          "id": "un-diaporama-rapporte-plus",
+          "texte": "Un diaporama rapporte plus de points qu’un oral.",
+          "attendu": false,
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Faux : Aucune forme n’apporte d’avantage."
+        },
+        {
+          "id": "je-presente-aussi-les-limi",
+          "texte": "Je présente aussi les limites de ma solution.",
+          "attendu": true,
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Vrai : Solution, raisons et limites."
+        },
+        {
+          "id": "un-fauteuil-juge-instable-",
+          "texte": "Un fauteuil jugé instable est laissé en place.",
+          "attendu": false,
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Faux : La sécurité impose une adaptation."
+        }
+      ]
+    },
+    {
+      "id": "qcm-5",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Une soutenance est…",
+      "options": [
+        {
+          "texte": "une présentation argumentée",
+          "juste": true
+        },
+        {
+          "texte": "un devoir écrit"
+        },
+        {
+          "texte": "un rangement"
+        }
+      ],
+      "points": {
+        "C2.2.2": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S6-05 si besoin."
+    },
+    {
+      "id": "qcm-6",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Face à l’imprévu, je…",
+      "options": [
+        {
+          "texte": "garde tout"
+        },
+        {
+          "texte": "adapte et justifie",
+          "juste": true
+        },
+        {
+          "texte": "abandonne le projet"
+        }
+      ],
+      "points": {
+        "C2.2.2": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S6-05 si besoin."
+    },
+    {
+      "id": "qcm-7",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Le transfert, c’est…",
+      "options": [
+        {
+          "texte": "déménager"
+        },
+        {
+          "texte": "changer de chambre"
+        },
+        {
+          "texte": "utiliser une compétence dans une situation nouvelle",
+          "juste": true
+        }
+      ],
+      "points": {
+        "C2.2.2": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S6-05 si besoin."
+    }
+  ],
+  "debriefing": [
+    "Quelle notion de cette séance avez-vous le mieux réussie ?",
+    "Quelle notion devez-vous revoir, et dans quel document du cours ?"
+  ]
+}

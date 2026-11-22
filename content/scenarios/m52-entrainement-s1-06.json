@@ -1,0 +1,257 @@
+{
+  "id": "m52-entrainement-s1-06",
+  "statut": "valide",
+  "format": "entrainement",
+  "titre": "Degré d’autonomie, AGGIR et environnement facilitant",
+  "duree_min": 5,
+  "sequence_requise": "S1",
+  "lieu": "salon",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "CT3.2",
+      "critere": "Repérage du degré d’autonomie de la personne âgée, prise en compte de ces éléments pour la mise en œuvre de ses actions."
+    }
+  ],
+  "situation": "Entraînement rapide sur les notions de la séance S1-06 : Degré d’autonomie, AGGIR et environnement facilitant.",
+  "objectif_eleve": "Réviser les notions de la séance : répondre vite et juste, puis lire les corrections.",
+  "note_pour_audrey": "Entraînement généré pour la tâche Q.4 à partir de l'activité interactive de votre séance S1-06 (exercices repris tels quels, sans réécriture). Compétence : la compétence principale de la séance ; critère choisi par l'IA parmi les critères officiels de cette compétence (celui qui partage le plus de mots avec les exercices) : à vérifier.",
+  "etapes": [
+    {
+      "id": "tri-1",
+      "type": "tri",
+      "consigne": "Classe chaque acte selon l'aide nécessaire.",
+      "categories": [
+        {
+          "id": "fait-seul",
+          "libelle": "Fait seul"
+        },
+        {
+          "id": "aide-partielle",
+          "libelle": "Aide partielle"
+        },
+        {
+          "id": "aide-importante",
+          "libelle": "Aide importante"
+        }
+      ],
+      "elements": [
+        {
+          "id": "toilette-du-visage",
+          "texte": "Toilette du visage",
+          "categorie": "fait-seul",
+          "points": {
+            "CT3.2": 1
+          },
+          "retour": "Réponse attendue : Fait seul."
+        },
+        {
+          "id": "boire-un-verre",
+          "texte": "Boire un verre",
+          "categorie": "fait-seul",
+          "points": {
+            "CT3.2": 1
+          },
+          "retour": "Réponse attendue : Fait seul."
+        },
+        {
+          "id": "marcher-avec-sa-canne-habi",
+          "texte": "Marcher avec sa canne habituelle",
+          "categorie": "fait-seul",
+          "points": {
+            "CT3.2": 1
+          },
+          "retour": "Réponse attendue : Fait seul."
+        },
+        {
+          "id": "choisir-ses-vetements",
+          "texte": "Choisir ses vêtements",
+          "categorie": "aide-partielle",
+          "points": {
+            "CT3.2": 1
+          },
+          "retour": "Réponse attendue : Aide partielle."
+        },
+        {
+          "id": "se-reperer-dans-un-couloir",
+          "texte": "Se repérer dans un couloir peu éclairé",
+          "categorie": "aide-partielle",
+          "points": {
+            "CT3.2": 1
+          },
+          "retour": "Réponse attendue : Aide partielle."
+        },
+        {
+          "id": "couper-sa-viande",
+          "texte": "Couper sa viande",
+          "categorie": "aide-partielle",
+          "points": {
+            "CT3.2": 1
+          },
+          "retour": "Réponse attendue : Aide partielle."
+        },
+        {
+          "id": "faire-sa-toilette-complete",
+          "texte": "Faire sa toilette complète",
+          "categorie": "aide-importante",
+          "points": {
+            "CT3.2": 1
+          },
+          "retour": "Réponse attendue : Aide importante."
+        },
+        {
+          "id": "se-transferer-du-lit-au-fa",
+          "texte": "Se transférer du lit au fauteuil",
+          "categorie": "aide-importante",
+          "points": {
+            "CT3.2": 1
+          },
+          "retour": "Réponse attendue : Aide importante."
+        }
+      ]
+    },
+    {
+      "id": "tri-2",
+      "type": "tri",
+      "consigne": "Facilitateur ou obstacle ?",
+      "categories": [
+        {
+          "id": "facilitateur",
+          "libelle": "Facilitateur"
+        },
+        {
+          "id": "obstacle",
+          "libelle": "Obstacle"
+        }
+      ],
+      "elements": [
+        {
+          "id": "un-bon-eclairage",
+          "texte": "Un bon éclairage",
+          "categorie": "facilitateur",
+          "points": {
+            "CT3.2": 1
+          },
+          "retour": "Réponse attendue : Facilitateur."
+        },
+        {
+          "id": "un-repere-contraste",
+          "texte": "Un repère contrasté",
+          "categorie": "facilitateur",
+          "points": {
+            "CT3.2": 1
+          },
+          "retour": "Réponse attendue : Facilitateur."
+        },
+        {
+          "id": "une-barre-d-appui",
+          "texte": "Une barre d'appui",
+          "categorie": "facilitateur",
+          "points": {
+            "CT3.2": 1
+          },
+          "retour": "Réponse attendue : Facilitateur."
+        },
+        {
+          "id": "une-table-dans-le-passage",
+          "texte": "Une table dans le passage",
+          "categorie": "obstacle",
+          "points": {
+            "CT3.2": 1
+          },
+          "retour": "Réponse attendue : Obstacle."
+        },
+        {
+          "id": "un-cable-au-sol",
+          "texte": "Un câble au sol",
+          "categorie": "obstacle",
+          "points": {
+            "CT3.2": 1
+          },
+          "retour": "Réponse attendue : Obstacle."
+        },
+        {
+          "id": "un-tapis-qui-glisse",
+          "texte": "Un tapis qui glisse",
+          "categorie": "obstacle",
+          "points": {
+            "CT3.2": 1
+          },
+          "retour": "Réponse attendue : Obstacle."
+        }
+      ]
+    },
+    {
+      "id": "qcm-3",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "M. Karim peut se laver le visage seul. Je :",
+      "options": [
+        {
+          "texte": "fais à sa place"
+        },
+        {
+          "texte": "le laisse faire et j'encourage",
+          "juste": true
+        },
+        {
+          "texte": "l'en empêche"
+        }
+      ],
+      "points": {
+        "CT3.2": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S1-06 si besoin."
+    },
+    {
+      "id": "qcm-4",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Combien de groupes (GIR) compte la grille AGGIR ?",
+      "options": [
+        {
+          "texte": "3"
+        },
+        {
+          "texte": "6",
+          "juste": true
+        },
+        {
+          "texte": "10"
+        }
+      ],
+      "points": {
+        "CT3.2": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S1-06 si besoin."
+    },
+    {
+      "id": "qcm-5",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Une table gêne le passage. Je :",
+      "options": [
+        {
+          "texte": "la laisse"
+        },
+        {
+          "texte": "la déplace en sécurité et je signale",
+          "juste": true
+        },
+        {
+          "texte": "je bloque la chambre"
+        }
+      ],
+      "points": {
+        "CT3.2": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S1-06 si besoin."
+    }
+  ],
+  "debriefing": [
+    "Quelle notion de cette séance avez-vous le mieux réussie ?",
+    "Quelle notion devez-vous revoir, et dans quel document du cours ?"
+  ]
+}

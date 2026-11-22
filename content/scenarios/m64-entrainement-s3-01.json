@@ -1,0 +1,280 @@
+{
+  "id": "m64-entrainement-s3-01",
+  "statut": "valide",
+  "format": "entrainement",
+  "titre": "Retour de PFMP : décrire une activité et préparer les preuves EP2",
+  "duree_min": 5,
+  "sequence_requise": "S3",
+  "lieu": "salon",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "C2.2.1",
+      "critere": "Adhésion de la personne."
+    }
+  ],
+  "situation": "Entraînement rapide sur les notions de la séance S3-01 : Retour de PFMP : décrire une activité et préparer les preuves EP2.",
+  "objectif_eleve": "Réviser les notions de la séance : répondre vite et juste, puis lire les corrections.",
+  "note_pour_audrey": "Entraînement généré pour la tâche Q.4 à partir de l'activité interactive de votre séance S3-01 (exercices repris tels quels, sans réécriture). Compétence : la compétence principale de la séance ; critère choisi par l'IA parmi les critères officiels de cette compétence (celui qui partage le plus de mots avec les exercices) : à vérifier.",
+  "etapes": [
+    {
+      "id": "association-1",
+      "type": "association",
+      "consigne": "Reliez chaque mot à sa définition.",
+      "paires": [
+        {
+          "id": "anonymisation",
+          "terme": "Anonymisation",
+          "definition": "Suppression des informations permettant d’identifier directement ou indirectement une personne ou une structure.",
+          "points": {
+            "C2.2.1": 1
+          }
+        },
+        {
+          "id": "entretien-journalier",
+          "terme": "Entretien journalier",
+          "definition": "Entretien courant réalisé selon la fréquence prévue pour maintenir la propreté des espaces utilisés.",
+          "points": {
+            "C2.2.1": 1
+          }
+        },
+        {
+          "id": "entretien-periodique",
+          "terme": "Entretien périodique",
+          "definition": "Entretien approfondi planifié à une fréquence définie par le plan d’entretien.",
+          "points": {
+            "C2.2.1": 1
+          }
+        },
+        {
+          "id": "preuve-professionnel",
+          "terme": "Preuve professionnelle",
+          "definition": "Production, trace ou geste observable permettant d’apprécier une compétence.",
+          "points": {
+            "C2.2.1": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "tri-2",
+      "type": "tri",
+      "consigne": "Les 12 tâches : journalier ou périodique ?",
+      "categories": [
+        {
+          "id": "entretien-journalier",
+          "libelle": "Entretien journalier"
+        },
+        {
+          "id": "entretien-periodique",
+          "libelle": "Entretien périodique"
+        }
+      ],
+      "elements": [
+        {
+          "id": "les-sanitaires-utilises",
+          "texte": "Les sanitaires utilisés",
+          "categorie": "entretien-journalier",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : Entretien journalier."
+        },
+        {
+          "id": "les-poussieres-accessibles",
+          "texte": "Les poussières accessibles",
+          "categorie": "entretien-journalier",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : Entretien journalier."
+        },
+        {
+          "id": "le-sol-de-la-chambre",
+          "texte": "Le sol de la chambre",
+          "categorie": "entretien-journalier",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : Entretien journalier."
+        },
+        {
+          "id": "les-poignees-et-les-interr",
+          "texte": "Les poignées et les interrupteurs",
+          "categorie": "entretien-journalier",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : Entretien journalier."
+        },
+        {
+          "id": "le-materiel-qui-vient-de-s",
+          "texte": "Le matériel qui vient de servir",
+          "categorie": "entretien-journalier",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : Entretien journalier."
+        },
+        {
+          "id": "les-traces-ponctuelles-sur",
+          "texte": "Les traces ponctuelles sur une surface",
+          "categorie": "entretien-journalier",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : Entretien journalier."
+        },
+        {
+          "id": "le-dessus-de-l-armoire",
+          "texte": "Le dessus de l’armoire",
+          "categorie": "entretien-periodique",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : Entretien périodique."
+        },
+        {
+          "id": "les-plinthes",
+          "texte": "Les plinthes",
+          "categorie": "entretien-periodique",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : Entretien périodique."
+        },
+        {
+          "id": "les-vitres",
+          "texte": "Les vitres",
+          "categorie": "entretien-periodique",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : Entretien périodique."
+        },
+        {
+          "id": "l-interieur-d-un-meuble",
+          "texte": "L’intérieur d’un meuble",
+          "categorie": "entretien-periodique",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : Entretien périodique."
+        },
+        {
+          "id": "les-rideaux",
+          "texte": "Les rideaux",
+          "categorie": "entretien-periodique",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : Entretien périodique."
+        },
+        {
+          "id": "la-grille-de-ventilation-a",
+          "texte": "La grille de ventilation accessible",
+          "categorie": "entretien-periodique",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : Entretien périodique."
+        }
+      ]
+    },
+    {
+      "id": "tri-3",
+      "type": "tri",
+      "consigne": "Ma fiche EP2 : je peux l'écrire ou pas ?",
+      "categories": [
+        {
+          "id": "je-peux-l-ecrire",
+          "libelle": "Je peux l'écrire"
+        },
+        {
+          "id": "je-ne-l-ecris-jamais",
+          "libelle": "Je ne l'écris jamais"
+        }
+      ],
+      "elements": [
+        {
+          "id": "une-residente-de-80-ans-vi",
+          "texte": "Une résidente de 80 ans vivant en EHPAD",
+          "categorie": "je-peux-l-ecrire",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : Je peux l'écrire."
+        },
+        {
+          "id": "le-produit-utilise-et-son-",
+          "texte": "Le produit utilisé et son temps de contact",
+          "categorie": "je-peux-l-ecrire",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : Je peux l'écrire."
+        },
+        {
+          "id": "les-etapes-de-l-activite-d",
+          "texte": "Les étapes de l'activité dans l'ordre",
+          "categorie": "je-peux-l-ecrire",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : Je peux l'écrire."
+        },
+        {
+          "id": "ce-que-j-ai-transmis-et-a-",
+          "texte": "Ce que j'ai transmis et à qui",
+          "categorie": "je-peux-l-ecrire",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : Je peux l'écrire."
+        },
+        {
+          "id": "le-nom-et-le-prenom-de-la-",
+          "texte": "Le nom et le prénom de la résidente",
+          "categorie": "je-ne-l-ecris-jamais",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : Je ne l'écris jamais."
+        },
+        {
+          "id": "le-nom-de-l-ehpad-et-sa-vi",
+          "texte": "Le nom de l'EHPAD et sa ville",
+          "categorie": "je-ne-l-ecris-jamais",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : Je ne l'écris jamais."
+        },
+        {
+          "id": "sa-maladie-notee-dans-le-d",
+          "texte": "Sa maladie notée dans le dossier de soins",
+          "categorie": "je-ne-l-ecris-jamais",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : Je ne l'écris jamais."
+        },
+        {
+          "id": "une-photo-ou-on-reconnait-",
+          "texte": "Une photo où on reconnaît son visage",
+          "categorie": "je-ne-l-ecris-jamais",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : Je ne l'écris jamais."
+        }
+      ]
+    }
+  ],
+  "debriefing": [
+    "Quelle notion de cette séance avez-vous le mieux réussie ?",
+    "Quelle notion devez-vous revoir, et dans quel document du cours ?"
+  ]
+}

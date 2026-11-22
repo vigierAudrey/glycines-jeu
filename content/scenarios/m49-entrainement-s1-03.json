@@ -1,0 +1,235 @@
+{
+  "id": "m49-entrainement-s1-03",
+  "statut": "valide",
+  "format": "entrainement",
+  "titre": "Projets d’établissement, de service et de vie",
+  "duree_min": 5,
+  "sequence_requise": "S1",
+  "lieu": "salon",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "CT3.1",
+      "critere": "Présentation du rôle des différents membres de l’établissement, du service et de l’équipe."
+    }
+  ],
+  "situation": "Entraînement rapide sur les notions de la séance S1-03 : Projets d’établissement, de service et de vie.",
+  "objectif_eleve": "Réviser les notions de la séance : répondre vite et juste, puis lire les corrections.",
+  "note_pour_audrey": "Entraînement généré pour la tâche Q.4 à partir de l'activité interactive de votre séance S1-03 (exercices repris tels quels, sans réécriture). Compétence : la compétence principale de la séance ; critère choisi par l'IA parmi les critères officiels de cette compétence (celui qui partage le plus de mots avec les exercices) : à vérifier.",
+  "etapes": [
+    {
+      "id": "tri-1",
+      "type": "tri",
+      "consigne": "Classe chaque décision dans le projet qui la concerne.",
+      "categories": [
+        {
+          "id": "projet-d-etablisseme",
+          "libelle": "Projet d'établissement"
+        },
+        {
+          "id": "projet-de-service",
+          "libelle": "Projet de service"
+        },
+        {
+          "id": "projet-de-vie",
+          "libelle": "Projet de vie"
+        }
+      ],
+      "elements": [
+        {
+          "id": "les-valeurs-et-orientation",
+          "texte": "Les valeurs et orientations de la structure",
+          "categorie": "projet-d-etablisseme",
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Réponse attendue : Projet d'établissement."
+        },
+        {
+          "id": "la-politique-de-bientraita",
+          "texte": "La politique de bientraitance",
+          "categorie": "projet-d-etablisseme",
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Réponse attendue : Projet d'établissement."
+        },
+        {
+          "id": "les-horaires-generaux-de-l",
+          "texte": "Les horaires généraux de l'établissement",
+          "categorie": "projet-d-etablisseme",
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Réponse attendue : Projet d'établissement."
+        },
+        {
+          "id": "l-organisation-du-matin-da",
+          "texte": "L'organisation du matin dans l'unité",
+          "categorie": "projet-de-service",
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Réponse attendue : Projet de service."
+        },
+        {
+          "id": "le-plan-d-animation-du-ser",
+          "texte": "Le plan d'animation du service",
+          "categorie": "projet-de-service",
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Réponse attendue : Projet de service."
+        },
+        {
+          "id": "le-souhait-de-jardiner-de-",
+          "texte": "Le souhait de jardiner de Mme Rose",
+          "categorie": "projet-de-vie",
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Réponse attendue : Projet de vie."
+        },
+        {
+          "id": "les-habitudes-de-sommeil-d",
+          "texte": "Les habitudes de sommeil de M. Karim",
+          "categorie": "projet-de-vie",
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Réponse attendue : Projet de vie."
+        },
+        {
+          "id": "le-gout-de-mme-yvette-pour",
+          "texte": "Le goût de Mme Yvette pour la musique",
+          "categorie": "projet-de-vie",
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Réponse attendue : Projet de vie."
+        }
+      ]
+    },
+    {
+      "id": "tri-2",
+      "type": "tri",
+      "consigne": "Qui fait quoi ?",
+      "categories": [
+        {
+          "id": "la-personne",
+          "libelle": "La personne"
+        },
+        {
+          "id": "les-professionnels",
+          "libelle": "Les professionnels"
+        }
+      ],
+      "elements": [
+        {
+          "id": "exprime-ses-souhaits-et-pa",
+          "texte": "Exprime ses souhaits et participe",
+          "categorie": "la-personne",
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Réponse attendue : La personne."
+        },
+        {
+          "id": "donne-son-accord-selon-ses",
+          "texte": "Donne son accord selon ses capacités",
+          "categorie": "la-personne",
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Réponse attendue : La personne."
+        },
+        {
+          "id": "choisit-ce-qui-compte-pour",
+          "texte": "Choisit ce qui compte pour elle",
+          "categorie": "la-personne",
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Réponse attendue : La personne."
+        },
+        {
+          "id": "recueillent-proposent-et-s",
+          "texte": "Recueillent, proposent et suivent",
+          "categorie": "les-professionnels",
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Réponse attendue : Les professionnels."
+        },
+        {
+          "id": "mettent-en-uvre-sans-decid",
+          "texte": "Mettent en œuvre sans décider à sa place",
+          "categorie": "les-professionnels",
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Réponse attendue : Les professionnels."
+        },
+        {
+          "id": "transmettent-les-changemen",
+          "texte": "Transmettent les changements",
+          "categorie": "les-professionnels",
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Réponse attendue : Les professionnels."
+        }
+      ]
+    },
+    {
+      "id": "selection-3",
+      "type": "selection",
+      "consigne": "Vrai ou faux ?",
+      "question": "Cochez les phrases vraies.",
+      "elements": [
+        {
+          "id": "le-projet-de-vie-peut-evol",
+          "texte": "Le projet de vie peut évoluer.",
+          "attendu": true,
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Vrai."
+        },
+        {
+          "id": "le-projet-d-etablissement-",
+          "texte": "Le projet d'établissement concerne une seule personne.",
+          "attendu": false,
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Faux."
+        },
+        {
+          "id": "la-personne-est-au-centre-",
+          "texte": "La personne est au centre de son projet de vie.",
+          "attendu": true,
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Vrai."
+        },
+        {
+          "id": "je-peux-modifier-seul-le-p",
+          "texte": "Je peux modifier seul le projet de vie d'un résident.",
+          "attendu": false,
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Faux."
+        }
+      ]
+    }
+  ],
+  "debriefing": [
+    "Quelle notion de cette séance avez-vous le mieux réussie ?",
+    "Quelle notion devez-vous revoir, et dans quel document du cours ?"
+  ]
+}

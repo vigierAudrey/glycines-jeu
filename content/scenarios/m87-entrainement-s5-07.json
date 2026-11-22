@@ -1,0 +1,330 @@
+{
+  "id": "m87-entrainement-s5-07",
+  "statut": "valide",
+  "format": "entrainement",
+  "titre": "Écouter, trier, ranger et personnaliser avec la personne",
+  "duree_min": 5,
+  "sequence_requise": "S5",
+  "lieu": "salon",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "C2.2.2",
+      "critere": "Écoute attentive, active de la personne et de sa famille."
+    }
+  ],
+  "situation": "Entraînement rapide sur les notions de la séance S5-07 : Écouter, trier, ranger et personnaliser avec la personne.",
+  "objectif_eleve": "Réviser les notions de la séance : répondre vite et juste, puis lire les corrections.",
+  "note_pour_audrey": "Entraînement généré pour la tâche Q.4 à partir de l'activité interactive de votre séance S5-07 (exercices repris tels quels, sans réécriture). Compétence : la compétence principale de la séance ; critère choisi par l'IA parmi les critères officiels de cette compétence (celui qui partage le plus de mots avec les exercices) : à vérifier.",
+  "etapes": [
+    {
+      "id": "association-1",
+      "type": "association",
+      "consigne": "Reliez chaque mot à sa définition.",
+      "paires": [
+        {
+          "id": "ecoute-active",
+          "terme": "écoute active",
+          "definition": "écouter, reformuler et vérifier que l’on a compris",
+          "points": {
+            "C2.2.2": 1
+          }
+        },
+        {
+          "id": "consommable",
+          "terme": "consommable",
+          "definition": "produit utilisé puis remplacé, par exemple des mouchoirs",
+          "points": {
+            "C2.2.2": 1
+          }
+        },
+        {
+          "id": "accessibilite",
+          "terme": "accessibilité",
+          "definition": "possibilité d’atteindre et d’utiliser facilement un objet",
+          "points": {
+            "C2.2.2": 1
+          }
+        },
+        {
+          "id": "arbitrage",
+          "terme": "arbitrage",
+          "definition": "recherche d’une solution quand les souhaits diffèrent",
+          "points": {
+            "C2.2.2": 1
+          }
+        },
+        {
+          "id": "effet-personnel",
+          "terme": "effet personnel",
+          "definition": "objet qui appartient à la personne",
+          "points": {
+            "C2.2.2": 1
+          }
+        },
+        {
+          "id": "tri",
+          "terme": "tri",
+          "definition": "séparer ce que l’on garde, ce que l’on demande et ce que l’on écarte",
+          "points": {
+            "C2.2.2": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "tri-2",
+      "type": "tri",
+      "consigne": "Classez chaque carte.",
+      "categories": [
+        {
+          "id": "entre-hanche-et-epau",
+          "libelle": "Entre hanche et épaule"
+        },
+        {
+          "id": "en-partie-basse",
+          "libelle": "En partie basse"
+        },
+        {
+          "id": "selon-le-protocole",
+          "libelle": "Selon le protocole"
+        }
+      ],
+      "elements": [
+        {
+          "id": "necessaire-de-couture-dans",
+          "texte": "Nécessaire de couture dans une boîte accessible.",
+          "categorie": "entre-hanche-et-epau",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : Entre hanche et épaule."
+        },
+        {
+          "id": "tisane-regroupee-avec-sa-t",
+          "texte": "Tisane regroupée avec sa tasse.",
+          "categorie": "entre-hanche-et-epau",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : Entre hanche et épaule."
+        },
+        {
+          "id": "mouchoirs-utilises-chaque-",
+          "texte": "Mouchoirs utilisés chaque jour.",
+          "categorie": "entre-hanche-et-epau",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : Entre hanche et épaule."
+        },
+        {
+          "id": "sac-de-voyage-charge",
+          "texte": "Sac de voyage chargé.",
+          "categorie": "en-partie-basse",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : En partie basse."
+        },
+        {
+          "id": "pile-d-albums-photos-lourd",
+          "texte": "Pile d’albums photos lourds.",
+          "categorie": "en-partie-basse",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : En partie basse."
+        },
+        {
+          "id": "pack-de-bouteilles-d-eau",
+          "texte": "Pack de bouteilles d’eau.",
+          "categorie": "en-partie-basse",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : En partie basse."
+        },
+        {
+          "id": "produit-d-entretien",
+          "texte": "Produit d’entretien.",
+          "categorie": "selon-le-protocole",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : Selon le protocole."
+        },
+        {
+          "id": "medicaments",
+          "texte": "Médicaments.",
+          "categorie": "selon-le-protocole",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : Selon le protocole."
+        }
+      ]
+    },
+    {
+      "id": "ordre-3",
+      "type": "ordre",
+      "consigne": "Remettez dans l'ordre.",
+      "elements": [
+        {
+          "id": "ecouter-mme-denise-puis-sa",
+          "texte": "Écouter Mme Denise, puis sa fille, séparément.",
+          "points": {
+            "C2.2.2": 1
+          }
+        },
+        {
+          "id": "trier-les-affaires-avec-l-",
+          "texte": "Trier les affaires avec l’accord de Mme Denise.",
+          "points": {
+            "C2.2.2": 1
+          }
+        },
+        {
+          "id": "classer-par-usage-et-frequ",
+          "texte": "Classer par usage et fréquence.",
+          "points": {
+            "C2.2.2": 1
+          }
+        },
+        {
+          "id": "ranger-a-la-bonne-hauteur-",
+          "texte": "Ranger à la bonne hauteur et justifier les choix.",
+          "points": {
+            "C2.2.2": 1
+          }
+        }
+      ],
+      "retour": "Ordre repris de la séance S5-07."
+    },
+    {
+      "id": "selection-4",
+      "type": "selection",
+      "consigne": "Vrai ou faux ?",
+      "question": "Cochez les phrases vraies.",
+      "elements": [
+        {
+          "id": "la-fille-de-mme-denise-dec",
+          "texte": "La fille de Mme Denise décide de l’aménagement de la chambre.",
+          "attendu": false,
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Faux : La parole de Mme Denise reste première."
+        },
+        {
+          "id": "un-objet-utilise-chaque-jo",
+          "texte": "Un objet utilisé chaque jour se range entre hanche et épaule.",
+          "attendu": true,
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Vrai : Il reste facile à atteindre."
+        },
+        {
+          "id": "je-jette-les-objets-qui-me",
+          "texte": "Je jette les objets qui me semblent inutiles.",
+          "attendu": false,
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Faux : Je trie avec l’accord de la personne."
+        },
+        {
+          "id": "les-objets-lourds-se-range",
+          "texte": "Les objets lourds se rangent en partie basse.",
+          "attendu": true,
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Vrai : Rangement stable et sécurisant."
+        },
+        {
+          "id": "le-fauteuil-doit-etre-reti",
+          "texte": "Le fauteuil doit être retiré automatiquement.",
+          "attendu": false,
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Faux : On vérifie l’encombrement et son état."
+        }
+      ]
+    },
+    {
+      "id": "qcm-5",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Qui décide de l’aménagement de la chambre ?",
+      "options": [
+        {
+          "texte": "la fille"
+        },
+        {
+          "texte": "Mme Denise, avec l’équipe",
+          "juste": true
+        },
+        {
+          "texte": "l’agent seul"
+        }
+      ],
+      "points": {
+        "C2.2.2": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S5-07 si besoin."
+    },
+    {
+      "id": "qcm-6",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Un consommable est…",
+      "options": [
+        {
+          "texte": "un souvenir"
+        },
+        {
+          "texte": "un meuble"
+        },
+        {
+          "texte": "un produit utilisé puis remplacé",
+          "juste": true
+        }
+      ],
+      "points": {
+        "C2.2.2": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S5-07 si besoin."
+    },
+    {
+      "id": "qcm-7",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Mme Denise lève difficilement les bras : ses objets fréquents vont…",
+      "options": [
+        {
+          "texte": "entre hanche et épaule",
+          "juste": true
+        },
+        {
+          "texte": "sous le lit"
+        },
+        {
+          "texte": "en haut du placard"
+        }
+      ],
+      "points": {
+        "C2.2.2": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S5-07 si besoin."
+    }
+  ],
+  "debriefing": [
+    "Quelle notion de cette séance avez-vous le mieux réussie ?",
+    "Quelle notion devez-vous revoir, et dans quel document du cours ?"
+  ]
+}

@@ -483,3 +483,9 @@ html, body {
 .famille { min-height: 44px; padding: 6px 12px; border-radius: 22px; border: 2px solid #ddd5ea; background: #fff; font: inherit; font-size: .9rem; color: inherit; cursor: pointer; }
 .famille[aria-pressed="true"] { border-color: #6a4c93; background: #efe8f7; font-weight: 600; }
 .famille__nombre { display: inline-block; min-width: 1.6em; padding: 0 4px; border-radius: 10px; background: #f0ecf5; font-size: .8rem; }
+
+/* Q.3 : onglets Missions dans l'aile / Entraînements rapides */
+.onglets { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin: 4px 0 8px; }
+.onglet { min-height: 48px; padding: 6px 8px; border-radius: 12px; border: 2px solid #ddd5ea; background: #fff; font: inherit; font-size: .9rem; font-weight: 600; color: inherit; cursor: pointer; }
+.onglet[aria-pressed="true"] { border-color: #6a4c93; background: #efe8f7; }
+.onglet:disabled { opacity: .5; cursor: default; }

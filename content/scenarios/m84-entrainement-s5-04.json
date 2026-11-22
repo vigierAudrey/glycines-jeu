@@ -1,0 +1,333 @@
+{
+  "id": "m84-entrainement-s5-04",
+  "statut": "valide",
+  "format": "entrainement",
+  "titre": "Observer, hiérarchiser, alerter et transmettre fidèlement",
+  "duree_min": 5,
+  "sequence_requise": "S5",
+  "lieu": "salon",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "C2.1.6",
+      "critere": "Respect des règles éthiques et du protocole."
+    }
+  ],
+  "situation": "Entraînement rapide sur les notions de la séance S5-04 : Observer, hiérarchiser, alerter et transmettre fidèlement.",
+  "objectif_eleve": "Réviser les notions de la séance : répondre vite et juste, puis lire les corrections.",
+  "note_pour_audrey": "Entraînement généré pour la tâche Q.4 à partir de l'activité interactive de votre séance S5-04 (exercices repris tels quels, sans réécriture). Compétence : la compétence principale de la séance ; critère choisi par l'IA parmi les critères officiels de cette compétence (celui qui partage le plus de mots avec les exercices) : à vérifier.",
+  "etapes": [
+    {
+      "id": "association-1",
+      "type": "association",
+      "consigne": "Reliez chaque mot à sa définition.",
+      "paires": [
+        {
+          "id": "fait",
+          "terme": "fait",
+          "definition": "élément observé ou parole rapportée sans jugement",
+          "points": {
+            "C2.1.6": 1
+          }
+        },
+        {
+          "id": "information-preoccup",
+          "terme": "information préoccupante",
+          "definition": "information qui fait craindre un danger ou une atteinte",
+          "points": {
+            "C2.1.6": 1
+          }
+        },
+        {
+          "id": "fidelite",
+          "terme": "fidélité",
+          "definition": "respect exact des faits et des paroles",
+          "points": {
+            "C2.1.6": 1
+          }
+        },
+        {
+          "id": "tracabilite",
+          "terme": "traçabilité",
+          "definition": "trace datée de l’action ou de l’information",
+          "points": {
+            "C2.1.6": 1
+          }
+        },
+        {
+          "id": "urgence",
+          "terme": "urgence",
+          "definition": "situation qui impose d’alerter immédiatement",
+          "points": {
+            "C2.1.6": 1
+          }
+        },
+        {
+          "id": "destinataire",
+          "terme": "destinataire",
+          "definition": "professionnel compétent qui reçoit l’information",
+          "points": {
+            "C2.1.6": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "tri-2",
+      "type": "tri",
+      "consigne": "Classez chaque carte.",
+      "categories": [
+        {
+          "id": "fait",
+          "libelle": "Fait"
+        },
+        {
+          "id": "jugement",
+          "libelle": "Jugement"
+        }
+      ],
+      "elements": [
+        {
+          "id": "mme-yvette-est-assise-par-",
+          "texte": "Mme Yvette est assise par terre à 14 h 10.",
+          "categorie": "fait",
+          "points": {
+            "C2.1.6": 1
+          },
+          "retour": "Réponse attendue : Fait."
+        },
+        {
+          "id": "elle-dit-je-ne-sais-pas-co",
+          "texte": "Elle dit : « Je ne sais pas comment je suis arrivée là. »",
+          "categorie": "fait",
+          "points": {
+            "C2.1.6": 1
+          },
+          "retour": "Réponse attendue : Fait."
+        },
+        {
+          "id": "personne-n-a-vu-la-chute",
+          "texte": "Personne n’a vu la chute.",
+          "categorie": "fait",
+          "points": {
+            "C2.1.6": 1
+          },
+          "retour": "Réponse attendue : Fait."
+        },
+        {
+          "id": "le-repas-de-midi-est-reste",
+          "texte": "Le repas de midi est resté intact.",
+          "categorie": "fait",
+          "points": {
+            "C2.1.6": 1
+          },
+          "retour": "Réponse attendue : Fait."
+        },
+        {
+          "id": "elle-est-toujours-confuse-",
+          "texte": "« Elle est toujours confuse, ce n’est rien. »",
+          "categorie": "jugement",
+          "points": {
+            "C2.1.6": 1
+          },
+          "retour": "Réponse attendue : Jugement."
+        },
+        {
+          "id": "elle-fait-expres-de-ne-pas",
+          "texte": "« Elle fait exprès de ne pas manger. »",
+          "categorie": "jugement",
+          "points": {
+            "C2.1.6": 1
+          },
+          "retour": "Réponse attendue : Jugement."
+        },
+        {
+          "id": "elle-est-capricieuse-aujou",
+          "texte": "« Elle est capricieuse aujourd’hui. »",
+          "categorie": "jugement",
+          "points": {
+            "C2.1.6": 1
+          },
+          "retour": "Réponse attendue : Jugement."
+        },
+        {
+          "id": "elle-cherche-a-attirer-l-a",
+          "texte": "« Elle cherche à attirer l’attention. »",
+          "categorie": "jugement",
+          "points": {
+            "C2.1.6": 1
+          },
+          "retour": "Réponse attendue : Jugement."
+        }
+      ]
+    },
+    {
+      "id": "ordre-3",
+      "type": "ordre",
+      "consigne": "Remettez dans l'ordre.",
+      "elements": [
+        {
+          "id": "qui-mme-yvette-chambre-12",
+          "texte": "Qui : Mme Yvette, chambre 12.",
+          "points": {
+            "C2.1.6": 1
+          }
+        },
+        {
+          "id": "quand-et-ou-14-h-10-pres-d",
+          "texte": "Quand et où : 14 h 10, près de son lit.",
+          "points": {
+            "C2.1.6": 1
+          }
+        },
+        {
+          "id": "faits-assise-par-terre-chu",
+          "texte": "Faits : assise par terre, chute non vue, paroles exactes.",
+          "points": {
+            "C2.1.6": 1
+          }
+        },
+        {
+          "id": "action-je-reste-avec-elle-",
+          "texte": "Action : je reste avec elle, je ne la relève pas seul, j’alerte.",
+          "points": {
+            "C2.1.6": 1
+          }
+        },
+        {
+          "id": "a-qui-l-infirmiere-puis-la",
+          "texte": "À qui : l’infirmière, puis la trace écrite.",
+          "points": {
+            "C2.1.6": 1
+          }
+        }
+      ],
+      "retour": "Ordre repris de la séance S5-04."
+    },
+    {
+      "id": "selection-4",
+      "type": "selection",
+      "consigne": "Vrai ou faux ?",
+      "question": "Cochez les phrases vraies.",
+      "elements": [
+        {
+          "id": "elle-est-toujours-confuse-",
+          "texte": "« Elle est toujours confuse » est un fait à transmettre.",
+          "attendu": false,
+          "points": {
+            "C2.1.6": 1
+          },
+          "retour": "Faux : C’est un jugement à écarter."
+        },
+        {
+          "id": "une-chute-non-vue-suit-le-",
+          "texte": "Une chute non vue suit le protocole d’alerte.",
+          "attendu": true,
+          "points": {
+            "C2.1.6": 1
+          },
+          "retour": "Vrai : Situation potentiellement urgente."
+        },
+        {
+          "id": "j-ecris-d-abord-ma-transmi",
+          "texte": "J’écris d’abord ma transmission, puis je préviens l’infirmière.",
+          "attendu": false,
+          "points": {
+            "C2.1.6": 1
+          },
+          "retour": "Faux : L’écrit ne retarde jamais l’alerte orale."
+        },
+        {
+          "id": "je-note-l-heure-a-laquelle",
+          "texte": "Je note l’heure à laquelle j’ai trouvé Mme Yvette.",
+          "attendu": true,
+          "points": {
+            "C2.1.6": 1
+          },
+          "retour": "Vrai : Une transmission est précise et datée."
+        },
+        {
+          "id": "je-precise-ce-que-j-ai-vu-",
+          "texte": "Je précise ce que j’ai vu et ce que l’on m’a dit.",
+          "attendu": true,
+          "points": {
+            "C2.1.6": 1
+          },
+          "retour": "Vrai : Je distingue les sources."
+        }
+      ]
+    },
+    {
+      "id": "qcm-5",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "« Elle fait exprès » est…",
+      "options": [
+        {
+          "texte": "une parole exacte"
+        },
+        {
+          "texte": "un fait"
+        },
+        {
+          "texte": "un jugement",
+          "juste": true
+        }
+      ],
+      "points": {
+        "C2.1.6": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S5-04 si besoin."
+    },
+    {
+      "id": "qcm-6",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Face à une chute non vue, je…",
+      "options": [
+        {
+          "texte": "alerte selon le protocole",
+          "juste": true
+        },
+        {
+          "texte": "attends la fin du service"
+        },
+        {
+          "texte": "la relève seul"
+        }
+      ],
+      "points": {
+        "C2.1.6": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S5-04 si besoin."
+    },
+    {
+      "id": "qcm-7",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Une transmission fidèle contient…",
+      "options": [
+        {
+          "texte": "mon avis sur la personne"
+        },
+        {
+          "texte": "des faits précis et datés",
+          "juste": true
+        },
+        {
+          "texte": "des suppositions"
+        }
+      ],
+      "points": {
+        "C2.1.6": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S5-04 si besoin."
+    }
+  ],
+  "debriefing": [
+    "Quelle notion de cette séance avez-vous le mieux réussie ?",
+    "Quelle notion devez-vous revoir, et dans quel document du cours ?"
+  ]
+}

@@ -1,0 +1,257 @@
+{
+  "id": "m62-entrainement-s2-09",
+  "statut": "valide",
+  "format": "entrainement",
+  "titre": "Environnement facilitant ou limitant : adapter et sécuriser l’espace",
+  "duree_min": 5,
+  "sequence_requise": "S2",
+  "lieu": "salon",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "CT3.3",
+      "critere": "Prise en compte du contexte de l’activité."
+    }
+  ],
+  "situation": "Entraînement rapide sur les notions de la séance S2-09 : Environnement facilitant ou limitant : adapter et sécuriser l’espace.",
+  "objectif_eleve": "Réviser les notions de la séance : répondre vite et juste, puis lire les corrections.",
+  "note_pour_audrey": "Entraînement généré pour la tâche Q.4 à partir de l'activité interactive de votre séance S2-09 (exercices repris tels quels, sans réécriture). Compétence : la compétence principale de la séance ; critère choisi par l'IA parmi les critères officiels de cette compétence (celui qui partage le plus de mots avec les exercices) : à vérifier.",
+  "etapes": [
+    {
+      "id": "tri-1",
+      "type": "tri",
+      "consigne": "Classe chaque élément pour le déplacement de M. Karim, qui marche avec une canne.",
+      "categories": [
+        {
+          "id": "facilitateur",
+          "libelle": "Facilitateur"
+        },
+        {
+          "id": "obstacle",
+          "libelle": "Obstacle"
+        }
+      ],
+      "elements": [
+        {
+          "id": "barres-d-appui-pres-des-to",
+          "texte": "Barres d'appui près des toilettes",
+          "categorie": "facilitateur",
+          "points": {
+            "CT3.3": 1
+          },
+          "retour": "Réponse attendue : Facilitateur."
+        },
+        {
+          "id": "sol-antiderapant",
+          "texte": "Sol antidérapant",
+          "categorie": "facilitateur",
+          "points": {
+            "CT3.3": 1
+          },
+          "retour": "Réponse attendue : Facilitateur."
+        },
+        {
+          "id": "sonnette-a-portee-de-main",
+          "texte": "Sonnette à portée de main",
+          "categorie": "facilitateur",
+          "points": {
+            "CT3.3": 1
+          },
+          "retour": "Réponse attendue : Facilitateur."
+        },
+        {
+          "id": "passage-degage-jusqu-a-la-",
+          "texte": "Passage dégagé jusqu'à la salle d'eau",
+          "categorie": "facilitateur",
+          "points": {
+            "CT3.3": 1
+          },
+          "retour": "Réponse attendue : Facilitateur."
+        },
+        {
+          "id": "tapis-devant-le-lit",
+          "texte": "Tapis devant le lit",
+          "categorie": "obstacle",
+          "points": {
+            "CT3.3": 1
+          },
+          "retour": "Réponse attendue : Obstacle."
+        },
+        {
+          "id": "eclairage-de-nuit-hors-ser",
+          "texte": "Éclairage de nuit hors service",
+          "categorie": "obstacle",
+          "points": {
+            "CT3.3": 1
+          },
+          "retour": "Réponse attendue : Obstacle."
+        },
+        {
+          "id": "fauteuil-eloigne-du-trajet",
+          "texte": "Fauteuil éloigné du trajet",
+          "categorie": "obstacle",
+          "points": {
+            "CT3.3": 1
+          },
+          "retour": "Réponse attendue : Obstacle."
+        },
+        {
+          "id": "chaussons-ouverts-a-l-arri",
+          "texte": "Chaussons ouverts à l'arrière",
+          "categorie": "obstacle",
+          "points": {
+            "CT3.3": 1
+          },
+          "retour": "Réponse attendue : Obstacle."
+        }
+      ]
+    },
+    {
+      "id": "tri-2",
+      "type": "tri",
+      "consigne": "Classe chaque action selon qui doit la réaliser.",
+      "categories": [
+        {
+          "id": "je-le-fais-dans-mon-",
+          "libelle": "Je le fais dans mon rôle"
+        },
+        {
+          "id": "je-transmets-a-la-ma",
+          "libelle": "Je transmets à la maintenance"
+        },
+        {
+          "id": "je-transmets-a-l-equ",
+          "libelle": "Je transmets à l'équipe"
+        }
+      ],
+      "elements": [
+        {
+          "id": "degager-le-passage-vers-la",
+          "texte": "Dégager le passage vers la salle d'eau",
+          "categorie": "je-le-fais-dans-mon-",
+          "points": {
+            "CT3.3": 1
+          },
+          "retour": "Réponse attendue : Je le fais dans mon rôle."
+        },
+        {
+          "id": "rapprocher-le-fauteuil-ave",
+          "texte": "Rapprocher le fauteuil avec l'accord de M. Karim",
+          "categorie": "je-le-fais-dans-mon-",
+          "points": {
+            "CT3.3": 1
+          },
+          "retour": "Réponse attendue : Je le fais dans mon rôle."
+        },
+        {
+          "id": "ramasser-un-objet-pose-au-",
+          "texte": "Ramasser un objet posé au sol",
+          "categorie": "je-le-fais-dans-mon-",
+          "points": {
+            "CT3.3": 1
+          },
+          "retour": "Réponse attendue : Je le fais dans mon rôle."
+        },
+        {
+          "id": "remplacer-l-ampoule-de-l-e",
+          "texte": "Remplacer l'ampoule de l'éclairage de nuit",
+          "categorie": "je-transmets-a-la-ma",
+          "points": {
+            "CT3.3": 1
+          },
+          "retour": "Réponse attendue : Je transmets à la maintenance."
+        },
+        {
+          "id": "refixer-une-barre-d-appui-",
+          "texte": "Refixer une barre d'appui qui bouge",
+          "categorie": "je-transmets-a-la-ma",
+          "points": {
+            "CT3.3": 1
+          },
+          "retour": "Réponse attendue : Je transmets à la maintenance."
+        },
+        {
+          "id": "le-refus-de-m-karim-de-ret",
+          "texte": "Le refus de M. Karim de retirer son tapis",
+          "categorie": "je-transmets-a-l-equ",
+          "points": {
+            "CT3.3": 1
+          },
+          "retour": "Réponse attendue : Je transmets à l'équipe."
+        }
+      ]
+    },
+    {
+      "id": "qcm-3",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "M. Karim refuse de retirer son tapis. Je :",
+      "options": [
+        {
+          "texte": "le retire pendant son absence"
+        },
+        {
+          "texte": "propose de le fixer ou de le déplacer et je transmets son refus",
+          "juste": true
+        },
+        {
+          "texte": "insiste jusqu'à ce qu'il accepte"
+        }
+      ],
+      "points": {
+        "CT3.3": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S2-09 si besoin."
+    },
+    {
+      "id": "qcm-4",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "L'éclairage de nuit ne fonctionne plus. Je :",
+      "options": [
+        {
+          "texte": "change l'ampoule moi-même"
+        },
+        {
+          "texte": "signale à la maintenance et propose une veilleuse en attendant",
+          "juste": true
+        },
+        {
+          "texte": "ne fais rien, il y a le couloir"
+        }
+      ],
+      "points": {
+        "CT3.3": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S2-09 si besoin."
+    },
+    {
+      "id": "qcm-5",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Un environnement facilitant, c'est un environnement qui :",
+      "options": [
+        {
+          "texte": "fait tout à la place de la personne"
+        },
+        {
+          "texte": "aide la personne à agir et à se déplacer en sécurité",
+          "juste": true
+        },
+        {
+          "texte": "empêche la personne de sortir"
+        }
+      ],
+      "points": {
+        "CT3.3": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S2-09 si besoin."
+    }
+  ],
+  "debriefing": [
+    "Quelle notion de cette séance avez-vous le mieux réussie ?",
+    "Quelle notion devez-vous revoir, et dans quel document du cours ?"
+  ]
+}

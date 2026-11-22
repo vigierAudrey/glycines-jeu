@@ -1,0 +1,313 @@
+{
+  "id": "m55-entrainement-s2-02",
+  "statut": "valide",
+  "format": "entrainement",
+  "titre": "Adapter la communication aux capacités de la personne",
+  "duree_min": 5,
+  "sequence_requise": "S2",
+  "lieu": "salon",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "CT4.1",
+      "critere": "Intervention et attitude adaptée pour amener la personne âgée à participer aux activités de la vie quotidienne."
+    }
+  ],
+  "situation": "Entraînement rapide sur les notions de la séance S2-02 : Adapter la communication aux capacités de la personne.",
+  "objectif_eleve": "Réviser les notions de la séance : répondre vite et juste, puis lire les corrections.",
+  "note_pour_audrey": "Entraînement généré pour la tâche Q.4 à partir de l'activité interactive de votre séance S2-02 (exercices repris tels quels, sans réécriture). Compétence : la compétence principale de la séance ; critère choisi par l'IA parmi les critères officiels de cette compétence (celui qui partage le plus de mots avec les exercices) : à vérifier.",
+  "etapes": [
+    {
+      "id": "selection-1",
+      "type": "selection",
+      "consigne": "Vrai ou faux ?",
+      "question": "Cochez les phrases vraies.",
+      "elements": [
+        {
+          "id": "il-faut-parler-plus-fort-a",
+          "texte": "Il faut parler plus fort à toute personne malvoyante.",
+          "attendu": false,
+          "points": {
+            "CT4.1": 1
+          },
+          "retour": "Faux : La malvoyance touche la vision, pas l’audition. On adapte les repères visuels, verbaux et spatiaux, pas le volume de la voix."
+        },
+        {
+          "id": "avant-de-guider-m-karim-il",
+          "texte": "Avant de guider M. Karim, il faut lui demander son accord.",
+          "attendu": true,
+          "points": {
+            "CT4.1": 1
+          },
+          "retour": "Vrai : On se nomme, on explique ce que l’on va faire, on demande l’accord, puis on agit. La personne reste décideuse de son déplacement."
+        },
+        {
+          "id": "avec-mme-yvette-il-vaut-mi",
+          "texte": "Avec Mme Yvette, il vaut mieux donner toutes les consignes d’un coup pour gagner du temps.",
+          "attendu": false,
+          "points": {
+            "CT4.1": 1
+          },
+          "retour": "Faux : Une seule information à la fois. Enchaîner les consignes la met en difficulté et fait perdre du temps au final."
+        },
+        {
+          "id": "deplacer-un-meuble-dans-la",
+          "texte": "Déplacer un meuble dans la chambre de M. Karim sans le prévenir est sans conséquence.",
+          "attendu": false,
+          "points": {
+            "CT4.1": 1
+          },
+          "retour": "Faux : Un meuble sert de repère. Le déplacer sans prévenir, c’est un risque de chute et une perte d’autonomie."
+        },
+        {
+          "id": "faire-repeter-son-prenom-a",
+          "texte": "Faire répéter son prénom à Mme Yvette pour « entraîner sa mémoire » est une bonne idée.",
+          "attendu": false,
+          "points": {
+            "CT4.1": 1
+          },
+          "retour": "Faux : Tester la mémoire met la personne en échec et l’angoisse. Ce n’est pas le rôle de l’agent."
+        },
+        {
+          "id": "un-pictogramme-grand-forma",
+          "texte": "Un pictogramme grand format et contrasté peut aider à la fois M. Karim et Mme Yvette.",
+          "attendu": true,
+          "points": {
+            "CT4.1": 1
+          },
+          "retour": "Vrai : Le contraste aide M. Karim à le voir, l’image simple aide Mme Yvette à le comprendre sans lecture."
+        }
+      ]
+    },
+    {
+      "id": "tri-2",
+      "type": "tri",
+      "consigne": "Classez chaque carte.",
+      "categories": [
+        {
+          "id": "surtout-pour-m-karim",
+          "libelle": "Surtout pour M. Karim"
+        },
+        {
+          "id": "surtout-pour-mme-yve",
+          "libelle": "Surtout pour Mme Yvette"
+        },
+        {
+          "id": "utile-pour-les-deux",
+          "libelle": "Utile pour les deux"
+        },
+        {
+          "id": "a-eviter",
+          "libelle": "À éviter"
+        }
+      ],
+      "elements": [
+        {
+          "id": "bonjour-m-karim-c-est-lea-",
+          "texte": "« Bonjour M. Karim, c’est Léa, l’agent du matin. »",
+          "categorie": "surtout-pour-m-karim",
+          "points": {
+            "CT4.1": 1
+          },
+          "retour": "Réponse attendue : Surtout pour M. Karim."
+        },
+        {
+          "id": "dire-nous-allons-a-la-sall",
+          "texte": "Dire « Nous allons à la salle à manger », attendre, puis « Je vous accompagne ».",
+          "categorie": "surtout-pour-mme-yve",
+          "points": {
+            "CT4.1": 1
+          },
+          "retour": "Réponse attendue : Surtout pour Mme Yvette."
+        },
+        {
+          "id": "se-nommer-et-expliquer-ce-",
+          "texte": "Se nommer et expliquer ce que l’on va faire avant d’agir.",
+          "categorie": "utile-pour-les-deux",
+          "points": {
+            "CT4.1": 1
+          },
+          "retour": "Réponse attendue : Utile pour les deux."
+        },
+        {
+          "id": "parler-tres-fort-a-m-karim",
+          "texte": "Parler très fort à M. Karim pour être sûr qu’il comprenne.",
+          "categorie": "a-eviter",
+          "points": {
+            "CT4.1": 1
+          },
+          "retour": "Réponse attendue : À éviter."
+        },
+        {
+          "id": "votre-fauteuil-est-a-deux-",
+          "texte": "« Votre fauteuil est à deux pas sur votre droite, près de la fenêtre. »",
+          "categorie": "surtout-pour-m-karim",
+          "points": {
+            "CT4.1": 1
+          },
+          "retour": "Réponse attendue : Surtout pour M. Karim."
+        },
+        {
+          "id": "coller-un-pictogramme-couv",
+          "texte": "Coller un pictogramme « couverts » sur la porte de la salle à manger.",
+          "categorie": "surtout-pour-mme-yve",
+          "points": {
+            "CT4.1": 1
+          },
+          "retour": "Réponse attendue : Surtout pour Mme Yvette."
+        },
+        {
+          "id": "demander-l-accord-avant-de",
+          "texte": "Demander l’accord avant de toucher ou d’accompagner.",
+          "categorie": "utile-pour-les-deux",
+          "points": {
+            "CT4.1": 1
+          },
+          "retour": "Réponse attendue : Utile pour les deux."
+        },
+        {
+          "id": "je-vous-l-ai-deja-dit-troi",
+          "texte": "« Je vous l’ai déjà dit trois fois. »",
+          "categorie": "a-eviter",
+          "points": {
+            "CT4.1": 1
+          },
+          "retour": "Réponse attendue : À éviter."
+        },
+        {
+          "id": "j-ai-deplace-la-table-bass",
+          "texte": "« J’ai déplacé la table basse ce matin, je vous montre où elle est. »",
+          "categorie": "surtout-pour-m-karim",
+          "points": {
+            "CT4.1": 1
+          },
+          "retour": "Réponse attendue : Surtout pour M. Karim."
+        },
+        {
+          "id": "repondre-la-4e-fois-du-mem",
+          "texte": "Répondre la 4e fois du même ton calme que la 1re fois.",
+          "categorie": "surtout-pour-mme-yve",
+          "points": {
+            "CT4.1": 1
+          },
+          "retour": "Réponse attendue : Surtout pour Mme Yvette."
+        }
+      ]
+    },
+    {
+      "id": "qcm-3",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Que dis-tu en premier ?",
+      "options": [
+        {
+          "texte": "« Bonjour ! » en ouvrant directement les volets."
+        },
+        {
+          "texte": "« Bonjour M. Karim, c’est Léa. J’ouvre vos volets, vous êtes d’accord ? »",
+          "juste": true
+        },
+        {
+          "texte": "Rien, pour ne pas le déranger."
+        }
+      ],
+      "points": {
+        "CT4.1": 1
+      },
+      "retour": "M. Karim ne peut pas identifier qui entre. Se nommer, annoncer l’action et demander l’accord, dans cet ordre."
+    },
+    {
+      "id": "qcm-4",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Que fais-tu ?",
+      "options": [
+        {
+          "texte": "Tu montres du doigt : « Il est là-bas. »"
+        },
+        {
+          "texte": "Tu remets le fauteuil à sa place habituelle et tu le lui dis.",
+          "juste": true
+        },
+        {
+          "texte": "Tu le prends par le bras et tu l’assois."
+        }
+      ],
+      "points": {
+        "CT4.1": 1
+      },
+      "retour": "Le geste du doigt est inutile pour lui. L’asseoir, c’est faire à sa place. Rétablir le repère et l’informer préserve son autonomie."
+    },
+    {
+      "id": "qcm-5",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Comment réponds-tu ?",
+      "options": [
+        {
+          "texte": "« Comme je vous l’ai dit, c’est au fond du couloir. »"
+        },
+        {
+          "texte": "« Réfléchissez, vous y allez tous les jours. »"
+        },
+        {
+          "texte": "« La salle à manger est au bout du couloir. Je vous accompagne. », du même ton que la première fois.",
+          "juste": true
+        }
+      ],
+      "points": {
+        "CT4.1": 1
+      },
+      "retour": "Sa mémoire récente est atteinte : ce n’est ni un caprice ni de la mauvaise volonté. Même réponse, même calme, plus un repère stable."
+    },
+    {
+      "id": "ordre-6",
+      "type": "ordre",
+      "consigne": "Remettez dans l'ordre.",
+      "elements": [
+        {
+          "id": "je-me-nomme-bonjour-m-kari",
+          "texte": "Je me nomme : « Bonjour M. Karim, c’est Léa. »",
+          "points": {
+            "CT4.1": 1
+          }
+        },
+        {
+          "id": "j-explique-ce-que-je-propo",
+          "texte": "J’explique ce que je propose et je demande son accord.",
+          "points": {
+            "CT4.1": 1
+          }
+        },
+        {
+          "id": "je-propose-mon-bras-et-je-",
+          "texte": "Je propose mon bras et je le laisse le prendre.",
+          "points": {
+            "CT4.1": 1
+          }
+        },
+        {
+          "id": "je-decris-le-trajet-et-j-a",
+          "texte": "Je décris le trajet et j’annonce les obstacles au fur et à mesure.",
+          "points": {
+            "CT4.1": 1
+          }
+        },
+        {
+          "id": "j-annonce-l-arrivee-je-pos",
+          "texte": "J’annonce l’arrivée, je pose sa main sur le dossier du fauteuil et je vérifie qu’il est bien installé.",
+          "points": {
+            "CT4.1": 1
+          }
+        }
+      ],
+      "retour": "Ordre repris de la séance S2-02."
+    }
+  ],
+  "debriefing": [
+    "Quelle notion de cette séance avez-vous le mieux réussie ?",
+    "Quelle notion devez-vous revoir, et dans quel document du cours ?"
+  ]
+}

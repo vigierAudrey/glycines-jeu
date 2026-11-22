@@ -1,0 +1,346 @@
+{
+  "id": "m77-entrainement-s4-05",
+  "statut": "valide",
+  "format": "entrainement",
+  "titre": "Se vêtir et se dévêtir, avec aides techniques et bas de contention",
+  "duree_min": 5,
+  "sequence_requise": "S4",
+  "lieu": "salon",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "C2.1.4",
+      "critere": "Respect du rythme, des habitudes et des attentes de la personne."
+    }
+  ],
+  "situation": "Entraînement rapide sur les notions de la séance S4-05 : Se vêtir et se dévêtir, avec aides techniques et bas de contention.",
+  "objectif_eleve": "Réviser les notions de la séance : répondre vite et juste, puis lire les corrections.",
+  "note_pour_audrey": "Entraînement généré pour la tâche Q.4 à partir de l'activité interactive de votre séance S4-05 (exercices repris tels quels, sans réécriture). Compétence : la compétence principale de la séance ; critère choisi par l'IA parmi les critères officiels de cette compétence (celui qui partage le plus de mots avec les exercices) : à vérifier.",
+  "etapes": [
+    {
+      "id": "association-1",
+      "type": "association",
+      "consigne": "Reliez chaque mot à sa définition.",
+      "paires": [
+        {
+          "id": "enfile-bouton",
+          "terme": "enfile-bouton",
+          "definition": "aide technique qui facilite le boutonnage",
+          "points": {
+            "C2.1.4": 1
+          }
+        },
+        {
+          "id": "chausse-pied-long",
+          "terme": "chausse-pied long",
+          "definition": "aide pour enfiler une chaussure sans se pencher",
+          "points": {
+            "C2.1.4": 1
+          }
+        },
+        {
+          "id": "bas-de-contention",
+          "terme": "bas de contention",
+          "definition": "dispositif médical utilisé selon prescription et protocole",
+          "points": {
+            "C2.1.4": 1
+          }
+        },
+        {
+          "id": "pudeur",
+          "terme": "pudeur",
+          "definition": "besoin de protéger son corps du regard des autres",
+          "points": {
+            "C2.1.4": 1
+          }
+        },
+        {
+          "id": "prehension",
+          "terme": "préhension",
+          "definition": "capacité à saisir un objet avec la main",
+          "points": {
+            "C2.1.4": 1
+          }
+        },
+        {
+          "id": "autonomie",
+          "terme": "autonomie",
+          "definition": "capacité à faire soi-même, selon ses possibilités",
+          "points": {
+            "C2.1.4": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "tri-2",
+      "type": "tri",
+      "consigne": "Classez chaque carte.",
+      "categories": [
+        {
+          "id": "favorise-l-autonomie",
+          "libelle": "Favorise l’autonomie et la pudeur"
+        },
+        {
+          "id": "a-eviter",
+          "libelle": "À éviter"
+        },
+        {
+          "id": "j-interromps-et-je-t",
+          "libelle": "J’interromps et je transmets"
+        }
+      ],
+      "elements": [
+        {
+          "id": "proposer-un-enfile-bouton",
+          "texte": "Proposer un enfile-bouton.",
+          "categorie": "favorise-l-autonomie",
+          "points": {
+            "C2.1.4": 1
+          },
+          "retour": "Réponse attendue : Favorise l’autonomie et la pudeur."
+        },
+        {
+          "id": "installer-mme-rose-assise-",
+          "texte": "Installer Mme Rose assise, porte fermée.",
+          "categorie": "favorise-l-autonomie",
+          "points": {
+            "C2.1.4": 1
+          },
+          "retour": "Réponse attendue : Favorise l’autonomie et la pudeur."
+        },
+        {
+          "id": "enfiler-d-abord-la-manche-",
+          "texte": "Enfiler d’abord la manche du côté le plus limité.",
+          "categorie": "favorise-l-autonomie",
+          "points": {
+            "C2.1.4": 1
+          },
+          "retour": "Réponse attendue : Favorise l’autonomie et la pudeur."
+        },
+        {
+          "id": "choisir-le-gilet-a-sa-plac",
+          "texte": "Choisir le gilet à sa place pour gagner du temps.",
+          "categorie": "a-eviter",
+          "points": {
+            "C2.1.4": 1
+          },
+          "retour": "Réponse attendue : À éviter."
+        },
+        {
+          "id": "laisser-la-porte-ouverte-p",
+          "texte": "Laisser la porte ouverte pendant l’habillage.",
+          "categorie": "a-eviter",
+          "points": {
+            "C2.1.4": 1
+          },
+          "retour": "Réponse attendue : À éviter."
+        },
+        {
+          "id": "boutonner-a-sa-place-alors",
+          "texte": "Boutonner à sa place alors qu’elle peut le faire avec l’aide technique.",
+          "categorie": "a-eviter",
+          "points": {
+            "C2.1.4": 1
+          },
+          "retour": "Réponse attendue : À éviter."
+        },
+        {
+          "id": "rougeur-nouvelle-sur-la-ja",
+          "texte": "Rougeur nouvelle sur la jambe.",
+          "categorie": "j-interromps-et-je-t",
+          "points": {
+            "C2.1.4": 1
+          },
+          "retour": "Réponse attendue : J’interromps et je transmets."
+        },
+        {
+          "id": "grimace-de-douleur-au-leve",
+          "texte": "Grimace de douleur au lever du bras.",
+          "categorie": "j-interromps-et-je-t",
+          "points": {
+            "C2.1.4": 1
+          },
+          "retour": "Réponse attendue : J’interromps et je transmets."
+        },
+        {
+          "id": "mme-rose-refuse-l-aide-aux",
+          "texte": "Mme Rose refuse l’aide aux bas.",
+          "categorie": "j-interromps-et-je-t",
+          "points": {
+            "C2.1.4": 1
+          },
+          "retour": "Réponse attendue : J’interromps et je transmets."
+        }
+      ]
+    },
+    {
+      "id": "ordre-3",
+      "type": "ordre",
+      "consigne": "Remettez dans l'ordre.",
+      "elements": [
+        {
+          "id": "choisir-le-vetement-avec-l",
+          "texte": "Choisir le vêtement avec la personne.",
+          "points": {
+            "C2.1.4": 1
+          }
+        },
+        {
+          "id": "installer-la-personne-assi",
+          "texte": "Installer la personne assise, porte fermée.",
+          "points": {
+            "C2.1.4": 1
+          }
+        },
+        {
+          "id": "habiller-le-cote-le-plus-l",
+          "texte": "Habiller le côté le plus limité en premier.",
+          "points": {
+            "C2.1.4": 1
+          }
+        },
+        {
+          "id": "laisser-faire-chaque-etape",
+          "texte": "Laisser faire chaque étape possible, avec une aide technique.",
+          "points": {
+            "C2.1.4": 1
+          }
+        },
+        {
+          "id": "observer-et-transmettre-to",
+          "texte": "Observer et transmettre tout signe inhabituel.",
+          "points": {
+            "C2.1.4": 1
+          }
+        }
+      ],
+      "retour": "Ordre repris de la séance S4-05."
+    },
+    {
+      "id": "selection-4",
+      "type": "selection",
+      "consigne": "Vrai ou faux ?",
+      "question": "Cochez les phrases vraies.",
+      "elements": [
+        {
+          "id": "je-choisis-le-vetement-a-l",
+          "texte": "Je choisis le vêtement à la place de Mme Rose.",
+          "attendu": false,
+          "points": {
+            "C2.1.4": 1
+          },
+          "retour": "Faux : Il est choisi avec elle."
+        },
+        {
+          "id": "on-enfile-d-abord-la-manch",
+          "texte": "On enfile d’abord la manche du côté le plus limité.",
+          "attendu": true,
+          "points": {
+            "C2.1.4": 1
+          },
+          "retour": "Vrai : C’est plus confortable et plus sûr."
+        },
+        {
+          "id": "je-mets-les-bas-de-content",
+          "texte": "Je mets les bas de contention malgré la rougeur.",
+          "attendu": false,
+          "points": {
+            "C2.1.4": 1
+          },
+          "retour": "Faux : Je m’arrête et je transmets."
+        },
+        {
+          "id": "l-enfile-bouton-aide-mme-r",
+          "texte": "L’enfile-bouton aide Mme Rose à rester autonome.",
+          "attendu": true,
+          "points": {
+            "C2.1.4": 1
+          },
+          "retour": "Vrai : Elle boutonne elle-même."
+        },
+        {
+          "id": "preserver-la-pudeur-c-est-",
+          "texte": "Préserver la pudeur, c’est couvrir les parties du corps non concernées.",
+          "attendu": true,
+          "points": {
+            "C2.1.4": 1
+          },
+          "retour": "Vrai : Et fermer la porte."
+        }
+      ]
+    },
+    {
+      "id": "qcm-5",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Pour dévêtir, le côté le plus limité se retire…",
+      "options": [
+        {
+          "texte": "en dernier",
+          "juste": true
+        },
+        {
+          "texte": "en premier"
+        },
+        {
+          "texte": "jamais"
+        }
+      ],
+      "points": {
+        "C2.1.4": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S4-05 si besoin."
+    },
+    {
+      "id": "qcm-6",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Quelle aide technique facilite le boutonnage ?",
+      "options": [
+        {
+          "texte": "La barre d’appui"
+        },
+        {
+          "texte": "L’enfile-bouton",
+          "juste": true
+        },
+        {
+          "texte": "Le chausse-pied long"
+        }
+      ],
+      "points": {
+        "C2.1.4": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S4-05 si besoin."
+    },
+    {
+      "id": "qcm-7",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "La meilleure installation pour s’habiller est…",
+      "options": [
+        {
+          "texte": "couchée"
+        },
+        {
+          "texte": "debout, sans appui"
+        },
+        {
+          "texte": "assise, stable",
+          "juste": true
+        }
+      ],
+      "points": {
+        "C2.1.4": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S4-05 si besoin."
+    }
+  ],
+  "debriefing": [
+    "Quelle notion de cette séance avez-vous le mieux réussie ?",
+    "Quelle notion devez-vous revoir, et dans quel document du cours ?"
+  ]
+}

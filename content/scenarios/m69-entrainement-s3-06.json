@@ -1,0 +1,243 @@
+{
+  "id": "m69-entrainement-s3-06",
+  "statut": "valide",
+  "format": "entrainement",
+  "titre": "Revêtements, matériaux et produits : choisir sans dégrader",
+  "duree_min": 5,
+  "sequence_requise": "S3",
+  "lieu": "salon",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "C2.2.1",
+      "critere": "Nettoyage/bionettoyage en respect du mobilier et des protocoles."
+    }
+  ],
+  "situation": "Entraînement rapide sur les notions de la séance S3-06 : Revêtements, matériaux et produits : choisir sans dégrader.",
+  "objectif_eleve": "Réviser les notions de la séance : répondre vite et juste, puis lire les corrections.",
+  "note_pour_audrey": "Entraînement généré pour la tâche Q.4 à partir de l'activité interactive de votre séance S3-06 (exercices repris tels quels, sans réécriture). Compétence : la compétence principale de la séance ; critère choisi par l'IA parmi les critères officiels de cette compétence (celui qui partage le plus de mots avec les exercices) : à vérifier.",
+  "etapes": [
+    {
+      "id": "association-1",
+      "type": "association",
+      "consigne": "Reliez chaque mot à sa définition.",
+      "paires": [
+        {
+          "id": "revetement",
+          "terme": "Revêtement",
+          "definition": "Couche ou matériau constituant la surface à entretenir.",
+          "points": {
+            "C2.2.1": 1
+          }
+        },
+        {
+          "id": "detergent",
+          "terme": "Détergent",
+          "definition": "Produit destiné à décoller et éliminer des salissures selon ses conditions d’emploi.",
+          "points": {
+            "C2.2.1": 1
+          }
+        },
+        {
+          "id": "detergent-desinfecta",
+          "terme": "Détergent-désinfectant",
+          "definition": "Produit combinant nettoyage et action désinfectante uniquement dans les conditions validées sur sa fiche.",
+          "points": {
+            "C2.2.1": 1
+          }
+        },
+        {
+          "id": "pictogramme-de-dange",
+          "terme": "Pictogramme de danger",
+          "definition": "Symbole réglementaire signalant une catégorie de danger chimique.",
+          "points": {
+            "C2.2.1": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "tri-2",
+      "type": "tri",
+      "consigne": "Quelle surface, quelle méthode ?",
+      "categories": [
+        {
+          "id": "sol-pvc",
+          "libelle": "Sol PVC"
+        },
+        {
+          "id": "ecran-de-television",
+          "libelle": "Écran de télévision"
+        },
+        {
+          "id": "vitre",
+          "libelle": "Vitre"
+        },
+        {
+          "id": "fauteuil-textile",
+          "libelle": "Fauteuil textile"
+        }
+      ],
+      "elements": [
+        {
+          "id": "lavage-avec-le-produit-et-",
+          "texte": "Lavage avec le produit et le dosage du protocole",
+          "categorie": "sol-pvc",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : Sol PVC."
+        },
+        {
+          "id": "balayage-humide-avant-le-l",
+          "texte": "Balayage humide avant le lavage",
+          "categorie": "sol-pvc",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : Sol PVC."
+        },
+        {
+          "id": "chiffon-doux-a-peine-humid",
+          "texte": "Chiffon doux à peine humide, jamais de pulvérisation directe",
+          "categorie": "ecran-de-television",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : Écran de télévision."
+        },
+        {
+          "id": "produit-specifique-autoris",
+          "texte": "Produit spécifique autorisé par le fabricant",
+          "categorie": "ecran-de-television",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : Écran de télévision."
+        },
+        {
+          "id": "raclette-et-produit-vitres",
+          "texte": "Raclette et produit vitres, sans monter sur un meuble",
+          "categorie": "vitre",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : Vitre."
+        },
+        {
+          "id": "methode-explicitement-auto",
+          "texte": "Méthode explicitement autorisée pour le textile",
+          "categorie": "fauteuil-textile",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : Fauteuil textile."
+        },
+        {
+          "id": "en-cas-de-doute-fiche-fabr",
+          "texte": "En cas de doute : fiche fabricant et protocole",
+          "categorie": "fauteuil-textile",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : Fauteuil textile."
+        }
+      ]
+    },
+    {
+      "id": "tri-3",
+      "type": "tri",
+      "consigne": "Geste autorisé ou geste interdit ?",
+      "categories": [
+        {
+          "id": "geste-autorise",
+          "libelle": "Geste autorisé"
+        },
+        {
+          "id": "geste-interdit",
+          "libelle": "Geste interdit"
+        }
+      ],
+      "elements": [
+        {
+          "id": "lire-l-etiquette-avant-d-u",
+          "texte": "Lire l'étiquette avant d'utiliser un produit",
+          "categorie": "geste-autorise",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : Geste autorisé."
+        },
+        {
+          "id": "respecter-la-dilution-indi",
+          "texte": "Respecter la dilution indiquée sur le bidon",
+          "categorie": "geste-autorise",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : Geste autorisé."
+        },
+        {
+          "id": "porter-les-epi-mentionnes-",
+          "texte": "Porter les EPI mentionnés sur l'étiquette",
+          "categorie": "geste-autorise",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : Geste autorisé."
+        },
+        {
+          "id": "signaler-une-etiquette-ill",
+          "texte": "Signaler une étiquette illisible",
+          "categorie": "geste-autorise",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : Geste autorisé."
+        },
+        {
+          "id": "melanger-deux-produits-pou",
+          "texte": "Mélanger deux produits pour aller plus vite",
+          "categorie": "geste-interdit",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : Geste interdit."
+        },
+        {
+          "id": "pulveriser-directement-sur",
+          "texte": "Pulvériser directement sur un appareil électrique",
+          "categorie": "geste-interdit",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : Geste interdit."
+        },
+        {
+          "id": "doubler-la-dose-pour-mieux",
+          "texte": "Doubler la dose pour mieux désinfecter",
+          "categorie": "geste-interdit",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : Geste interdit."
+        },
+        {
+          "id": "transvaser-un-produit-dans",
+          "texte": "Transvaser un produit dans un flacon sans étiquette",
+          "categorie": "geste-interdit",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : Geste interdit."
+        }
+      ]
+    }
+  ],
+  "debriefing": [
+    "Quelle notion de cette séance avez-vous le mieux réussie ?",
+    "Quelle notion devez-vous revoir, et dans quel document du cours ?"
+  ]
+}

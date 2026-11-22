@@ -1,0 +1,333 @@
+{
+  "id": "m76-entrainement-s4-04",
+  "statut": "valide",
+  "format": "entrainement",
+  "titre": "Bien-être socio-esthétique : choix, image de soi et valorisation",
+  "duree_min": 5,
+  "sequence_requise": "S4",
+  "lieu": "salon",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "C2.1.4",
+      "critere": "Adaptation des gestes aux capacités et aux besoins de la personne âgée."
+    }
+  ],
+  "situation": "Entraînement rapide sur les notions de la séance S4-04 : Bien-être socio-esthétique : choix, image de soi et valorisation.",
+  "objectif_eleve": "Réviser les notions de la séance : répondre vite et juste, puis lire les corrections.",
+  "note_pour_audrey": "Entraînement généré pour la tâche Q.4 à partir de l'activité interactive de votre séance S4-04 (exercices repris tels quels, sans réécriture). Compétence : la compétence principale de la séance ; critère choisi par l'IA parmi les critères officiels de cette compétence (celui qui partage le plus de mots avec les exercices) : à vérifier.",
+  "etapes": [
+    {
+      "id": "association-1",
+      "type": "association",
+      "consigne": "Reliez chaque mot à sa définition.",
+      "paires": [
+        {
+          "id": "socio-esthetique",
+          "terme": "socio-esthétique",
+          "definition": "activités de bien-être et d’apparence au service du confort et du lien social",
+          "points": {
+            "C2.1.4": 1
+          }
+        },
+        {
+          "id": "image-de-soi",
+          "terme": "image de soi",
+          "definition": "représentation qu’une personne a d’elle-même",
+          "points": {
+            "C2.1.4": 1
+          }
+        },
+        {
+          "id": "consentement",
+          "terme": "consentement",
+          "definition": "accord libre, demandé avant, révocable à tout moment",
+          "points": {
+            "C2.1.4": 1
+          }
+        },
+        {
+          "id": "accessoire-personnel",
+          "terme": "accessoire personnel",
+          "definition": "objet appartenant à la personne, identifié et entretenu",
+          "points": {
+            "C2.1.4": 1
+          }
+        },
+        {
+          "id": "valoriser",
+          "terme": "valoriser",
+          "definition": "reconnaître et encourager ce que la personne réussit",
+          "points": {
+            "C2.1.4": 1
+          }
+        },
+        {
+          "id": "infantiliser",
+          "terme": "infantiliser",
+          "definition": "traiter un adulte comme un enfant",
+          "points": {
+            "C2.1.4": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "tri-2",
+      "type": "tri",
+      "consigne": "Classez chaque carte.",
+      "categories": [
+        {
+          "id": "attitude-respectueus",
+          "libelle": "Attitude respectueuse"
+        },
+        {
+          "id": "attitude-a-eviter",
+          "libelle": "Attitude à éviter"
+        }
+      ],
+      "elements": [
+        {
+          "id": "demander-a-mme-rose-ce-qu-",
+          "texte": "Demander à Mme Rose ce qu’elle souhaite.",
+          "categorie": "attitude-respectueus",
+          "points": {
+            "C2.1.4": 1
+          },
+          "retour": "Réponse attendue : Attitude respectueuse."
+        },
+        {
+          "id": "utiliser-sa-creme-habituel",
+          "texte": "Utiliser sa crème habituelle.",
+          "categorie": "attitude-respectueus",
+          "points": {
+            "C2.1.4": 1
+          },
+          "retour": "Réponse attendue : Attitude respectueuse."
+        },
+        {
+          "id": "la-laisser-se-coiffer-seul",
+          "texte": "La laisser se coiffer seule, l’aider pour l’arrière.",
+          "categorie": "attitude-respectueus",
+          "points": {
+            "C2.1.4": 1
+          },
+          "retour": "Réponse attendue : Attitude respectueuse."
+        },
+        {
+          "id": "transmettre-la-rougeur-pre",
+          "texte": "Transmettre la rougeur près de l’ongle.",
+          "categorie": "attitude-respectueus",
+          "points": {
+            "C2.1.4": 1
+          },
+          "retour": "Réponse attendue : Attitude respectueuse."
+        },
+        {
+          "id": "lui-mettre-du-parfum-malgr",
+          "texte": "Lui mettre du parfum malgré son refus.",
+          "categorie": "attitude-a-eviter",
+          "points": {
+            "C2.1.4": 1
+          },
+          "retour": "Réponse attendue : Attitude à éviter."
+        },
+        {
+          "id": "l-appeler-ma-petite-dame",
+          "texte": "L’appeler « ma petite dame ».",
+          "categorie": "attitude-a-eviter",
+          "points": {
+            "C2.1.4": 1
+          },
+          "retour": "Réponse attendue : Attitude à éviter."
+        },
+        {
+          "id": "soigner-soi-meme-la-rougeu",
+          "texte": "Soigner soi-même la rougeur de l’ongle.",
+          "categorie": "attitude-a-eviter",
+          "points": {
+            "C2.1.4": 1
+          },
+          "retour": "Réponse attendue : Attitude à éviter."
+        },
+        {
+          "id": "utiliser-la-brosse-d-une-a",
+          "texte": "Utiliser la brosse d’une autre résidente.",
+          "categorie": "attitude-a-eviter",
+          "points": {
+            "C2.1.4": 1
+          },
+          "retour": "Réponse attendue : Attitude à éviter."
+        }
+      ]
+    },
+    {
+      "id": "ordre-3",
+      "type": "ordre",
+      "consigne": "Remettez dans l'ordre.",
+      "elements": [
+        {
+          "id": "demander-a-mme-rose-ce-qu-",
+          "texte": "Demander à Mme Rose ce qu’elle souhaite.",
+          "points": {
+            "C2.1.4": 1
+          }
+        },
+        {
+          "id": "preparer-son-materiel-pers",
+          "texte": "Préparer son matériel personnel et ses produits.",
+          "points": {
+            "C2.1.4": 1
+          }
+        },
+        {
+          "id": "la-laisser-realiser-les-ge",
+          "texte": "La laisser réaliser les gestes possibles.",
+          "points": {
+            "C2.1.4": 1
+          }
+        },
+        {
+          "id": "valoriser-le-resultat-avec",
+          "texte": "Valoriser le résultat avec elle.",
+          "points": {
+            "C2.1.4": 1
+          }
+        },
+        {
+          "id": "transmettre-l-anomalie-obs",
+          "texte": "Transmettre l’anomalie observée.",
+          "points": {
+            "C2.1.4": 1
+          }
+        }
+      ],
+      "retour": "Ordre repris de la séance S4-04."
+    },
+    {
+      "id": "selection-4",
+      "type": "selection",
+      "consigne": "Vrai ou faux ?",
+      "question": "Cochez les phrases vraies.",
+      "elements": [
+        {
+          "id": "je-peux-insister-pour-que-",
+          "texte": "Je peux insister pour que Mme Rose mette du parfum.",
+          "attendu": false,
+          "points": {
+            "C2.1.4": 1
+          },
+          "retour": "Faux : Elle a le droit de refuser."
+        },
+        {
+          "id": "j-utilise-la-creme-habitue",
+          "texte": "J’utilise la crème habituelle de Mme Rose.",
+          "attendu": true,
+          "points": {
+            "C2.1.4": 1
+          },
+          "retour": "Vrai : Produit identifié qu’elle a choisi."
+        },
+        {
+          "id": "je-soigne-moi-meme-la-roug",
+          "texte": "Je soigne moi-même la rougeur près de l’ongle.",
+          "attendu": false,
+          "points": {
+            "C2.1.4": 1
+          },
+          "retour": "Faux : Je transmets, je ne fais pas de soin spécialisé."
+        },
+        {
+          "id": "laisser-mme-rose-se-coiffe",
+          "texte": "Laisser Mme Rose se coiffer valorise ses capacités.",
+          "attendu": true,
+          "points": {
+            "C2.1.4": 1
+          },
+          "retour": "Vrai : Je fais avec elle."
+        },
+        {
+          "id": "le-consentement-peut-etre-",
+          "texte": "Le consentement peut être retiré à tout moment.",
+          "attendu": true,
+          "points": {
+            "C2.1.4": 1
+          },
+          "retour": "Vrai : Il est révocable."
+        }
+      ]
+    },
+    {
+      "id": "qcm-5",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Qui choisit l’apparence de Mme Rose ?",
+      "options": [
+        {
+          "texte": "L’agent"
+        },
+        {
+          "texte": "Mme Rose",
+          "juste": true
+        },
+        {
+          "texte": "Sa voisine"
+        }
+      ],
+      "points": {
+        "C2.1.4": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S4-04 si besoin."
+    },
+    {
+      "id": "qcm-6",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Face au refus du parfum, je…",
+      "options": [
+        {
+          "texte": "le mets quand même"
+        },
+        {
+          "texte": "insiste doucement"
+        },
+        {
+          "texte": "respecte le refus",
+          "juste": true
+        }
+      ],
+      "points": {
+        "C2.1.4": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S4-04 si besoin."
+    },
+    {
+      "id": "qcm-7",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "« Ma petite dame » est une formule qui…",
+      "options": [
+        {
+          "texte": "infantilise",
+          "juste": true
+        },
+        {
+          "texte": "rassure toujours"
+        },
+        {
+          "texte": "valorise"
+        }
+      ],
+      "points": {
+        "C2.1.4": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S4-04 si besoin."
+    }
+  ],
+  "debriefing": [
+    "Quelle notion de cette séance avez-vous le mieux réussie ?",
+    "Quelle notion devez-vous revoir, et dans quel document du cours ?"
+  ]
+}

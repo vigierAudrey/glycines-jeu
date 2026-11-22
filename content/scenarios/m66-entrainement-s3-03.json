@@ -1,0 +1,248 @@
+{
+  "id": "m66-entrainement-s3-03",
+  "statut": "valide",
+  "format": "entrainement",
+  "titre": "TP réfection de lit inoccupé : démonstration et réalisation guidée",
+  "duree_min": 5,
+  "sequence_requise": "S3",
+  "lieu": "salon",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "C2.1.1",
+      "critere": "Respect des règles d’hygiène et de sécurité, d’ergonomie."
+    }
+  ],
+  "situation": "Entraînement rapide sur les notions de la séance S3-03 : TP réfection de lit inoccupé : démonstration et réalisation guidée.",
+  "objectif_eleve": "Réviser les notions de la séance : répondre vite et juste, puis lire les corrections.",
+  "note_pour_audrey": "Entraînement généré pour la tâche Q.4 à partir de l'activité interactive de votre séance S3-03 (exercices repris tels quels, sans réécriture). Compétence : la compétence principale de la séance ; critère choisi par l'IA parmi les critères officiels de cette compétence (celui qui partage le plus de mots avec les exercices) : à vérifier.",
+  "etapes": [
+    {
+      "id": "association-1",
+      "type": "association",
+      "consigne": "Reliez chaque mot à sa définition.",
+      "paires": [
+        {
+          "id": "refection-complete",
+          "terme": "Réfection complète",
+          "definition": "Changement de l’ensemble du linge prévu sur un lit inoccupé avec remise en état conforme.",
+          "points": {
+            "C2.1.1": 1
+          }
+        },
+        {
+          "id": "circuit-propre-sale",
+          "terme": "Circuit propre/sale",
+          "definition": "Organisation empêchant le croisement ou le contact entre éléments propres et contaminés.",
+          "points": {
+            "C2.1.1": 1
+          }
+        },
+        {
+          "id": "temps-de-contact",
+          "terme": "Temps de contact",
+          "definition": "Durée pendant laquelle un produit doit rester sur la surface selon son étiquette ou sa fiche technique pour obtenir l’effet annoncé.",
+          "points": {
+            "C2.1.1": 1
+          }
+        },
+        {
+          "id": "ergonomie",
+          "terme": "Ergonomie",
+          "definition": "Organisation du poste et des gestes limitant les contraintes physiques pour le professionnel.",
+          "points": {
+            "C2.1.1": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "tri-2",
+      "type": "tri",
+      "consigne": "Réfection du lit : remets les étapes dans l'ordre",
+      "categories": [
+        {
+          "id": "1-avant-le-geste",
+          "libelle": "1. Avant le geste"
+        },
+        {
+          "id": "2-pendant-le-geste",
+          "libelle": "2. Pendant le geste"
+        },
+        {
+          "id": "3-apres-le-geste",
+          "libelle": "3. Après le geste"
+        }
+      ],
+      "elements": [
+        {
+          "id": "preparer-le-chariot-et-le-",
+          "texte": "Préparer le chariot et le linge dans l'ordre d'utilisation",
+          "categorie": "1-avant-le-geste",
+          "points": {
+            "C2.1.1": 1
+          },
+          "retour": "Réponse attendue : 1. Avant le geste."
+        },
+        {
+          "id": "freiner-le-lit-et-le-mettr",
+          "texte": "Freiner le lit et le mettre à ma hauteur",
+          "categorie": "1-avant-le-geste",
+          "points": {
+            "C2.1.1": 1
+          },
+          "retour": "Réponse attendue : 1. Avant le geste."
+        },
+        {
+          "id": "realiser-l-hygiene-des-mai",
+          "texte": "Réaliser l'hygiène des mains",
+          "categorie": "1-avant-le-geste",
+          "points": {
+            "C2.1.1": 1
+          },
+          "retour": "Réponse attendue : 1. Avant le geste."
+        },
+        {
+          "id": "retirer-le-linge-sale-en-l",
+          "texte": "Retirer le linge sale en le roulant sans le secouer",
+          "categorie": "2-pendant-le-geste",
+          "points": {
+            "C2.1.1": 1
+          },
+          "retour": "Réponse attendue : 2. Pendant le geste."
+        },
+        {
+          "id": "bionettoyer-le-lit-et-resp",
+          "texte": "Bionettoyer le lit et respecter le temps de contact",
+          "categorie": "2-pendant-le-geste",
+          "points": {
+            "C2.1.1": 1
+          },
+          "retour": "Réponse attendue : 2. Pendant le geste."
+        },
+        {
+          "id": "poser-le-linge-propre-tend",
+          "texte": "Poser le linge propre tendu et sans pli",
+          "categorie": "2-pendant-le-geste",
+          "points": {
+            "C2.1.1": 1
+          },
+          "retour": "Réponse attendue : 2. Pendant le geste."
+        },
+        {
+          "id": "remettre-le-lit-a-la-posit",
+          "texte": "Remettre le lit à la position prévue pour la personne",
+          "categorie": "3-apres-le-geste",
+          "points": {
+            "C2.1.1": 1
+          },
+          "retour": "Réponse attendue : 3. Après le geste."
+        },
+        {
+          "id": "evacuer-le-linge-sale-par-",
+          "texte": "Évacuer le linge sale par le circuit prévu",
+          "categorie": "3-apres-le-geste",
+          "points": {
+            "C2.1.1": 1
+          },
+          "retour": "Réponse attendue : 3. Après le geste."
+        },
+        {
+          "id": "tracer-l-activite-et-trans",
+          "texte": "Tracer l'activité et transmettre",
+          "categorie": "3-apres-le-geste",
+          "points": {
+            "C2.1.1": 1
+          },
+          "retour": "Réponse attendue : 3. Après le geste."
+        }
+      ]
+    },
+    {
+      "id": "tri-3",
+      "type": "tri",
+      "consigne": "Propre ou sale : où va ce geste ?",
+      "categories": [
+        {
+          "id": "cote-propre",
+          "libelle": "Côté propre"
+        },
+        {
+          "id": "cote-sale",
+          "libelle": "Côté sale"
+        }
+      ],
+      "elements": [
+        {
+          "id": "le-linge-propre-reste-prot",
+          "texte": "Le linge propre resté protégé sur le chariot",
+          "categorie": "cote-propre",
+          "points": {
+            "C2.1.1": 1
+          },
+          "retour": "Réponse attendue : Côté propre."
+        },
+        {
+          "id": "le-lit-bionettoye-et-seche",
+          "texte": "Le lit bionettoyé et séché",
+          "categorie": "cote-propre",
+          "points": {
+            "C2.1.1": 1
+          },
+          "retour": "Réponse attendue : Côté propre."
+        },
+        {
+          "id": "mes-mains-apres-l-hygiene-",
+          "texte": "Mes mains après l'hygiène des mains",
+          "categorie": "cote-propre",
+          "points": {
+            "C2.1.1": 1
+          },
+          "retour": "Réponse attendue : Côté propre."
+        },
+        {
+          "id": "le-drap-retire-du-lit",
+          "texte": "Le drap retiré du lit",
+          "categorie": "cote-sale",
+          "points": {
+            "C2.1.1": 1
+          },
+          "retour": "Réponse attendue : Côté sale."
+        },
+        {
+          "id": "la-lavette-qui-a-servi",
+          "texte": "La lavette qui a servi",
+          "categorie": "cote-sale",
+          "points": {
+            "C2.1.1": 1
+          },
+          "retour": "Réponse attendue : Côté sale."
+        },
+        {
+          "id": "le-sac-de-collecte-ferme",
+          "texte": "Le sac de collecte fermé",
+          "categorie": "cote-sale",
+          "points": {
+            "C2.1.1": 1
+          },
+          "retour": "Réponse attendue : Côté sale."
+        },
+        {
+          "id": "la-taie-plaquee-contre-ma-",
+          "texte": "La taie plaquée contre ma tenue",
+          "categorie": "cote-sale",
+          "points": {
+            "C2.1.1": 1
+          },
+          "retour": "Réponse attendue : Côté sale."
+        }
+      ]
+    }
+  ],
+  "debriefing": [
+    "Quelle notion de cette séance avez-vous le mieux réussie ?",
+    "Quelle notion devez-vous revoir, et dans quel document du cours ?"
+  ]
+}

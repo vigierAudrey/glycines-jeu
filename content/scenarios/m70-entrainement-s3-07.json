@@ -1,0 +1,230 @@
+{
+  "id": "m70-entrainement-s3-07",
+  "statut": "valide",
+  "format": "entrainement",
+  "titre": "TP entretien journalier : chambre, salle d’eau et surfaces",
+  "duree_min": 5,
+  "sequence_requise": "S3",
+  "lieu": "salon",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "C2.2.1",
+      "critere": "Choix du matériel, des produits adaptés et utilisation correcte."
+    }
+  ],
+  "situation": "Entraînement rapide sur les notions de la séance S3-07 : TP entretien journalier : chambre, salle d’eau et surfaces.",
+  "objectif_eleve": "Réviser les notions de la séance : répondre vite et juste, puis lire les corrections.",
+  "note_pour_audrey": "Entraînement généré pour la tâche Q.4 à partir de l'activité interactive de votre séance S3-07 (exercices repris tels quels, sans réécriture). Compétence : la compétence principale de la séance ; critère choisi par l'IA parmi les critères officiels de cette compétence (celui qui partage le plus de mots avec les exercices) : à vérifier.",
+  "etapes": [
+    {
+      "id": "association-1",
+      "type": "association",
+      "consigne": "Reliez chaque mot à sa définition.",
+      "paires": [
+        {
+          "id": "plan-d-entretien",
+          "terme": "Plan d’entretien",
+          "definition": "Document qui précise zones, fréquences, techniques, produits, responsabilités et traçabilité.",
+          "points": {
+            "C2.2.1": 1
+          }
+        },
+        {
+          "id": "point-de-contact",
+          "terme": "Point de contact",
+          "definition": "Surface fréquemment touchée, par exemple une poignée ou un interrupteur.",
+          "points": {
+            "C2.2.1": 1
+          }
+        },
+        {
+          "id": "impregnation",
+          "terme": "Imprégnation",
+          "definition": "Application contrôlée d’une solution sur une lavette ou un bandeau selon la méthode prévue.",
+          "points": {
+            "C2.2.1": 1
+          }
+        },
+        {
+          "id": "controle-qualite",
+          "terme": "Contrôle qualité",
+          "definition": "Vérification structurée du résultat, de la sécurité, du rangement et de la conformité au protocole.",
+          "points": {
+            "C2.2.1": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "tri-2",
+      "type": "tri",
+      "consigne": "Entretien journalier : dans quel ordre ?",
+      "categories": [
+        {
+          "id": "je-commence-par",
+          "libelle": "Je commence par"
+        },
+        {
+          "id": "ensuite",
+          "libelle": "Ensuite"
+        },
+        {
+          "id": "je-termine-par",
+          "libelle": "Je termine par"
+        }
+      ],
+      "elements": [
+        {
+          "id": "demander-l-accord-de-m-kar",
+          "texte": "Demander l'accord de M. Karim et convenir du moment",
+          "categorie": "je-commence-par",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : Je commence par."
+        },
+        {
+          "id": "preparer-le-chariot-et-ver",
+          "texte": "Préparer le chariot et vérifier le produit",
+          "categorie": "je-commence-par",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : Je commence par."
+        },
+        {
+          "id": "proteger-les-effets-person",
+          "texte": "Protéger les effets personnels",
+          "categorie": "je-commence-par",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : Je commence par."
+        },
+        {
+          "id": "les-surfaces-les-plus-prop",
+          "texte": "Les surfaces les plus propres et les points de contact",
+          "categorie": "ensuite",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : Ensuite."
+        },
+        {
+          "id": "la-salle-d-eau-avec-le-mat",
+          "texte": "La salle d'eau avec le matériel qui lui est réservé",
+          "categorie": "ensuite",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : Ensuite."
+        },
+        {
+          "id": "le-sol-du-fond-vers-la-sor",
+          "texte": "Le sol, du fond vers la sortie",
+          "categorie": "je-termine-par",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : Je termine par."
+        },
+        {
+          "id": "remettre-le-carnet-a-la-pl",
+          "texte": "Remettre le carnet à la place choisie par M. Karim",
+          "categorie": "je-termine-par",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : Je termine par."
+        },
+        {
+          "id": "nettoyer-le-materiel-trace",
+          "texte": "Nettoyer le matériel, tracer et transmettre",
+          "categorie": "je-termine-par",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : Je termine par."
+        }
+      ]
+    },
+    {
+      "id": "tri-3",
+      "type": "tri",
+      "consigne": "Les effets personnels pendant l'entretien",
+      "categories": [
+        {
+          "id": "ce-que-je-fais",
+          "libelle": "Ce que je fais"
+        },
+        {
+          "id": "ce-que-je-ne-fais-pa",
+          "libelle": "Ce que je ne fais pas"
+        }
+      ],
+      "elements": [
+        {
+          "id": "demander-ou-m-karim-veut-r",
+          "texte": "Demander où M. Karim veut retrouver son carnet",
+          "categorie": "ce-que-je-fais",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : Ce que je fais."
+        },
+        {
+          "id": "proteger-les-objets-avant-",
+          "texte": "Protéger les objets avant de nettoyer autour",
+          "categorie": "ce-que-je-fais",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : Ce que je fais."
+        },
+        {
+          "id": "signaler-un-objet-abime-sa",
+          "texte": "Signaler un objet abîmé sans y toucher davantage",
+          "categorie": "ce-que-je-fais",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : Ce que je fais."
+        },
+        {
+          "id": "ranger-ses-affaires-a-ma-f",
+          "texte": "Ranger ses affaires à ma façon parce que c'est plus pratique",
+          "categorie": "ce-que-je-ne-fais-pa",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : Ce que je ne fais pas."
+        },
+        {
+          "id": "jeter-un-emballage-qui-lui",
+          "texte": "Jeter un emballage qui lui appartient peut-être",
+          "categorie": "ce-que-je-ne-fais-pa",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : Ce que je ne fais pas."
+        },
+        {
+          "id": "deplacer-ses-reperes-sans-",
+          "texte": "Déplacer ses repères sans l'informer",
+          "categorie": "ce-que-je-ne-fais-pa",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : Ce que je ne fais pas."
+        }
+      ]
+    }
+  ],
+  "debriefing": [
+    "Quelle notion de cette séance avez-vous le mieux réussie ?",
+    "Quelle notion devez-vous revoir, et dans quel document du cours ?"
+  ]
+}

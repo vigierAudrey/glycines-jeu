@@ -1,0 +1,243 @@
+{
+  "id": "m65-entrainement-s3-02",
+  "statut": "valide",
+  "format": "entrainement",
+  "titre": "Chambre de M. Karim : lit, habitudes, effets personnels et liens",
+  "duree_min": 5,
+  "sequence_requise": "S3",
+  "lieu": "salon",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "C2.2.2",
+      "critere": "Écoute attentive, active de la personne et de sa famille."
+    }
+  ],
+  "situation": "Entraînement rapide sur les notions de la séance S3-02 : Chambre de M. Karim : lit, habitudes, effets personnels et liens.",
+  "objectif_eleve": "Réviser les notions de la séance : répondre vite et juste, puis lire les corrections.",
+  "note_pour_audrey": "Entraînement généré pour la tâche Q.4 à partir de l'activité interactive de votre séance S3-02 (exercices repris tels quels, sans réécriture). Compétence : la compétence principale de la séance ; critère choisi par l'IA parmi les critères officiels de cette compétence (celui qui partage le plus de mots avec les exercices) : à vérifier.",
+  "etapes": [
+    {
+      "id": "association-1",
+      "type": "association",
+      "consigne": "Reliez chaque mot à sa définition.",
+      "paires": [
+        {
+          "id": "lit-medicalise",
+          "terme": "Lit médicalisé",
+          "definition": "Lit réglable doté de fonctions facilitant le confort, la sécurité et certaines interventions.",
+          "points": {
+            "C2.2.2": 1
+          }
+        },
+        {
+          "id": "adhesion",
+          "terme": "Adhésion",
+          "definition": "Accord recherché auprès de la personne après une information compréhensible.",
+          "points": {
+            "C2.2.2": 1
+          }
+        },
+        {
+          "id": "effet-personnel",
+          "terme": "Effet personnel",
+          "definition": "Objet appartenant à la personne et devant être respecté, protégé et rangé avec son accord.",
+          "points": {
+            "C2.2.2": 1
+          }
+        },
+        {
+          "id": "lien-affectif",
+          "terme": "Lien affectif",
+          "definition": "Relation significative avec l’entourage, entretenue notamment par les visites et les échanges à distance.",
+          "points": {
+            "C2.2.2": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "tri-2",
+      "type": "tri",
+      "consigne": "Le lit médicalisé : fonction, accessoire ou contrôle ?",
+      "categories": [
+        {
+          "id": "fonction-du-lit",
+          "libelle": "Fonction du lit"
+        },
+        {
+          "id": "accessoire",
+          "libelle": "Accessoire"
+        },
+        {
+          "id": "je-controle-avant-d-",
+          "libelle": "Je contrôle avant d'intervenir"
+        }
+      ],
+      "elements": [
+        {
+          "id": "la-hauteur-variable",
+          "texte": "La hauteur variable",
+          "categorie": "fonction-du-lit",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : Fonction du lit."
+        },
+        {
+          "id": "le-releve-buste",
+          "texte": "Le relève-buste",
+          "categorie": "fonction-du-lit",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : Fonction du lit."
+        },
+        {
+          "id": "la-telecommande",
+          "texte": "La télécommande",
+          "categorie": "fonction-du-lit",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : Fonction du lit."
+        },
+        {
+          "id": "l-alese",
+          "texte": "L'alèse",
+          "categorie": "accessoire",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : Accessoire."
+        },
+        {
+          "id": "la-table-de-lit",
+          "texte": "La table de lit",
+          "categorie": "accessoire",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : Accessoire."
+        },
+        {
+          "id": "la-potence-si-elle-est-pre",
+          "texte": "La potence, si elle est prévue",
+          "categorie": "accessoire",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : Accessoire."
+        },
+        {
+          "id": "les-freins-des-roues",
+          "texte": "Les freins des roues",
+          "categorie": "je-controle-avant-d-",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : Je contrôle avant d'intervenir."
+        },
+        {
+          "id": "l-etat-apparent-du-lit-et-",
+          "texte": "L'état apparent du lit et de ses commandes",
+          "categorie": "je-controle-avant-d-",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : Je contrôle avant d'intervenir."
+        }
+      ]
+    },
+    {
+      "id": "tri-3",
+      "type": "tri",
+      "consigne": "La chambre de M. Karim : qui décide ?",
+      "categories": [
+        {
+          "id": "m-karim-decide",
+          "libelle": "M. Karim décide"
+        },
+        {
+          "id": "sa-fille-propose-j-e",
+          "libelle": "Sa fille propose, j'écoute"
+        },
+        {
+          "id": "l-equipe-fixe-le-cad",
+          "libelle": "L'équipe fixe le cadre"
+        }
+      ],
+      "elements": [
+        {
+          "id": "garder-sa-radio-sur-la-tab",
+          "texte": "Garder sa radio sur la table de nuit",
+          "categorie": "m-karim-decide",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : M. Karim décide."
+        },
+        {
+          "id": "choisir-combien-de-cadres-",
+          "texte": "Choisir combien de cadres il veut accrocher",
+          "categorie": "m-karim-decide",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : M. Karim décide."
+        },
+        {
+          "id": "accepter-ou-refuser-que-je",
+          "texte": "Accepter ou refuser que je déplace son carnet",
+          "categorie": "m-karim-decide",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : M. Karim décide."
+        },
+        {
+          "id": "souhaiter-ajouter-des-phot",
+          "texte": "Souhaiter ajouter des photos de famille",
+          "categorie": "sa-fille-propose-j-e",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : Sa fille propose, j'écoute."
+        },
+        {
+          "id": "demander-que-son-pere-soit",
+          "texte": "Demander que son père soit appelé plus souvent",
+          "categorie": "sa-fille-propose-j-e",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : Sa fille propose, j'écoute."
+        },
+        {
+          "id": "laisser-le-passage-libre-a",
+          "texte": "Laisser le passage libre autour du lit",
+          "categorie": "l-equipe-fixe-le-cad",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : L'équipe fixe le cadre."
+        },
+        {
+          "id": "autoriser-ou-non-la-pose-d",
+          "texte": "Autoriser ou non la pose d'une barrière de lit",
+          "categorie": "l-equipe-fixe-le-cad",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : L'équipe fixe le cadre."
+        }
+      ]
+    }
+  ],
+  "debriefing": [
+    "Quelle notion de cette séance avez-vous le mieux réussie ?",
+    "Quelle notion devez-vous revoir, et dans quel document du cours ?"
+  ]
+}

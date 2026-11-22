@@ -1,0 +1,330 @@
+{
+  "id": "m85-entrainement-s5-05",
+  "statut": "valide",
+  "format": "entrainement",
+  "titre": "Fin de vie, cultures de la mort et directives anticipées",
+  "duree_min": 5,
+  "sequence_requise": "S5",
+  "lieu": "salon",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "CT3.4",
+      "critere": "Absence de jugement."
+    }
+  ],
+  "situation": "Entraînement rapide sur les notions de la séance S5-05 : Fin de vie, cultures de la mort et directives anticipées.",
+  "objectif_eleve": "Réviser les notions de la séance : répondre vite et juste, puis lire les corrections.",
+  "note_pour_audrey": "Entraînement généré pour la tâche Q.4 à partir de l'activité interactive de votre séance S5-05 (exercices repris tels quels, sans réécriture). Compétence : la compétence principale de la séance ; critère choisi par l'IA parmi les critères officiels de cette compétence (celui qui partage le plus de mots avec les exercices) : à vérifier.",
+  "etapes": [
+    {
+      "id": "association-1",
+      "type": "association",
+      "consigne": "Reliez chaque mot à sa définition.",
+      "paires": [
+        {
+          "id": "fin-de-vie",
+          "terme": "fin de vie",
+          "definition": "période où une personne approche de la mort",
+          "points": {
+            "CT3.4": 1
+          }
+        },
+        {
+          "id": "directives-anticipee",
+          "terme": "directives anticipées",
+          "definition": "écrit par lequel une personne exprime à l’avance ses volontés pour sa fin de vie",
+          "points": {
+            "CT3.4": 1
+          }
+        },
+        {
+          "id": "rite",
+          "terme": "rite",
+          "definition": "geste ou pratique qui a un sens pour une personne ou un groupe",
+          "points": {
+            "CT3.4": 1
+          }
+        },
+        {
+          "id": "non-jugement",
+          "terme": "non-jugement",
+          "definition": "attitude qui respecte la personne sans imposer son opinion",
+          "points": {
+            "CT3.4": 1
+          }
+        },
+        {
+          "id": "entourage",
+          "terme": "entourage",
+          "definition": "famille et proches de la personne",
+          "points": {
+            "CT3.4": 1
+          }
+        },
+        {
+          "id": "stereotype",
+          "terme": "stéréotype",
+          "definition": "idée toute faite appliquée à un groupe",
+          "points": {
+            "CT3.4": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "tri-2",
+      "type": "tri",
+      "consigne": "Classez chaque carte.",
+      "categories": [
+        {
+          "id": "l-agent-fait",
+          "libelle": "L’agent fait"
+        },
+        {
+          "id": "l-agent-transmet",
+          "libelle": "L’agent transmet"
+        },
+        {
+          "id": "l-agent-ne-decide-pa",
+          "libelle": "L’agent ne décide pas"
+        }
+      ],
+      "elements": [
+        {
+          "id": "rester-present-en-silence-",
+          "texte": "Rester présent en silence si la fille le souhaite.",
+          "categorie": "l-agent-fait",
+          "points": {
+            "CT3.4": 1
+          },
+          "retour": "Réponse attendue : L’agent fait."
+        },
+        {
+          "id": "assurer-le-confort-prevu-p",
+          "texte": "Assurer le confort prévu par l’équipe.",
+          "categorie": "l-agent-fait",
+          "points": {
+            "CT3.4": 1
+          },
+          "retour": "Réponse attendue : L’agent fait."
+        },
+        {
+          "id": "ecouter-sans-imposer-son-a",
+          "texte": "Écouter sans imposer son avis.",
+          "categorie": "l-agent-fait",
+          "points": {
+            "CT3.4": 1
+          },
+          "retour": "Réponse attendue : L’agent fait."
+        },
+        {
+          "id": "rapporter-a-l-equipe-la-de",
+          "texte": "Rapporter à l’équipe la demande du fils.",
+          "categorie": "l-agent-transmet",
+          "points": {
+            "CT3.4": 1
+          },
+          "retour": "Réponse attendue : L’agent transmet."
+        },
+        {
+          "id": "signaler-un-rite-souhaite-",
+          "texte": "Signaler un rite souhaité par M. André.",
+          "categorie": "l-agent-transmet",
+          "points": {
+            "CT3.4": 1
+          },
+          "retour": "Réponse attendue : L’agent transmet."
+        },
+        {
+          "id": "arreter-un-traitement",
+          "texte": "Arrêter un traitement.",
+          "categorie": "l-agent-ne-decide-pa",
+          "points": {
+            "CT3.4": 1
+          },
+          "retour": "Réponse attendue : L’agent ne décide pas."
+        },
+        {
+          "id": "interpreter-seul-les-direc",
+          "texte": "Interpréter seul les directives anticipées.",
+          "categorie": "l-agent-ne-decide-pa",
+          "points": {
+            "CT3.4": 1
+          },
+          "retour": "Réponse attendue : L’agent ne décide pas."
+        },
+        {
+          "id": "choisir-le-rite-a-la-place",
+          "texte": "Choisir le rite à la place de la famille.",
+          "categorie": "l-agent-ne-decide-pa",
+          "points": {
+            "CT3.4": 1
+          },
+          "retour": "Réponse attendue : L’agent ne décide pas."
+        }
+      ]
+    },
+    {
+      "id": "ordre-3",
+      "type": "ordre",
+      "consigne": "Remettez dans l'ordre.",
+      "elements": [
+        {
+          "id": "accueillir-l-entourage-ave",
+          "texte": "Accueillir l’entourage avec calme.",
+          "points": {
+            "CT3.4": 1
+          }
+        },
+        {
+          "id": "ecouter-ce-que-chacun-expr",
+          "texte": "Écouter ce que chacun exprime, parole ou silence.",
+          "points": {
+            "CT3.4": 1
+          }
+        },
+        {
+          "id": "assurer-la-presence-et-le-",
+          "texte": "Assurer la présence et le confort prévus.",
+          "points": {
+            "CT3.4": 1
+          }
+        },
+        {
+          "id": "transmettre-les-besoins-ex",
+          "texte": "Transmettre les besoins exprimés à l’équipe.",
+          "points": {
+            "CT3.4": 1
+          }
+        }
+      ],
+      "retour": "Ordre repris de la séance S5-05."
+    },
+    {
+      "id": "selection-4",
+      "type": "selection",
+      "consigne": "Vrai ou faux ?",
+      "question": "Cochez les phrases vraies.",
+      "elements": [
+        {
+          "id": "toutes-les-familles-reagis",
+          "texte": "Toutes les familles réagissent de la même façon face à la mort.",
+          "attendu": false,
+          "points": {
+            "CT3.4": 1
+          },
+          "retour": "Faux : Les réactions sont diverses et personnelles."
+        },
+        {
+          "id": "je-demande-et-verifie-les-",
+          "texte": "Je demande et vérifie les souhaits de la personne.",
+          "attendu": true,
+          "points": {
+            "CT3.4": 1
+          },
+          "retour": "Vrai : Je ne suppose pas à partir d’une culture."
+        },
+        {
+          "id": "les-directives-anticipees-",
+          "texte": "Les directives anticipées sont rédigées par la personne elle-même.",
+          "attendu": true,
+          "points": {
+            "CT3.4": 1
+          },
+          "retour": "Vrai : Elles expriment ses volontés."
+        },
+        {
+          "id": "l-agent-peut-modifier-un-s",
+          "texte": "L’agent peut modifier un soin selon les directives anticipées.",
+          "attendu": false,
+          "points": {
+            "CT3.4": 1
+          },
+          "retour": "Faux : Il ne prend pas de décision médicale."
+        },
+        {
+          "id": "le-silence-peut-etre-un-be",
+          "texte": "Le silence peut être un besoin de l’entourage.",
+          "attendu": true,
+          "points": {
+            "CT3.4": 1
+          },
+          "retour": "Vrai : Parler ou se taire : aucune réaction n’est automatique."
+        }
+      ]
+    },
+    {
+      "id": "qcm-5",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Les directives anticipées expriment…",
+      "options": [
+        {
+          "texte": "les volontés de la personne",
+          "juste": true
+        },
+        {
+          "texte": "l’avis de l’agent"
+        },
+        {
+          "texte": "le règlement de l’EHPAD"
+        }
+      ],
+      "points": {
+        "CT3.4": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S5-05 si besoin."
+    },
+    {
+      "id": "qcm-6",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "« Dans sa culture, ils font toujours comme ça » est…",
+      "options": [
+        {
+          "texte": "une consigne"
+        },
+        {
+          "texte": "un stéréotype",
+          "juste": true
+        },
+        {
+          "texte": "un fait vérifié"
+        }
+      ],
+      "points": {
+        "CT3.4": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S5-05 si besoin."
+    },
+    {
+      "id": "qcm-7",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Face à la colère d’un proche, je…",
+      "options": [
+        {
+          "texte": "hausse le ton"
+        },
+        {
+          "texte": "le juge"
+        },
+        {
+          "texte": "l’écoute et transmets",
+          "juste": true
+        }
+      ],
+      "points": {
+        "CT3.4": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S5-05 si besoin."
+    }
+  ],
+  "debriefing": [
+    "Quelle notion de cette séance avez-vous le mieux réussie ?",
+    "Quelle notion devez-vous revoir, et dans quel document du cours ?"
+  ]
+}

@@ -1,0 +1,326 @@
+{
+  "id": "m89-entrainement-s5-09",
+  "statut": "valide",
+  "format": "entrainement",
+  "titre": "Évaluation C2.1.6 et préparation structurée EP2",
+  "duree_min": 5,
+  "sequence_requise": "S5",
+  "lieu": "salon",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "C2.1.6",
+      "critere": "Transmission des informations préoccupantes aux personnes compétentes."
+    }
+  ],
+  "situation": "Entraînement rapide sur les notions de la séance S5-09 : Évaluation C2.1.6 et préparation structurée EP2.",
+  "objectif_eleve": "Réviser les notions de la séance : répondre vite et juste, puis lire les corrections.",
+  "note_pour_audrey": "Entraînement généré pour la tâche Q.4 à partir de l'activité interactive de votre séance S5-09 (exercices repris tels quels, sans réécriture). Compétence : la compétence principale de la séance ; critère choisi par l'IA parmi les critères officiels de cette compétence (celui qui partage le plus de mots avec les exercices) : à vérifier.",
+  "etapes": [
+    {
+      "id": "association-1",
+      "type": "association",
+      "consigne": "Reliez chaque mot à sa définition.",
+      "paires": [
+        {
+          "id": "expliciter",
+          "terme": "expliciter",
+          "definition": "expliquer clairement sa manière d’agir",
+          "points": {
+            "C2.1.6": 1
+          }
+        },
+        {
+          "id": "preuve",
+          "terme": "preuve",
+          "definition": "élément concret qui montre une activité ou une compétence",
+          "points": {
+            "C2.1.6": 1
+          }
+        },
+        {
+          "id": "anonymiser",
+          "terme": "anonymiser",
+          "definition": "retirer les informations permettant d’identifier une personne",
+          "points": {
+            "C2.1.6": 1
+          }
+        },
+        {
+          "id": "ccf",
+          "terme": "CCF",
+          "definition": "contrôle en cours de formation",
+          "points": {
+            "C2.1.6": 1
+          }
+        },
+        {
+          "id": "ligne-de-base",
+          "terme": "ligne de base",
+          "definition": "état habituel de la personne qui sert de comparaison",
+          "points": {
+            "C2.1.6": 1
+          }
+        },
+        {
+          "id": "fiche-ep2",
+          "terme": "fiche EP2",
+          "definition": "description d’une activité professionnelle réellement menée",
+          "points": {
+            "C2.1.6": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "tri-2",
+      "type": "tri",
+      "consigne": "Classez chaque carte.",
+      "categories": [
+        {
+          "id": "utile-dans-la-fiche",
+          "libelle": "Utile dans la fiche"
+        },
+        {
+          "id": "a-retirer",
+          "libelle": "À retirer"
+        }
+      ],
+      "elements": [
+        {
+          "id": "le-contexte-reel-de-la-pfm",
+          "texte": "Le contexte réel de la PFMP.",
+          "categorie": "utile-dans-la-fiche",
+          "points": {
+            "C2.1.6": 1
+          },
+          "retour": "Réponse attendue : Utile dans la fiche."
+        },
+        {
+          "id": "les-etapes-reellement-real",
+          "texte": "Les étapes réellement réalisées.",
+          "categorie": "utile-dans-la-fiche",
+          "points": {
+            "C2.1.6": 1
+          },
+          "retour": "Réponse attendue : Utile dans la fiche."
+        },
+        {
+          "id": "la-justification-de-mes-ch",
+          "texte": "La justification de mes choix.",
+          "categorie": "utile-dans-la-fiche",
+          "points": {
+            "C2.1.6": 1
+          },
+          "retour": "Réponse attendue : Utile dans la fiche."
+        },
+        {
+          "id": "le-controle-du-resultat-et",
+          "texte": "Le contrôle du résultat et la transmission.",
+          "categorie": "utile-dans-la-fiche",
+          "points": {
+            "C2.1.6": 1
+          },
+          "retour": "Réponse attendue : Utile dans la fiche."
+        },
+        {
+          "id": "le-nom-complet-de-la-resid",
+          "texte": "Le nom complet de la résidente.",
+          "categorie": "a-retirer",
+          "points": {
+            "C2.1.6": 1
+          },
+          "retour": "Réponse attendue : À retirer."
+        },
+        {
+          "id": "une-activite-que-je-n-ai-j",
+          "texte": "Une activité que je n’ai jamais réalisée.",
+          "categorie": "a-retirer",
+          "points": {
+            "C2.1.6": 1
+          },
+          "retour": "Réponse attendue : À retirer."
+        },
+        {
+          "id": "un-jugement-sur-une-colleg",
+          "texte": "Un jugement sur une collègue.",
+          "categorie": "a-retirer",
+          "points": {
+            "C2.1.6": 1
+          },
+          "retour": "Réponse attendue : À retirer."
+        },
+        {
+          "id": "le-numero-de-chambre-et-le",
+          "texte": "Le numéro de chambre et le nom de la structure si l’anonymat est demandé.",
+          "categorie": "a-retirer",
+          "points": {
+            "C2.1.6": 1
+          },
+          "retour": "Réponse attendue : À retirer."
+        }
+      ]
+    },
+    {
+      "id": "ordre-3",
+      "type": "ordre",
+      "consigne": "Remettez dans l'ordre.",
+      "elements": [
+        {
+          "id": "comparer-avec-l-etat-habit",
+          "texte": "Comparer avec l’état habituel de M. André.",
+          "points": {
+            "C2.1.6": 1
+          }
+        },
+        {
+          "id": "relever-les-faits-dates-re",
+          "texte": "Relever les faits datés : repas, peau, paroles.",
+          "points": {
+            "C2.1.6": 1
+          }
+        },
+        {
+          "id": "agir-dans-ma-limite-et-sec",
+          "texte": "Agir dans ma limite et sécuriser.",
+          "points": {
+            "C2.1.6": 1
+          }
+        },
+        {
+          "id": "transmettre-ensemble-les-f",
+          "texte": "Transmettre ensemble les faits à la personne compétente.",
+          "points": {
+            "C2.1.6": 1
+          }
+        }
+      ],
+      "retour": "Ordre repris de la séance S5-09."
+    },
+    {
+      "id": "selection-4",
+      "type": "selection",
+      "consigne": "Vrai ou faux ?",
+      "question": "Cochez les phrases vraies.",
+      "elements": [
+        {
+          "id": "une-fiche-ep2-peut-decrire",
+          "texte": "Une fiche EP2 peut décrire une activité inventée si elle est bien écrite.",
+          "attendu": false,
+          "points": {
+            "C2.1.6": 1
+          },
+          "retour": "Faux : Elle décrit des activités réellement menées."
+        },
+        {
+          "id": "j-explique-pourquoi-j-ai-f",
+          "texte": "J’explique pourquoi j’ai fait chaque choix.",
+          "attendu": true,
+          "points": {
+            "C2.1.6": 1
+          },
+          "retour": "Vrai : Expliciter sa pratique."
+        },
+        {
+          "id": "je-retire-le-nom-de-la-res",
+          "texte": "Je retire le nom de la résidente de ma fiche.",
+          "attendu": true,
+          "points": {
+            "C2.1.6": 1
+          },
+          "retour": "Vrai : J’anonymise les personnes."
+        },
+        {
+          "id": "les-trois-changements-de-m",
+          "texte": "Les trois changements de M. André se transmettent séparément sur plusieurs jours.",
+          "attendu": false,
+          "points": {
+            "C2.1.6": 1
+          },
+          "retour": "Faux : Plusieurs signes réunis se transmettent ensemble."
+        },
+        {
+          "id": "en-voie-scolaire-le-ccf-ep",
+          "texte": "En voie scolaire, le CCF EP2 est évalué en PFMP de dernière année.",
+          "attendu": true,
+          "points": {
+            "C2.1.6": 1
+          },
+          "retour": "Vrai : Les fiches et l’oral servent à se former."
+        }
+      ]
+    },
+    {
+      "id": "qcm-5",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Anonymiser, c’est…",
+      "options": [
+        {
+          "texte": "retirer ce qui permet d’identifier",
+          "juste": true
+        },
+        {
+          "texte": "inventer un nom célèbre"
+        },
+        {
+          "texte": "ajouter des détails"
+        }
+      ],
+      "points": {
+        "C2.1.6": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S5-09 si besoin."
+    },
+    {
+      "id": "qcm-6",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "« Où est ma femme ? », nouveau chez M. André, est…",
+      "options": [
+        {
+          "texte": "un diagnostic"
+        },
+        {
+          "texte": "à transmettre",
+          "juste": true
+        },
+        {
+          "texte": "sans importance"
+        }
+      ],
+      "points": {
+        "C2.1.6": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S5-09 si besoin."
+    },
+    {
+      "id": "qcm-7",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Une fiche EP2 décrit…",
+      "options": [
+        {
+          "texte": "une activité imaginée"
+        },
+        {
+          "texte": "un cours recopié"
+        },
+        {
+          "texte": "une activité réellement menée",
+          "juste": true
+        }
+      ],
+      "points": {
+        "C2.1.6": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S5-09 si besoin."
+    }
+  ],
+  "debriefing": [
+    "Quelle notion de cette séance avez-vous le mieux réussie ?",
+    "Quelle notion devez-vous revoir, et dans quel document du cours ?"
+  ]
+}

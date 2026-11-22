@@ -1,0 +1,330 @@
+{
+  "id": "m82-entrainement-s5-02",
+  "statut": "valide",
+  "format": "entrainement",
+  "titre": "Dépression, troubles neurocognitifs, Alzheimer, Parkinson et douleur",
+  "duree_min": 5,
+  "sequence_requise": "S5",
+  "lieu": "salon",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "C2.1.6",
+      "critere": "Fidélité de la transmission des éléments observés."
+    }
+  ],
+  "situation": "Entraînement rapide sur les notions de la séance S5-02 : Dépression, troubles neurocognitifs, Alzheimer, Parkinson et douleur.",
+  "objectif_eleve": "Réviser les notions de la séance : répondre vite et juste, puis lire les corrections.",
+  "note_pour_audrey": "Entraînement généré pour la tâche Q.4 à partir de l'activité interactive de votre séance S5-02 (exercices repris tels quels, sans réécriture). Compétence : la compétence principale de la séance ; critère choisi par l'IA parmi les critères officiels de cette compétence (celui qui partage le plus de mots avec les exercices) : à vérifier.",
+  "etapes": [
+    {
+      "id": "association-1",
+      "type": "association",
+      "consigne": "Reliez chaque mot à sa définition.",
+      "paires": [
+        {
+          "id": "trouble-neurocogniti",
+          "terme": "trouble neurocognitif",
+          "definition": "trouble qui peut modifier mémoire, repères ou raisonnement",
+          "points": {
+            "C2.1.6": 1
+          }
+        },
+        {
+          "id": "element-depressif",
+          "terme": "élément dépressif",
+          "definition": "signe durable de tristesse, retrait ou perte d’intérêt à transmettre",
+          "points": {
+            "C2.1.6": 1
+          }
+        },
+        {
+          "id": "tremblement",
+          "terme": "tremblement",
+          "definition": "mouvement involontaire observable",
+          "points": {
+            "C2.1.6": 1
+          }
+        },
+        {
+          "id": "douleur",
+          "terme": "douleur",
+          "definition": "expérience exprimée par la personne ou repérée par des signes",
+          "points": {
+            "C2.1.6": 1
+          }
+        },
+        {
+          "id": "repere",
+          "terme": "repère",
+          "definition": "élément stable qui aide la personne à s’orienter",
+          "points": {
+            "C2.1.6": 1
+          }
+        },
+        {
+          "id": "paroles-exactes",
+          "terme": "paroles exactes",
+          "definition": "mots de la personne rapportés entre guillemets",
+          "points": {
+            "C2.1.6": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "tri-2",
+      "type": "tri",
+      "consigne": "Classez chaque carte.",
+      "categories": [
+        {
+          "id": "troubles-neurocognit",
+          "libelle": "Troubles neurocognitifs"
+        },
+        {
+          "id": "parkinson",
+          "libelle": "Parkinson"
+        },
+        {
+          "id": "elements-depressifs",
+          "libelle": "Éléments dépressifs"
+        }
+      ],
+      "elements": [
+        {
+          "id": "donner-une-seule-consigne-",
+          "texte": "Donner une seule consigne à la fois.",
+          "categorie": "troubles-neurocognit",
+          "points": {
+            "C2.1.6": 1
+          },
+          "retour": "Réponse attendue : Troubles neurocognitifs."
+        },
+        {
+          "id": "garder-des-reperes-stables",
+          "texte": "Garder des repères stables dans la chambre.",
+          "categorie": "troubles-neurocognit",
+          "points": {
+            "C2.1.6": 1
+          },
+          "retour": "Réponse attendue : Troubles neurocognitifs."
+        },
+        {
+          "id": "ne-pas-la-contredire-bruta",
+          "texte": "Ne pas la contredire brutalement.",
+          "categorie": "troubles-neurocognit",
+          "points": {
+            "C2.1.6": 1
+          },
+          "retour": "Réponse attendue : Troubles neurocognitifs."
+        },
+        {
+          "id": "lui-laisser-le-temps-de-se",
+          "texte": "Lui laisser le temps de se lever.",
+          "categorie": "parkinson",
+          "points": {
+            "C2.1.6": 1
+          },
+          "retour": "Réponse attendue : Parkinson."
+        },
+        {
+          "id": "ne-pas-le-tirer-par-le-bra",
+          "texte": "Ne pas le tirer par le bras.",
+          "categorie": "parkinson",
+          "points": {
+            "C2.1.6": 1
+          },
+          "retour": "Réponse attendue : Parkinson."
+        },
+        {
+          "id": "securiser-le-trajet-avant-",
+          "texte": "Sécuriser le trajet avant la marche.",
+          "categorie": "parkinson",
+          "points": {
+            "C2.1.6": 1
+          },
+          "retour": "Réponse attendue : Parkinson."
+        },
+        {
+          "id": "l-ecouter-sans-juger-ses-p",
+          "texte": "L’écouter sans juger ses paroles.",
+          "categorie": "elements-depressifs",
+          "points": {
+            "C2.1.6": 1
+          },
+          "retour": "Réponse attendue : Éléments dépressifs."
+        },
+        {
+          "id": "transmettre-ses-propos-pre",
+          "texte": "Transmettre ses propos préoccupants.",
+          "categorie": "elements-depressifs",
+          "points": {
+            "C2.1.6": 1
+          },
+          "retour": "Réponse attendue : Éléments dépressifs."
+        }
+      ]
+    },
+    {
+      "id": "ordre-3",
+      "type": "ordre",
+      "consigne": "Remettez dans l'ordre.",
+      "elements": [
+        {
+          "id": "se-presenter-calmement-fac",
+          "texte": "Se présenter calmement face à Mme Yvette.",
+          "points": {
+            "C2.1.6": 1
+          }
+        },
+        {
+          "id": "lui-donner-une-information",
+          "texte": "Lui donner une information simple et une seule consigne.",
+          "points": {
+            "C2.1.6": 1
+          }
+        },
+        {
+          "id": "l-accompagner-en-s-appuyan",
+          "texte": "L’accompagner en s’appuyant sur un repère connu.",
+          "points": {
+            "C2.1.6": 1
+          }
+        },
+        {
+          "id": "transmettre-le-fait-observ",
+          "texte": "Transmettre le fait observé avec l’heure.",
+          "points": {
+            "C2.1.6": 1
+          }
+        }
+      ],
+      "retour": "Ordre repris de la séance S5-02."
+    },
+    {
+      "id": "selection-4",
+      "type": "selection",
+      "consigne": "Vrai ou faux ?",
+      "question": "Cochez les phrases vraies.",
+      "elements": [
+        {
+          "id": "je-corrige-mme-yvette-ferm",
+          "texte": "Je corrige Mme Yvette fermement quand elle se trompe de chambre.",
+          "attendu": false,
+          "points": {
+            "C2.1.6": 1
+          },
+          "retour": "Faux : Je ne confronte pas brutalement, je donne un repère."
+        },
+        {
+          "id": "je-laisse-a-m-andre-le-tem",
+          "texte": "Je laisse à M. André le temps de se lever.",
+          "attendu": true,
+          "points": {
+            "C2.1.6": 1
+          },
+          "retour": "Vrai : Laisser du temps sécurise et respecte ses capacités."
+        },
+        {
+          "id": "a-quoi-bon-repete-plusieur",
+          "texte": "« À quoi bon ? » répété plusieurs jours est une parole à transmettre.",
+          "attendu": true,
+          "points": {
+            "C2.1.6": 1
+          },
+          "retour": "Vrai : Propos préoccupant et changement durable."
+        },
+        {
+          "id": "la-douleur-se-repere-seule",
+          "texte": "La douleur se repère seulement quand la personne la dit.",
+          "attendu": false,
+          "points": {
+            "C2.1.6": 1
+          },
+          "retour": "Faux : Elle peut aussi se montrer par le visage ou la posture."
+        },
+        {
+          "id": "je-note-ce-que-la-personne",
+          "texte": "Je note ce que la personne dit avec ses propres mots.",
+          "attendu": true,
+          "points": {
+            "C2.1.6": 1
+          },
+          "retour": "Vrai : Je transmets les paroles exactes."
+        }
+      ]
+    },
+    {
+      "id": "qcm-5",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Avec Mme Yvette, je donne…",
+      "options": [
+        {
+          "texte": "une consigne à la fois",
+          "juste": true
+        },
+        {
+          "texte": "aucune explication"
+        },
+        {
+          "texte": "plusieurs consignes à la fois"
+        }
+      ],
+      "points": {
+        "C2.1.6": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S5-02 si besoin."
+    },
+    {
+      "id": "qcm-6",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Pour aider M. André à se lever, je…",
+      "options": [
+        {
+          "texte": "le tire par les bras"
+        },
+        {
+          "texte": "lui laisse le temps et sécurise",
+          "juste": true
+        },
+        {
+          "texte": "fais à sa place"
+        }
+      ],
+      "points": {
+        "C2.1.6": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S5-02 si besoin."
+    },
+    {
+      "id": "qcm-7",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Un élément dépressif est…",
+      "options": [
+        {
+          "texte": "un diagnostic de l’agent"
+        },
+        {
+          "texte": "une fatigue d’un soir"
+        },
+        {
+          "texte": "un signe durable de retrait ou de tristesse",
+          "juste": true
+        }
+      ],
+      "points": {
+        "C2.1.6": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S5-02 si besoin."
+    }
+  ],
+  "debriefing": [
+    "Quelle notion de cette séance avez-vous le mieux réussie ?",
+    "Quelle notion devez-vous revoir, et dans quel document du cours ?"
+  ]
+}

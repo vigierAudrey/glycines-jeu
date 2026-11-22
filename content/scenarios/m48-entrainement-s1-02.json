@@ -1,0 +1,278 @@
+{
+  "id": "m48-entrainement-s1-02",
+  "statut": "valide",
+  "format": "entrainement",
+  "titre": "Qui fait quoi ? Obligations, limites et prévention",
+  "duree_min": 5,
+  "sequence_requise": "S1",
+  "lieu": "salon",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "CT3.1",
+      "critere": "Présentation du rôle des différents membres de l’établissement, du service et de l’équipe."
+    }
+  ],
+  "situation": "Entraînement rapide sur les notions de la séance S1-02 : Qui fait quoi ? Obligations, limites et prévention.",
+  "objectif_eleve": "Réviser les notions de la séance : répondre vite et juste, puis lire les corrections.",
+  "note_pour_audrey": "Entraînement généré pour la tâche Q.4 à partir de l'activité interactive de votre séance S1-02 (exercices repris tels quels, sans réécriture). Compétence : la compétence principale de la séance ; critère choisi par l'IA parmi les critères officiels de cette compétence (celui qui partage le plus de mots avec les exercices) : à vérifier.",
+  "etapes": [
+    {
+      "id": "tri-1",
+      "type": "tri",
+      "consigne": "Associe chaque demande au professionnel ou au service à solliciter.",
+      "categories": [
+        {
+          "id": "equipe-soignante",
+          "libelle": "Équipe soignante"
+        },
+        {
+          "id": "maintenance",
+          "libelle": "Maintenance"
+        },
+        {
+          "id": "responsable-du-stock",
+          "libelle": "Responsable du stock"
+        },
+        {
+          "id": "direction",
+          "libelle": "Direction"
+        },
+        {
+          "id": "animation",
+          "libelle": "Animation"
+        }
+      ],
+      "elements": [
+        {
+          "id": "mme-rose-demande-un-soin",
+          "texte": "Mme Rose demande un soin",
+          "categorie": "equipe-soignante",
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Réponse attendue : Équipe soignante."
+        },
+        {
+          "id": "un-resident-se-plaint-d-un",
+          "texte": "Un résident se plaint d'une douleur",
+          "categorie": "equipe-soignante",
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Réponse attendue : Équipe soignante."
+        },
+        {
+          "id": "une-barriere-de-lit-est-ca",
+          "texte": "Une barrière de lit est cassée",
+          "categorie": "maintenance",
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Réponse attendue : Maintenance."
+        },
+        {
+          "id": "une-ampoule-est-grillee",
+          "texte": "Une ampoule est grillée",
+          "categorie": "maintenance",
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Réponse attendue : Maintenance."
+        },
+        {
+          "id": "le-stock-de-gants-est-pres",
+          "texte": "Le stock de gants est presque vide",
+          "categorie": "responsable-du-stock",
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Réponse attendue : Responsable du stock."
+        },
+        {
+          "id": "il-manque-des-protections",
+          "texte": "Il manque des protections",
+          "categorie": "responsable-du-stock",
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Réponse attendue : Responsable du stock."
+        },
+        {
+          "id": "une-question-sur-le-reglem",
+          "texte": "Une question sur le règlement",
+          "categorie": "direction",
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Réponse attendue : Direction."
+        },
+        {
+          "id": "un-resident-s-isole-et-s-e",
+          "texte": "Un résident s'isole et s'ennuie",
+          "categorie": "animation",
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Réponse attendue : Animation."
+        }
+      ]
+    },
+    {
+      "id": "tri-2",
+      "type": "tri",
+      "consigne": "Classe chaque situation selon ce que tu peux faire.",
+      "categories": [
+        {
+          "id": "je-peux-faire",
+          "libelle": "Je peux faire"
+        },
+        {
+          "id": "je-transmets",
+          "libelle": "Je transmets"
+        },
+        {
+          "id": "je-ne-fais-pas-seul",
+          "libelle": "Je ne fais pas seul"
+        }
+      ],
+      "elements": [
+        {
+          "id": "aider-a-l-habillage-prevu",
+          "texte": "Aider à l'habillage prévu",
+          "categorie": "je-peux-faire",
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Réponse attendue : Je peux faire."
+        },
+        {
+          "id": "baliser-un-sol-mouille",
+          "texte": "Baliser un sol mouillé",
+          "categorie": "je-peux-faire",
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Réponse attendue : Je peux faire."
+        },
+        {
+          "id": "accompagner-un-deplacement",
+          "texte": "Accompagner un déplacement",
+          "categorie": "je-peux-faire",
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Réponse attendue : Je peux faire."
+        },
+        {
+          "id": "realiser-un-pansement",
+          "texte": "Réaliser un pansement",
+          "categorie": "je-ne-fais-pas-seul",
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Réponse attendue : Je ne fais pas seul."
+        },
+        {
+          "id": "donner-un-medicament",
+          "texte": "Donner un médicament",
+          "categorie": "je-ne-fais-pas-seul",
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Réponse attendue : Je ne fais pas seul."
+        },
+        {
+          "id": "un-fait-preoccupant-observ",
+          "texte": "Un fait préoccupant observé",
+          "categorie": "je-transmets",
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Réponse attendue : Je transmets."
+        },
+        {
+          "id": "un-resident-refuse-de-mang",
+          "texte": "Un résident refuse de manger depuis 2 jours",
+          "categorie": "je-transmets",
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Réponse attendue : Je transmets."
+        }
+      ]
+    },
+    {
+      "id": "qcm-3",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Un résident se plaint d'une douleur au ventre. Je :",
+      "options": [
+        {
+          "texte": "lui donne un médicament"
+        },
+        {
+          "texte": "transmets à l'infirmière",
+          "juste": true
+        },
+        {
+          "texte": "attends demain"
+        }
+      ],
+      "points": {
+        "CT3.1": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S1-02 si besoin."
+    },
+    {
+      "id": "qcm-4",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Le sol est mouillé dans le couloir. Mon premier geste :",
+      "options": [
+        {
+          "texte": "je préviens dans une heure"
+        },
+        {
+          "texte": "je balise et je sécurise",
+          "juste": true
+        },
+        {
+          "texte": "je ne fais rien"
+        }
+      ],
+      "points": {
+        "CT3.1": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S1-02 si besoin."
+    },
+    {
+      "id": "qcm-5",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Une visiteuse demande le diagnostic d'un résident. Je :",
+      "options": [
+        {
+          "texte": "le lui donne"
+        },
+        {
+          "texte": "oriente vers un professionnel compétent",
+          "juste": true
+        },
+        {
+          "texte": "invente une réponse"
+        }
+      ],
+      "points": {
+        "CT3.1": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S1-02 si besoin."
+    }
+  ],
+  "debriefing": [
+    "Quelle notion de cette séance avez-vous le mieux réussie ?",
+    "Quelle notion devez-vous revoir, et dans quel document du cours ?"
+  ]
+}

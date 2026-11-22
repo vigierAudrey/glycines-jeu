@@ -1,0 +1,217 @@
+{
+  "id": "m53-entrainement-s1-07",
+  "statut": "valide",
+  "format": "entrainement",
+  "titre": "Accueillir un nouveau résident : évaluation et transfert",
+  "duree_min": 5,
+  "sequence_requise": "S1",
+  "lieu": "salon",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "CT3.1",
+      "critere": "Recueil d’informations dans le respect de la discrétion, de la réserve et du secret professionnel."
+    }
+  ],
+  "situation": "Entraînement rapide sur les notions de la séance S1-07 : Accueillir un nouveau résident : évaluation et transfert.",
+  "objectif_eleve": "Réviser les notions de la séance : répondre vite et juste, puis lire les corrections.",
+  "note_pour_audrey": "Entraînement généré pour la tâche Q.4 à partir de l'activité interactive de votre séance S1-07 (exercices repris tels quels, sans réécriture). Compétence : la compétence principale de la séance ; critère choisi par l'IA parmi les critères officiels de cette compétence (celui qui partage le plus de mots avec les exercices) : à vérifier.",
+  "etapes": [
+    {
+      "id": "tri-1",
+      "type": "tri",
+      "consigne": "Trie les informations sur Mme Denise.",
+      "categories": [
+        {
+          "id": "fiable-et-utilisable",
+          "libelle": "Fiable et utilisable"
+        },
+        {
+          "id": "a-verifier-recouper",
+          "libelle": "À vérifier / recouper"
+        }
+      ],
+      "elements": [
+        {
+          "id": "les-paroles-de-mme-denise",
+          "texte": "Les paroles de Mme Denise",
+          "categorie": "fiable-et-utilisable",
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Réponse attendue : Fiable et utilisable."
+        },
+        {
+          "id": "le-dossier-d-accueil-date",
+          "texte": "Le dossier d'accueil daté",
+          "categorie": "fiable-et-utilisable",
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Réponse attendue : Fiable et utilisable."
+        },
+        {
+          "id": "la-fiche-de-liaison-signee",
+          "texte": "La fiche de liaison signée",
+          "categorie": "fiable-et-utilisable",
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Réponse attendue : Fiable et utilisable."
+        },
+        {
+          "id": "une-note-anonyme-non-signe",
+          "texte": "Une note anonyme non signée",
+          "categorie": "a-verifier-recouper",
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Réponse attendue : À vérifier / recouper."
+        },
+        {
+          "id": "un-message-de-la-fille",
+          "texte": "Un message de la fille",
+          "categorie": "a-verifier-recouper",
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Réponse attendue : À vérifier / recouper."
+        },
+        {
+          "id": "une-rumeur-de-couloir",
+          "texte": "Une rumeur de couloir",
+          "categorie": "a-verifier-recouper",
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Réponse attendue : À vérifier / recouper."
+        }
+      ]
+    },
+    {
+      "id": "tri-2",
+      "type": "tri",
+      "consigne": "Que fais-tu dans ton rôle ?",
+      "categories": [
+        {
+          "id": "je-corrige-dans-mes-",
+          "libelle": "Je corrige dans mes limites"
+        },
+        {
+          "id": "je-demande-la-mainte",
+          "libelle": "Je demande la maintenance"
+        },
+        {
+          "id": "je-transmets-signale",
+          "libelle": "Je transmets / signale"
+        }
+      ],
+      "elements": [
+        {
+          "id": "un-objet-gene-le-passage",
+          "texte": "Un objet gêne le passage",
+          "categorie": "je-corrige-dans-mes-",
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Réponse attendue : Je corrige dans mes limites."
+        },
+        {
+          "id": "un-tapis-mal-place",
+          "texte": "Un tapis mal placé",
+          "categorie": "je-corrige-dans-mes-",
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Réponse attendue : Je corrige dans mes limites."
+        },
+        {
+          "id": "un-lit-medicalise-en-panne",
+          "texte": "Un lit médicalisé en panne",
+          "categorie": "je-demande-la-mainte",
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Réponse attendue : Je demande la maintenance."
+        },
+        {
+          "id": "une-prise-electrique-casse",
+          "texte": "Une prise électrique cassée",
+          "categorie": "je-demande-la-mainte",
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Réponse attendue : Je demande la maintenance."
+        },
+        {
+          "id": "le-stock-de-protections-es",
+          "texte": "Le stock de protections est bas",
+          "categorie": "je-transmets-signale",
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Réponse attendue : Je transmets / signale."
+        },
+        {
+          "id": "une-douleur-signalee-par-l",
+          "texte": "Une douleur signalée par la résidente",
+          "categorie": "je-transmets-signale",
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Réponse attendue : Je transmets / signale."
+        }
+      ]
+    },
+    {
+      "id": "selection-3",
+      "type": "selection",
+      "consigne": "Vrai ou faux ?",
+      "question": "Cochez les phrases vraies.",
+      "elements": [
+        {
+          "id": "une-note-anonyme-non-verif",
+          "texte": "Une note anonyme non vérifiée est un fait fiable.",
+          "attendu": false,
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Faux."
+        },
+        {
+          "id": "je-respecte-le-secret-et-l",
+          "texte": "Je respecte le secret et la vie privée.",
+          "attendu": true,
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Vrai."
+        },
+        {
+          "id": "une-transmission-utile-est",
+          "texte": "Une transmission utile est datée et adressée à quelqu'un.",
+          "attendu": true,
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Vrai."
+        },
+        {
+          "id": "j-utilise-un-materiel-dang",
+          "texte": "J'utilise un matériel dangereux si rien d'autre n'est disponible.",
+          "attendu": false,
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Faux."
+        }
+      ]
+    }
+  ],
+  "debriefing": [
+    "Quelle notion de cette séance avez-vous le mieux réussie ?",
+    "Quelle notion devez-vous revoir, et dans quel document du cours ?"
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "id": "m75-entrainement-s4-03",
+  "statut": "valide",
+  "format": "entrainement",
+  "titre": "Accompagner la marche et les transferts dans les limites de son rôle",
+  "duree_min": 5,
+  "sequence_requise": "S4",
+  "lieu": "salon",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "C2.1.3",
+      "critere": "Adaptation des gestes aux capacités et aux besoins de la personne âgée."
+    }
+  ],
+  "situation": "Entraînement rapide sur les notions de la séance S4-03 : Accompagner la marche et les transferts dans les limites de son rôle.",
+  "objectif_eleve": "Réviser les notions de la séance : répondre vite et juste, puis lire les corrections.",
+  "note_pour_audrey": "Entraînement généré pour la tâche Q.4 à partir de l'activité interactive de votre séance S4-03 (exercices repris tels quels, sans réécriture). Compétence : la compétence principale de la séance ; critère choisi par l'IA parmi les critères officiels de cette compétence (celui qui partage le plus de mots avec les exercices) : à vérifier.",
+  "etapes": [
+    {
+      "id": "association-1",
+      "type": "association",
+      "consigne": "Reliez chaque mot à sa définition.",
+      "paires": [
+        {
+          "id": "transfert",
+          "terme": "Transfert",
+          "definition": "Passage sécurisé d’une position ou d’une assise à une autre selon les capacités et les consignes.",
+          "points": {
+            "C2.1.3": 1
+          }
+        },
+        {
+          "id": "personne-portante",
+          "terme": "Personne portante",
+          "definition": "Personne capable de prendre appui et de soutenir son poids dans les conditions prévues.",
+          "points": {
+            "C2.1.3": 1
+          }
+        },
+        {
+          "id": "prise-d-appui",
+          "terme": "Prise d’appui",
+          "definition": "Utilisation volontaire et stable des pieds, des accoudoirs ou d’une aide prévue pour participer au mouvement.",
+          "points": {
+            "C2.1.3": 1
+          }
+        },
+        {
+          "id": "relais",
+          "terme": "Relais",
+          "definition": "Professionnel formé sollicité quand la situation dépasse les capacités de la personne ou le rôle de l’agent.",
+          "points": {
+            "C2.1.3": 1
+          }
+        },
+        {
+          "id": "formation-au-materie",
+          "terme": "Formation au matériel",
+          "definition": "Apprentissage encadré de l’usage d’un équipement (lève-personne, verticalisateur, drap de glisse) exigé par le protocole avant toute intervention auprès d’une personne.",
+          "points": {
+            "C2.1.3": 1
+          }
+        }
+      ]
+    }
+  ],
+  "debriefing": [
+    "Quelle notion de cette séance avez-vous le mieux réussie ?",
+    "Quelle notion devez-vous revoir, et dans quel document du cours ?"
+  ]
+}

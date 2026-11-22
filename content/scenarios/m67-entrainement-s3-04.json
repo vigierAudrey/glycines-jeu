@@ -1,0 +1,234 @@
+{
+  "id": "m67-entrainement-s3-04",
+  "statut": "valide",
+  "format": "entrainement",
+  "titre": "TP réfection de lit inoccupé : autonomie, linge et déchets",
+  "duree_min": 5,
+  "sequence_requise": "S3",
+  "lieu": "salon",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "C2.1.1",
+      "critere": "Respect des règles d’hygiène et de sécurité, d’ergonomie."
+    }
+  ],
+  "situation": "Entraînement rapide sur les notions de la séance S3-04 : TP réfection de lit inoccupé : autonomie, linge et déchets.",
+  "objectif_eleve": "Réviser les notions de la séance : répondre vite et juste, puis lire les corrections.",
+  "note_pour_audrey": "Entraînement généré pour la tâche Q.4 à partir de l'activité interactive de votre séance S3-04 (exercices repris tels quels, sans réécriture). Compétence : la compétence principale de la séance ; critère choisi par l'IA parmi les critères officiels de cette compétence (celui qui partage le plus de mots avec les exercices) : à vérifier.",
+  "etapes": [
+    {
+      "id": "association-1",
+      "type": "association",
+      "consigne": "Reliez chaque mot à sa définition.",
+      "paires": [
+        {
+          "id": "non-conformite",
+          "terme": "Non-conformité",
+          "definition": "Écart par rapport à une exigence, un protocole ou un résultat attendu.",
+          "points": {
+            "C2.1.1": 1
+          }
+        },
+        {
+          "id": "mise-en-securite",
+          "terme": "Mise en sécurité",
+          "definition": "Action immédiate autorisée qui évite l’exposition à un danger avant l’intervention du relais.",
+          "points": {
+            "C2.1.1": 1
+          }
+        },
+        {
+          "id": "premiere-interventio",
+          "terme": "Première intervention",
+          "definition": "Geste simple, prévu et autorisé réalisé avant le relais, sans réparation hors compétence.",
+          "points": {
+            "C2.1.1": 1
+          }
+        },
+        {
+          "id": "transmission-factuel",
+          "terme": "Transmission factuelle",
+          "definition": "Message précis décrivant l’observation, le contexte et l’action sans supposition ni diagnostic.",
+          "points": {
+            "C2.1.1": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "tri-2",
+      "type": "tri",
+      "consigne": "Un imprévu pendant le TP : que fais-tu ?",
+      "categories": [
+        {
+          "id": "je-continue",
+          "libelle": "Je continue"
+        },
+        {
+          "id": "je-corrige-dans-mon-",
+          "libelle": "Je corrige dans mon rôle"
+        },
+        {
+          "id": "j-arrete-et-je-secur",
+          "libelle": "J'arrête et je sécurise"
+        },
+        {
+          "id": "j-alerte-le-relais",
+          "libelle": "J'alerte le relais"
+        }
+      ],
+      "elements": [
+        {
+          "id": "le-lit-est-freine-et-le-li",
+          "texte": "Le lit est freiné et le linge est complet",
+          "categorie": "je-continue",
+          "points": {
+            "C2.1.1": 1
+          },
+          "retour": "Réponse attendue : Je continue."
+        },
+        {
+          "id": "un-pli-s-est-forme-au-mili",
+          "texte": "Un pli s'est formé au milieu du drap",
+          "categorie": "je-corrige-dans-mon-",
+          "points": {
+            "C2.1.1": 1
+          },
+          "retour": "Réponse attendue : Je corrige dans mon rôle."
+        },
+        {
+          "id": "un-emballage-vide-traine-s",
+          "texte": "Un emballage vide traîne sur la table",
+          "categorie": "je-corrige-dans-mon-",
+          "points": {
+            "C2.1.1": 1
+          },
+          "retour": "Réponse attendue : Je corrige dans mon rôle."
+        },
+        {
+          "id": "une-taie-propre-est-tachee",
+          "texte": "Une taie propre est tachée",
+          "categorie": "je-corrige-dans-mon-",
+          "points": {
+            "C2.1.1": 1
+          },
+          "retour": "Réponse attendue : Je corrige dans mon rôle."
+        },
+        {
+          "id": "le-frein-gauche-ne-bloque-",
+          "texte": "Le frein gauche ne bloque plus la roue",
+          "categorie": "j-arrete-et-je-secur",
+          "points": {
+            "C2.1.1": 1
+          },
+          "retour": "Réponse attendue : J'arrête et je sécurise."
+        },
+        {
+          "id": "un-flacon-n-a-plus-d-etiqu",
+          "texte": "Un flacon n'a plus d'étiquette lisible",
+          "categorie": "j-arrete-et-je-secur",
+          "points": {
+            "C2.1.1": 1
+          },
+          "retour": "Réponse attendue : J'arrête et je sécurise."
+        },
+        {
+          "id": "le-frein-defectueux-doit-e",
+          "texte": "Le frein défectueux doit être réparé",
+          "categorie": "j-alerte-le-relais",
+          "points": {
+            "C2.1.1": 1
+          },
+          "retour": "Réponse attendue : J'alerte le relais."
+        },
+        {
+          "id": "il-ne-reste-plus-de-linge-",
+          "texte": "Il ne reste plus de linge propre à la bonne taille",
+          "categorie": "j-alerte-le-relais",
+          "points": {
+            "C2.1.1": 1
+          },
+          "retour": "Réponse attendue : J'alerte le relais."
+        }
+      ]
+    },
+    {
+      "id": "tri-3",
+      "type": "tri",
+      "consigne": "Ma transmission : fait ou interprétation ?",
+      "categories": [
+        {
+          "id": "un-fait-que-je-trans",
+          "libelle": "Un fait que je transmets"
+        },
+        {
+          "id": "une-interpretation-q",
+          "libelle": "Une interprétation que j'évite"
+        }
+      ],
+      "elements": [
+        {
+          "id": "le-frein-gauche-ne-bloque-",
+          "texte": "Le frein gauche ne bloque pas la roue arrière",
+          "categorie": "un-fait-que-je-trans",
+          "points": {
+            "C2.1.1": 1
+          },
+          "retour": "Réponse attendue : Un fait que je transmets."
+        },
+        {
+          "id": "le-lit-a-ete-mis-a-l-ecart",
+          "texte": "Le lit a été mis à l'écart et signalé à 10 h",
+          "categorie": "un-fait-que-je-trans",
+          "points": {
+            "C2.1.1": 1
+          },
+          "retour": "Réponse attendue : Un fait que je transmets."
+        },
+        {
+          "id": "une-taie-propre-presentait",
+          "texte": "Une taie propre présentait une tache brune",
+          "categorie": "un-fait-que-je-trans",
+          "points": {
+            "C2.1.1": 1
+          },
+          "retour": "Réponse attendue : Un fait que je transmets."
+        },
+        {
+          "id": "le-moteur-du-frein-est-sur",
+          "texte": "Le moteur du frein est sûrement cassé",
+          "categorie": "une-interpretation-q",
+          "points": {
+            "C2.1.1": 1
+          },
+          "retour": "Réponse attendue : Une interprétation que j'évite."
+        },
+        {
+          "id": "quelqu-un-a-du-forcer-sur-",
+          "texte": "Quelqu'un a dû forcer sur la pédale",
+          "categorie": "une-interpretation-q",
+          "points": {
+            "C2.1.1": 1
+          },
+          "retour": "Réponse attendue : Une interprétation que j'évite."
+        },
+        {
+          "id": "ce-lit-est-trop-vieux-il-f",
+          "texte": "Ce lit est trop vieux, il faut le changer",
+          "categorie": "une-interpretation-q",
+          "points": {
+            "C2.1.1": 1
+          },
+          "retour": "Réponse attendue : Une interprétation que j'évite."
+        }
+      ]
+    }
+  ],
+  "debriefing": [
+    "Quelle notion de cette séance avez-vous le mieux réussie ?",
+    "Quelle notion devez-vous revoir, et dans quel document du cours ?"
+  ]
+}

@@ -1,0 +1,243 @@
+{
+  "id": "m50-entrainement-s1-04",
+  "statut": "valide",
+  "format": "entrainement",
+  "titre": "Protéger les majeurs sans décider à leur place",
+  "duree_min": 5,
+  "sequence_requise": "S1",
+  "lieu": "salon",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "CT3.1",
+      "critere": "Prise en compte de ces éléments pour la mise en œuvre de l’action."
+    }
+  ],
+  "situation": "Entraînement rapide sur les notions de la séance S1-04 : Protéger les majeurs sans décider à leur place.",
+  "objectif_eleve": "Réviser les notions de la séance : répondre vite et juste, puis lire les corrections.",
+  "note_pour_audrey": "Entraînement généré pour la tâche Q.4 à partir de l'activité interactive de votre séance S1-04 (exercices repris tels quels, sans réécriture). Compétence : la compétence principale de la séance ; critère choisi par l'IA parmi les critères officiels de cette compétence (celui qui partage le plus de mots avec les exercices) : à vérifier.",
+  "etapes": [
+    {
+      "id": "tri-1",
+      "type": "tri",
+      "consigne": "Associe chaque phrase à la mesure de protection.",
+      "categories": [
+        {
+          "id": "sauvegarde-de-justic",
+          "libelle": "Sauvegarde de justice"
+        },
+        {
+          "id": "curatelle",
+          "libelle": "Curatelle"
+        },
+        {
+          "id": "tutelle",
+          "libelle": "Tutelle"
+        }
+      ],
+      "elements": [
+        {
+          "id": "protection-souvent-tempora",
+          "texte": "Protection souvent temporaire",
+          "categorie": "sauvegarde-de-justic",
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Réponse attendue : Sauvegarde de justice."
+        },
+        {
+          "id": "mesure-d-attente-rapide-a-",
+          "texte": "Mesure d'attente, rapide à mettre en place",
+          "categorie": "sauvegarde-de-justic",
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Réponse attendue : Sauvegarde de justice."
+        },
+        {
+          "id": "la-personne-est-assistee-p",
+          "texte": "La personne est assistée pour certains actes",
+          "categorie": "curatelle",
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Réponse attendue : Curatelle."
+        },
+        {
+          "id": "la-personne-est-conseillee",
+          "texte": "La personne est conseillée et contrôlée",
+          "categorie": "curatelle",
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Réponse attendue : Curatelle."
+        },
+        {
+          "id": "la-personne-est-represente",
+          "texte": "La personne est représentée pour les actes importants",
+          "categorie": "tutelle",
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Réponse attendue : Tutelle."
+        },
+        {
+          "id": "quelqu-un-peut-decider-a-s",
+          "texte": "Quelqu'un peut décider à sa place pour certains actes",
+          "categorie": "tutelle",
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Réponse attendue : Tutelle."
+        }
+      ]
+    },
+    {
+      "id": "tri-2",
+      "type": "tri",
+      "consigne": "Classe chaque situation autour de Mme Yvette.",
+      "categories": [
+        {
+          "id": "la-personne-choisit",
+          "libelle": "La personne choisit"
+        },
+        {
+          "id": "le-representant-inte",
+          "libelle": "Le représentant intervient"
+        },
+        {
+          "id": "je-transmets",
+          "libelle": "Je transmets"
+        }
+      ],
+      "elements": [
+        {
+          "id": "choisir-sa-tenue-du-jour",
+          "texte": "Choisir sa tenue du jour",
+          "categorie": "la-personne-choisit",
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Réponse attendue : La personne choisit."
+        },
+        {
+          "id": "refuser-une-activite",
+          "texte": "Refuser une activité",
+          "categorie": "la-personne-choisit",
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Réponse attendue : La personne choisit."
+        },
+        {
+          "id": "decider-de-son-repas",
+          "texte": "Décider de son repas",
+          "categorie": "la-personne-choisit",
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Réponse attendue : La personne choisit."
+        },
+        {
+          "id": "signer-un-acte-de-vente",
+          "texte": "Signer un acte de vente",
+          "categorie": "le-representant-inte",
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Réponse attendue : Le représentant intervient."
+        },
+        {
+          "id": "gerer-un-compte-bancaire",
+          "texte": "Gérer un compte bancaire",
+          "categorie": "le-representant-inte",
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Réponse attendue : Le représentant intervient."
+        },
+        {
+          "id": "un-document-juridique-recu",
+          "texte": "Un document juridique reçu à l'accueil",
+          "categorie": "je-transmets",
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Réponse attendue : Je transmets."
+        }
+      ]
+    },
+    {
+      "id": "qcm-3",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Qui décide d'une mesure de protection ?",
+      "options": [
+        {
+          "texte": "la famille"
+        },
+        {
+          "texte": "le juge des contentieux de la protection",
+          "juste": true
+        },
+        {
+          "texte": "l'agent accompagnant"
+        }
+      ],
+      "points": {
+        "CT3.1": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S1-04 si besoin."
+    },
+    {
+      "id": "qcm-4",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Mme Yvette veut choisir sa tenue. Je :",
+      "options": [
+        {
+          "texte": "décide à sa place"
+        },
+        {
+          "texte": "respecte son choix",
+          "juste": true
+        },
+        {
+          "texte": "refuse"
+        }
+      ],
+      "points": {
+        "CT3.1": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S1-04 si besoin."
+    },
+    {
+      "id": "qcm-5",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Une famille veut signer à la place de Mme Yvette. Je :",
+      "options": [
+        {
+          "texte": "signe pour aller plus vite"
+        },
+        {
+          "texte": "ne signe pas et je transmets",
+          "juste": true
+        },
+        {
+          "texte": "laisse la famille signer"
+        }
+      ],
+      "points": {
+        "CT3.1": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S1-04 si besoin."
+    }
+  ],
+  "debriefing": [
+    "Quelle notion de cette séance avez-vous le mieux réussie ?",
+    "Quelle notion devez-vous revoir, et dans quel document du cours ?"
+  ]
+}

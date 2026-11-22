@@ -1,0 +1,330 @@
+{
+  "id": "m83-entrainement-s5-03",
+  "statut": "valide",
+  "format": "entrainement",
+  "titre": "Peau, escarres, dénutrition, surdité et cécité",
+  "duree_min": 5,
+  "sequence_requise": "S5",
+  "lieu": "salon",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "C2.1.6",
+      "critere": "Respect des règles éthiques et du protocole."
+    }
+  ],
+  "situation": "Entraînement rapide sur les notions de la séance S5-03 : Peau, escarres, dénutrition, surdité et cécité.",
+  "objectif_eleve": "Réviser les notions de la séance : répondre vite et juste, puis lire les corrections.",
+  "note_pour_audrey": "Entraînement généré pour la tâche Q.4 à partir de l'activité interactive de votre séance S5-03 (exercices repris tels quels, sans réécriture). Compétence : la compétence principale de la séance ; critère choisi par l'IA parmi les critères officiels de cette compétence (celui qui partage le plus de mots avec les exercices) : à vérifier.",
+  "etapes": [
+    {
+      "id": "association-1",
+      "type": "association",
+      "consigne": "Reliez chaque mot à sa définition.",
+      "paires": [
+        {
+          "id": "escarre",
+          "terme": "escarre",
+          "definition": "lésion cutanée liée notamment à une pression prolongée",
+          "points": {
+            "C2.1.6": 1
+          }
+        },
+        {
+          "id": "denutrition",
+          "terme": "dénutrition",
+          "definition": "état lié à des apports insuffisants par rapport aux besoins",
+          "points": {
+            "C2.1.6": 1
+          }
+        },
+        {
+          "id": "surdite",
+          "terme": "surdité",
+          "definition": "diminution ou perte de l’audition",
+          "points": {
+            "C2.1.6": 1
+          }
+        },
+        {
+          "id": "cecite",
+          "terme": "cécité",
+          "definition": "perte très importante ou totale de la vision",
+          "points": {
+            "C2.1.6": 1
+          }
+        },
+        {
+          "id": "rougeur-persistante",
+          "terme": "rougeur persistante",
+          "definition": "rougeur qui ne disparaît pas et doit être transmise",
+          "points": {
+            "C2.1.6": 1
+          }
+        },
+        {
+          "id": "releve-de-repas",
+          "terme": "relevé de repas",
+          "definition": "trace de ce qui est réellement mangé et bu",
+          "points": {
+            "C2.1.6": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "tri-2",
+      "type": "tri",
+      "consigne": "Classez chaque carte.",
+      "categories": [
+        {
+          "id": "observer",
+          "libelle": "Observer"
+        },
+        {
+          "id": "agir-dans-mon-role",
+          "libelle": "Agir dans mon rôle"
+        },
+        {
+          "id": "transmettre",
+          "libelle": "Transmettre"
+        }
+      ],
+      "elements": [
+        {
+          "id": "rougeur-au-talon-droit-au-",
+          "texte": "Rougeur au talon droit au lever.",
+          "categorie": "observer",
+          "points": {
+            "C2.1.6": 1
+          },
+          "retour": "Réponse attendue : Observer."
+        },
+        {
+          "id": "moitie-du-plateau-laissee-",
+          "texte": "Moitié du plateau laissée à chaque repas.",
+          "categorie": "observer",
+          "points": {
+            "C2.1.6": 1
+          },
+          "retour": "Réponse attendue : Observer."
+        },
+        {
+          "id": "mme-rose-ne-repond-pas-dep",
+          "texte": "Mme Rose ne répond pas depuis la porte.",
+          "categorie": "observer",
+          "points": {
+            "C2.1.6": 1
+          },
+          "retour": "Réponse attendue : Observer."
+        },
+        {
+          "id": "changer-la-position-selon-",
+          "texte": "Changer la position selon le protocole prévu.",
+          "categorie": "agir-dans-mon-role",
+          "points": {
+            "C2.1.6": 1
+          },
+          "retour": "Réponse attendue : Agir dans mon rôle."
+        },
+        {
+          "id": "se-placer-face-a-mme-rose-",
+          "texte": "Se placer face à Mme Rose et réduire le bruit.",
+          "categorie": "agir-dans-mon-role",
+          "points": {
+            "C2.1.6": 1
+          },
+          "retour": "Réponse attendue : Agir dans mon rôle."
+        },
+        {
+          "id": "proposer-a-boire-selon-ce-",
+          "texte": "Proposer à boire selon ce qui est prévu.",
+          "categorie": "agir-dans-mon-role",
+          "points": {
+            "C2.1.6": 1
+          },
+          "retour": "Réponse attendue : Agir dans mon rôle."
+        },
+        {
+          "id": "signaler-la-rougeur-a-l-in",
+          "texte": "Signaler la rougeur à l’infirmière.",
+          "categorie": "transmettre",
+          "points": {
+            "C2.1.6": 1
+          },
+          "retour": "Réponse attendue : Transmettre."
+        },
+        {
+          "id": "informer-l-equipe-de-la-ba",
+          "texte": "Informer l’équipe de la baisse des prises.",
+          "categorie": "transmettre",
+          "points": {
+            "C2.1.6": 1
+          },
+          "retour": "Réponse attendue : Transmettre."
+        }
+      ]
+    },
+    {
+      "id": "ordre-3",
+      "type": "ordre",
+      "consigne": "Remettez dans l'ordre.",
+      "elements": [
+        {
+          "id": "annoncer-sa-presence-et-se",
+          "texte": "Annoncer sa présence et se nommer.",
+          "points": {
+            "C2.1.6": 1
+          }
+        },
+        {
+          "id": "decrire-l-environnement-et",
+          "texte": "Décrire l’environnement et les objets.",
+          "points": {
+            "C2.1.6": 1
+          }
+        },
+        {
+          "id": "garder-les-reperes-a-leur-",
+          "texte": "Garder les repères à leur place.",
+          "points": {
+            "C2.1.6": 1
+          }
+        },
+        {
+          "id": "proposer-le-bras-selon-la-",
+          "texte": "Proposer le bras selon la pratique apprise.",
+          "points": {
+            "C2.1.6": 1
+          }
+        }
+      ],
+      "retour": "Ordre repris de la séance S5-03."
+    },
+    {
+      "id": "selection-4",
+      "type": "selection",
+      "consigne": "Vrai ou faux ?",
+      "question": "Cochez les phrases vraies.",
+      "elements": [
+        {
+          "id": "je-soigne-moi-meme-la-roug",
+          "texte": "Je soigne moi-même la rougeur du talon.",
+          "attendu": false,
+          "points": {
+            "C2.1.6": 1
+          },
+          "retour": "Faux : Je ne traite pas une plaie, je transmets."
+        },
+        {
+          "id": "je-note-ce-que-m-andre-a-r",
+          "texte": "Je note ce que M. André a réellement mangé.",
+          "attendu": true,
+          "points": {
+            "C2.1.6": 1
+          },
+          "retour": "Vrai : Relevé utile pour repérer une baisse des prises."
+        },
+        {
+          "id": "pour-mme-rose-je-parle-plu",
+          "texte": "Pour Mme Rose, je parle plus fort depuis la porte.",
+          "attendu": false,
+          "points": {
+            "C2.1.6": 1
+          },
+          "retour": "Faux : Je me place face à elle et réduis le bruit."
+        },
+        {
+          "id": "avec-une-personne-malvoyan",
+          "texte": "Avec une personne malvoyante, je me présente en entrant.",
+          "attendu": true,
+          "points": {
+            "C2.1.6": 1
+          },
+          "retour": "Vrai : Annoncer sa présence la sécurise."
+        },
+        {
+          "id": "je-deplace-les-objets-d-un",
+          "texte": "Je déplace les objets d’une personne malvoyante sans la prévenir.",
+          "attendu": false,
+          "points": {
+            "C2.1.6": 1
+          },
+          "retour": "Faux : Je garde des repères stables."
+        }
+      ]
+    },
+    {
+      "id": "qcm-5",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Une rougeur au talon qui persiste, je…",
+      "options": [
+        {
+          "texte": "la masse"
+        },
+        {
+          "texte": "attends une semaine"
+        },
+        {
+          "texte": "la transmets",
+          "juste": true
+        }
+      ],
+      "points": {
+        "C2.1.6": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S5-03 si besoin."
+    },
+    {
+      "id": "qcm-6",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "La dénutrition est liée à…",
+      "options": [
+        {
+          "texte": "des apports insuffisants",
+          "juste": true
+        },
+        {
+          "texte": "un changement de chambre"
+        },
+        {
+          "texte": "un excès de sommeil"
+        }
+      ],
+      "points": {
+        "C2.1.6": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S5-03 si besoin."
+    },
+    {
+      "id": "qcm-7",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Face à la surdité, je…",
+      "options": [
+        {
+          "texte": "parle très vite"
+        },
+        {
+          "texte": "me place face à la personne",
+          "juste": true
+        },
+        {
+          "texte": "crie depuis le couloir"
+        }
+      ],
+      "points": {
+        "C2.1.6": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S5-03 si besoin."
+    }
+  ],
+  "debriefing": [
+    "Quelle notion de cette séance avez-vous le mieux réussie ?",
+    "Quelle notion devez-vous revoir, et dans quel document du cours ?"
+  ]
+}

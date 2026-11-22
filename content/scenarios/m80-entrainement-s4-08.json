@@ -1,0 +1,346 @@
+{
+  "id": "m80-entrainement-s4-08",
+  "statut": "valide",
+  "format": "entrainement",
+  "titre": "Circuit pratique et étude de cas : faire avec, sécuriser, justifier",
+  "duree_min": 5,
+  "sequence_requise": "S4",
+  "lieu": "salon",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "C2.1.4",
+      "critere": "Respect du rythme, des habitudes et des attentes de la personne."
+    }
+  ],
+  "situation": "Entraînement rapide sur les notions de la séance S4-08 : Circuit pratique et étude de cas : faire avec, sécuriser, justifier.",
+  "objectif_eleve": "Réviser les notions de la séance : répondre vite et juste, puis lire les corrections.",
+  "note_pour_audrey": "Entraînement généré pour la tâche Q.4 à partir de l'activité interactive de votre séance S4-08 (exercices repris tels quels, sans réécriture). Compétence : la compétence principale de la séance ; critère choisi par l'IA parmi les critères officiels de cette compétence (celui qui partage le plus de mots avec les exercices) : à vérifier.",
+  "etapes": [
+    {
+      "id": "association-1",
+      "type": "association",
+      "consigne": "Reliez chaque mot à sa définition.",
+      "paires": [
+        {
+          "id": "critere-observable",
+          "terme": "critère observable",
+          "definition": "élément précis que l’évaluateur peut voir ou vérifier",
+          "points": {
+            "C2.1.4": 1
+          }
+        },
+        {
+          "id": "tache-complexe",
+          "terme": "tâche complexe",
+          "definition": "situation qui combine plusieurs ressources",
+          "points": {
+            "C2.1.4": 1
+          }
+        },
+        {
+          "id": "positionnement",
+          "terme": "positionnement",
+          "definition": "niveau N1 à N4 attribué à partir de preuves",
+          "points": {
+            "C2.1.4": 1
+          }
+        },
+        {
+          "id": "transfert-de-context",
+          "terme": "transfert de contexte",
+          "definition": "adapter une démarche à une situation nouvelle",
+          "points": {
+            "C2.1.4": 1
+          }
+        },
+        {
+          "id": "tracabilite",
+          "terme": "traçabilité",
+          "definition": "trace écrite de ce qui a été fait et transmis",
+          "points": {
+            "C2.1.4": 1
+          }
+        },
+        {
+          "id": "relais",
+          "terme": "relais",
+          "definition": "professionnel sollicité quand la situation dépasse mon rôle",
+          "points": {
+            "C2.1.4": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "tri-2",
+      "type": "tri",
+      "consigne": "Classez chaque carte.",
+      "categories": [
+        {
+          "id": "preparer",
+          "libelle": "Préparer"
+        },
+        {
+          "id": "faire-avec",
+          "libelle": "Faire avec"
+        },
+        {
+          "id": "securiser-et-transme",
+          "libelle": "Sécuriser et transmettre"
+        }
+      ],
+      "elements": [
+        {
+          "id": "verifier-le-plan-d-aide",
+          "texte": "Vérifier le plan d’aide.",
+          "categorie": "preparer",
+          "points": {
+            "C2.1.4": 1
+          },
+          "retour": "Réponse attendue : Préparer."
+        },
+        {
+          "id": "preparer-le-materiel-et-l-",
+          "texte": "Préparer le matériel et l’espace.",
+          "categorie": "preparer",
+          "points": {
+            "C2.1.4": 1
+          },
+          "retour": "Réponse attendue : Préparer."
+        },
+        {
+          "id": "demander-l-accord-de-mme-r",
+          "texte": "Demander l’accord de Mme Rose.",
+          "categorie": "preparer",
+          "points": {
+            "C2.1.4": 1
+          },
+          "retour": "Réponse attendue : Préparer."
+        },
+        {
+          "id": "laisser-mme-rose-faire-les",
+          "texte": "Laisser Mme Rose faire les gestes possibles.",
+          "categorie": "faire-avec",
+          "points": {
+            "C2.1.4": 1
+          },
+          "retour": "Réponse attendue : Faire avec."
+        },
+        {
+          "id": "adapter-l-aide-a-son-rythm",
+          "texte": "Adapter l’aide à son rythme.",
+          "categorie": "faire-avec",
+          "points": {
+            "C2.1.4": 1
+          },
+          "retour": "Réponse attendue : Faire avec."
+        },
+        {
+          "id": "valoriser-ce-qu-elle-reuss",
+          "texte": "Valoriser ce qu’elle réussit.",
+          "categorie": "faire-avec",
+          "points": {
+            "C2.1.4": 1
+          },
+          "retour": "Réponse attendue : Faire avec."
+        },
+        {
+          "id": "s-arreter-en-cas-de-douleu",
+          "texte": "S’arrêter en cas de douleur ou de refus.",
+          "categorie": "securiser-et-transme",
+          "points": {
+            "C2.1.4": 1
+          },
+          "retour": "Réponse attendue : Sécuriser et transmettre."
+        },
+        {
+          "id": "solliciter-le-relais-compe",
+          "texte": "Solliciter le relais compétent.",
+          "categorie": "securiser-et-transme",
+          "points": {
+            "C2.1.4": 1
+          },
+          "retour": "Réponse attendue : Sécuriser et transmettre."
+        },
+        {
+          "id": "transmettre-et-tracer",
+          "texte": "Transmettre et tracer.",
+          "categorie": "securiser-et-transme",
+          "points": {
+            "C2.1.4": 1
+          },
+          "retour": "Réponse attendue : Sécuriser et transmettre."
+        }
+      ]
+    },
+    {
+      "id": "ordre-3",
+      "type": "ordre",
+      "consigne": "Remettez dans l'ordre.",
+      "elements": [
+        {
+          "id": "preparer-l-environnement-l",
+          "texte": "Préparer l’environnement, le matériel et les consignes.",
+          "points": {
+            "C2.1.4": 1
+          }
+        },
+        {
+          "id": "demander-l-accord-de-la-pe",
+          "texte": "Demander l’accord de la personne.",
+          "points": {
+            "C2.1.4": 1
+          }
+        },
+        {
+          "id": "faire-avec-la-personne-a-s",
+          "texte": "Faire avec la personne, à son rythme.",
+          "points": {
+            "C2.1.4": 1
+          }
+        },
+        {
+          "id": "securiser-criteres-d-arret",
+          "texte": "Sécuriser : critères d’arrêt, limites, relais.",
+          "points": {
+            "C2.1.4": 1
+          }
+        },
+        {
+          "id": "controler-transmettre-et-t",
+          "texte": "Contrôler, transmettre et tracer.",
+          "points": {
+            "C2.1.4": 1
+          }
+        }
+      ],
+      "retour": "Ordre repris de la séance S4-08."
+    },
+    {
+      "id": "selection-4",
+      "type": "selection",
+      "consigne": "Vrai ou faux ?",
+      "question": "Cochez les phrases vraies.",
+      "elements": [
+        {
+          "id": "la-note-ecrite-remplace-l-",
+          "texte": "La note écrite remplace l’observation des gestes.",
+          "attendu": false,
+          "points": {
+            "C2.1.4": 1
+          },
+          "retour": "Faux : Elle complète les observations pratiques."
+        },
+        {
+          "id": "chaque-geste-a-sa-propre-g",
+          "texte": "Chaque geste a sa propre grille.",
+          "attendu": true,
+          "points": {
+            "C2.1.4": 1
+          },
+          "retour": "Vrai : Les critères sont spécifiques."
+        },
+        {
+          "id": "je-demande-l-accord-de-mme",
+          "texte": "Je demande l’accord de Mme Rose avant d’agir.",
+          "attendu": true,
+          "points": {
+            "C2.1.4": 1
+          },
+          "retour": "Vrai : C’est un critère observé."
+        },
+        {
+          "id": "je-peux-depasser-mon-role-",
+          "texte": "Je peux dépasser mon rôle pour réussir la mission.",
+          "attendu": false,
+          "points": {
+            "C2.1.4": 1
+          },
+          "retour": "Faux : Je connais mes limites."
+        },
+        {
+          "id": "transmettre-fait-partie-de",
+          "texte": "Transmettre fait partie de la mission.",
+          "attendu": true,
+          "points": {
+            "C2.1.4": 1
+          },
+          "retour": "Vrai : La continuité de l’accompagnement en dépend."
+        }
+      ]
+    },
+    {
+      "id": "qcm-5",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Avant d’agir, je vérifie…",
+      "options": [
+        {
+          "texte": "mon téléphone"
+        },
+        {
+          "texte": "le plan d’aide et les consignes",
+          "juste": true
+        },
+        {
+          "texte": "rien"
+        }
+      ],
+      "points": {
+        "C2.1.4": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S4-08 si besoin."
+    },
+    {
+      "id": "qcm-6",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Une compétence est positionnée à partir…",
+      "options": [
+        {
+          "texte": "de la note écrite seule"
+        },
+        {
+          "texte": "d’une impression"
+        },
+        {
+          "texte": "de preuves observables",
+          "juste": true
+        }
+      ],
+      "points": {
+        "C2.1.4": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S4-08 si besoin."
+    },
+    {
+      "id": "qcm-7",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "« Faire avec », c’est…",
+      "options": [
+        {
+          "texte": "laisser la personne faire ce qu’elle peut",
+          "juste": true
+        },
+        {
+          "texte": "faire à la place"
+        },
+        {
+          "texte": "aller vite"
+        }
+      ],
+      "points": {
+        "C2.1.4": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S4-08 si besoin."
+    }
+  ],
+  "debriefing": [
+    "Quelle notion de cette séance avez-vous le mieux réussie ?",
+    "Quelle notion devez-vous revoir, et dans quel document du cours ?"
+  ]
+}

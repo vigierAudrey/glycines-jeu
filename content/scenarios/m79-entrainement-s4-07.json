@@ -1,0 +1,341 @@
+{
+  "id": "m79-entrainement-s4-07",
+  "statut": "valide",
+  "format": "entrainement",
+  "titre": "Préserver la continence : environnement, habitudes et intimité",
+  "duree_min": 5,
+  "sequence_requise": "S4",
+  "lieu": "salon",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "C2.1.5",
+      "critere": "Respect du rythme, des habitudes et des attentes de la personne."
+    }
+  ],
+  "situation": "Entraînement rapide sur les notions de la séance S4-07 : Préserver la continence : environnement, habitudes et intimité.",
+  "objectif_eleve": "Réviser les notions de la séance : répondre vite et juste, puis lire les corrections.",
+  "note_pour_audrey": "Entraînement généré pour la tâche Q.4 à partir de l'activité interactive de votre séance S4-07 (exercices repris tels quels, sans réécriture). Compétence : la compétence principale de la séance ; critère choisi par l'IA parmi les critères officiels de cette compétence (celui qui partage le plus de mots avec les exercices) : à vérifier.",
+  "etapes": [
+    {
+      "id": "association-1",
+      "type": "association",
+      "consigne": "Reliez chaque mot à sa définition.",
+      "paires": [
+        {
+          "id": "continence",
+          "terme": "continence",
+          "definition": "capacité à contrôler l’élimination et à utiliser les toilettes",
+          "points": {
+            "C2.1.5": 1
+          }
+        },
+        {
+          "id": "habitude-d-eliminati",
+          "terme": "habitude d’élimination",
+          "definition": "rythme et repères personnels liés aux toilettes",
+          "points": {
+            "C2.1.5": 1
+          }
+        },
+        {
+          "id": "aide-absorbante",
+          "terme": "aide absorbante",
+          "definition": "protection utilisée seulement si prévue et adaptée",
+          "points": {
+            "C2.1.5": 1
+          }
+        },
+        {
+          "id": "intimite",
+          "terme": "intimité",
+          "definition": "espace personnel protégé du regard",
+          "points": {
+            "C2.1.5": 1
+          }
+        },
+        {
+          "id": "moyen-d-appel",
+          "terme": "moyen d’appel",
+          "definition": "dispositif qui permet d’appeler un professionnel",
+          "points": {
+            "C2.1.5": 1
+          }
+        },
+        {
+          "id": "infantilisation",
+          "terme": "infantilisation",
+          "definition": "attitude qui traite un adulte comme un enfant",
+          "points": {
+            "C2.1.5": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "tri-2",
+      "type": "tri",
+      "consigne": "Classez chaque carte.",
+      "categories": [
+        {
+          "id": "habitudes",
+          "libelle": "Habitudes"
+        },
+        {
+          "id": "environnement",
+          "libelle": "Environnement"
+        },
+        {
+          "id": "intimite",
+          "libelle": "Intimité"
+        },
+        {
+          "id": "a-eviter",
+          "libelle": "À éviter"
+        }
+      ],
+      "elements": [
+        {
+          "id": "proposer-les-toilettes-au-",
+          "texte": "Proposer les toilettes au réveil, comme elle en a l’habitude.",
+          "categorie": "habitudes",
+          "points": {
+            "C2.1.5": 1
+          },
+          "retour": "Réponse attendue : Habitudes."
+        },
+        {
+          "id": "repondre-sans-attendre-a-s",
+          "texte": "Répondre sans attendre à sa demande.",
+          "categorie": "habitudes",
+          "points": {
+            "C2.1.5": 1
+          },
+          "retour": "Réponse attendue : Habitudes."
+        },
+        {
+          "id": "retirer-le-tapis-releve",
+          "texte": "Retirer le tapis relevé.",
+          "categorie": "environnement",
+          "points": {
+            "C2.1.5": 1
+          },
+          "retour": "Réponse attendue : Environnement."
+        },
+        {
+          "id": "proposer-des-vetements-fac",
+          "texte": "Proposer des vêtements faciles à ouvrir.",
+          "categorie": "environnement",
+          "points": {
+            "C2.1.5": 1
+          },
+          "retour": "Réponse attendue : Environnement."
+        },
+        {
+          "id": "fermer-la-porte-des-toilet",
+          "texte": "Fermer la porte des toilettes.",
+          "categorie": "intimite",
+          "points": {
+            "C2.1.5": 1
+          },
+          "retour": "Réponse attendue : Intimité."
+        },
+        {
+          "id": "parler-a-voix-basse-de-ses",
+          "texte": "Parler à voix basse de ses besoins.",
+          "categorie": "intimite",
+          "points": {
+            "C2.1.5": 1
+          },
+          "retour": "Réponse attendue : Intimité."
+        },
+        {
+          "id": "lui-imposer-une-protection",
+          "texte": "Lui imposer une protection.",
+          "categorie": "a-eviter",
+          "points": {
+            "C2.1.5": 1
+          },
+          "retour": "Réponse attendue : À éviter."
+        },
+        {
+          "id": "la-faire-attendre-pour-res",
+          "texte": "La faire attendre pour respecter l’horaire prévu.",
+          "categorie": "a-eviter",
+          "points": {
+            "C2.1.5": 1
+          },
+          "retour": "Réponse attendue : À éviter."
+        }
+      ]
+    },
+    {
+      "id": "ordre-3",
+      "type": "ordre",
+      "consigne": "Remettez dans l'ordre.",
+      "elements": [
+        {
+          "id": "repondre-sans-attendre-a-l",
+          "texte": "Répondre sans attendre à la demande.",
+          "points": {
+            "C2.1.5": 1
+          }
+        },
+        {
+          "id": "degager-et-eclairer-le-tra",
+          "texte": "Dégager et éclairer le trajet.",
+          "points": {
+            "C2.1.5": 1
+          }
+        },
+        {
+          "id": "laisser-faire-avec-des-vet",
+          "texte": "Laisser faire, avec des vêtements faciles.",
+          "points": {
+            "C2.1.5": 1
+          }
+        },
+        {
+          "id": "fermer-la-porte-et-preserv",
+          "texte": "Fermer la porte et préserver l’intimité.",
+          "points": {
+            "C2.1.5": 1
+          }
+        },
+        {
+          "id": "transmettre-un-changement-",
+          "texte": "Transmettre un changement inhabituel.",
+          "points": {
+            "C2.1.5": 1
+          }
+        }
+      ],
+      "retour": "Ordre repris de la séance S4-07."
+    },
+    {
+      "id": "selection-4",
+      "type": "selection",
+      "consigne": "Vrai ou faux ?",
+      "question": "Cochez les phrases vraies.",
+      "elements": [
+        {
+          "id": "je-fais-attendre-mme-yvett",
+          "texte": "Je fais attendre Mme Yvette pour respecter l’horaire.",
+          "attendu": false,
+          "points": {
+            "C2.1.5": 1
+          },
+          "retour": "Faux : Je réponds à sa demande sans attendre."
+        },
+        {
+          "id": "un-tapis-releve-augmente-l",
+          "texte": "Un tapis relevé augmente le risque de chute.",
+          "attendu": true,
+          "points": {
+            "C2.1.5": 1
+          },
+          "retour": "Vrai : Je le retire ou je le signale."
+        },
+        {
+          "id": "je-propose-d-office-une-pr",
+          "texte": "Je propose d’office une protection à Mme Yvette.",
+          "attendu": false,
+          "points": {
+            "C2.1.5": 1
+          },
+          "retour": "Faux : Une aide absorbante n’est jamais imposée."
+        },
+        {
+          "id": "des-demandes-plus-frequent",
+          "texte": "Des demandes plus fréquentes sont à transmettre.",
+          "attendu": true,
+          "points": {
+            "C2.1.5": 1
+          },
+          "retour": "Vrai : C’est un changement inhabituel."
+        },
+        {
+          "id": "des-vetements-faciles-a-ou",
+          "texte": "Des vêtements faciles à ouvrir favorisent l’autonomie.",
+          "attendu": true,
+          "points": {
+            "C2.1.5": 1
+          },
+          "retour": "Vrai : Elle peut se débrouiller seule."
+        }
+      ]
+    },
+    {
+      "id": "qcm-5",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Quand Mme Yvette demande les toilettes, je…",
+      "options": [
+        {
+          "texte": "lui propose une protection"
+        },
+        {
+          "texte": "la fais patienter"
+        },
+        {
+          "texte": "réponds sans attendre",
+          "juste": true
+        }
+      ],
+      "points": {
+        "C2.1.5": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S4-07 si besoin."
+    },
+    {
+      "id": "qcm-6",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Quel aménagement favorise l’autonomie ?",
+      "options": [
+        {
+          "texte": "Un trajet dégagé et éclairé",
+          "juste": true
+        },
+        {
+          "texte": "Un tapis relevé"
+        },
+        {
+          "texte": "Une porte ouverte"
+        }
+      ],
+      "points": {
+        "C2.1.5": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S4-07 si besoin."
+    },
+    {
+      "id": "qcm-7",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Une aide absorbante est…",
+      "options": [
+        {
+          "texte": "toujours imposée"
+        },
+        {
+          "texte": "jamais imposée",
+          "juste": true
+        },
+        {
+          "texte": "obligatoire la nuit"
+        }
+      ],
+      "points": {
+        "C2.1.5": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S4-07 si besoin."
+    }
+  ],
+  "debriefing": [
+    "Quelle notion de cette séance avez-vous le mieux réussie ?",
+    "Quelle notion devez-vous revoir, et dans quel document du cours ?"
+  ]
+}

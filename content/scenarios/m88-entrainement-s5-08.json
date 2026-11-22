@@ -1,0 +1,334 @@
+{
+  "id": "m88-entrainement-s5-08",
+  "statut": "valide",
+  "format": "entrainement",
+  "titre": "Stimuler les capacités et maintenir les liens affectifs",
+  "duree_min": 5,
+  "sequence_requise": "S5",
+  "lieu": "salon",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "C2.2.2",
+      "critere": "Identification des habitudes et des souhaits de la personne."
+    }
+  ],
+  "situation": "Entraînement rapide sur les notions de la séance S5-08 : Stimuler les capacités et maintenir les liens affectifs.",
+  "objectif_eleve": "Réviser les notions de la séance : répondre vite et juste, puis lire les corrections.",
+  "note_pour_audrey": "Entraînement généré pour la tâche Q.4 à partir de l'activité interactive de votre séance S5-08 (exercices repris tels quels, sans réécriture). Compétence : la compétence principale de la séance ; critère choisi par l'IA parmi les critères officiels de cette compétence (celui qui partage le plus de mots avec les exercices) : à vérifier.",
+  "etapes": [
+    {
+      "id": "association-1",
+      "type": "association",
+      "consigne": "Reliez chaque mot à sa définition.",
+      "paires": [
+        {
+          "id": "stimulation-cognitiv",
+          "terme": "stimulation cognitive",
+          "definition": "activité simple qui mobilise l’attention, les repères ou la mémoire",
+          "points": {
+            "C2.2.2": 1
+          }
+        },
+        {
+          "id": "lien-affectif",
+          "terme": "lien affectif",
+          "definition": "relation importante qui apporte présence et sentiment d’appartenance",
+          "points": {
+            "C2.2.2": 1
+          }
+        },
+        {
+          "id": "consentement",
+          "terme": "consentement",
+          "definition": "accord libre donné après une information compréhensible",
+          "points": {
+            "C2.2.2": 1
+          }
+        },
+        {
+          "id": "personnalisation",
+          "terme": "personnalisation",
+          "definition": "adaptation de l’espace aux choix et habitudes de la personne",
+          "points": {
+            "C2.2.2": 1
+          }
+        },
+        {
+          "id": "confidentialite",
+          "terme": "confidentialité",
+          "definition": "protection des informations privées",
+          "points": {
+            "C2.2.2": 1
+          }
+        },
+        {
+          "id": "isolement",
+          "terme": "isolement",
+          "definition": "manque de relations et de contacts",
+          "points": {
+            "C2.2.2": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "tri-2",
+      "type": "tri",
+      "consigne": "Classez chaque carte.",
+      "categories": [
+        {
+          "id": "courrier",
+          "libelle": "Courrier"
+        },
+        {
+          "id": "telephone",
+          "libelle": "Téléphone"
+        },
+        {
+          "id": "video",
+          "libelle": "Vidéo"
+        },
+        {
+          "id": "internet",
+          "libelle": "Internet"
+        }
+      ],
+      "elements": [
+        {
+          "id": "carte-d-anniversaire-de-so",
+          "texte": "Carte d’anniversaire de son amie.",
+          "categorie": "courrier",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : Courrier."
+        },
+        {
+          "id": "lettre-qu-elle-aime-relire",
+          "texte": "Lettre qu’elle aime relire.",
+          "categorie": "courrier",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : Courrier."
+        },
+        {
+          "id": "appel-du-dimanche-de-sa-s-",
+          "texte": "Appel du dimanche de sa sœur.",
+          "categorie": "telephone",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : Téléphone."
+        },
+        {
+          "id": "prendre-rapidement-des-nou",
+          "texte": "Prendre rapidement des nouvelles.",
+          "categorie": "telephone",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : Téléphone."
+        },
+        {
+          "id": "voir-le-visage-de-son-peti",
+          "texte": "Voir le visage de son petit-fils.",
+          "categorie": "video",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : Vidéo."
+        },
+        {
+          "id": "voir-les-enfants-de-la-fam",
+          "texte": "Voir les enfants de la famille.",
+          "categorie": "video",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : Vidéo."
+        },
+        {
+          "id": "recevoir-les-photos-du-mar",
+          "texte": "Recevoir les photos du mariage.",
+          "categorie": "internet",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : Internet."
+        },
+        {
+          "id": "partager-des-photos-de-fac",
+          "texte": "Partager des photos de façon sécurisée.",
+          "categorie": "internet",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : Internet."
+        }
+      ]
+    },
+    {
+      "id": "ordre-3",
+      "type": "ordre",
+      "consigne": "Remettez dans l'ordre.",
+      "elements": [
+        {
+          "id": "demander-a-mme-denise-si-e",
+          "texte": "Demander à Mme Denise si elle souhaite l’appel.",
+          "points": {
+            "C2.2.2": 1
+          }
+        },
+        {
+          "id": "verifier-que-l-appareil-es",
+          "texte": "Vérifier que l’appareil est chargé et stable.",
+          "points": {
+            "C2.2.2": 1
+          }
+        },
+        {
+          "id": "regler-le-volume-et-l-affi",
+          "texte": "Régler le volume et l’affichage.",
+          "points": {
+            "C2.2.2": 1
+          }
+        },
+        {
+          "id": "l-installer-au-calme-et-la",
+          "texte": "L’installer au calme et la laisser échanger.",
+          "points": {
+            "C2.2.2": 1
+          }
+        }
+      ],
+      "retour": "Ordre repris de la séance S5-08."
+    },
+    {
+      "id": "selection-4",
+      "type": "selection",
+      "consigne": "Vrai ou faux ?",
+      "question": "Cochez les phrases vraies.",
+      "elements": [
+        {
+          "id": "je-peux-publier-une-photo-",
+          "texte": "Je peux publier une photo de Mme Denise si elle est jolie.",
+          "attendu": false,
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Faux : Pas de publication sans autorisation."
+        },
+        {
+          "id": "le-necessaire-de-couture-p",
+          "texte": "Le nécessaire de couture peut soutenir l’activité et la conversation.",
+          "attendu": true,
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Vrai : Il est lié à son histoire."
+        },
+        {
+          "id": "le-courrier-laisse-une-tra",
+          "texte": "Le courrier laisse une trace que l’on peut relire.",
+          "attendu": true,
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Vrai : Trace durable."
+        },
+        {
+          "id": "le-lien-familial-est-oblig",
+          "texte": "Le lien familial est obligatoire pour tous les résidents.",
+          "attendu": false,
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Faux : Il se maintient selon les souhaits de la personne."
+        },
+        {
+          "id": "avec-une-vue-fatiguee-j-ad",
+          "texte": "Avec une vue fatiguée, j’adapte l’affichage.",
+          "attendu": true,
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Vrai : Précaution liée aux capacités."
+        }
+      ]
+    },
+    {
+      "id": "qcm-5",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Pour voir le visage de ses proches, Mme Denise utilise…",
+      "options": [
+        {
+          "texte": "la vidéo",
+          "juste": true
+        },
+        {
+          "texte": "le courrier"
+        },
+        {
+          "texte": "le téléphone"
+        }
+      ],
+      "points": {
+        "C2.2.2": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S5-08 si besoin."
+    },
+    {
+      "id": "qcm-6",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Avant une photo, je demande…",
+      "options": [
+        {
+          "texte": "l’avis d’un autre résident"
+        },
+        {
+          "texte": "l’accord de la personne",
+          "juste": true
+        },
+        {
+          "texte": "rien"
+        }
+      ],
+      "points": {
+        "C2.2.2": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S5-08 si besoin."
+    },
+    {
+      "id": "qcm-7",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Un repère lié à son histoire de couturière :",
+      "options": [
+        {
+          "texte": "une télévision allumée"
+        },
+        {
+          "texte": "un magazine au hasard"
+        },
+        {
+          "texte": "son nécessaire de couture",
+          "juste": true
+        }
+      ],
+      "points": {
+        "C2.2.2": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S5-08 si besoin."
+    }
+  ],
+  "debriefing": [
+    "Quelle notion de cette séance avez-vous le mieux réussie ?",
+    "Quelle notion devez-vous revoir, et dans quel document du cours ?"
+  ]
+}

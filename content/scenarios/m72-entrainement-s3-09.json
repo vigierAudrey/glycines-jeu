@@ -1,0 +1,234 @@
+{
+  "id": "m72-entrainement-s3-09",
+  "statut": "valide",
+  "format": "entrainement",
+  "titre": "TP évalué : remise en état complète et projet personnalisé pour M. Karim",
+  "duree_min": 5,
+  "sequence_requise": "S3",
+  "lieu": "salon",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "C2.2.1",
+      "critere": "Dysfonctionnement repérés, geste de première intervention."
+    }
+  ],
+  "situation": "Entraînement rapide sur les notions de la séance S3-09 : TP évalué : remise en état complète et projet personnalisé pour M. Karim.",
+  "objectif_eleve": "Réviser les notions de la séance : répondre vite et juste, puis lire les corrections.",
+  "note_pour_audrey": "Entraînement généré pour la tâche Q.4 à partir de l'activité interactive de votre séance S3-09 (exercices repris tels quels, sans réécriture). Compétence : la compétence principale de la séance ; critère choisi par l'IA parmi les critères officiels de cette compétence (celui qui partage le plus de mots avec les exercices) : à vérifier.",
+  "etapes": [
+    {
+      "id": "association-1",
+      "type": "association",
+      "consigne": "Reliez chaque mot à sa définition.",
+      "paires": [
+        {
+          "id": "tache-complexe",
+          "terme": "Tâche complexe",
+          "definition": "Situation nécessitant de sélectionner et combiner plusieurs ressources pour atteindre un résultat professionnel.",
+          "points": {
+            "C2.2.1": 1
+          }
+        },
+        {
+          "id": "transfert",
+          "terme": "Transfert",
+          "definition": "Capacité à adapter une compétence maîtrisée à une situation nouvelle et à justifier ses choix.",
+          "points": {
+            "C2.2.1": 1
+          }
+        },
+        {
+          "id": "tracabilite",
+          "terme": "Traçabilité",
+          "definition": "Trace datée permettant d’identifier l’activité, le résultat, les anomalies et les transmissions.",
+          "points": {
+            "C2.2.1": 1
+          }
+        },
+        {
+          "id": "personnalisation",
+          "terme": "Personnalisation",
+          "definition": "Adaptation de l’espace aux choix, goûts, besoins, capacités et liens de la personne dans les contraintes de sécurité.",
+          "points": {
+            "C2.2.1": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "tri-2",
+      "type": "tri",
+      "consigne": "TP évalué : quelle compétence est en jeu ?",
+      "categories": [
+        {
+          "id": "c2-1-1-refection-du-",
+          "libelle": "C2.1.1 réfection du lit"
+        },
+        {
+          "id": "c2-1-2-confort-et-so",
+          "libelle": "C2.1.2 confort et sommeil"
+        },
+        {
+          "id": "c2-2-1-entretien-des",
+          "libelle": "C2.2.1 entretien des espaces"
+        },
+        {
+          "id": "c2-2-2-personnalisat",
+          "libelle": "C2.2.2 personnalisation et lien"
+        }
+      ],
+      "elements": [
+        {
+          "id": "poser-le-linge-propre-tend",
+          "texte": "Poser le linge propre tendu, sans pli, sur un lit freiné",
+          "categorie": "c2-1-1-refection-du-",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : C2.1.1 réfection du lit."
+        },
+        {
+          "id": "verifier-les-freins-et-la-",
+          "texte": "Vérifier les freins et la hauteur avant de commencer",
+          "categorie": "c2-1-1-refection-du-",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : C2.1.1 réfection du lit."
+        },
+        {
+          "id": "degager-le-trajet-nocturne",
+          "texte": "Dégager le trajet nocturne et laisser la canne accessible",
+          "categorie": "c2-1-2-confort-et-so",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : C2.1.2 confort et sommeil."
+        },
+        {
+          "id": "proposer-un-rituel-du-soir",
+          "texte": "Proposer un rituel du soir accepté par M. Karim",
+          "categorie": "c2-1-2-confort-et-so",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : C2.1.2 confort et sommeil."
+        },
+        {
+          "id": "choisir-le-produit-compati",
+          "texte": "Choisir le produit compatible avec la surface et le doser",
+          "categorie": "c2-2-1-entretien-des",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : C2.2.1 entretien des espaces."
+        },
+        {
+          "id": "respecter-le-temps-de-cont",
+          "texte": "Respecter le temps de contact et contrôler le résultat",
+          "categorie": "c2-2-1-entretien-des",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : C2.2.1 entretien des espaces."
+        },
+        {
+          "id": "placer-le-carnet-de-recett",
+          "texte": "Placer le carnet de recettes comme repère choisi",
+          "categorie": "c2-2-2-personnalisat",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : C2.2.2 personnalisation et lien."
+        },
+        {
+          "id": "maintenir-l-appel-du-diman",
+          "texte": "Maintenir l'appel du dimanche à sa sœur",
+          "categorie": "c2-2-2-personnalisat",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : C2.2.2 personnalisation et lien."
+        }
+      ]
+    },
+    {
+      "id": "tri-3",
+      "type": "tri",
+      "consigne": "Ce qui fait la preuve d'une compétence",
+      "categories": [
+        {
+          "id": "c-est-une-preuve",
+          "libelle": "C'est une preuve"
+        },
+        {
+          "id": "ce-n-en-est-pas-une",
+          "libelle": "Ce n'en est pas une"
+        }
+      ],
+      "elements": [
+        {
+          "id": "un-geste-observe-avec-la-g",
+          "texte": "Un geste observé avec la grille pendant le TP",
+          "categorie": "c-est-une-preuve",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : C'est une preuve."
+        },
+        {
+          "id": "un-plan-d-intervention-ecr",
+          "texte": "Un plan d'intervention écrit et argumenté",
+          "categorie": "c-est-une-preuve",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : C'est une preuve."
+        },
+        {
+          "id": "une-transmission-factuelle",
+          "texte": "Une transmission factuelle datée",
+          "categorie": "c-est-une-preuve",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : C'est une preuve."
+        },
+        {
+          "id": "dire-a-l-oral-qu-on-sait-f",
+          "texte": "Dire à l'oral qu'on sait faire",
+          "categorie": "ce-n-en-est-pas-une",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : Ce n'en est pas une."
+        },
+        {
+          "id": "avoir-assiste-a-la-demonst",
+          "texte": "Avoir assisté à la démonstration",
+          "categorie": "ce-n-en-est-pas-une",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : Ce n'en est pas une."
+        },
+        {
+          "id": "recopier-la-fiche-techniqu",
+          "texte": "Recopier la fiche technique sans l'appliquer",
+          "categorie": "ce-n-en-est-pas-une",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : Ce n'en est pas une."
+        }
+      ]
+    }
+  ],
+  "debriefing": [
+    "Quelle notion de cette séance avez-vous le mieux réussie ?",
+    "Quelle notion devez-vous revoir, et dans quel document du cours ?"
+  ]
+}

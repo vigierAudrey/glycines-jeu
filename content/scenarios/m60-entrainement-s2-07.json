@@ -1,0 +1,320 @@
+{
+  "id": "m60-entrainement-s2-07",
+  "statut": "valide",
+  "format": "entrainement",
+  "titre": "Évaluation : communiquer, écouter, respecter et personnaliser",
+  "duree_min": 5,
+  "sequence_requise": "S2",
+  "lieu": "salon",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "CT4.1",
+      "critere": "Intervention et attitude adaptée pour amener la personne âgée à participer aux activités de la vie quotidienne."
+    }
+  ],
+  "situation": "Entraînement rapide sur les notions de la séance S2-07 : Évaluation : communiquer, écouter, respecter et personnaliser.",
+  "objectif_eleve": "Réviser les notions de la séance : répondre vite et juste, puis lire les corrections.",
+  "note_pour_audrey": "Entraînement généré pour la tâche Q.4 à partir de l'activité interactive de votre séance S2-07 (exercices repris tels quels, sans réécriture). Compétence : la compétence principale de la séance ; critère choisi par l'IA parmi les critères officiels de cette compétence (celui qui partage le plus de mots avec les exercices) : à vérifier.",
+  "etapes": [
+    {
+      "id": "tri-1",
+      "type": "tri",
+      "consigne": "Classez chaque carte.",
+      "categories": [
+        {
+          "id": "ct4-1-communiquer",
+          "libelle": "CT4.1 : communiquer"
+        },
+        {
+          "id": "ct4-2-ecouter-et-rec",
+          "libelle": "CT4.2 : écouter et recueillir"
+        },
+        {
+          "id": "ct3-4-droits-secret-",
+          "libelle": "CT3.4 : droits, secret, neutralité"
+        },
+        {
+          "id": "c2-2-2-personnaliser",
+          "libelle": "C2.2.2 : personnaliser"
+        }
+      ],
+      "elements": [
+        {
+          "id": "se-nommer-et-expliquer-ava",
+          "texte": "Se nommer et expliquer avant d’agir.",
+          "categorie": "ct4-1-communiquer",
+          "points": {
+            "CT4.1": 1
+          },
+          "retour": "Réponse attendue : CT4.1 : communiquer."
+        },
+        {
+          "id": "poser-une-question-ouverte",
+          "texte": "Poser une question ouverte plutôt que fermée.",
+          "categorie": "ct4-2-ecouter-et-rec",
+          "points": {
+            "CT4.1": 1
+          },
+          "retour": "Réponse attendue : CT4.2 : écouter et recueillir."
+        },
+        {
+          "id": "ne-pas-confirmer-un-diagno",
+          "texte": "Ne pas confirmer un diagnostic à la famille.",
+          "categorie": "ct3-4-droits-secret-",
+          "points": {
+            "CT4.1": 1
+          },
+          "retour": "Réponse attendue : CT3.4 : droits, secret, neutralité."
+        },
+        {
+          "id": "choisir-avec-la-personne-l",
+          "texte": "Choisir avec la personne l’emplacement de ses photos.",
+          "categorie": "c2-2-2-personnaliser",
+          "points": {
+            "CT4.1": 1
+          },
+          "retour": "Réponse attendue : C2.2.2 : personnaliser."
+        },
+        {
+          "id": "se-mettre-a-hauteur-de-la-",
+          "texte": "Se mettre à hauteur de la personne assise.",
+          "categorie": "ct4-1-communiquer",
+          "points": {
+            "CT4.1": 1
+          },
+          "retour": "Réponse attendue : CT4.1 : communiquer."
+        },
+        {
+          "id": "reformuler-et-faire-valide",
+          "texte": "Reformuler et faire valider par la personne.",
+          "categorie": "ct4-2-ecouter-et-rec",
+          "points": {
+            "CT4.1": 1
+          },
+          "retour": "Réponse attendue : CT4.2 : écouter et recueillir."
+        },
+        {
+          "id": "frapper-et-attendre-avant-",
+          "texte": "Frapper et attendre avant d’entrer.",
+          "categorie": "ct3-4-droits-secret-",
+          "points": {
+            "CT4.1": 1
+          },
+          "retour": "Réponse attendue : CT3.4 : droits, secret, neutralité."
+        },
+        {
+          "id": "trier-separement-affaires-",
+          "texte": "Trier séparément affaires personnelles et consommables.",
+          "categorie": "c2-2-2-personnaliser",
+          "points": {
+            "CT4.1": 1
+          },
+          "retour": "Réponse attendue : C2.2.2 : personnaliser."
+        },
+        {
+          "id": "ralentir-son-debit-et-lais",
+          "texte": "Ralentir son débit et laisser une pause après la question.",
+          "categorie": "ct4-1-communiquer",
+          "points": {
+            "CT4.1": 1
+          },
+          "retour": "Réponse attendue : CT4.1 : communiquer."
+        },
+        {
+          "id": "noter-les-paroles-exactes-",
+          "texte": "Noter les paroles exactes sans interpréter.",
+          "categorie": "ct4-2-ecouter-et-rec",
+          "points": {
+            "CT4.1": 1
+          },
+          "retour": "Réponse attendue : CT4.2 : écouter et recueillir."
+        }
+      ]
+    },
+    {
+      "id": "selection-2",
+      "type": "selection",
+      "consigne": "Vrai ou faux ?",
+      "question": "Cochez les phrases vraies.",
+      "elements": [
+        {
+          "id": "le-debit-et-le-volume-de-l",
+          "texte": "Le débit et le volume de la voix appartiennent au paraverbal.",
+          "attendu": true,
+          "points": {
+            "CT4.1": 1
+          },
+          "retour": "Vrai : Séance 1 : le paraverbal, c’est la manière de dire, pas les mots."
+        },
+        {
+          "id": "il-faut-parler-plus-fort-a",
+          "texte": "Il faut parler plus fort à une personne malvoyante.",
+          "attendu": false,
+          "points": {
+            "CT4.1": 1
+          },
+          "retour": "Faux : Séance 2 : la malvoyance touche la vision. On adapte les repères, pas le volume."
+        },
+        {
+          "id": "une-question-ouverte-aide-",
+          "texte": "Une question ouverte aide davantage la personne à s’exprimer.",
+          "attendu": true,
+          "points": {
+            "CT4.1": 1
+          },
+          "retour": "Vrai : Séance 3 : la question fermée appelle oui ou non et oriente la réponse."
+        },
+        {
+          "id": "la-famille-peut-decider-se",
+          "texte": "La famille peut décider seule de retirer un effet personnel.",
+          "attendu": false,
+          "points": {
+            "CT4.1": 1
+          },
+          "retour": "Faux : Séance 4 : c’est le choix et l’accord de la personne qui sont recherchés."
+        },
+        {
+          "id": "la-laicite-interdit-au-res",
+          "texte": "La laïcité interdit au résident d’avoir une croyance.",
+          "attendu": false,
+          "points": {
+            "CT4.1": 1
+          },
+          "retour": "Faux : Séance 5 : elle protège sa liberté de conscience. C’est le professionnel qui est neutre."
+        },
+        {
+          "id": "le-secret-partage-autorise",
+          "texte": "Le secret partagé autorise à tout dire à toute l’équipe.",
+          "attendu": false,
+          "points": {
+            "CT4.1": 1
+          },
+          "retour": "Faux : Séance 6 : partage limité au nécessaire, entre professionnels autorisés et concernés."
+        }
+      ]
+    },
+    {
+      "id": "qcm-3",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Comment commences-tu ?",
+      "options": [
+        {
+          "texte": "Tu entres et tu commences directement, le temps est compté."
+        },
+        {
+          "texte": "Tu frappes, tu attends, tu te nommes, tu expliques pourquoi tu viens et tu annonces la durée.",
+          "juste": true
+        },
+        {
+          "texte": "Tu demandes d’abord à sa fille si c’est le bon moment."
+        }
+      ],
+      "points": {
+        "CT4.1": 1
+      },
+      "retour": "Frapper, attendre, se nommer, expliquer, annoncer : c’est le cadre de départ attendu pour CT4.1."
+    },
+    {
+      "id": "qcm-4",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Quelle est ta première question ?",
+      "options": [
+        {
+          "texte": "« Vous voulez revenir aux animations ? »"
+        },
+        {
+          "texte": "« Qu’est-ce qui vous ferait plaisir dans vos matinées ? »",
+          "juste": true
+        },
+        {
+          "texte": "« Vous n’êtes pas bien ici ? »"
+        }
+      ],
+      "points": {
+        "CT4.1": 1
+      },
+      "retour": "Question ouverte, tournée vers ses souhaits, sans supposer ni la réponse ni un mal-être."
+    },
+    {
+      "id": "qcm-5",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Que fais-tu ensuite ?",
+      "options": [
+        {
+          "texte": "Tu laisses le silence, puis tu reformules et tu fais valider.",
+          "juste": true
+        },
+        {
+          "texte": "Tu enchaînes sur la question suivante de ta grille."
+        },
+        {
+          "texte": "Tu proposes aussitôt de l’y emmener tous les jours."
+        }
+      ],
+      "points": {
+        "CT4.1": 1
+      },
+      "retour": "Silence, reformulation, validation : c’est le cœur de CT4.2, et cela s’observe facilement."
+    },
+    {
+      "id": "ordre-6",
+      "type": "ordre",
+      "consigne": "Remettez dans l'ordre.",
+      "elements": [
+        {
+          "id": "je-frappe-j-attends-je-me-",
+          "texte": "Je frappe, j’attends, je me nomme et j’explique pourquoi je viens.",
+          "points": {
+            "CT4.1": 1
+          }
+        },
+        {
+          "id": "je-pose-une-question-ouver",
+          "texte": "Je pose une question ouverte et je laisse le silence.",
+          "points": {
+            "CT4.1": 1
+          }
+        },
+        {
+          "id": "je-reformule-et-je-fais-va",
+          "texte": "Je reformule et je fais valider ce que j’ai compris.",
+          "points": {
+            "CT4.1": 1
+          }
+        },
+        {
+          "id": "je-propose-une-reponse-ada",
+          "texte": "Je propose une réponse adaptée et je demande son accord.",
+          "points": {
+            "CT4.1": 1
+          }
+        },
+        {
+          "id": "je-reponds-aux-demandes-de",
+          "texte": "Je réponds aux demandes de la famille en restant dans mon rôle.",
+          "points": {
+            "CT4.1": 1
+          }
+        },
+        {
+          "id": "je-transmets-au-profession",
+          "texte": "Je transmets au professionnel concerné les faits utiles au suivi.",
+          "points": {
+            "CT4.1": 1
+          }
+        }
+      ],
+      "retour": "Ordre repris de la séance S2-07."
+    }
+  ],
+  "debriefing": [
+    "Quelle notion de cette séance avez-vous le mieux réussie ?",
+    "Quelle notion devez-vous revoir, et dans quel document du cours ?"
+  ]
+}

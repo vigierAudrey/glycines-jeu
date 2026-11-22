@@ -1,0 +1,346 @@
+{
+  "id": "m78-entrainement-s4-06",
+  "statut": "valide",
+  "format": "entrainement",
+  "titre": "Installer et accompagner la prise du repas en sécurité",
+  "duree_min": 5,
+  "sequence_requise": "S4",
+  "lieu": "salon",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "C2.1.4",
+      "critere": "Respect du rythme, des habitudes et des attentes de la personne."
+    }
+  ],
+  "situation": "Entraînement rapide sur les notions de la séance S4-06 : Installer et accompagner la prise du repas en sécurité.",
+  "objectif_eleve": "Réviser les notions de la séance : répondre vite et juste, puis lire les corrections.",
+  "note_pour_audrey": "Entraînement généré pour la tâche Q.4 à partir de l'activité interactive de votre séance S4-06 (exercices repris tels quels, sans réécriture). Compétence : la compétence principale de la séance ; critère choisi par l'IA parmi les critères officiels de cette compétence (celui qui partage le plus de mots avec les exercices) : à vérifier.",
+  "etapes": [
+    {
+      "id": "association-1",
+      "type": "association",
+      "consigne": "Reliez chaque mot à sa définition.",
+      "paires": [
+        {
+          "id": "prise-du-repas",
+          "terme": "prise du repas",
+          "definition": "conditions pour manger et boire avec sécurité et participation",
+          "points": {
+            "C2.1.4": 1
+          }
+        },
+        {
+          "id": "aide-technique",
+          "terme": "aide technique",
+          "definition": "matériel qui facilite un geste",
+          "points": {
+            "C2.1.4": 1
+          }
+        },
+        {
+          "id": "refus-alimentaire",
+          "terme": "refus alimentaire",
+          "definition": "expression de ne pas consommer tout ou partie du repas",
+          "points": {
+            "C2.1.4": 1
+          }
+        },
+        {
+          "id": "fausse-route",
+          "terme": "fausse route",
+          "definition": "passage d’un aliment vers les voies respiratoires",
+          "points": {
+            "C2.1.4": 1
+          }
+        },
+        {
+          "id": "texture",
+          "terme": "texture",
+          "definition": "consistance des aliments prévue dans le plan d’aide",
+          "points": {
+            "C2.1.4": 1
+          }
+        },
+        {
+          "id": "plan-d-aide",
+          "terme": "plan d’aide",
+          "definition": "document qui précise l’aide à apporter",
+          "points": {
+            "C2.1.4": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "tri-2",
+      "type": "tri",
+      "consigne": "Classez chaque carte.",
+      "categories": [
+        {
+          "id": "installer-et-adapter",
+          "libelle": "Installer et adapter"
+        },
+        {
+          "id": "respecter-un-refus",
+          "libelle": "Respecter un refus"
+        },
+        {
+          "id": "fausse-route",
+          "libelle": "Fausse route"
+        }
+      ],
+      "elements": [
+        {
+          "id": "installer-m-karim-assis-te",
+          "texte": "Installer M. Karim assis, tête et tronc dans l’axe.",
+          "categorie": "installer-et-adapter",
+          "points": {
+            "C2.1.4": 1
+          },
+          "retour": "Réponse attendue : Installer et adapter."
+        },
+        {
+          "id": "decrire-le-plateau-a-m-kar",
+          "texte": "Décrire le plateau à M. Karim.",
+          "categorie": "installer-et-adapter",
+          "points": {
+            "C2.1.4": 1
+          },
+          "retour": "Réponse attendue : Installer et adapter."
+        },
+        {
+          "id": "donner-le-gobelet-adapte-p",
+          "texte": "Donner le gobelet adapté prévu.",
+          "categorie": "installer-et-adapter",
+          "points": {
+            "C2.1.4": 1
+          },
+          "retour": "Réponse attendue : Installer et adapter."
+        },
+        {
+          "id": "m-karim-repousse-son-assie",
+          "texte": "M. Karim repousse son assiette.",
+          "categorie": "respecter-un-refus",
+          "points": {
+            "C2.1.4": 1
+          },
+          "retour": "Réponse attendue : Respecter un refus."
+        },
+        {
+          "id": "proposer-l-alternative-pre",
+          "texte": "Proposer l’alternative prévue sans insister.",
+          "categorie": "respecter-un-refus",
+          "points": {
+            "C2.1.4": 1
+          },
+          "retour": "Réponse attendue : Respecter un refus."
+        },
+        {
+          "id": "transmettre-ce-qui-a-ete-c",
+          "texte": "Transmettre ce qui a été consommé.",
+          "categorie": "respecter-un-refus",
+          "points": {
+            "C2.1.4": 1
+          },
+          "retour": "Réponse attendue : Respecter un refus."
+        },
+        {
+          "id": "toux-soudaine-impossibilit",
+          "texte": "Toux soudaine, impossibilité de parler.",
+          "categorie": "fausse-route",
+          "points": {
+            "C2.1.4": 1
+          },
+          "retour": "Réponse attendue : Fausse route."
+        },
+        {
+          "id": "ne-rien-donner-a-boire",
+          "texte": "Ne rien donner à boire.",
+          "categorie": "fausse-route",
+          "points": {
+            "C2.1.4": 1
+          },
+          "retour": "Réponse attendue : Fausse route."
+        },
+        {
+          "id": "alerter-immediatement",
+          "texte": "Alerter immédiatement.",
+          "categorie": "fausse-route",
+          "points": {
+            "C2.1.4": 1
+          },
+          "retour": "Réponse attendue : Fausse route."
+        }
+      ]
+    },
+    {
+      "id": "ordre-3",
+      "type": "ordre",
+      "consigne": "Remettez dans l'ordre.",
+      "elements": [
+        {
+          "id": "j-arrete-toute-prise-alime",
+          "texte": "J’arrête toute prise alimentaire.",
+          "points": {
+            "C2.1.4": 1
+          }
+        },
+        {
+          "id": "je-ne-donne-rien-a-boire",
+          "texte": "Je ne donne rien à boire.",
+          "points": {
+            "C2.1.4": 1
+          }
+        },
+        {
+          "id": "j-alerte-immediatement",
+          "texte": "J’alerte immédiatement.",
+          "points": {
+            "C2.1.4": 1
+          }
+        },
+        {
+          "id": "j-applique-le-protocole-da",
+          "texte": "J’applique le protocole dans les limites de ma formation.",
+          "points": {
+            "C2.1.4": 1
+          }
+        },
+        {
+          "id": "je-transmets-ce-qui-s-est-",
+          "texte": "Je transmets ce qui s’est passé.",
+          "points": {
+            "C2.1.4": 1
+          }
+        }
+      ],
+      "retour": "Ordre repris de la séance S4-06."
+    },
+    {
+      "id": "selection-4",
+      "type": "selection",
+      "consigne": "Vrai ou faux ?",
+      "question": "Cochez les phrases vraies.",
+      "elements": [
+        {
+          "id": "je-peux-mixer-le-plat-de-m",
+          "texte": "Je peux mixer le plat de M. Karim s’il mange lentement.",
+          "attendu": false,
+          "points": {
+            "C2.1.4": 1
+          },
+          "retour": "Faux : Je ne modifie jamais seul(e) une texture."
+        },
+        {
+          "id": "je-decris-le-plateau-a-m-k",
+          "texte": "Je décris le plateau à M. Karim, malvoyant.",
+          "attendu": true,
+          "points": {
+            "C2.1.4": 1
+          },
+          "retour": "Vrai : C’est prévu dans son plan d’aide."
+        },
+        {
+          "id": "je-donne-un-verre-d-eau-a-",
+          "texte": "Je donne un verre d’eau à une personne qui s’étouffe.",
+          "attendu": false,
+          "points": {
+            "C2.1.4": 1
+          },
+          "retour": "Faux : Je ne donne pas à boire, j’alerte."
+        },
+        {
+          "id": "un-refus-alimentaire-se-tr",
+          "texte": "Un refus alimentaire se transmet à l’équipe.",
+          "attendu": true,
+          "points": {
+            "C2.1.4": 1
+          },
+          "retour": "Vrai : L’équipe adapte l’accompagnement."
+        },
+        {
+          "id": "une-toux-efficace-permet-d",
+          "texte": "Une toux efficace permet de parler et de respirer.",
+          "attendu": true,
+          "points": {
+            "C2.1.4": 1
+          },
+          "retour": "Vrai : On l’encourage à tousser, on ne donne rien."
+        }
+      ]
+    },
+    {
+      "id": "qcm-5",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "La bonne position pour manger est…",
+      "options": [
+        {
+          "texte": "penchée en arrière"
+        },
+        {
+          "texte": "assise, tête et tronc dans l’axe",
+          "juste": true
+        },
+        {
+          "texte": "allongée"
+        }
+      ],
+      "points": {
+        "C2.1.4": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S4-06 si besoin."
+    },
+    {
+      "id": "qcm-6",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Face à un refus du plat, je…",
+      "options": [
+        {
+          "texte": "retire le plateau sans rien dire"
+        },
+        {
+          "texte": "force un peu"
+        },
+        {
+          "texte": "respecte, observe et transmets",
+          "juste": true
+        }
+      ],
+      "points": {
+        "C2.1.4": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S4-06 si besoin."
+    },
+    {
+      "id": "qcm-7",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Une personne ne peut plus parler après une toux soudaine : c’est…",
+      "options": [
+        {
+          "texte": "une fausse route grave",
+          "juste": true
+        },
+        {
+          "texte": "de la fatigue"
+        },
+        {
+          "texte": "un refus"
+        }
+      ],
+      "points": {
+        "C2.1.4": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S4-06 si besoin."
+    }
+  ],
+  "debriefing": [
+    "Quelle notion de cette séance avez-vous le mieux réussie ?",
+    "Quelle notion devez-vous revoir, et dans quel document du cours ?"
+  ]
+}

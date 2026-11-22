@@ -100,7 +100,7 @@ export function validerContenu(contenu: Contenu): Probleme[] {
     idsMissions.add(m.id);
     // Le code de reprise désigne une mission par ce qui précède le premier tiret de son id (« m00 »).
     const prefixe = m.id.split('-')[0];
-    if (!/^m\d{2}$/.test(prefixe)) signaler(f, `L'identifiant doit commencer par « m » et deux chiffres, puis un tiret (ex. m01-lever-rose).`);
+    if (!/^m\d{2,3}$/.test(prefixe)) signaler(f, `L'identifiant doit commencer par « m » et deux ou trois chiffres, puis un tiret (ex. m01-lever-rose).`);
     if (prefixes.has(prefixe)) signaler(f, `Le préfixe « ${prefixe} » est déjà pris par une autre mission.`);
     prefixes.add(prefixe);
     if (!['brouillon', 'valide'].includes(m.statut)) signaler(f, `Statut « ${m.statut} » inconnu (brouillon ou valide).`);

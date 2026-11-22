@@ -1,0 +1,313 @@
+{
+  "id": "m59-entrainement-s2-06",
+  "statut": "valide",
+  "format": "entrainement",
+  "titre": "Secret, discrétion, réserve et partage autorisé",
+  "duree_min": 5,
+  "sequence_requise": "S2",
+  "lieu": "salon",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "CT3.4",
+      "critere": "Respect de la discrétion, de la réserve et du secret professionnels."
+    }
+  ],
+  "situation": "Entraînement rapide sur les notions de la séance S2-06 : Secret, discrétion, réserve et partage autorisé.",
+  "objectif_eleve": "Réviser les notions de la séance : répondre vite et juste, puis lire les corrections.",
+  "note_pour_audrey": "Entraînement généré pour la tâche Q.4 à partir de l'activité interactive de votre séance S2-06 (exercices repris tels quels, sans réécriture). Compétence : la compétence principale de la séance ; critère choisi par l'IA parmi les critères officiels de cette compétence (celui qui partage le plus de mots avec les exercices) : à vérifier.",
+  "etapes": [
+    {
+      "id": "tri-1",
+      "type": "tri",
+      "consigne": "Classez chaque carte.",
+      "categories": [
+        {
+          "id": "secret-professionnel",
+          "libelle": "Secret professionnel"
+        },
+        {
+          "id": "discretion-professio",
+          "libelle": "Discrétion professionnelle"
+        },
+        {
+          "id": "reserve-professionne",
+          "libelle": "Réserve professionnelle"
+        },
+        {
+          "id": "secret-partage",
+          "libelle": "Secret partagé"
+        }
+      ],
+      "elements": [
+        {
+          "id": "parler-du-diagnostic-d-une",
+          "texte": "Parler du diagnostic d’une résidente dans l’ascenseur.",
+          "categorie": "secret-professionnel",
+          "points": {
+            "CT3.4": 1
+          },
+          "retour": "Réponse attendue : Secret professionnel."
+        },
+        {
+          "id": "laisser-un-dossier-ouvert-",
+          "texte": "Laisser un dossier ouvert sur la table du couloir.",
+          "categorie": "discretion-professio",
+          "points": {
+            "CT3.4": 1
+          },
+          "retour": "Réponse attendue : Discrétion professionnelle."
+        },
+        {
+          "id": "critiquer-la-direction-dev",
+          "texte": "Critiquer la direction devant les familles dans le hall.",
+          "categorie": "reserve-professionne",
+          "points": {
+            "CT3.4": 1
+          },
+          "retour": "Réponse attendue : Réserve professionnelle."
+        },
+        {
+          "id": "transmettre-au-referent-le",
+          "texte": "Transmettre au référent le refus répété des repas collectifs.",
+          "categorie": "secret-partage",
+          "points": {
+            "CT3.4": 1
+          },
+          "retour": "Réponse attendue : Secret partagé."
+        },
+        {
+          "id": "annoncer-a-la-famille-un-d",
+          "texte": "Annoncer à la famille un diagnostic que l’on n’est pas autorisé à communiquer.",
+          "categorie": "secret-professionnel",
+          "points": {
+            "CT3.4": 1
+          },
+          "retour": "Réponse attendue : Secret professionnel."
+        },
+        {
+          "id": "raconter-a-ses-proches-ce-",
+          "texte": "Raconter à ses proches ce qui se passe dans le service.",
+          "categorie": "discretion-professio",
+          "points": {
+            "CT3.4": 1
+          },
+          "retour": "Réponse attendue : Discrétion professionnelle."
+        },
+        {
+          "id": "publier-sur-un-reseau-soci",
+          "texte": "Publier sur un réseau social une situation rendue reconnaissable.",
+          "categorie": "reserve-professionne",
+          "points": {
+            "CT3.4": 1
+          },
+          "retour": "Réponse attendue : Réserve professionnelle."
+        },
+        {
+          "id": "signaler-a-l-equipe-une-di",
+          "texte": "Signaler à l’équipe une difficulté à se relever du fauteuil.",
+          "categorie": "secret-partage",
+          "points": {
+            "CT3.4": 1
+          },
+          "retour": "Réponse attendue : Secret partagé."
+        },
+        {
+          "id": "rapporter-a-un-visiteur-un",
+          "texte": "Rapporter à un visiteur une confidence faite par une résidente.",
+          "categorie": "secret-professionnel",
+          "points": {
+            "CT3.4": 1
+          },
+          "retour": "Réponse attendue : Secret professionnel."
+        },
+        {
+          "id": "ranger-et-fermer-les-docum",
+          "texte": "Ranger et fermer les documents avant de quitter le poste.",
+          "categorie": "discretion-professio",
+          "points": {
+            "CT3.4": 1
+          },
+          "retour": "Réponse attendue : Discrétion professionnelle."
+        }
+      ]
+    },
+    {
+      "id": "selection-2",
+      "type": "selection",
+      "consigne": "Vrai ou faux ?",
+      "question": "Cochez les phrases vraies.",
+      "elements": [
+        {
+          "id": "on-peut-parler-d-une-resid",
+          "texte": "On peut parler d’une résidente dans l’ascenseur si on ne dit pas son nom.",
+          "attendu": false,
+          "points": {
+            "CT3.4": 1
+          },
+          "retour": "Faux : Le lieu ne protège pas la confidentialité, et une situation reste souvent reconnaissable même sans le nom."
+        },
+        {
+          "id": "le-secret-partage-permet-d",
+          "texte": "Le secret partagé permet de tout dire à tout le personnel.",
+          "attendu": false,
+          "points": {
+            "CT3.4": 1
+          },
+          "retour": "Faux : Il est limité : aux professionnels autorisés et concernés, et aux seules informations nécessaires à l’accompagnement."
+        },
+        {
+          "id": "un-agent-peut-confirmer-un",
+          "texte": "Un agent peut confirmer un diagnostic à la famille si elle insiste.",
+          "attendu": false,
+          "points": {
+            "CT3.4": 1
+          },
+          "retour": "Faux : Non. Il explique sa limite et oriente vers le professionnel autorisé, quelle que soit l’insistance."
+        },
+        {
+          "id": "publier-une-situation-sans",
+          "texte": "Publier une situation sans nom sur un réseau social est sans risque.",
+          "attendu": false,
+          "points": {
+            "CT3.4": 1
+          },
+          "retour": "Faux : Une situation reconnaissable suffit à trahir le secret. Cela engage en plus la réserve professionnelle."
+        },
+        {
+          "id": "l-agent-decide-seul-de-lev",
+          "texte": "L’agent décide seul de lever le secret en cas de danger.",
+          "attendu": false,
+          "points": {
+            "CT3.4": 1
+          },
+          "retour": "Faux : Il n’en décide pas seul : il alerte immédiatement la personne compétente et applique le protocole."
+        },
+        {
+          "id": "transmettre-a-l-equipe-un-",
+          "texte": "Transmettre à l’équipe un refus de repas utile au projet de vie est autorisé.",
+          "attendu": true,
+          "points": {
+            "CT3.4": 1
+          },
+          "retour": "Vrai : C’est même nécessaire, de façon factuelle, aux professionnels concernés, dans un lieu ou un outil sécurisé."
+        }
+      ]
+    },
+    {
+      "id": "qcm-3",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Que fais-tu ?",
+      "options": [
+        {
+          "texte": "Tu donnes des nouvelles rassurantes."
+        },
+        {
+          "texte": "Tu ne donnes aucune information et tu orientes vers le professionnel compétent, après avoir demandé qui il est.",
+          "juste": true
+        },
+        {
+          "texte": "Tu demandes à Mme Rose de descendre le voir."
+        }
+      ],
+      "points": {
+        "CT3.4": 1
+      },
+      "retour": "Destinataire non identifié et non autorisé : aucune information. On oriente, poliment."
+    },
+    {
+      "id": "qcm-4",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Que fais-tu ?",
+      "options": [
+        {
+          "texte": "Tu dis ce que tu as entendu de l’infirmière."
+        },
+        {
+          "texte": "Tu réponds sèchement : « C’est le secret professionnel. » et tu t’en vas."
+        },
+        {
+          "texte": "Tu expliques calmement que tu n’es pas la personne autorisée à répondre, et tu l’orientes vers l’infirmier référent.",
+          "juste": true
+        }
+      ],
+      "points": {
+        "CT3.4": 1
+      },
+      "retour": "La limite s’explique sans brutalité. Le secret n’est pas une porte claquée, c’est une orientation vers la bonne personne."
+    },
+    {
+      "id": "qcm-5",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Que fais-tu ?",
+      "options": [
+        {
+          "texte": "Tu le gardes pour toi, c’est sa vie privée."
+        },
+        {
+          "texte": "Tu le transmets au référent du projet de vie, de façon factuelle.",
+          "juste": true
+        },
+        {
+          "texte": "Tu en parles à sa fille pour qu’elle la raisonne."
+        }
+      ],
+      "points": {
+        "CT3.4": 1
+      },
+      "retour": "C’est une information utile à l’accompagnement : elle se transmet aux professionnels concernés, pas à la famille."
+    },
+    {
+      "id": "ordre-6",
+      "type": "ordre",
+      "consigne": "Remettez dans l'ordre.",
+      "elements": [
+        {
+          "id": "je-verifie-qui-me-parle-et",
+          "texte": "Je vérifie qui me parle et à quel titre.",
+          "points": {
+            "CT3.4": 1
+          }
+        },
+        {
+          "id": "j-ecoute-la-demande-jusqu-",
+          "texte": "J’écoute la demande jusqu’au bout, sans m’énerver ni promettre.",
+          "points": {
+            "CT3.4": 1
+          }
+        },
+        {
+          "id": "j-explique-calmement-ce-qu",
+          "texte": "J’explique calmement ce que je peux dire et ce que je ne peux pas dire.",
+          "points": {
+            "CT3.4": 1
+          }
+        },
+        {
+          "id": "j-oriente-vers-le-professi",
+          "texte": "J’oriente vers le professionnel autorisé, en donnant son rôle.",
+          "points": {
+            "CT3.4": 1
+          }
+        },
+        {
+          "id": "je-transmets-separement-a-",
+          "texte": "Je transmets séparément à l’équipe les faits utiles au suivi.",
+          "points": {
+            "CT3.4": 1
+          }
+        }
+      ],
+      "retour": "Ordre repris de la séance S2-06."
+    }
+  ],
+  "debriefing": [
+    "Quelle notion de cette séance avez-vous le mieux réussie ?",
+    "Quelle notion devez-vous revoir, et dans quel document du cours ?"
+  ]
+}

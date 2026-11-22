@@ -1,0 +1,257 @@
+{
+  "id": "m61-entrainement-s2-08",
+  "statut": "valide",
+  "format": "entrainement",
+  "titre": "Diagnostic technique d’un espace : lieu, équipements, matériels et produits",
+  "duree_min": 5,
+  "sequence_requise": "S2",
+  "lieu": "salon",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "CT3.3",
+      "critere": "Prise en compte du contexte de l’activité."
+    }
+  ],
+  "situation": "Entraînement rapide sur les notions de la séance S2-08 : Diagnostic technique d’un espace : lieu, équipements, matériels et produits.",
+  "objectif_eleve": "Réviser les notions de la séance : répondre vite et juste, puis lire les corrections.",
+  "note_pour_audrey": "Entraînement généré pour la tâche Q.4 à partir de l'activité interactive de votre séance S2-08 (exercices repris tels quels, sans réécriture). Compétence : la compétence principale de la séance ; critère choisi par l'IA parmi les critères officiels de cette compétence (celui qui partage le plus de mots avec les exercices) : à vérifier.",
+  "etapes": [
+    {
+      "id": "tri-1",
+      "type": "tri",
+      "consigne": "Classe chaque élément de la chambre de M. Karim.",
+      "categories": [
+        {
+          "id": "ressource-technique",
+          "libelle": "Ressource technique"
+        },
+        {
+          "id": "contrainte-technique",
+          "libelle": "Contrainte technique"
+        }
+      ],
+      "elements": [
+        {
+          "id": "barres-d-appui-dans-la-sal",
+          "texte": "Barres d'appui dans la salle d'eau",
+          "categorie": "ressource-technique",
+          "points": {
+            "CT3.3": 1
+          },
+          "retour": "Réponse attendue : Ressource technique."
+        },
+        {
+          "id": "sonnette-a-portee-de-main",
+          "texte": "Sonnette à portée de main",
+          "categorie": "ressource-technique",
+          "points": {
+            "CT3.3": 1
+          },
+          "retour": "Réponse attendue : Ressource technique."
+        },
+        {
+          "id": "chariot-complet-et-range",
+          "texte": "Chariot complet et rangé",
+          "categorie": "ressource-technique",
+          "points": {
+            "CT3.3": 1
+          },
+          "retour": "Réponse attendue : Ressource technique."
+        },
+        {
+          "id": "eclairage-de-nuit-en-etat-",
+          "texte": "Éclairage de nuit en état de marche",
+          "categorie": "ressource-technique",
+          "points": {
+            "CT3.3": 1
+          },
+          "retour": "Réponse attendue : Ressource technique."
+        },
+        {
+          "id": "tapis-devant-le-lit",
+          "texte": "Tapis devant le lit",
+          "categorie": "contrainte-technique",
+          "points": {
+            "CT3.3": 1
+          },
+          "retour": "Réponse attendue : Contrainte technique."
+        },
+        {
+          "id": "sol-qui-vient-d-etre-lave",
+          "texte": "Sol qui vient d'être lavé",
+          "categorie": "contrainte-technique",
+          "points": {
+            "CT3.3": 1
+          },
+          "retour": "Réponse attendue : Contrainte technique."
+        },
+        {
+          "id": "flacon-sans-etiquette",
+          "texte": "Flacon sans étiquette",
+          "categorie": "contrainte-technique",
+          "points": {
+            "CT3.3": 1
+          },
+          "retour": "Réponse attendue : Contrainte technique."
+        },
+        {
+          "id": "gants-uniquement-en-taille",
+          "texte": "Gants uniquement en taille L",
+          "categorie": "contrainte-technique",
+          "points": {
+            "CT3.3": 1
+          },
+          "retour": "Réponse attendue : Contrainte technique."
+        }
+      ]
+    },
+    {
+      "id": "tri-2",
+      "type": "tri",
+      "consigne": "Classe chaque situation selon la conduite à tenir.",
+      "categories": [
+        {
+          "id": "j-applique-la-consig",
+          "libelle": "J'applique la consigne"
+        },
+        {
+          "id": "j-arrete-l-activite",
+          "libelle": "J'arrête l'activité"
+        },
+        {
+          "id": "j-alerte-le-relais",
+          "libelle": "J'alerte le relais"
+        }
+      ],
+      "elements": [
+        {
+          "id": "le-chariot-est-complet-et-",
+          "texte": "Le chariot est complet et le protocole affiché",
+          "categorie": "j-applique-la-consig",
+          "points": {
+            "CT3.3": 1
+          },
+          "retour": "Réponse attendue : J'applique la consigne."
+        },
+        {
+          "id": "il-reste-assez-de-lavettes",
+          "texte": "Il reste assez de lavettes pour la chambre",
+          "categorie": "j-applique-la-consig",
+          "points": {
+            "CT3.3": 1
+          },
+          "retour": "Réponse attendue : J'applique la consigne."
+        },
+        {
+          "id": "le-flacon-n-a-pas-d-etique",
+          "texte": "Le flacon n'a pas d'étiquette",
+          "categorie": "j-arrete-l-activite",
+          "points": {
+            "CT3.3": 1
+          },
+          "retour": "Réponse attendue : J'arrête l'activité."
+        },
+        {
+          "id": "la-barre-d-appui-bouge-qua",
+          "texte": "La barre d'appui bouge quand on s'appuie",
+          "categorie": "j-arrete-l-activite",
+          "points": {
+            "CT3.3": 1
+          },
+          "retour": "Réponse attendue : J'arrête l'activité."
+        },
+        {
+          "id": "les-gants-taille-m-sont-pr",
+          "texte": "Les gants taille M sont presque épuisés",
+          "categorie": "j-alerte-le-relais",
+          "points": {
+            "CT3.3": 1
+          },
+          "retour": "Réponse attendue : J'alerte le relais."
+        },
+        {
+          "id": "le-produit-du-protocole-n-",
+          "texte": "Le produit du protocole n'est plus en réserve",
+          "categorie": "j-alerte-le-relais",
+          "points": {
+            "CT3.3": 1
+          },
+          "retour": "Réponse attendue : J'alerte le relais."
+        }
+      ]
+    },
+    {
+      "id": "qcm-3",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Avant d'entretenir la chambre, je commence par :",
+      "options": [
+        {
+          "texte": "préparer le chariot au hasard"
+        },
+        {
+          "texte": "lire le protocole et repérer le matériel disponible",
+          "juste": true
+        },
+        {
+          "texte": "demander à la famille"
+        }
+      ],
+      "points": {
+        "CT3.3": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S2-08 si besoin."
+    },
+    {
+      "id": "qcm-4",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Un produit n'a pas d'étiquette. Je :",
+      "options": [
+        {
+          "texte": "l'utilise quand même"
+        },
+        {
+          "texte": "ne l'utilise pas et je le signale",
+          "juste": true
+        },
+        {
+          "texte": "le transvase dans un autre flacon"
+        }
+      ],
+      "points": {
+        "CT3.3": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S2-08 si besoin."
+    },
+    {
+      "id": "qcm-5",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Le protocole demande un produit absent de la réserve. Je :",
+      "options": [
+        {
+          "texte": "le remplace par un autre produit"
+        },
+        {
+          "texte": "applique la consigne reçue et j'alerte",
+          "juste": true
+        },
+        {
+          "texte": "annule toute l'activité sans rien dire"
+        }
+      ],
+      "points": {
+        "CT3.3": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S2-08 si besoin."
+    }
+  ],
+  "debriefing": [
+    "Quelle notion de cette séance avez-vous le mieux réussie ?",
+    "Quelle notion devez-vous revoir, et dans quel document du cours ?"
+  ]
+}

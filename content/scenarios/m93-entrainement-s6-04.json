@@ -1,0 +1,334 @@
+{
+  "id": "m93-entrainement-s6-04",
+  "statut": "valide",
+  "format": "entrainement",
+  "titre": "Stimulation cognitive, liens affectifs et communication avec l'entourage",
+  "duree_min": 5,
+  "sequence_requise": "S6",
+  "lieu": "salon",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "C2.2.2",
+      "critere": "Échanges épistolaires, internet, appel téléphonique ou vidéo."
+    }
+  ],
+  "situation": "Entraînement rapide sur les notions de la séance S6-04 : Stimulation cognitive, liens affectifs et communication avec l'entourage.",
+  "objectif_eleve": "Réviser les notions de la séance : répondre vite et juste, puis lire les corrections.",
+  "note_pour_audrey": "Entraînement généré pour la tâche Q.4 à partir de l'activité interactive de votre séance S6-04 (exercices repris tels quels, sans réécriture). Compétence : la compétence principale de la séance ; critère choisi par l'IA parmi les critères officiels de cette compétence (celui qui partage le plus de mots avec les exercices) : à vérifier.",
+  "etapes": [
+    {
+      "id": "association-1",
+      "type": "association",
+      "consigne": "Reliez chaque mot à sa définition.",
+      "paires": [
+        {
+          "id": "mediation",
+          "terme": "médiation",
+          "definition": "support utilisé pour faciliter une activité ou un échange",
+          "points": {
+            "C2.2.2": 1
+          }
+        },
+        {
+          "id": "epistolaire",
+          "terme": "épistolaire",
+          "definition": "qui concerne les lettres et le courrier",
+          "points": {
+            "C2.2.2": 1
+          }
+        },
+        {
+          "id": "confidentialite",
+          "terme": "confidentialité",
+          "definition": "protection des informations privées",
+          "points": {
+            "C2.2.2": 1
+          }
+        },
+        {
+          "id": "stimulation-cognitiv",
+          "terme": "stimulation cognitive",
+          "definition": "activité simple qui mobilise l’attention, les repères ou la mémoire",
+          "points": {
+            "C2.2.2": 1
+          }
+        },
+        {
+          "id": "mise-en-echec",
+          "terme": "mise en échec",
+          "definition": "situation où la personne ne peut pas réussir",
+          "points": {
+            "C2.2.2": 1
+          }
+        },
+        {
+          "id": "decalage-horaire",
+          "terme": "décalage horaire",
+          "definition": "différence d’heure entre deux pays",
+          "points": {
+            "C2.2.2": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "tri-2",
+      "type": "tri",
+      "consigne": "Classez chaque carte.",
+      "categories": [
+        {
+          "id": "courrier",
+          "libelle": "Courrier"
+        },
+        {
+          "id": "telephone",
+          "libelle": "Téléphone"
+        },
+        {
+          "id": "video",
+          "libelle": "Vidéo"
+        },
+        {
+          "id": "internet",
+          "libelle": "Internet"
+        }
+      ],
+      "elements": [
+        {
+          "id": "garder-une-lettre-sur-la-t",
+          "texte": "Garder une lettre sur la table de nuit.",
+          "categorie": "courrier",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : Courrier."
+        },
+        {
+          "id": "relire-les-mots-de-son-pet",
+          "texte": "Relire les mots de son petit-fils.",
+          "categorie": "courrier",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : Courrier."
+        },
+        {
+          "id": "appeler-sans-manipulation-",
+          "texte": "Appeler sans manipulation compliquée.",
+          "categorie": "telephone",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : Téléphone."
+        },
+        {
+          "id": "entendre-une-voix-familier",
+          "texte": "Entendre une voix familière.",
+          "categorie": "telephone",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : Téléphone."
+        },
+        {
+          "id": "voir-le-sourire-de-son-pet",
+          "texte": "Voir le sourire de son petit-fils.",
+          "categorie": "video",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : Vidéo."
+        },
+        {
+          "id": "montrer-son-ouvrage-de-cou",
+          "texte": "Montrer son ouvrage de couture.",
+          "categorie": "video",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : Vidéo."
+        },
+        {
+          "id": "recevoir-des-photos-de-l-e",
+          "texte": "Recevoir des photos de l’étranger.",
+          "categorie": "internet",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : Internet."
+        },
+        {
+          "id": "partager-un-album-avec-la-",
+          "texte": "Partager un album avec la famille, avec accord.",
+          "categorie": "internet",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : Internet."
+        }
+      ]
+    },
+    {
+      "id": "ordre-3",
+      "type": "ordre",
+      "consigne": "Remettez dans l'ordre.",
+      "elements": [
+        {
+          "id": "choisir-un-moment-ou-mme-d",
+          "texte": "Choisir un moment où Mme Denise n’est pas fatiguée.",
+          "points": {
+            "C2.2.2": 1
+          }
+        },
+        {
+          "id": "lui-proposer-la-boite-a-so",
+          "texte": "Lui proposer la boîte à souvenirs.",
+          "points": {
+            "C2.2.2": 1
+          }
+        },
+        {
+          "id": "poser-une-question-ouverte",
+          "texte": "Poser une question ouverte sur un objet.",
+          "points": {
+            "C2.2.2": 1
+          }
+        },
+        {
+          "id": "la-laisser-raconter-et-val",
+          "texte": "La laisser raconter et valoriser son récit.",
+          "points": {
+            "C2.2.2": 1
+          }
+        }
+      ],
+      "retour": "Ordre repris de la séance S6-04."
+    },
+    {
+      "id": "selection-4",
+      "type": "selection",
+      "consigne": "Vrai ou faux ?",
+      "question": "Cochez les phrases vraies.",
+      "elements": [
+        {
+          "id": "le-lien-familial-peut-etre",
+          "texte": "Le lien familial peut être imposé pour son bien.",
+          "attendu": false,
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Faux : Il se maintient selon les souhaits de la personne."
+        },
+        {
+          "id": "une-question-ouverte-aide-",
+          "texte": "Une question ouverte aide Mme Denise à raconter.",
+          "attendu": true,
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Vrai : Elle favorise l’échange."
+        },
+        {
+          "id": "je-la-fais-repondre-a-un-q",
+          "texte": "Je la fais répondre à un quiz difficile sur ses souvenirs.",
+          "attendu": false,
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Faux : Je stimule sans mettre en échec."
+        },
+        {
+          "id": "le-courrier-peut-etre-relu",
+          "texte": "Le courrier peut être relu.",
+          "attendu": true,
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Vrai : Trace durable."
+        },
+        {
+          "id": "avec-le-decalage-horaire-u",
+          "texte": "Avec le décalage horaire, un courrier ou un message peut compléter l’appel.",
+          "attendu": true,
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Vrai : Deux moyens complémentaires."
+        }
+      ]
+    },
+    {
+      "id": "qcm-5",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Stimuler sans mettre en échec, c’est…",
+      "options": [
+        {
+          "texte": "faire à sa place"
+        },
+        {
+          "texte": "poser des questions pièges"
+        },
+        {
+          "texte": "proposer une activité réussie",
+          "juste": true
+        }
+      ],
+      "points": {
+        "C2.2.2": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S6-04 si besoin."
+    },
+    {
+      "id": "qcm-6",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "La vidéo ajoute…",
+      "options": [
+        {
+          "texte": "l’image",
+          "juste": true
+        },
+        {
+          "texte": "une trace écrite"
+        },
+        {
+          "texte": "une facture"
+        }
+      ],
+      "points": {
+        "C2.2.2": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S6-04 si besoin."
+    },
+    {
+      "id": "qcm-7",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Épistolaire signifie…",
+      "options": [
+        {
+          "texte": "qui concerne la vidéo"
+        },
+        {
+          "texte": "qui concerne les lettres",
+          "juste": true
+        },
+        {
+          "texte": "qui concerne le repas"
+        }
+      ],
+      "points": {
+        "C2.2.2": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S6-04 si besoin."
+    }
+  ],
+  "debriefing": [
+    "Quelle notion de cette séance avez-vous le mieux réussie ?",
+    "Quelle notion devez-vous revoir, et dans quel document du cours ?"
+  ]
+}

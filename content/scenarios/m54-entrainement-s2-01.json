@@ -1,0 +1,309 @@
+{
+  "id": "m54-entrainement-s2-01",
+  "statut": "valide",
+  "format": "entrainement",
+  "titre": "Communiquer : verbal, non verbal et paraverbal",
+  "duree_min": 5,
+  "sequence_requise": "S2",
+  "lieu": "salon",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "CT4.1",
+      "critere": "Intervention et attitude adaptée pour amener la personne âgée à participer aux activités de la vie quotidienne."
+    }
+  ],
+  "situation": "Entraînement rapide sur les notions de la séance S2-01 : Communiquer : verbal, non verbal et paraverbal.",
+  "objectif_eleve": "Réviser les notions de la séance : répondre vite et juste, puis lire les corrections.",
+  "note_pour_audrey": "Entraînement généré pour la tâche Q.4 à partir de l'activité interactive de votre séance S2-01 (exercices repris tels quels, sans réécriture). Compétence : la compétence principale de la séance ; critère choisi par l'IA parmi les critères officiels de cette compétence (celui qui partage le plus de mots avec les exercices) : à vérifier.",
+  "etapes": [
+    {
+      "id": "tri-1",
+      "type": "tri",
+      "consigne": "Classez chaque carte.",
+      "categories": [
+        {
+          "id": "verbal-les-mots",
+          "libelle": "Verbal (les mots)"
+        },
+        {
+          "id": "non-verbal-corps-reg",
+          "libelle": "Non verbal (corps, regard, distance)"
+        },
+        {
+          "id": "paraverbal-la-manier",
+          "libelle": "Paraverbal (la manière de dire)"
+        }
+      ],
+      "elements": [
+        {
+          "id": "bonjour-mme-rose-je-suis-l",
+          "texte": "« Bonjour Mme Rose, je suis Léa. »",
+          "categorie": "verbal-les-mots",
+          "points": {
+            "CT4.1": 1
+          },
+          "retour": "Réponse attendue : Verbal (les mots)."
+        },
+        {
+          "id": "se-mettre-a-hauteur-de-la-",
+          "texte": "Se mettre à hauteur de la personne assise.",
+          "categorie": "non-verbal-corps-reg",
+          "points": {
+            "CT4.1": 1
+          },
+          "retour": "Réponse attendue : Non verbal (corps, regard, distance)."
+        },
+        {
+          "id": "parler-tres-vite",
+          "texte": "Parler très vite.",
+          "categorie": "paraverbal-la-manier",
+          "points": {
+            "CT4.1": 1
+          },
+          "retour": "Réponse attendue : Paraverbal (la manière de dire)."
+        },
+        {
+          "id": "le-nom-de-l-activite-ateli",
+          "texte": "Le nom de l’activité : « atelier jardin ».",
+          "categorie": "verbal-les-mots",
+          "points": {
+            "CT4.1": 1
+          },
+          "retour": "Réponse attendue : Verbal (les mots)."
+        },
+        {
+          "id": "regarder-son-telephone-pen",
+          "texte": "Regarder son téléphone pendant qu’on parle.",
+          "categorie": "non-verbal-corps-reg",
+          "points": {
+            "CT4.1": 1
+          },
+          "retour": "Réponse attendue : Non verbal (corps, regard, distance)."
+        },
+        {
+          "id": "soupirer-en-parlant",
+          "texte": "Soupirer en parlant.",
+          "categorie": "paraverbal-la-manier",
+          "points": {
+            "CT4.1": 1
+          },
+          "retour": "Réponse attendue : Paraverbal (la manière de dire)."
+        },
+        {
+          "id": "voulez-vous-venir-maintena",
+          "texte": "« Voulez-vous venir maintenant ou après le café ? »",
+          "categorie": "verbal-les-mots",
+          "points": {
+            "CT4.1": 1
+          },
+          "retour": "Réponse attendue : Verbal (les mots)."
+        },
+        {
+          "id": "croiser-les-bras-et-rester",
+          "texte": "Croiser les bras et rester debout au-dessus d’elle.",
+          "categorie": "non-verbal-corps-reg",
+          "points": {
+            "CT4.1": 1
+          },
+          "retour": "Réponse attendue : Non verbal (corps, regard, distance)."
+        },
+        {
+          "id": "un-ton-doux-et-pose",
+          "texte": "Un ton doux et posé.",
+          "categorie": "paraverbal-la-manier",
+          "points": {
+            "CT4.1": 1
+          },
+          "retour": "Réponse attendue : Paraverbal (la manière de dire)."
+        },
+        {
+          "id": "le-mot-jardin-ecrit-en-gro",
+          "texte": "Le mot JARDIN écrit en gros sur une ardoise.",
+          "categorie": "verbal-les-mots",
+          "points": {
+            "CT4.1": 1
+          },
+          "retour": "Réponse attendue : Verbal (les mots)."
+        }
+      ]
+    },
+    {
+      "id": "selection-2",
+      "type": "selection",
+      "consigne": "Vrai ou faux ?",
+      "question": "Cochez les phrases vraies.",
+      "elements": [
+        {
+          "id": "le-debit-de-la-voix-fait-p",
+          "texte": "Le débit de la voix fait partie du paraverbal.",
+          "attendu": true,
+          "points": {
+            "CT4.1": 1
+          },
+          "retour": "Vrai : Ton, volume, débit, pauses et soupirs : tout ce qui concerne la manière de dire, pas les mots eux-mêmes."
+        },
+        {
+          "id": "un-message-ecrit-sur-une-a",
+          "texte": "Un message écrit sur une ardoise est de la communication non verbale.",
+          "attendu": false,
+          "points": {
+            "CT4.1": 1
+          },
+          "retour": "Faux : Ce sont des mots, donc du verbal. Le verbal comprend les mots dits et les mots écrits."
+        },
+        {
+          "id": "si-mes-mots-sont-corrects-",
+          "texte": "Si mes mots sont corrects, ma posture n’a pas d’importance.",
+          "attendu": false,
+          "points": {
+            "CT4.1": 1
+          },
+          "retour": "Faux : Quand le corps dit l’inverse des mots, c’est le corps que la personne croit. Le message doit être cohérent sur les trois canaux."
+        },
+        {
+          "id": "attendre-en-silence-apres-",
+          "texte": "Attendre en silence après une question est une perte de temps.",
+          "attendu": false,
+          "points": {
+            "CT4.1": 1
+          },
+          "retour": "Faux : Le silence laisse le temps de comprendre et de répondre. Sans ce temps, la personne subit au lieu de choisir."
+        },
+        {
+          "id": "se-mettre-a-hauteur-d-une-",
+          "texte": "Se mettre à hauteur d’une personne assise est une attitude non verbale adaptée.",
+          "attendu": true,
+          "points": {
+            "CT4.1": 1
+          },
+          "retour": "Vrai : Rester debout au-dessus place la personne en position d’infériorité. Se mettre à hauteur favorise l’échange."
+        },
+        {
+          "id": "un-refus-d-activite-doit-e",
+          "texte": "Un refus d’activité doit être accepté.",
+          "attendu": true,
+          "points": {
+            "CT4.1": 1
+          },
+          "retour": "Vrai : Le refus est un droit. On cherche à comprendre, on propose autre chose ou un autre moment, sans insister ni culpabiliser."
+        }
+      ]
+    },
+    {
+      "id": "qcm-3",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Qu’est-ce qui change entre la scène A et la scène B ?",
+      "options": [
+        {
+          "texte": "Les mots employés."
+        },
+        {
+          "texte": "Le paraverbal et le non verbal : débit, soupir, posture.",
+          "juste": true
+        },
+        {
+          "texte": "Le lieu de l’échange."
+        }
+      ],
+      "points": {
+        "CT4.1": 1
+      },
+      "retour": "Les mots sont identiques. Ce sont la manière de dire et l’attitude du corps qui changent tout pour Mme Rose."
+    },
+    {
+      "id": "qcm-4",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Quel effet la scène B peut-elle avoir sur Mme Rose ?",
+      "options": [
+        {
+          "texte": "Elle se sent pressée et jugée, elle se referme.",
+          "juste": true
+        },
+        {
+          "texte": "Elle comprend mieux grâce à la rapidité."
+        },
+        {
+          "texte": "Aucun effet, les mots sont corrects."
+        }
+      ],
+      "points": {
+        "CT4.1": 1
+      },
+      "retour": "Un débit rapide, un soupir et une posture qui domine sont perçus comme un reproche. La personne recule ou refuse."
+    },
+    {
+      "id": "qcm-5",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Quel est le problème principal de la scène C ?",
+      "options": [
+        {
+          "texte": "L’agent ne sourit pas assez."
+        },
+        {
+          "texte": "L’agent parle trop fort."
+        },
+        {
+          "texte": "L’information verbale manque et le contact physique est imposé sans accord.",
+          "juste": true
+        }
+      ],
+      "points": {
+        "CT4.1": 1
+      },
+      "retour": "Le sourire ne suffit pas : Mme Rose ne sait pas ce qu’on lui propose, et on la touche sans lui demander."
+    },
+    {
+      "id": "ordre-6",
+      "type": "ordre",
+      "consigne": "Remettez dans l'ordre.",
+      "elements": [
+        {
+          "id": "je-me-place-face-a-mme-ros",
+          "texte": "Je me place face à Mme Rose, à sa hauteur, et je me nomme.",
+          "points": {
+            "CT4.1": 1
+          }
+        },
+        {
+          "id": "je-presente-l-activite-ave",
+          "texte": "Je présente l’activité avec des mots simples.",
+          "points": {
+            "CT4.1": 1
+          }
+        },
+        {
+          "id": "je-pose-une-question-qui-l",
+          "texte": "Je pose une question qui laisse un vrai choix.",
+          "points": {
+            "CT4.1": 1
+          }
+        },
+        {
+          "id": "je-fais-une-pause-et-je-la",
+          "texte": "Je fais une pause et je laisse le temps de répondre.",
+          "points": {
+            "CT4.1": 1
+          }
+        },
+        {
+          "id": "j-accueille-sa-reponse-san",
+          "texte": "J’accueille sa réponse sans insister, et je propose une autre possibilité si elle refuse.",
+          "points": {
+            "CT4.1": 1
+          }
+        }
+      ],
+      "retour": "Ordre repris de la séance S2-01."
+    }
+  ],
+  "debriefing": [
+    "Quelle notion de cette séance avez-vous le mieux réussie ?",
+    "Quelle notion devez-vous revoir, et dans quel document du cours ?"
+  ]
+}

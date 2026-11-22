@@ -1,0 +1,333 @@
+{
+  "id": "m91-entrainement-s6-02",
+  "statut": "valide",
+  "format": "entrainement",
+  "titre": "Un chez-soi : choix, capacités, confort et contraintes",
+  "duree_min": 5,
+  "sequence_requise": "S6",
+  "lieu": "salon",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "C2.2.2",
+      "critere": "Écoute attentive, active de la personne et de sa famille."
+    }
+  ],
+  "situation": "Entraînement rapide sur les notions de la séance S6-02 : Un chez-soi : choix, capacités, confort et contraintes.",
+  "objectif_eleve": "Réviser les notions de la séance : répondre vite et juste, puis lire les corrections.",
+  "note_pour_audrey": "Entraînement généré pour la tâche Q.4 à partir de l'activité interactive de votre séance S6-02 (exercices repris tels quels, sans réécriture). Compétence : la compétence principale de la séance ; critère choisi par l'IA parmi les critères officiels de cette compétence (celui qui partage le plus de mots avec les exercices) : à vérifier.",
+  "etapes": [
+    {
+      "id": "association-1",
+      "type": "association",
+      "consigne": "Reliez chaque mot à sa définition.",
+      "paires": [
+        {
+          "id": "contrainte",
+          "terme": "contrainte",
+          "definition": "élément qui limite une solution",
+          "points": {
+            "C2.2.2": 1
+          }
+        },
+        {
+          "id": "circulation",
+          "terme": "circulation",
+          "definition": "espace nécessaire pour se déplacer sans obstacle",
+          "points": {
+            "C2.2.2": 1
+          }
+        },
+        {
+          "id": "negociation",
+          "terme": "négociation",
+          "definition": "recherche d’un choix acceptable avec la personne",
+          "points": {
+            "C2.2.2": 1
+          }
+        },
+        {
+          "id": "chez-soi",
+          "terme": "chez-soi",
+          "definition": "espace privé où la personne vit selon ses goûts",
+          "points": {
+            "C2.2.2": 1
+          }
+        },
+        {
+          "id": "stabilite",
+          "terme": "stabilité",
+          "definition": "objet ou meuble qui ne bascule pas",
+          "points": {
+            "C2.2.2": 1
+          }
+        },
+        {
+          "id": "confort",
+          "terme": "confort",
+          "definition": "bien-être ressenti par la personne dans son espace",
+          "points": {
+            "C2.2.2": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "tri-2",
+      "type": "tri",
+      "consigne": "Classez chaque carte.",
+      "categories": [
+        {
+          "id": "atout",
+          "libelle": "Atout"
+        },
+        {
+          "id": "risque",
+          "libelle": "Risque"
+        }
+      ],
+      "elements": [
+        {
+          "id": "tapis-rapporte-de-voyage-s",
+          "texte": "Tapis rapporté de voyage, souvenir important.",
+          "categorie": "atout",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : Atout."
+        },
+        {
+          "id": "bibelots-qui-rappellent-sa",
+          "texte": "Bibelots qui rappellent sa famille.",
+          "categorie": "atout",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : Atout."
+        },
+        {
+          "id": "fauteuil-familier-pres-de-",
+          "texte": "Fauteuil familier près de la fenêtre.",
+          "categorie": "atout",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : Atout."
+        },
+        {
+          "id": "photos-visibles-depuis-le-",
+          "texte": "Photos visibles depuis le lit.",
+          "categorie": "atout",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : Atout."
+        },
+        {
+          "id": "bord-du-tapis-qui-se-soule",
+          "texte": "Bord du tapis qui se soulève sur le trajet.",
+          "categorie": "risque",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : Risque."
+        },
+        {
+          "id": "rallonge-electrique-sous-l",
+          "texte": "Rallonge électrique sous le lit.",
+          "categorie": "risque",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : Risque."
+        },
+        {
+          "id": "lampe-de-chevet-sans-ampou",
+          "texte": "Lampe de chevet sans ampoule.",
+          "categorie": "risque",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : Risque."
+        },
+        {
+          "id": "bibelots-poses-au-bord-de-",
+          "texte": "Bibelots posés au bord de la table de nuit.",
+          "categorie": "risque",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : Risque."
+        }
+      ]
+    },
+    {
+      "id": "ordre-3",
+      "type": "ordre",
+      "consigne": "Remettez dans l'ordre.",
+      "elements": [
+        {
+          "id": "observer-la-chambre-sans-j",
+          "texte": "Observer la chambre sans juger les goûts.",
+          "points": {
+            "C2.2.2": 1
+          }
+        },
+        {
+          "id": "reperer-atouts-et-risques",
+          "texte": "Repérer atouts et risques.",
+          "points": {
+            "C2.2.2": 1
+          }
+        },
+        {
+          "id": "poser-des-questions-a-mme-",
+          "texte": "Poser des questions à Mme Rose.",
+          "points": {
+            "C2.2.2": 1
+          }
+        },
+        {
+          "id": "chercher-une-solution-acce",
+          "texte": "Chercher une solution acceptable avec elle.",
+          "points": {
+            "C2.2.2": 1
+          }
+        },
+        {
+          "id": "signaler-ce-que-je-ne-peux",
+          "texte": "Signaler ce que je ne peux pas régler.",
+          "points": {
+            "C2.2.2": 1
+          }
+        }
+      ],
+      "retour": "Ordre repris de la séance S6-02."
+    },
+    {
+      "id": "selection-4",
+      "type": "selection",
+      "consigne": "Vrai ou faux ?",
+      "question": "Cochez les phrases vraies.",
+      "elements": [
+        {
+          "id": "je-retire-le-tapis-sans-en",
+          "texte": "Je retire le tapis sans en parler, c’est pour sa sécurité.",
+          "attendu": false,
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Faux : Toute suppression d’objet est discutée."
+        },
+        {
+          "id": "je-verifie-que-le-trajet-v",
+          "texte": "Je vérifie que le trajet vers la salle d’eau est dégagé.",
+          "attendu": true,
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Vrai : Circulation sûre."
+        },
+        {
+          "id": "je-trouve-les-bibelots-dem",
+          "texte": "Je trouve les bibelots démodés, je les range au placard.",
+          "attendu": false,
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Faux : Je ne confonds pas mon goût et le sien."
+        },
+        {
+          "id": "plusieurs-solutions-peuven",
+          "texte": "Plusieurs solutions peuvent être acceptables.",
+          "attendu": true,
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Vrai : Si elles respectent souhaits, capacités, confort et sécurité."
+        },
+        {
+          "id": "la-lampe-sans-ampoule-se-s",
+          "texte": "La lampe sans ampoule se signale.",
+          "attendu": true,
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Vrai : Ce que je ne règle pas, je le transmets."
+        }
+      ]
+    },
+    {
+      "id": "qcm-5",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Une chambre en EHPAD est…",
+      "options": [
+        {
+          "texte": "un espace public"
+        },
+        {
+          "texte": "l’espace de l’agent"
+        },
+        {
+          "texte": "un espace privé dans un établissement",
+          "juste": true
+        }
+      ],
+      "points": {
+        "C2.2.2": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S6-02 si besoin."
+    },
+    {
+      "id": "qcm-6",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Face au tapis qui gêne, je…",
+      "options": [
+        {
+          "texte": "en parle avec Mme Rose",
+          "juste": true
+        },
+        {
+          "texte": "ne dis rien"
+        },
+        {
+          "texte": "le jette"
+        }
+      ],
+      "points": {
+        "C2.2.2": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S6-02 si besoin."
+    },
+    {
+      "id": "qcm-7",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "La circulation est…",
+      "options": [
+        {
+          "texte": "la décoration"
+        },
+        {
+          "texte": "l’espace pour se déplacer sans obstacle",
+          "juste": true
+        },
+        {
+          "texte": "le nombre de visiteurs"
+        }
+      ],
+      "points": {
+        "C2.2.2": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S6-02 si besoin."
+    }
+  ],
+  "debriefing": [
+    "Quelle notion de cette séance avez-vous le mieux réussie ?",
+    "Quelle notion devez-vous revoir, et dans quel document du cours ?"
+  ]
+}

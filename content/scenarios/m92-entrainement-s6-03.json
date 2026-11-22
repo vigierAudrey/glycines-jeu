@@ -1,0 +1,337 @@
+{
+  "id": "m92-entrainement-s6-03",
+  "statut": "valide",
+  "format": "entrainement",
+  "titre": "Projet chambre de Mme Denise : plan, tri et rangement justifiés",
+  "duree_min": 5,
+  "sequence_requise": "S6",
+  "lieu": "salon",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "C2.2.2",
+      "critere": "Identification des habitudes et des souhaits de la personne."
+    }
+  ],
+  "situation": "Entraînement rapide sur les notions de la séance S6-03 : Projet chambre de Mme Denise : plan, tri et rangement justifiés.",
+  "objectif_eleve": "Réviser les notions de la séance : répondre vite et juste, puis lire les corrections.",
+  "note_pour_audrey": "Entraînement généré pour la tâche Q.4 à partir de l'activité interactive de votre séance S6-03 (exercices repris tels quels, sans réécriture). Compétence : la compétence principale de la séance ; critère choisi par l'IA parmi les critères officiels de cette compétence (celui qui partage le plus de mots avec les exercices) : à vérifier.",
+  "etapes": [
+    {
+      "id": "association-1",
+      "type": "association",
+      "consigne": "Reliez chaque mot à sa définition.",
+      "paires": [
+        {
+          "id": "plan-cote",
+          "terme": "plan coté",
+          "definition": "plan qui indique les dimensions",
+          "points": {
+            "C2.2.2": 1
+          }
+        },
+        {
+          "id": "frequence-d-usage",
+          "terme": "fréquence d’usage",
+          "definition": "rythme auquel un objet est utilisé",
+          "points": {
+            "C2.2.2": 1
+          }
+        },
+        {
+          "id": "solution-argumentee",
+          "terme": "solution argumentée",
+          "definition": "solution expliquée par des données précises",
+          "points": {
+            "C2.2.2": 1
+          }
+        },
+        {
+          "id": "consommable",
+          "terme": "consommable",
+          "definition": "produit utilisé puis remplacé",
+          "points": {
+            "C2.2.2": 1
+          }
+        },
+        {
+          "id": "autonomie",
+          "terme": "autonomie",
+          "definition": "capacité à agir soi-même",
+          "points": {
+            "C2.2.2": 1
+          }
+        },
+        {
+          "id": "chemin-degage",
+          "terme": "chemin dégagé",
+          "definition": "trajet lit, porte et sanitaire sans obstacle",
+          "points": {
+            "C2.2.2": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "tri-2",
+      "type": "tri",
+      "consigne": "Classez chaque carte.",
+      "categories": [
+        {
+          "id": "chaque-jour",
+          "libelle": "Chaque jour"
+        },
+        {
+          "id": "chaque-semaine",
+          "libelle": "Chaque semaine"
+        },
+        {
+          "id": "rarement",
+          "libelle": "Rarement"
+        }
+      ],
+      "elements": [
+        {
+          "id": "tisane-et-tasse",
+          "texte": "Tisane et tasse.",
+          "categorie": "chaque-jour",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : Chaque jour."
+        },
+        {
+          "id": "lunettes",
+          "texte": "Lunettes.",
+          "categorie": "chaque-jour",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : Chaque jour."
+        },
+        {
+          "id": "mouchoirs",
+          "texte": "Mouchoirs.",
+          "categorie": "chaque-jour",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : Chaque jour."
+        },
+        {
+          "id": "necessaire-de-couture",
+          "texte": "Nécessaire de couture.",
+          "categorie": "chaque-semaine",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : Chaque semaine."
+        },
+        {
+          "id": "linge-de-rechange",
+          "texte": "Linge de rechange.",
+          "categorie": "chaque-semaine",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : Chaque semaine."
+        },
+        {
+          "id": "albums-photos",
+          "texte": "Albums photos.",
+          "categorie": "chaque-semaine",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : Chaque semaine."
+        },
+        {
+          "id": "valise-vide",
+          "texte": "Valise vide.",
+          "categorie": "rarement",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : Rarement."
+        },
+        {
+          "id": "vetements-de-l-autre-saiso",
+          "texte": "Vêtements de l’autre saison.",
+          "categorie": "rarement",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : Rarement."
+        }
+      ]
+    },
+    {
+      "id": "ordre-3",
+      "type": "ordre",
+      "consigne": "Remettez dans l'ordre.",
+      "elements": [
+        {
+          "id": "lire-les-donnees-capacites",
+          "texte": "Lire les données : capacités, habitudes, souhaits.",
+          "points": {
+            "C2.2.2": 1
+          }
+        },
+        {
+          "id": "trier-affaires-et-consomma",
+          "texte": "Trier affaires et consommables avec Mme Denise.",
+          "points": {
+            "C2.2.2": 1
+          }
+        },
+        {
+          "id": "classer-par-usage-et-frequ",
+          "texte": "Classer par usage et fréquence.",
+          "points": {
+            "C2.2.2": 1
+          }
+        },
+        {
+          "id": "placer-les-objets-et-degag",
+          "texte": "Placer les objets et dégager le chemin.",
+          "points": {
+            "C2.2.2": 1
+          }
+        },
+        {
+          "id": "justifier-les-choix-et-arb",
+          "texte": "Justifier les choix et arbitrer un désaccord.",
+          "points": {
+            "C2.2.2": 1
+          }
+        }
+      ],
+      "retour": "Ordre repris de la séance S6-03."
+    },
+    {
+      "id": "selection-4",
+      "type": "selection",
+      "consigne": "Vrai ou faux ?",
+      "question": "Cochez les phrases vraies.",
+      "elements": [
+        {
+          "id": "il-existe-un-seul-plan-cor",
+          "texte": "Il existe un seul plan correct pour la chambre.",
+          "attendu": false,
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Faux : Plusieurs plans respectent les critères."
+        },
+        {
+          "id": "le-chemin-lit-porte-et-san",
+          "texte": "Le chemin lit, porte et sanitaire reste dégagé.",
+          "attendu": true,
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Vrai : Nécessaire avec un déambulateur."
+        },
+        {
+          "id": "je-range-la-tisane-en-haut",
+          "texte": "Je range la tisane en haut du placard.",
+          "attendu": false,
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Faux : Objet quotidien, elle lève difficilement les bras."
+        },
+        {
+          "id": "les-souvenirs-restent-visi",
+          "texte": "Les souvenirs restent visibles selon ses souhaits.",
+          "attendu": true,
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Vrai : On garde l’histoire de la chambre."
+        },
+        {
+          "id": "je-justifie-mes-choix-par-",
+          "texte": "Je justifie mes choix par les données de Mme Denise.",
+          "attendu": true,
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Vrai : Solution argumentée."
+        }
+      ]
+    },
+    {
+      "id": "qcm-5",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Un objet utilisé chaque jour se range…",
+      "options": [
+        {
+          "texte": "à portée de main",
+          "juste": true
+        },
+        {
+          "texte": "dans la cave"
+        },
+        {
+          "texte": "en haut du placard"
+        }
+      ],
+      "points": {
+        "C2.2.2": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S6-03 si besoin."
+    },
+    {
+      "id": "qcm-6",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Avec un déambulateur, le chemin doit être…",
+      "options": [
+        {
+          "texte": "décoré"
+        },
+        {
+          "texte": "dégagé",
+          "juste": true
+        },
+        {
+          "texte": "étroit"
+        }
+      ],
+      "points": {
+        "C2.2.2": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S6-03 si besoin."
+    },
+    {
+      "id": "qcm-7",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Un plan coté indique…",
+      "options": [
+        {
+          "texte": "les couleurs"
+        },
+        {
+          "texte": "les prix"
+        },
+        {
+          "texte": "les dimensions",
+          "juste": true
+        }
+      ],
+      "points": {
+        "C2.2.2": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S6-03 si besoin."
+    }
+  ],
+  "debriefing": [
+    "Quelle notion de cette séance avez-vous le mieux réussie ?",
+    "Quelle notion devez-vous revoir, et dans quel document du cours ?"
+  ]
+}

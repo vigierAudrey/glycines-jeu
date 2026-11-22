@@ -1,0 +1,244 @@
+{
+  "id": "m68-entrainement-s3-05",
+  "statut": "valide",
+  "format": "entrainement",
+  "titre": "Bien dormir aux Glycines : rythme, confort et sécurité",
+  "duree_min": 5,
+  "sequence_requise": "S3",
+  "lieu": "salon",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "C2.1.2",
+      "critere": "Respect du rythme, des habitudes et des attentes de la personne."
+    }
+  ],
+  "situation": "Entraînement rapide sur les notions de la séance S3-05 : Bien dormir aux Glycines : rythme, confort et sécurité.",
+  "objectif_eleve": "Réviser les notions de la séance : répondre vite et juste, puis lire les corrections.",
+  "note_pour_audrey": "Entraînement généré pour la tâche Q.4 à partir de l'activité interactive de votre séance S3-05 (exercices repris tels quels, sans réécriture). Compétence : la compétence principale de la séance ; critère choisi par l'IA parmi les critères officiels de cette compétence (celui qui partage le plus de mots avec les exercices) : à vérifier.",
+  "etapes": [
+    {
+      "id": "association-1",
+      "type": "association",
+      "consigne": "Reliez chaque mot à sa définition.",
+      "paires": [
+        {
+          "id": "rythme-de-vie",
+          "terme": "Rythme de vie",
+          "definition": "Organisation habituelle des temps de sommeil, repas, activités et repos d’une personne.",
+          "points": {
+            "C2.1.2": 1
+          }
+        },
+        {
+          "id": "endormissement",
+          "terme": "Endormissement",
+          "definition": "Passage progressif de l’éveil au sommeil.",
+          "points": {
+            "C2.1.2": 1
+          }
+        },
+        {
+          "id": "rituel",
+          "terme": "Rituel",
+          "definition": "Suite d’habitudes choisies et répétées qui prépare au coucher ou au réveil.",
+          "points": {
+            "C2.1.2": 1
+          }
+        },
+        {
+          "id": "repere-securisant",
+          "terme": "Repère sécurisant",
+          "definition": "Élément accessible et connu qui aide la personne à s’orienter ou à se sentir en sécurité.",
+          "points": {
+            "C2.1.2": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "tri-2",
+      "type": "tri",
+      "consigne": "Le sommeil de M. Karim : ça aide ou ça gêne ?",
+      "categories": [
+        {
+          "id": "ca-aide-a-s-endormir",
+          "libelle": "Ça aide à s'endormir"
+        },
+        {
+          "id": "ca-gene-le-sommeil",
+          "libelle": "Ça gêne le sommeil"
+        }
+      ],
+      "elements": [
+        {
+          "id": "se-coucher-a-l-heure-qui-c",
+          "texte": "Se coucher à l'heure qui correspond à son ancien métier",
+          "categorie": "ca-aide-a-s-endormir",
+          "points": {
+            "C2.1.2": 1
+          },
+          "retour": "Réponse attendue : Ça aide à s'endormir."
+        },
+        {
+          "id": "ecouter-sa-radio-a-faible-",
+          "texte": "Écouter sa radio à faible volume avant de dormir",
+          "categorie": "ca-aide-a-s-endormir",
+          "points": {
+            "C2.1.2": 1
+          },
+          "retour": "Réponse attendue : Ça aide à s'endormir."
+        },
+        {
+          "id": "une-chambre-a-temperature-",
+          "texte": "Une chambre à température confortable pour lui",
+          "categorie": "ca-aide-a-s-endormir",
+          "points": {
+            "C2.1.2": 1
+          },
+          "retour": "Réponse attendue : Ça aide à s'endormir."
+        },
+        {
+          "id": "un-rituel-du-soir-qu-il-a-",
+          "texte": "Un rituel du soir qu'il a lui-même choisi",
+          "categorie": "ca-aide-a-s-endormir",
+          "points": {
+            "C2.1.2": 1
+          },
+          "retour": "Réponse attendue : Ça aide à s'endormir."
+        },
+        {
+          "id": "les-travaux-du-couloir-qui",
+          "texte": "Les travaux du couloir qui se terminent tard",
+          "categorie": "ca-gene-le-sommeil",
+          "points": {
+            "C2.1.2": 1
+          },
+          "retour": "Réponse attendue : Ça gêne le sommeil."
+        },
+        {
+          "id": "une-lumiere-vive-laissee-a",
+          "texte": "Une lumière vive laissée allumée sans son accord",
+          "categorie": "ca-gene-le-sommeil",
+          "points": {
+            "C2.1.2": 1
+          },
+          "retour": "Réponse attendue : Ça gêne le sommeil."
+        },
+        {
+          "id": "un-drap-plisse-sous-le-dos",
+          "texte": "Un drap plissé sous le dos",
+          "categorie": "ca-gene-le-sommeil",
+          "points": {
+            "C2.1.2": 1
+          },
+          "retour": "Réponse attendue : Ça gêne le sommeil."
+        },
+        {
+          "id": "une-longue-sieste-imposee-",
+          "texte": "Une longue sieste imposée l'après-midi",
+          "categorie": "ca-gene-le-sommeil",
+          "points": {
+            "C2.1.2": 1
+          },
+          "retour": "Réponse attendue : Ça gêne le sommeil."
+        }
+      ]
+    },
+    {
+      "id": "tri-3",
+      "type": "tri",
+      "consigne": "Il se lève la nuit avec sa canne : sûr ou risqué ?",
+      "categories": [
+        {
+          "id": "trajet-sur",
+          "libelle": "Trajet sûr"
+        },
+        {
+          "id": "trajet-risque",
+          "libelle": "Trajet risqué"
+        }
+      ],
+      "elements": [
+        {
+          "id": "une-veilleuse-ou-un-interr",
+          "texte": "Une veilleuse ou un interrupteur accessible depuis le lit",
+          "categorie": "trajet-sur",
+          "points": {
+            "C2.1.2": 1
+          },
+          "retour": "Réponse attendue : Trajet sûr."
+        },
+        {
+          "id": "le-passage-vers-les-toilet",
+          "texte": "Le passage vers les toilettes dégagé",
+          "categorie": "trajet-sur",
+          "points": {
+            "C2.1.2": 1
+          },
+          "retour": "Réponse attendue : Trajet sûr."
+        },
+        {
+          "id": "sa-canne-posee-du-cote-ou-",
+          "texte": "Sa canne posée du côté où il se lève",
+          "categorie": "trajet-sur",
+          "points": {
+            "C2.1.2": 1
+          },
+          "retour": "Réponse attendue : Trajet sûr."
+        },
+        {
+          "id": "la-sonnette-d-appel-a-port",
+          "texte": "La sonnette d'appel à portée de main",
+          "categorie": "trajet-sur",
+          "points": {
+            "C2.1.2": 1
+          },
+          "retour": "Réponse attendue : Trajet sûr."
+        },
+        {
+          "id": "un-tapis-non-fixe-devant-l",
+          "texte": "Un tapis non fixé devant le lit",
+          "categorie": "trajet-risque",
+          "points": {
+            "C2.1.2": 1
+          },
+          "retour": "Réponse attendue : Trajet risqué."
+        },
+        {
+          "id": "le-cable-de-la-radio-qui-t",
+          "texte": "Le câble de la radio qui traverse le passage",
+          "categorie": "trajet-risque",
+          "points": {
+            "C2.1.2": 1
+          },
+          "retour": "Réponse attendue : Trajet risqué."
+        },
+        {
+          "id": "le-fauteuil-deplace-sans-l",
+          "texte": "Le fauteuil déplacé sans le lui dire",
+          "categorie": "trajet-risque",
+          "points": {
+            "C2.1.2": 1
+          },
+          "retour": "Réponse attendue : Trajet risqué."
+        },
+        {
+          "id": "des-chaussons-ouverts-a-l-",
+          "texte": "Des chaussons ouverts à l'arrière",
+          "categorie": "trajet-risque",
+          "points": {
+            "C2.1.2": 1
+          },
+          "retour": "Réponse attendue : Trajet risqué."
+        }
+      ]
+    }
+  ],
+  "debriefing": [
+    "Quelle notion de cette séance avez-vous le mieux réussie ?",
+    "Quelle notion devez-vous revoir, et dans quel document du cours ?"
+  ]
+}

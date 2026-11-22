@@ -1,0 +1,98 @@
+{
+  "id": "m74-entrainement-s4-02",
+  "statut": "valide",
+  "format": "entrainement",
+  "titre": "Choisir et sécuriser les aides à la mobilité et à la marche",
+  "duree_min": 5,
+  "sequence_requise": "S4",
+  "lieu": "salon",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "C2.1.3",
+      "critere": "Respect du rythme, des habitudes et des attentes de la personne."
+    }
+  ],
+  "situation": "Entraînement rapide sur les notions de la séance S4-02 : Choisir et sécuriser les aides à la mobilité et à la marche.",
+  "objectif_eleve": "Réviser les notions de la séance : répondre vite et juste, puis lire les corrections.",
+  "note_pour_audrey": "Entraînement généré pour la tâche Q.4 à partir de l'activité interactive de votre séance S4-02 (exercices repris tels quels, sans réécriture). Compétence : la compétence principale de la séance ; critère choisi par l'IA parmi les critères officiels de cette compétence (celui qui partage le plus de mots avec les exercices) : à vérifier.",
+  "etapes": [
+    {
+      "id": "association-1",
+      "type": "association",
+      "consigne": "Reliez chaque mot à sa définition.",
+      "paires": [
+        {
+          "id": "canne",
+          "terme": "Canne",
+          "definition": "Aide à la marche prévue pour améliorer un appui ou la stabilité selon les consignes professionnelles.",
+          "points": {
+            "C2.1.3": 1
+          }
+        },
+        {
+          "id": "deambulateur",
+          "terme": "Déambulateur",
+          "definition": "Cadre de marche apportant plusieurs points d’appui ; son modèle et son réglage doivent être adaptés à la personne.",
+          "points": {
+            "C2.1.3": 1
+          }
+        },
+        {
+          "id": "fauteuil-roulant",
+          "terme": "Fauteuil roulant",
+          "definition": "Aide au déplacement assis dont l’usage exige contrôle des freins, roues, repose-pieds et installation.",
+          "points": {
+            "C2.1.3": 1
+          }
+        },
+        {
+          "id": "barre-d-appui",
+          "terme": "Barre d’appui",
+          "definition": "Équipement fixe permettant un appui dans un espace aménagé, après vérification de sa stabilité.",
+          "points": {
+            "C2.1.3": 1
+          }
+        },
+        {
+          "id": "drap-de-glisse",
+          "terme": "Drap de glisse",
+          "definition": "Aide au transfert qui réduit les frottements pour glisser une personne dans son lit ou d’un plan à un autre, sans la soulever.",
+          "points": {
+            "C2.1.3": 1
+          }
+        },
+        {
+          "id": "verticalisateur",
+          "terme": "Verticalisateur",
+          "definition": "Appareil aidant une personne qui porte encore son poids à passer de la position assise à la position debout, en se tenant aux poignées.",
+          "points": {
+            "C2.1.3": 1
+          }
+        },
+        {
+          "id": "leve-personne",
+          "terme": "Lève-personne",
+          "definition": "Appareil équipé d’une sangle permettant de transférer une personne qui ne porte pas son poids, selon la notice et le protocole de la structure.",
+          "points": {
+            "C2.1.3": 1
+          }
+        },
+        {
+          "id": "manipulation-a-vide",
+          "terme": "Manipulation à vide",
+          "definition": "Prise en main du matériel sans personne installée, pour en comprendre le fonctionnement et les vérifications.",
+          "points": {
+            "C2.1.3": 1
+          }
+        }
+      ]
+    }
+  ],
+  "debriefing": [
+    "Quelle notion de cette séance avez-vous le mieux réussie ?",
+    "Quelle notion devez-vous revoir, et dans quel document du cours ?"
+  ]
+}

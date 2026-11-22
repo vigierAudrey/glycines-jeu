@@ -1,0 +1,243 @@
+{
+  "id": "m51-entrainement-s1-05",
+  "statut": "valide",
+  "format": "entrainement",
+  "titre": "Vieillissement : observer sans généraliser",
+  "duree_min": 5,
+  "sequence_requise": "S1",
+  "lieu": "salon",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "CT3.2",
+      "critere": "Repérage du degré d’autonomie de la personne âgée, prise en compte de ces éléments pour la mise en œuvre de ses actions."
+    }
+  ],
+  "situation": "Entraînement rapide sur les notions de la séance S1-05 : Vieillissement : observer sans généraliser.",
+  "objectif_eleve": "Réviser les notions de la séance : répondre vite et juste, puis lire les corrections.",
+  "note_pour_audrey": "Entraînement généré pour la tâche Q.4 à partir de l'activité interactive de votre séance S1-05 (exercices repris tels quels, sans réécriture). Compétence : la compétence principale de la séance ; critère choisi par l'IA parmi les critères officiels de cette compétence (celui qui partage le plus de mots avec les exercices) : à vérifier.",
+  "etapes": [
+    {
+      "id": "tri-1",
+      "type": "tri",
+      "consigne": "Classe chaque observation.",
+      "categories": [
+        {
+          "id": "biologique",
+          "libelle": "Biologique"
+        },
+        {
+          "id": "cognitif",
+          "libelle": "Cognitif"
+        },
+        {
+          "id": "psychologique",
+          "libelle": "Psychologique"
+        }
+      ],
+      "elements": [
+        {
+          "id": "force-diminuee",
+          "texte": "Force diminuée",
+          "categorie": "biologique",
+          "points": {
+            "CT3.2": 1
+          },
+          "retour": "Réponse attendue : Biologique."
+        },
+        {
+          "id": "audition-reduite",
+          "texte": "Audition réduite",
+          "categorie": "biologique",
+          "points": {
+            "CT3.2": 1
+          },
+          "retour": "Réponse attendue : Biologique."
+        },
+        {
+          "id": "vue-qui-baisse",
+          "texte": "Vue qui baisse",
+          "categorie": "biologique",
+          "points": {
+            "CT3.2": 1
+          },
+          "retour": "Réponse attendue : Biologique."
+        },
+        {
+          "id": "oubli-inhabituel",
+          "texte": "Oubli inhabituel",
+          "categorie": "cognitif",
+          "points": {
+            "CT3.2": 1
+          },
+          "retour": "Réponse attendue : Cognitif."
+        },
+        {
+          "id": "difficulte-a-suivre-une-co",
+          "texte": "Difficulté à suivre une consigne longue",
+          "categorie": "cognitif",
+          "points": {
+            "CT3.2": 1
+          },
+          "retour": "Réponse attendue : Cognitif."
+        },
+        {
+          "id": "se-repere-mal-dans-le-temp",
+          "texte": "Se repère mal dans le temps",
+          "categorie": "cognitif",
+          "points": {
+            "CT3.2": 1
+          },
+          "retour": "Réponse attendue : Cognitif."
+        },
+        {
+          "id": "tristesse-depuis-un-deuil",
+          "texte": "Tristesse depuis un deuil",
+          "categorie": "psychologique",
+          "points": {
+            "CT3.2": 1
+          },
+          "retour": "Réponse attendue : Psychologique."
+        },
+        {
+          "id": "perte-de-motivation",
+          "texte": "Perte de motivation",
+          "categorie": "psychologique",
+          "points": {
+            "CT3.2": 1
+          },
+          "retour": "Réponse attendue : Psychologique."
+        }
+      ]
+    },
+    {
+      "id": "tri-2",
+      "type": "tri",
+      "consigne": "Associe l'observation à une attitude adaptée.",
+      "categories": [
+        {
+          "id": "laisser-plus-de-temp",
+          "libelle": "Laisser plus de temps"
+        },
+        {
+          "id": "parler-face-a-la-per",
+          "libelle": "Parler face à la personne"
+        },
+        {
+          "id": "securiser-le-deplace",
+          "libelle": "Sécuriser le déplacement"
+        },
+        {
+          "id": "ecouter-sans-juger",
+          "libelle": "Écouter sans juger"
+        }
+      ],
+      "elements": [
+        {
+          "id": "la-personne-repond-lenteme",
+          "texte": "La personne répond lentement",
+          "categorie": "laisser-plus-de-temp",
+          "points": {
+            "CT3.2": 1
+          },
+          "retour": "Réponse attendue : Laisser plus de temps."
+        },
+        {
+          "id": "la-personne-met-du-temps-a",
+          "texte": "La personne met du temps à comprendre",
+          "categorie": "laisser-plus-de-temp",
+          "points": {
+            "CT3.2": 1
+          },
+          "retour": "Réponse attendue : Laisser plus de temps."
+        },
+        {
+          "id": "la-personne-entend-mal",
+          "texte": "La personne entend mal",
+          "categorie": "parler-face-a-la-per",
+          "points": {
+            "CT3.2": 1
+          },
+          "retour": "Réponse attendue : Parler face à la personne."
+        },
+        {
+          "id": "la-personne-marche-diffici",
+          "texte": "La personne marche difficilement",
+          "categorie": "securiser-le-deplace",
+          "points": {
+            "CT3.2": 1
+          },
+          "retour": "Réponse attendue : Sécuriser le déplacement."
+        },
+        {
+          "id": "la-personne-est-triste",
+          "texte": "La personne est triste",
+          "categorie": "ecouter-sans-juger",
+          "points": {
+            "CT3.2": 1
+          },
+          "retour": "Réponse attendue : Écouter sans juger."
+        }
+      ]
+    },
+    {
+      "id": "selection-3",
+      "type": "selection",
+      "consigne": "Vrai ou faux ?",
+      "question": "Cochez les phrases vraies.",
+      "elements": [
+        {
+          "id": "toutes-les-personnes-vieil",
+          "texte": "Toutes les personnes vieillissent de la même façon.",
+          "attendu": false,
+          "points": {
+            "CT3.2": 1
+          },
+          "retour": "Faux."
+        },
+        {
+          "id": "une-confusion-soudaine-doi",
+          "texte": "Une confusion soudaine doit être transmise rapidement.",
+          "attendu": true,
+          "points": {
+            "CT3.2": 1
+          },
+          "retour": "Vrai."
+        },
+        {
+          "id": "je-peux-poser-un-diagnosti",
+          "texte": "Je peux poser un diagnostic médical.",
+          "attendu": false,
+          "points": {
+            "CT3.2": 1
+          },
+          "retour": "Faux."
+        },
+        {
+          "id": "j-adapte-mon-aide-aux-capa",
+          "texte": "J'adapte mon aide aux capacités observées.",
+          "attendu": true,
+          "points": {
+            "CT3.2": 1
+          },
+          "retour": "Vrai."
+        },
+        {
+          "id": "le-vieillissement-touche-s",
+          "texte": "Le vieillissement touche seulement le corps.",
+          "attendu": false,
+          "points": {
+            "CT3.2": 1
+          },
+          "retour": "Faux."
+        }
+      ]
+    }
+  ],
+  "debriefing": [
+    "Quelle notion de cette séance avez-vous le mieux réussie ?",
+    "Quelle notion devez-vous revoir, et dans quel document du cours ?"
+  ]
+}

@@ -1,0 +1,330 @@
+{
+  "id": "m90-entrainement-s6-01",
+  "statut": "valide",
+  "format": "entrainement",
+  "titre": "Retour de PFMP 4 : preuves et positionnement C2.2.2",
+  "duree_min": 5,
+  "sequence_requise": "S6",
+  "lieu": "salon",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "C2.2.2",
+      "critere": "Écoute attentive, active de la personne et de sa famille."
+    }
+  ],
+  "situation": "Entraînement rapide sur les notions de la séance S6-01 : Retour de PFMP 4 : preuves et positionnement C2.2.2.",
+  "objectif_eleve": "Réviser les notions de la séance : répondre vite et juste, puis lire les corrections.",
+  "note_pour_audrey": "Entraînement généré pour la tâche Q.4 à partir de l'activité interactive de votre séance S6-01 (exercices repris tels quels, sans réécriture). Compétence : la compétence principale de la séance ; critère choisi par l'IA parmi les critères officiels de cette compétence (celui qui partage le plus de mots avec les exercices) : à vérifier.",
+  "etapes": [
+    {
+      "id": "association-1",
+      "type": "association",
+      "consigne": "Reliez chaque mot à sa définition.",
+      "paires": [
+        {
+          "id": "positionnement",
+          "terme": "positionnement",
+          "definition": "niveau établi à partir de preuves",
+          "points": {
+            "C2.2.2": 1
+          }
+        },
+        {
+          "id": "critere",
+          "terme": "critère",
+          "definition": "élément observable utilisé pour juger la réussite",
+          "points": {
+            "C2.2.2": 1
+          }
+        },
+        {
+          "id": "remediation",
+          "terme": "remédiation",
+          "definition": "travail ciblé pour dépasser une difficulté",
+          "points": {
+            "C2.2.2": 1
+          }
+        },
+        {
+          "id": "preuve",
+          "terme": "preuve",
+          "definition": "élément concret qui montre une activité ou une compétence",
+          "points": {
+            "C2.2.2": 1
+          }
+        },
+        {
+          "id": "observe",
+          "terme": "observé",
+          "definition": "vu faire par un professionnel",
+          "points": {
+            "C2.2.2": 1
+          }
+        },
+        {
+          "id": "realise",
+          "terme": "réalisé",
+          "definition": "fait par moi-même",
+          "points": {
+            "C2.2.2": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "tri-2",
+      "type": "tri",
+      "consigne": "Classez chaque carte.",
+      "categories": [
+        {
+          "id": "je-l-ai-fait",
+          "libelle": "Je l’ai fait"
+        },
+        {
+          "id": "je-l-ai-observe",
+          "libelle": "Je l’ai observé"
+        },
+        {
+          "id": "pas-encore",
+          "libelle": "Pas encore"
+        }
+      ],
+      "elements": [
+        {
+          "id": "entretien-renseigne-avec-u",
+          "texte": "Entretien renseigné avec une résidente.",
+          "categorie": "je-l-ai-fait",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : Je l’ai fait."
+        },
+        {
+          "id": "plan-de-rangement-annote",
+          "texte": "Plan de rangement annoté.",
+          "categorie": "je-l-ai-fait",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : Je l’ai fait."
+        },
+        {
+          "id": "inventaire-trie-avec-la-pe",
+          "texte": "Inventaire trié avec la personne.",
+          "categorie": "je-l-ai-fait",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : Je l’ai fait."
+        },
+        {
+          "id": "tri-des-affaires-par-la-tu",
+          "texte": "Tri des affaires par la tutrice.",
+          "categorie": "je-l-ai-observe",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : Je l’ai observé."
+        },
+        {
+          "id": "arbitrage-entre-une-reside",
+          "texte": "Arbitrage entre une résidente et sa famille mené par l’équipe.",
+          "categorie": "je-l-ai-observe",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : Je l’ai observé."
+        },
+        {
+          "id": "personnaliser-une-chambre-",
+          "texte": "Personnaliser une chambre avec un nouveau résident.",
+          "categorie": "pas-encore",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : Pas encore."
+        },
+        {
+          "id": "choisir-un-moyen-de-lien-a",
+          "texte": "Choisir un moyen de lien avec un résident.",
+          "categorie": "pas-encore",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : Pas encore."
+        },
+        {
+          "id": "justifier-un-rangement-a-l",
+          "texte": "Justifier un rangement à l’oral.",
+          "categorie": "pas-encore",
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Réponse attendue : Pas encore."
+        }
+      ]
+    },
+    {
+      "id": "ordre-3",
+      "type": "ordre",
+      "consigne": "Remettez dans l'ordre.",
+      "elements": [
+        {
+          "id": "lister-les-taches-de-la-pf",
+          "texte": "Lister les tâches de la PFMP.",
+          "points": {
+            "C2.2.2": 1
+          }
+        },
+        {
+          "id": "separer-realise-et-observe",
+          "texte": "Séparer réalisé et observé.",
+          "points": {
+            "C2.2.2": 1
+          }
+        },
+        {
+          "id": "relier-chaque-preuve-a-un-",
+          "texte": "Relier chaque preuve à un critère.",
+          "points": {
+            "C2.2.2": 1
+          }
+        },
+        {
+          "id": "choisir-un-objectif-precis",
+          "texte": "Choisir un objectif précis de progrès.",
+          "points": {
+            "C2.2.2": 1
+          }
+        }
+      ],
+      "retour": "Ordre repris de la séance S6-01."
+    },
+    {
+      "id": "selection-4",
+      "type": "selection",
+      "consigne": "Vrai ou faux ?",
+      "question": "Cochez les phrases vraies.",
+      "elements": [
+        {
+          "id": "un-code-de-competence-coch",
+          "texte": "Un code de compétence coché suffit comme preuve.",
+          "attendu": false,
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Faux : Un code seul n’est pas une preuve."
+        },
+        {
+          "id": "une-photo-de-chambre-prouv",
+          "texte": "Une photo de chambre prouve que j’ai écouté la résidente.",
+          "attendu": false,
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Faux : Une photo seule n’atteste pas l’écoute."
+        },
+        {
+          "id": "observer-une-tache-ce-n-es",
+          "texte": "Observer une tâche, ce n’est pas l’avoir réalisée.",
+          "attendu": true,
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Vrai : Je distingue observé et réalisé."
+        },
+        {
+          "id": "mon-positionnement-peut-ev",
+          "texte": "Mon positionnement peut évoluer avec une nouvelle preuve.",
+          "attendu": true,
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Vrai : Il n’est pas définitif."
+        },
+        {
+          "id": "progresser-en-tout-est-un-",
+          "texte": "« Progresser en tout » est un objectif précis.",
+          "attendu": false,
+          "points": {
+            "C2.2.2": 1
+          },
+          "retour": "Faux : L’objectif doit être précis."
+        }
+      ]
+    },
+    {
+      "id": "qcm-5",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Une preuve forte est…",
+      "options": [
+        {
+          "texte": "un plan annoté et justifié",
+          "juste": true
+        },
+        {
+          "texte": "un code coché"
+        },
+        {
+          "texte": "une impression"
+        }
+      ],
+      "points": {
+        "C2.2.2": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S6-01 si besoin."
+    },
+    {
+      "id": "qcm-6",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Un critère est…",
+      "options": [
+        {
+          "texte": "un souhait"
+        },
+        {
+          "texte": "observable",
+          "juste": true
+        },
+        {
+          "texte": "un résultat de note"
+        }
+      ],
+      "points": {
+        "C2.2.2": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S6-01 si besoin."
+    },
+    {
+      "id": "qcm-7",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "La remédiation est…",
+      "options": [
+        {
+          "texte": "une punition"
+        },
+        {
+          "texte": "un examen"
+        },
+        {
+          "texte": "un travail ciblé",
+          "juste": true
+        }
+      ],
+      "points": {
+        "C2.2.2": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S6-01 si besoin."
+    }
+  ],
+  "debriefing": [
+    "Quelle notion de cette séance avez-vous le mieux réussie ?",
+    "Quelle notion devez-vous revoir, et dans quel document du cours ?"
+  ]
+}

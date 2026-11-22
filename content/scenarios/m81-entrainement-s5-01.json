@@ -1,0 +1,333 @@
+{
+  "id": "m81-entrainement-s5-01",
+  "statut": "valide",
+  "format": "entrainement",
+  "titre": "Digestif, diabète, urinaire et cardio-vasculaire : repérer sans diagnostiquer",
+  "duree_min": 5,
+  "sequence_requise": "S5",
+  "lieu": "salon",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "C2.1.6",
+      "critere": "Respect des règles éthiques et du protocole."
+    }
+  ],
+  "situation": "Entraînement rapide sur les notions de la séance S5-01 : Digestif, diabète, urinaire et cardio-vasculaire : repérer sans diagnostiquer.",
+  "objectif_eleve": "Réviser les notions de la séance : répondre vite et juste, puis lire les corrections.",
+  "note_pour_audrey": "Entraînement généré pour la tâche Q.4 à partir de l'activité interactive de votre séance S5-01 (exercices repris tels quels, sans réécriture). Compétence : la compétence principale de la séance ; critère choisi par l'IA parmi les critères officiels de cette compétence (celui qui partage le plus de mots avec les exercices) : à vérifier.",
+  "etapes": [
+    {
+      "id": "association-1",
+      "type": "association",
+      "consigne": "Reliez chaque mot à sa définition.",
+      "paires": [
+        {
+          "id": "manifestation",
+          "terme": "manifestation",
+          "definition": "signe physique ou comportemental observable",
+          "points": {
+            "C2.1.6": 1
+          }
+        },
+        {
+          "id": "alerte",
+          "terme": "alerte",
+          "definition": "information rapide donnée face à un risque ou un état inhabituel",
+          "points": {
+            "C2.1.6": 1
+          }
+        },
+        {
+          "id": "adaptation",
+          "terme": "adaptation",
+          "definition": "modification prudente de l’accompagnement dans sa limite professionnelle",
+          "points": {
+            "C2.1.6": 1
+          }
+        },
+        {
+          "id": "diagnostic",
+          "terme": "diagnostic",
+          "definition": "conclusion médicale qui ne relève pas de l’agent",
+          "points": {
+            "C2.1.6": 1
+          }
+        },
+        {
+          "id": "habitude",
+          "terme": "habitude",
+          "definition": "état ou comportement ordinaire de la personne, qui sert de comparaison",
+          "points": {
+            "C2.1.6": 1
+          }
+        },
+        {
+          "id": "protocole",
+          "terme": "protocole",
+          "definition": "document de la structure qui fixe la conduite à tenir",
+          "points": {
+            "C2.1.6": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "tri-2",
+      "type": "tri",
+      "consigne": "Classez chaque carte.",
+      "categories": [
+        {
+          "id": "dans-mon-role",
+          "libelle": "Dans mon rôle"
+        },
+        {
+          "id": "hors-de-mon-role",
+          "libelle": "Hors de mon rôle"
+        }
+      ],
+      "elements": [
+        {
+          "id": "noter-le-nombre-de-vomisse",
+          "texte": "Noter le nombre de vomissements et l’heure.",
+          "categorie": "dans-mon-role",
+          "points": {
+            "C2.1.6": 1
+          },
+          "retour": "Réponse attendue : Dans mon rôle."
+        },
+        {
+          "id": "installer-m-andre-conforta",
+          "texte": "Installer M. André confortablement et veiller à son hygiène.",
+          "categorie": "dans-mon-role",
+          "points": {
+            "C2.1.6": 1
+          },
+          "retour": "Réponse attendue : Dans mon rôle."
+        },
+        {
+          "id": "alerter-immediatement-pour",
+          "texte": "Alerter immédiatement pour le mollet de Mme Rose.",
+          "categorie": "dans-mon-role",
+          "points": {
+            "C2.1.6": 1
+          },
+          "retour": "Réponse attendue : Dans mon rôle."
+        },
+        {
+          "id": "transmettre-un-changement-",
+          "texte": "Transmettre un changement du transit.",
+          "categorie": "dans-mon-role",
+          "points": {
+            "C2.1.6": 1
+          },
+          "retour": "Réponse attendue : Dans mon rôle."
+        },
+        {
+          "id": "dire-a-mme-rose-qu-elle-a-",
+          "texte": "Dire à Mme Rose qu’elle a une phlébite.",
+          "categorie": "hors-de-mon-role",
+          "points": {
+            "C2.1.6": 1
+          },
+          "retour": "Réponse attendue : Hors de mon rôle."
+        },
+        {
+          "id": "masser-le-mollet-gonfle",
+          "texte": "Masser le mollet gonflé.",
+          "categorie": "hors-de-mon-role",
+          "points": {
+            "C2.1.6": 1
+          },
+          "retour": "Réponse attendue : Hors de mon rôle."
+        },
+        {
+          "id": "donner-un-medicament-contr",
+          "texte": "Donner un médicament contre les nausées.",
+          "categorie": "hors-de-mon-role",
+          "points": {
+            "C2.1.6": 1
+          },
+          "retour": "Réponse attendue : Hors de mon rôle."
+        },
+        {
+          "id": "supprimer-le-sucre-du-repa",
+          "texte": "Supprimer le sucre du repas d’un résident diabétique.",
+          "categorie": "hors-de-mon-role",
+          "points": {
+            "C2.1.6": 1
+          },
+          "retour": "Réponse attendue : Hors de mon rôle."
+        }
+      ]
+    },
+    {
+      "id": "ordre-3",
+      "type": "ordre",
+      "consigne": "Remettez dans l'ordre.",
+      "elements": [
+        {
+          "id": "observer-les-faits-sans-le",
+          "texte": "Observer les faits sans les interpréter.",
+          "points": {
+            "C2.1.6": 1
+          }
+        },
+        {
+          "id": "comparer-avec-l-etat-habit",
+          "texte": "Comparer avec l’état habituel de la personne.",
+          "points": {
+            "C2.1.6": 1
+          }
+        },
+        {
+          "id": "securiser-et-installer-la-",
+          "texte": "Sécuriser et installer la personne confortablement.",
+          "points": {
+            "C2.1.6": 1
+          }
+        },
+        {
+          "id": "alerter-le-professionnel-c",
+          "texte": "Alerter le professionnel compétent selon le protocole.",
+          "points": {
+            "C2.1.6": 1
+          }
+        },
+        {
+          "id": "tracer-les-faits-et-l-acti",
+          "texte": "Tracer les faits et l’action réalisée.",
+          "points": {
+            "C2.1.6": 1
+          }
+        }
+      ],
+      "retour": "Ordre repris de la séance S5-01."
+    },
+    {
+      "id": "selection-4",
+      "type": "selection",
+      "consigne": "Vrai ou faux ?",
+      "question": "Cochez les phrases vraies.",
+      "elements": [
+        {
+          "id": "je-peux-dire-a-mme-rose-de",
+          "texte": "Je peux dire à Mme Rose de quelle maladie il s’agit.",
+          "attendu": false,
+          "points": {
+            "C2.1.6": 1
+          },
+          "retour": "Faux : Je décris des faits, je ne pose pas de diagnostic."
+        },
+        {
+          "id": "un-mollet-gonfle-rouge-et-",
+          "texte": "Un mollet gonflé, rouge et chaud impose une alerte immédiate.",
+          "attendu": true,
+          "points": {
+            "C2.1.6": 1
+          },
+          "retour": "Vrai : Signe inhabituel à ne pas banaliser."
+        },
+        {
+          "id": "je-note-la-frequence-et-l-",
+          "texte": "Je note la fréquence et l’aspect des vomissements.",
+          "attendu": true,
+          "points": {
+            "C2.1.6": 1
+          },
+          "retour": "Vrai : Ce sont des faits utiles à transmettre."
+        },
+        {
+          "id": "je-peux-modifier-le-regime",
+          "texte": "Je peux modifier le régime d’un résident diabétique s’il semble fatigué.",
+          "attendu": false,
+          "points": {
+            "C2.1.6": 1
+          },
+          "retour": "Faux : Je ne décide ni traitement ni régime."
+        },
+        {
+          "id": "une-situation-sans-changem",
+          "texte": "Une situation sans changement par rapport à l’habitude n’appelle pas d’alerte.",
+          "attendu": true,
+          "points": {
+            "C2.1.6": 1
+          },
+          "retour": "Vrai : On compare toujours à l’état habituel."
+        }
+      ]
+    },
+    {
+      "id": "qcm-5",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Face au mollet gonflé et douloureux, je…",
+      "options": [
+        {
+          "texte": "attends le lendemain"
+        },
+        {
+          "texte": "masse doucement"
+        },
+        {
+          "texte": "alerte immédiatement",
+          "juste": true
+        }
+      ],
+      "points": {
+        "C2.1.6": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S5-01 si besoin."
+    },
+    {
+      "id": "qcm-6",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Une manifestation est…",
+      "options": [
+        {
+          "texte": "un signe observable",
+          "juste": true
+        },
+        {
+          "texte": "un traitement"
+        },
+        {
+          "texte": "un diagnostic"
+        }
+      ],
+      "points": {
+        "C2.1.6": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S5-01 si besoin."
+    },
+    {
+      "id": "qcm-7",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Pour M. André qui vomit, je transmets…",
+      "options": [
+        {
+          "texte": "mon avis sur sa maladie"
+        },
+        {
+          "texte": "la fréquence, l’aspect et l’heure",
+          "juste": true
+        },
+        {
+          "texte": "rien si cela passe"
+        }
+      ],
+      "points": {
+        "C2.1.6": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S5-01 si besoin."
+    }
+  ],
+  "debriefing": [
+    "Quelle notion de cette séance avez-vous le mieux réussie ?",
+    "Quelle notion devez-vous revoir, et dans quel document du cours ?"
+  ]
+}

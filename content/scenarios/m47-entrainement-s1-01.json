@@ -1,0 +1,252 @@
+{
+  "id": "m47-entrainement-s1-01",
+  "statut": "valide",
+  "format": "entrainement",
+  "titre": "Structures d’accueil et fiabilité des informations",
+  "duree_min": 5,
+  "sequence_requise": "S1",
+  "lieu": "salon",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "CT3.1",
+      "critere": "Vérification de la fiabilité des sources d’information."
+    }
+  ],
+  "situation": "Entraînement rapide sur les notions de la séance S1-01 : Structures d’accueil et fiabilité des informations.",
+  "objectif_eleve": "Réviser les notions de la séance : répondre vite et juste, puis lire les corrections.",
+  "note_pour_audrey": "Entraînement généré pour la tâche Q.4 à partir de l'activité interactive de votre séance S1-01 (exercices repris tels quels, sans réécriture). Compétence : la compétence principale de la séance ; critère choisi par l'IA parmi les critères officiels de cette compétence (celui qui partage le plus de mots avec les exercices) : à vérifier.",
+  "etapes": [
+    {
+      "id": "tri-1",
+      "type": "tri",
+      "consigne": "Sélectionne une carte puis clique la structure adaptée.",
+      "categories": [
+        {
+          "id": "ehpad",
+          "libelle": "EHPAD"
+        },
+        {
+          "id": "residence-autonomie",
+          "libelle": "Résidence autonomie"
+        },
+        {
+          "id": "usld",
+          "libelle": "USLD"
+        },
+        {
+          "id": "accueil-de-jour",
+          "libelle": "Accueil de jour"
+        }
+      ],
+      "elements": [
+        {
+          "id": "personne-dependante-heberg",
+          "texte": "Personne dépendante, hébergée en permanence",
+          "categorie": "ehpad",
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Réponse attendue : EHPAD."
+        },
+        {
+          "id": "besoin-d-aide-pour-tous-le",
+          "texte": "Besoin d'aide pour tous les gestes, vit sur place",
+          "categorie": "ehpad",
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Réponse attendue : EHPAD."
+        },
+        {
+          "id": "personne-autonome-veut-un-",
+          "texte": "Personne autonome, veut un logement avec services",
+          "categorie": "residence-autonomie",
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Réponse attendue : Résidence autonomie."
+        },
+        {
+          "id": "fait-ses-courses-seule-mai",
+          "texte": "Fait ses courses seule mais veut un lieu sécurisé",
+          "categorie": "residence-autonomie",
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Réponse attendue : Résidence autonomie."
+        },
+        {
+          "id": "tres-dependante-soins-medi",
+          "texte": "Très dépendante, soins médicaux constants",
+          "categorie": "usld",
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Réponse attendue : USLD."
+        },
+        {
+          "id": "surveillance-medicale-impo",
+          "texte": "Surveillance médicale importante et continue",
+          "categorie": "usld",
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Réponse attendue : USLD."
+        },
+        {
+          "id": "vient-deux-jours-par-semai",
+          "texte": "Vient deux jours par semaine pour des activités",
+          "categorie": "accueil-de-jour",
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Réponse attendue : Accueil de jour."
+        },
+        {
+          "id": "rentre-chez-elle-chaque-so",
+          "texte": "Rentre chez elle chaque soir",
+          "categorie": "accueil-de-jour",
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Réponse attendue : Accueil de jour."
+        }
+      ]
+    },
+    {
+      "id": "tri-2",
+      "type": "tri",
+      "consigne": "Classe chaque source selon sa fiabilité.",
+      "categories": [
+        {
+          "id": "plus-fiable",
+          "libelle": "Plus fiable"
+        },
+        {
+          "id": "fiable-si-verifiee",
+          "libelle": "Fiable si vérifiée"
+        },
+        {
+          "id": "a-controler",
+          "libelle": "À contrôler"
+        }
+      ],
+      "elements": [
+        {
+          "id": "site-officiel-d-un-ministe",
+          "texte": "Site officiel d'un ministère, daté",
+          "categorie": "plus-fiable",
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Réponse attendue : Plus fiable."
+        },
+        {
+          "id": "fiche-de-l-ars-recente",
+          "texte": "Fiche de l'ARS récente",
+          "categorie": "plus-fiable",
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Réponse attendue : Plus fiable."
+        },
+        {
+          "id": "brochure-de-la-structure-v",
+          "texte": "Brochure de la structure, vérifiée",
+          "categorie": "fiable-si-verifiee",
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Réponse attendue : Fiable si vérifiée."
+        },
+        {
+          "id": "article-de-presse-locale-s",
+          "texte": "Article de presse locale signé",
+          "categorie": "fiable-si-verifiee",
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Réponse attendue : Fiable si vérifiée."
+        },
+        {
+          "id": "commentaire-anonyme-sur-un",
+          "texte": "Commentaire anonyme sur un forum",
+          "categorie": "a-controler",
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Réponse attendue : À contrôler."
+        },
+        {
+          "id": "rumeur-entendue-dans-le-co",
+          "texte": "Rumeur entendue dans le couloir",
+          "categorie": "a-controler",
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Réponse attendue : À contrôler."
+        }
+      ]
+    },
+    {
+      "id": "selection-3",
+      "type": "selection",
+      "consigne": "Vrai ou faux ?",
+      "question": "Cochez les phrases vraies.",
+      "elements": [
+        {
+          "id": "en-accueil-de-jour-la-pers",
+          "texte": "En accueil de jour, la personne dort sur place.",
+          "attendu": false,
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Faux."
+        },
+        {
+          "id": "une-source-fiable-est-date",
+          "texte": "Une source fiable est datée et identifiable.",
+          "attendu": true,
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Vrai."
+        },
+        {
+          "id": "une-usld-propose-des-soins",
+          "texte": "Une USLD propose des soins médicaux importants.",
+          "attendu": true,
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Vrai."
+        },
+        {
+          "id": "une-publication-anonyme-pe",
+          "texte": "Une publication anonyme peut servir de preuve sans vérification.",
+          "attendu": false,
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Faux."
+        },
+        {
+          "id": "une-residence-autonomie-ac",
+          "texte": "Une résidence autonomie accueille surtout des personnes autonomes.",
+          "attendu": true,
+          "points": {
+            "CT3.1": 1
+          },
+          "retour": "Vrai."
+        }
+      ]
+    }
+  ],
+  "debriefing": [
+    "Quelle notion de cette séance avez-vous le mieux réussie ?",
+    "Quelle notion devez-vous revoir, et dans quel document du cours ?"
+  ]
+}

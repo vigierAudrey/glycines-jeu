@@ -412,3 +412,9 @@ Trois lignes par session : ce qui a été fait, ce qui reste à surveiller, la p
 - **Fait** : deux nouveaux types d'étapes, `qcm` (une bonne réponse) et `association` (relier un mot à sa définition, un mot à la fois avec pastilles), dans le moteur, le validateur, l'écran et la page enseignante ; champ `format: "entrainement"` sur une mission. 2 tests, `pnpm verifier` OK (146 tests).
 - **À surveiller** : rien.
 - **Prochaine tâche** : Q.3 (choisir « Missions dans l'aile » ou « Entraînements rapides »).
+
+## 22/11/2026 · Entraînements rapides du Bloc 2 (tâches Q.3 et Q.4)
+
+- **Fait** : onglets « Missions dans l'aile » et « Entraînements rapides » dans chaque matière. 48 entraînements du Bloc 2 (S1 à S6), générés à partir des activités interactives des séances : classements, vrai/faux, QCM, remises en ordre, associations mot et définition, repris tels quels. Identifiants à trois chiffres autorisés. Vérifié à 390 px.
+- **À surveiller** : le critère de chaque entraînement est choisi automatiquement parmi ceux de la compétence principale de la séance (indiqué dans la note) : Audrey peut le vérifier sur la page enseignante.
+- **Prochaine tâche** : Q.5 (entraînements de PSE).

@@ -1,0 +1,230 @@
+{
+  "id": "m63-entrainement-s2-10",
+  "statut": "valide",
+  "format": "entrainement",
+  "titre": "Stocks, matériels et produits : besoins, seuil d’alerte et relais",
+  "duree_min": 5,
+  "sequence_requise": "S2",
+  "lieu": "salon",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "CT3.3",
+      "critere": "Prise en compte du contexte de l’activité."
+    }
+  ],
+  "situation": "Entraînement rapide sur les notions de la séance S2-10 : Stocks, matériels et produits : besoins, seuil d’alerte et relais.",
+  "objectif_eleve": "Réviser les notions de la séance : répondre vite et juste, puis lire les corrections.",
+  "note_pour_audrey": "Entraînement généré pour la tâche Q.4 à partir de l'activité interactive de votre séance S2-10 (exercices repris tels quels, sans réécriture). Compétence : la compétence principale de la séance ; critère choisi par l'IA parmi les critères officiels de cette compétence (celui qui partage le plus de mots avec les exercices) : à vérifier.",
+  "etapes": [
+    {
+      "id": "tri-1",
+      "type": "tri",
+      "consigne": "Compare la quantité restante au seuil d'alerte, puis classe l'article.",
+      "categories": [
+        {
+          "id": "j-alerte",
+          "libelle": "J'alerte"
+        },
+        {
+          "id": "pas-d-alerte",
+          "libelle": "Pas d'alerte"
+        }
+      ],
+      "elements": [
+        {
+          "id": "gants-taille-m-1-boite-seu",
+          "texte": "Gants taille M : 1 boîte, seuil 3",
+          "categorie": "j-alerte",
+          "points": {
+            "CT3.3": 1
+          },
+          "retour": "Réponse attendue : J'alerte."
+        },
+        {
+          "id": "protections-nuit-2-paquets",
+          "texte": "Protections nuit : 2 paquets, seuil 5",
+          "categorie": "j-alerte",
+          "points": {
+            "CT3.3": 1
+          },
+          "retour": "Réponse attendue : J'alerte."
+        },
+        {
+          "id": "sacs-dechets-1-rouleau-seu",
+          "texte": "Sacs déchets : 1 rouleau, seuil 2",
+          "categorie": "j-alerte",
+          "points": {
+            "CT3.3": 1
+          },
+          "retour": "Réponse attendue : J'alerte."
+        },
+        {
+          "id": "lavettes-12-seuil-10",
+          "texte": "Lavettes : 12, seuil 10",
+          "categorie": "pas-d-alerte",
+          "points": {
+            "CT3.3": 1
+          },
+          "retour": "Réponse attendue : Pas d'alerte."
+        },
+        {
+          "id": "savon-sans-rincage-4-flaco",
+          "texte": "Savon sans rinçage : 4 flacons, seuil 2",
+          "categorie": "pas-d-alerte",
+          "points": {
+            "CT3.3": 1
+          },
+          "retour": "Réponse attendue : Pas d'alerte."
+        },
+        {
+          "id": "essuie-mains-8-paquets-seu",
+          "texte": "Essuie-mains : 8 paquets, seuil 4",
+          "categorie": "pas-d-alerte",
+          "points": {
+            "CT3.3": 1
+          },
+          "retour": "Réponse attendue : Pas d'alerte."
+        }
+      ]
+    },
+    {
+      "id": "tri-2",
+      "type": "tri",
+      "consigne": "Associe chaque information au professionnel à qui elle est adressée.",
+      "categories": [
+        {
+          "id": "responsable-du-stock",
+          "libelle": "Responsable du stock"
+        },
+        {
+          "id": "maintenance",
+          "libelle": "Maintenance"
+        },
+        {
+          "id": "infirmiere-coordinat",
+          "libelle": "Infirmière coordinatrice"
+        }
+      ],
+      "elements": [
+        {
+          "id": "les-protections-nuit-passe",
+          "texte": "Les protections nuit passent sous le seuil",
+          "categorie": "responsable-du-stock",
+          "points": {
+            "CT3.3": 1
+          },
+          "retour": "Réponse attendue : Responsable du stock."
+        },
+        {
+          "id": "il-n-y-a-plus-de-gants-a-l",
+          "texte": "Il n'y a plus de gants à la bonne taille",
+          "categorie": "responsable-du-stock",
+          "points": {
+            "CT3.3": 1
+          },
+          "retour": "Réponse attendue : Responsable du stock."
+        },
+        {
+          "id": "le-chariot-a-une-roue-bloq",
+          "texte": "Le chariot a une roue bloquée",
+          "categorie": "maintenance",
+          "points": {
+            "CT3.3": 1
+          },
+          "retour": "Réponse attendue : Maintenance."
+        },
+        {
+          "id": "la-barre-d-appui-bouge",
+          "texte": "La barre d'appui bouge",
+          "categorie": "maintenance",
+          "points": {
+            "CT3.3": 1
+          },
+          "retour": "Réponse attendue : Maintenance."
+        },
+        {
+          "id": "la-creme-prescrite-de-mme-",
+          "texte": "La crème prescrite de Mme Rose est presque vide",
+          "categorie": "infirmiere-coordinat",
+          "points": {
+            "CT3.3": 1
+          },
+          "retour": "Réponse attendue : Infirmière coordinatrice."
+        }
+      ]
+    },
+    {
+      "id": "qcm-3",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Une fiche d'alerte utile contient :",
+      "options": [
+        {
+          "texte": "seulement le nom de l'article"
+        },
+        {
+          "texte": "l'article, la quantité restante, le seuil, la date et le besoin prévu",
+          "juste": true
+        },
+        {
+          "texte": "une estimation au hasard"
+        }
+      ],
+      "points": {
+        "CT3.3": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S2-10 si besoin."
+    },
+    {
+      "id": "qcm-4",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Le cahier de suivi n'est pas rempli depuis mardi. Conséquence :",
+      "options": [
+        {
+          "texte": "aucune, le stock se voit à l'oeil"
+        },
+        {
+          "texte": "l'état réel du stock n'est pas connu",
+          "juste": true
+        },
+        {
+          "texte": "la livraison est annulée"
+        }
+      ],
+      "points": {
+        "CT3.3": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S2-10 si besoin."
+    },
+    {
+      "id": "qcm-5",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Un produit prévu par le protocole manque. Je :",
+      "options": [
+        {
+          "texte": "prends un autre produit"
+        },
+        {
+          "texte": "utilise ce qui reste sans gaspiller et j'alerte",
+          "juste": true
+        },
+        {
+          "texte": "arrête d'accompagner les résidents"
+        }
+      ],
+      "points": {
+        "CT3.3": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S2-10 si besoin."
+    }
+  ],
+  "debriefing": [
+    "Quelle notion de cette séance avez-vous le mieux réussie ?",
+    "Quelle notion devez-vous revoir, et dans quel document du cours ?"
+  ]
+}

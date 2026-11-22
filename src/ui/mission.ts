@@ -468,7 +468,7 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
     elementOuvert = null;
     messageRelais = '';
     fenetre.hidden = true;
-    liens.allerVersZone(m.lieu);
+    if (m.format !== 'entrainement') liens.allerVersZone(m.lieu); // un entraînement ne fait pas marcher l'agent
     afficher();
   };
 
@@ -585,6 +585,7 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
   // mélangent pas. Bloc 2 : missions rangées par séquence, verrouillées tant que la séquence n'a pas été vue.
   // PSE : missions toujours ouvertes. Le choix de matière est gardé pendant la partie.
   let matiere: 'bloc2' | 'pse' | null = null;
+  let formatListe: 'missions' | 'entrainements' = 'missions'; // Q.3
   let famille: string | null = null; // Q.1 : préfixe de la famille choisie (« CT3. »…), ou toutes
   let accueilEnCours = false;
   const carteMission = (m: Mission, sequenceVue: string) => {
@@ -604,8 +605,11 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
     accueilEnCours = accueil;
     const sequenceVue = liens.sequenceVue();
     const toutes = missionsAMontrer(contenu.missions, liens.avecBrouillons);
-    const bloc2 = toutes.filter((m) => m.discipline !== 'PSE');
-    const pse = toutes.filter((m) => m.discipline === 'PSE');
+    const duFormat = (m: Mission) => (formatListe === 'entrainements') === (m.format === 'entrainement');
+    const bloc2Tout = toutes.filter((m) => m.discipline !== 'PSE');
+    const pseTout = toutes.filter((m) => m.discipline === 'PSE');
+    const bloc2 = bloc2Tout.filter(duFormat);
+    const pse = pseTout.filter(duFormat);
     const haut = `
       <div class="fenetre__haut">
         ${matiere ? `<button type="button" class="bouton bouton--petit" data-action="matieres" aria-label="Revenir au choix de la matière">←</button>` : ''}
@@ -619,19 +623,28 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
         <button type="button" class="carte-matiere" data-matiere="bloc2">
           <strong>Bloc 2</strong>
           <span>Accompagner la personne dans son espace privé</span>
-          <span class="carte-matiere__nombre">${bloc2.length} mission${bloc2.length > 1 ? 's' : ''}</span>
+          <span class="carte-matiere__nombre">${bloc2Tout.length} activité${bloc2Tout.length > 1 ? 's' : ''}</span>
         </button>
-        <button type="button" class="carte-matiere" data-matiere="pse" ${pse.length ? '' : 'disabled'}>
+        <button type="button" class="carte-matiere" data-matiere="pse" ${pseTout.length ? '' : 'disabled'}>
           <strong>PSE</strong>
           <span>Prévention santé environnement</span>
-          <span class="carte-matiere__nombre">${pse.length ? `${pse.length} mission${pse.length > 1 ? 's' : ''}` : 'bientôt'}</span>
+          <span class="carte-matiere__nombre">${pseTout.length ? `${pseTout.length} activité${pseTout.length > 1 ? 's' : ''}` : 'bientôt'}</span>
         </button>
       </div>`);
     } else {
+      const tousMatiere = matiere === 'pse' ? pseTout : bloc2Tout;
+      const nbMissions = tousMatiere.filter((m) => m.format !== 'entrainement').length;
+      const nbEntrainements = tousMatiere.length - nbMissions;
+      const onglets = `
+      <div class="onglets" role="group" aria-label="Format">
+        <button type="button" class="onglet" aria-pressed="${formatListe === 'missions'}" data-format="missions">🏠 Missions dans l'aile <span class="famille__nombre">${nbMissions}</span></button>
+        <button type="button" class="onglet" aria-pressed="${formatListe === 'entrainements'}" data-format="entrainements" ${nbEntrainements ? '' : 'disabled'}>⚡ Entraînements rapides <span class="famille__nombre">${nbEntrainements || 'bientôt'}</span></button>
+      </div>`;
       const familles = contenu.familles ?? [];
       const liste = matiere === 'pse' ? pse : bloc2.filter((m) => dansFamille(m, famille));
       const titreFamille = familles.find((f) => f.prefixe === famille)?.titre;
       ouvrirFenetre(`${haut}
+      ${onglets}
       ${matiere === 'bloc2' ? `<label class="choix-sequence">Séquence vue en cours
         <select name="sequence">
           ${SEQUENCES.map((s) => `<option ${s === sequenceVue ? 'selected' : ''}>${s}</option>`).join('')}
@@ -800,6 +813,11 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
     if (cible.dataset.action === 'fermer') fenetre.hidden = true;
     if (cible.dataset.matiere === 'bloc2' || cible.dataset.matiere === 'pse') {
       matiere = cible.dataset.matiere;
+      ouvrirListe(accueilEnCours);
+      return;
+    }
+    if (cible.dataset.format === 'missions' || cible.dataset.format === 'entrainements') {
+      formatListe = cible.dataset.format;
       ouvrirListe(accueilEnCours);
       return;
     }

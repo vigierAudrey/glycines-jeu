@@ -1,0 +1,243 @@
+{
+  "id": "m71-entrainement-s3-08",
+  "statut": "valide",
+  "format": "entrainement",
+  "titre": "TP entretien périodique : lit, vitres, contrôle et dysfonctionnements",
+  "duree_min": 5,
+  "sequence_requise": "S3",
+  "lieu": "salon",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "C2.2.1",
+      "critere": "Dysfonctionnement repérés, geste de première intervention."
+    }
+  ],
+  "situation": "Entraînement rapide sur les notions de la séance S3-08 : TP entretien périodique : lit, vitres, contrôle et dysfonctionnements.",
+  "objectif_eleve": "Réviser les notions de la séance : répondre vite et juste, puis lire les corrections.",
+  "note_pour_audrey": "Entraînement généré pour la tâche Q.4 à partir de l'activité interactive de votre séance S3-08 (exercices repris tels quels, sans réécriture). Compétence : la compétence principale de la séance ; critère choisi par l'IA parmi les critères officiels de cette compétence (celui qui partage le plus de mots avec les exercices) : à vérifier.",
+  "etapes": [
+    {
+      "id": "association-1",
+      "type": "association",
+      "consigne": "Reliez chaque mot à sa définition.",
+      "paires": [
+        {
+          "id": "bionettoyage",
+          "terme": "Bionettoyage",
+          "definition": "Procédé combinant nettoyage et réduction de la contamination biologique selon un protocole validé.",
+          "points": {
+            "C2.2.1": 1
+          }
+        },
+        {
+          "id": "dysfonctionnement",
+          "terme": "Dysfonctionnement",
+          "definition": "Fonctionnement anormal d’un équipement, d’un matériel ou d’une installation.",
+          "points": {
+            "C2.2.1": 1
+          }
+        },
+        {
+          "id": "relais-professionnel",
+          "terme": "Relais professionnel",
+          "definition": "Personne ou service compétent qui prend en charge une situation dépassant le rôle de l’agent.",
+          "points": {
+            "C2.2.1": 1
+          }
+        },
+        {
+          "id": "remise-en-etat",
+          "terme": "Remise en état",
+          "definition": "Retour organisé de l’espace, du matériel et des effets dans un état propre, sûr et fonctionnel.",
+          "points": {
+            "C2.2.1": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "tri-2",
+      "type": "tri",
+      "consigne": "Un dysfonctionnement : jusqu'où vais-je ?",
+      "categories": [
+        {
+          "id": "premiere-interventio",
+          "libelle": "Première intervention autorisée"
+        },
+        {
+          "id": "je-securise-sans-tou",
+          "libelle": "Je sécurise sans toucher au matériel"
+        },
+        {
+          "id": "je-ne-fais-rien-moi-",
+          "libelle": "Je ne fais rien moi-même"
+        }
+      ],
+      "elements": [
+        {
+          "id": "eponger-une-petite-flaque-",
+          "texte": "Éponger une petite flaque si c'est sans risque et autorisé",
+          "categorie": "premiere-interventio",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : Première intervention autorisée."
+        },
+        {
+          "id": "mettre-le-chariot-instable",
+          "texte": "Mettre le chariot instable à l'écart",
+          "categorie": "premiere-interventio",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : Première intervention autorisée."
+        },
+        {
+          "id": "proteger-le-cadre-decroche",
+          "texte": "Protéger le cadre décroché en attendant le relais",
+          "categorie": "premiere-interventio",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : Première intervention autorisée."
+        },
+        {
+          "id": "empecher-l-acces-a-la-zone",
+          "texte": "Empêcher l'accès à la zone mouillée",
+          "categorie": "je-securise-sans-tou",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : Je sécurise sans toucher au matériel."
+        },
+        {
+          "id": "arreter-d-utiliser-le-char",
+          "texte": "Arrêter d'utiliser le chariot devenu instable",
+          "categorie": "je-securise-sans-tou",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : Je sécurise sans toucher au matériel."
+        },
+        {
+          "id": "demonter-le-siphon-qui-fui",
+          "texte": "Démonter le siphon qui fuit",
+          "categorie": "je-ne-fais-rien-moi-",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : Je ne fais rien moi-même."
+        },
+        {
+          "id": "reparer-ou-recoller-le-cad",
+          "texte": "Réparer ou recoller le cadre",
+          "categorie": "je-ne-fais-rien-moi-",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : Je ne fais rien moi-même."
+        },
+        {
+          "id": "monter-sur-une-chaise-pour",
+          "texte": "Monter sur une chaise pour atteindre la vitre haute",
+          "categorie": "je-ne-fais-rien-moi-",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : Je ne fais rien moi-même."
+        }
+      ]
+    },
+    {
+      "id": "tri-3",
+      "type": "tri",
+      "consigne": "À qui je transmets ?",
+      "categories": [
+        {
+          "id": "responsable-de-servi",
+          "libelle": "Responsable de service"
+        },
+        {
+          "id": "maintenance-ou-servi",
+          "libelle": "Maintenance ou service technique"
+        },
+        {
+          "id": "j-informe-m-karim",
+          "libelle": "J'informe M. Karim"
+        }
+      ],
+      "elements": [
+        {
+          "id": "il-manque-le-produit-prevu",
+          "texte": "Il manque le produit prévu par le protocole",
+          "categorie": "responsable-de-servi",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : Responsable de service."
+        },
+        {
+          "id": "le-creneau-d-entretien-app",
+          "texte": "Le créneau d'entretien approfondi doit être décalé",
+          "categorie": "responsable-de-servi",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : Responsable de service."
+        },
+        {
+          "id": "le-siphon-du-lavabo-fuit",
+          "texte": "Le siphon du lavabo fuit",
+          "categorie": "maintenance-ou-servi",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : Maintenance ou service technique."
+        },
+        {
+          "id": "une-roue-du-chariot-est-bl",
+          "texte": "Une roue du chariot est bloquée",
+          "categorie": "maintenance-ou-servi",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : Maintenance ou service technique."
+        },
+        {
+          "id": "la-vitre-haute-est-inacces",
+          "texte": "La vitre haute est inaccessible sans matériel adapté",
+          "categorie": "maintenance-ou-servi",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : Maintenance ou service technique."
+        },
+        {
+          "id": "son-cadre-s-est-decroche-p",
+          "texte": "Son cadre s'est décroché pendant l'entretien",
+          "categorie": "j-informe-m-karim",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : J'informe M. Karim."
+        },
+        {
+          "id": "sa-salle-d-eau-sera-indisp",
+          "texte": "Sa salle d'eau sera indisponible une demi-heure",
+          "categorie": "j-informe-m-karim",
+          "points": {
+            "C2.2.1": 1
+          },
+          "retour": "Réponse attendue : J'informe M. Karim."
+        }
+      ]
+    }
+  ],
+  "debriefing": [
+    "Quelle notion de cette séance avez-vous le mieux réussie ?",
+    "Quelle notion devez-vous revoir, et dans quel document du cours ?"
+  ]
+}

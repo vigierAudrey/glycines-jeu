@@ -1,0 +1,339 @@
+{
+  "id": "m73-entrainement-s4-01",
+  "statut": "valide",
+  "format": "entrainement",
+  "titre": "Appareil locomoteur : observer et adapter sans diagnostiquer",
+  "duree_min": 5,
+  "sequence_requise": "S4",
+  "lieu": "salon",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "C2.1.3",
+      "critere": "Adaptation des gestes aux capacités et aux besoins de la personne âgée."
+    }
+  ],
+  "situation": "Entraînement rapide sur les notions de la séance S4-01 : Appareil locomoteur : observer et adapter sans diagnostiquer.",
+  "objectif_eleve": "Réviser les notions de la séance : répondre vite et juste, puis lire les corrections.",
+  "note_pour_audrey": "Entraînement généré pour la tâche Q.4 à partir de l'activité interactive de votre séance S4-01 (exercices repris tels quels, sans réécriture). Compétence : la compétence principale de la séance ; critère choisi par l'IA parmi les critères officiels de cette compétence (celui qui partage le plus de mots avec les exercices) : à vérifier.",
+  "etapes": [
+    {
+      "id": "association-1",
+      "type": "association",
+      "consigne": "Reliez chaque mot à sa définition.",
+      "paires": [
+        {
+          "id": "arthrose",
+          "terme": "arthrose",
+          "definition": "atteinte articulaire : douleur mécanique, raideur, mouvements limités",
+          "points": {
+            "C2.1.3": 1
+          }
+        },
+        {
+          "id": "arthrite",
+          "terme": "arthrite",
+          "definition": "inflammation d’une articulation : chaleur, gonflement, douleur",
+          "points": {
+            "C2.1.3": 1
+          }
+        },
+        {
+          "id": "osteoporose",
+          "terme": "ostéoporose",
+          "definition": "fragilité des os qui augmente le risque de fracture",
+          "points": {
+            "C2.1.3": 1
+          }
+        },
+        {
+          "id": "equilibre",
+          "terme": "équilibre",
+          "definition": "capacité à garder une posture stable",
+          "points": {
+            "C2.1.3": 1
+          }
+        },
+        {
+          "id": "fait-observable",
+          "terme": "fait observable",
+          "definition": "ce que je vois ou j’entends, sans interprétation",
+          "points": {
+            "C2.1.3": 1
+          }
+        },
+        {
+          "id": "transmission",
+          "terme": "transmission",
+          "definition": "information donnée à l’équipe pour la continuité de l’accompagnement",
+          "points": {
+            "C2.1.3": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "tri-2",
+      "type": "tri",
+      "consigne": "Classez chaque carte.",
+      "categories": [
+        {
+          "id": "fait-observable",
+          "libelle": "Fait observable"
+        },
+        {
+          "id": "supposition",
+          "libelle": "Supposition"
+        },
+        {
+          "id": "adaptation",
+          "libelle": "Adaptation"
+        }
+      ],
+      "elements": [
+        {
+          "id": "mme-yvette-vacille-au-leve",
+          "texte": "Mme Yvette vacille au lever.",
+          "categorie": "fait-observable",
+          "points": {
+            "C2.1.3": 1
+          },
+          "retour": "Réponse attendue : Fait observable."
+        },
+        {
+          "id": "le-genou-de-m-karim-est-ch",
+          "texte": "Le genou de M. Karim est chaud et gonflé.",
+          "categorie": "fait-observable",
+          "points": {
+            "C2.1.3": 1
+          },
+          "retour": "Réponse attendue : Fait observable."
+        },
+        {
+          "id": "mme-rose-met-du-temps-a-ou",
+          "texte": "Mme Rose met du temps à ouvrir la main le matin.",
+          "categorie": "fait-observable",
+          "points": {
+            "C2.1.3": 1
+          },
+          "retour": "Réponse attendue : Fait observable."
+        },
+        {
+          "id": "m-karim-fait-surement-une-",
+          "texte": "M. Karim fait sûrement une crise d’arthrite.",
+          "categorie": "supposition",
+          "points": {
+            "C2.1.3": 1
+          },
+          "retour": "Réponse attendue : Supposition."
+        },
+        {
+          "id": "mme-yvette-a-certainement-",
+          "texte": "Mme Yvette a certainement un problème de cœur.",
+          "categorie": "supposition",
+          "points": {
+            "C2.1.3": 1
+          },
+          "retour": "Réponse attendue : Supposition."
+        },
+        {
+          "id": "mme-rose-exagere-sa-douleu",
+          "texte": "Mme Rose exagère sa douleur.",
+          "categorie": "supposition",
+          "points": {
+            "C2.1.3": 1
+          },
+          "retour": "Réponse attendue : Supposition."
+        },
+        {
+          "id": "lever-par-etapes-s-asseoir",
+          "texte": "Lever par étapes : s’asseoir au bord du lit avant de se lever.",
+          "categorie": "adaptation",
+          "points": {
+            "C2.1.3": 1
+          },
+          "retour": "Réponse attendue : Adaptation."
+        },
+        {
+          "id": "laisser-du-temps-et-faire-",
+          "texte": "Laisser du temps et faire des gestes doux.",
+          "categorie": "adaptation",
+          "points": {
+            "C2.1.3": 1
+          },
+          "retour": "Réponse attendue : Adaptation."
+        },
+        {
+          "id": "degager-le-trajet-et-verif",
+          "texte": "Dégager le trajet et vérifier le chaussage.",
+          "categorie": "adaptation",
+          "points": {
+            "C2.1.3": 1
+          },
+          "retour": "Réponse attendue : Adaptation."
+        }
+      ]
+    },
+    {
+      "id": "ordre-3",
+      "type": "ordre",
+      "consigne": "Remettez dans l'ordre.",
+      "elements": [
+        {
+          "id": "j-observe-la-personne-pend",
+          "texte": "J’observe la personne pendant l’activité.",
+          "points": {
+            "C2.1.3": 1
+          }
+        },
+        {
+          "id": "je-decris-le-fait-sans-l-i",
+          "texte": "Je décris le fait sans l’interpréter.",
+          "points": {
+            "C2.1.3": 1
+          }
+        },
+        {
+          "id": "j-adapte-mon-aide-et-l-env",
+          "texte": "J’adapte mon aide et l’environnement.",
+          "points": {
+            "C2.1.3": 1
+          }
+        },
+        {
+          "id": "je-transmets-le-fait-a-l-e",
+          "texte": "Je transmets le fait à l’équipe.",
+          "points": {
+            "C2.1.3": 1
+          }
+        }
+      ],
+      "retour": "Ordre repris de la séance S4-01."
+    },
+    {
+      "id": "selection-4",
+      "type": "selection",
+      "consigne": "Vrai ou faux ?",
+      "question": "Cochez les phrases vraies.",
+      "elements": [
+        {
+          "id": "une-articulation-chaude-et",
+          "texte": "Une articulation chaude et gonflée est un fait observable.",
+          "attendu": true,
+          "points": {
+            "C2.1.3": 1
+          },
+          "retour": "Vrai : Je le vois, je le transmets."
+        },
+        {
+          "id": "je-peux-dire-a-m-karim-qu-",
+          "texte": "Je peux dire à M. Karim qu’il a de l’arthrite.",
+          "attendu": false,
+          "points": {
+            "C2.1.3": 1
+          },
+          "retour": "Faux : Je ne pose pas de diagnostic."
+        },
+        {
+          "id": "l-osteoporose-augmente-le-",
+          "texte": "L’ostéoporose augmente le risque de fracture.",
+          "attendu": true,
+          "points": {
+            "C2.1.3": 1
+          },
+          "retour": "Vrai : Les os sont fragilisés."
+        },
+        {
+          "id": "si-c-est-douloureux-j-insi",
+          "texte": "Si c’est douloureux, j’insiste pour garder la mobilité.",
+          "attendu": false,
+          "points": {
+            "C2.1.3": 1
+          },
+          "retour": "Faux : Je ne force jamais un mouvement douloureux."
+        },
+        {
+          "id": "un-lever-par-etapes-limite",
+          "texte": "Un lever par étapes limite le risque de chute.",
+          "attendu": true,
+          "points": {
+            "C2.1.3": 1
+          },
+          "retour": "Vrai : La tension et l’équilibre ont le temps de s’adapter."
+        }
+      ]
+    },
+    {
+      "id": "qcm-5",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Quel signe évoque une inflammation d’une articulation ?",
+      "options": [
+        {
+          "texte": "Appétit"
+        },
+        {
+          "texte": "Chaleur et gonflement",
+          "juste": true
+        },
+        {
+          "texte": "Ongles longs"
+        }
+      ],
+      "points": {
+        "C2.1.3": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S4-01 si besoin."
+    },
+    {
+      "id": "qcm-6",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "L’ostéoporose rend les os…",
+      "options": [
+        {
+          "texte": "plus solides"
+        },
+        {
+          "texte": "plus souples"
+        },
+        {
+          "texte": "plus fragiles",
+          "juste": true
+        }
+      ],
+      "points": {
+        "C2.1.3": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S4-01 si besoin."
+    },
+    {
+      "id": "qcm-7",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Face à un vertige au lever, je…",
+      "options": [
+        {
+          "texte": "la fais se rasseoir et je transmets",
+          "juste": true
+        },
+        {
+          "texte": "laisse la personne seule"
+        },
+        {
+          "texte": "force la personne à marcher"
+        }
+      ],
+      "points": {
+        "C2.1.3": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S4-01 si besoin."
+    }
+  ],
+  "debriefing": [
+    "Quelle notion de cette séance avez-vous le mieux réussie ?",
+    "Quelle notion devez-vous revoir, et dans quel document du cours ?"
+  ]
+}

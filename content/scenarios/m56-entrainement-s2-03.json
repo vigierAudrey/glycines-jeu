@@ -1,0 +1,313 @@
+{
+  "id": "m56-entrainement-s2-03",
+  "statut": "valide",
+  "format": "entrainement",
+  "titre": "Écouter les besoins, attentes, habitudes et rythmes",
+  "duree_min": 5,
+  "sequence_requise": "S2",
+  "lieu": "salon",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "CT4.2",
+      "critere": "Écoute attentive de la personne."
+    }
+  ],
+  "situation": "Entraînement rapide sur les notions de la séance S2-03 : Écouter les besoins, attentes, habitudes et rythmes.",
+  "objectif_eleve": "Réviser les notions de la séance : répondre vite et juste, puis lire les corrections.",
+  "note_pour_audrey": "Entraînement généré pour la tâche Q.4 à partir de l'activité interactive de votre séance S2-03 (exercices repris tels quels, sans réécriture). Compétence : la compétence principale de la séance ; critère choisi par l'IA parmi les critères officiels de cette compétence (celui qui partage le plus de mots avec les exercices) : à vérifier.",
+  "etapes": [
+    {
+      "id": "tri-1",
+      "type": "tri",
+      "consigne": "Classez chaque carte.",
+      "categories": [
+        {
+          "id": "besoin",
+          "libelle": "Besoin"
+        },
+        {
+          "id": "attente",
+          "libelle": "Attente"
+        },
+        {
+          "id": "habitude",
+          "libelle": "Habitude"
+        },
+        {
+          "id": "rythme",
+          "libelle": "Rythme"
+        }
+      ],
+      "elements": [
+        {
+          "id": "j-ai-besoin-d-un-moment-ca",
+          "texte": "« J’ai besoin d’un moment calme après le déjeuner. »",
+          "categorie": "besoin",
+          "points": {
+            "CT4.2": 1
+          },
+          "retour": "Réponse attendue : Besoin."
+        },
+        {
+          "id": "j-aimerais-revoir-les-fleu",
+          "texte": "« J’aimerais revoir les fleurs du patio. »",
+          "categorie": "attente",
+          "points": {
+            "CT4.2": 1
+          },
+          "retour": "Réponse attendue : Attente."
+        },
+        {
+          "id": "je-telephonais-a-ma-s-ur-l",
+          "texte": "« Je téléphonais à ma sœur le mercredi. »",
+          "categorie": "habitude",
+          "points": {
+            "CT4.2": 1
+          },
+          "retour": "Réponse attendue : Habitude."
+        },
+        {
+          "id": "je-me-leve-habituellement-",
+          "texte": "« Je me lève habituellement vers sept heures. »",
+          "categorie": "rythme",
+          "points": {
+            "CT4.2": 1
+          },
+          "retour": "Réponse attendue : Rythme."
+        },
+        {
+          "id": "j-ai-froid-des-que-la-fene",
+          "texte": "« J’ai froid dès que la fenêtre reste ouverte. »",
+          "categorie": "besoin",
+          "points": {
+            "CT4.2": 1
+          },
+          "retour": "Réponse attendue : Besoin."
+        },
+        {
+          "id": "je-voudrais-que-ma-s-ur-pu",
+          "texte": "« Je voudrais que ma sœur puisse venir un dimanche. »",
+          "categorie": "attente",
+          "points": {
+            "CT4.2": 1
+          },
+          "retour": "Réponse attendue : Attente."
+        },
+        {
+          "id": "je-prends-toujours-mon-caf",
+          "texte": "« Je prends toujours mon café très sucré. »",
+          "categorie": "habitude",
+          "points": {
+            "CT4.2": 1
+          },
+          "retour": "Réponse attendue : Habitude."
+        },
+        {
+          "id": "je-fais-une-sieste-entre-1",
+          "texte": "« Je fais une sieste entre 13 h et 14 h. »",
+          "categorie": "rythme",
+          "points": {
+            "CT4.2": 1
+          },
+          "retour": "Réponse attendue : Rythme."
+        },
+        {
+          "id": "sans-mes-lunettes-je-ne-pe",
+          "texte": "« Sans mes lunettes, je ne peux pas lire mon courrier. »",
+          "categorie": "besoin",
+          "points": {
+            "CT4.2": 1
+          },
+          "retour": "Réponse attendue : Besoin."
+        },
+        {
+          "id": "je-prefererais-etre-servie",
+          "texte": "« Je préférerais être servie à ma table plutôt qu’au grand réfectoire. »",
+          "categorie": "attente",
+          "points": {
+            "CT4.2": 1
+          },
+          "retour": "Réponse attendue : Attente."
+        }
+      ]
+    },
+    {
+      "id": "selection-2",
+      "type": "selection",
+      "consigne": "Vrai ou faux ?",
+      "question": "Cochez les phrases vraies.",
+      "elements": [
+        {
+          "id": "une-question-ouverte-aide-",
+          "texte": "Une question ouverte aide davantage la personne à s’exprimer qu’une question fermée.",
+          "attendu": true,
+          "points": {
+            "CT4.2": 1
+          },
+          "retour": "Vrai : La question fermée appelle oui ou non. La question ouverte laisse la personne choisir ce qu’elle veut dire."
+        },
+        {
+          "id": "reformuler-c-est-reformule",
+          "texte": "Reformuler, c’est reformuler avec ses propres mots en ajoutant son avis professionnel.",
+          "attendu": false,
+          "points": {
+            "CT4.2": 1
+          },
+          "retour": "Faux : La reformulation vérifie le sens sans ajouter d’idée. Dès que j’ajoute mon avis, ce n’est plus une reformulation."
+        },
+        {
+          "id": "je-me-couche-vers-21-heure",
+          "texte": "« Je me couche vers 21 heures » décrit une habitude et un élément de rythme.",
+          "attendu": true,
+          "points": {
+            "CT4.2": 1
+          },
+          "retour": "Vrai : L’habitude dit quoi (se coucher tôt), le rythme dit quand (vers 21 heures)."
+        },
+        {
+          "id": "le-silence-pendant-un-entr",
+          "texte": "Le silence pendant un entretien doit être comblé rapidement.",
+          "attendu": false,
+          "points": {
+            "CT4.2": 1
+          },
+          "retour": "Faux : Le silence laisse le temps de comprendre, de chercher ses mots et de décider. Il fait partie de l’écoute."
+        },
+        {
+          "id": "je-peux-proposer-une-solut",
+          "texte": "Je peux proposer une solution dès que je crois avoir compris.",
+          "attendu": false,
+          "points": {
+            "CT4.2": 1
+          },
+          "retour": "Faux : Je recueille, je reformule, je fais valider, et seulement ensuite je propose, en demandant l’accord."
+        },
+        {
+          "id": "noter-residente-depressive",
+          "texte": "Noter « résidente dépressive » après un silence est un recueil fidèle.",
+          "attendu": false,
+          "points": {
+            "CT4.2": 1
+          },
+          "retour": "Faux : C’est une interprétation, et en plus un mot du domaine médical qui ne relève pas de mon rôle. On note le fait observé."
+        }
+      ]
+    },
+    {
+      "id": "qcm-3",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Choisis la meilleure reformulation.",
+      "options": [
+        {
+          "texte": "« Vous n’aimez plus le jardin ? »"
+        },
+        {
+          "texte": "« Qu’aimeriez-vous faire ce matin ? »",
+          "juste": true
+        },
+        {
+          "texte": "« Le jardin, c’est bien, non ? »"
+        }
+      ],
+      "points": {
+        "CT4.2": 1
+      },
+      "retour": "La question ouverte n’oriente pas la réponse et laisse Mme Rose parler de ce qui compte pour elle."
+    },
+    {
+      "id": "qcm-4",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Choisis la meilleure reformulation.",
+      "options": [
+        {
+          "texte": "« Comment vous sentez-vous en ce moment ? »",
+          "juste": true
+        },
+        {
+          "texte": "« Vous déprimez depuis le décès de votre amie ? »"
+        },
+        {
+          "texte": "« Ce n’est pas si grave, vous savez. »"
+        }
+      ],
+      "points": {
+        "CT4.2": 1
+      },
+      "retour": "On ne pose pas de diagnostic et on ne minimise pas. On ouvre la question et on laisse la personne nommer ce qu’elle ressent."
+    },
+    {
+      "id": "qcm-5",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Choisis la meilleure reformulation.",
+      "options": [
+        {
+          "texte": "« Votre fille a raison, c’est plus pratique. »"
+        },
+        {
+          "texte": "« Quel moyen préférez-vous pour joindre votre famille ? »",
+          "juste": true
+        },
+        {
+          "texte": "« Vous savez utiliser une tablette ? »"
+        }
+      ],
+      "points": {
+        "CT4.2": 1
+      },
+      "retour": "La question porte sur le choix de Mme Rose, pas sur celui de sa fille ni sur ses compétences techniques."
+    },
+    {
+      "id": "ordre-6",
+      "type": "ordre",
+      "consigne": "Remettez dans l'ordre.",
+      "elements": [
+        {
+          "id": "j-accueille-je-me-nomme-j-",
+          "texte": "J’accueille : je me nomme, j’explique pourquoi je viens et combien de temps j’ai.",
+          "points": {
+            "CT4.2": 1
+          }
+        },
+        {
+          "id": "je-pose-une-question-ouver",
+          "texte": "Je pose une question ouverte.",
+          "points": {
+            "CT4.2": 1
+          }
+        },
+        {
+          "id": "je-laisse-le-silence-et-j-",
+          "texte": "Je laisse le silence et j’écoute jusqu’au bout.",
+          "points": {
+            "CT4.2": 1
+          }
+        },
+        {
+          "id": "je-reformule-et-je-fais-va",
+          "texte": "Je reformule et je fais valider par Mme Rose.",
+          "points": {
+            "CT4.2": 1
+          }
+        },
+        {
+          "id": "je-propose-une-reponse-et-",
+          "texte": "Je propose une réponse et je vérifie son accord, puis je transmets ce qui est utile.",
+          "points": {
+            "CT4.2": 1
+          }
+        }
+      ],
+      "retour": "Ordre repris de la séance S2-03."
+    }
+  ],
+  "debriefing": [
+    "Quelle notion de cette séance avez-vous le mieux réussie ?",
+    "Quelle notion devez-vous revoir, et dans quel document du cours ?"
+  ]
+}

@@ -1,0 +1,313 @@
+{
+  "id": "m58-entrainement-s2-05",
+  "statut": "valide",
+  "format": "entrainement",
+  "titre": "Droits, altérité, laïcité et vie privée",
+  "duree_min": 5,
+  "sequence_requise": "S2",
+  "lieu": "salon",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "CT3.4",
+      "critere": "Absence de jugement."
+    }
+  ],
+  "situation": "Entraînement rapide sur les notions de la séance S2-05 : Droits, altérité, laïcité et vie privée.",
+  "objectif_eleve": "Réviser les notions de la séance : répondre vite et juste, puis lire les corrections.",
+  "note_pour_audrey": "Entraînement généré pour la tâche Q.4 à partir de l'activité interactive de votre séance S2-05 (exercices repris tels quels, sans réécriture). Compétence : la compétence principale de la séance ; critère choisi par l'IA parmi les critères officiels de cette compétence (celui qui partage le plus de mots avec les exercices) : à vérifier.",
+  "etapes": [
+    {
+      "id": "tri-1",
+      "type": "tri",
+      "consigne": "Classez chaque carte.",
+      "categories": [
+        {
+          "id": "dignite-et-intimite",
+          "libelle": "Dignité et intimité"
+        },
+        {
+          "id": "libre-choix-et-parti",
+          "libelle": "Libre choix et participation"
+        },
+        {
+          "id": "vie-privee-et-corres",
+          "libelle": "Vie privée et correspondance"
+        },
+        {
+          "id": "liberte-de-conscienc",
+          "libelle": "Liberté de conscience"
+        }
+      ],
+      "elements": [
+        {
+          "id": "laisser-la-porte-ouverte-p",
+          "texte": "Laisser la porte ouverte pendant une toilette.",
+          "categorie": "dignite-et-intimite",
+          "points": {
+            "CT3.4": 1
+          },
+          "retour": "Réponse attendue : Dignité et intimité."
+        },
+        {
+          "id": "inscrire-m-karim-a-une-act",
+          "texte": "Inscrire M. Karim à une activité sans lui demander.",
+          "categorie": "libre-choix-et-parti",
+          "points": {
+            "CT3.4": 1
+          },
+          "retour": "Réponse attendue : Libre choix et participation."
+        },
+        {
+          "id": "ouvrir-le-courrier-d-un-re",
+          "texte": "Ouvrir le courrier d’un résident sans son accord.",
+          "categorie": "vie-privee-et-corres",
+          "points": {
+            "CT3.4": 1
+          },
+          "retour": "Réponse attendue : Vie privée et correspondance."
+        },
+        {
+          "id": "respecter-un-objet-religie",
+          "texte": "Respecter un objet religieux discret dans l’espace privé.",
+          "categorie": "liberte-de-conscienc",
+          "points": {
+            "CT3.4": 1
+          },
+          "retour": "Réponse attendue : Liberté de conscience."
+        },
+        {
+          "id": "parler-d-un-resident-devan",
+          "texte": "Parler d’un résident devant lui comme s’il n’était pas là.",
+          "categorie": "dignite-et-intimite",
+          "points": {
+            "CT3.4": 1
+          },
+          "retour": "Réponse attendue : Dignité et intimité."
+        },
+        {
+          "id": "accepter-que-mme-rose-refu",
+          "texte": "Accepter que Mme Rose refuse le repas collectif.",
+          "categorie": "libre-choix-et-parti",
+          "points": {
+            "CT3.4": 1
+          },
+          "retour": "Réponse attendue : Libre choix et participation."
+        },
+        {
+          "id": "raconter-au-refectoire-ce-",
+          "texte": "Raconter au réfectoire ce qu’une résidente a confié.",
+          "categorie": "vie-privee-et-corres",
+          "points": {
+            "CT3.4": 1
+          },
+          "retour": "Réponse attendue : Vie privée et correspondance."
+        },
+        {
+          "id": "chercher-a-convaincre-un-r",
+          "texte": "Chercher à convaincre un résident d’adopter sa propre croyance.",
+          "categorie": "liberte-de-conscienc",
+          "points": {
+            "CT3.4": 1
+          },
+          "retour": "Réponse attendue : Liberté de conscience."
+        },
+        {
+          "id": "employer-un-surnom-infanti",
+          "texte": "Employer un surnom infantilisant : « ma petite mamie ».",
+          "categorie": "dignite-et-intimite",
+          "points": {
+            "CT3.4": 1
+          },
+          "retour": "Réponse attendue : Dignité et intimité."
+        },
+        {
+          "id": "proposer-deux-possibilites",
+          "texte": "Proposer deux possibilités et laisser la personne décider.",
+          "categorie": "libre-choix-et-parti",
+          "points": {
+            "CT3.4": 1
+          },
+          "retour": "Réponse attendue : Libre choix et participation."
+        }
+      ]
+    },
+    {
+      "id": "selection-2",
+      "type": "selection",
+      "consigne": "Vrai ou faux ?",
+      "question": "Cochez les phrases vraies.",
+      "elements": [
+        {
+          "id": "la-laicite-interdit-a-un-r",
+          "texte": "La laïcité interdit à un résident d’avoir une croyance.",
+          "attendu": false,
+          "points": {
+            "CT3.4": 1
+          },
+          "retour": "Faux : Elle protège au contraire sa liberté de conscience, dans le respect des règles communes et de la sécurité."
+        },
+        {
+          "id": "le-professionnel-doit-rest",
+          "texte": "Le professionnel doit rester neutre sur ses propres convictions.",
+          "attendu": true,
+          "points": {
+            "CT3.4": 1
+          },
+          "retour": "Vrai : Il n’impose ni croyance ni absence de croyance. C’est la neutralité du service."
+        },
+        {
+          "id": "un-objet-religieux-discret",
+          "texte": "Un objet religieux discret peut rester dans la chambre d’un résident.",
+          "attendu": true,
+          "points": {
+            "CT3.4": 1
+          },
+          "retour": "Vrai : La chambre est un espace privé. La seule limite est la sécurité, par exemple une flamme."
+        },
+        {
+          "id": "refuser-une-activite-est-u",
+          "texte": "Refuser une activité est un droit du résident.",
+          "attendu": true,
+          "points": {
+            "CT3.4": 1
+          },
+          "retour": "Vrai : Le libre choix et la participation figurent dans la charte. Le refus s’accueille sans pression ni reproche."
+        },
+        {
+          "id": "une-regle-de-securite-peut",
+          "texte": "Une règle de sécurité peut être opposée à une demande, sans explication.",
+          "attendu": false,
+          "points": {
+            "CT3.4": 1
+          },
+          "retour": "Faux : La règle s’applique, mais elle s’explique, et on cherche une solution avec la personne. Une règle sans explication est vécue comme arbitraire."
+        },
+        {
+          "id": "mes-habitudes-et-mes-valeu",
+          "texte": "Mes habitudes et mes valeurs personnelles n’ont aucune influence sur mon travail.",
+          "attendu": false,
+          "points": {
+            "CT3.4": 1
+          },
+          "retour": "Faux : Elles en ont une, souvent sans qu’on s’en rende compte. Les repérer est justement ce qui permet de ne pas les imposer."
+        }
+      ]
+    },
+    {
+      "id": "qcm-3",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Que réponds-tu ?",
+      "options": [
+        {
+          "texte": "« La laïcité l’interdit dans l’établissement. »"
+        },
+        {
+          "texte": "« Bien sûr, c’est votre chambre. Je vérifie seulement qu’il n’y a pas de risque, par exemple une flamme. »",
+          "juste": true
+        },
+        {
+          "texte": "« Je vais demander à votre fille ce qu’elle en pense. »"
+        }
+      ],
+      "points": {
+        "CT3.4": 1
+      },
+      "retour": "Espace privé, liberté de conscience, et une seule limite : la sécurité. La famille n’a pas à valider."
+    },
+    {
+      "id": "qcm-4",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Que fais-tu ?",
+      "options": [
+        {
+          "texte": "Tu insistes, cela lui fera du bien."
+        },
+        {
+          "texte": "Tu acceptes son choix, tu proposes un temps calme au petit salon s’il préfère, et tu le transmets à l’équipe.",
+          "juste": true
+        },
+        {
+          "texte": "Tu notes « refus de participation » et tu passes à autre chose."
+        }
+      ],
+      "points": {
+        "CT3.4": 1
+      },
+      "retour": "Le refus est un droit. On propose une alternative sans l’imposer, et on transmet l’information utile, sans jugement."
+    },
+    {
+      "id": "qcm-5",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Quelle est la bonne réaction ?",
+      "options": [
+        {
+          "texte": "Tu expliques longuement ta conviction."
+        },
+        {
+          "texte": "Tu réponds brièvement que ce n’est pas la question ici, et tu reviens à ce qui le concerne, lui.",
+          "juste": true
+        },
+        {
+          "texte": "Tu refuses de lui parler."
+        }
+      ],
+      "points": {
+        "CT3.4": 1
+      },
+      "retour": "La neutralité n’oblige pas à être sec. On reste poli, on ne fait pas de sa conviction un sujet, et on garde la relation."
+    },
+    {
+      "id": "ordre-6",
+      "type": "ordre",
+      "consigne": "Remettez dans l'ordre.",
+      "elements": [
+        {
+          "id": "j-ecoute-la-demande-jusqu-",
+          "texte": "J’écoute la demande jusqu’au bout, sans réagir ni juger.",
+          "points": {
+            "CT3.4": 1
+          }
+        },
+        {
+          "id": "je-reformule-pour-verifier",
+          "texte": "Je reformule pour vérifier ce que la personne demande vraiment.",
+          "points": {
+            "CT3.4": 1
+          }
+        },
+        {
+          "id": "je-verifie-ce-que-disent-l",
+          "texte": "Je vérifie ce que disent le règlement et les règles de sécurité.",
+          "points": {
+            "CT3.4": 1
+          }
+        },
+        {
+          "id": "j-explique-calmement-la-re",
+          "texte": "J’explique calmement la règle et je propose une solution compatible.",
+          "points": {
+            "CT3.4": 1
+          }
+        },
+        {
+          "id": "je-recueille-son-accord-ou",
+          "texte": "Je recueille son accord, ou je transmets la demande au responsable si je ne peux pas décider.",
+          "points": {
+            "CT3.4": 1
+          }
+        }
+      ],
+      "retour": "Ordre repris de la séance S2-05."
+    }
+  ],
+  "debriefing": [
+    "Quelle notion de cette séance avez-vous le mieux réussie ?",
+    "Quelle notion devez-vous revoir, et dans quel document du cours ?"
+  ]
+}
