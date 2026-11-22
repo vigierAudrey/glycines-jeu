@@ -1,0 +1,151 @@
+{
+  "id": "m26-pse-chaine-de-transmission",
+  "statut": "brouillon",
+  "discipline": "PSE",
+  "titre": "PSE · Comment le virus a-t-il voyagé ?",
+  "duree_min": 10,
+  "sequence_requise": "S3",
+  "lieu": "couloir",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "PSE-C4",
+      "critere": "Appliquer une démarche d’analyse simple ou à l’aide d’outils méthodologiques au risque du secteur professionnel lors d’une activité au poste de travail."
+    }
+  ],
+  "situation": "Trois résidents de l'aile B ont la gastro-entérite. Deux jours plus tard, deux collègues et un résident de l'aile A sont malades à leur tour. Comment le virus a-t-il voyagé ?",
+  "objectif_eleve": "Retrouver par où le virus est passé, remettre dans l'ordre les 5 maillons de la chaîne de transmission, et trouver ce qui l'aurait cassée.",
+  "note_pour_audrey": "Brouillon écrit pour la tâche 5.1b, d'après votre séance PSE S3-02 (« Comment un microbe se transmet : la chaîne de transmission ») : situation de départ, document A (chronologie), activité 2 (5 maillons) et mini-situation CCF (mesure qui casse la chaîne). Les noms du cours (Mme Rose, M. André, Lisa) sont remplacés par « une résidente de l'aile B », « un résident de l'aile A », « une collègue » : on n'ajoute pas de maladie au profil d'un résident du jeu. Critère : objectif ciblé du module C4, mot pour mot. À relire avant de passer le statut à valide.",
+  "etapes": [
+    {
+      "id": "enquete",
+      "type": "selection",
+      "consigne": "Lisez la chronologie, comme un enquêteur.",
+      "document": {
+        "titre": "Chronologie aux Glycines",
+        "lignes": [
+          "J1 : une résidente de l'aile B est malade.",
+          "J1 au soir : une collègue fait le change de cette résidente, puis distribue le goûter en aile A sans se laver les mains.",
+          "J2 : la collègue est malade. J3 : un résident de l'aile A est malade.",
+          "J3 : le chariot de linge sale de l'aile B traverse l'office."
+        ]
+      },
+      "question": "Cochez les moments où le virus a pu passer d'une personne à une autre.",
+      "elements": [
+        {
+          "id": "change-gouter",
+          "texte": "Le change, puis le goûter servi sans hygiène des mains",
+          "attendu": true,
+          "points": {
+            "PSE-C4": 1
+          },
+          "retour": "Transmission manuportée : le virus passe par les mains de la collègue."
+        },
+        {
+          "id": "chariot",
+          "texte": "Le chariot de linge sale qui traverse l'office",
+          "attendu": true,
+          "points": {
+            "PSE-C4": 1
+          },
+          "retour": "Transmission indirecte par les objets : le linge sale ne doit pas croiser le propre."
+        },
+        {
+          "id": "residente-malade",
+          "texte": "La résidente de l'aile B tombe malade",
+          "attendu": false,
+          "points": {
+            "PSE-C4": 1
+          },
+          "retour": "C'est le départ : la résidente est le réservoir, pas un moment de passage."
+        },
+        {
+          "id": "collegue-malade",
+          "texte": "La collègue tombe malade le lendemain",
+          "attendu": false,
+          "points": {
+            "PSE-C4": 1
+          },
+          "retour": "C'est une conséquence : elle a été contaminée avant, pendant le change."
+        }
+      ]
+    },
+    {
+      "id": "cinq-maillons",
+      "type": "ordre",
+      "consigne": "Remettez dans l'ordre les 5 maillons de la chaîne de transmission.",
+      "elements": [
+        {
+          "id": "reservoir",
+          "texte": "Réservoir : la résidente malade, ses selles.",
+          "points": {
+            "PSE-C4": 1
+          }
+        },
+        {
+          "id": "sortie",
+          "texte": "Porte de sortie : les selles.",
+          "points": {
+            "PSE-C4": 1
+          }
+        },
+        {
+          "id": "mode",
+          "texte": "Mode de transmission : les mains de la collègue, le goûter.",
+          "points": {
+            "PSE-C4": 1
+          }
+        },
+        {
+          "id": "entree",
+          "texte": "Porte d'entrée : la bouche.",
+          "points": {
+            "PSE-C4": 1
+          }
+        },
+        {
+          "id": "hote",
+          "texte": "Hôte réceptif : la collègue, le résident de l'aile A.",
+          "points": {
+            "PSE-C4": 1
+          }
+        }
+      ],
+      "retour": "Réservoir, porte de sortie, mode de transmission, porte d'entrée, hôte réceptif. Casser un seul maillon suffit à arrêter la transmission."
+    },
+    {
+      "id": "casser-la-chaine",
+      "type": "decision",
+      "consigne": "Le virus est passé de l'aile B à l'aile A alors que les deux résidents ne se sont jamais rencontrés.",
+      "question": "Quelle mesure aurait cassé la chaîne ?",
+      "si_oubli": "Le virus est passé par les mains entre un change et un goûter. Entre deux tâches : lavage des mains ou friction hydroalcoolique.",
+      "choix": [
+        {
+          "decision": "agir",
+          "texte": "Un lavage des mains ou une friction hydroalcoolique entre le change et le goûter.",
+          "points": {
+            "PSE-C4": 2
+          },
+          "retour": "Vous cassez le maillon « mode de transmission » : les mains ne transportent plus le virus."
+        },
+        {
+          "decision": "adapter",
+          "texte": "Mettre des gants pour servir le goûter, sans se laver les mains.",
+          "retour": "Les gants seuls ne suffisent pas : sans hygiène des mains, ils transportent le virus."
+        },
+        {
+          "decision": "agir",
+          "texte": "Ne rien changer : les résidents de l'aile A ne croisent pas ceux de l'aile B.",
+          "retour": "Ils ne se rencontrent pas, mais le virus voyage par les mains et les objets : c'est une transmission indirecte."
+        }
+      ]
+    }
+  ],
+  "debriefing": [
+    "Par quels moyens le virus est-il passé de l'aile B à l'aile A ?",
+    "Citez dans l'ordre les 5 maillons de la chaîne de transmission.",
+    "Quel geste, dans votre travail, casse le maillon « mode de transmission » ?"
+  ]
+}

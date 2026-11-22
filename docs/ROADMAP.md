@@ -118,7 +118,8 @@ Règle commune : toute nouvelle activité s'appuie sur une situation réelle des
 
 - [~] **5.1** PSE du CAP (thématique C, la plus proche du métier en EHPAD), en sous-tâches :
   - [x] **5.1a** Référentiel PSE en données (`content/referentiel/pse.json`, modules C4 à C7 mot pour mot) ; missions `discipline: "PSE"`, toujours ouvertes, dans une rubrique « PSE » de la liste.
-  - [ ] **5.1b** Mission PSE « risque biologique » (C4) d'après PSE S3 (chaîne de transmission, protection).
+  - [x] **5.1b** Mission PSE « risque biologique » (C4) d'après PSE S3 (chaîne de transmission, protection).
+    Fait : `m26` (chaîne de transmission, d'après S3-02) et `m27` (protection collective et individuelle, friction, d'après S3-03).
   - [ ] **5.1c** Mission PSE « activité physique et TMS » (C5) d'après PSE S2.
   - [ ] **5.1d** Mission PSE « acteurs de prévention, suivi médical et vaccination » (C6, C7) d'après PSE S4.
 - [ ] **5.2** Bloc 1 : cuisine, lingerie, entretien des espaces collectifs.

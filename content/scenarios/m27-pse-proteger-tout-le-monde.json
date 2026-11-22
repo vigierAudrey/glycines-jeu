@@ -1,0 +1,271 @@
+{
+  "id": "m27-pse-proteger-tout-le-monde",
+  "statut": "brouillon",
+  "discipline": "PSE",
+  "titre": "PSE · L'épidémie s'étend : se protéger, protéger",
+  "duree_min": 10,
+  "sequence_requise": "S3",
+  "lieu": "poste-de-soins",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "PSE-C4",
+      "critere": "Proposer des mesures de protection collective et individuelle à partir d’une sélection."
+    }
+  ],
+  "situation": "La directrice des Glycines réunit l'équipe : « L'épidémie s'étend. Chacun propose des mesures concrètes pour protéger le personnel ET les résidents. »",
+  "objectif_eleve": "Classer les mesures en protection collective ou individuelle, réussir la friction hydroalcoolique, puis proposer deux mesures complémentaires.",
+  "note_pour_audrey": "Brouillon écrit pour la tâche 5.1b, d'après votre séance PSE S3-03 (« Je me protège et je protège les résidents ») et son activité interactive : 12 cartes-mesures et leur tri, 7 étapes de la friction, document B (Code du travail, art. L. 4121-2) et les 3 propositions de la mission, repris tels quels. Critère : objectif ciblé du module C4, mot pour mot. Le jeu prépare le TP, il ne le remplace pas. À relire avant de passer le statut à valide.",
+  "etapes": [
+    {
+      "id": "collective-individuelle",
+      "type": "tri",
+      "consigne": "Classez chaque mesure.",
+      "categories": [
+        {
+          "id": "collective",
+          "libelle": "Protection collective",
+          "aide": "protège tout le monde en même temps"
+        },
+        {
+          "id": "individuelle",
+          "libelle": "Protection individuelle",
+          "aide": "portée ou faite par une seule personne"
+        }
+      ],
+      "elements": [
+        {
+          "id": "isolement-des-residents-malade",
+          "texte": "Isolement des résidents malades",
+          "categorie": "collective",
+          "points": {
+            "PSE-C4": 1
+          },
+          "retour": "Elle protège tout le monde en même temps : elle passe en premier."
+        },
+        {
+          "id": "circuits-linge-propre-et-linge",
+          "texte": "Circuits linge propre et linge sale séparés",
+          "categorie": "collective",
+          "points": {
+            "PSE-C4": 1
+          },
+          "retour": "Elle protège tout le monde en même temps : elle passe en premier."
+        },
+        {
+          "id": "bionettoyage-des-poignees-et-d",
+          "texte": "Bionettoyage des poignées et des rampes",
+          "categorie": "collective",
+          "points": {
+            "PSE-C4": 1
+          },
+          "retour": "Elle protège tout le monde en même temps : elle passe en premier."
+        },
+        {
+          "id": "aeration-des-locaux",
+          "texte": "Aération des locaux",
+          "categorie": "collective",
+          "points": {
+            "PSE-C4": 1
+          },
+          "retour": "Elle protège tout le monde en même temps : elle passe en premier."
+        },
+        {
+          "id": "protocole-d-hygiene-affiche",
+          "texte": "Protocole d'hygiène affiché",
+          "categorie": "collective",
+          "points": {
+            "PSE-C4": 1
+          },
+          "retour": "Elle protège tout le monde en même temps : elle passe en premier."
+        },
+        {
+          "id": "report-des-visites",
+          "texte": "Report des visites",
+          "categorie": "collective",
+          "points": {
+            "PSE-C4": 1
+          },
+          "retour": "Elle protège tout le monde en même temps : elle passe en premier."
+        },
+        {
+          "id": "gants-a-usage-unique",
+          "texte": "Gants à usage unique",
+          "categorie": "individuelle",
+          "points": {
+            "PSE-C4": 1
+          },
+          "retour": "Elle protège la personne qui la porte ou la fait : elle complète la protection collective."
+        },
+        {
+          "id": "masque",
+          "texte": "Masque",
+          "categorie": "individuelle",
+          "points": {
+            "PSE-C4": 1
+          },
+          "retour": "Elle protège la personne qui la porte ou la fait : elle complète la protection collective."
+        },
+        {
+          "id": "surblouse-pour-les-changes",
+          "texte": "Surblouse pour les changes",
+          "categorie": "individuelle",
+          "points": {
+            "PSE-C4": 1
+          },
+          "retour": "Elle protège la personne qui la porte ou la fait : elle complète la protection collective."
+        },
+        {
+          "id": "friction-hydroalcoolique",
+          "texte": "Friction hydroalcoolique",
+          "categorie": "individuelle",
+          "points": {
+            "PSE-C4": 1
+          },
+          "retour": "Elle protège la personne qui la porte ou la fait : elle complète la protection collective."
+        },
+        {
+          "id": "lavage-des-mains",
+          "texte": "Lavage des mains",
+          "categorie": "individuelle",
+          "points": {
+            "PSE-C4": 1
+          },
+          "retour": "Elle protège la personne qui la porte ou la fait : elle complète la protection collective."
+        },
+        {
+          "id": "tenue-changee-chaque-jour",
+          "texte": "Tenue changée chaque jour",
+          "categorie": "individuelle",
+          "points": {
+            "PSE-C4": 1
+          },
+          "retour": "Elle protège la personne qui la porte ou la fait : elle complète la protection collective."
+        }
+      ]
+    },
+    {
+      "id": "priorite",
+      "type": "decision",
+      "consigne": "Une collègue dit : « Avec des gants pour tout le monde, c'est réglé. »",
+      "document": {
+        "titre": "Le principe à connaître",
+        "lignes": [
+          "Code du travail, art. L. 4121-2 : l'employeur combat les risques à la source et donne la priorité aux mesures de protection collective sur les mesures de protection individuelle."
+        ]
+      },
+      "question": "Que lui répondez-vous ?",
+      "choix": [
+        {
+          "decision": "adapter",
+          "texte": "La protection collective passe d'abord, elle protège tout le monde en permanence ; les gants la complètent, sans la remplacer.",
+          "points": {
+            "PSE-C4": 2
+          },
+          "retour": "C'est le principe de l'article L. 4121-2 : priorité à la protection collective."
+        },
+        {
+          "decision": "agir",
+          "texte": "Elle a raison : les gants suffisent.",
+          "retour": "Les gants ne dispensent pas de l'hygiène des mains : après le retrait, il faut se désinfecter les mains."
+        },
+        {
+          "decision": "agir",
+          "texte": "Il faut porter deux paires de gants.",
+          "retour": "La protection individuelle seule ne suffit pas, et les gants transportent le virus."
+        }
+      ]
+    },
+    {
+      "id": "friction",
+      "type": "ordre",
+      "consigne": "Remettez dans l'ordre les 7 étapes de la friction hydroalcoolique.",
+      "elements": [
+        {
+          "id": "paume-contre-paume",
+          "texte": "Paume contre paume.",
+          "points": {
+            "PSE-C4": 1
+          }
+        },
+        {
+          "id": "dos-des-mains",
+          "texte": "Dos des mains.",
+          "points": {
+            "PSE-C4": 1
+          }
+        },
+        {
+          "id": "entre-les-doigts",
+          "texte": "Entre les doigts.",
+          "points": {
+            "PSE-C4": 1
+          }
+        },
+        {
+          "id": "dos-des-doigts",
+          "texte": "Dos des doigts.",
+          "points": {
+            "PSE-C4": 1
+          }
+        },
+        {
+          "id": "pouces",
+          "texte": "Pouces.",
+          "points": {
+            "PSE-C4": 1
+          }
+        },
+        {
+          "id": "bouts-des-doigts-et-ongles",
+          "texte": "Bouts des doigts et ongles.",
+          "points": {
+            "PSE-C4": 1
+          }
+        },
+        {
+          "id": "poignets",
+          "texte": "Poignets.",
+          "points": {
+            "PSE-C4": 1
+          }
+        }
+      ],
+      "retour": "Friction complète en 20 à 30 secondes, sur des mains non souillées. Zones souvent oubliées : les pouces et les bouts des doigts."
+    },
+    {
+      "id": "proposition",
+      "type": "decision",
+      "consigne": "L'épidémie s'étend alors que tout le personnel porte des gants. Vous préparez votre proposition pour la réunion.",
+      "question": "Quelle proposition présentez-vous ?",
+      "si_oubli": "Contre une épidémie : une mesure collective (isoler, séparer les circuits) et une mesure individuelle (friction après chaque retrait de gants).",
+      "choix": [
+        {
+          "decision": "agir",
+          "texte": "Isoler les résidents malades (cela coupe le réservoir) et faire une friction hydroalcoolique après chaque retrait de gants (cela coupe la transmission par les mains).",
+          "points": {
+            "PSE-C4": 3
+          },
+          "retour": "Une mesure collective et une mesure individuelle, chacune justifiée par le maillon qu'elle casse."
+        },
+        {
+          "decision": "agir",
+          "texte": "Fermer l'EHPAD.",
+          "retour": "Ce n'est pas une mesure réaliste ni adaptée."
+        },
+        {
+          "decision": "agir",
+          "texte": "Demander à tout le monde de porter deux paires de gants.",
+          "retour": "La protection individuelle seule ne suffit pas, et les gants transportent le virus."
+        }
+      ]
+    }
+  ],
+  "debriefing": [
+    "Pourquoi la protection collective passe-t-elle avant la protection individuelle ?",
+    "Quelles zones des mains sont souvent oubliées pendant la friction ?",
+    "Quel maillon de la chaîne casse chacune de vos deux mesures ?"
+  ]
+}

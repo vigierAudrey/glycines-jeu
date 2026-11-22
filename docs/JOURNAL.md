@@ -316,3 +316,9 @@ Trois lignes par session : ce qui a été fait, ce qui reste à surveiller, la p
 - **Fait** : `content/referentiel/pse.json` (modules C4 à C7 du programme de PSE, mot pour mot), missions `discipline: "PSE"` toujours ouvertes, rubrique « PSE » dans la liste, mention sur la page enseignante (D-033). 2 tests, `pnpm verifier` OK (120 tests).
 - **À surveiller** : le programme de PSE n'a pas de niveaux N1 à N4 ; on garde ceux du jeu.
 - **Prochaine tâche** : 5.1b (mission risque biologique d'après PSE S3).
+
+## 22/11/2026 · PSE : risque biologique (tâche 5.1b)
+
+- **Fait** : deux missions PSE en brouillon. `m26` : enquête sur la chronologie, 5 maillons de la chaîne de transmission, mesure qui casse la chaîne (S3-02). `m27` : 12 mesures à classer en protection collective ou individuelle, priorité au collectif (art. L. 4121-2), 7 étapes de la friction, proposition pour la réunion (S3-03). Vérifié à 390 px.
+- **À surveiller** : les noms de résidents du cours (gastro-entérite) sont remplacés par « une résidente de l'aile B » : aucune maladie ajoutée aux profils du jeu.
+- **Prochaine tâche** : 5.1c (activité physique et TMS, d'après PSE S2).
