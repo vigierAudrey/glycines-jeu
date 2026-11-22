@@ -1,0 +1,214 @@
+{
+  "id": "m42-pse-credit-ou-epargne",
+  "statut": "brouillon",
+  "discipline": "PSE",
+  "titre": "Un scooter : épargner ou emprunter ?",
+  "duree_min": 10,
+  "sequence_requise": "S6",
+  "lieu": "poste-de-soins",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "PSE-D2",
+      "critere": "Expliquer les avantages et les inconvénients d’un crédit à la consommation."
+    }
+  ],
+  "situation": "Pour venir aux Glycines en horaires décalés, un collègue veut un scooter à 2 400 €. Deux solutions : épargner chaque mois sur son excédent, ou signer aujourd'hui le crédit « facile » du magasin. Une collègue lui conseille : « Fais les calculs avant de signer ! »",
+  "objectif_eleve": "Comparer épargne et crédit, repérer le vrai coût d'un crédit et le risque de surendettement.",
+  "note_pour_audrey": "Brouillon écrit pour la tâche 5.1h, d'après votre séance PSE S6-02 (« Épargner ou emprunter : le vrai coût du crédit ») et son activité interactive : situation, 6 cartes épargne ou crédit, engrenage du surendettement, vrai/faux et les 3 réponses de la mission (repris tels quels). Noa du cours devient « un collègue ». Critère : objectif ciblé du module D2, mot pour mot. À relire avant de passer le statut à valide.",
+  "etapes": [
+    {
+      "id": "classer",
+      "type": "tri",
+      "consigne": "Épargne ou crédit ?",
+      "categories": [
+        {
+          "id": "epargne",
+          "libelle": "Épargne",
+          "aide": "mettre de côté"
+        },
+        {
+          "id": "credit",
+          "libelle": "Crédit",
+          "aide": "emprunter et rembourser"
+        }
+      ],
+      "elements": [
+        {
+          "id": "livret-a",
+          "texte": "Livret A",
+          "categorie": "epargne",
+          "points": {
+            "PSE-D2": 1
+          },
+          "retour": "Épargner, c'est mettre de côté une partie de ses recettes ; l'épargne rapporte des intérêts."
+        },
+        {
+          "id": "epargne-de-precaution",
+          "texte": "Épargne de précaution",
+          "categorie": "epargne",
+          "points": {
+            "PSE-D2": 1
+          },
+          "retour": "Épargner, c'est mettre de côté une partie de ses recettes ; l'épargne rapporte des intérêts."
+        },
+        {
+          "id": "rapporte-des-interets",
+          "texte": "Rapporte des intérêts",
+          "categorie": "epargne",
+          "points": {
+            "PSE-D2": 1
+          },
+          "retour": "Épargner, c'est mettre de côté une partie de ses recettes ; l'épargne rapporte des intérêts."
+        },
+        {
+          "id": "mensualites",
+          "texte": "Mensualités",
+          "categorie": "credit",
+          "points": {
+            "PSE-D2": 1
+          },
+          "retour": "Un crédit permet d'acheter tout de suite mais coûte plus cher ; le TAEG regroupe intérêts et frais."
+        },
+        {
+          "id": "taeg",
+          "texte": "TAEG",
+          "categorie": "credit",
+          "points": {
+            "PSE-D2": 1
+          },
+          "retour": "Un crédit permet d'acheter tout de suite mais coûte plus cher ; le TAEG regroupe intérêts et frais."
+        },
+        {
+          "id": "coute-des-interets",
+          "texte": "Coûte des intérêts",
+          "categorie": "credit",
+          "points": {
+            "PSE-D2": 1
+          },
+          "retour": "Un crédit permet d'acheter tout de suite mais coûte plus cher ; le TAEG regroupe intérêts et frais."
+        }
+      ]
+    },
+    {
+      "id": "calcul",
+      "type": "decision",
+      "consigne": "Le crédit du magasin : 24 mensualités de 110 €. Votre collègue peut épargner 300 € par mois.",
+      "question": "Que lui conseillez-vous ?",
+      "choix": [
+        {
+          "decision": "adapter",
+          "texte": "À crédit, tu paies 2 640 €, soit 240 € de plus. En épargnant 300 € par mois, tu l'as en 8 mois au prix de 2 400 €.",
+          "points": {
+            "PSE-D2": 3
+          },
+          "retour": "Choix justifié par le calcul."
+        },
+        {
+          "decision": "agir",
+          "texte": "Signe vite, c'est sans frais.",
+          "retour": "Le crédit coûte 240 €."
+        },
+        {
+          "decision": "agir",
+          "texte": "Prends deux crédits pour aller plus vite.",
+          "retour": "Risque de surendettement."
+        }
+      ]
+    },
+    {
+      "id": "engrenage",
+      "type": "ordre",
+      "consigne": "Remettez dans l'ordre l'engrenage du surendettement.",
+      "elements": [
+        {
+          "id": "un-premier-credit-pour-la-vo",
+          "texte": "Un premier crédit pour la voiture.",
+          "points": {
+            "PSE-D2": 1
+          }
+        },
+        {
+          "id": "un-credit-renouvelable-pour-",
+          "texte": "Un crédit renouvelable pour un canapé.",
+          "points": {
+            "PSE-D2": 1
+          }
+        },
+        {
+          "id": "les-mensualites-depassent-le",
+          "texte": "Les mensualités dépassent les capacités.",
+          "points": {
+            "PSE-D2": 1
+          }
+        },
+        {
+          "id": "un-credit-pour-rembourser-le",
+          "texte": "Un crédit pour rembourser les crédits.",
+          "points": {
+            "PSE-D2": 1
+          }
+        },
+        {
+          "id": "dossier-de-surendettement-a-",
+          "texte": "Dossier de surendettement à la Banque de France.",
+          "points": {
+            "PSE-D2": 1
+          }
+        }
+      ],
+      "retour": "Avant tout crédit, je vérifie que la mensualité laisse mon budget équilibré ; cumuler les crédits mène au surendettement."
+    },
+    {
+      "id": "vrai",
+      "type": "selection",
+      "consigne": "Pour finir, vérifiez vos connaissances.",
+      "question": "Cochez les phrases vraies.",
+      "elements": [
+        {
+          "id": "un-credit-a-la-consommation-",
+          "texte": "Un crédit à la consommation est gratuit.",
+          "attendu": false,
+          "points": {
+            "PSE-D2": 1
+          },
+          "retour": "Faux : il coûte des intérêts et des frais."
+        },
+        {
+          "id": "le-taeg-permet-de-comparer-d",
+          "texte": "Le TAEG permet de comparer deux offres de crédit.",
+          "attendu": true,
+          "points": {
+            "PSE-D2": 1
+          },
+          "retour": "Vrai : il regroupe tous les coûts."
+        },
+        {
+          "id": "on-peut-se-retracter-14-jour",
+          "texte": "On peut se rétracter 14 jours après la signature d'un crédit.",
+          "attendu": true,
+          "points": {
+            "PSE-D2": 1
+          },
+          "retour": "Vrai : c'est la loi."
+        },
+        {
+          "id": "cumuler-les-credits-protege-",
+          "texte": "Cumuler les crédits protège du surendettement.",
+          "attendu": false,
+          "points": {
+            "PSE-D2": 1
+          },
+          "retour": "Faux : c'est l'inverse."
+        }
+      ]
+    }
+  ],
+  "debriefing": [
+    "Combien coûte vraiment le scooter à crédit ?",
+    "À quoi sert le TAEG ?",
+    "Combien de jours avez-vous pour vous rétracter après un crédit ?"
+  ]
+}

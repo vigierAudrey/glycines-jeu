@@ -382,3 +382,9 @@ Trois lignes par session : ce qui a été fait, ce qui reste à surveiller, la p
 - **Fait** : cinq missions d'après PSE S5 : `m36` cycles et rôles du sommeil, `m37` dette de sommeil et ses effets, `m38` besoins alimentaires, `m39` erreurs alimentaires et cercle vicieux, `m40` choix en horaires décalés et perte de poids d'un résident.
 - **À surveiller** : le résident de 84 ans qui perd du poids (M. Karim dans le cours) reste anonyme ; Noa et Lisa deviennent « un collègue », « une collègue ».
 - **Prochaine tâche** : 5.1h (PSE S6 : budget, assurance, achats).
+
+## 22/11/2026 · PSE : budget, assurance, achats (tâche 5.1h)
+
+- **Fait** : six missions d'après PSE S6 : `m41` budget et règle d'or, `m42` crédit ou épargne, `m43` assurance et mutualisation, `m44` constat et déclaration de sinistre, `m45` achat en ligne et arnaques, `m46` DLC, DDM, allergènes et labels. La PSE compte maintenant 21 missions (brouillons), de S1 à S6.
+- **À surveiller** : m46 décide « garder ou jeter » pour les courses du collègue, pas « servir aux résidents » (choix prudent, noté pour Audrey).
+- **Prochaine tâche** : 5.2 (Bloc 1) ou tâches 🧑‍🏫 (validation des brouillons, test élèves).

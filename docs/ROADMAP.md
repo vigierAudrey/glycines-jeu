@@ -116,7 +116,7 @@ Règle commune : toute nouvelle activité s'appuie sur une situation réelle des
 
 ## Phase 5 · Extensions
 
-- [~] **5.1** PSE du CAP (thématique C, la plus proche du métier en EHPAD), en sous-tâches :
+- [x] **5.1** PSE du CAP (thématique C, la plus proche du métier en EHPAD), en sous-tâches :
   - [x] **5.1a** Référentiel PSE en données (`content/referentiel/pse.json`, modules C4 à C7 mot pour mot) ; missions `discipline: "PSE"`, toujours ouvertes, dans une rubrique « PSE » de la liste.
   - [x] **5.1b** Mission PSE « risque biologique » (C4) d'après PSE S3 (chaîne de transmission, protection).
     Fait : `m26` (chaîne de transmission, d'après S3-02) et `m27` (protection collective et individuelle, friction, d'après S3-03).
@@ -130,6 +130,7 @@ Règle commune : toute nouvelle activité s'appuie sur une situation réelle des
     Fait : modules A2, A7, C1, C2, D1 à D3 ajoutés ; `m34` (quel contrat, S1-01), `m35` (droits et obligations, S1-02).
   - [x] **5.1g** PSE S5 (sommeil et alimentation avec des horaires décalés) : ajouter les modules A2 et A7 à `pse.json`, puis des missions.
     Fait : `m36` (cycles du sommeil, S5-01), `m37` (dette de sommeil, S5-02), `m38` (besoins alimentaires, S5-03), `m39` (erreurs alimentaires, S5-04), `m40` (horaires décalés, S5-05).
-  - [ ] **5.1h** PSE S6 (budget, assurance, achats, étiquettes) : ajouter les modules de la thématique D utiles, puis des missions.
+  - [x] **5.1h** PSE S6 (budget, assurance, achats, étiquettes) : ajouter les modules de la thématique D utiles, puis des missions.
+    Fait : `m41` (budget, S6-01), `m42` (crédit ou épargne, S6-02), `m43` (assurance, S6-03), `m44` (sinistre, S6-04), `m45` (achat en ligne, S6-05), `m46` (étiquette, S6-06). La séquence 7 de PSE (méthodologie du CCF) n'est pas transformée en missions : elle travaille la rédaction, pas un module.
 - [ ] **5.2** Bloc 1 : cuisine, lingerie, entretien des espaces collectifs.
 - [-] **5.3** ~~Aide en arabe~~ : abandonnée (D-032).

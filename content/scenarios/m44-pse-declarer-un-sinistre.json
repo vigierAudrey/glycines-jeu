@@ -1,0 +1,188 @@
+{
+  "id": "m44-pse-declarer-un-sinistre",
+  "statut": "brouillon",
+  "discipline": "PSE",
+  "titre": "Accroché sur le parking : que faire ?",
+  "duree_min": 10,
+  "sequence_requise": "S6",
+  "lieu": "couloir",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "PSE-D1",
+      "critere": "Repérer les démarches à effectuer dans une situation donnée en cas de sinistre à partir d’une procédure, d’un formulaire."
+    }
+  ],
+  "situation": "En sortant du parking des Glycines, un automobiliste accroche le scooter d'un collègue. Le rétroviseur est cassé et le carénage rayé. L'automobiliste s'excuse : « On arrange ça entre nous, sans paperasse ? » et sort 50 € de sa poche.",
+  "objectif_eleve": "Suivre les démarches après un sinistre, dans les délais.",
+  "note_pour_audrey": "Brouillon écrit pour la tâche 5.1h, d'après votre séance PSE S6-04 (« En cas de pépin : déclarer un sinistre dans les délais ») et son activité interactive : situation, démarches dans l'ordre, 5 cartes délai de déclaration, vrai/faux et les 3 réponses de la mission (vol du scooter) (repris tels quels). Noa du cours devient « un collègue ». Critère : objectif ciblé du module D1, mot pour mot. À relire avant de passer le statut à valide.",
+  "etapes": [
+    {
+      "id": "arrangement",
+      "type": "decision",
+      "consigne": "L'automobiliste insiste pour régler avec 50 € en liquide.",
+      "question": "Que conseillez-vous à votre collègue ?",
+      "choix": [
+        {
+          "decision": "adapter",
+          "texte": "Refuser l'arrangement, remplir et signer un constat amiable sur place, prendre des photos.",
+          "points": {
+            "PSE-D1": 2
+          },
+          "retour": "Sans constat, il n'aurait ni preuve ni recours."
+        },
+        {
+          "decision": "agir",
+          "texte": "Accepter les 50 € : c'est plus simple.",
+          "retour": "Pas d'arrangement en liquide : sans constat, ni preuve ni recours."
+        },
+        {
+          "decision": "agir",
+          "texte": "Partir sans rien faire.",
+          "retour": "Il perdrait tout recours."
+        }
+      ]
+    },
+    {
+      "id": "demarches",
+      "type": "ordre",
+      "consigne": "Remettez les démarches dans l'ordre.",
+      "elements": [
+        {
+          "id": "securiser-et-verifier-les-bl",
+          "texte": "Sécuriser et vérifier les blessés.",
+          "points": {
+            "PSE-D1": 1
+          }
+        },
+        {
+          "id": "remplir-et-signer-le-constat",
+          "texte": "Remplir et signer le constat amiable.",
+          "points": {
+            "PSE-D1": 1
+          }
+        },
+        {
+          "id": "prendre-des-photos",
+          "texte": "Prendre des photos.",
+          "points": {
+            "PSE-D1": 1
+          }
+        },
+        {
+          "id": "declarer-a-l-assureur",
+          "texte": "Déclarer à l'assureur.",
+          "points": {
+            "PSE-D1": 1
+          }
+        },
+        {
+          "id": "attendre-l-accord-avant-de-r",
+          "texte": "Attendre l'accord avant de réparer.",
+          "points": {
+            "PSE-D1": 1
+          }
+        }
+      ],
+      "retour": "Je sécurise, je fais le constat, je prends des photos, puis je déclare à mon assureur."
+    },
+    {
+      "id": "delais",
+      "type": "tri",
+      "consigne": "Quel délai pour déclarer ?",
+      "categories": [
+        {
+          "id": "cinq",
+          "libelle": "5 jours ouvrés",
+          "aide": "cas général"
+        },
+        {
+          "id": "deux",
+          "libelle": "2 jours ouvrés",
+          "aide": "vol"
+        }
+      ],
+      "elements": [
+        {
+          "id": "accident-de-scooter",
+          "texte": "Accident de scooter",
+          "categorie": "cinq",
+          "points": {
+            "PSE-D1": 1
+          },
+          "retour": "Délai de déclaration : 5 jours ouvrés (accident, dégât des eaux, incendie)."
+        },
+        {
+          "id": "degat-des-eaux",
+          "texte": "Dégât des eaux",
+          "categorie": "cinq",
+          "points": {
+            "PSE-D1": 1
+          },
+          "retour": "Délai de déclaration : 5 jours ouvrés (accident, dégât des eaux, incendie)."
+        },
+        {
+          "id": "incendie",
+          "texte": "Incendie",
+          "categorie": "cinq",
+          "points": {
+            "PSE-D1": 1
+          },
+          "retour": "Délai de déclaration : 5 jours ouvrés (accident, dégât des eaux, incendie)."
+        },
+        {
+          "id": "vol-du-scooter",
+          "texte": "Vol du scooter",
+          "categorie": "deux",
+          "points": {
+            "PSE-D1": 1
+          },
+          "retour": "Vol : 2 jours ouvrés, avec dépôt de plainte à la police ou à la gendarmerie."
+        },
+        {
+          "id": "cambriolage-du-studio",
+          "texte": "Cambriolage du studio",
+          "categorie": "deux",
+          "points": {
+            "PSE-D1": 1
+          },
+          "retour": "Vol : 2 jours ouvrés, avec dépôt de plainte à la police ou à la gendarmerie."
+        }
+      ]
+    },
+    {
+      "id": "vol",
+      "type": "decision",
+      "consigne": "Quelques semaines plus tard, un vendredi, le scooter de votre collègue est volé.",
+      "question": "Que lui conseillez-vous ?",
+      "choix": [
+        {
+          "decision": "adapter",
+          "texte": "Dépose plainte et déclare le vol à ton assureur dans les 2 jours ouvrés, avant le week-end, sinon tu risques un refus.",
+          "points": {
+            "PSE-D1": 2
+          },
+          "retour": "Deux démarches et le délai."
+        },
+        {
+          "decision": "agir",
+          "texte": "Achète directement un autre scooter.",
+          "retour": "Il perdrait l'indemnisation."
+        },
+        {
+          "decision": "agir",
+          "texte": "Attends le week-end, rien ne presse.",
+          "retour": "Le délai serait dépassé."
+        }
+      ],
+      "si_oubli": "Sinistre : 5 jours ouvrés pour déclarer ; vol : 2 jours ouvrés, avec dépôt de plainte."
+    }
+  ],
+  "debriefing": [
+    "Pourquoi refuser l'arrangement en liquide ?",
+    "Quel est le délai pour déclarer un accident ? un vol ?",
+    "Que risque-t-on avec une déclaration tardive ?"
+  ]
+}

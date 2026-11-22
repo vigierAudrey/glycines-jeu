@@ -1,0 +1,223 @@
+{
+  "id": "m45-pse-acheter-en-ligne",
+  "statut": "brouillon",
+  "discipline": "PSE",
+  "titre": "Un casque à moitié prix : arnaque ?",
+  "duree_min": 10,
+  "sequence_requise": "S6",
+  "lieu": "poste-de-soins",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "PSE-D3",
+      "critere": "Expliquer les avantages et les inconvénients du e-commerce pour le consommateur."
+    }
+  ],
+  "situation": "Un collègue compare en ligne des casques de scooter. Un site inconnu propose le casque à moitié prix : « Stock limité, payez par virement ! » Une collègue le prévient : « Trop beau pour être vrai… vérifie avant de payer ! »",
+  "objectif_eleve": "Reconnaître un site fiable, connaître ses droits et acheter en ligne sans se faire avoir.",
+  "note_pour_audrey": "Brouillon écrit pour la tâche 5.1h, d'après votre séance PSE S6-05 (« Acheter en ligne sans se faire avoir ») et son activité interactive : situation, 7 cartes site fiable ou douteux, vérifications dans l'ordre, vrai/faux et les 3 réponses de la mission (repris tels quels). Noa du cours devient « un collègue ». Critère : objectif ciblé du module D3, mot pour mot. À relire avant de passer le statut à valide.",
+  "etapes": [
+    {
+      "id": "fiable",
+      "type": "tri",
+      "consigne": "Site fiable ou douteux ?",
+      "categories": [
+        {
+          "id": "fiable",
+          "libelle": "Site fiable",
+          "aide": "je peux commander"
+        },
+        {
+          "id": "douteux",
+          "libelle": "Site douteux",
+          "aide": "je ne paie pas"
+        }
+      ],
+      "elements": [
+        {
+          "id": "mentions-legales-completes",
+          "texte": "Mentions légales complètes",
+          "categorie": "fiable",
+          "points": {
+            "PSE-D3": 1
+          },
+          "retour": "Mentions légales, paiement sécurisé, avis nuancés : des signes de fiabilité."
+        },
+        {
+          "id": "paiement-par-carte-securise",
+          "texte": "Paiement par carte sécurisé",
+          "categorie": "fiable",
+          "points": {
+            "PSE-D3": 1
+          },
+          "retour": "Mentions légales, paiement sécurisé, avis nuancés : des signes de fiabilité."
+        },
+        {
+          "id": "avis-nombreux-et-nuances",
+          "texte": "Avis nombreux et nuancés",
+          "categorie": "fiable",
+          "points": {
+            "PSE-D3": 1
+          },
+          "retour": "Mentions légales, paiement sécurisé, avis nuancés : des signes de fiabilité."
+        },
+        {
+          "id": "paiement-par-virement-unique",
+          "texte": "Paiement par virement uniquement",
+          "categorie": "douteux",
+          "points": {
+            "PSE-D3": 1
+          },
+          "retour": "Signes d'arnaque : prix trop bas, virement exigé, urgence artificielle, avis tous parfaits."
+        },
+        {
+          "id": "prix-anormalement-bas",
+          "texte": "Prix anormalement bas",
+          "categorie": "douteux",
+          "points": {
+            "PSE-D3": 1
+          },
+          "retour": "Signes d'arnaque : prix trop bas, virement exigé, urgence artificielle, avis tous parfaits."
+        },
+        {
+          "id": "plus-que-2-en-stock",
+          "texte": "« Plus que 2 en stock ! »",
+          "categorie": "douteux",
+          "points": {
+            "PSE-D3": 1
+          },
+          "retour": "Signes d'arnaque : prix trop bas, virement exigé, urgence artificielle, avis tous parfaits."
+        },
+        {
+          "id": "avis-tous-parfaits-le-meme-j",
+          "texte": "Avis tous parfaits le même jour",
+          "categorie": "douteux",
+          "points": {
+            "PSE-D3": 1
+          },
+          "retour": "Signes d'arnaque : prix trop bas, virement exigé, urgence artificielle, avis tous parfaits."
+        }
+      ]
+    },
+    {
+      "id": "verifier",
+      "type": "ordre",
+      "consigne": "Remettez dans l'ordre vos vérifications.",
+      "elements": [
+        {
+          "id": "je-verifie-les-mentions-lega",
+          "texte": "Je vérifie les mentions légales.",
+          "points": {
+            "PSE-D3": 1
+          }
+        },
+        {
+          "id": "je-lis-les-avis-et-les-cgv",
+          "texte": "Je lis les avis et les CGV.",
+          "points": {
+            "PSE-D3": 1
+          }
+        },
+        {
+          "id": "je-compare-avec-un-site-conn",
+          "texte": "Je compare avec un site connu.",
+          "points": {
+            "PSE-D3": 1
+          }
+        },
+        {
+          "id": "je-paie-par-carte-sur-un-sit",
+          "texte": "Je paie par carte sur un site sécurisé.",
+          "points": {
+            "PSE-D3": 1
+          }
+        },
+        {
+          "id": "je-garde-la-confirmation-de-",
+          "texte": "Je garde la confirmation de commande.",
+          "points": {
+            "PSE-D3": 1
+          }
+        }
+      ],
+      "retour": "Sécurité du paiement et fiabilité du vendeur d'abord, prix ensuite."
+    },
+    {
+      "id": "conseil",
+      "type": "decision",
+      "consigne": "Votre collègue hésite : « L'offre se termine dans 10 minutes ! »",
+      "question": "Que lui conseillez-vous ?",
+      "choix": [
+        {
+          "decision": "adapter",
+          "texte": "Vérifier les mentions légales, refuser le virement et payer par carte, comparer avec un site connu sans tenir compte de l'urgence.",
+          "points": {
+            "PSE-D3": 2
+          },
+          "retour": "Trois vérifications justifiées."
+        },
+        {
+          "decision": "agir",
+          "texte": "Payer vite avant la fin de l'offre.",
+          "retour": "L'urgence est un piège."
+        },
+        {
+          "decision": "agir",
+          "texte": "Envoyer un virement plus petit pour tester.",
+          "retour": "Aucun recours en virement."
+        }
+      ]
+    },
+    {
+      "id": "vrai",
+      "type": "selection",
+      "consigne": "Pour finir, vérifiez vos connaissances.",
+      "question": "Cochez les phrases vraies.",
+      "elements": [
+        {
+          "id": "on-a-14-jours-apres-receptio",
+          "texte": "On a 14 jours après réception pour se rétracter d'un achat en ligne.",
+          "attendu": true,
+          "points": {
+            "PSE-D3": 1
+          },
+          "retour": "Vrai : sans se justifier."
+        },
+        {
+          "id": "payer-par-virement-a-un-inco",
+          "texte": "Payer par virement à un inconnu est sûr.",
+          "attendu": false,
+          "points": {
+            "PSE-D3": 1
+          },
+          "retour": "Faux : aucun recours possible."
+        },
+        {
+          "id": "la-retractation-s-applique-a",
+          "texte": "La rétractation s'applique aussi en magasin.",
+          "attendu": false,
+          "points": {
+            "PSE-D3": 1
+          },
+          "retour": "Faux : seulement pour les achats à distance."
+        },
+        {
+          "id": "les-cgv-se-lisent-avant-de-p",
+          "texte": "Les CGV se lisent avant de payer.",
+          "attendu": true,
+          "points": {
+            "PSE-D3": 1
+          },
+          "retour": "Vrai : elles fixent les règles de la vente."
+        }
+      ]
+    }
+  ],
+  "debriefing": [
+    "Citez trois signes d'arnaque.",
+    "Combien de jours pour se rétracter d'un achat en ligne ?",
+    "Pourquoi éviter le virement à un vendeur inconnu ?"
+  ]
+}

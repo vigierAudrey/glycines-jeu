@@ -1,0 +1,198 @@
+{
+  "id": "m43-pse-assurance",
+  "statut": "brouillon",
+  "discipline": "PSE",
+  "titre": "L'assurance : payer ensemble pour être protégé",
+  "duree_min": 10,
+  "sequence_requise": "S6",
+  "lieu": "poste-de-soins",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "PSE-D1",
+      "critere": "Démontrer le caractère obligatoire ou facultatif d’une assurance à partir d’un texte réglementaire."
+    }
+  ],
+  "situation": "Studio trouvé près des Glycines ! L'agence demande une attestation d'assurance habitation avant de remettre les clés. Et le scooter devra aussi être assuré. Votre collègue montre son contrat : garanties, franchise, exclusions… il faut tout décoder.",
+  "objectif_eleve": "Comprendre le principe de l'assurance et distinguer les assurances obligatoires et facultatives.",
+  "note_pour_audrey": "Brouillon écrit pour la tâche 5.1h, d'après votre séance PSE S6-03 (« L'assurance : payer ensemble pour être protégé chacun ») et son activité interactive : situation, principe de la mutualisation, 5 cartes obligatoire ou facultative, vrai/faux et les 3 réponses de la mission (repris tels quels). Noa du cours devient « un collègue ». La phrase « il veut résilier pour économiser 12 € par mois » met en contexte les réponses de la mission (complément, hors cours). Critère : objectif ciblé du module D1, mot pour mot. À relire avant de passer le statut à valide.",
+  "etapes": [
+    {
+      "id": "mutualisation",
+      "type": "ordre",
+      "consigne": "Remettez dans l'ordre le principe de l'assurance.",
+      "elements": [
+        {
+          "id": "tous-les-assures-paient-une-",
+          "texte": "Tous les assurés paient une cotisation.",
+          "points": {
+            "PSE-D1": 1
+          }
+        },
+        {
+          "id": "l-assureur-reunit-l-argent-d",
+          "texte": "L'assureur réunit l'argent dans un pot commun.",
+          "points": {
+            "PSE-D1": 1
+          }
+        },
+        {
+          "id": "quelques-assures-subissent-u",
+          "texte": "Quelques assurés subissent un sinistre.",
+          "points": {
+            "PSE-D1": 1
+          }
+        },
+        {
+          "id": "l-assureur-les-indemnise",
+          "texte": "L'assureur les indemnise.",
+          "points": {
+            "PSE-D1": 1
+          }
+        }
+      ],
+      "retour": "C'est la mutualisation : un fonctionnement solidaire."
+    },
+    {
+      "id": "obligatoire",
+      "type": "tri",
+      "consigne": "Obligatoire ou facultative ?",
+      "categories": [
+        {
+          "id": "oblig",
+          "libelle": "Obligatoire",
+          "aide": "la loi l'impose"
+        },
+        {
+          "id": "facult",
+          "libelle": "Facultative",
+          "aide": "c'est un choix"
+        }
+      ],
+      "elements": [
+        {
+          "id": "assurance-habitation-du-loca",
+          "texte": "Assurance habitation du locataire",
+          "categorie": "oblig",
+          "points": {
+            "PSE-D1": 1
+          },
+          "retour": "Sont obligatoires : l'assurance du locataire (loi du 6 juillet 1989) et la responsabilité civile d'un véhicule à moteur, scooter compris."
+        },
+        {
+          "id": "assurance-du-scooter",
+          "texte": "Assurance du scooter",
+          "categorie": "oblig",
+          "points": {
+            "PSE-D1": 1
+          },
+          "retour": "Sont obligatoires : l'assurance du locataire (loi du 6 juillet 1989) et la responsabilité civile d'un véhicule à moteur, scooter compris."
+        },
+        {
+          "id": "responsabilite-civile-vie-pr",
+          "texte": "Responsabilité civile vie privée",
+          "categorie": "facult",
+          "points": {
+            "PSE-D1": 1
+          },
+          "retour": "Les autres assurances sont facultatives : je les choisis selon mes besoins et mon budget."
+        },
+        {
+          "id": "garantie-casse-ecran",
+          "texte": "Garantie casse écran",
+          "categorie": "facult",
+          "points": {
+            "PSE-D1": 1
+          },
+          "retour": "Les autres assurances sont facultatives : je les choisis selon mes besoins et mon budget."
+        },
+        {
+          "id": "annulation-de-voyage",
+          "texte": "Annulation de voyage",
+          "categorie": "facult",
+          "points": {
+            "PSE-D1": 1
+          },
+          "retour": "Les autres assurances sont facultatives : je les choisis selon mes besoins et mon budget."
+        }
+      ]
+    },
+    {
+      "id": "resilier",
+      "type": "decision",
+      "consigne": "Votre collègue veut résilier son assurance habitation pour économiser 12 € par mois.",
+      "question": "Que lui répondez-vous ?",
+      "choix": [
+        {
+          "decision": "adapter",
+          "texte": "Elle est obligatoire pour un locataire, et pour 12 € par mois, un incendie ou un dégât des eaux est payé par l'argent de tous les assurés.",
+          "points": {
+            "PSE-D1": 2
+          },
+          "retour": "Obligation et mutualisation."
+        },
+        {
+          "decision": "agir",
+          "texte": "Tu as raison, résilie-la.",
+          "retour": "Elle est obligatoire pour le locataire."
+        },
+        {
+          "decision": "agir",
+          "texte": "Garde l'argent sous ton matelas.",
+          "retour": "Un sinistre de 8 000 € serait impayable."
+        }
+      ]
+    },
+    {
+      "id": "vrai",
+      "type": "selection",
+      "consigne": "Pour finir, vérifiez vos connaissances.",
+      "question": "Cochez les phrases vraies.",
+      "elements": [
+        {
+          "id": "un-scooter-peut-rouler-sans-",
+          "texte": "Un scooter peut rouler sans assurance.",
+          "attendu": false,
+          "points": {
+            "PSE-D1": 1
+          },
+          "retour": "Faux : la responsabilité civile est obligatoire."
+        },
+        {
+          "id": "la-franchise-est-payee-par-l",
+          "texte": "La franchise est payée par l'assureur.",
+          "attendu": false,
+          "points": {
+            "PSE-D1": 1
+          },
+          "retour": "Faux : elle reste à la charge de l'assuré."
+        },
+        {
+          "id": "une-exclusion-empeche-l-inde",
+          "texte": "Une exclusion empêche l'indemnisation.",
+          "attendu": true,
+          "points": {
+            "PSE-D1": 1
+          },
+          "retour": "Vrai : la situation n'est pas couverte."
+        },
+        {
+          "id": "la-cotisation-est-rendue-s-i",
+          "texte": "La cotisation est rendue s'il n'y a pas de sinistre.",
+          "attendu": false,
+          "points": {
+            "PSE-D1": 1
+          },
+          "retour": "Faux : c'est le prix de la protection."
+        }
+      ]
+    }
+  ],
+  "debriefing": [
+    "Expliquez la mutualisation en une phrase.",
+    "Quelles assurances sont obligatoires pour votre collègue ?",
+    "Qu'est-ce que la franchise ?"
+  ]
+}

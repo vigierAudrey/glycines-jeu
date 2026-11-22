@@ -1,0 +1,237 @@
+{
+  "id": "m41-pse-mon-budget",
+  "statut": "brouillon",
+  "discipline": "PSE",
+  "titre": "Premier salaire : faire son budget",
+  "duree_min": 10,
+  "sequence_requise": "S6",
+  "lieu": "poste-de-soins",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "PSE-D2",
+      "critere": "Énoncer la principale règle de gestion d’un budget."
+    }
+  ],
+  "situation": "Premier salaire d'agent aux Glycines ! Un collègue veut prendre un studio près de l'établissement. Entre le loyer, les courses et les sorties, va-t-il s'en sortir ? Avant de signer le bail, il décide de faire son budget, et il vous demande de l'aider.",
+  "objectif_eleve": "Classer recettes, dépenses fixes et variables, suivre la démarche du budget et appliquer la règle d'or.",
+  "note_pour_audrey": "Brouillon écrit pour la tâche 5.1h, d'après votre séance PSE S6-01 (« Mon budget : recettes, dépenses et la règle d'or ») et son activité interactive : situation, 8 cartes à classer, démarche du budget, vrai/faux et les 3 réponses de la mission (repris tels quels). Noa du cours devient « un collègue ». La phrase « à la fin du mois, il est à découvert » met en contexte les réponses de la mission (complément, hors cours). Critère : objectif ciblé du module D2, mot pour mot. À relire avant de passer le statut à valide.",
+  "etapes": [
+    {
+      "id": "classer",
+      "type": "tri",
+      "consigne": "Classez chaque ligne du budget.",
+      "categories": [
+        {
+          "id": "recettes",
+          "libelle": "Recettes",
+          "aide": "ce qui entre"
+        },
+        {
+          "id": "fixes",
+          "libelle": "Dépenses fixes",
+          "aide": "incompressibles"
+        },
+        {
+          "id": "variables",
+          "libelle": "Dépenses variables",
+          "aide": "ajustables"
+        }
+      ],
+      "elements": [
+        {
+          "id": "salaire-net",
+          "texte": "Salaire net",
+          "categorie": "recettes",
+          "points": {
+            "PSE-D2": 1
+          },
+          "retour": "Les recettes : revenus liés au travail (salaire) et revenus sociaux (prime d'activité)."
+        },
+        {
+          "id": "prime-d-activite",
+          "texte": "Prime d'activité",
+          "categorie": "recettes",
+          "points": {
+            "PSE-D2": 1
+          },
+          "retour": "Les recettes : revenus liés au travail (salaire) et revenus sociaux (prime d'activité)."
+        },
+        {
+          "id": "loyer",
+          "texte": "Loyer",
+          "categorie": "fixes",
+          "points": {
+            "PSE-D2": 1
+          },
+          "retour": "Les dépenses fixes incompressibles reviennent chaque mois et passent en premier."
+        },
+        {
+          "id": "assurance-habitation",
+          "texte": "Assurance habitation",
+          "categorie": "fixes",
+          "points": {
+            "PSE-D2": 1
+          },
+          "retour": "Les dépenses fixes incompressibles reviennent chaque mois et passent en premier."
+        },
+        {
+          "id": "abonnement-de-bus",
+          "texte": "Abonnement de bus",
+          "categorie": "fixes",
+          "points": {
+            "PSE-D2": 1
+          },
+          "retour": "Les dépenses fixes incompressibles reviennent chaque mois et passent en premier."
+        },
+        {
+          "id": "courses",
+          "texte": "Courses",
+          "categorie": "variables",
+          "points": {
+            "PSE-D2": 1
+          },
+          "retour": "Les dépenses variables peuvent être ajustées."
+        },
+        {
+          "id": "loisirs",
+          "texte": "Loisirs",
+          "categorie": "variables",
+          "points": {
+            "PSE-D2": 1
+          },
+          "retour": "Les dépenses variables peuvent être ajustées."
+        },
+        {
+          "id": "vetements",
+          "texte": "Vêtements",
+          "categorie": "variables",
+          "points": {
+            "PSE-D2": 1
+          },
+          "retour": "Les dépenses variables peuvent être ajustées."
+        }
+      ]
+    },
+    {
+      "id": "demarche",
+      "type": "ordre",
+      "consigne": "Remettez dans l'ordre la démarche du budget.",
+      "elements": [
+        {
+          "id": "je-liste-mes-recettes",
+          "texte": "Je liste mes recettes.",
+          "points": {
+            "PSE-D2": 1
+          }
+        },
+        {
+          "id": "je-liste-mes-depenses-fixes",
+          "texte": "Je liste mes dépenses fixes.",
+          "points": {
+            "PSE-D2": 1
+          }
+        },
+        {
+          "id": "je-liste-mes-depenses-variab",
+          "texte": "Je liste mes dépenses variables.",
+          "points": {
+            "PSE-D2": 1
+          }
+        },
+        {
+          "id": "je-calcule-le-solde",
+          "texte": "Je calcule le solde.",
+          "points": {
+            "PSE-D2": 1
+          }
+        },
+        {
+          "id": "j-ajuste-les-depenses-variab",
+          "texte": "J'ajuste les dépenses variables si besoin.",
+          "points": {
+            "PSE-D2": 1
+          }
+        }
+      ],
+      "retour": "Quand le budget est déficitaire, j'agis d'abord sur les dépenses variables."
+    },
+    {
+      "id": "decouvert",
+      "type": "decision",
+      "consigne": "À la fin du mois, votre collègue est à découvert. Il vous demande ce qui s'est passé.",
+      "question": "Que lui répondez-vous ?",
+      "choix": [
+        {
+          "decision": "adapter",
+          "texte": "Tes dépenses ont dépassé tes recettes : budget déficitaire. Avec la règle d'or, tu aurais payé les dépenses fixes d'abord et ajusté le reste, sans découvert.",
+          "points": {
+            "PSE-D2": 2
+          },
+          "retour": "Type de budget et règle d'or : mes dépenses ne dépassent jamais mes recettes."
+        },
+        {
+          "decision": "agir",
+          "texte": "Prends un crédit pour combler.",
+          "retour": "Un crédit aggrave un budget déficitaire."
+        },
+        {
+          "decision": "agir",
+          "texte": "Ce n'est pas grave, ça passera.",
+          "retour": "Le découvert coûte des frais."
+        }
+      ]
+    },
+    {
+      "id": "vrai",
+      "type": "selection",
+      "consigne": "Pour finir, vérifiez vos connaissances.",
+      "question": "Cochez les phrases vraies.",
+      "elements": [
+        {
+          "id": "le-salaire-brut-sert-a-faire",
+          "texte": "Le salaire brut sert à faire son budget.",
+          "attendu": false,
+          "points": {
+            "PSE-D2": 1
+          },
+          "retour": "Faux : c'est le salaire net qui arrive sur le compte."
+        },
+        {
+          "id": "le-loyer-est-une-depense-inc",
+          "texte": "Le loyer est une dépense incompressible.",
+          "attendu": true,
+          "points": {
+            "PSE-D2": 1
+          },
+          "retour": "Vrai : on ne peut pas le supprimer."
+        },
+        {
+          "id": "la-prime-d-activite-est-un-r",
+          "texte": "La prime d'activité est un revenu lié au travail.",
+          "attendu": false,
+          "points": {
+            "PSE-D2": 1
+          },
+          "retour": "Faux : c'est un revenu social."
+        },
+        {
+          "id": "en-cas-de-deficit-on-agit-d-",
+          "texte": "En cas de déficit, on agit d'abord sur les dépenses variables.",
+          "attendu": true,
+          "points": {
+            "PSE-D2": 1
+          },
+          "retour": "Vrai : les fixes ne se suppriment pas."
+        }
+      ]
+    }
+  ],
+  "debriefing": [
+    "Quelle différence entre une dépense fixe et une dépense variable ?",
+    "Qu'est-ce qu'un budget déficitaire ?",
+    "Énoncez la règle d'or du budget."
+  ]
+}

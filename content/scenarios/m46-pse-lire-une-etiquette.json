@@ -1,0 +1,223 @@
+{
+  "id": "m46-pse-lire-une-etiquette",
+  "statut": "brouillon",
+  "discipline": "PSE",
+  "titre": "Dates, allergènes, labels : bien lire une étiquette",
+  "duree_min": 10,
+  "sequence_requise": "S6",
+  "lieu": "salle-a-manger",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "PSE-D3",
+      "critere": "Repérer et décoder les informations utiles au choix sur une étiquette de produit à consommer pour son alimentation."
+    }
+  ],
+  "situation": "Premières courses pour le studio d'un collègue. Aux Glycines, il a vu l'importance des dates et des allergènes pour les résidents. Devant le rayon : deux yaourts, deux prix, deux étiquettes. Et dans son réfrigérateur, une crème dont la date est dépassée de 2 jours : il la jette ?",
+  "objectif_eleve": "Distinguer DLC et DDM, lire une étiquette dans l'ordre et repérer les allergènes et les labels.",
+  "note_pour_audrey": "Brouillon écrit pour la tâche 5.1h, d'après votre séance PSE S6-06 (« Bien lire une étiquette : dates, allergènes et labels ») et son activité interactive : situation, 7 cartes DLC ou DDM, lecture de l'étiquette dans l'ordre, vrai/faux et les 3 réponses de la mission (repris tels quels). Noa du cours devient « un collègue ». Dans la mission du cours, il s'agit de « servir » ; ici la décision porte sur les courses du collègue (garder ou jeter), pour ne pas laisser entendre qu'un agent décide seul de ce qui est servi aux résidents. Critère : objectif ciblé du module D3, mot pour mot. À relire avant de passer le statut à valide.",
+  "etapes": [
+    {
+      "id": "dates",
+      "type": "tri",
+      "consigne": "DLC ou DDM ?",
+      "categories": [
+        {
+          "id": "dlc",
+          "libelle": "DLC",
+          "aide": "à consommer jusqu'au"
+        },
+        {
+          "id": "ddm",
+          "libelle": "DDM",
+          "aide": "à consommer de préférence avant"
+        }
+      ],
+      "elements": [
+        {
+          "id": "creme-fraiche",
+          "texte": "Crème fraîche",
+          "categorie": "dlc",
+          "points": {
+            "PSE-D3": 1
+          },
+          "retour": "DLC : date de sécurité, après je jette."
+        },
+        {
+          "id": "yaourt",
+          "texte": "Yaourt",
+          "categorie": "dlc",
+          "points": {
+            "PSE-D3": 1
+          },
+          "retour": "DLC : date de sécurité, après je jette."
+        },
+        {
+          "id": "jambon",
+          "texte": "Jambon",
+          "categorie": "dlc",
+          "points": {
+            "PSE-D3": 1
+          },
+          "retour": "DLC : date de sécurité, après je jette."
+        },
+        {
+          "id": "poisson-frais",
+          "texte": "Poisson frais",
+          "categorie": "dlc",
+          "points": {
+            "PSE-D3": 1
+          },
+          "retour": "DLC : date de sécurité, après je jette."
+        },
+        {
+          "id": "pates",
+          "texte": "Pâtes",
+          "categorie": "ddm",
+          "points": {
+            "PSE-D3": 1
+          },
+          "retour": "DDM : date de qualité, le produit reste sans danger si l'emballage est intact."
+        },
+        {
+          "id": "chocolat",
+          "texte": "Chocolat",
+          "categorie": "ddm",
+          "points": {
+            "PSE-D3": 1
+          },
+          "retour": "DDM : date de qualité, le produit reste sans danger si l'emballage est intact."
+        },
+        {
+          "id": "biscuits-secs",
+          "texte": "Biscuits secs",
+          "categorie": "ddm",
+          "points": {
+            "PSE-D3": 1
+          },
+          "retour": "DDM : date de qualité, le produit reste sans danger si l'emballage est intact."
+        }
+      ]
+    },
+    {
+      "id": "lire",
+      "type": "ordre",
+      "consigne": "Remettez dans l'ordre la lecture d'une étiquette.",
+      "elements": [
+        {
+          "id": "je-lis-la-date-et-son-type",
+          "texte": "Je lis la date et son type.",
+          "points": {
+            "PSE-D3": 1
+          }
+        },
+        {
+          "id": "je-lis-la-liste-des-ingredie",
+          "texte": "Je lis la liste des ingrédients.",
+          "points": {
+            "PSE-D3": 1
+          }
+        },
+        {
+          "id": "je-repere-les-allergenes",
+          "texte": "Je repère les allergènes.",
+          "points": {
+            "PSE-D3": 1
+          }
+        },
+        {
+          "id": "je-regarde-le-nutri-score-et",
+          "texte": "Je regarde le Nutri-Score et les labels.",
+          "points": {
+            "PSE-D3": 1
+          }
+        },
+        {
+          "id": "je-respecte-le-stockage-indi",
+          "texte": "Je respecte le stockage indiqué.",
+          "points": {
+            "PSE-D3": 1
+          }
+        }
+      ],
+      "retour": "Les 14 allergènes majeurs sont mis en évidence dans la liste des ingrédients : réflexe vital pour moi et pour les résidents."
+    },
+    {
+      "id": "frigo",
+      "type": "decision",
+      "consigne": "Dans le réfrigérateur : une crème dont la DLC est dépassée de 2 jours. Dans le placard : des biscuits dont la DDM est dépassée, emballage intact.",
+      "question": "Que fait votre collègue ?",
+      "choix": [
+        {
+          "decision": "adapter",
+          "texte": "Jeter la crème (DLC : sécurité), garder les biscuits si l'emballage est intact (DDM : qualité).",
+          "points": {
+            "PSE-D3": 2
+          },
+          "retour": "Décision produit par produit."
+        },
+        {
+          "decision": "agir",
+          "texte": "Tout jeter par précaution.",
+          "retour": "La DDM ne rend pas dangereux."
+        },
+        {
+          "decision": "agir",
+          "texte": "Tout garder pour éviter le gaspillage.",
+          "retour": "Après la DLC, le produit peut être dangereux."
+        }
+      ]
+    },
+    {
+      "id": "vrai",
+      "type": "selection",
+      "consigne": "Pour finir, vérifiez vos connaissances.",
+      "question": "Cochez les phrases vraies.",
+      "elements": [
+        {
+          "id": "apres-la-dlc-le-produit-peut",
+          "texte": "Après la DLC, le produit peut être dangereux.",
+          "attendu": true,
+          "points": {
+            "PSE-D3": 1
+          },
+          "retour": "Vrai : c'est une date de sécurité."
+        },
+        {
+          "id": "le-premier-ingredient-est-le",
+          "texte": "Le premier ingrédient est le plus abondant.",
+          "attendu": true,
+          "points": {
+            "PSE-D3": 1
+          },
+          "retour": "Vrai : ordre décroissant."
+        },
+        {
+          "id": "100-gourmand-est-un-label-of",
+          "texte": "« 100 % gourmand » est un label officiel.",
+          "attendu": false,
+          "points": {
+            "PSE-D3": 1
+          },
+          "retour": "Faux : c'est un slogan."
+        },
+        {
+          "id": "les-allergenes-sont-mis-en-e",
+          "texte": "Les allergènes sont mis en évidence dans les ingrédients.",
+          "attendu": true,
+          "points": {
+            "PSE-D3": 1
+          },
+          "retour": "Vrai : gras ou majuscules."
+        }
+      ]
+    }
+  ],
+  "debriefing": [
+    "Quelle différence entre DLC et DDM ?",
+    "Pourquoi repérer les allergènes est-il vital en EHPAD ?",
+    "Citez deux signes officiels de qualité."
+  ]
+}
