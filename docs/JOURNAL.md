@@ -352,3 +352,9 @@ Trois lignes par session : ce qui a été fait, ce qui reste à surveiller, la p
 - **Fait** : à la demande d'Audrey, bouton « 📄 Mon bilan » dans la liste des missions : chaque compétence du Bloc 2 et de la PSE avec son meilleur niveau et le détail par mission ; version à imprimer ou enregistrer en PDF (critères officiels évalués, nom, classe, commentaires de l'élève et de l'enseignant). 2 tests, vérifié sur téléphone et en PDF.
 - **À surveiller** : le bilan dépend de l'appareil (ou du code de reprise) : il ne réunit pas plusieurs appareils.
 - **Prochaine tâche** : 5.1f (PSE S1).
+
+## 22/11/2026 · Vérification des référentiels
+
+- **Fait** : comparaison avec les textes officiels (`docs/VERIFICATION_REFERENTIEL.md`). PSE : 14 critères sur 14 mot pour mot. Bloc 2 : 14 compétences conformes, mais 13 critères sur 68 légèrement reformulés par la matrice des cours (dont un critère fusionné à partir de deux).
+- **À surveiller** : la correction touche `bloc2.json`, qu'on ne modifie pas sans l'accord d'Audrey.
+- **Prochaine tâche** : aligner `bloc2.json` sur le JO si Audrey le valide ; sinon 5.1f.
