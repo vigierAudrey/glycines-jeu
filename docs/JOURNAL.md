@@ -340,3 +340,9 @@ Trois lignes par session : ce qui a été fait, ce qui reste à surveiller, la p
 - **Fait** : `m30` (dalle descellée : qui fait quoi, ordre du signalement, relais vers le cadre, S4-01), `m31` (trois courriers : service de santé au travail, CARSAT, inspection du travail, S4-02), `m32` (vaccination contre la grippe : réponse immunitaire, protection individuelle et collective, réponse à une collègue, S4-04). `pnpm verifier` OK (127 tests).
 - **À surveiller** : les collègues du cours (Karima, Lisa) deviennent « une collègue ».
 - **Prochaine tâche** : 5.1e (visites médicales, S4-03), puis les autres séquences de PSE (5.1f à 5.1h).
+
+## 22/11/2026 · PSE : visites médicales (tâche 5.1e)
+
+- **Fait** : `m33` « Encore une visite pour rien ? » : 8 situations à classer par visite, frise du suivi médical, réponse au collègue, vrai/faux (d'après S4-03). `pnpm verifier` OK.
+- **À surveiller** : rien.
+- **Prochaine tâche** : 5.1f (PSE S1 : contrats, droits et obligations).

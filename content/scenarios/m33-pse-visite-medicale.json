@@ -1,0 +1,236 @@
+{
+  "id": "m33-pse-visite-medicale",
+  "statut": "brouillon",
+  "discipline": "PSE",
+  "titre": "« Encore une visite pour rien ? »",
+  "duree_min": 10,
+  "sequence_requise": "S4",
+  "lieu": "couloir",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "PSE-C7",
+      "critere": "Énoncer les intérêts des visites médicales du salarié."
+    }
+  ],
+  "situation": "Vous venez d'être embauché(e) aux Glycines. Dans votre casier, une convocation : « Visite d'information et de prévention, service de santé au travail, le 12 décembre à 14 h. » Un collègue soupire : « Encore une visite pour rien, tu n'es pas malade ! » A-t-il raison ?",
+  "objectif_eleve": "Reconnaître les différentes visites médicales et dire à quoi elles servent pour le salarié.",
+  "note_pour_audrey": "Brouillon écrit pour la tâche 5.1e, d'après votre séance PSE S4-03 (« Les visites médicales : un suivi qui me protège ») et son activité interactive : situation, 8 situations à classer par visite, frise des visites, vrai/faux (repris tels quels). Critère : objectif ciblé du module C7, mot pour mot. À relire avant de passer le statut à valide.",
+  "etapes": [
+    {
+      "id": "quelle-visite",
+      "type": "tri",
+      "consigne": "Quelle visite pour chaque situation ?",
+      "categories": [
+        {
+          "id": "info",
+          "libelle": "Information et prévention",
+          "aide": "après l'embauche"
+        },
+        {
+          "id": "periodique",
+          "libelle": "Périodique",
+          "aide": "tout au long de la carrière"
+        },
+        {
+          "id": "reprise",
+          "libelle": "Reprise",
+          "aide": "après un arrêt long"
+        },
+        {
+          "id": "demande",
+          "libelle": "À la demande",
+          "aide": "à tout moment"
+        }
+      ],
+      "elements": [
+        {
+          "id": "je-viens-d-etre-embauche-e",
+          "texte": "Je viens d'être embauché(e)",
+          "categorie": "info",
+          "points": {
+            "PSE-C7": 1
+          },
+          "retour": "La visite d'information et de prévention a lieu dans les 3 mois après l'embauche (avant l'affectation si j'ai moins de 18 ans)."
+        },
+        {
+          "id": "j-ai-moins-de-18-ans-et-je-c",
+          "texte": "J'ai moins de 18 ans et je commence",
+          "categorie": "info",
+          "points": {
+            "PSE-C7": 1
+          },
+          "retour": "La visite d'information et de prévention a lieu dans les 3 mois après l'embauche (avant l'affectation si j'ai moins de 18 ans)."
+        },
+        {
+          "id": "je-travaille-au-meme-poste-d",
+          "texte": "Je travaille au même poste depuis 4 ans",
+          "categorie": "periodique",
+          "points": {
+            "PSE-C7": 1
+          },
+          "retour": "Les visites périodiques suivent la santé tout au long de la carrière et dépistent tôt les atteintes liées au travail."
+        },
+        {
+          "id": "le-medecin-fixe-un-rendez-vo",
+          "texte": "Le médecin fixe un rendez-vous de suivi",
+          "categorie": "periodique",
+          "points": {
+            "PSE-C7": 1
+          },
+          "retour": "Les visites périodiques suivent la santé tout au long de la carrière et dépistent tôt les atteintes liées au travail."
+        },
+        {
+          "id": "je-reprends-apres-2-mois-de-",
+          "texte": "Je reprends après 2 mois de maladie",
+          "categorie": "reprise",
+          "points": {
+            "PSE-C7": 1
+          },
+          "retour": "La visite de reprise a lieu après un arrêt long."
+        },
+        {
+          "id": "je-reprends-apres-un-conge-m",
+          "texte": "Je reprends après un congé maternité",
+          "categorie": "reprise",
+          "points": {
+            "PSE-C7": 1
+          },
+          "retour": "La visite de reprise a lieu après un arrêt long."
+        },
+        {
+          "id": "j-ai-mal-au-dos-et-je-veux-e",
+          "texte": "J'ai mal au dos et je veux en parler",
+          "categorie": "demande",
+          "points": {
+            "PSE-C7": 1
+          },
+          "retour": "Un salarié peut demander à voir le médecin du travail : c'est la visite à la demande."
+        },
+        {
+          "id": "je-m-inquiete-pour-ma-sante-",
+          "texte": "Je m'inquiète pour ma santé au travail",
+          "categorie": "demande",
+          "points": {
+            "PSE-C7": 1
+          },
+          "retour": "Un salarié peut demander à voir le médecin du travail : c'est la visite à la demande."
+        }
+      ]
+    },
+    {
+      "id": "frise",
+      "type": "ordre",
+      "consigne": "Remettez dans l'ordre le suivi médical d'un salarié.",
+      "elements": [
+        {
+          "id": "embauche-aux-glycines",
+          "texte": "Embauche aux Glycines.",
+          "points": {
+            "PSE-C7": 1
+          }
+        },
+        {
+          "id": "visite-d-information-et-de-p",
+          "texte": "Visite d'information et de prévention, dans les 3 mois.",
+          "points": {
+            "PSE-C7": 1
+          }
+        },
+        {
+          "id": "visites-periodiques-au-plus-",
+          "texte": "Visites périodiques, au plus tous les 5 ans.",
+          "points": {
+            "PSE-C7": 1
+          }
+        },
+        {
+          "id": "visite-de-reprise-apres-un-a",
+          "texte": "Visite de reprise après un arrêt long, si besoin.",
+          "points": {
+            "PSE-C7": 1
+          }
+        }
+      ],
+      "retour": "Le suivi accompagne toute la carrière : il prévient et dépiste tôt."
+    },
+    {
+      "id": "repondre",
+      "type": "decision",
+      "consigne": "Votre collègue insiste : « Encore une visite pour rien, tu n'es pas malade ! »",
+      "question": "Que lui répondez-vous ?",
+      "si_oubli": "La visite médicale ne sert pas qu'aux malades : elle fait le point sur la santé, informe sur les risques du poste et dépiste tôt.",
+      "choix": [
+        {
+          "decision": "adapter",
+          "texte": "Elle sert à faire le point sur ma santé, à m'informer sur les risques du poste et à dépister tôt. Et le médecin est soumis au secret médical.",
+          "points": {
+            "PSE-C7": 3
+          },
+          "retour": "La visite protège le salarié : prévenir, dépister tôt, aménager le poste si besoin."
+        },
+        {
+          "decision": "agir",
+          "texte": "Tu as raison, je n'y vais pas.",
+          "retour": "La visite protège le salarié : elle prévient et dépiste tôt les atteintes liées au travail."
+        },
+        {
+          "decision": "agir",
+          "texte": "Elle sert à surveiller si je travaille bien.",
+          "retour": "Ce n'est pas son rôle : elle suit la santé du salarié."
+        }
+      ]
+    },
+    {
+      "id": "vrai",
+      "type": "selection",
+      "consigne": "Pour finir, vérifiez vos connaissances.",
+      "question": "Cochez les phrases vraies.",
+      "elements": [
+        {
+          "id": "trois-mois",
+          "texte": "La première visite a lieu dans les 3 mois après l'embauche.",
+          "attendu": true,
+          "points": {
+            "PSE-C7": 1
+          },
+          "retour": "Vrai : avant l'affectation pour un salarié de moins de 18 ans."
+        },
+        {
+          "id": "employeur",
+          "texte": "L'employeur connaît le contenu de l'entretien médical.",
+          "attendu": false,
+          "points": {
+            "PSE-C7": 1
+          },
+          "retour": "Faux : il ne reçoit qu'une attestation ou un avis."
+        },
+        {
+          "id": "demande",
+          "texte": "Un salarié peut demander à voir le médecin du travail.",
+          "attendu": true,
+          "points": {
+            "PSE-C7": 1
+          },
+          "retour": "Vrai : c'est la visite à la demande."
+        },
+        {
+          "id": "pour-rien",
+          "texte": "La visite médicale ne sert à rien si l'on n'est pas malade.",
+          "attendu": false,
+          "points": {
+            "PSE-C7": 1
+          },
+          "retour": "Faux : elle prévient et dépiste tôt les atteintes."
+        }
+      ]
+    }
+  ],
+  "debriefing": [
+    "Quand a lieu la visite d'information et de prévention ?",
+    "Que peut proposer le médecin du travail si un poste fait mal ?",
+    "Pourquoi l'employeur ne connaît-il pas le contenu de l'entretien ?"
+  ]
+}
