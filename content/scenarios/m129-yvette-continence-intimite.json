@@ -1,0 +1,96 @@
+{
+  "id": "m129-yvette-continence-intimite",
+  "statut": "brouillon",
+  "titre": "Aux toilettes, à son rythme",
+  "duree_min": 18,
+  "sequence_requise": "S4",
+  "lieu": "chambre-yvette",
+  "personnages": ["joueur", "yvette", "aide-soignante", "infirmiere"],
+  "competences": [
+    { "code": "C2.1.5", "critere": "Respect de la pudeur et de l’intimité." },
+    { "code": "C2.1.5", "critere": "Relation favorisant l’autonomie." },
+    { "code": "C2.1.5", "critere": "Adaptation des gestes aux capacités et aux besoins de la personne âgée." }
+  ],
+  "situation": "Mme Yvette va habituellement aux toilettes au réveil et avant le déjeuner. Elle souhaite la porte fermée. Aujourd'hui, le trajet et la salle d'eau ne sont pas tout à fait prêts, et ses vêtements sont difficiles à manipuler.",
+  "objectif_eleve": "Vous appuyer sur ses habitudes sans imposer d'horaire ni de protection, sécuriser le trajet, préserver son intimité, l'aider seulement pour ce qu'elle ne peut pas faire, et transmettre un changement sans diagnostic.",
+  "note_pour_audrey": "Brouillon (tâches T.7 et T.11), deuxième mission continence après m19, d'après votre séquence 4, séance 7 (« préserver la continence : environnement, habitudes et intimité ») : habitudes plutôt que routine imposée, audit des huit facilitateurs ou obstacles, aide limitée au déplacement et aux vêtements, variante « douleur annoncée ». Ces éléments ont été ajoutés à sa fiche (repris_du_cours). Complément, hors cours : la proposition de Nadia et les répliques. Deux critères communs de C2.1.5 restent à citer (hygiène et sécurité, bien-être).",
+  "etapes": [
+    {
+      "id": "routine-imposee",
+      "type": "decision",
+      "consigne": "Nadia, aide-soignante, propose : « Pour éviter les urgences, on pourrait l'emmener toutes les deux heures et lui mettre une protection. »",
+      "question": "Que répondez-vous ?",
+      "choix": [
+        { "decision": "agir", "texte": "Je propose de nous appuyer sur ses horaires habituels et sur ses demandes, sans imposer de protection ni de passage.", "points": { "C2.1.5": 2 }, "retour": "Les habitudes guident l'anticipation mais n'autorisent pas à imposer un passage ; une protection n'est jamais imposée." },
+        { "decision": "adapter", "texte": "D'accord, une protection, c'est plus sûr pour tout le monde.", "retour": "Une aide absorbante n'est jamais imposée et ne remplace pas l'accompagnement aux toilettes." },
+        { "decision": "alerter", "texte": "Je ne dis rien, ce n'est pas à moi de donner un avis.", "retour": "Vous connaissez ses habitudes : les partager avec l'équipe est utile." }
+      ]
+    },
+    {
+      "id": "audit",
+      "type": "tri",
+      "consigne": "Avant le passage du réveil, vous vérifiez le trajet et la salle d'eau. Rangez chaque élément.",
+      "categories": [
+        { "id": "facilite", "libelle": "Facilite, je garde" },
+        { "id": "corrige", "libelle": "Je corrige dans mon rôle" },
+        { "id": "signale", "libelle": "Je signale, je ne répare pas" }
+      ],
+      "elements": [
+        { "id": "barre", "texte": "Barre d'appui stable.", "categorie": "facilite", "points": { "C2.1.5": 1 }, "retour": "Un appui stable l'aide à s'asseoir et se relever seule." },
+        { "id": "appel", "texte": "Sonnette d'appel qui fonctionne, à portée.", "categorie": "facilite", "points": { "C2.1.5": 1 }, "retour": "Elle peut rester seule et appeler si besoin." },
+        { "id": "papier", "texte": "Papier toilette accessible.", "categorie": "facilite", "points": { "C2.1.5": 1 }, "retour": "Elle peut se débrouiller seule." },
+        { "id": "tapis", "texte": "Tapis relevé sur le trajet.", "categorie": "corrige", "points": { "C2.1.5": 1 }, "retour": "Je le remets à plat ou je le retire avec son accord : le trajet est dégagé." },
+        { "id": "eclairage", "texte": "Éclairage insuffisant dans le passage.", "categorie": "corrige", "points": { "C2.1.5": 1 }, "retour": "J'allume ou j'ajoute la veilleuse prévue." },
+        { "id": "porte", "texte": "Porte de la salle d'eau qui ferme mal.", "categorie": "signale", "points": { "C2.1.5": 1 }, "retour": "Je signale la porte défectueuse, sans réparation improvisée." },
+        { "id": "siege", "texte": "Siège de toilettes inadapté.", "categorie": "signale", "points": { "C2.1.5": 1 }, "retour": "L'équipement inadapté se signale à l'équipe." }
+      ]
+    },
+    {
+      "id": "accompagner",
+      "type": "dialogue",
+      "consigne": "Mme Yvette vous appelle. Elle est devant la salle d'eau et tire sur son pantalon.",
+      "interlocuteur": "yvette",
+      "replique": "Je dois y aller. Mais ce bouton, je n'y arrive pas.",
+      "verbal": [
+        { "texte": "Je vous aide pour le bouton. Ensuite, je ferme la porte et je reste à côté. Vous sonnez si besoin.", "confiance": 2, "points": { "C2.1.5": 2 }, "retour": "Phrases courtes, une information à la fois : vous aidez seulement pour le vêtement et vous préservez son intimité." },
+        { "texte": "Encore ? Vous y êtes allée il n'y a pas longtemps.", "confiance": -2, "retour": "Une remarque humiliante sur une demande urgente." },
+        { "texte": "Je vais tout faire, ce sera plus rapide.", "confiance": -1, "retour": "Elle peut faire une partie seule : vous l'aidez seulement pour le bouton." }
+      ],
+      "paraverbal": [
+        { "texte": "Voix calme et basse.", "confiance": 1, "points": { "C2.1.5": 1 }, "retour": "La discrétion protège sa pudeur." },
+        { "texte": "Voix forte, la porte ouverte.", "confiance": -2, "retour": "Les autres peuvent entendre." },
+        { "texte": "Voix pressée.", "confiance": -1, "retour": "Elle peut se sentir de trop." }
+      ],
+      "non_verbal": [
+        { "texte": "Je lui demande son accord d'un regard, puis je défais le bouton sans exposer plus que nécessaire.", "confiance": 1, "points": { "C2.1.5": 1 }, "retour": "Accord demandé, exposition limitée." },
+        { "texte": "Je baisse son pantalon sans la prévenir.", "confiance": -2, "retour": "On demande l'accord avant chaque geste." },
+        { "texte": "Je reste dans la salle d'eau pendant qu'elle s'installe.", "confiance": -1, "retour": "Si c'est sûr et qu'elle le souhaite, on la laisse seule, avec l'appel à portée." }
+      ]
+    },
+    {
+      "id": "douleur-annoncee",
+      "type": "decision",
+      "consigne": "En sortant, Mme Yvette vous dit doucement : « Ça m'a fait mal. »",
+      "question": "Que faites-vous ?",
+      "choix": [
+        { "decision": "alerter", "texte": "Je la raccompagne, je note ses mots exacts et je le transmets à l'infirmière, sans chercher de cause.", "points": { "C2.1.5": 2 }, "retour": "Une douleur annoncée se transmet sans diagnostic, avec les mots de la personne." },
+        { "decision": "agir", "texte": "Je lui dis que c'est sûrement une infection urinaire et qu'il faut boire plus.", "retour": "C'est un diagnostic et un conseil de soin : ce n'est pas votre rôle." },
+        { "decision": "adapter", "texte": "Je lui dis que ça va passer.", "retour": "Une douleur nouvelle ne se banalise pas : elle se transmet." }
+      ]
+    },
+    {
+      "id": "transmettre-douleur",
+      "type": "relais",
+      "consigne": "Allez transmettre ce que Mme Yvette vous a dit.",
+      "destinataire": "infirmiere",
+      "points": { "C2.1.5": 1 },
+      "retour": "Claire, infirmière, recueille la plainte de Mme Yvette et décide de la suite.",
+      "retour_erreur": "Cette personne n'est pas compétente pour une douleur. Qui, dans l'aile B, l'est ?"
+    }
+  ],
+  "debriefing": [
+    "Pourquoi ne pas imposer un horaire ou une protection à Mme Yvette ?",
+    "Qu'avez-vous corrigé vous-même, et qu'avez-vous signalé ?",
+    "Comment avez-vous protégé son intimité sans la mettre en danger ?"
+  ]
+}
