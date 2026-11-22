@@ -292,6 +292,8 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
         <button type="button" class="bouton bouton--principal" data-action="commencer">C'est parti</button>`;
     } else if (phase === 'retour' && !revele) {
       corps = `
+        <p class="indice">Réponse choisie :</p>
+        <ul class="retours">${(etat.parcours.at(-1)?.reponses ?? []).map((r) => `<li class="a-lire">${echapper(noms.get(r) ?? r)}</li>`).join('')}</ul>
         <p class="question a-lire">🗣 Débattez en classe : était-ce le bon choix ? Pourquoi ?</p>
         <button type="button" class="bouton bouton--principal" data-action="reveler">Révéler la correction</button>`;
     } else if (phase === 'retour') {
@@ -567,7 +569,8 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
   let dernierBilan: Bilan | null = null;
   const lignes = (n: number) => '<span class="fiche__ligne"></span>'.repeat(n);
   const imprimerFiche = (b: Bilan) => {
-    const m = contenu.missions.find((x) => x.id === b.mission)!;
+    // La mission jouée (avec sa variante éventuelle), sinon celle du contenu.
+    const m = mission?.id === b.mission ? mission : contenu.missions.find((x) => x.id === b.mission)!;
     const consigne = (id: string) => m.etapes.find((e) => e.id === id)?.consigne ?? '';
     const typeEtape = (id: string) => m.etapes.find((e) => e.id === id)?.type;
     const fiche = document.createElement('div');

@@ -285,7 +285,7 @@ function repondreEtape(mission: Mission, etat: EtatMission, reponse: Reponse): R
         const pris = r.choisis.includes(el.id);
         const bien = pris === el.attendu;
         if (bien) gagnes = ajouter(gagnes, el.points);
-        return `${bien ? '✔' : '✘'} ${el.texte} : ${el.attendu ? 'à prendre' : 'à laisser'}. ${el.retour}`;
+        return `${bien ? '✔' : '✘'} ${el.texte} : ${el.attendu ? 'à cocher' : 'à ne pas cocher'}. ${el.retour}`;
       });
       return {
         etat: { ...etat, etape: suivante(mission, etape), points: ajouter(etat.points, gagnes), essais: 0 },

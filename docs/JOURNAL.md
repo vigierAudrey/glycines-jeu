@@ -292,3 +292,9 @@ Trois lignes par session : ce qui a été fait, ce qui reste à surveiller, la p
 - **Fait** : `m22` a une étape relais vers M. Lemoine, cadre de santé, chargé des stocks. P.17 et 5.3 (arabe) abandonnées. CLAUDE.md : le contenu peut compléter les cours dans le sens du référentiel, et chaque complément est signalé.
 - **À surveiller** : rien.
 - **Prochaine tâche** : relecture avant de pousser sur GitHub.
+
+## 22/11/2026 · Relecture visuelle avant de pousser
+
+- **Fait** : premières captures réelles (téléphone 390 px, ordinateur, mode classe, page enseignante), aucune erreur dans la console. Trois corrections : flèche ▸ sur le volet « où vous situez-vous ? », réponse choisie affichée pendant le débat en mode classe, « à cocher / à ne pas cocher » dans les retours de sélection. La fiche imprimée montre la variante jouée.
+- **À surveiller** : sur téléphone en portrait, le panneau couvre la moitié de l'aile (le conseil « tournez votre téléphone » s'affiche déjà).
+- **Prochaine tâche** : pousser sur GitHub quand Audrey le dit.

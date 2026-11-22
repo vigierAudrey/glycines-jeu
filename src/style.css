@@ -431,7 +431,9 @@ html, body {
 
 /* Auto-positionnement (P.13) */
 .estimation { margin: .5rem 0; }
-.estimation summary { min-height: 44px; display: flex; align-items: center; cursor: pointer; font-weight: 600; }
+.estimation summary { min-height: 44px; display: flex; align-items: center; gap: 6px; cursor: pointer; font-weight: 600; }
+.estimation summary::before { content: '▸'; }
+.estimation[open] summary::before { content: '▾'; }
 .releve__estimation { display: block; font-style: italic; margin-top: .2rem; }
 
 /* Mode classe (P.14) : lisible au fond de la salle, au vidéoprojecteur */
