@@ -172,4 +172,8 @@ Bilan : les 14 compétences ont toutes au moins une mission, mais seulement 31 c
   - [x] **5.1h** PSE S6 (budget, assurance, achats, étiquettes) : ajouter les modules de la thématique D utiles, puis des missions.
     Fait : `m41` (budget, S6-01), `m42` (crédit ou épargne, S6-02), `m43` (assurance, S6-03), `m44` (sinistre, S6-04), `m45` (achat en ligne, S6-05), `m46` (étiquette, S6-06). La séquence 7 de PSE (méthodologie du CCF) n'est pas transformée en missions : elle travaille la rédaction, pas un module.
 - [ ] **5.2** Bloc 1 : cuisine, lingerie, entretien des espaces collectifs.
+  Note du 22/11/2026 : aucun cours du Bloc 1 n'est sur le PC (seulement Bloc 2, PSE et maths). Choix par défaut : attendre les séances du Bloc 1 d'Audrey. Sinon, sous-tâches prévues :
+  - [ ] **5.2a** Référentiel du Bloc 1 en données (`content/referentiel/bloc1.json`), recopié mot pour mot du référentiel officiel (PDF).
+  - [ ] **5.2b** Troisième carte « Bloc 1 » sur l'écran de choix de la matière.
+  - [ ] **5.2c** Missions du Bloc 1 d'après les séances d'Audrey (une par séance).
 - [-] **5.3** ~~Aide en arabe~~ : abandonnée (D-032).
