@@ -47,6 +47,8 @@ export interface SuiviProgression {
   /** Séquence vue en cours. Un lien de l'enseignante peut la fixer : …/index.html?sequence=S3 */
   sequenceVue: () => string;
   changerSequence: (sequence: string) => void;
+  /** Derniers niveaux obtenus par mission (pour « Mon bilan »). */
+  progression: () => Progression;
   /** Rappels d'oublis venus d'autres missions : rendus une seule fois, puis effacés. */
   prendreRappels: (idMission: string) => Rappel[];
 }
@@ -138,6 +140,7 @@ export function suivreProgression(missions: Mission[]): SuiviProgression {
       return niveaux && Object.entries(niveaux).map(([code, n]) => `${code} ${n}`).join(' · ');
     },
     blocCode,
+    progression: () => progression,
     sequenceVue: () => sequence,
     changerSequence: (s) => {
       sequence = lireSequence(s) ?? sequence;

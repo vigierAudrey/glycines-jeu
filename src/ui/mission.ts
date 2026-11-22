@@ -15,6 +15,8 @@ import { tirerVariante } from '../regles/variantes';
 import type { Rappel } from '../regles/consequences';
 import { comparerEstimation, PHRASES_ECART } from '../regles/positionnement';
 import { decouperAvecLexique } from '../regles/lexique';
+import { bilanGlobal } from '../regles/bilanGlobal';
+import type { Progression } from '../regles/sauvegarde';
 import { echapper } from './echapper';
 
 /** Ce que l'interface des missions demande au reste du jeu (main.ts fait le lien avec la 3D). */
@@ -37,6 +39,8 @@ export interface LiensMission {
   niveauxObtenus?: (idMission: string) => string | undefined;
   /** Rappels d'oublis d'autres missions, montrés au début de celle-ci (P.12). */
   prendreRappels?: (idMission: string) => Rappel[];
+  /** Derniers niveaux obtenus, pour « Mon bilan » (toutes les compétences). */
+  progression?: () => Progression;
   /** Mode classe (?classe) : la correction attend le bouton « Révéler », pour laisser la classe débattre (P.14). */
   modeClasse?: boolean;
 }
@@ -607,6 +611,14 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
         ouvrirListe(accueil);
       });
     }
+    if (liens.progression) {
+      const bouton = document.createElement('button');
+      bouton.type = 'button';
+      bouton.className = 'bouton bouton--texte bouton-bilan';
+      bouton.dataset.action = 'mon-bilan';
+      bouton.textContent = '📄 Mon bilan : toutes mes compétences';
+      fenetre.querySelector('.fenetre__carte')!.append(bouton);
+    }
     const bas = liens.basDeListe?.();
     if (bas) fenetre.querySelector('.fenetre__carte')!.append(bas);
     if (accueil) racine.dispatchEvent(new CustomEvent('panneau-affiche', { detail: fenetre }));
@@ -672,6 +684,11 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
       <ol class="fiche__questions">${b.debriefing.map((q) => `<li>${echapper(q)}${lignes(3)}</li>`).join('')}</ol>
       <h2>Ce que je retiens pour mon stage</h2>
       ${lignes(4)}`;
+    imprimer(fiche);
+  };
+
+  // Imprime (ou enregistre en PDF) un bloc HTML seul, puis le retire de la page.
+  const imprimer = (fiche: HTMLElement) => {
     document.body.append(fiche);
     document.documentElement.classList.add('impression');
     const nettoyer = () => {
@@ -681,6 +698,62 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
     };
     window.addEventListener('afterprint', nettoyer);
     window.print();
+  };
+
+  // ---------- Mon bilan : toutes les compétences, Bloc 2 et PSE ----------
+  // Calculé à partir des derniers niveaux gardés dans le navigateur. Rien n'est envoyé.
+  const partiesBilan = () => bilanGlobal(liens.progression?.() ?? {}, contenu.missions, [
+    { titre: contenu.referentiel.bloc, referentiel: contenu.referentiel },
+    ...(contenu.referentielPse ? [{ titre: 'PSE · Prévention santé environnement', referentiel: contenu.referentielPse }] : []),
+  ]);
+  const badge = (n?: Niveau) => (n ? `<span class="badge badge--niveau badge--${n}">${n}</span>` : '<span class="bilan__vide">pas encore</span>');
+  const ouvrirBilan = () => {
+    const parties = partiesBilan();
+    ouvrirFenetre(`
+      <div class="fenetre__haut">
+        <button type="button" class="bouton bouton--petit" data-action="retour-liste" aria-label="Revenir aux missions">←</button>
+        <h2>Mon bilan</h2>
+        <button type="button" class="bouton bouton--petit" data-action="fermer" aria-label="Fermer">×</button>
+      </div>
+      <p class="indice">Le meilleur niveau obtenu pour chaque compétence, et le détail par mission. Gardé sur cet appareil seulement.</p>
+      ${parties.map((p) => `
+        <h3>${echapper(p.titre)}</h3>
+        <ul class="bilan">
+          ${p.lignes.map((l) => `
+            <li class="bilan__ligne">
+              ${badge(l.meilleur)}
+              <span><strong>${echapper(l.code)}</strong> ${echapper(l.intitule)}
+                ${l.resultats.length ? `<span class="bilan__detail">${l.resultats.map((r) => `${echapper(r.titre)} : ${r.niveau}`).join(' · ')}</span>` : ''}
+              </span>
+            </li>`).join('')}
+        </ul>`).join('')}
+      <div class="rangee-boutons">
+        <button type="button" class="bouton bouton--principal" data-action="imprimer-bilan">🖨 Imprimer ou enregistrer en PDF</button>
+      </div>`);
+  };
+  const imprimerBilan = () => {
+    const parties = partiesBilan();
+    const fiche = document.createElement('div');
+    fiche.className = 'fiche-impression';
+    fiche.innerHTML = `
+      <h1>Mon bilan de compétences · Une journée aux Glycines</h1>
+      <p>Nom : ______________________ &nbsp; Classe : __________ &nbsp; Date : ${new Date().toLocaleDateString('fr-FR')}</p>
+      <p>${echapper(contenu.referentiel.diplome)}. Niveaux : ${(['N1', 'N2', 'N3', 'N4'] as const).map((n) => `<strong>${n}</strong> ${echapper(contenu.referentiel.niveaux[n])}`).join(' ')}</p>
+      ${parties.map((p) => `
+        <h2>${echapper(p.titre)}</h2>
+        <table>
+          <thead><tr><th>Compétence</th><th>Missions et critère officiel évalué</th><th>Meilleur niveau</th></tr></thead>
+          <tbody>${p.lignes.map((l) => `
+            <tr><td><strong>${echapper(l.code)}</strong><br>${echapper(l.intitule)}</td>
+                <td>${l.resultats.length ? `<ul>${l.resultats.map((r) => `<li>${echapper(r.titre)} : <strong>${r.niveau}</strong><br><small>${echapper(r.critere)}</small></li>`).join('')}</ul>` : '<em>Pas encore travaillée dans le jeu.</em>'}</td>
+                <td><strong>${l.meilleur ?? '…'}</strong></td></tr>`).join('')}
+          </tbody>
+        </table>`).join('')}
+      <h2>Mon commentaire</h2>
+      ${lignes(3)}
+      <h2>Commentaire de l'enseignant(e)</h2>
+      ${lignes(3)}`;
+    imprimer(fiche);
   };
 
   fenetre.addEventListener('click', (evenement) => {
@@ -698,6 +771,9 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
       return;
     }
     if (cible.dataset.action === 'imprimer-fiche' && dernierBilan) imprimerFiche(dernierBilan);
+    if (cible.dataset.action === 'mon-bilan') return ouvrirBilan();
+    if (cible.dataset.action === 'imprimer-bilan') return imprimerBilan();
+    if (cible.dataset.action === 'retour-liste') return ouvrirListe(accueilEnCours);
     const id = cible.dataset.mission;
     const m = id && contenu.missions.find((x) => x.id === id);
     if (m) commencer(m);

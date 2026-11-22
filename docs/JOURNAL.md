@@ -346,3 +346,9 @@ Trois lignes par session : ce qui a été fait, ce qui reste à surveiller, la p
 - **Fait** : `m33` « Encore une visite pour rien ? » : 8 situations à classer par visite, frise du suivi médical, réponse au collègue, vrai/faux (d'après S4-03). `pnpm verifier` OK.
 - **À surveiller** : rien.
 - **Prochaine tâche** : 5.1f (PSE S1 : contrats, droits et obligations).
+
+## 22/11/2026 · Mon bilan : toutes les compétences
+
+- **Fait** : à la demande d'Audrey, bouton « 📄 Mon bilan » dans la liste des missions : chaque compétence du Bloc 2 et de la PSE avec son meilleur niveau et le détail par mission ; version à imprimer ou enregistrer en PDF (critères officiels évalués, nom, classe, commentaires de l'élève et de l'enseignant). 2 tests, vérifié sur téléphone et en PDF.
+- **À surveiller** : le bilan dépend de l'appareil (ou du code de reprise) : il ne réunit pas plusieurs appareils.
+- **Prochaine tâche** : 5.1f (PSE S1).

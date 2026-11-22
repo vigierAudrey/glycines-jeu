@@ -72,6 +72,7 @@ const missions = monterMissions(racineInterface, theatre, contenu, {
   avecBrouillons: import.meta.env.DEV || new URLSearchParams(location.search).has('brouillons'),
   niveauxObtenus: progression.niveauxObtenus,
   prendreRappels: progression.prendreRappels,
+  progression: progression.progression,
   modeClasse,
   basDeListe: () => progression.blocCode(() => missions.ouvrirListe()),
   allerVersZone: (idZone) => {

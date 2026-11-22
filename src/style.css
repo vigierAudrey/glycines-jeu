@@ -427,6 +427,8 @@ html, body {
   .fiche-impression th, .fiche-impression td { border: 1px solid #999; padding: 4px; text-align: left; vertical-align: top; }
   .fiche-impression li { break-inside: avoid; margin-bottom: 4px; }
   .fiche__ligne { display: block; height: 22px; border-bottom: 1px dotted #777; }
+  .fiche-impression td ul { margin: 0; padding-left: 16px; }
+  .fiche-impression tr { break-inside: avoid; }
 }
 
 /* Auto-positionnement (P.13) */
@@ -467,3 +469,11 @@ html, body {
 .carte-matiere:hover, .carte-matiere:focus-visible { border-color: #6a4c93; }
 .carte-matiere:disabled { opacity: .5; cursor: default; }
 .carte-matiere__nombre { font-size: .85rem; opacity: .8; }
+
+/* Mon bilan : toutes les compétences */
+.bouton-bilan { display: block; width: 100%; min-height: 44px; margin: 8px 0; }
+.bilan { list-style: none; padding: 0; margin: 0 0 8px; }
+.bilan__ligne { display: flex; gap: 10px; align-items: flex-start; padding: 6px 0; border-bottom: 1px solid #eee8f3; }
+.bilan__ligne .badge, .bilan__vide { flex: 0 0 auto; min-width: 64px; text-align: center; }
+.bilan__vide { font-size: .8rem; opacity: .6; padding-top: 2px; }
+.bilan__detail { display: block; font-size: .85rem; opacity: .8; margin-top: 2px; }
