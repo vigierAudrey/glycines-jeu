@@ -214,3 +214,9 @@ Trois lignes par session : ce qui a été fait, ce qui reste à surveiller, la p
 - **Fait** : deux nouveaux types d'étapes, `ordre` (toucher les étapes dans l'ordre, chacune numérotée ; « Recommencer » ; l'ordre attendu est montré en cas d'erreur) et `selection` (cocher ce qu'on prend, laisser le reste ; prévu aussi pour les stocks avec `stock` et `seuil`). Nouvelle mission brouillon `m21-karim-entretien-methode` (S3, C2.2.1 « Choix du matériel et des produits adaptés et utilisation correcte. ») d'après votre fiche protocole S3-07 : 9 objets pour le chariot (dont 3 pièges tirés des vigilances : flacon transvasé sans étiquette, mélange de produits, parfum pour masquer) et les 14 étapes regroupées en 8. `pnpm verifier` OK (103 tests).
 - **À surveiller** : m21 à relire (surtout le regroupement des 14 étapes en 8). Navigateur indisponible ici.
 - **Prochaine tâche** : P.6 (Réserve et stocks).
+
+## 22/11/2026 · Réserve et seuil d'alerte (tâche P.6)
+
+- **Fait** : nouvelle mission brouillon `m22-reserve-seuil-alerte` (S2, CT3.3 et CT3.1), fidèle à votre séance S2-10 : l'élève lit l'état de la réserve (quantité et seuil affichés à côté de chaque article), coche les gants M et les protections de nuit, trace dans le cahier de suivi, remplit la fiche d'alerte avant le week-end et fait avec ce qui reste sans remplacer un produit. Utilise l'activité `selection` de P.5 (aucun code nouveau). `pnpm verifier` OK (104 tests).
+- **À surveiller** : pas d'étape relais, car aucun personnage n'est « chargé des stocks » dans le jeu (à décider par Audrey).
+- **Prochaine tâche** : P.7 (Relève du matin).

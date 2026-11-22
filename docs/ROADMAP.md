@@ -85,7 +85,8 @@ Règle commune : toute nouvelle activité s'appuie sur une situation réelle des
 - [x] **P.3** **Transmission** : l'élève trie des phrases en « fait observé », « jugement » ou « interprétation », puis garde seulement ce qui doit être transmis (C2.1.6, CT3.4). Ajoutée dans une ou deux missions qui s'y prêtent (rougeur de Mme Rose, confusion soudaine…).
 - [x] **P.4** **Protocole** : remettre les étapes dans l'ordre (C2.1.1, C2.2.1). Le jeu prépare le TP, il ne le remplace pas.
 - [x] **P.5** **Matériel et produits** : choisir ce qu'il faut (et écarter ce qui ne convient pas) avant un soin ou un entretien.
-- [ ] **P.6** **Réserve et stocks** : comparer stock et seuil, cocher ce qu'il faut signaler sur la fiche d'alerte (CT3.3).
+- [x] **P.6** **Réserve et stocks** : comparer stock et seuil, cocher ce qu'il faut signaler sur la fiche d'alerte (CT3.3).
+  Fait : `m22`. 🧑‍🏫 Audrey dit qui est « chargé des stocks » aux Glycines si elle veut une étape relais.
 - [ ] **P.7** **Relève du matin** : lire de courtes transmissions de la nuit (document affiché dans l'étape), puis choisir par quoi commencer (CT3.1). Une nouvelle mission d'après les cours.
 - [ ] **P.8** **Personnaliser une chambre** : placer les objets du résident selon ses souhaits (C2.2.2, C2.1.2).
 - [ ] **P.9** **Secret professionnel** : une mission où un proche ou un autre résident pose une question ; l'élève choisit de taire, transmettre ou alerter (CT3.4), d'après une séance réelle.

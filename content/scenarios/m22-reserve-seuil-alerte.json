@@ -1,0 +1,68 @@
+{
+  "id": "m22-reserve-seuil-alerte",
+  "statut": "brouillon",
+  "titre": "Vendredi matin à la réserve",
+  "duree_min": 10,
+  "sequence_requise": "S2",
+  "lieu": "reserve",
+  "personnages": ["joueur"],
+  "competences": [
+    { "code": "CT3.3", "critere": "Prise en compte du contexte de l’activité." },
+    { "code": "CT3.1", "critere": "Identification des ressources et des contraintes du cadre de l’intervention, dont celles relatives aux risques professionnels." }
+  ],
+  "situation": "Vendredi matin aux Glycines. Mme Denise utilise des protections chaque nuit, M. Karim des lingettes et un savon sans rinçage. Dans la réserve, le cahier de suivi n'a pas été rempli depuis mardi. Il n'y a pas de livraison le week-end.",
+  "objectif_eleve": "Comparer le stock au seuil d'alerte, repérer ce qu'il faut signaler avant le week-end, puis alerter avec une information précise et datée.",
+  "note_pour_audrey": "Brouillon écrit pour la tâche P.6, d'après votre séance S2-10 (« Stocks, matériels et produits : besoins, seuil d'alerte et relais ») : état de la réserve de l'activité 2 (gants M 1 boîte, seuil 3 ; protections nuit 2 paquets, seuil 5 ; lavettes 12, seuil 10 ; savon sans rinçage 4 flacons, seuil 2), cahier non rempli depuis mardi, attendus de l'activité 3. Compétences de la séance (CT3.3 principale, CT3.1 en appui). Pas d'étape « relais » : aucun personnage du jeu n'est « chargé des stocks » ; si vous voulez qu'on aille le trouver dans l'aile, dites qui c'est aux Glycines (cadre de santé ?) et on l'ajoutera. À relire avant de passer le statut à valide.",
+  "etapes": [
+    {
+      "id": "etat-du-stock",
+      "type": "selection",
+      "consigne": "Vous lisez l'état de la réserve avant le week-end.",
+      "question": "Cochez les articles à signaler sur la fiche d'alerte.",
+      "elements": [
+        { "id": "gants-m", "texte": "Gants taille M (boîtes)", "stock": 1, "seuil": 3, "attendu": true, "points": { "CT3.3": 1 }, "retour": "1 boîte pour un seuil de 3 : l'article est sous le seuil, on le signale." },
+        { "id": "protections-nuit", "texte": "Protections de nuit (paquets)", "stock": 2, "seuil": 5, "attendu": true, "points": { "CT3.3": 1 }, "retour": "2 paquets pour un seuil de 5, et Mme Denise en utilise chaque nuit : on le signale." },
+        { "id": "lavettes", "texte": "Lavettes", "stock": 12, "seuil": 10, "attendu": false, "points": { "CT3.3": 1 }, "retour": "12 pour un seuil de 10 : au-dessus du seuil, pas d'alerte." },
+        { "id": "savon", "texte": "Savon sans rinçage (flacons)", "stock": 4, "seuil": 2, "attendu": false, "points": { "CT3.3": 1 }, "retour": "4 flacons pour un seuil de 2 : au-dessus du seuil, pas d'alerte." }
+      ]
+    },
+    {
+      "id": "cahier-de-suivi",
+      "type": "decision",
+      "consigne": "Le cahier de suivi de la réserve n'a pas été rempli depuis mardi.",
+      "question": "Que faites-vous ?",
+      "choix": [
+        { "decision": "agir", "texte": "Je trace ce que je prends dans le cahier de suivi, et je signale qu'il n'était plus rempli depuis mardi.", "points": { "CT3.3": 2 }, "retour": "Sans trace de la consommation, l'état réel du stock n'est pas connu." },
+        { "decision": "adapter", "texte": "Je ne note rien : de toute façon, personne ne le remplit.", "retour": "Si personne ne trace, le stock réel n'est connu de personne, et la rupture arrive sans prévenir." },
+        { "decision": "agir", "texte": "Je remplis le cahier de mardi à aujourd'hui en devinant ce qui a été pris.", "retour": "Une trace doit être exacte : on ne devine pas une consommation qu'on n'a pas vue." }
+      ]
+    },
+    {
+      "id": "fiche-alerte",
+      "type": "decision",
+      "consigne": "Les gants M et les protections de nuit sont sous le seuil d'alerte.",
+      "question": "Comment alertez-vous ?",
+      "choix": [
+        { "decision": "alerter", "texte": "Je remplis la fiche d'alerte (article, quantité restante, seuil, date, besoin prévu pour le week-end) et je l'adresse au professionnel chargé des stocks.", "points": { "CT3.1": 2, "CT3.3": 1 }, "retour": "Une alerte précise, datée, adressée au bon relais, qui tient compte du week-end sans livraison." },
+        { "decision": "alerter", "texte": "Je dis à une collègue, en passant, qu'il n'y a plus beaucoup de gants.", "retour": "Une information orale et vague peut se perdre : la fiche d'alerte est écrite, datée et adressée au bon professionnel." },
+        { "decision": "adapter", "texte": "J'attends lundi : il en reste encore un peu.", "retour": "Il n'y a pas de livraison le week-end : c'est avant qu'il faut signaler." }
+      ]
+    },
+    {
+      "id": "en-attendant",
+      "type": "decision",
+      "consigne": "La livraison n'arrivera pas avant lundi.",
+      "question": "Que faites-vous en attendant ?",
+      "choix": [
+        { "decision": "adapter", "texte": "J'utilise ce qui reste sans gaspiller, sans le remplacer par un produit non prévu, et j'informe l'équipe.", "points": { "CT3.1": 2 }, "retour": "Vous faites avec les ressources disponibles, sans sortir de la consigne reçue." },
+        { "decision": "agir", "texte": "Je prends des gants d'une autre taille ou un autre produit, pour ne pas manquer.", "retour": "On ne remplace jamais un produit prévu par un autre de sa propre initiative : on applique la consigne et on alerte." },
+        { "decision": "agir", "texte": "Je garde la dernière boîte de gants dans mon chariot, pour être sûr d'en avoir.", "retour": "Le stock sert à toute l'équipe : on informe plutôt que de garder pour soi." }
+      ]
+    }
+  ],
+  "debriefing": [
+    "Comment avez-vous su quels articles signaler ?",
+    "Pourquoi fallait-il alerter avant le week-end ?",
+    "Pourquoi le cahier de suivi est-il important pour toute l'équipe ?"
+  ]
+}
