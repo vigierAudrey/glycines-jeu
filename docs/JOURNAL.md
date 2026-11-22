@@ -370,3 +370,9 @@ Trois lignes par session : ce qui a été fait, ce qui reste à surveiller, la p
 - **Fait** : `pse.json` contient maintenant les modules travaillés par les séquences de PSE d'Audrey : A2 (sommeil), A7 (alimentation), C1 (contrats), C2 (santé et sécurité au travail), C4 à C7, D1 (assurance), D2 (budget), D3 (achats). Objectifs vérifiés mot pour mot contre le programme.
 - **À surveiller** : rien.
 - **Prochaine tâche** : missions d'après PSE S1, S5, S6.
+
+## 22/11/2026 · PSE : contrats, droits et obligations (tâche 5.1f)
+
+- **Fait** : `m34` (CDI, CDD ou apprentissage : 6 extraits et situations, ce qu'on lit avant de signer, S1-01) et `m35` (extrait de contrat, 9 cartes droits et obligations, conseil à une nouvelle collègue, S1-02).
+- **À surveiller** : Lina du cours devient « une nouvelle collègue ».
+- **Prochaine tâche** : 5.1g (PSE S5 : sommeil et alimentation).

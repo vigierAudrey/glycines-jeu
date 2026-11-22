@@ -126,7 +126,8 @@ Règle commune : toute nouvelle activité s'appuie sur une situation réelle des
     Fait : `m30` (dalle descellée, acteurs internes, S4-01), `m31` (trois courriers, acteurs extérieurs, S4-02), `m32` (vaccination contre la grippe, S4-04).
   - [x] **5.1e** Mission PSE « visites médicales » (C7) d'après PSE S4-03.
     Fait : `m33`.
-  - [ ] **5.1f** PSE S1 (contrats, droits et obligations) : ajouter les modules C1 et C2 à `pse.json`, puis une mission.
+  - [x] **5.1f** PSE S1 (contrats, droits et obligations) : ajouter les modules C1 et C2 à `pse.json`, puis une mission.
+    Fait : modules A2, A7, C1, C2, D1 à D3 ajoutés ; `m34` (quel contrat, S1-01), `m35` (droits et obligations, S1-02).
   - [ ] **5.1g** PSE S5 (sommeil et alimentation avec des horaires décalés) : ajouter les modules A2 et A7 à `pse.json`, puis des missions.
   - [ ] **5.1h** PSE S6 (budget, assurance, achats, étiquettes) : ajouter les modules de la thématique D utiles, puis des missions.
 - [ ] **5.2** Bloc 1 : cuisine, lingerie, entretien des espaces collectifs.

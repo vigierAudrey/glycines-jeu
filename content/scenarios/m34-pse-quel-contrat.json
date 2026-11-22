@@ -1,0 +1,185 @@
+{
+  "id": "m34-pse-quel-contrat",
+  "statut": "brouillon",
+  "discipline": "PSE",
+  "titre": "Quel contrat me propose-t-on ?",
+  "duree_min": 10,
+  "sequence_requise": "S1",
+  "lieu": "poste-de-soins",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "PSE-C1",
+      "critere": "Identifier les spécificités des différents contrats de travail."
+    }
+  ],
+  "situation": "Vous venez d'arriver aux Glycines comme jeune salarié(e). La directrice vous montre plusieurs extraits de contrats. Elle parle de CDI, de CDD et de contrat d'apprentissage. Vous devez comprendre les différences avant de signer.",
+  "objectif_eleve": "Reconnaître un CDI, un CDD et un contrat d'apprentissage, et savoir ce qu'il faut lire avant de signer.",
+  "note_pour_audrey": "Brouillon écrit pour la tâche 5.1f, d'après votre séance PSE S1-01 (« Contrats de travail ») : situation, extraits A, B, C, tableau comparatif et situations de l'activité 3, « Je retiens » (repris tels quels). Critère : objectif ciblé du module C1, mot pour mot. À relire avant de passer le statut à valide.",
+  "etapes": [
+    {
+      "id": "trois-contrats",
+      "type": "tri",
+      "consigne": "Associez chaque extrait ou situation au bon contrat.",
+      "categories": [
+        {
+          "id": "cdi",
+          "libelle": "CDI",
+          "aide": "pas de date de fin prévue"
+        },
+        {
+          "id": "cdd",
+          "libelle": "CDD",
+          "aide": "date de début et date de fin"
+        },
+        {
+          "id": "apprentissage",
+          "libelle": "Apprentissage",
+          "aide": "travail + formation"
+        }
+      ],
+      "elements": [
+        {
+          "id": "le-contrat-est-conclu-sans-d",
+          "texte": "« Le contrat est conclu sans date de fin. Le salarié occupe le poste d'agent accompagnant. »",
+          "categorie": "cdi",
+          "points": {
+            "PSE-C1": 1
+          },
+          "retour": "Pas de date de fin prévue : c'est un CDI, un contrat durable."
+        },
+        {
+          "id": "le-contrat-est-conclu-du-4-s",
+          "texte": "« Le contrat est conclu du 4 septembre au 20 octobre pour remplacer un salarié absent. »",
+          "categorie": "cdd",
+          "points": {
+            "PSE-C1": 1
+          },
+          "retour": "Une date de fin ou une mission précise : c'est un CDD, un contrat temporaire."
+        },
+        {
+          "id": "le-jeune-salarie-alterne-des",
+          "texte": "« Le jeune salarié alterne des périodes en centre de formation et aux Glycines. Il prépare un diplôme. »",
+          "categorie": "apprentissage",
+          "points": {
+            "PSE-C1": 1
+          },
+          "retour": "Travail et formation en alternance pour préparer un diplôme : c'est un contrat d'apprentissage."
+        },
+        {
+          "id": "les-glycines-embauchent-dura",
+          "texte": "Les Glycines embauchent durablement un agent accompagnant.",
+          "categorie": "cdi",
+          "points": {
+            "PSE-C1": 1
+          },
+          "retour": "Pas de date de fin prévue : c'est un CDI, un contrat durable."
+        },
+        {
+          "id": "les-glycines-cherchent-une-p",
+          "texte": "Les Glycines cherchent une personne pour remplacer une agente absente 3 semaines.",
+          "categorie": "cdd",
+          "points": {
+            "PSE-C1": 1
+          },
+          "retour": "Une date de fin ou une mission précise : c'est un CDD, un contrat temporaire."
+        },
+        {
+          "id": "une-jeune-personne-prepare-u",
+          "texte": "Une jeune personne prépare un diplôme et travaille aux Glycines.",
+          "categorie": "apprentissage",
+          "points": {
+            "PSE-C1": 1
+          },
+          "retour": "Travail et formation en alternance pour préparer un diplôme : c'est un contrat d'apprentissage."
+        }
+      ]
+    },
+    {
+      "id": "avant-de-signer",
+      "type": "selection",
+      "consigne": "La directrice vous tend le contrat.",
+      "question": "Cochez ce que vous repérez avant de signer.",
+      "elements": [
+        {
+          "id": "duree",
+          "texte": "La durée",
+          "attendu": true,
+          "points": {
+            "PSE-C1": 1
+          },
+          "retour": "La durée dit si le contrat est durable ou temporaire."
+        },
+        {
+          "id": "poste",
+          "texte": "Le poste",
+          "attendu": true,
+          "points": {
+            "PSE-C1": 1
+          },
+          "retour": "Le poste dit ce que vous allez faire."
+        },
+        {
+          "id": "lieu",
+          "texte": "Le lieu de travail",
+          "attendu": true,
+          "points": {
+            "PSE-C1": 1
+          },
+          "retour": "Le lieu de travail fait partie des informations importantes."
+        },
+        {
+          "id": "type",
+          "texte": "Le type de contrat",
+          "attendu": true,
+          "points": {
+            "PSE-C1": 1
+          },
+          "retour": "CDI, CDD ou apprentissage : vous savez ce que vous signez."
+        },
+        {
+          "id": "rien",
+          "texte": "Rien : je signe vite pour ne pas faire attendre",
+          "attendu": false,
+          "points": {
+            "PSE-C1": 1
+          },
+          "retour": "Avant de signer, je dois lire les informations importantes."
+        }
+      ]
+    },
+    {
+      "id": "amie",
+      "type": "decision",
+      "consigne": "Une amie vous dit : « Un CDD ou un CDI, c'est pareil. »",
+      "question": "Que lui répondez-vous ?",
+      "choix": [
+        {
+          "decision": "adapter",
+          "texte": "Non : le CDI n'a pas de date de fin prévue, le CDD a une date de fin ou une mission précise.",
+          "points": {
+            "PSE-C1": 2
+          },
+          "retour": "Durable ou temporaire : c'est la différence principale."
+        },
+        {
+          "decision": "agir",
+          "texte": "Oui, c'est pareil, seul le nom change.",
+          "retour": "Ce n'est pas pareil : la durée change tout."
+        },
+        {
+          "decision": "agir",
+          "texte": "Le CDD, c'est pour les apprentis.",
+          "retour": "Non : l'apprentissage est un contrat à part, qui associe travail et formation."
+        }
+      ]
+    }
+  ],
+  "debriefing": [
+    "Quelle différence entre un CDI et un CDD ?",
+    "Qu'est-ce qui caractérise le contrat d'apprentissage ?",
+    "Que lisez-vous avant de signer un contrat ?"
+  ]
+}

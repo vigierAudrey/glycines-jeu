@@ -1,0 +1,165 @@
+{
+  "id": "m35-pse-droits-obligations",
+  "statut": "brouillon",
+  "discipline": "PSE",
+  "titre": "Mes droits, mes obligations",
+  "duree_min": 10,
+  "sequence_requise": "S1",
+  "lieu": "poste-de-soins",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "PSE-C1",
+      "critere": "Identifier droit et obligation dans un contrat de travail."
+    }
+  ],
+  "situation": "Vous allez commencer aux Glycines. La directrice vous remet un extrait de contrat. Vous voyez des informations sur vos horaires, votre poste et vos missions, et des règles à respecter. Vous devez comprendre ce que vous pouvez demander et ce que vous devez respecter.",
+  "objectif_eleve": "Repérer dans un contrat les droits du salarié, ses obligations et celles de l'employeur, puis conseiller une collègue.",
+  "note_pour_audrey": "Brouillon écrit pour la tâche 5.1f, d'après votre séance PSE S1-02 (« Droits et obligations ») : extrait de contrat, 9 cartes à classer, situation de Lina (devenue « une nouvelle collègue ») et réponse attendue, repris tels quels. Critère : objectif ciblé du module C1, mot pour mot. À relire avant de passer le statut à valide.",
+  "etapes": [
+    {
+      "id": "classer",
+      "type": "tri",
+      "consigne": "Classez chaque carte.",
+      "categories": [
+        {
+          "id": "droit",
+          "libelle": "Droit du salarié"
+        },
+        {
+          "id": "oblig-sal",
+          "libelle": "Obligation du salarié"
+        },
+        {
+          "id": "oblig-emp",
+          "libelle": "Obligation de l'employeur"
+        }
+      ],
+      "elements": [
+        {
+          "id": "recevoir-les-informations-ut",
+          "texte": "Recevoir les informations utiles",
+          "categorie": "droit",
+          "points": {
+            "PSE-C1": 1
+          },
+          "retour": "Un droit est ce que je peux demander ou recevoir."
+        },
+        {
+          "id": "etre-informe-des-regles",
+          "texte": "Être informé des règles",
+          "categorie": "droit",
+          "points": {
+            "PSE-C1": 1
+          },
+          "retour": "Un droit est ce que je peux demander ou recevoir."
+        },
+        {
+          "id": "etre-respecte",
+          "texte": "Être respecté",
+          "categorie": "droit",
+          "points": {
+            "PSE-C1": 1
+          },
+          "retour": "Un droit est ce que je peux demander ou recevoir."
+        },
+        {
+          "id": "respecter-les-horaires",
+          "texte": "Respecter les horaires",
+          "categorie": "oblig-sal",
+          "points": {
+            "PSE-C1": 1
+          },
+          "retour": "Une obligation est ce que je dois respecter."
+        },
+        {
+          "id": "respecter-les-consignes-de-s",
+          "texte": "Respecter les consignes de sécurité",
+          "categorie": "oblig-sal",
+          "points": {
+            "PSE-C1": 1
+          },
+          "retour": "Une obligation est ce que je dois respecter."
+        },
+        {
+          "id": "respecter-la-confidentialite",
+          "texte": "Respecter la confidentialité",
+          "categorie": "oblig-sal",
+          "points": {
+            "PSE-C1": 1
+          },
+          "retour": "Une obligation est ce que je dois respecter."
+        },
+        {
+          "id": "respecter-le-contrat",
+          "texte": "Respecter le contrat",
+          "categorie": "oblig-emp",
+          "points": {
+            "PSE-C1": 1
+          },
+          "retour": "L'employeur doit respecter le contrat et donner les informations utiles."
+        },
+        {
+          "id": "donner-les-moyens-de-travail",
+          "texte": "Donner les moyens de travailler",
+          "categorie": "oblig-emp",
+          "points": {
+            "PSE-C1": 1
+          },
+          "retour": "L'employeur doit respecter le contrat et donner les informations utiles."
+        },
+        {
+          "id": "informer-sur-le-poste",
+          "texte": "Informer sur le poste",
+          "categorie": "oblig-emp",
+          "points": {
+            "PSE-C1": 1
+          },
+          "retour": "L'employeur doit respecter le contrat et donner les informations utiles."
+        }
+      ],
+      "document": {
+        "titre": "Extrait de contrat · Les Glycines",
+        "lignes": [
+          "Poste : agent accompagnant. Lieu : EHPAD Les Glycines. Horaires : selon planning.",
+          "Le salarié respecte le règlement intérieur, les consignes d'hygiène et de sécurité, les horaires et la confidentialité.",
+          "L'employeur fournit les informations nécessaires au poste et respecte le contrat."
+        ]
+      }
+    },
+    {
+      "id": "conseiller",
+      "type": "decision",
+      "consigne": "Une nouvelle collègue ne comprend pas son planning. Elle hésite à arriver plus tard sans prévenir. Elle vous demande conseil.",
+      "question": "Que lui conseillez-vous ?",
+      "choix": [
+        {
+          "decision": "adapter",
+          "texte": "Demande une explication du planning à une personne responsable. Respecte les horaires : n'arrive pas plus tard sans prévenir.",
+          "points": {
+            "PSE-C1": 2
+          },
+          "retour": "Recevoir les informations utiles est un droit ; respecter les horaires est une obligation."
+        },
+        {
+          "decision": "agir",
+          "texte": "Arrive plus tard, personne ne le verra.",
+          "retour": "Respecter les horaires est une obligation du salarié."
+        },
+        {
+          "decision": "adapter",
+          "texte": "Ne demande rien, tu finiras par comprendre.",
+          "retour": "Recevoir les informations utiles est un droit : si je ne comprends pas, je demande à une personne responsable."
+        }
+      ],
+      "si_oubli": "Si je ne comprends pas mon planning, je demande à une personne responsable ; je respecte les horaires et je préviens si j'ai un empêchement."
+    }
+  ],
+  "debriefing": [
+    "Donnez un droit et une obligation du salarié.",
+    "Que doit faire l'employeur ?",
+    "Pourquoi la confidentialité fait-elle partie de vos obligations en EHPAD ?"
+  ]
+}
