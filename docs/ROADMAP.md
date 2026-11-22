@@ -97,7 +97,8 @@ Règle commune : toute nouvelle activité s'appuie sur une situation réelle des
 ### Rejouer et relier les missions
 
 - [x] **P.10** Ordre des réponses mélangé à chaque partie, pour qu'on ne retienne pas « c'est toujours la deuxième ».
-- [ ] **P.11** Variantes d'une même mission (moment de la journée, humeur du résident) tirées au hasard, écrites d'après les cours.
+- [x] **P.11** Variantes d'une même mission (moment de la journée, humeur du résident) tirées au hasard, écrites d'après les cours.
+  Fait : champ `variantes` (contexte seulement, mêmes réponses) ; première variante sur `m09` (chambre peu éclairée, d'après S5-03). Les cours ne donnent pas d'autres contextes : on en ajoutera au fil des nouvelles séances.
 - [ ] **P.12** Conséquences plus tard : un oubli dans une mission (tapis non signalé…) réapparaît au début d'une mission suivante, gardé dans le navigateur seulement.
 
 ### Garder une trace, sans collecter de données

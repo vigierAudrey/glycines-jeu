@@ -62,6 +62,8 @@ function missionEnHtml(m: Mission): string {
         <p class="meta">${echapper(m.id)} · séquence ${echapper(m.sequence_requise)} · ${m.duree_min} min · ${echapper(lieux.get(m.lieu) ?? m.lieu)}${m.transfert ? ' · situation de transfert (N4 possible)' : ''}</p>
       </header>
       <p><strong>Situation :</strong> ${echapper(m.situation)}</p>
+      ${m.variantes?.length ? `<p><strong>Variantes tirées au hasard</strong> (mêmes réponses attendues) :</p>
+      <ul>${m.variantes.map((v) => `<li><strong>${echapper(v.libelle)}</strong> : ${echapper(v.situation)}</li>`).join('')}</ul>` : ''}
       <p><strong>Objectif de l'élève :</strong> ${echapper(m.objectif_eleve)}</p>
       <h4>Compétences et critères (référentiel)</h4>
       <ul>${m.competences.map((c) => `<li><strong>${echapper(c.code)}</strong> ${echapper(c.critere)} <span class="points">(${max[c.code] ?? 0} points au maximum)</span></li>`).join('')}</ul>

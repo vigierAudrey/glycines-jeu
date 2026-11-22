@@ -102,6 +102,7 @@ export function validerContenu(contenu: Contenu): Probleme[] {
       }
     }
     validerEtapes(m, contenu, (message) => signaler(f, message));
+    validerVariantes(m, (message) => signaler(f, message));
   }
 
   // ---------- Style : pas de tiret cadratin dans les textes montrés aux élèves ----------
@@ -166,6 +167,25 @@ function zonesDesCases(contenu: Contenu): Map<string, string> {
     }));
   }
   return zones;
+}
+
+/** Règles des variantes : identifiant unique, libellé et situation écrits, consignes rattachées à des étapes existantes. */
+function validerVariantes(m: Mission, signaler: (message: string) => void): void {
+  if (m.variantes === undefined) return;
+  if (!Array.isArray(m.variantes) || m.variantes.length === 0) return signaler('« variantes » doit être une liste non vide.');
+  const etapes = new Set((m.etapes ?? []).map((e) => e.id));
+  const vues = new Set<string>();
+  for (const v of m.variantes) {
+    const ou = `Variante « ${v.id} »`;
+    if (!v.id || vues.has(v.id)) signaler(`${ou} : identifiant manquant ou en double.`);
+    vues.add(v.id);
+    if (!v.libelle?.trim()) signaler(`${ou} : libellé manquant.`);
+    if (!v.situation?.trim()) signaler(`${ou} : situation manquante.`);
+    for (const [id, texte] of Object.entries(v.consignes ?? {})) {
+      if (!etapes.has(id)) signaler(`${ou} : consigne pour l'étape inconnue « ${id} ».`);
+      if (!texte?.trim()) signaler(`${ou} : consigne vide pour l'étape « ${id} ».`);
+    }
+  }
 }
 
 /**

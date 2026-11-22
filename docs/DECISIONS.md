@@ -176,3 +176,9 @@ On ne redessine que si la vue change (batterie des téléphones). Les étiquette
 - **Décision** : à la demande d'Audrey d'aller plus loin, chaque personnage à l'arrêt cligne maintenant des yeux de temps en temps (yeux aplatis un huitième de seconde) et tourne parfois la tête un instant vers un angle tiré au hasard avant de revenir, chacun avec son propre minuteur aléatoire (`poserRespiration` dans `src/scene3d/personnages.ts`).
 - **Pourquoi** : même idée que D-029 (rester vivant sans redessiner en continu à pleine cadence) : ces deux animations tournent dans la même boucle à 10 images par seconde, sans coût supplémentaire de boucle.
 - **Comment** : chaque figurine porte ses propres comptes à rebours (`minuteurClignement`, `minuteurRegard`) et son état en cours (`finClignement`, `regardProgres`), mis à jour à chaque passage de la boucle à partir du temps écoulé ; rien n'est planifié par `setTimeout`, tout reste dans la même fonction appelée à cadence réduite.
+
+## D-031 · Une variante change le contexte, jamais les réponses · 22/11/2026
+
+- **Décision** : une mission peut avoir des `variantes` (situation et consignes d'étapes réécrites). Au lancement, la version de base ou une variante est tirée au hasard. Les choix, les retours et les points restent ceux de la mission de base.
+- **Pourquoi** : rejouer une mission sans pouvoir réciter le texte, sans multiplier les corrections à valider et sans risque d'inventer un savoir. Le contexte doit venir des cours (pas d'humeur de résident inventée).
+- **Comment** : `src/regles/variantes.ts` (`tirerVariante`, `appliquerVariante`), règles dans `src/contenu/valider.ts`, liste sur la page enseignante. Première variante : `m09` (chambre peu éclairée, S5-03).

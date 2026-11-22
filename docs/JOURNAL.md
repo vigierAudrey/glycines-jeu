@@ -244,3 +244,9 @@ Trois lignes par session : ce qui a été fait, ce qui reste à surveiller, la p
 - **Fait** : les choix des décisions, les répliques des dialogues, les phrases de transmission et les éléments à cocher ou à trier sont montrés dans un ordre tiré au hasard, le même pendant toute la partie, nouveau à chaque partie. Le moteur et les points ne changent pas (indices d'origine). Les catégories du tri gardent leur ordre logique. `pnpm verifier` OK.
 - **À surveiller** : aucun texte de mission ne doit dire « la réponse ci-dessus » (vérifié : aucun).
 - **Prochaine tâche** : P.11 (variantes d'une mission).
+
+## 22/11/2026 · Variantes d'une mission (tâche P.11)
+
+- **Fait** : une mission peut avoir des variantes de contexte tirées au hasard (D-031). Première variante sur `m09` : la chambre de Mme Rose est peu éclairée (d'après S5-03 : « bruit, éclairage », « visage visible »). Page enseignante : variantes listées. 4 tests ajoutés, `pnpm verifier` OK (111 tests).
+- **À surveiller** : les cours donnent rarement plusieurs contextes pour une même situation ; pas d'humeur de résident inventée.
+- **Prochaine tâche** : P.12 (conséquences plus tard).

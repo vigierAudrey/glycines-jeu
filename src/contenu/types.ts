@@ -249,6 +249,17 @@ export interface EtapeTri extends EtapeCommune {
 
 export type Etape = EtapeDialogue | EtapeObservation | EtapeDecision | EtapeRelais | EtapeTransmission | EtapeOrdre | EtapeSelection | EtapeTri;
 
+/**
+ * Variante d'une mission (P.11) : la même mission racontée dans un autre contexte (bruit, éclairage, moment…).
+ * Seuls les textes de contexte changent (situation, consignes d'étapes) : les réponses et les points restent les mêmes.
+ */
+export interface VarianteMission {
+  id: string;
+  libelle: string; // court, pour la page enseignante (ex. « chambre peu éclairée »)
+  situation: string;
+  consignes?: Record<string, string>; // id d'étape → nouvelle consigne
+}
+
 export interface Mission {
   id: string;
   statut: 'brouillon' | 'valide';
@@ -263,6 +274,7 @@ export interface Mission {
   transfert?: boolean; // vrai si la mission est une situation nouvelle : seul cas où le niveau N4 est possible
   confiance_depart?: number; // de 0 à 10, 5 par défaut
   etapes: Etape[];
+  variantes?: VarianteMission[]; // autres contextes possibles, tirés au hasard avec la version de base
   debriefing: string[]; // 2 ou 3 questions pour la relève de fin de mission
   [autre: string]: unknown; // champs libres (notes pour l'enseignante…)
 }

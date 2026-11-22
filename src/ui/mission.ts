@@ -11,6 +11,7 @@ import { bilan, demarrerMission, etapeEnCours, repondre, type Bilan, type EtatMi
 import { estDebloquee, missionsAMontrer, SEQUENCES } from '../regles/deblocage';
 import type { Theatre } from '../scene3d/creerScene';
 import { melanger, melangerSansOrdreDeDepart } from '../regles/hasard';
+import { tirerVariante } from '../regles/variantes';
 import { echapper } from './echapper';
 
 /** Ce que l'interface des missions demande au reste du jeu (main.ts fait le lien avec la 3D). */
@@ -349,8 +350,8 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
   };
 
   const commencer = (m: Mission) => {
-    mission = m;
-    etat = demarrerMission(m);
+    mission = tirerVariante(m); // P.11 : version de base ou variante de contexte, tirée au hasard
+    etat = demarrerMission(mission);
     phase = 'intro';
     ordresTires.clear();
     dialogue = {};
