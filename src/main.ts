@@ -68,6 +68,7 @@ const missions = monterMissions(racineInterface, theatre, contenu, {
   // Les brouillons ne sont visibles qu'en développement (pnpm dev) ou avec ?brouillons dans l'adresse.
   avecBrouillons: import.meta.env.DEV || new URLSearchParams(location.search).has('brouillons'),
   niveauxObtenus: progression.niveauxObtenus,
+  prendreRappels: progression.prendreRappels,
   basDeListe: () => progression.blocCode(() => missions.ouvrirListe()),
   allerVersZone: (idZone) => {
     const zone = trouverZone(plan, idZone);

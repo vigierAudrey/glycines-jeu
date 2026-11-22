@@ -12,6 +12,7 @@ import { estDebloquee, missionsAMontrer, SEQUENCES } from '../regles/deblocage';
 import type { Theatre } from '../scene3d/creerScene';
 import { melanger, melangerSansOrdreDeDepart } from '../regles/hasard';
 import { tirerVariante } from '../regles/variantes';
+import type { Rappel } from '../regles/consequences';
 import { echapper } from './echapper';
 
 /** Ce que l'interface des missions demande au reste du jeu (main.ts fait le lien avec la 3D). */
@@ -32,6 +33,8 @@ export interface LiensMission {
   avecBrouillons: boolean;
   /** Niveaux déjà obtenus pour une mission, pour les afficher dans la liste. */
   niveauxObtenus?: (idMission: string) => string | undefined;
+  /** Rappels d'oublis d'autres missions, montrés au début de celle-ci (P.12). */
+  prendreRappels?: (idMission: string) => Rappel[];
 }
 
 export interface InterfaceMission {
@@ -82,6 +85,7 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
   let etat: EtatMission | null = null;
   // Phase d'affichage : l'intro, l'étape (l'élève répond) ou le retour (on lui explique sa réponse).
   let phase: 'intro' | 'etape' | 'retour' = 'intro';
+  let rappels: Rappel[] = []; // oublis d'autres missions, montrés à l'intro
   let retours: string[] = [];
   let reussi = false;
   let aRevoir: string[] = [];
@@ -252,6 +256,8 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
     if (phase === 'intro') {
       corps = `
         <h2 class="panneau__titre a-lire">${echapper(mission.titre)}</h2>
+        ${rappels.length ? `<div class="pourquoi"><p class="pourquoi__titre a-lire">📌 Depuis vos dernières missions :</p>
+          <ul>${rappels.map((r) => `<li class="a-lire"><strong>${echapper(r.titre)}</strong> : ${echapper(r.texte)}</li>`).join('')}</ul></div>` : ''}
         <p class="a-lire">${echapper(mission.situation)}</p>
         <p class="objectif a-lire"><strong>Votre objectif :</strong> ${echapper(mission.objectif_eleve)}</p>
         <button type="button" class="bouton bouton--principal" data-action="commencer">C'est parti</button>`;
@@ -351,6 +357,7 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
 
   const commencer = (m: Mission) => {
     mission = tirerVariante(m); // P.11 : version de base ou variante de contexte, tirée au hasard
+    rappels = liens.prendreRappels?.(m.id) ?? [];
     etat = demarrerMission(mission);
     phase = 'intro';
     ordresTires.clear();

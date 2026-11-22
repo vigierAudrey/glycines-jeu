@@ -99,7 +99,8 @@ Règle commune : toute nouvelle activité s'appuie sur une situation réelle des
 - [x] **P.10** Ordre des réponses mélangé à chaque partie, pour qu'on ne retienne pas « c'est toujours la deuxième ».
 - [x] **P.11** Variantes d'une même mission (moment de la journée, humeur du résident) tirées au hasard, écrites d'après les cours.
   Fait : champ `variantes` (contexte seulement, mêmes réponses) ; première variante sur `m09` (chambre peu éclairée, d'après S5-03). Les cours ne donnent pas d'autres contextes : on en ajoutera au fil des nouvelles séances.
-- [ ] **P.12** Conséquences plus tard : un oubli dans une mission (tapis non signalé…) réapparaît au début d'une mission suivante, gardé dans le navigateur seulement.
+- [x] **P.12** Conséquences plus tard : un oubli dans une mission (tapis non signalé…) réapparaît au début d'une mission suivante, gardé dans le navigateur seulement.
+  Fait : champ `si_oubli` sur une étape ; rappels sur `m00` (sol mouillé), `m10` (rougeur et appétit), `m19` (tapis relevé).
 
 ### Garder une trace, sans collecter de données
 

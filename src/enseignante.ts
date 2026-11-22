@@ -22,7 +22,7 @@ const pointsEnTexte = (p: Points = {}) => Object.entries(p).filter(([, n]) => n 
 const meilleure = <T extends Option>(options: T[]) => options.reduce((m, o) => (total(o.points) > total(m.points) ? o : m), options[0]);
 
 function etapeEnHtml(e: Etape, i: number): string {
-  const titre = `<h4>Étape ${i + 1} · ${echapper(e.consigne)}</h4>${e.document ? `<p><em>Document « ${echapper(e.document.titre)} » :</em> ${e.document.lignes.map(echapper).join(' · ')}</p>` : ''}`;
+  const titre = `<h4>Étape ${i + 1} · ${echapper(e.consigne)}</h4>${e.document ? `<p><em>Document « ${echapper(e.document.titre)} » :</em> ${e.document.lignes.map(echapper).join(' · ')}</p>` : ''}${e.si_oubli ? `<p><em>📌 Rappel si l'étape est manquée (montré au début d'une prochaine mission) :</em> ${echapper(e.si_oubli)}</p>` : ''}`;
   switch (e.type) {
     case 'dialogue':
       return `${titre}<p><em>Dialogue avec ${echapper(noms.get(e.interlocuteur) ?? e.interlocuteur)}.</em> Réponses attendues :</p>

@@ -26,6 +26,7 @@
     },
     {
       "id": "constat",
+      "si_oubli": "La rougeur au talon et la baisse d'appétit de M. André n'ont pas été transmises tout de suite. Une observation qui touche la santé se transmet sans attendre.",
       "type": "decision",
       "consigne": "Vous avez repéré une rougeur au talon et une baisse d'appétit qui durent depuis trois jours.",
       "question": "Que faites-vous ?",

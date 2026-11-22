@@ -214,6 +214,7 @@ function validerEtapes(m: Mission, contenu: Contenu, signaler: (message: string)
   for (const e of m.etapes) {
     const ou = `Étape « ${e.id} »`;
     if (ids.has(e.id)) signaler(`${ou} : identifiant utilisé deux fois.`);
+    if (e.si_oubli !== undefined && !(typeof e.si_oubli === 'string' && e.si_oubli.trim())) signaler(`${ou} : « si_oubli » doit être un texte non vide.`);
     if (e.document && !(e.document.titre && e.document.lignes?.length > 0)) signaler(`${ou} : le document doit avoir un titre et au moins une ligne.`);
     ids.add(e.id);
     switch (e.type) {

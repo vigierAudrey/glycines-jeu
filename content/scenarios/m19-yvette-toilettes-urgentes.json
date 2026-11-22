@@ -38,6 +38,7 @@
     },
     {
       "id": "tapis",
+      "si_oubli": "Le tapis relevé sur le trajet de Mme Yvette n'a pas été aplati ni signalé tout de suite. Vérifiez le trajet avant d'accompagner une personne.",
       "type": "decision",
       "consigne": "En l'accompagnant, un tapis relevé gêne le trajet vers la salle d'eau.",
       "question": "Que faites-vous ?",

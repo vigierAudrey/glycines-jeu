@@ -142,6 +142,8 @@ interface EtapeCommune {
   id: string;
   consigne: string; // phrase courte affichée en haut du panneau
   document?: DocumentEtape;
+  /** Rappel montré au début d'une prochaine mission si l'étape n'est pas réussie du premier coup (P.12). */
+  si_oubli?: string;
 }
 
 /** L'élève choisit sa phrase (verbal), son ton (paraverbal) et son attitude (non-verbal). */

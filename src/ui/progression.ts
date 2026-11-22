@@ -6,9 +6,11 @@ import type { Mission } from '../contenu/types';
 import type { Bilan } from '../regles/mission';
 import { lireSequence } from '../regles/deblocage';
 import { decoderCode, encoderCode, enregistrerBilan, type Progression } from '../regles/sauvegarde';
+import { rappelsAMontrer, rappelsApresMission, type Rappel } from '../regles/consequences';
 
 const CLE = 'glycines-progression-v1';
 const CLE_SEQUENCE = 'glycines-sequence';
+const CLE_RAPPELS = 'glycines-rappels-v1'; // oublis à rappeler au début d'une prochaine mission (P.12)
 
 // Le stockage peut être interdit (navigation privée, réglages du navigateur) : le jeu marche quand même, sans mémoire.
 function lire(): Progression {
@@ -45,10 +47,19 @@ export interface SuiviProgression {
   /** Séquence vue en cours. Un lien de l'enseignante peut la fixer : …/index.html?sequence=S3 */
   sequenceVue: () => string;
   changerSequence: (sequence: string) => void;
+  /** Rappels d'oublis venus d'autres missions : rendus une seule fois, puis effacés. */
+  prendreRappels: (idMission: string) => Rappel[];
 }
 
 export function suivreProgression(missions: Mission[]): SuiviProgression {
   let progression = lire();
+  let rappels: Rappel[] = [];
+  try {
+    const lus: unknown = JSON.parse(lireTexte(CLE_RAPPELS) ?? '[]');
+    if (Array.isArray(lus)) rappels = lus as Rappel[];
+  } catch {
+    // valeur abîmée : on repart sans rappel
+  }
   // Priorité : la séquence donnée dans l'adresse, puis celle mémorisée, sinon S1.
   let sequence = lireSequence(new URLSearchParams(location.search).get('sequence')) ?? lireSequence(lireTexte(CLE_SEQUENCE)) ?? 'S1';
   ecrireTexte(CLE_SEQUENCE, sequence);
@@ -110,6 +121,17 @@ export function suivreProgression(missions: Mission[]): SuiviProgression {
     enregistrer: (bilan) => {
       progression = enregistrerBilan(progression, bilan);
       ecrire(progression);
+      const mission = missions.find((m) => m.id === bilan.mission);
+      if (mission) {
+        rappels = rappelsApresMission(rappels, mission, bilan.parcours);
+        ecrireTexte(CLE_RAPPELS, JSON.stringify(rappels));
+      }
+    },
+    prendreRappels: (idMission) => {
+      const montres = rappelsAMontrer(rappels, idMission);
+      rappels = rappels.filter((r) => !montres.includes(r));
+      ecrireTexte(CLE_RAPPELS, JSON.stringify(rappels));
+      return montres;
     },
     niveauxObtenus: (id) => {
       const niveaux = progression[id];

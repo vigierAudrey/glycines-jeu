@@ -250,3 +250,9 @@ Trois lignes par session : ce qui a été fait, ce qui reste à surveiller, la p
 - **Fait** : une mission peut avoir des variantes de contexte tirées au hasard (D-031). Première variante sur `m09` : la chambre de Mme Rose est peu éclairée (d'après S5-03 : « bruit, éclairage », « visage visible »). Page enseignante : variantes listées. 4 tests ajoutés, `pnpm verifier` OK (111 tests).
 - **À surveiller** : les cours donnent rarement plusieurs contextes pour une même situation ; pas d'humeur de résident inventée.
 - **Prochaine tâche** : P.12 (conséquences plus tard).
+
+## 22/11/2026 · Conséquences plus tard (tâche P.12)
+
+- **Fait** : une étape peut porter un rappel `si_oubli`. Manquée, elle laisse un rappel montré une fois au début d'une autre mission (« 📌 Depuis vos dernières missions »), gardé dans le navigateur seulement. Rappels écrits pour m00, m10 et m19. 3 tests, `pnpm verifier` OK (114 tests).
+- **À surveiller** : les rappels disent ce qui n'a pas été fait et la bonne pratique, sans inventer de suite (pas de chute).
+- **Prochaine tâche** : P.13 (auto-positionnement).

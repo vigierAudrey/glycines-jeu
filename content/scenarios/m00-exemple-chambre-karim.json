@@ -62,6 +62,7 @@
     },
     {
       "id": "sol",
+      "si_oubli": "Le sol mouillé devant le lavabo de M. Karim n'a pas été sécurisé tout de suite. Avant d'aider une personne, regardez d'abord le sol et ce qui peut la faire glisser.",
       "type": "decision",
       "consigne": "Le sol est mouillé devant le lavabo.",
       "question": "Que faites-vous ?",
