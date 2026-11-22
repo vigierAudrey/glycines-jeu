@@ -4,7 +4,7 @@ Comparaison des critères d'évaluation du jeu avec les textes officiels présen
 
 ## PSE : conforme
 
-`content/referentiel/pse.json` : les 14 objectifs ciblés des modules C4 à C7 sont retrouvés **mot pour mot** dans le programme officiel (`REFERENTIEL_CAP_PSE/spe641annexe1105406pdf-85401`). Le fichier ne contient que les modules C4 à C7 pour l'instant (thématique C) ; les autres modules seront ajoutés avec les séquences de PSE correspondantes (tâches 5.1f à 5.1h). La PSE ne fait pas partie du référentiel CAP AAGA : c'est le programme commun à tous les CAP.
+`content/referentiel/pse.json` : les objectifs ciblés des modules A2, A7, C1 à C7 et D1 à D3 (ceux que travaillent les séquences de PSE d'Audrey) sont retrouvés **mot pour mot** dans le programme officiel (`REFERENTIEL_CAP_PSE/spe641annexe1105406pdf-85401`). La PSE ne fait pas partie du référentiel CAP AAGA : c'est le programme commun à tous les CAP.
 
 ## Bloc 2 : corrigé le 22/11/2026, les 68 critères sont maintenant mot pour mot
 

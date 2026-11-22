@@ -1,8 +1,8 @@
 {
   "diplome": "CAP (tous secteurs) · enseigné en CAP Agent accompagnant au grand âge",
-  "bloc": "Prévention-santé-environnement (PSE) · thématique C : l’individu dans son milieu professionnel",
+  "bloc": "Prévention-santé-environnement (PSE) · modules A2, A7, C1 à C7, D1 à D3",
   "texte_officiel": "Annexe « Prévention-santé-environnement · Classes préparant au certificat d’aptitude professionnelle » (programme de 2019, Ministère de l’Éducation nationale et de la Jeunesse)",
-  "origine": "Objectifs ciblés et notions clés des modules C4 à C7, recopiés mot pour mot de spe641annexe1105406pdf-85401 (dossier REFERENTIEL_CAP_PSE d’Audrey). Ne pas modifier à la main.",
+  "origine": "Objectifs ciblés et notions clés des modules A2, A7, C1 à C7 et D1 à D3, recopiés mot pour mot de spe641annexe1105406pdf-85401 (dossier REFERENTIEL_CAP_PSE d’Audrey). Ne pas modifier à la main.",
   "avertissement": "Le programme de PSE ne définit pas de niveaux N1 à N4 : les niveaux ci-dessous sont ceux du jeu (repris du Bloc 2), pour que la relève reste la même. Les « critères » d’une mission PSE sont les objectifs ciblés du module.",
   "niveaux": {
     "N1": "Réalise avec aide constante.",
@@ -11,6 +11,120 @@
     "N4": "Transfère à une situation nouvelle et justifie ses choix."
   },
   "competences": [
+    {
+      "code": "PSE-A2",
+      "intitule": "Module A2 : Le sommeil, un rythme biologique",
+      "performances_attendues": [],
+      "criteres_officiels": [
+        "Identifier les caractéristiques de la fonction physiologique « sommeil ».",
+        "Présenter les rôles du sommeil.",
+        "Identifier les effets et les conséquences professionnelles et sociales du manque de sommeil.",
+        "Proposer des mesures pour favoriser un sommeil récupérateur."
+      ],
+      "savoirs_associes": [
+        {
+          "intitule": "Notions clés associées",
+          "limites_connaissances": [
+            "Rythmes biologiques",
+            "Fréquence",
+            "Cycle",
+            "Récupération physique",
+            "Récupération mentale",
+            "Effets / conséquences",
+            "Prévention individuelle",
+            "Hygiène du sommeil"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "PSE-A7",
+      "intitule": "Module A7 : L’alimentation adaptée à son activité",
+      "performances_attendues": [],
+      "criteres_officiels": [
+        "Repérer les besoins nutritionnels en lien avec l’état physiologique.",
+        "Indiquer les principes d’une alimentation équilibrée.",
+        "Identifier, à partir de compositions et de répartitions de repas, les erreurs fréquentes et proposer des améliorations.",
+        "Expliquer les conséquences des erreurs alimentaires sur la santé de l’individu et sur son activité professionnelle.",
+        "Effectuer un choix alimentaire raisonné parmi plusieurs propositions en tenant compte des contraintes professionnelles."
+      ],
+      "savoirs_associes": [
+        {
+          "intitule": "Notions clés associées",
+          "limites_connaissances": [
+            "Besoins énergétiques",
+            "Besoins fonctionnels",
+            "Facteur de variation",
+            "Nutriment/aliment",
+            "Groupes alimentaires",
+            "Composition d’un repas",
+            "Rythme alimentaire",
+            "Répartition des prises alimentaires",
+            "Grignotage",
+            "Excès",
+            "Carences",
+            "Conséquences",
+            "Activité professionnelle",
+            "Contraintes professionnelles",
+            "Prévention"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "PSE-C1",
+      "intitule": "Module C1 : Les différents contrats de travail",
+      "performances_attendues": [],
+      "criteres_officiels": [
+        "Identifier les spécificités des différents contrats de travail.",
+        "Identifier droit et obligation dans un contrat de travail."
+      ],
+      "savoirs_associes": [
+        {
+          "intitule": "Notions clés associées",
+          "limites_connaissances": [
+            "CDI / CDD",
+            "Contrat d’apprentissage",
+            "Contrat",
+            "Droits",
+            "Obligations"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "PSE-C2",
+      "intitule": "Module C2 : Les enjeux de la « santé et sécurité au travail »",
+      "performances_attendues": [],
+      "criteres_officiels": [
+        "Identifier les enjeux de la santé et sécurité au travail pour les salariés.",
+        "Différencier accident du travail et maladie professionnelle.",
+        "Repérer dans le Code du travail les dispositions réglementaires de l’employeur et du salarié en matière de santé et sécurité au travail.",
+        "Identifier les dispositions réglementaires spécifiques aux « jeunes travailleurs » et/ou aux « nouveaux embauchés ».",
+        "Décrire les démarches nécessaires en vue de la déclaration d’un accident de travail."
+      ],
+      "savoirs_associes": [
+        {
+          "intitule": "Notions clés associées",
+          "limites_connaissances": [
+            "Enjeux humains",
+            "Enjeux socio-économiques",
+            "Accident du travail / Maladie professionnelle",
+            "Lésion",
+            "Exposition",
+            "Chronique",
+            "Cadre réglementaire",
+            "Responsabilité / obligations de l’employeur",
+            "Droits / obligations du salarié",
+            "Jeune travailleur / nouvel embauché",
+            "Prise en charge des soins",
+            "Indemnités journalières",
+            "Réparation / indemnisation",
+            "Procédures"
+          ]
+        }
+      ]
+    },
     {
       "code": "PSE-C4",
       "intitule": "Module C4 : La démarche de prévention appliquée à un risque spécifique au métier",
@@ -115,6 +229,97 @@
             "Protection individuelle",
             "Protection collective",
             "Vaccin obligatoire"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "PSE-D1",
+      "intitule": "Module D1 : L’assurance",
+      "performances_attendues": [],
+      "criteres_officiels": [
+        "Expliquer le principe de l’assurance comme fonctionnement solidaire.",
+        "Identifier les garanties et les clauses restrictives à partir d’un contrat ou d’extraits de contrat.",
+        "Démontrer le caractère obligatoire ou facultatif d’une assurance à partir d’un texte réglementaire.",
+        "Repérer les démarches à effectuer dans une situation donnée en cas de sinistre à partir d’une procédure, d’un formulaire."
+      ],
+      "savoirs_associes": [
+        {
+          "intitule": "Notions clés associées",
+          "limites_connaissances": [
+            "Risque",
+            "Sinistre",
+            "Solidarité",
+            "Garanties",
+            "Indemnisation/cotisation",
+            "Contrat",
+            "Clause d’exclusion",
+            "Responsabilité civile",
+            "Législation/ réglementation",
+            "Nature du sinistre",
+            "Déclaration",
+            "Formulaire"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "PSE-D2",
+      "intitule": "Module D2 : Le budget",
+      "performances_attendues": [],
+      "criteres_officiels": [
+        "Identifier les différentes catégories de recettes et de dépenses d’un budget.",
+        "Énoncer la principale règle de gestion d’un budget.",
+        "Expliquer le principe de l’épargne et les critères de choix.",
+        "Expliquer les avantages et les inconvénients d’un crédit à la consommation."
+      ],
+      "savoirs_associes": [
+        {
+          "intitule": "Notions clés associées",
+          "limites_connaissances": [
+            "Revenus liés au travail",
+            "Revenus sociaux",
+            "Dépense incompressible",
+            "Budget équilibré",
+            "Déficitaire",
+            "Excédentaire",
+            "Équilibre",
+            "Intérêts",
+            "Épargne de précaution",
+            "Mensualités",
+            "TAEG",
+            "Surendettement",
+            "Rétractation",
+            "Engagement réciproque"
+          ]
+        }
+      ]
+    },
+    {
+      "code": "PSE-D3",
+      "intitule": "Module D3 : Les achats",
+      "performances_attendues": [],
+      "criteres_officiels": [
+        "Expliquer les avantages et les inconvénients du e-commerce pour le consommateur.",
+        "Hiérarchiser dans une situation donnée les critères de choix pour un produit en fonction de différents facteurs.",
+        "Repérer et décoder les informations utiles au choix sur une étiquette de produit à consommer pour son alimentation.",
+        "Repérer les informations ou signes relatifs à la qualité des produits de consommation alimentaire et à l’éthique de l’entreprise."
+      ],
+      "savoirs_associes": [
+        {
+          "intitule": "Notions clés associées",
+          "limites_connaissances": [
+            "Achats en ligne",
+            "Conditions générales de vente",
+            "Délai de rétractation",
+            "Critères",
+            "DLC/DDM",
+            "Allergènes",
+            "Stockage",
+            "Label rouge",
+            "Agriculture biologique",
+            "AOP",
+            "Commerce équitable"
           ]
         }
       ]

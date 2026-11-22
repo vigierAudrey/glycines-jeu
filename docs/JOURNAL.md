@@ -364,3 +364,9 @@ Trois lignes par session : ce qui a été fait, ce qui reste à surveiller, la p
 - **Fait** : 17 critères de `bloc2.json` recopiés exactement du JO, critère fusionné séparé en deux (C2.1.3 à C2.1.5), 14 missions mises à jour. Vérification automatique : 68 critères sur 68 retrouvés mot pour mot. `pnpm verifier` OK.
 - **À surveiller** : les « performances attendues » (non citées par les missions) gardent quelques reformulations.
 - **Prochaine tâche** : 5.1f (PSE S1).
+
+## 22/11/2026 · PSE : modules A2, A7, C1, C2, D1 à D3 ajoutés au référentiel
+
+- **Fait** : `pse.json` contient maintenant les modules travaillés par les séquences de PSE d'Audrey : A2 (sommeil), A7 (alimentation), C1 (contrats), C2 (santé et sécurité au travail), C4 à C7, D1 (assurance), D2 (budget), D3 (achats). Objectifs vérifiés mot pour mot contre le programme.
+- **À surveiller** : rien.
+- **Prochaine tâche** : missions d'après PSE S1, S5, S6.
