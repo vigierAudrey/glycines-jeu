@@ -472,3 +472,9 @@ Trois lignes par session : ce qui a été fait, ce qui reste à surveiller, la p
 - **Fait** : `m130` (S5-01) : critère C2.1.6 « Respect des règles éthiques et du protocole ». Les vignettes restent anonymes (autres ailes) : aucun signe médical ajouté aux résidents de l'aile B. `pnpm verifier` OK.
 - **À surveiller** : mission en brouillon.
 - **Prochaine tâche** : T.9 (entretien).
+
+## 22/11/2026 · Entretien de la chambre (tâche T.9)
+
+- **Fait** : `m131` (S3-08) et `m132` (S3-09) : cinq critères C2.2.1 jamais cités (effets personnels, relais, rangement, temps, qualité du résultat). `pnpm verifier` OK.
+- **À surveiller** : missions en brouillon ; le relais du jeu est le cadre de santé (pas de maintenance ni de service hôtelier parmi les personnages).
+- **Prochaine tâche** : T.10 (personnalisation).

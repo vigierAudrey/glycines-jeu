@@ -1,0 +1,101 @@
+{
+  "id": "m132-karim-remise-en-etat",
+  "statut": "brouillon",
+  "titre": "Tout prêt avant son retour",
+  "duree_min": 18,
+  "sequence_requise": "S3",
+  "lieu": "chambre-karim",
+  "personnages": ["joueur", "karim"],
+  "competences": [
+    { "code": "C2.2.1", "critere": "Rangement adapté." },
+    { "code": "C2.2.1", "critere": "Respect du temps." },
+    { "code": "C2.2.1", "critere": "Qualité du résultat." }
+  ],
+  "situation": "Avant le retour de M. Karim, vous remettez sa chambre en état : réfection du lit et entretien journalier. Il tient à son lever à 5 h, à son carnet de recettes, à sa radio et à son téléphone du dimanche.",
+  "objectif_eleve": "Organiser l'intervention dans l'ordre et dans le temps prévu sans rien sacrifier, contrôler le résultat, et ranger ses effets et les consommables de façon accessible et sûre.",
+  "note_pour_audrey": "Brouillon (tâche T.9), d'après votre séquence 3, séance 9 (« TP évalué : remise en état complète et projet personnalisé pour M. Karim ») : plan d'intervention chronologique, points de contrôle, temps maîtrisé sans omission (séance 4 : « un objectif de temps ne justifie jamais d'omettre hygiène, sécurité, temps de contact ou contrôle »), rangement des effets et consommables. Trois critères C2.2.1 encore jamais cités. Complément, hors cours : le retard de dix minutes et les répliques.",
+  "etapes": [
+    {
+      "id": "plan",
+      "type": "ordre",
+      "consigne": "Remettez votre plan d'intervention dans l'ordre.",
+      "elements": [
+        { "id": "analyser", "texte": "Lire la mission, les souhaits de M. Karim et le protocole.", "points": { "C2.2.1": 1 } },
+        { "id": "materiel", "texte": "Préparer le matériel et les produits adaptés à chaque surface.", "points": { "C2.2.1": 1 } },
+        { "id": "proteger", "texte": "Protéger ses effets personnels et dégager les circulations.", "points": { "C2.2.1": 1 } },
+        { "id": "realiser", "texte": "Faire le lit, puis l'entretien du plus propre au plus sale, du haut vers le bas.", "points": { "C2.2.1": 1 } },
+        { "id": "controler", "texte": "Contrôler le résultat avec la grille.", "points": { "C2.2.1": 1 } },
+        { "id": "ranger", "texte": "Remettre ses effets en place, ranger le matériel, tracer.", "points": { "C2.2.1": 1 } }
+      ],
+      "retour": "Un plan réaliste et chronologique : on prépare, on protège, on réalise, on contrôle, puis on range et on trace."
+    },
+    {
+      "id": "temps",
+      "type": "decision",
+      "consigne": "Vous avez pris dix minutes de retard. M. Karim rentre bientôt, et le produit sur le lit n'a pas fini son temps de contact.",
+      "question": "Que faites-vous ?",
+      "choix": [
+        { "decision": "agir", "texte": "Je respecte le temps de contact, j'avance sur une autre zone en attendant, et je préviens si son retour doit être décalé de quelques minutes.", "points": { "C2.2.1": 2 }, "retour": "Vous gérez le temps en réorganisant, sans sacrifier l'hygiène." },
+        { "decision": "adapter", "texte": "J'essuie tout de suite le produit pour gagner du temps.", "retour": "Le produit n'a pas eu son effet : un objectif de temps ne justifie jamais d'omettre le temps de contact." },
+        { "decision": "alerter", "texte": "Je saute le contrôle final, tant pis.", "retour": "Le contrôle fait partie de l'intervention : sans lui, la qualité n'est pas vérifiée." }
+      ]
+    },
+    {
+      "id": "controle",
+      "type": "selection",
+      "consigne": "Vous faites le contrôle final.",
+      "question": "Cochez ce qui montre un résultat de qualité.",
+      "elements": [
+        { "id": "lit", "texte": "Lit propre, sec, stable, linge tendu, sans pli gênant, freins bloqués.", "attendu": true, "points": { "C2.2.1": 1 }, "retour": "Les points de contrôle du lit sont tous vérifiés." },
+        { "id": "surfaces", "texte": "Surfaces sèches, sans trace.", "attendu": true, "points": { "C2.2.1": 1 }, "retour": "Un résultat visible et contrôlé." },
+        { "id": "appel", "texte": "Appel malade à portée, circulations libres.", "attendu": true, "points": { "C2.2.1": 1 }, "retour": "La chambre est sûre pour son retour." },
+        { "id": "sol-mouille", "texte": "Sol encore mouillé au moment où il rentre.", "attendu": false, "points": { "C2.2.1": 1 }, "retour": "Un sol mouillé est un risque de chute." },
+        { "id": "a-ma-facon", "texte": "Ses affaires rangées à ma façon, plus jolies.", "attendu": false, "points": { "C2.2.1": 1 }, "retour": "Le résultat doit correspondre à ses habitudes, pas aux vôtres." }
+      ]
+    },
+    {
+      "id": "rangement",
+      "type": "tri",
+      "consigne": "Rangez chaque objet à sa place.",
+      "categories": [
+        { "id": "portee", "libelle": "À portée de main" },
+        { "id": "placard", "libelle": "Rangé dans le placard" },
+        { "id": "dehors", "libelle": "Ne reste pas dans la chambre" }
+      ],
+      "elements": [
+        { "id": "carnet", "texte": "Son carnet de recettes.", "categorie": "portee", "points": { "C2.2.1": 1 }, "retour": "Un repère qu'il aime consulter : il reste accessible." },
+        { "id": "radio", "texte": "Sa radio, câble hors du passage.", "categorie": "portee", "points": { "C2.2.1": 1 }, "retour": "Accessible pour le soir, sans danger sur le trajet." },
+        { "id": "telephone", "texte": "Son téléphone, pour l'appel du dimanche.", "categorie": "portee", "points": { "C2.2.1": 1 }, "retour": "Le lien avec sa sœur reste possible." },
+        { "id": "consommables", "texte": "La petite réserve de gants de toilette.", "categorie": "placard", "points": { "C2.2.1": 1 }, "retour": "Rangée, accessible, sans encombrer." },
+        { "id": "produits", "texte": "Les produits d'entretien.", "categorie": "dehors", "points": { "C2.2.1": 1 }, "retour": "Les produits repartent sur le chariot : ils ne restent pas dans la chambre." }
+      ]
+    },
+    {
+      "id": "retour-karim",
+      "type": "dialogue",
+      "consigne": "M. Karim rentre et regarde sa chambre.",
+      "interlocuteur": "karim",
+      "replique": "Où est mon carnet de recettes ?",
+      "verbal": [
+        { "texte": "Sur votre table, là où vous le posez d'habitude. Vous voulez vérifier que tout est à votre goût ?", "confiance": 2, "points": { "C2.2.1": 2 }, "retour": "Ses repères sont à leur place, et vous lui laissez le dernier mot." },
+        { "texte": "Je l'ai rangé dans le tiroir, c'est plus propre.", "confiance": -2, "retour": "Vous avez rangé à votre façon un objet qu'il veut garder accessible." },
+        { "texte": "Je ne sais plus, cherchez un peu.", "confiance": -2, "retour": "Le rangement doit lui permettre de retrouver ses affaires." }
+      ],
+      "paraverbal": [
+        { "texte": "Voix tranquille.", "confiance": 1, "points": { "C2.2.1": 1 }, "retour": "Il est rassuré." },
+        { "texte": "Voix fière, j'attends des compliments.", "confiance": -1, "retour": "Le résultat compte pour lui, pas pour vous." },
+        { "texte": "Voix pressée.", "confiance": -1, "retour": "Il n'a pas le temps de vérifier." }
+      ],
+      "non_verbal": [
+        { "texte": "Je lui montre le carnet du geste, sans le toucher.", "confiance": 1, "points": { "C2.2.1": 1 }, "retour": "Vous respectez ses objets." },
+        { "texte": "Je pars aussitôt avec le chariot.", "confiance": -1, "retour": "Vous ne vérifiez pas que tout lui convient." },
+        { "texte": "Je déplace encore sa radio devant lui.", "confiance": -1, "retour": "Il risque de ne plus la retrouver." }
+      ]
+    }
+  ],
+  "debriefing": [
+    "Comment avez-vous rattrapé votre retard sans rien sacrifier ?",
+    "Quels points avez-vous contrôlés avant son retour ?",
+    "Pourquoi ses objets doivent-ils rester à la place qu'il a choisie ?"
+  ]
+}

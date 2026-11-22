@@ -1,0 +1,100 @@
+{
+  "id": "m131-karim-entretien-periodique",
+  "statut": "brouillon",
+  "titre": "Grand entretien chez M. Karim",
+  "duree_min": 18,
+  "sequence_requise": "S3",
+  "lieu": "chambre-karim",
+  "personnages": ["joueur", "karim", "cadre"],
+  "competences": [
+    { "code": "C2.2.1", "critere": "Maintien du bon état des effets personnels." },
+    { "code": "C2.2.1", "critere": "Choix du professionnel relais adapté." }
+  ],
+  "situation": "C'est le jour de l'entretien périodique de la chambre de M. Karim : vitres intérieures accessibles, plinthes, dessus de l'armoire et lit. Une roulette du chariot se bloque, un peu d'eau apparaît sous le lavabo, et le cadre préféré de M. Karim est fragile.",
+  "objectif_eleve": "Planifier avec M. Karim, travailler en sécurité, protéger ses effets personnels, et pour chaque dysfonctionnement, faire seulement la première intervention autorisée avant de choisir le relais.",
+  "note_pour_audrey": "Brouillon (tâche T.9), d'après votre séquence 3, séance 8 (« TP entretien périodique : lit, vitres, contrôle et dysfonctionnements ») : situation de M. Karim, créneau anticipé avec lui, pas de meuble comme moyen d'accès en hauteur, roulette, fuite et cadre fissuré avec leur première intervention. Dans le jeu, le relais est M. Lemoine, cadre de santé, qui fait intervenir la maintenance (l'annuaire du cours cite aussi le service hôtelier et le référent des effets personnels, absents du jeu). Complément, hors cours : les répliques.",
+  "etapes": [
+    {
+      "id": "creneau",
+      "type": "dialogue",
+      "consigne": "La veille, vous passez voir M. Karim pour organiser l'entretien périodique.",
+      "interlocuteur": "karim",
+      "replique": "Un grand ménage demain ? Mais je serai là toute la matinée, moi.",
+      "verbal": [
+        { "texte": "On peut choisir ensemble le moment qui vous gêne le moins, par exemple pendant votre activité de l'après-midi. Et votre cadre, je le mets où ?", "confiance": 2, "points": { "C2.2.1": 2 }, "retour": "Vous anticipez le créneau avec lui et vous prévoyez déjà la protection de ses effets." },
+        { "texte": "C'est le planning, je viendrai à 9 h.", "confiance": -1, "retour": "Le créneau s'anticipe avec la personne : c'est sa chambre." },
+        { "texte": "Vous n'aurez qu'à sortir quand j'arriverai.", "confiance": -2, "retour": "Vous lui imposez de quitter sa chambre sans le consulter." }
+      ],
+      "paraverbal": [
+        { "texte": "Voix posée, je lui laisse le choix.", "confiance": 1, "points": { "C2.2.1": 1 }, "retour": "Il se sent consulté." },
+        { "texte": "Voix pressée.", "confiance": -1, "retour": "Il peut se sentir bousculé." },
+        { "texte": "Voix autoritaire.", "confiance": -2, "retour": "Le ton empêche toute négociation." }
+      ],
+      "non_verbal": [
+        { "texte": "Je regarde avec lui le cadre et les objets fragiles.", "confiance": 1, "points": { "C2.2.1": 1 }, "retour": "Vous repérez ensemble ce qu'il faut protéger." },
+        { "texte": "Je regarde le planning sur mon téléphone.", "confiance": -1, "retour": "Il peut penser que le planning compte plus que lui." },
+        { "texte": "Je touche ses objets sans demander.", "confiance": -2, "retour": "Ce sont ses effets personnels : on demande avant." }
+      ]
+    },
+    {
+      "id": "periodique-ou-journalier",
+      "type": "qcm",
+      "consigne": "Le lendemain, avant de commencer, vous relisez le plan.",
+      "question": "Qu'est-ce qui distingue l'entretien périodique de l'entretien journalier ?",
+      "options": [
+        { "texte": "Il est approfondi, planifié, et traite des zones moins fréquentes (vitres, plinthes, dessus d'armoire).", "juste": true },
+        { "texte": "C'est le même entretien, fait plus vite." },
+        { "texte": "Il se fait seulement quand la chambre est sale." }
+      ],
+      "points": { "C2.2.1": 1 },
+      "retour": "L'entretien périodique est approfondi, planifié et distinct de l'entretien journalier."
+    },
+    {
+      "id": "hauteur",
+      "type": "decision",
+      "consigne": "Le dessus de l'armoire est trop haut pour vous.",
+      "question": "Que faites-vous ?",
+      "choix": [
+        { "decision": "agir", "texte": "J'utilise le matériel à manche prévu, et si ce n'est pas accessible en sécurité, je le signale.", "points": { "C2.2.1": 1 }, "retour": "Pas d'accès en hauteur non sécurisé." },
+        { "decision": "adapter", "texte": "Je monte sur la chaise de M. Karim.", "retour": "On n'utilise jamais un meuble comme moyen d'accès en hauteur." },
+        { "decision": "alerter", "texte": "Je laisse le dessus de l'armoire sans rien dire.", "retour": "Une zone planifiée non traitée se signale." }
+      ]
+    },
+    {
+      "id": "cadre-fissure",
+      "type": "decision",
+      "consigne": "En déplaçant le cadre préféré de M. Karim avec son accord, vous voyez qu'il est fissuré.",
+      "question": "Que faites-vous ?",
+      "choix": [
+        { "decision": "agir", "texte": "Je le pose à l'abri, je ne le répare pas et je ne le jette pas, j'en informe M. Karim et je le transmets.", "points": { "C2.2.1": 2 }, "retour": "Vous protégez son effet personnel, vous l'informez et vous passez le relais." },
+        { "decision": "adapter", "texte": "Je mets un morceau de scotch pour le réparer.", "retour": "On ne répare pas un effet personnel sans accord." },
+        { "decision": "alerter", "texte": "Je le jette, il est abîmé de toute façon.", "retour": "On ne jette jamais un effet personnel : il a de la valeur pour lui." }
+      ]
+    },
+    {
+      "id": "premiere-intervention",
+      "type": "association",
+      "consigne": "Reliez chaque dysfonctionnement à la première intervention autorisée.",
+      "paires": [
+        { "id": "roulette", "terme": "Roulette du chariot bloquée", "definition": "J'arrête d'utiliser le chariot s'il devient instable, je le mets à l'écart et je le signale.", "points": { "C2.2.1": 1 } },
+        { "id": "fuite", "terme": "Eau sous le lavabo", "definition": "J'empêche l'accès, j'absorbe si c'est sans risque et autorisé, je ne démonte rien et j'alerte.", "points": { "C2.2.1": 1 } },
+        { "id": "cadre", "terme": "Cadre fissuré", "definition": "Je le protège, j'informe M. Karim et je transmets, sans le réparer ni le jeter.", "points": { "C2.2.1": 1 } }
+      ],
+      "retour": "Face à un dysfonctionnement : j'arrête si nécessaire, je sécurise, je fais seulement le geste autorisé, puis je choisis le relais."
+    },
+    {
+      "id": "relais-maintenance",
+      "type": "relais",
+      "consigne": "Allez signaler la roulette et la fuite à la personne qui fera intervenir la maintenance.",
+      "destinataire": "cadre",
+      "points": { "C2.2.1": 1 },
+      "retour": "M. Lemoine, cadre de santé, fait intervenir la maintenance et note le cadre fissuré.",
+      "retour_erreur": "Cette personne ne fait pas intervenir la maintenance. Qui est responsable de l'aile B ?"
+    }
+  ],
+  "debriefing": [
+    "Pourquoi avoir choisi le créneau avec M. Karim ?",
+    "Qu'avez-vous fait du cadre fissuré, et pourquoi ?",
+    "Pour la fuite, qu'avez-vous fait vous-même, et qu'avez-vous laissé à la maintenance ?"
+  ]
+}
