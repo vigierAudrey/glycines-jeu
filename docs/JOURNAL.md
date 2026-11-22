@@ -466,3 +466,9 @@ Trois lignes par session : ce qui a été fait, ce qui reste à surveiller, la p
 - **Fait** : `m129` (S4-07, Mme Yvette) : pudeur et intimité, autonomie, adaptation des gestes (C2.1.5, T.11). Variante « douleur annoncée » ajoutée à sa fiche depuis le cours. `pnpm verifier` OK.
 - **À surveiller** : mission en brouillon ; C2.1.5 « hygiène et sécurité » et « bien-être » restent à citer.
 - **Prochaine tâche** : T.8 (signes à observer, sans diagnostic).
+
+## 22/11/2026 · Signes à observer sans diagnostic (tâche T.8)
+
+- **Fait** : `m130` (S5-01) : critère C2.1.6 « Respect des règles éthiques et du protocole ». Les vignettes restent anonymes (autres ailes) : aucun signe médical ajouté aux résidents de l'aile B. `pnpm verifier` OK.
+- **À surveiller** : mission en brouillon.
+- **Prochaine tâche** : T.9 (entretien).

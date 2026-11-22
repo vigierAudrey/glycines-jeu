@@ -1,0 +1,99 @@
+{
+  "id": "m130-dossiers-minute-signes",
+  "statut": "brouillon",
+  "titre": "Dossiers minute : repérer sans diagnostiquer",
+  "duree_min": 15,
+  "sequence_requise": "S5",
+  "lieu": "poste-de-soins",
+  "personnages": ["joueur", "infirmiere"],
+  "competences": [
+    { "code": "C2.1.6", "critere": "Respect des règles éthiques et du protocole." }
+  ],
+  "situation": "Claire, infirmière, prépare un temps de formation pour l'équipe. Elle vous présente des situations vécues dans d'autres ailes de l'établissement, sans nom, et vous demande ce que vous feriez.",
+  "objectif_eleve": "Décrire des faits, repérer ce qui change par rapport à l'habitude, sécuriser et alerter selon le protocole, sans jamais poser de diagnostic ni décider d'un traitement ou d'un régime.",
+  "note_pour_audrey": "Brouillon (tâche T.8), d'après votre séquence 5, séance 1 (« digestif, diabète, urinaire et cardio-vasculaire : repérer sans diagnostiquer ») : vignettes de l'activité 1 et cartes de l'activité 2 (observer, transmettre, installer, sécuriser, diagnostiquer, donner un médicament, modifier un régime). Les situations sont anonymes, dans d'autres ailes : aucun signe médical n'est attribué aux résidents de l'aile B. Critère C2.1.6 encore jamais cité. Complément, hors cours : le cadre (formation préparée par Claire) et le détail des vignettes.",
+  "etapes": [
+    {
+      "id": "frontiere-role",
+      "type": "tri",
+      "consigne": "Claire commence par la frontière du rôle. Rangez chaque action.",
+      "categories": [
+        { "id": "je-fais", "libelle": "Dans mon rôle" },
+        { "id": "hors-role", "libelle": "Hors de mon rôle" }
+      ],
+      "elements": [
+        { "id": "observer", "texte": "Observer un changement par rapport à l'habitude.", "categorie": "je-fais", "points": { "C2.1.6": 1 }, "retour": "Repérer un changement est au cœur de votre rôle." },
+        { "id": "transmettre", "texte": "Transmettre des faits précis.", "categorie": "je-fais", "points": { "C2.1.6": 1 }, "retour": "Vous transmettez rapidement les signes inhabituels." },
+        { "id": "installer", "texte": "Installer confortablement la personne.", "categorie": "je-fais", "points": { "C2.1.6": 1 }, "retour": "Une adaptation prudente, dans votre limite." },
+        { "id": "securiser", "texte": "Sécuriser la personne et alerter selon le protocole.", "categorie": "je-fais", "points": { "C2.1.6": 1 }, "retour": "Vous sécurisez et vous alertez." },
+        { "id": "diagnostiquer", "texte": "Dire de quelle maladie il s'agit.", "categorie": "hors-role", "points": { "C2.1.6": 1 }, "retour": "Vous décrivez des faits, vous ne posez pas de diagnostic." },
+        { "id": "medicament", "texte": "Donner un médicament.", "categorie": "hors-role", "points": { "C2.1.6": 1 }, "retour": "Vous ne décidez d'aucun traitement." },
+        { "id": "regime", "texte": "Modifier un régime alimentaire.", "categorie": "hors-role", "points": { "C2.1.6": 1 }, "retour": "Vous ne décidez d'aucun régime." }
+      ]
+    },
+    {
+      "id": "mollet",
+      "type": "decision",
+      "consigne": "Premier dossier : une résidente vous montre son mollet. Il est gonflé, chaud et rouge, et elle dit qu'elle a mal. Ce n'était pas le cas hier.",
+      "question": "Que faites-vous ?",
+      "choix": [
+        { "decision": "alerter", "texte": "Je ne masse pas, je l'installe au repos en sécurité et j'alerte immédiatement l'infirmière selon le protocole.", "points": { "C2.1.6": 2 }, "retour": "Douleur et gonflement inhabituels d'un membre, avec chaleur et rougeur : on ne banalise pas, on ne masse pas, on alerte tout de suite." },
+        { "decision": "agir", "texte": "Je masse doucement son mollet pour la soulager.", "retour": "Il ne faut jamais masser dans cette situation." },
+        { "decision": "adapter", "texte": "Je lui conseille de marcher un peu, ça va passer.", "retour": "Vous banalisez un signe inhabituel qui impose une alerte." }
+      ]
+    },
+    {
+      "id": "vomissements",
+      "type": "decision",
+      "consigne": "Deuxième dossier : un résident a vomi deux fois depuis le petit déjeuner.",
+      "question": "Que faites-vous ?",
+      "choix": [
+        { "decision": "agir", "texte": "J'assure son confort et son hygiène, je note l'heure, la fréquence et l'aspect, et j'alerte selon le protocole.", "points": { "C2.1.6": 2 }, "retour": "Vous observez la fréquence et l'aspect, sans interpréter, et vous alertez." },
+        { "decision": "adapter", "texte": "Je dis à l'équipe qu'il a une gastro.", "retour": "C'est un diagnostic : vous décrivez ce que vous avez vu." },
+        { "decision": "alerter", "texte": "Je lui donne un verre d'eau sucrée et je n'en parle pas.", "retour": "Vous ne décidez pas seul de ce qu'il boit et vous devez transmettre." }
+      ]
+    },
+    {
+      "id": "transit",
+      "type": "transmission",
+      "consigne": "Troisième dossier : un résident vous parle de son ventre. Préparez votre transmission.",
+      "phrases": [
+        { "id": "selles", "texte": "Il m'a dit ce matin : « Je ne suis pas allé à la selle depuis trois jours. »", "nature": "fait", "points": { "C2.1.6": 1 }, "retour": "Ses mots exacts : un changement du transit rapporté par la personne." },
+        { "id": "inconfort", "texte": "Il dit avoir le ventre gonflé et inconfortable.", "nature": "fait", "points": { "C2.1.6": 1 }, "retour": "L'inconfort rapporté est un fait à transmettre." },
+        { "id": "laxatif", "texte": "Il lui faudrait un laxatif.", "nature": "interpretation", "points": { "C2.1.6": 1 }, "retour": "Proposer un traitement n'est pas votre rôle." },
+        { "id": "pas-boire", "texte": "Il ne fait aucun effort pour boire.", "nature": "jugement", "points": { "C2.1.6": 1 }, "retour": "C'est un jugement sur la personne." }
+      ]
+    },
+    {
+      "id": "diabete",
+      "type": "qcm",
+      "consigne": "Quatrième dossier : une résidente diabétique est inhabituellement somnolente et ne répond pas comme d'habitude.",
+      "question": "Que faites-vous ?",
+      "options": [
+        { "texte": "Je reste avec elle et je fais alerter l'infirmière tout de suite, selon le protocole.", "juste": true },
+        { "texte": "Je lui donne un morceau de sucre de ma propre initiative." },
+        { "texte": "Je la laisse se reposer et je repasse plus tard." }
+      ],
+      "points": { "C2.1.6": 1 },
+      "retour": "Un état inhabituel se transmet rapidement ; ce que l'on donne ou non relève du protocole et de l'infirmière."
+    },
+    {
+      "id": "sans-alerte",
+      "type": "qcm",
+      "consigne": "Dernier dossier : un résident a des varices connues de l'équipe, sans aucun changement aujourd'hui (ni douleur, ni gonflement, ni rougeur).",
+      "question": "Que faites-vous ?",
+      "options": [
+        { "texte": "Rien d'urgent : je continue d'observer et je transmettrai tout changement.", "juste": true },
+        { "texte": "J'appelle tout de suite les secours." },
+        { "texte": "Je lui masse les jambes pour éviter que ça empire." }
+      ],
+      "points": { "C2.1.6": 1 },
+      "retour": "Une situation connue et stable n'appelle pas d'alerte : c'est le changement par rapport à l'habitude qui compte."
+    }
+  ],
+  "debriefing": [
+    "Qu'est-ce qui vous a fait alerter tout de suite dans le premier dossier ?",
+    "Pourquoi ne pas écrire « il a une gastro » ou « il lui faut un laxatif » ?",
+    "Pourquoi le dernier dossier ne demandait-il pas d'alerte ?"
+  ]
+}

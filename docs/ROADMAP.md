@@ -144,7 +144,8 @@ Bilan : les 14 compétences ont toutes au moins une mission, mais seulement 31 c
   Fait : `m126` (trousse de Mme Rose : hygiène, bien-être), `m127` (gilet, enfile-bouton, bas de contention : autonomie, pudeur), `m128` (déjeuner de M. Karim et fausse route de Mme Denise : relation sécurisante, gestes adaptés), en brouillon. Éléments repris de S4-05 et S4-06 ajoutés aux fiches des résidents.
 - [x] **T.7** Continence : habitudes, pudeur et intimité (C2.1.5), deuxième mission (S4-07).
   Fait : `m129` (habitudes plutôt que routine imposée, audit du trajet et des toilettes, aide limitée au vêtement, douleur annoncée transmise), avec trois critères communs de C2.1.5, en brouillon.
-- [ ] **T.8** Signes à observer : appareils digestif, urinaire, cardio-vasculaire, diabète, sans diagnostic (C2.1.6 « Respect des règles éthiques et du protocole ») (S5-01).
+- [x] **T.8** Signes à observer : appareils digestif, urinaire, cardio-vasculaire, diabète, sans diagnostic (C2.1.6 « Respect des règles éthiques et du protocole ») (S5-01).
+  Fait : `m130` (dossiers minute préparés par Claire : frontière du rôle, mollet gonflé, vomissements, transit, diabète, situation sans alerte), situations anonymes d'autres ailes, en brouillon.
 - [ ] **T.9** Entretien : rangement, qualité du résultat, dysfonctionnement et relais, effets personnels (C2.2.1), entretien périodique (S3-08, S3-09).
 - [ ] **T.10** Personnalisation : écoute de la personne et de sa famille, sécurisation de l'espace (C2.2.2) (S5-07, S6-02).
 - [ ] **T.11** Critères communs de C2.1.2 à C2.1.5 encore jamais cités (relation privilégiée et sécurisante, bien-être, pudeur, adaptation des gestes) : à répartir dans les missions T.4 à T.7.
