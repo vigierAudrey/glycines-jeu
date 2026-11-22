@@ -103,6 +103,8 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
   const niveauxPossibles = (): Niveau[] => (mission?.transfert ? ['N1', 'N2', 'N3', 'N4'] : ['N1', 'N2', 'N3']);
   let retours: string[] = [];
   let reussi = false;
+  // Une question à la fois (dialogue, transmission, tri) : la question rouverte par l'élève, sinon la première sans réponse.
+  let ouvert: string | null = null;
   let revele = true; // mode classe : la correction reste cachée jusqu'au bouton « Révéler »
   let aRevoir: string[] = [];
   let messageRelais = '';
@@ -154,6 +156,12 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
       </div>`;
   };
 
+  // Pastilles numérotées pour revenir sur une question déjà répondue (transmission, tri).
+  const pastilles = (ids: string[], repondu: (id: string) => boolean, courant: string | undefined) => `
+    <div class="pastilles" role="group" aria-label="Questions">
+      ${ids.map((id, n) => `<button type="button" class="pastille-question" aria-current="${id === courant}" data-rouvrir="${echapper(id)}" ${repondu(id) || id === courant ? '' : 'disabled'} aria-label="Question ${n + 1}${repondu(id) ? ', répondue' : ''}">${repondu(id) && id !== courant ? '✔' : n + 1}</button>`).join('')}
+    </div>`;
+
   // ---------- Contenu du panneau selon l'étape ----------
   const contenuEtape = (e: Etape): string => {
     switch (e.type) {
@@ -161,14 +169,25 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
         const choisis = CANAUX.every((c) => dialogue[c.cle] !== undefined);
         return `
           ${e.replique ? `<p class="replique a-lire"><strong>${echapper(noms.get(e.interlocuteur) ?? '')} :</strong> « ${echapper(e.replique)} »</p>` : ''}
-          ${CANAUX.map((c) => `
-            <fieldset class="canal">
-              <legend>${c.titre} <span class="canal__sous">(${c.sous})</span></legend>
+          ${CANAUX.map((c, n) => {
+            const courant = (ouvert && CANAUX.find((x) => x.cle === ouvert)) || CANAUX.find((x) => dialogue[x.cle] === undefined);
+            if (c === courant) {
+              return `
+            <fieldset class="canal canal--courant">
+              <legend>${n + 1} / 3 · ${c.titre} <span class="canal__sous">(${c.sous})</span></legend>
               ${dansLOrdreTire(`${e.id}:${c.cle}`, e[c.cle]).map(({ el: o, i }) => `
                 <button type="button" class="choix" aria-pressed="${dialogue[c.cle] === i}"
                         data-canal="${c.cle}" data-i="${i}">${echapper(o.texte)}</button>`).join('')}
-            </fieldset>`).join('')}
-          <button type="button" class="bouton bouton--principal" data-action="valider-dialogue" ${choisis ? '' : 'disabled'}>Je parle</button>`;
+            </fieldset>`;
+            }
+            const choix = dialogue[c.cle];
+            if (choix === undefined) return '';
+            return `
+            <button type="button" class="resume" data-rouvrir="${c.cle}">
+              <span class="resume__titre">✔ ${c.titre} :</span> ${echapper(e[c.cle][choix].texte)} <span class="resume__modifier">Modifier</span>
+            </button>`;
+          }).join('')}
+          ${choisis && !ouvert ? `<button type="button" class="bouton bouton--principal" data-action="valider-dialogue">Je parle</button>` : ''}`;
       }
       case 'observation': {
         const total = e.elements.length;
@@ -198,16 +217,21 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
         const faites = e.phrases.filter((ph) => natures[ph.id]).length;
         return `
           <p class="indice a-lire"><strong>Fait observé</strong> : ce que j'ai vu ou entendu. <strong>Jugement</strong> : un avis sur la personne. <strong>Interprétation</strong> : une cause ou une explication que je suppose.</p>
-          ${dansLOrdreTire(e.id, e.phrases).map(({ el: ph }) => `
-            <fieldset class="canal">
+          ${(() => {
+            const liste = dansLOrdreTire(e.id, e.phrases).map(({ el }) => el);
+            const courant = liste.find((ph) => ph.id === ouvert) ?? liste.find((ph) => !natures[ph.id]);
+            return pastilles(liste.map((ph) => ph.id), (id) => Boolean(natures[id]), courant?.id)
+              + (courant ? [courant] : []).map((ph) => `
+            <fieldset class="canal canal--courant">
               <legend class="a-lire">« ${echapper(ph.texte)} »</legend>
               <div class="rangee-boutons rangee-boutons--trois">
                 ${(['fait', 'jugement', 'interpretation'] as const).map((n) => `
                   <button type="button" class="choix" aria-pressed="${natures[ph.id] === n}" data-phrase="${echapper(ph.id)}" data-nature="${n}">${n === 'fait' ? 'Fait' : n === 'jugement' ? 'Jugement' : 'Interprétation'}</button>`).join('')}
               </div>
-            </fieldset>`).join('')}
+            </fieldset>`).join('');
+          })()}
           <p class="compteur">Phrases triées : ${faites} / ${e.phrases.length}</p>
-          <button type="button" class="bouton bouton--principal" data-action="valider-transmission" ${faites === e.phrases.length ? '' : 'disabled'}>Je transmets les faits</button>`;
+          ${faites === e.phrases.length ? `<button type="button" class="bouton bouton--principal" data-action="valider-transmission">Je transmets les faits</button>` : ''}`;
       }
       case 'ordre': {
         if (ordreAffiche.length !== e.elements.length) ordreAffiche = melangerSansOrdreDeDepart(e.elements.map((el) => el.id));
@@ -240,16 +264,21 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
         const ranges = e.elements.filter((el) => rangements[el.id]).length;
         return `
           <ul class="categories">${e.categories.map((c) => `<li class="a-lire"><strong>${echapper(c.libelle)}</strong>${c.aide ? ` : ${echapper(c.aide)}` : ''}</li>`).join('')}</ul>
-          ${dansLOrdreTire(e.id, e.elements).map(({ el }) => `
-            <fieldset class="canal">
+          ${(() => {
+            const liste = dansLOrdreTire(e.id, e.elements).map(({ el }) => el);
+            const courant = liste.find((el) => el.id === ouvert) ?? liste.find((el) => !rangements[el.id]);
+            return pastilles(liste.map((el) => el.id), (id) => Boolean(rangements[id]), courant?.id)
+              + (courant ? [courant] : []).map((el) => `
+            <fieldset class="canal canal--courant">
               <legend class="a-lire">${echapper(el.texte)}</legend>
               <div class="rangee-boutons rangee-boutons--trois">
                 ${e.categories.map((c) => `
                   <button type="button" class="choix" aria-pressed="${rangements[el.id] === c.id}" data-tri="${echapper(el.id)}" data-categorie="${echapper(c.id)}">${echapper(c.libelle)}</button>`).join('')}
               </div>
-            </fieldset>`).join('')}
+            </fieldset>`).join('');
+          })()}
           <p class="compteur">Rangés : ${ranges} / ${e.elements.length}</p>
-          <button type="button" class="bouton bouton--principal" data-action="valider-tri" ${ranges === e.elements.length ? '' : 'disabled'}>Valider mon rangement</button>`;
+          ${ranges === e.elements.length ? `<button type="button" class="bouton bouton--principal" data-action="valider-tri">Valider mon rangement</button>` : ''}`;
       }
       case 'relais':
         return `
@@ -317,6 +346,8 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
       </div>
       <div class="panneau__corps">${corps}</div>`;
     panneau.dataset.etape = phase === 'etape' ? e?.type ?? '' : phase;
+    // Une question à la fois : la question en cours (ou le bouton pour valider) reste visible sans chercher.
+    if (phase === 'etape') panneau.querySelector('.canal--courant, .panneau__corps > .bouton--principal')?.scrollIntoView({ block: 'nearest' });
     racine.dispatchEvent(new CustomEvent('panneau-affiche', { detail: panneau }));
     theatre.demanderRendu(); // les repères de la loupe se replacent après le dessin
   };
@@ -372,6 +403,7 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
   const continuer = () => {
     if (!mission || !etat) return;
     dialogue = {};
+    ouvert = null;
     classements = {};
     natures = {};
     ordreAffiche = [];
@@ -399,6 +431,7 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
     phase = 'intro';
     ordresTires.clear();
     dialogue = {};
+    ouvert = null;
     classements = {};
     natures = {};
     ordreAffiche = [];
@@ -450,8 +483,12 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
       if (mission && etape()?.type === 'observation') liens.cadrerZone(mission.lieu);
     }
     else if (d.action === 'quitter') quitter();
-    else if (d.canal) {
+    else if (d.rouvrir) {
+      ouvert = d.rouvrir;
+      afficher();
+    } else if (d.canal) {
       dialogue[d.canal] = Number(d.i);
+      ouvert = null;
       afficher();
     } else if (d.action === 'valider-dialogue') {
       envoyer({ type: 'dialogue', verbal: dialogue.verbal, paraverbal: dialogue.paraverbal, non_verbal: dialogue.non_verbal });
@@ -462,6 +499,7 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
     } else if (d.action === 'valider-observation') envoyer({ type: 'observation', classements });
     else if (d.phrase && d.nature) {
       natures[d.phrase] = d.nature as NaturePhrase;
+      ouvert = null;
       afficher();
     } else if (d.action === 'valider-transmission') envoyer({ type: 'transmission', classements: natures });
     else if (d.ordre) {
@@ -478,6 +516,7 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
     } else if (d.action === 'valider-selection') envoyer({ type: 'selection', choisis: [...choisis] });
     else if (d.tri && d.categorie) {
       rangements[d.tri] = d.categorie;
+      ouvert = null;
       afficher();
     } else if (d.action === 'valider-tri') envoyer({ type: 'tri', rangements });
     else if (d.decision !== undefined && e?.type === 'decision') envoyer({ type: 'decision', choix: Number(d.decision) });

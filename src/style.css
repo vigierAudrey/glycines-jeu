@@ -450,3 +450,12 @@ html, body {
 .mot:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }
 .definition { background: #eef4fb; border-left: 4px solid #3d7cc9; padding: 6px 10px; border-radius: 6px; margin: 4px 0 8px; }
 .definition__source { font-size: .85em; opacity: .75; }
+
+/* Une question à la fois : réponses déjà données en résumé, pastilles pour revenir en arrière */
+.resume { display: block; width: 100%; min-height: 44px; text-align: left; font: inherit; background: #f4f1f8; border: 1px solid #ddd5ea; border-radius: 10px; padding: 8px 12px; margin: 0 0 6px; cursor: pointer; color: inherit; }
+.resume__titre { font-weight: 600; }
+.resume__modifier { float: right; font-size: .85em; text-decoration: underline; opacity: .8; margin-left: 8px; }
+.pastilles { display: flex; flex-wrap: wrap; gap: 6px; margin: 4px 0 8px; }
+.pastille-question { min-width: 44px; min-height: 44px; border-radius: 22px; border: 2px solid #ddd5ea; background: #fff; font: inherit; font-weight: 600; cursor: pointer; color: inherit; }
+.pastille-question[aria-current="true"] { border-color: #6a4c93; background: #efe8f7; }
+.pastille-question:disabled { opacity: .45; cursor: default; }

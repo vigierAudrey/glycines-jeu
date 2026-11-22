@@ -298,3 +298,9 @@ Trois lignes par session : ce qui a été fait, ce qui reste à surveiller, la p
 - **Fait** : premières captures réelles (téléphone 390 px, ordinateur, mode classe, page enseignante), aucune erreur dans la console. Trois corrections : flèche ▸ sur le volet « où vous situez-vous ? », réponse choisie affichée pendant le débat en mode classe, « à cocher / à ne pas cocher » dans les retours de sélection. La fiche imprimée montre la variante jouée.
 - **À surveiller** : sur téléphone en portrait, le panneau couvre la moitié de l'aile (le conseil « tournez votre téléphone » s'affiche déjà).
 - **Prochaine tâche** : pousser sur GitHub quand Audrey le dit.
+
+## 22/11/2026 · Une question à la fois
+
+- **Fait** : à la demande d'Audrey, le dialogue montre « Ce que je dis », puis « Comment je le dis », puis « Ce que fait mon corps », avec les réponses déjà données en résumé (bouton « Modifier »). Transmission et tri : un élément à la fois, avec des pastilles numérotées pour revenir en arrière. Vérifié à 390 px : plus de défilement. `pnpm verifier` OK.
+- **À surveiller** : avec 8 éléments, les pastilles passent sur deux lignes sur téléphone.
+- **Prochaine tâche** : publier quand Audrey le dit.
