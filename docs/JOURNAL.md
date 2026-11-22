@@ -388,3 +388,9 @@ Trois lignes par session : ce qui a été fait, ce qui reste à surveiller, la p
 - **Fait** : six missions d'après PSE S6 : `m41` budget et règle d'or, `m42` crédit ou épargne, `m43` assurance et mutualisation, `m44` constat et déclaration de sinistre, `m45` achat en ligne et arnaques, `m46` DLC, DDM, allergènes et labels. La PSE compte maintenant 21 missions (brouillons), de S1 à S6.
 - **À surveiller** : m46 décide « garder ou jeter » pour les courses du collègue, pas « servir aux résidents » (choix prudent, noté pour Audrey).
 - **Prochaine tâche** : 5.2 (Bloc 1) ou tâches 🧑‍🏫 (validation des brouillons, test élèves).
+
+## 22/11/2026 · Audrey valide toutes les missions
+
+- **Fait** : à la demande d'Audrey, les 34 missions en brouillon (Bloc 2 m13 à m25, PSE m26 à m46) passent au statut « valide » : elles sont visibles par les élèves dans le jeu en ligne après publication.
+- **À surveiller** : les champs `note_pour_audrey` gardent l'historique de chaque mission.
+- **Prochaine tâche** : bilan de couverture du référentiel Bloc 2.

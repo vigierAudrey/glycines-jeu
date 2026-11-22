@@ -1,6 +1,6 @@
 {
   "id": "m22-reserve-seuil-alerte",
-  "statut": "brouillon",
+  "statut": "valide",
   "titre": "Vendredi matin à la réserve",
   "duree_min": 10,
   "sequence_requise": "S2",
