@@ -430,3 +430,9 @@ Trois lignes par session : ce qui a été fait, ce qui reste à surveiller, la p
 - **Fait** : mission `m118` (S1-01 et S1-06) : choisir les informations utiles, récentes et venues de plusieurs sources sur M. Karim, laisser la grille AGGIR à l'équipe, classer EHPAD, résidence autonomie, USLD et accueil de jour. Deux critères jamais cités (CT3.1, CT3.2). `pnpm verifier` OK.
 - **À surveiller** : mission en brouillon, à valider par Audrey.
 - **Prochaine tâche** : T.2 (droits, charte, laïcité).
+
+## 22/11/2026 · Droits, laïcité et prévention (tâche T.2)
+
+- **Fait** : `m119` (S2-05 : laïcité, charte, absence de jugement, recueil discret) et `m120` (S1-02 : flaque dans le couloir, enjeux et acteurs de la prévention). Trois critères CT3.1 jamais cités ; premier QCM dans une mission, vérifié à 390 px. `pnpm verifier` OK (220 tests).
+- **À surveiller** : missions en brouillon, à valider par Audrey.
+- **Prochaine tâche** : T.3 (fin de vie, bientraitance).

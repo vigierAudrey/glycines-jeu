@@ -1,0 +1,96 @@
+{
+  "id": "m120-couloir-prevenir-un-accident",
+  "statut": "brouillon",
+  "titre": "Prévenir un accident dans le couloir",
+  "duree_min": 15,
+  "sequence_requise": "S1",
+  "lieu": "couloir",
+  "personnages": ["joueur", "ash", "infirmiere", "cadre"],
+  "competences": [
+    { "code": "CT3.1", "critere": "Repérage des enjeux de la prévention." },
+    { "code": "CT3.1", "critere": "Identification des acteurs de la prévention." }
+  ],
+  "situation": "Dans le couloir de l'aile B, une flaque d'eau s'étend près de la salle à manger, juste avant le passage des résidents pour le repas.",
+  "objectif_eleve": "Repérer le danger, sécuriser sans créer un second danger, puis confier chaque problème au bon acteur de la prévention.",
+  "note_pour_audrey": "Brouillon (tâche T.2), d'après votre séquence 1, séance 2 (« qui fait quoi ? obligations, limites et prévention ») : activité 3 (repérer le danger, la personne exposée, une mesure immédiate sûre et une mesure durable, ne pas créer un second danger, tracer selon le protocole), carte de l'équipe et question du stock de gants. Deux critères CT3.1 encore jamais cités. Complément, hors cours : la flaque près de la salle à manger, et la barrière confiée au cadre de santé, qui appelle la maintenance (la maintenance n'est pas un personnage du jeu), et la fuite sous un lavabo à l'origine de la flaque.",
+  "etapes": [
+    {
+      "id": "flaque",
+      "type": "decision",
+      "consigne": "La flaque est sur le passage. Des résidents vont bientôt arriver pour le repas.",
+      "question": "Que faites-vous d'abord ?",
+      "choix": [
+        { "decision": "agir", "texte": "Je pose le panneau « sol glissant » et j'écarte le passage, sans quitter la zone tant que les résidents passent.", "points": { "CT3.1": 2 }, "retour": "Vous sécurisez d'abord, avec le matériel prévu, sans vous mettre en danger." },
+        { "decision": "adapter", "texte": "J'éponge vite avec une serviette de table, en me dépêchant.", "retour": "En vous précipitant sur un sol glissant, vous créez un second danger, et la serviette n'est pas le matériel prévu." },
+        { "decision": "alerter", "texte": "Je pars chercher quelqu'un et je laisse la flaque telle quelle.", "retour": "Pendant votre absence, un résident peut glisser : on sécurise d'abord la zone." }
+      ]
+    },
+    {
+      "id": "personne-exposee",
+      "type": "qcm",
+      "consigne": "Vous réfléchissez au risque.",
+      "question": "Qui est exposé à cette flaque ?",
+      "options": [
+        { "texte": "Les résidents, les visiteurs et les professionnels qui passent.", "juste": true },
+        { "texte": "Seulement les résidents qui marchent avec une canne." },
+        { "texte": "Personne, puisqu'elle est près d'un mur." }
+      ],
+      "points": { "CT3.1": 1 },
+      "retour": "Un sol glissant expose toutes les personnes qui passent : c'est l'enjeu de la prévention."
+    },
+    {
+      "id": "appeler-julien",
+      "type": "relais",
+      "consigne": "La zone est balisée. Allez trouver le professionnel qui nettoie et sèche les sols.",
+      "destinataire": "ash",
+      "points": { "CT3.1": 1 },
+      "retour": "Julien, agent de service hospitalier, s'occupe de l'entretien des sols avec le bon matériel.",
+      "retour_erreur": "Cette personne ne s'occupe pas de l'entretien des sols. Qui travaille au local ménage ?"
+    },
+    {
+      "id": "acteurs-prevention",
+      "type": "tri",
+      "consigne": "Vous faites le point sur les problèmes de la matinée. Rangez chacun chez le professionnel qui peut le régler.",
+      "categories": [
+        { "id": "ash", "libelle": "Julien, ASH" },
+        { "id": "infirmiere", "libelle": "Claire, infirmière" },
+        { "id": "cadre", "libelle": "M. Lemoine, cadre de santé" }
+      ],
+      "elements": [
+        { "id": "sol", "texte": "Un sol mouillé près de la salle à manger.", "categorie": "ash", "points": { "CT3.1": 1 }, "retour": "L'entretien des sols revient à l'ASH." },
+        { "id": "medicament", "texte": "Un médicament trouvé sur une table du salon.", "categorie": "infirmiere", "points": { "CT3.1": 1 }, "retour": "Un médicament se remet à l'infirmière, sans le donner ni le ranger soi-même." },
+        { "id": "barriere", "texte": "Une barrière de lit qui ne se bloque plus.", "categorie": "cadre", "points": { "CT3.1": 1 }, "retour": "Un matériel défectueux se signale au cadre, qui fait intervenir la maintenance." },
+        { "id": "gants", "texte": "Le stock de gants presque vide.", "categorie": "cadre", "points": { "CT3.1": 1 }, "retour": "M. Lemoine est chargé des stocks." }
+      ]
+    },
+    {
+      "id": "enjeu-gants",
+      "type": "qcm",
+      "consigne": "Un collègue trouve inutile de signaler le stock de gants « puisqu'il en reste encore ».",
+      "question": "Pourquoi signaler un stock presque vide ?",
+      "options": [
+        { "texte": "Pour éviter une rupture qui empêcherait d'appliquer le protocole.", "juste": true },
+        { "texte": "Pour que le cadre sache qui utilise trop de gants." },
+        { "texte": "Ce n'est pas utile tant qu'il en reste une boîte." }
+      ],
+      "points": { "CT3.1": 1 },
+      "retour": "Sans gants, le protocole d'hygiène ne peut plus être appliqué : signaler avant la rupture, c'est prévenir."
+    },
+    {
+      "id": "mesure-durable",
+      "type": "decision",
+      "consigne": "Julien a séché le sol. La flaque venait d'une fuite sous un lavabo voisin.",
+      "question": "Quelle mesure prenez-vous pour que cela ne recommence pas ?",
+      "choix": [
+        { "decision": "agir", "texte": "Je remplis la fiche de signalement selon le protocole, avec le lieu, l'heure et ce que j'ai vu.", "points": { "CT3.1": 2 }, "retour": "La trace écrite permet de faire réparer la fuite : c'est une mesure de prévention durable." },
+        { "decision": "adapter", "texte": "Rien : le sol est sec maintenant.", "retour": "La fuite est toujours là : le danger reviendra." },
+        { "decision": "alerter", "texte": "J'essaie de réparer la fuite moi-même.", "retour": "Une réparation ne fait pas partie de votre rôle : on signale, on ne répare pas seul." }
+      ]
+    }
+  ],
+  "debriefing": [
+    "Pourquoi avez-vous balisé la zone avant d'aller chercher Julien ?",
+    "Quels professionnels sont des acteurs de la prévention dans l'aile B ?",
+    "Quelle différence faites-vous entre une mesure immédiate et une mesure durable ?"
+  ]
+}

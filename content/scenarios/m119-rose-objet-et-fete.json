@@ -1,0 +1,121 @@
+{
+  "id": "m119-rose-objet-et-fete",
+  "statut": "brouillon",
+  "titre": "Un objet religieux, une fête, des droits",
+  "duree_min": 18,
+  "sequence_requise": "S2",
+  "lieu": "chambre-rose",
+  "personnages": ["joueur", "rose", "karim", "animatrice"],
+  "competences": [
+    { "code": "CT3.4", "critere": "Absence de jugement." },
+    { "code": "CT3.1", "critere": "Recueil d’informations dans le respect de la discrétion, de la réserve et du secret professionnel." }
+  ],
+  "situation": "Mme Rose veut garder un objet religieux discret près de son fauteuil. Un professionnel lui a dit que la laïcité interdit toute religion. Plus tard, M. Karim semble vouloir rester à l'écart de la fête collective.",
+  "objectif_eleve": "Distinguer règle commune, choix personnel et vie privée, répondre sans jugement, et recueillir le souhait de M. Karim avec discrétion.",
+  "note_pour_audrey": "Brouillon (tâche T.2), d'après votre séquence 2, séance 5 (« droits, altérité, laïcité et vie privée ») : la situation de Mme Rose et de son objet religieux, M. Karim et la fête, les principes de la charte et les cas A à D de la laïcité. Critère CT3.4 repris de cette séance ; critère CT3.1 « Recueil d’informations dans le respect de la discrétion… » encore jamais cité. Complément, hors cours : M. Karim est interrogé à part, devant le salon, et Inès, animatrice, est prévenue discrètement.",
+  "etapes": [
+    {
+      "id": "objet-rose",
+      "type": "dialogue",
+      "consigne": "Mme Rose tient un petit objet religieux dans ses mains. Elle a l'air contrariée.",
+      "interlocuteur": "rose",
+      "replique": "Je voudrais le garder près de mon fauteuil. Votre collègue m'a dit que la laïcité interdisait la religion ici.",
+      "verbal": [
+        { "texte": "Je comprends que cet objet compte pour vous. Vous êtes dans votre chambre : je vérifie le règlement, et sauf danger, vous pouvez le garder.", "confiance": 2, "points": { "CT3.4": 2 }, "retour": "Vous respectez sa liberté de conscience dans son espace privé, sans jugement, et vous vérifiez la règle commune." },
+        { "texte": "Mon collègue a raison, il vaut mieux le ranger dans le placard.", "confiance": -2, "retour": "La laïcité n'interdit pas les croyances du résident : elle protège sa liberté de conscience." },
+        { "texte": "Moi aussi j'ai le même, c'est la vraie croyance.", "confiance": -1, "retour": "Le professionnel reste neutre : il ne met en avant ni sa croyance ni son absence de croyance." }
+      ],
+      "paraverbal": [
+        { "texte": "Voix calme et neutre.", "confiance": 1, "points": { "CT3.4": 1 }, "retour": "Une voix neutre montre que vous ne jugez pas son choix." },
+        { "texte": "Voix gênée, je change vite de sujet.", "confiance": -1, "retour": "La gêne peut lui faire croire que son choix pose problème." },
+        { "texte": "Ton amusé.", "confiance": -2, "retour": "Un ton moqueur est un jugement, même sans mots." }
+      ],
+      "non_verbal": [
+        { "texte": "Je me place face à elle, à sa hauteur, et je regarde l'objet avec respect.", "confiance": 1, "points": { "CT3.4": 1 }, "retour": "Face à elle, elle vous entend bien, et votre attitude montre du respect." },
+        { "texte": "Je prends l'objet de ses mains pour le regarder.", "confiance": -2, "retour": "Prendre un objet personnel sans son accord ne respecte pas son intimité." },
+        { "texte": "Je hausse les épaules.", "confiance": -1, "retour": "Ce geste peut être compris comme du mépris." }
+      ]
+    },
+    {
+      "id": "laicite-cas",
+      "type": "tri",
+      "consigne": "Avant d'en parler à l'équipe, vous relisez quatre conduites possibles. Rangez chacune.",
+      "categories": [
+        { "id": "respecte", "libelle": "Respecte la laïcité" },
+        { "id": "ne-respecte-pas", "libelle": "Ne respecte pas la laïcité" }
+      ],
+      "elements": [
+        { "id": "cas-a", "texte": "Respecter un objet religieux dans l'espace privé, s'il ne crée pas de danger.", "categorie": "respecte", "points": { "CT3.4": 1 }, "retour": "La laïcité protège la liberté de conscience de la personne." },
+        { "id": "cas-b", "texte": "Convaincre Mme Rose d'adopter la croyance du professionnel.", "categorie": "ne-respecte-pas", "points": { "CT3.4": 1 }, "retour": "Le professionnel n'impose ni croyance ni absence de croyance." },
+        { "id": "cas-c", "texte": "Proposer une solution compatible avec le règlement pour un moment de recueillement.", "categorie": "respecte", "points": { "CT3.4": 1 }, "retour": "Vous cherchez une solution avec la personne, dans le respect des règles communes." },
+        { "id": "cas-d", "texte": "Refuser tout échange en raison de la religion supposée de la personne.", "categorie": "ne-respecte-pas", "points": { "CT3.4": 1 }, "retour": "C'est un jugement fondé sur une supposition : la personne n'est pas reconnue dans sa différence." }
+      ]
+    },
+    {
+      "id": "principes-charte",
+      "type": "tri",
+      "consigne": "L'équipe vous demande de relier quelques situations aux principes de la charte des droits et libertés de la personne âgée.",
+      "categories": [
+        { "id": "dignite", "libelle": "Dignité et intimité" },
+        { "id": "vie-privee", "libelle": "Respect de la vie privée" },
+        { "id": "libre-choix", "libelle": "Libre choix et participation" },
+        { "id": "relations", "libelle": "Maintien des relations" }
+      ],
+      "elements": [
+        { "id": "porte-ouverte", "texte": "La porte reste ouverte pendant un échange intime.", "categorie": "dignite", "points": { "CT3.4": 1 }, "retour": "Fermer la porte protège la dignité et l'intimité de la personne." },
+        { "id": "courrier", "texte": "Un courrier est lu sans l'accord du résident.", "categorie": "vie-privee", "points": { "CT3.4": 1 }, "retour": "Le courrier fait partie de la vie privée : on ne le lit pas sans accord." },
+        { "id": "activite-imposee", "texte": "Une activité est imposée à un résident qui n'en veut pas.", "categorie": "libre-choix", "points": { "CT3.4": 1 }, "retour": "La personne choisit de participer ou non." },
+        { "id": "visite-proche", "texte": "Un proche vient rendre visite à un résident.", "categorie": "relations", "points": { "CT3.4": 1 }, "retour": "La charte protège le maintien des liens avec les proches." }
+      ]
+    },
+    {
+      "id": "references-personnelles",
+      "type": "qcm",
+      "consigne": "Un collègue vous demande pourquoi l'équipe parle de « références personnelles ».",
+      "question": "Pourquoi un professionnel identifie-t-il ses propres références (opinions, habitudes, valeurs) ?",
+      "options": [
+        { "texte": "Pour ne pas les imposer et ne pas influencer l'accompagnement.", "juste": true },
+        { "texte": "Pour les faire connaître aux résidents." },
+        { "texte": "Pour choisir les résidents qui lui ressemblent." }
+      ],
+      "points": { "CT3.4": 1 },
+      "retour": "Repérer ses opinions, habitudes et valeurs évite qu'elles dirigent votre intervention."
+    },
+    {
+      "id": "souhait-karim",
+      "type": "decision",
+      "consigne": "Au salon, la fête commence. M. Karim reste près de la porte, en retrait. Plusieurs résidents et une famille sont autour de vous.",
+      "question": "Comment recueillez-vous son souhait ?",
+      "choix": [
+        { "decision": "agir", "texte": "Je m'approche de lui et je lui demande à voix basse, à l'écart, ce qu'il préfère.", "points": { "CT3.1": 2, "CT3.4": 1 }, "retour": "Vous recueillez son souhait avec discrétion : les autres n'ont pas à connaître ses raisons." },
+        { "decision": "adapter", "texte": "Je lui demande devant tout le monde pourquoi il ne vient pas danser.", "retour": "Devant le groupe, la question l'expose : le recueil d'une information doit rester discret." },
+        { "decision": "alerter", "texte": "J'annonce à voix haute à l'animatrice que M. Karim ne veut pas participer.", "retour": "Le souhait de M. Karim n'a pas à être annoncé devant les autres résidents et la famille." }
+      ]
+    },
+    {
+      "id": "temps-calme",
+      "type": "decision",
+      "consigne": "M. Karim vous répond doucement : « Je préfère rester au calme pendant la fête. »",
+      "question": "Que faites-vous ?",
+      "choix": [
+        { "decision": "agir", "texte": "Je respecte son choix et je lui propose un endroit calme, puis je préviens l'animatrice discrètement.", "points": { "CT3.4": 2, "CT3.1": 1 }, "retour": "Son choix est respecté sans jugement, et l'information est transmise à la bonne personne, sans être exposée." },
+        { "decision": "adapter", "texte": "J'insiste un peu : une fête, ça fait toujours du bien.", "retour": "Insister impose votre propre idée de ce qui est bon pour lui." },
+        { "decision": "alerter", "texte": "Je dis à sa famille qu'il refuse les activités.", "retour": "Vous n'avez pas à rapporter son choix à d'autres personnes sans raison." }
+      ]
+    },
+    {
+      "id": "prevenir-ines",
+      "type": "relais",
+      "consigne": "Allez prévenir discrètement la personne qui organise la fête.",
+      "destinataire": "animatrice",
+      "points": { "CT3.1": 1 },
+      "retour": "Inès, animatrice, organise la fête : elle peut prévoir un temps calme pour M. Karim.",
+      "retour_erreur": "Cette personne n'organise pas la fête. Qui anime les activités collectives ?"
+    }
+  ],
+  "debriefing": [
+    "Que protège la laïcité pour Mme Rose ?",
+    "Pourquoi avez-vous recueilli le souhait de M. Karim à l'écart du groupe ?",
+    "Quelle de vos propres références aurait pu influencer votre réponse ?"
+  ]
+}
