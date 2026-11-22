@@ -424,3 +424,9 @@ Trois lignes par session : ce qui a été fait, ce qui reste à surveiller, la p
 - **Fait** : 23 entraînements de PSE (S1 à S6), générés de la même façon à partir des activités interactives ; le module de chaque séance des séquences 4 à 6 est celui des missions déjà écrites. Le jeu compte 117 activités : 26 missions et 48 entraînements en Bloc 2, 21 missions et 23 entraînements en PSE. `pnpm verifier` OK (217 tests).
 - **À surveiller** : critères choisis automatiquement (voir les notes) ; la Phase 4 quater est terminée.
 - **Prochaine tâche** : Phase 4 ter (T.1).
+
+## 22/11/2026 · Structures d'accueil et AGGIR (tâche T.1)
+
+- **Fait** : mission `m118` (S1-01 et S1-06) : choisir les informations utiles, récentes et venues de plusieurs sources sur M. Karim, laisser la grille AGGIR à l'équipe, classer EHPAD, résidence autonomie, USLD et accueil de jour. Deux critères jamais cités (CT3.1, CT3.2). `pnpm verifier` OK.
+- **À surveiller** : mission en brouillon, à valider par Audrey.
+- **Prochaine tâche** : T.2 (droits, charte, laïcité).

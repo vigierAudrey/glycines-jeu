@@ -1,0 +1,96 @@
+{
+  "id": "m118-karim-reevaluation-autonomie",
+  "statut": "brouillon",
+  "titre": "Préparer la réévaluation de l'autonomie",
+  "duree_min": 15,
+  "sequence_requise": "S1",
+  "lieu": "poste-de-soins",
+  "personnages": ["joueur", "infirmiere", "cadre"],
+  "competences": [
+    { "code": "CT3.2", "critere": "Sélection pertinente des données." },
+    { "code": "CT3.1", "critere": "Sélection pertinente des données, informations récentes et diversifiées." }
+  ],
+  "situation": "L'équipe va réévaluer l'autonomie de M. Karim. Claire, infirmière, vous demande de rassembler ce que vous savez de lui. Le même jour, M. Lemoine prépare la visite d'une famille qui hésite entre plusieurs structures d'accueil.",
+  "objectif_eleve": "Choisir les informations utiles, récentes et venues de plusieurs sources, sans calculer vous-même un GIR, et reconnaître ce que propose chaque structure d'accueil.",
+  "note_pour_audrey": "Brouillon (tâche T.1), d'après votre séquence 1, séance 6 (« degré d'autonomie, AGGIR et environnement facilitant » : ce que M. Karim fait seul, avec aide partielle, et « je ne calcule pas seul un GIR ») et séance 1 (les quatre structures d'accueil, la source fiable). Deux critères encore jamais cités : CT3.2 « Sélection pertinente des données » et CT3.1 « Sélection pertinente des données, informations récentes et diversifiées ». Complément, hors cours : la demande de Claire, la fiche de l'an dernier et la remarque d'un autre résident (ce ne sont pas des faits médicaux sur M. Karim, ce sont des informations à écarter), et la question de la famille sur une place libre, confiée à M. Lemoine.",
+  "etapes": [
+    {
+      "id": "demande-claire",
+      "type": "dialogue",
+      "consigne": "Claire, infirmière, vous attend au poste de soins.",
+      "interlocuteur": "infirmiere",
+      "replique": "L'équipe réévalue l'autonomie de M. Karim cette semaine. Vous le voyez tous les matins : pouvez-vous me dire ce qu'il fait seul et ce pour quoi il a besoin d'aide ?",
+      "verbal": [
+        { "texte": "Oui. Je vous donne ce que j'ai observé ces derniers jours, acte par acte, et je relis aussi son projet de vie.", "confiance": 2, "points": { "CT3.2": 2 }, "retour": "Vous partez d'observations récentes, acte par acte, et d'un document d'accompagnement : vos données seront utiles à l'équipe." },
+        { "texte": "Il est plutôt dépendant, je pense qu'il est GIR 3.", "confiance": -2, "retour": "Un GIR ne se calcule pas seul : l'équipe s'appuie sur des observations précises, pas sur une impression globale." },
+        { "texte": "Je ne sais pas trop, il faudrait demander à quelqu'un d'autre.", "confiance": -1, "retour": "Vous le voyez chaque matin : vos observations comptent, même si vous ne décidez pas du niveau d'autonomie." }
+      ],
+      "paraverbal": [
+        { "texte": "Voix posée, je prends le temps de rassembler mes idées.", "confiance": 1, "points": { "CT3.2": 1 }, "retour": "Prendre le temps aide à donner des informations exactes." },
+        { "texte": "Voix rapide, je dis tout ce qui me vient.", "confiance": -1, "retour": "Tout dire d'un coup mélange l'utile et l'inutile." },
+        { "texte": "Voix hésitante, à peine audible.", "confiance": 0, "retour": "Claire risque de ne pas bien entendre vos observations." }
+      ],
+      "non_verbal": [
+        { "texte": "Je m'assieds à côté de Claire et j'ouvre le dossier avec elle.", "confiance": 1, "points": { "CT3.2": 1 }, "retour": "Regarder le dossier ensemble permet de relier vos observations aux documents de l'équipe." },
+        { "texte": "Je réponds en continuant de ranger le chariot.", "confiance": -1, "retour": "Cette attitude montre que vous n'êtes pas vraiment disponible." },
+        { "texte": "Je regarde l'horloge.", "confiance": -1, "retour": "Cela peut donner l'impression d'être pressé." }
+      ]
+    },
+    {
+      "id": "choisir-informations",
+      "type": "selection",
+      "consigne": "Vous relisez ce que vous avez sous la main sur M. Karim.",
+      "question": "Cochez les informations à donner à Claire pour la réévaluation.",
+      "elements": [
+        { "id": "toilette-visage", "texte": "Ce matin, il a réalisé seul sa toilette du visage (votre observation).", "attendu": true, "points": { "CT3.2": 1, "CT3.1": 1 }, "retour": "Observation récente et précise, sur un acte : à transmettre." },
+        { "id": "vetements", "texte": "Il a besoin d'une aide partielle pour choisir ses vêtements (votre observation de la semaine).", "attendu": true, "points": { "CT3.2": 1, "CT3.1": 1 }, "retour": "Observation récente, sur un autre acte : l'autonomie se décrit acte par acte." },
+        { "id": "canne", "texte": "Il se déplace avec une canne (projet de vie et observation de l'équipe).", "attendu": true, "points": { "CT3.2": 1, "CT3.1": 1 }, "retour": "Information confirmée par deux sources différentes : elle est fiable et utile." },
+        { "id": "fiche-ancienne", "texte": "Une fiche de l'an dernier, sans nom d'auteur, indique « se déplace seul sans aide ».", "attendu": false, "points": { "CT3.1": 1 }, "retour": "Information ancienne et sans auteur : elle ne dit pas comment il se déplace aujourd'hui." },
+        { "id": "remarque-resident", "texte": "Un autre résident vous a dit : « M. Karim ne fait plus rien tout seul. »", "attendu": false, "points": { "CT3.1": 1 }, "retour": "Remarque non vérifiée et générale : elle ne décrit aucun acte précis." },
+        { "id": "carnet-recettes", "texte": "Il tient à garder son carnet de recettes à portée de main.", "attendu": false, "points": { "CT3.2": 1 }, "retour": "Information vraie et importante pour sa chambre, mais elle ne sert pas à décrire son autonomie dans les actes." }
+      ]
+    },
+    {
+      "id": "calcul-gir",
+      "type": "decision",
+      "consigne": "Claire vous montre la grille AGGIR utilisée par l'équipe. Une case reste vide pour le résultat.",
+      "question": "Que faites-vous ?",
+      "choix": [
+        { "decision": "agir", "texte": "Je donne mes observations acte par acte, et je laisse l'équipe utiliser la grille et décider du résultat.", "points": { "CT3.2": 2 }, "retour": "Vous exploitez les informations sans faire un calcul expert : la grille AGGIR est remplie par les professionnels habilités." },
+        { "decision": "adapter", "texte": "Je remplis la case moi-même d'après la difficulté qu'il a pour ses vêtements.", "retour": "Une seule difficulté ne suffit pas à conclure sur l'autonomie globale, et le calcul du GIR ne fait pas partie de votre rôle." },
+        { "decision": "alerter", "texte": "Je refuse de regarder la grille, ce n'est pas mon travail.", "retour": "Vous ne calculez pas le GIR, mais vos observations aident l'équipe à l'apprécier." }
+      ]
+    },
+    {
+      "id": "quatre-structures",
+      "type": "tri",
+      "consigne": "M. Lemoine, cadre de santé, prépare la visite d'une famille et vous demande de l'aider à classer quatre situations. Rangez chaque situation dans la structure qui lui correspond.",
+      "categories": [
+        { "id": "ehpad", "libelle": "EHPAD" },
+        { "id": "residence", "libelle": "Résidence autonomie" },
+        { "id": "usld", "libelle": "USLD" },
+        { "id": "accueil-jour", "libelle": "Accueil de jour" }
+      ],
+      "elements": [
+        { "id": "s-ehpad", "texte": "Une personne dépendante qui a besoin d'un hébergement permanent et d'un accompagnement au quotidien.", "categorie": "ehpad", "points": { "CT3.1": 1 }, "retour": "L'EHPAD offre un hébergement permanent et accompagne des personnes dépendantes." },
+        { "id": "s-residence", "texte": "Une personne encore autonome qui veut un logement avec des services.", "categorie": "residence", "points": { "CT3.1": 1 }, "retour": "La résidence autonomie propose un logement et des services à des personnes encore autonomes." },
+        { "id": "s-usld", "texte": "Une personne qui a besoin de soins médicaux importants et d'une surveillance continue.", "categorie": "usld", "points": { "CT3.1": 1 }, "retour": "L'USLD assure des soins médicaux importants et une surveillance continue." },
+        { "id": "s-jour", "texte": "Une personne qui vit chez elle et vient seulement pendant la journée.", "categorie": "accueil-jour", "points": { "CT3.1": 1 }, "retour": "L'accueil de jour accueille en journée, sans hébergement permanent." }
+      ]
+    },
+    {
+      "id": "information-manquante",
+      "type": "relais",
+      "consigne": "La famille veut savoir si une place sera libre le mois prochain. Vous ne le savez pas. Allez trouver la personne qui peut répondre.",
+      "destinataire": "cadre",
+      "points": { "CT3.1": 1 },
+      "retour": "M. Lemoine, cadre de santé, connaît les admissions : c'est la personne ressource pour cette question.",
+      "retour_erreur": "Cette personne ne gère pas les admissions. Qui organise l'accueil des nouveaux résidents ?"
+    }
+  ],
+  "debriefing": [
+    "Quelles informations avez-vous écartées, et pourquoi ?",
+    "Pourquoi n'avez-vous pas rempli vous-même le résultat de la grille AGGIR ?",
+    "Comment reconnaissez-vous un accueil de jour d'un EHPAD ?"
+  ]
+}

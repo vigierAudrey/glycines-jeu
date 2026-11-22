@@ -130,7 +130,8 @@ Règle commune : toute nouvelle activité s'appuie sur une situation réelle des
 
 Bilan : les 14 compétences ont toutes au moins une mission, mais seulement 31 critères sur 71 sont évalués, et plusieurs notions (savoirs associés) ne sont jamais travaillées. Détail dans `docs/VERIFICATION_REFERENTIEL.md`. Chaque mission écrite d'après la séance du cours indiquée, avec un critère encore jamais cité.
 
-- [ ] **T.1** Structures d'accueil et outils d'évaluation de l'autonomie (AGGIR) : CT3.1 « Sélection pertinente des données, informations récentes et diversifiées », CT3.2 « Sélection pertinente des données » (S1-01, S1-06).
+- [x] **T.1** Structures d'accueil et outils d'évaluation de l'autonomie (AGGIR) : CT3.1 « Sélection pertinente des données, informations récentes et diversifiées », CT3.2 « Sélection pertinente des données » (S1-01, S1-06).
+  Fait : `m118` (réévaluation de l'autonomie de M. Karim : choisir les informations utiles et récentes, ne pas calculer le GIR, classer les quatre structures), en brouillon.
 - [ ] **T.2** Droits, charte, laïcité, éthique et déontologie (CT3.4) ; recueil d'informations dans le respect du secret, enjeux et acteurs de la prévention (CT3.1) (S2-05, S1-02).
 - [ ] **T.3** Fin de vie, cultures de la mort, directives anticipées (CT3.4) ; bientraitance et maltraitance, deuxième mission (S5-05, S5-06).
 - [ ] **T.4** Réfection de lit inoccupé : hygiène et ergonomie, protocoles, bionettoyage du lit (C2.1.1) (S3-03, S3-04).
