@@ -8,7 +8,7 @@
   "personnages": ["louis", "joueur", "aide-soignante"],
   "competences": [
     { "code": "CT3.3", "critere": "Prise en compte du contexte de l’activité." },
-    { "code": "C2.1.3", "critere": "Respect des règles d’hygiène, de sécurité et d’ergonomie." },
+    { "code": "C2.1.3", "critere": "Respect des règles d’hygiène et de sécurité, d’ergonomie." },
     { "code": "CT4.1", "critere": "Adaptation du mode de relation à la situation de la personne âgée." }
   ],
   "situation": "Il est le matin. M. Louis nécessite un lève-personne et deux professionnels formés pour être levé.",

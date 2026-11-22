@@ -9,7 +9,7 @@
   "competences": [
     { "code": "C2.1.3", "critere": "Respect du rythme, des habitudes et des attentes de la personne." },
     { "code": "CT4.2", "critere": "Observation de ses habitudes." },
-    { "code": "CT4.1", "critere": "Intervention et attitude adaptées pour amener la personne âgée à participer aux activités de la vie quotidienne." }
+    { "code": "CT4.1", "critere": "Intervention et attitude adaptée pour amener la personne âgée à participer aux activités de la vie quotidienne." }
   ],
   "situation": "Il est le matin. Mme Rose aime s'installer au fauteuil pour aller au patio à cette heure-là.",
   "objectif_eleve": "Proposer l'habitude du matin de Mme Rose, puis respecter ses choix pendant la matinée.",

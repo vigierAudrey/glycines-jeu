@@ -7,7 +7,7 @@
   "lieu": "chambre-karim",
   "personnages": ["joueur", "karim", "ash"],
   "competences": [
-    { "code": "CT3.2", "critere": "Repérage du degré d’autonomie de la personne âgée et prise en compte de ces éléments pour la mise en œuvre de ses actions." },
+    { "code": "CT3.2", "critere": "Repérage du degré d’autonomie de la personne âgée, prise en compte de ces éléments pour la mise en œuvre de ses actions." },
     { "code": "CT3.3", "critere": "Prise en compte du contexte de l’activité." }
   ],
   "situation": "M. Karim réalise seul sa toilette du visage, a besoin d'une aide partielle pour choisir ses vêtements et se déplace avec une canne. Une table gêne son trajet dans la chambre.",

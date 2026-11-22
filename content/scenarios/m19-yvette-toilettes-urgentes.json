@@ -7,7 +7,7 @@
   "lieu": "chambre-yvette",
   "personnages": ["joueur", "yvette", "ash"],
   "competences": [
-    { "code": "C2.1.5", "critere": "Relation privilégiée et sécurisante favorisant l’autonomie." },
+    { "code": "C2.1.5", "critere": "Relation privilégiée et sécurisante." },
     { "code": "CT3.3", "critere": "Prise en compte du contexte de l’activité." }
   ],
   "situation": "Mme Yvette va habituellement aux toilettes au réveil et avant le déjeuner. Là, en dehors de ces horaires, elle vous dit qu'elle doit y aller vite. Un tapis relevé gêne le trajet et la porte de la salle d'eau ferme mal.",

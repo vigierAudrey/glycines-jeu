@@ -8,7 +8,7 @@
   "personnages": ["denise", "joueur", "cadre"],
   "competences": [
     { "code": "CT3.1", "critere": "Vérification de la fiabilité des sources d’information." },
-    { "code": "CT3.2", "critere": "Repérage du degré d’autonomie de la personne âgée et prise en compte de ces éléments pour la mise en œuvre de ses actions." },
+    { "code": "CT3.2", "critere": "Repérage du degré d’autonomie de la personne âgée, prise en compte de ces éléments pour la mise en œuvre de ses actions." },
     { "code": "CT3.3", "critere": "Prise en compte du contexte de l’activité." }
   ],
   "situation": "Mme Denise arrive aux Glycines. Son dossier, un échange avec sa fille et l'observation de la chambre donnent des informations complémentaires.",

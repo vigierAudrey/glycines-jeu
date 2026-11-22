@@ -194,3 +194,9 @@ On ne redessine que si la vue change (batterie des téléphones). Les étiquette
 - **Décision** : la PSE a son propre fichier `content/referentiel/pse.json` (modules C4 à C7, objectifs ciblés recopiés mot pour mot), à côté de `bloc2.json` qui reste intouché. Les missions PSE (`discipline: "PSE"`) sont toujours ouvertes et rangées dans une rubrique à part.
 - **Pourquoi** : la progression de PSE n'est pas celle du Bloc 2, et le sélecteur « séquence vue » ne concerne que le Bloc 2. Le programme de PSE n'a pas de niveaux N1 à N4 : on garde ceux du jeu pour que la relève reste la même (signalé dans le fichier).
 - **Comment** : validateur (pas de mélange des compétences), `estDebloquee`, liste des missions, page enseignante.
+
+## D-034 · Critères du Bloc 2 alignés mot pour mot sur le Journal officiel · 22/11/2026
+
+- **Décision** : avec l'accord d'Audrey, `content/referentiel/bloc2.json` a été corrigé : 17 libellés de critères repris exactement du JO du 14 mars 2023 (le fichier venait de la matrice des cours, qui avait reformulé certains critères), et le critère fusionné « Relation privilégiée et sécurisante favorisant l’autonomie » séparé en deux, comme dans le JO.
+- **Pourquoi** : une mission doit citer le critère officiel mot pour mot ; vérification dans `docs/VERIFICATION_REFERENTIEL.md`.
+- **Comment** : comparaison automatique avec le texte du PDF officiel (68 critères sur 68 retrouvés), missions mises à jour, validateur et tests au vert. La règle « ne jamais modifier `bloc2.json` » reste valable : toute autre modification demande à nouveau l'accord d'Audrey.

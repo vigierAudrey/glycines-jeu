@@ -2,7 +2,7 @@
   "diplome": "CAP Agent accompagnant au grand âge",
   "bloc": "Bloc 2 : Promotion de l’autonomie de la personne dans son espace privé",
   "texte_officiel": "Arrêté du 6 février 2023, publié au Journal officiel du 14 mars 2023",
-  "origine": "Extrait de MATRICE_REFERENTIEL_EXHAUSTIVE.json (cours CAP AAGA - Bloc 2, version 2026-08-16). Ne pas modifier à la main : c'est la source de vérité du jeu.",
+  "origine": "Extrait de MATRICE_REFERENTIEL_EXHAUSTIVE.json (cours CAP AAGA - Bloc 2, version 2026-08-16). Ne pas modifier à la main : c'est la source de vérité du jeu. Critères d’évaluation alignés mot pour mot sur le JO du 14 mars 2023 le 22/11/2026, avec l’accord d’Audrey (voir docs/VERIFICATION_REFERENTIEL.md et D-034).",
   "avertissement": "Le libellé CT3.4 est reconstitué à partir de la progression et de la ligne du tableau dont l’en-tête a été perdu lors de l’extraction ; les performances, critères, savoirs et limites sont transcrits des lignes 1417-1473.",
   "niveaux": {
     "N1": "Réalise avec aide constante.",
@@ -24,11 +24,11 @@
       "criteres_officiels": [
         "Présentation du rôle des différents membres de l’établissement, du service et de l’équipe.",
         "Recueil d’informations dans le respect de la discrétion, de la réserve et du secret professionnel.",
-        "Identification des ressources et des contraintes du cadre de l’intervention, dont celles relatives aux risques professionnels.",
+        "Identification des ressources et des contraintes du cadre de l’intervention dont celles relatives aux risques professionnels.",
         "Repérage des enjeux de la prévention.",
         "Identification des acteurs de la prévention.",
         "Prise en compte de ces éléments pour la mise en œuvre de l’action.",
-        "Sélection pertinente de données et d’informations récentes et diversifiées.",
+        "Sélection pertinente des données, informations récentes et diversifiées.",
         "Vérification de la fiabilité des sources d’information."
       ],
       "savoirs_associes": [
@@ -67,9 +67,9 @@
         "Prendre en compte les documents d’accompagnement, dont le projet de vie."
       ],
       "criteres_officiels": [
-        "Repérage du degré d’autonomie de la personne âgée et prise en compte de ces éléments pour la mise en œuvre de ses actions.",
+        "Repérage du degré d’autonomie de la personne âgée, prise en compte de ces éléments pour la mise en œuvre de ses actions.",
         "Sélection pertinente des données.",
-        "Utilisation d’informations récentes et diversifiées."
+        "Informations récentes et diversifiées."
       ],
       "savoirs_associes": [
         {
@@ -185,8 +185,8 @@
         "Établir des repères verbaux et non verbaux permettant la sécurisation de la personne âgée."
       ],
       "criteres_officiels": [
-        "Intervention et attitude adaptées pour amener la personne âgée à participer aux activités de la vie quotidienne.",
-        "Utilisation d’un ton, d’un vocabulaire ou d’un outil adapté au niveau de compréhension de la personne.",
+        "Intervention et attitude adaptée pour amener la personne âgée à participer aux activités de la vie quotidienne.",
+        "Utilisation d’un ton et d’un vocabulaire ou d’un outil adapté au niveau de compréhension de la personne.",
         "Adaptation du mode de relation à la situation de la personne âgée."
       ],
       "savoirs_associes": [
@@ -240,8 +240,8 @@
       ],
       "criteres_officiels": [
         "Respect des habitudes et des attentes de la personne.",
-        "Respect des règles d’hygiène, de sécurité et d’ergonomie.",
-        "Respect des protocoles et des fiches techniques.",
+        "Respect des règles d’hygiène et de sécurité, d’ergonomie.",
+        "Respect des protocoles, des fiches techniques.",
         "Bionettoyage du lit."
       ],
       "savoirs_associes": [
@@ -267,7 +267,7 @@
         "Relation privilégiée et sécurisante.",
         "Prise en compte du bien-être.",
         "Relation favorisant l’autonomie.",
-        "Respect des règles d’hygiène, de sécurité et d’ergonomie.",
+        "Respect des règles d’hygiène et de sécurité, d’ergonomie.",
         "Respect de la pudeur et de l’intimité.",
         "Adaptation des gestes aux capacités et aux besoins de la personne âgée."
       ],
@@ -290,9 +290,10 @@
       ],
       "criteres_officiels": [
         "Respect du rythme, des habitudes et des attentes de la personne.",
-        "Relation privilégiée et sécurisante favorisant l’autonomie.",
+        "Relation privilégiée et sécurisante.",
         "Prise en compte du bien-être.",
-        "Respect des règles d’hygiène, de sécurité et d’ergonomie.",
+        "Relation favorisant l’autonomie.",
+        "Respect des règles d’hygiène et de sécurité, d’ergonomie.",
         "Respect de la pudeur et de l’intimité.",
         "Adaptation des gestes aux capacités et aux besoins de la personne âgée."
       ],
@@ -322,9 +323,10 @@
       ],
       "criteres_officiels": [
         "Respect du rythme, des habitudes et des attentes de la personne.",
-        "Relation privilégiée et sécurisante favorisant l’autonomie.",
+        "Relation privilégiée et sécurisante.",
         "Prise en compte du bien-être.",
-        "Respect des règles d’hygiène, de sécurité et d’ergonomie.",
+        "Relation favorisant l’autonomie.",
+        "Respect des règles d’hygiène et de sécurité, d’ergonomie.",
         "Respect de la pudeur et de l’intimité.",
         "Adaptation des gestes aux capacités et aux besoins de la personne âgée."
       ],
@@ -346,9 +348,10 @@
       ],
       "criteres_officiels": [
         "Respect du rythme, des habitudes et des attentes de la personne.",
-        "Relation privilégiée et sécurisante favorisant l’autonomie.",
+        "Relation privilégiée et sécurisante.",
         "Prise en compte du bien-être.",
-        "Respect des règles d’hygiène, de sécurité et d’ergonomie.",
+        "Relation favorisant l’autonomie.",
+        "Respect des règles d’hygiène et de sécurité, d’ergonomie.",
         "Respect de la pudeur et de l’intimité.",
         "Adaptation des gestes aux capacités et aux besoins de la personne âgée."
       ],
@@ -472,12 +475,12 @@
       "criteres_officiels": [
         "Adhésion de la personne.",
         "Rangement adapté.",
-        "Nettoyage/bionettoyage respectueux du mobilier et des protocoles.",
-        "Choix du matériel et des produits adaptés et utilisation correcte.",
+        "Nettoyage/bionettoyage en respect du mobilier et des protocoles.",
+        "Choix du matériel, des produits adaptés et utilisation correcte.",
         "Maintien du bon état des effets personnels.",
         "Respect du temps.",
         "Qualité du résultat.",
-        "Dysfonctionnements repérés et geste de première intervention.",
+        "Dysfonctionnement repérés, geste de première intervention.",
         "Choix du professionnel relais adapté."
       ],
       "savoirs_associes": [
@@ -500,11 +503,11 @@
         "Proposer des solutions de personnalisation de l’espace."
       ],
       "criteres_officiels": [
-        "Écoute attentive et active de la personne et de sa famille.",
+        "Écoute attentive, active de la personne et de sa famille.",
         "Identification des habitudes et des souhaits de la personne.",
         "Participation de la personne.",
         "Sécurisation de l’espace.",
-        "Mobilisation des échanges épistolaires, d’internet, de l’appel téléphonique ou vidéo selon la situation."
+        "Échanges épistolaires, internet, appel téléphonique ou vidéo."
       ],
       "savoirs_associes": [
         {

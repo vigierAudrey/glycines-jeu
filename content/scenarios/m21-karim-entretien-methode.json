@@ -7,7 +7,7 @@
   "lieu": "chambre-karim",
   "personnages": ["joueur", "karim"],
   "competences": [
-    { "code": "C2.2.1", "critere": "Choix du matériel et des produits adaptés et utilisation correcte." }
+    { "code": "C2.2.1", "critere": "Choix du matériel, des produits adaptés et utilisation correcte." }
   ],
   "situation": "M. Karim accepte l'entretien journalier de sa chambre. Il souhaite garder son carnet de recettes sur la table et utiliser sa salle d'eau dans trente minutes.",
   "objectif_eleve": "Préparer le bon matériel, puis remettre dans l'ordre les étapes du protocole d'entretien journalier.",

@@ -7,7 +7,7 @@
   "lieu": "chambre-denise",
   "personnages": ["denise", "joueur", "animatrice"],
   "competences": [
-    { "code": "C2.2.2", "critere": "Mobilisation des échanges épistolaires, d’internet, de l’appel téléphonique ou vidéo selon la situation." },
+    { "code": "C2.2.2", "critere": "Échanges épistolaires, internet, appel téléphonique ou vidéo." },
     { "code": "CT4.2", "critere": "Écoute attentive de la personne." }
   ],
   "situation": "Mme Denise aimerait garder le lien avec son petit-fils, mais les horaires ne sont pas simples.",

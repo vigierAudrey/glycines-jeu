@@ -6,7 +6,11 @@ Comparaison des critères d'évaluation du jeu avec les textes officiels présen
 
 `content/referentiel/pse.json` : les 14 objectifs ciblés des modules C4 à C7 sont retrouvés **mot pour mot** dans le programme officiel (`REFERENTIEL_CAP_PSE/spe641annexe1105406pdf-85401`). Le fichier ne contient que les modules C4 à C7 pour l'instant (thématique C) ; les autres modules seront ajoutés avec les séquences de PSE correspondantes (tâches 5.1f à 5.1h). La PSE ne fait pas partie du référentiel CAP AAGA : c'est le programme commun à tous les CAP.
 
-## Bloc 2 : les 14 compétences sont les bonnes, 13 critères sur 68 ne sont pas mot pour mot
+## Bloc 2 : corrigé le 22/11/2026, les 68 critères sont maintenant mot pour mot
+
+**État actuel** : après correction (accord d'Audrey, D-034), une vérification automatique retrouve les 68 critères de `bloc2.json` mot pour mot dans le JO (seule tolérance : l'accent sur les majuscules, « Écoute » pour « Ecoute »). Les missions citent les nouveaux libellés. Le tableau ci-dessous garde la trace des écarts corrigés.
+
+### Écarts corrigés
 
 Source officielle : référentiel CAP AAGA, arrêté du 6 février 2023, JO du 14 mars 2023 (`le_nouveau_referentiel_cap_aaga_-_agent_accompagnant_au_grand_age.pdf`). Les 14 codes et intitulés (CT3.1 à C2.2.2) sont conformes. `content/referentiel/bloc2.json` a été extrait de la matrice des cours (`MATRICE_REFERENTIEL_EXHAUSTIVE.json`), qui a légèrement reformulé certains critères :
 
@@ -22,9 +26,15 @@ Source officielle : référentiel CAP AAGA, arrêté du 6 février 2023, JO du 1
 | C2.2.1 | Dysfonctionnements repérés et geste de première intervention. | Dysfonctionnement repérés, geste de première intervention |
 | C2.2.2 | Écoute attentive et active de la personne et de sa famille. | Ecoute attentive, active de la personne et de sa famille |
 | C2.2.2 | Mobilisation des échanges épistolaires, d’internet, de l’appel téléphonique ou vidéo selon la situation. | Echanges épistolaires, internet, appel téléphonique ou vidéo |
+| CT3.1 | … du cadre de l’intervention, dont celles relatives aux risques professionnels. | … du cadre de l’intervention dont celles relatives aux risques professionnels (sans virgule) |
+| CT3.2 | … de la personne âgée et prise en compte de ces éléments … | … de la personne âgée, prise en compte de ces éléments … |
+| CT4.1 | Intervention et attitude adaptées … | Intervention et attitude adaptée … |
+| CT4.1 | Utilisation d’un ton, d’un vocabulaire ou d’un outil … | Utilisation d’un ton et d’un vocabulaire ou d’un outil … |
 
 Les accents sur les majuscules (« Écoute » au lieu de « Ecoute ») ne sont pas comptés comme des écarts. Les « performances attendues » de `bloc2.json` présentent le même type de petites reformulations (non détaillées ici).
 
-Missions qui citent un critère reformulé : m04, m08, m16, m19, m21.
+Dans le JO, C2.1.2 à C2.1.5 partagent une même case de critères (7 critères) : C2.1.3, C2.1.4 et C2.1.5 ont donc maintenant les mêmes 7 critères que C2.1.2, dont « Relation privilégiée et sécurisante » et « Relation favorisant l’autonomie » séparés.
 
-**Correction proposée** : aligner `bloc2.json` sur le texte du JO (en séparant le critère fusionné en deux), puis mettre à jour les 5 missions concernées. Cela touche le fichier « source de vérité » : il faut l'accord d'Audrey (règle de CLAUDE.md).
+Missions mises à jour : m00, m01, m02, m04, m05, m06, m08, m09, m16, m17, m18, m19 (« Relation privilégiée et sécurisante »), m21, m22.
+
+Reste : les « performances attendues » de `bloc2.json` (non citées par les missions) gardent quelques reformulations de la matrice.

@@ -7,8 +7,8 @@
   "lieu": "chambre-yvette",
   "personnages": ["yvette", "joueur", "aide-soignante"],
   "competences": [
-    { "code": "CT4.1", "critere": "Utilisation d’un ton, d’un vocabulaire ou d’un outil adapté au niveau de compréhension de la personne." },
-    { "code": "CT3.2", "critere": "Repérage du degré d’autonomie de la personne âgée et prise en compte de ces éléments pour la mise en œuvre de ses actions." },
+    { "code": "CT4.1", "critere": "Utilisation d’un ton et d’un vocabulaire ou d’un outil adapté au niveau de compréhension de la personne." },
+    { "code": "CT3.2", "critere": "Repérage du degré d’autonomie de la personne âgée, prise en compte de ces éléments pour la mise en œuvre de ses actions." },
     { "code": "CT4.2", "critere": "Écoute attentive de la personne." }
   ],
   "situation": "Il est le matin. Mme Yvette comprend une consigne courte, lit une horloge simple, mais oublie une information récente.",

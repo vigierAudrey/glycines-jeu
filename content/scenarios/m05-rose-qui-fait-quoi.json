@@ -7,7 +7,7 @@
   "lieu": "chambre-rose",
   "personnages": ["rose", "joueur", "infirmiere"],
   "competences": [
-    { "code": "CT3.1", "critere": "Identification des ressources et des contraintes du cadre de l’intervention, dont celles relatives aux risques professionnels." },
+    { "code": "CT3.1", "critere": "Identification des ressources et des contraintes du cadre de l’intervention dont celles relatives aux risques professionnels." },
     { "code": "CT3.3", "critere": "Prise en compte du contexte de l’activité." }
   ],
   "situation": "Mme Rose vous demande un soin qui ne relève pas de votre rôle d'agent accompagnant.",

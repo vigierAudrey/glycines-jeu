@@ -7,7 +7,7 @@
   "lieu": "chambre-rose",
   "personnages": ["joueur", "rose", "infirmiere"],
   "competences": [
-    { "code": "CT3.2", "critere": "Utilisation d’informations récentes et diversifiées." },
+    { "code": "CT3.2", "critere": "Informations récentes et diversifiées." },
     { "code": "C2.1.6", "critere": "Fidélité de la transmission des éléments observés." }
   ],
   "situation": "Mme Rose marche plus lentement depuis plusieurs mois et entend moins bien dans le groupe : vous le savez déjà. Ce matin, elle paraît soudain confuse.",

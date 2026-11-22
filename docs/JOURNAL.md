@@ -358,3 +358,9 @@ Trois lignes par session : ce qui a été fait, ce qui reste à surveiller, la p
 - **Fait** : comparaison avec les textes officiels (`docs/VERIFICATION_REFERENTIEL.md`). PSE : 14 critères sur 14 mot pour mot. Bloc 2 : 14 compétences conformes, mais 13 critères sur 68 légèrement reformulés par la matrice des cours (dont un critère fusionné à partir de deux).
 - **À surveiller** : la correction touche `bloc2.json`, qu'on ne modifie pas sans l'accord d'Audrey.
 - **Prochaine tâche** : aligner `bloc2.json` sur le JO si Audrey le valide ; sinon 5.1f.
+
+## 22/11/2026 · Bloc 2 aligné sur le Journal officiel (D-034)
+
+- **Fait** : 17 critères de `bloc2.json` recopiés exactement du JO, critère fusionné séparé en deux (C2.1.3 à C2.1.5), 14 missions mises à jour. Vérification automatique : 68 critères sur 68 retrouvés mot pour mot. `pnpm verifier` OK.
+- **À surveiller** : les « performances attendues » (non citées par les missions) gardent quelques reformulations.
+- **Prochaine tâche** : 5.1f (PSE S1).

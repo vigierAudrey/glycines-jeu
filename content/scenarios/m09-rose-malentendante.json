@@ -7,7 +7,7 @@
   "lieu": "chambre-rose",
   "personnages": ["rose", "joueur", "infirmiere"],
   "competences": [
-    { "code": "CT4.1", "critere": "Utilisation d’un ton, d’un vocabulaire ou d’un outil adapté au niveau de compréhension de la personne." },
+    { "code": "CT4.1", "critere": "Utilisation d’un ton et d’un vocabulaire ou d’un outil adapté au niveau de compréhension de la personne." },
     { "code": "C2.1.6", "critere": "Fidélité de la transmission des éléments observés." }
   ],
   "situation": "Vous parlez à Mme Rose depuis la porte, dans le bruit du couloir : elle ne répond pas. Elle est malentendante.",

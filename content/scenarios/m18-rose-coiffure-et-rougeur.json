@@ -8,7 +8,7 @@
   "personnages": ["joueur", "rose", "infirmiere"],
   "competences": [
     { "code": "C2.1.4", "critere": "Respect du rythme, des habitudes et des attentes de la personne." },
-    { "code": "CT4.1", "critere": "Intervention et attitude adaptées pour amener la personne âgée à participer aux activités de la vie quotidienne." },
+    { "code": "CT4.1", "critere": "Intervention et attitude adaptée pour amener la personne âgée à participer aux activités de la vie quotidienne." },
     { "code": "C2.1.6", "critere": "Fidélité de la transmission des éléments observés." }
   ],
   "situation": "Avant son rendez-vous, Mme Rose veut se coiffer et utiliser sa crème pour les mains habituelle. Elle refuse le parfum proposé par une camarade.",

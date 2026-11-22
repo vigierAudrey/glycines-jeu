@@ -8,7 +8,7 @@
   "personnages": ["joueur", "cadre"],
   "competences": [
     { "code": "CT3.3", "critere": "Prise en compte du contexte de l’activité." },
-    { "code": "CT3.1", "critere": "Identification des ressources et des contraintes du cadre de l’intervention, dont celles relatives aux risques professionnels." }
+    { "code": "CT3.1", "critere": "Identification des ressources et des contraintes du cadre de l’intervention dont celles relatives aux risques professionnels." }
   ],
   "situation": "Vendredi matin aux Glycines. Mme Denise utilise des protections chaque nuit, M. Karim des lingettes et un savon sans rinçage. Dans la réserve, le cahier de suivi n'a pas été rempli depuis mardi. Il n'y a pas de livraison le week-end.",
   "objectif_eleve": "Comparer le stock au seuil d'alerte, repérer ce qu'il faut signaler avant le week-end, puis alerter avec une information précise et datée.",
