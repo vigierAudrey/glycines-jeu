@@ -9,11 +9,13 @@
   "competences": [
     { "code": "C2.1.5", "critere": "Respect de la pudeur et de l’intimité." },
     { "code": "C2.1.5", "critere": "Relation favorisant l’autonomie." },
-    { "code": "C2.1.5", "critere": "Adaptation des gestes aux capacités et aux besoins de la personne âgée." }
+    { "code": "C2.1.5", "critere": "Adaptation des gestes aux capacités et aux besoins de la personne âgée." },
+    { "code": "C2.1.5", "critere": "Respect des règles d’hygiène et de sécurité, d’ergonomie." },
+    { "code": "C2.1.5", "critere": "Prise en compte du bien-être." }
   ],
   "situation": "Mme Yvette va habituellement aux toilettes au réveil et avant le déjeuner. Elle souhaite la porte fermée. Aujourd'hui, le trajet et la salle d'eau ne sont pas tout à fait prêts, et ses vêtements sont difficiles à manipuler.",
   "objectif_eleve": "Vous appuyer sur ses habitudes sans imposer d'horaire ni de protection, sécuriser le trajet, préserver son intimité, l'aider seulement pour ce qu'elle ne peut pas faire, et transmettre un changement sans diagnostic.",
-  "note_pour_audrey": "Brouillon (tâches T.7 et T.11), deuxième mission continence après m19, d'après votre séquence 4, séance 7 (« préserver la continence : environnement, habitudes et intimité ») : habitudes plutôt que routine imposée, audit des huit facilitateurs ou obstacles, aide limitée au déplacement et aux vêtements, variante « douleur annoncée ». Ces éléments ont été ajoutés à sa fiche (repris_du_cours). Complément, hors cours : la proposition de Nadia et les répliques. Deux critères communs de C2.1.5 restent à citer (hygiène et sécurité, bien-être).",
+  "note_pour_audrey": "Brouillon (tâches T.7 et T.11), deuxième mission continence après m19, d'après votre séquence 4, séance 7 (« préserver la continence : environnement, habitudes et intimité ») : habitudes plutôt que routine imposée, audit des huit facilitateurs ou obstacles, aide limitée au déplacement et aux vêtements, variante « douleur annoncée ». Ces éléments ont été ajoutés à sa fiche (repris_du_cours). Complément, hors cours : la proposition de Nadia et les répliques. Les cinq critères communs de C2.1.5 encore absents sont cités ici (l'audit du trajet travaille la sécurité, la réponse sans remarque humiliante le bien-être).",
   "etapes": [
     {
       "id": "routine-imposee",

@@ -8,11 +8,13 @@
   "personnages": ["joueur", "karim", "infirmiere"],
   "competences": [
     { "code": "C2.1.2", "critere": "Relation privilégiée et sécurisante." },
-    { "code": "C2.1.2", "critere": "Prise en compte du bien-être." }
+    { "code": "C2.1.2", "critere": "Prise en compte du bien-être." },
+    { "code": "C2.1.2", "critere": "Relation favorisant l’autonomie." },
+    { "code": "C2.1.2", "critere": "Respect des règles d’hygiène et de sécurité, d’ergonomie." }
   ],
   "situation": "Les travaux du couloir se terminent tard et M. Karim dit dormir moins bien. Ancien boulanger, il aime se coucher tôt, se lever vers 5 h et écouter doucement la radio avant de dormir. La nuit, il se déplace avec sa canne et ses lunettes.",
   "objectif_eleve": "Préparer avec lui un coucher sûr et personnalisé, négocier sans contraindre, et transmettre le changement de sommeil sans diagnostic.",
-  "note_pour_audrey": "Brouillon (tâches T.5 et T.11), d'après votre séquence 3, séance 5 (« bien dormir aux Glycines : rythme, confort et sécurité ») : situation de M. Karim, plan de chambre (interrupteur, appel malade, canne, lunettes, tapis, câble radio), carte refus « il veut garder la radio », rituel qui favorise l'autonomie, changement de sommeil transmis sans diagnostic. Ses habitudes ont été ajoutées à sa fiche (repris_du_cours). Deux critères communs de C2.1.2 jamais cités. Complément, hors cours : ses répliques.",
+  "note_pour_audrey": "Brouillon (tâches T.5 et T.11), d'après votre séquence 3, séance 5 (« bien dormir aux Glycines : rythme, confort et sécurité ») : situation de M. Karim, plan de chambre (interrupteur, appel malade, canne, lunettes, tapis, câble radio), carte refus « il veut garder la radio », rituel qui favorise l'autonomie, changement de sommeil transmis sans diagnostic. Ses habitudes ont été ajoutées à sa fiche (repris_du_cours). Quatre critères communs de C2.1.2 jamais cités (le rituel travaille l'autonomie, la préparation de la nuit la sécurité). Complément, hors cours : ses répliques.",
   "etapes": [
     {
       "id": "karim-fatigue",

@@ -1,0 +1,108 @@
+{
+  "id": "m134-denise-lever-sans-porter",
+  "statut": "brouillon",
+  "titre": "Se lever sans être portée",
+  "duree_min": 18,
+  "sequence_requise": "S4",
+  "lieu": "chambre-denise",
+  "personnages": ["joueur", "denise", "aide-soignante"],
+  "competences": [
+    { "code": "C2.1.3", "critere": "Relation privilégiée et sécurisante." },
+    { "code": "C2.1.3", "critere": "Relation favorisant l’autonomie." },
+    { "code": "C2.1.3", "critere": "Prise en compte du bien-être." },
+    { "code": "C2.1.3", "critere": "Respect de la pudeur et de l’intimité." }
+  ],
+  "situation": "Mme Denise peut passer assise-debout avec ses accoudoirs et une aide verbale. Elle veut aller de son fauteuil à la chaise près de la fenêtre. Ce transfert simple est prévu dans son projet. Elle est encore en chemise de nuit.",
+  "objectif_eleve": "Préparer les deux assises, obtenir son accord, la laisser initier le mouvement sans la porter, préserver son intimité, et savoir quand arrêter et passer le relais.",
+  "note_pour_audrey": "Brouillon (tâche T.11), d'après votre séquence 4, séance 3 (« accompagner la marche et les transferts dans les limites de son rôle ») : capacités de Mme Denise, cartes « je fais, je fais avec, je passe le relais », préparation des deux espaces (frein, repose-pied, sol humide), lever sans soulever ni saisir sous les aisselles, transfert interrompu si la personne ne peut plus prendre appui (la carte « vertige » reste dans le tri, sans être attribuée à Mme Denise). Quatre critères communs de C2.1.3 encore jamais cités. Complément, hors cours : la chaise près de la fenêtre, la chemise de nuit et les répliques.",
+  "etapes": [
+    {
+      "id": "niveau-aide",
+      "type": "tri",
+      "consigne": "Avant d'entrer, vous relisez les cartes du protocole. Rangez chaque situation.",
+      "categories": [
+        { "id": "fais-avec", "libelle": "J'accompagne le transfert prévu" },
+        { "id": "relais", "libelle": "J'arrête et je passe le relais" }
+      ],
+      "elements": [
+        { "id": "accoudoirs", "texte": "Lever avec accoudoirs, prévu dans le projet.", "categorie": "fais-avec", "points": { "C2.1.3": 1 }, "retour": "Le transfert simple prévu peut être accompagné selon votre formation." },
+        { "id": "verbale", "texte": "Aide verbale seule.", "categorie": "fais-avec", "points": { "C2.1.3": 1 }, "retour": "Des repères verbaux, et elle fait le mouvement." },
+        { "id": "tombee", "texte": "Personne tombée au sol.", "categorie": "relais", "points": { "C2.1.3": 1 }, "retour": "Une chute relève du protocole et de professionnels formés." },
+        { "id": "leve-personne", "texte": "Transfert avec lève-personne.", "categorie": "relais", "points": { "C2.1.3": 1 }, "retour": "Un dispositif de levage demande des professionnels formés." },
+        { "id": "vertige", "texte": "Vertige ou douleur nouvelle.", "categorie": "relais", "points": { "C2.1.3": 1 }, "retour": "Un changement d'état impose l'arrêt et la transmission." },
+        { "id": "refus", "texte": "Refus de la personne.", "categorie": "relais", "points": { "C2.1.3": 1 }, "retour": "Le refus est respecté et transmis, sans contrainte physique." }
+      ]
+    },
+    {
+      "id": "intimite",
+      "type": "decision",
+      "consigne": "Mme Denise est en chemise de nuit, la porte est entrouverte et la chaise est face à la fenêtre.",
+      "question": "Que faites-vous avant le transfert ?",
+      "choix": [
+        { "decision": "agir", "texte": "Je lui propose sa robe de chambre et je ferme la porte, avec son accord.", "points": { "C2.1.3": 2 }, "retour": "Vous préservez sa pudeur avant de la mettre debout." },
+        { "decision": "adapter", "texte": "On fait vite, personne ne passe à cette heure-ci.", "retour": "Son intimité ne dépend pas du passage dans le couloir." },
+        { "decision": "alerter", "texte": "J'attends qu'elle soit habillée par l'aide-soignante.", "retour": "Lui proposer sa robe de chambre est dans votre rôle." }
+      ]
+    },
+    {
+      "id": "preparer",
+      "type": "selection",
+      "consigne": "Vous préparez le fauteuil de départ et la chaise d'arrivée.",
+      "question": "Cochez ce que vous faites.",
+      "elements": [
+        { "id": "freins", "texte": "Je vérifie que le fauteuil est freiné et que la chaise est stable.", "attendu": true, "points": { "C2.1.3": 1 }, "retour": "Les deux assises sont stables." },
+        { "id": "proche", "texte": "J'approche la chaise et je l'oriente selon le protocole.", "attendu": true, "points": { "C2.1.3": 1 }, "retour": "Une destination proche réduit le trajet debout." },
+        { "id": "pieds", "texte": "Je relève le repose-pied et je dégage l'espace des pieds.", "attendu": true, "points": { "C2.1.3": 1 }, "retour": "Le passage des pieds est libre." },
+        { "id": "chaussures", "texte": "Je l'aide à mettre ses chaussures fermées.", "attendu": true, "points": { "C2.1.3": 1 }, "retour": "Un chaussage stable limite le risque de chute." },
+        { "id": "sol", "texte": "Je laisse le sol humide, il séchera.", "attendu": false, "points": { "C2.1.3": 1 }, "retour": "Un sol humide est un risque : on le fait sécher avant." }
+      ]
+    },
+    {
+      "id": "lever",
+      "type": "dialogue",
+      "consigne": "Tout est prêt. Mme Denise pose les mains sur les accoudoirs.",
+      "interlocuteur": "denise",
+      "replique": "Vous allez me tirer, hein ? Toute seule, j'ai un peu peur.",
+      "verbal": [
+        { "texte": "Je reste tout près de vous. Vous poussez sur les accoudoirs quand vous êtes prête, je vous guide avec la voix, puis vous pivotez vers la chaise.", "confiance": 2, "points": { "C2.1.3": 2 }, "retour": "Vous la rassurez et vous la laissez initier le mouvement : relation sécurisante et autonomie." },
+        { "texte": "Oui, je vous prends sous les bras et je vous soulève.", "confiance": -2, "retour": "On ne porte pas, on ne tire pas par les bras, on ne saisit pas sous les aisselles." },
+        { "texte": "Allez, debout, on n'a pas toute la journée.", "confiance": -2, "retour": "La pression augmente sa peur et le risque de chute." }
+      ],
+      "paraverbal": [
+        { "texte": "Voix calme, consignes courtes, une à la fois.", "confiance": 1, "points": { "C2.1.3": 1 }, "retour": "Des repères clairs la rassurent." },
+        { "texte": "Voix forte et pressée.", "confiance": -1, "retour": "Elle risque de se précipiter." },
+        { "texte": "Je parle sans arrêt pendant qu'elle se lève.", "confiance": -1, "retour": "Trop de paroles brouillent les repères." }
+      ],
+      "non_verbal": [
+        { "texte": "Je me place à côté d'elle, du côté de la chaise, sans la tenir.", "confiance": 1, "points": { "C2.1.3": 1 }, "retour": "Vous êtes présente sans prendre le mouvement à sa place." },
+        { "texte": "Je lui attrape les poignets pour l'aider.", "confiance": -2, "retour": "Tirer sur les bras peut la blesser." },
+        { "texte": "Je reste devant la porte.", "confiance": -1, "retour": "Trop loin pour la rassurer." }
+      ]
+    },
+    {
+      "id": "vertige",
+      "type": "decision",
+      "consigne": "Debout, Mme Denise s'arrête : « Je ne tiens plus, je veux me rasseoir. »",
+      "question": "Que faites-vous ?",
+      "choix": [
+        { "decision": "alerter", "texte": "J'arrête le transfert, je l'aide à se rasseoir dans le fauteuil tout proche, puis je transmets.", "points": { "C2.1.3": 2 }, "retour": "Elle ne peut plus prendre appui : on interrompt le transfert et on transmet ; l'assise de départ est à côté." },
+        { "decision": "agir", "texte": "Je l'encourage à finir vite jusqu'à la chaise.", "retour": "Continuer alors qu'elle ne tient plus expose à une chute." },
+        { "decision": "adapter", "texte": "Je la soutiens sous les aisselles pour qu'elle tienne.", "retour": "On ne saisit pas sous les aisselles et on ne remplace pas son appui." }
+      ]
+    },
+    {
+      "id": "transmettre-nadia",
+      "type": "relais",
+      "consigne": "Mme Denise est rassise. Allez transmettre ce qui s'est passé.",
+      "destinataire": "aide-soignante",
+      "points": { "C2.1.3": 1 },
+      "retour": "Nadia, aide-soignante, vient voir Mme Denise et préviendra l'infirmière si besoin.",
+      "retour_erreur": "Cette personne n'accompagne pas les transferts des résidents. Qui, dans l'aile B, le fait avec vous ?"
+    }
+  ],
+  "debriefing": [
+    "Qu'avez-vous préparé avant de lever Mme Denise ?",
+    "Pourquoi l'avez-vous laissée initier le mouvement ?",
+    "Pourquoi avoir arrêté le transfert quand elle a dit qu'elle ne tenait plus ?"
+  ]
+}

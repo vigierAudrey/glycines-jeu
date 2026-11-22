@@ -43,6 +43,7 @@ Reste : les « performances attendues » de `bloc2.json` (non citées par les mi
 
 - **Compétences** : 14 sur 14 ont au moins une mission. Peu couvertes : C2.1.1, C2.1.2, C2.1.4, C2.1.5 (une mission chacune).
 - **Critères** : 31 sur 71 sont évalués (une mission évalue un seul critère par compétence). Couverts en entier : CT3.3, CT3.4, CT4.1, CT4.2. Très peu : C2.1.2 (1/7), C2.1.4 (1/7), C2.1.5 (1/7), C2.2.1 (2/9), C2.1.1 (1/4).
+- **Mise à jour du 22/11/2026, après la Phase 4 ter (missions `m118` à `m135`)** : 71 critères sur 71 sont cités par au moins une mission du Bloc 2. Les notions manquantes (AGGIR, charte, laïcité, fin de vie, sommeil, signes à observer, réfection de lit, socio-esthétique, repas, continence, entretien, personnalisation) ont chacune une mission.
 - **Notions jamais travaillées** : structures d'accueil, outils d'évaluation de l'autonomie (AGGIR), charte des droits et libertés, laïcité et éthique, fin de vie et directives anticipées, conditions de l'endormissement et du réveil, pathologies digestives, urinaires, cardio-vasculaires et diabète (signes à observer).
 - **Notions peu travaillées** : protection des majeurs (1 mission), bientraitance (1), socio-esthétique (1), dénutrition (1), prise des repas, continence, habillage (2 à 3).
 

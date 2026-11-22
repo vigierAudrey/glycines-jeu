@@ -484,3 +484,9 @@ Trois lignes par session : ce qui a été fait, ce qui reste à surveiller, la p
 - **Fait** : `m133` (S5-07 et S6-02) : critère C2.2.2 « Sécurisation de l'espace ». Le Bloc 2 cite maintenant 61 critères sur 71 (31 au début de la Phase 4 ter). `pnpm verifier` OK (233 tests).
 - **À surveiller** : mission en brouillon.
 - **Prochaine tâche** : T.11 (10 critères communs de C2.1.2, C2.1.3 et C2.1.5).
+
+## 22/11/2026 · Derniers critères communs (tâche T.11)
+
+- **Fait** : `m134` (S4-03) et `m135` (S3-05, S3-02), critères ajoutés à `m125` et `m129`. Le Bloc 2 cite les 71 critères du référentiel ; la Phase 4 ter est terminée (18 missions, `m118` à `m135`, en brouillon). `pnpm verifier` OK (235 tests).
+- **À surveiller** : les 18 nouvelles missions sont à valider par Audrey.
+- **Prochaine tâche** : 5.2 (Bloc 1).

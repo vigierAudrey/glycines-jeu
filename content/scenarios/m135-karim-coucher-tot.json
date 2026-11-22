@@ -1,0 +1,69 @@
+{
+  "id": "m135-karim-coucher-tot",
+  "statut": "brouillon",
+  "titre": "Le coucher de M. Karim",
+  "duree_min": 12,
+  "sequence_requise": "S3",
+  "lieu": "chambre-karim",
+  "personnages": ["joueur", "karim"],
+  "competences": [
+    { "code": "C2.1.2", "critere": "Respect de la pudeur et de l’intimité." },
+    { "code": "C2.1.2", "critere": "Adaptation des gestes aux capacités et aux besoins de la personne âgée." }
+  ],
+  "situation": "M. Karim aime se coucher tôt. Ce soir, il vous appelle pour l'aider à se préparer. Il a besoin d'une aide partielle pour ses vêtements et se déplace avec sa canne.",
+  "objectif_eleve": "Préserver son intimité pendant qu'il se change, l'aider seulement pour ce qu'il ne peut pas faire, et l'installer dans un lit réglé pour lui.",
+  "note_pour_audrey": "Brouillon (tâche T.11), d'après votre séquence 3, séance 5 (« bien dormir aux Glycines » : respecter l'intimité, la pudeur et les choix, favoriser l'autonomie) et séance 2 (le lit médicalisé et ses fonctions, vérifier les freins). Aide partielle pour les vêtements et canne repris de sa fiche. Deux critères communs de C2.1.2 encore jamais cités. Complément, hors cours : les répliques et la hauteur du lit au coucher.",
+  "etapes": [
+    {
+      "id": "se-changer",
+      "type": "dialogue",
+      "consigne": "M. Karim est assis au bord du lit, son pyjama à côté de lui. La porte est ouverte sur le couloir.",
+      "interlocuteur": "karim",
+      "replique": "Je voudrais me mettre en pyjama. Le haut, ça va, mais le pantalon, c'est dur pour moi.",
+      "verbal": [
+        { "texte": "Je ferme la porte. Vous faites le haut, et je vous aide juste pour le pantalon, quand vous me le direz.", "confiance": 2, "points": { "C2.1.2": 2 }, "retour": "Vous protégez son intimité et vous adaptez votre aide à ce qu'il ne peut pas faire seul." },
+        { "texte": "Je vais vous changer entièrement, ce sera plus simple.", "confiance": -1, "retour": "Il peut faire le haut seul : l'aide se limite à ce qui est difficile." },
+        { "texte": "Dépêchez-vous, j'ai d'autres résidents.", "confiance": -2, "retour": "La pression ne respecte ni son rythme ni sa dignité." }
+      ],
+      "paraverbal": [
+        { "texte": "Voix calme et discrète.", "confiance": 1, "points": { "C2.1.2": 1 }, "retour": "La discrétion protège sa pudeur." },
+        { "texte": "Voix forte, la porte ouverte.", "confiance": -2, "retour": "Le couloir entend tout." },
+        { "texte": "Voix gênée.", "confiance": -1, "retour": "Votre gêne peut le mettre mal à l'aise." }
+      ],
+      "non_verbal": [
+        { "texte": "Je me tourne pendant qu'il se change le haut, et je lui tends une serviette pour couvrir ses jambes.", "confiance": 1, "points": { "C2.1.2": 1 }, "retour": "Vous limitez l'exposition de son corps." },
+        { "texte": "Je reste face à lui, les bras croisés.", "confiance": -1, "retour": "Il peut se sentir observé." },
+        { "texte": "Je retire son pantalon sans prévenir.", "confiance": -2, "retour": "On demande l'accord avant chaque geste." }
+      ]
+    },
+    {
+      "id": "hauteur-lit",
+      "type": "decision",
+      "consigne": "M. Karim va se coucher. Le lit est resté à hauteur de travail depuis la réfection.",
+      "question": "Que faites-vous ?",
+      "choix": [
+        { "decision": "agir", "texte": "Je vérifie les freins et je descends le lit à la hauteur qui lui permet de s'asseoir pieds au sol, puis je le laisse se coucher à son rythme.", "points": { "C2.1.2": 2 }, "retour": "Le lit médicalisé est réglé pour ses capacités : il se couche lui-même, en sécurité." },
+        { "decision": "adapter", "texte": "Je laisse le lit haut et je le soulève pour l'aider à monter.", "retour": "On ne porte pas une personne qui peut se coucher seule avec un lit bien réglé." },
+        { "decision": "alerter", "texte": "Je lui dis de grimper, il a l'habitude.", "retour": "Un lit trop haut expose à une chute." }
+      ]
+    },
+    {
+      "id": "repere-nuit",
+      "type": "qcm",
+      "consigne": "M. Karim est couché.",
+      "question": "Avant de partir, que vérifiez-vous ?",
+      "options": [
+        { "texte": "Que l'appel malade, sa canne et ses lunettes sont à sa portée, comme il le souhaite.", "juste": true },
+        { "texte": "Que la porte est fermée à clé." },
+        { "texte": "Que la lumière est éteinte, même s'il veut la veilleuse." }
+      ],
+      "points": { "C2.1.2": 1 },
+      "retour": "Ses aides utiles restent accessibles pour la nuit, selon son accord."
+    }
+  ],
+  "debriefing": [
+    "Comment avez-vous protégé l'intimité de M. Karim ?",
+    "Qu'a-t-il fait seul, et pour quoi l'avez-vous aidé ?",
+    "Pourquoi avoir réglé la hauteur du lit avant qu'il se couche ?"
+  ]
+}
