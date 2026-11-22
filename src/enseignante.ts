@@ -90,6 +90,8 @@ racine.innerHTML = `
     <p>Les missions s'ouvrent selon la séquence vue en cours. Choisissez la séquence, puis donnez ce lien aux élèves.</p>
     <label>Séquence vue <select id="sequence">${SEQUENCES.map((s) => `<option>${s}</option>`).join('')}</select></label>
     <p><code id="lien"></code></p>
+    <p><strong>Mode classe</strong> (vidéoprojecteur : grands caractères, correction cachée jusqu'au bouton « Révéler » pour laisser la classe débattre) :</p>
+    <p><code id="lien-classe"></code></p>
   </section>
 
   <section>
@@ -105,8 +107,10 @@ racine.innerHTML = `
 
 const choix = racine.querySelector<HTMLSelectElement>('#sequence')!;
 const lien = racine.querySelector<HTMLElement>('#lien')!;
+const lienClasse = racine.querySelector<HTMLElement>('#lien-classe')!;
 const majLien = () => {
   lien.textContent = new URL(`index.html?sequence=${choix.value}`, location.href).href;
+  lienClasse.textContent = new URL(`index.html?sequence=${choix.value}&classe`, location.href).href;
 };
 choix.addEventListener('change', majLien);
 majLien();

@@ -105,7 +105,7 @@ Règle commune : toute nouvelle activité s'appuie sur une situation réelle des
 ### Garder une trace, sans collecter de données
 
 - [x] **P.13** Auto-positionnement : avant la mission, l'élève estime son niveau (N1 à N4) par compétence ; la relève compare avec le niveau obtenu.
-- [ ] **P.14** Mode classe (`?classe`) : grands caractères pour le vidéoprojecteur, réponses cachées jusqu'au bouton « Révéler » pour laisser la classe débattre ; la page enseignante donne le lien.
+- [x] **P.14** Mode classe (`?classe`) : grands caractères pour le vidéoprojecteur, réponses cachées jusqu'au bouton « Révéler » pour laisser la classe débattre ; la page enseignante donne le lien.
 
 ### Aider les élèves qui lisent difficilement
 

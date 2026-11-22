@@ -433,3 +433,8 @@ html, body {
 .estimation { margin: .5rem 0; }
 .estimation summary { min-height: 44px; display: flex; align-items: center; cursor: pointer; font-weight: 600; }
 .releve__estimation { display: block; font-style: italic; margin-top: .2rem; }
+
+/* Mode classe (P.14) : lisible au fond de la salle, au vidéoprojecteur */
+.mode-classe .panneau { width: min(1100px, calc(100% - 16px)); max-height: min(78%, 900px); font-size: 1.45rem; }
+.mode-classe .panneau .choix, .mode-classe .panneau .bouton { font-size: 1.3rem; }
+.mode-classe .fenetre__carte { font-size: 1.35rem; width: min(1100px, 100%); }

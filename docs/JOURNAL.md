@@ -262,3 +262,9 @@ Trois lignes par session : ce qui a été fait, ce qui reste à surveiller, la p
 - **Fait** : à l'intro d'une mission, volet facultatif pour estimer son niveau par compétence (N1 à N3, N4 si mission de transfert). La relève dit « Vous pensiez N2. Mieux que votre estimation… » ; la fiche imprimée a une colonne « Mon estimation ». Rien n'est enregistré. `pnpm verifier` OK (115 tests).
 - **À surveiller** : affichage non vérifié au navigateur (Chromium absent) : à regarder sur téléphone.
 - **Prochaine tâche** : P.14 (mode classe).
+
+## 22/11/2026 · Mode classe (tâche P.14)
+
+- **Fait** : avec `?classe` dans l'adresse, le jeu passe en grands caractères et, après chaque réponse, affiche « Débattez en classe » puis un bouton « Révéler la correction ». La page enseignante donne ce lien à côté du lien élèves. `pnpm verifier` OK.
+- **À surveiller** : tailles choisies sans vidéoprojecteur sous la main : à ajuster après un premier essai en classe.
+- **Prochaine tâche** : P.15 (pictogrammes).

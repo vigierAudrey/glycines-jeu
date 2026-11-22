@@ -36,6 +36,8 @@ export interface LiensMission {
   niveauxObtenus?: (idMission: string) => string | undefined;
   /** Rappels d'oublis d'autres missions, montrés au début de celle-ci (P.12). */
   prendreRappels?: (idMission: string) => Rappel[];
+  /** Mode classe (?classe) : la correction attend le bouton « Révéler », pour laisser la classe débattre (P.14). */
+  modeClasse?: boolean;
 }
 
 export interface InterfaceMission {
@@ -92,6 +94,7 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
   const niveauxPossibles = (): Niveau[] => (mission?.transfert ? ['N1', 'N2', 'N3', 'N4'] : ['N1', 'N2', 'N3']);
   let retours: string[] = [];
   let reussi = false;
+  let revele = true; // mode classe : la correction reste cachée jusqu'au bouton « Révéler »
   let aRevoir: string[] = [];
   let messageRelais = '';
   // Réponses en cours de saisie.
@@ -277,6 +280,10 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
           <p class="indice">${niveauxPossibles().map((n) => `<strong>${n}</strong> ${echapper(contenu.referentiel.niveaux[n])}`).join(' ')}</p>
         </details>
         <button type="button" class="bouton bouton--principal" data-action="commencer">C'est parti</button>`;
+    } else if (phase === 'retour' && !revele) {
+      corps = `
+        <p class="question a-lire">🗣 Débattez en classe : était-ce le bon choix ? Pourquoi ?</p>
+        <button type="button" class="bouton bouton--principal" data-action="reveler">Révéler la correction</button>`;
     } else if (phase === 'retour') {
       corps = `
         <p class="retour ${reussi ? 'retour--bien' : 'retour--erreur'} a-lire">${reussi ? 'Bien joué.' : 'À retenir :'}</p>
@@ -339,6 +346,7 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
     retours = resultat.retours;
     reussi = resultat.reussi;
     aRevoir = resultat.aRevoir;
+    revele = !liens.modeClasse;
     phase = 'retour';
     afficher();
   };
@@ -401,6 +409,9 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
       estimations[d.estimer] = d.niveau as Niveau;
       afficher();
       panneau.querySelector<HTMLDetailsElement>('.estimation')?.setAttribute('open', '');
+    } else if (d.action === 'reveler') {
+      revele = true;
+      afficher();
     } else if (d.action === 'commencer') {
       phase = 'etape';
       afficher();

@@ -61,6 +61,9 @@ brancherVoix(racineInterface);
 
 // La progression (derniers niveaux) est gardée dans le navigateur ; le code de reprise la transporte.
 const progression = suivreProgression(contenu.missions);
+// Mode classe (?classe dans l'adresse) : grands caractères pour le vidéoprojecteur, correction cachée jusqu'à « Révéler ».
+const modeClasse = new URLSearchParams(location.search).has('classe');
+document.documentElement.classList.toggle('mode-classe', modeClasse);
 const missions = monterMissions(racineInterface, theatre, contenu, {
   surFin: progression.enregistrer,
   sequenceVue: progression.sequenceVue,
@@ -69,6 +72,7 @@ const missions = monterMissions(racineInterface, theatre, contenu, {
   avecBrouillons: import.meta.env.DEV || new URLSearchParams(location.search).has('brouillons'),
   niveauxObtenus: progression.niveauxObtenus,
   prendreRappels: progression.prendreRappels,
+  modeClasse,
   basDeListe: () => progression.blocCode(() => missions.ouvrirListe()),
   allerVersZone: (idZone) => {
     const zone = trouverZone(plan, idZone);
