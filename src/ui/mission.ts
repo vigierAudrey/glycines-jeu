@@ -132,6 +132,7 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
   let ordreChoisi: string[] = []; // protocole : éléments touchés par l'élève, dans l'ordre
   let choisis = new Set<string>(); // sélection : éléments cochés
   let rangements: Record<string, string> = {}; // tri : élément → catégorie
+  let liensAsso: Record<string, string> = {}; // association : mot → définition choisie (ids de paires)
 
   const etape = (): Etape | undefined => (mission && etat ? etapeEnCours(mission, etat) : undefined);
   const residentDeLaMission = () => mission?.personnages.find((id) => residents.has(id));
@@ -284,6 +285,26 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
           <p class="compteur">Rangés : ${ranges} / ${e.elements.length}</p>
           ${ranges === e.elements.length ? `<button type="button" class="bouton bouton--principal" data-action="valider-tri">Valider mon rangement</button>` : ''}`;
       }
+      case 'qcm':
+        return `
+          <p class="question a-lire">${avecLexique(e.question)}</p>
+          ${dansLOrdreTire(e.id, e.options).map(({ el: o, i }) => `
+            <button type="button" class="choix" data-qcm="${i}">${echapper(o.texte)}</button>`).join('')}`;
+      case 'association': {
+        const liste = dansLOrdreTire(e.id, e.paires).map(({ el }) => el);
+        const courant = liste.find((p) => p.id === ouvert) ?? liste.find((p) => !liensAsso[p.id]);
+        const faites = e.paires.filter((p) => liensAsso[p.id]).length;
+        return `
+          ${pastilles(liste.map((p) => p.id), (id) => Boolean(liensAsso[id]), courant?.id)}
+          ${courant ? `
+            <fieldset class="canal canal--courant">
+              <legend class="a-lire"><strong>${echapper(courant.terme)}</strong> : quelle définition ?</legend>
+              ${dansLOrdreTire(`${e.id}:definitions`, e.paires).map(({ el: d }) => `
+                <button type="button" class="choix" aria-pressed="${liensAsso[courant.id] === d.id}" data-asso="${echapper(courant.id)}" data-definition="${echapper(d.id)}">${echapper(d.definition)}</button>`).join('')}
+            </fieldset>` : ''}
+          <p class="compteur">Mots reliés : ${faites} / ${e.paires.length}</p>
+          ${faites === e.paires.length ? `<button type="button" class="bouton bouton--principal" data-action="valider-association">Valider</button>` : ''}`;
+      }
       case 'relais':
         return `
           <p class="indice">Touchez dans l'aile la personne à prévenir. Le bouton « Qui est qui ? » peut vous aider.</p>
@@ -414,6 +435,7 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
     ordreChoisi = [];
     choisis = new Set();
     rangements = {};
+    liensAsso = {};
     elementOuvert = null;
     messageRelais = '';
     if (etat.etape === null) {
@@ -442,6 +464,7 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
     ordreChoisi = [];
     choisis = new Set();
     rangements = {};
+    liensAsso = {};
     elementOuvert = null;
     messageRelais = '';
     fenetre.hidden = true;
@@ -534,6 +557,13 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
       garderLeFocus();
     } else if (d.action === 'valider-tri') envoyer({ type: 'tri', rangements });
     else if (d.decision !== undefined && e?.type === 'decision') envoyer({ type: 'decision', choix: Number(d.decision) });
+    else if (d.qcm !== undefined && e?.type === 'qcm') envoyer({ type: 'qcm', choix: Number(d.qcm) });
+    else if (d.asso && d.definition) {
+      liensAsso[d.asso] = d.definition;
+      ouvert = null;
+      afficher();
+      garderLeFocus();
+    } else if (d.action === 'valider-association') envoyer({ type: 'association', liens: liensAsso });
   });
 
   reperes.addEventListener('click', (evenement) => {

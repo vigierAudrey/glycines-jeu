@@ -37,6 +37,8 @@ export type Reponse =
   | { type: 'transmission'; classements: Record<string, NaturePhrase> } // id de la phrase → nature choisie
   | { type: 'ordre'; ordre: string[] } // ids des éléments, dans l'ordre choisi par l'élève
   | { type: 'selection'; choisis: string[] } // ids des éléments cochés
+  | { type: 'qcm'; choix: number } // indice de l'option choisie
+  | { type: 'association'; liens: Record<string, string> } // id de la paire du mot → id de la paire de la définition choisie
   | { type: 'tri'; rangements: Record<string, string> }; // id de l'élément → id de la catégorie choisie
 
 export interface Resultat {
@@ -100,6 +102,10 @@ export function pointsMaxEtape(etape: Etape): Points {
       return { ...etape.points };
     case 'transmission':
       return etape.phrases.reduce((total, ph) => ajouter(total, ph.points), {} as Points);
+    case 'qcm':
+      return { ...(etape.points ?? {}) };
+    case 'association':
+      return etape.paires.reduce((total, p) => ajouter(total, p.points), {} as Points);
     case 'ordre':
     case 'selection':
     case 'tri':
@@ -150,6 +156,14 @@ function textesChoisis(etape: Etape, reponse: Reponse): string[] {
       const r = reponse as Extract<Reponse, { type: 'selection' }>;
       const pris = etape.elements.filter((el) => r.choisis.includes(el.id)).map((el) => `Coché : ${el.texte}`);
       return pris.length ? pris : ['Rien coché'];
+    }
+    case 'qcm': {
+      const r = reponse as Extract<Reponse, { type: 'qcm' }>;
+      return [etape.options[r.choix]?.texte ?? ''];
+    }
+    case 'association': {
+      const r = reponse as Extract<Reponse, { type: 'association' }>;
+      return etape.paires.map((p) => `${p.terme} → ${etape.paires.find((x) => x.id === r.liens[p.id])?.definition ?? 'non relié'}`);
     }
     case 'tri': {
       const r = reponse as Extract<Reponse, { type: 'tri' }>;
@@ -290,6 +304,33 @@ function repondreEtape(mission: Mission, etat: EtatMission, reponse: Reponse): R
       return {
         etat: { ...etat, etape: suivante(mission, etape), points: ajouter(etat.points, gagnes), essais: 0 },
         retours,
+        reussi: identiques(gagnes, max),
+        aRevoir: manquantes(gagnes, max),
+      };
+    }
+    case 'qcm': {
+      const r = reponse as Extract<Reponse, { type: 'qcm' }>;
+      const juste = etape.options.find((o) => o.juste);
+      const bien = etape.options[r.choix]?.juste === true;
+      const gagnes: Points = bien ? { ...(etape.points ?? {}) } : {};
+      return {
+        etat: { ...etat, etape: suivante(mission, etape), points: ajouter(etat.points, gagnes), essais: 0 },
+        retours: [bien ? `✔ ${juste?.texte ?? ''}` : `✘ La bonne réponse : ${juste?.texte ?? ''}`, etape.retour],
+        reussi: identiques(gagnes, max),
+        aRevoir: manquantes(gagnes, max),
+      };
+    }
+    case 'association': {
+      const r = reponse as Extract<Reponse, { type: 'association' }>;
+      let gagnes: Points = {};
+      const retours = etape.paires.map((p) => {
+        const bien = r.liens[p.id] === p.id;
+        if (bien) gagnes = ajouter(gagnes, p.points);
+        return `${bien ? '✔' : '✘'} ${p.terme} : ${p.definition}`;
+      });
+      return {
+        etat: { ...etat, etape: suivante(mission, etape), points: ajouter(etat.points, gagnes), essais: 0 },
+        retours: etape.retour ? [...retours, etape.retour] : retours,
         reussi: identiques(gagnes, max),
         aRevoir: manquantes(gagnes, max),
       };

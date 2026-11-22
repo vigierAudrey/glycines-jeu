@@ -109,6 +109,7 @@ export function validerContenu(contenu: Contenu): Probleme[] {
     if (!(m.duree_min > 0 && m.duree_min <= 20)) signaler(f, `Durée de ${m.duree_min} min : une mission dure 20 min au plus.`);
     if (!/^S[1-7]$/.test(m.sequence_requise)) signaler(f, `Séquence requise « ${m.sequence_requise} » invalide (S1 à S7).`);
     if (m.competences.length === 0) signaler(f, 'Aucune compétence visée.');
+    if (m.format !== undefined && m.format !== 'entrainement') signaler(f, `Format « ${m.format} » inconnu (entrainement ou rien).`);
     if (m.discipline !== undefined && m.discipline !== 'PSE') signaler(f, `Discipline « ${m.discipline} » inconnue (PSE ou rien pour le Bloc 2).`);
     for (const cv of m.competences) {
       const estPse = cv.code.startsWith('PSE-');
@@ -309,6 +310,25 @@ function validerEtapes(m: Mission, contenu: Contenu, signaler: (message: string)
           lirePoints(ou, el.points);
         }
         if (!(e.elements ?? []).some((el) => el.attendu) || !(e.elements ?? []).some((el) => !el.attendu)) signaler(`${ou} : il faut au moins un élément à prendre et un à laisser.`);
+        break;
+      }
+      case 'qcm': {
+        if (!e.question) signaler(`${ou} : il manque la question.`);
+        if (!(e.options?.length >= 2)) signaler(`${ou} : un QCM demande au moins 2 réponses.`);
+        if ((e.options ?? []).filter((o) => o.juste === true).length !== 1) signaler(`${ou} : un QCM a exactement une bonne réponse (« juste »: true).`);
+        if (!e.retour) signaler(`${ou} : il manque le retour.`);
+        lirePoints(ou, e.points);
+        break;
+      }
+      case 'association': {
+        if (!(e.paires?.length >= 3)) signaler(`${ou} : une association demande au moins 3 paires.`);
+        const idsP = new Set<string>();
+        for (const p of e.paires ?? []) {
+          if (idsP.has(p.id)) signaler(`${ou} : paire « ${p.id} » en double.`);
+          idsP.add(p.id);
+          if (!p.terme || !p.definition) signaler(`${ou} : la paire « ${p.id} » a besoin d'un mot et d'une définition.`);
+          lirePoints(ou, p.points);
+        }
         break;
       }
       case 'tri': {

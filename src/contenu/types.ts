@@ -250,7 +250,37 @@ export interface EtapeTri extends EtapeCommune {
   elements: ElementTri[];
 }
 
-export type Etape = EtapeDialogue | EtapeObservation | EtapeDecision | EtapeRelais | EtapeTransmission | EtapeOrdre | EtapeSelection | EtapeTri;
+/** Une réponse proposée dans un QCM ; une seule est juste. */
+export interface OptionQcm {
+  texte: string;
+  juste?: boolean;
+}
+
+/** QCM (Q.2) : une question de savoir, une seule bonne réponse parmi plusieurs. */
+export interface EtapeQcm extends EtapeCommune {
+  type: 'qcm';
+  question: string;
+  options: OptionQcm[];
+  points?: Points; // gagnés si la bonne réponse est choisie
+  retour: string; // explication montrée après la réponse
+}
+
+/** Un mot et sa définition, à relier. */
+export interface PaireAssociation {
+  id: string;
+  terme: string;
+  definition: string;
+  points?: Points;
+}
+
+/** Association (Q.2) : relier chaque mot à sa définition. */
+export interface EtapeAssociation extends EtapeCommune {
+  type: 'association';
+  paires: PaireAssociation[];
+  retour?: string;
+}
+
+export type Etape = EtapeDialogue | EtapeObservation | EtapeDecision | EtapeRelais | EtapeTransmission | EtapeOrdre | EtapeSelection | EtapeTri | EtapeQcm | EtapeAssociation;
 
 /**
  * Variante d'une mission (P.11) : la même mission racontée dans un autre contexte (bruit, éclairage, moment…).
@@ -277,7 +307,8 @@ export interface Mission {
   transfert?: boolean; // vrai si la mission est une situation nouvelle : seul cas où le niveau N4 est possible
   confiance_depart?: number; // de 0 à 10, 5 par défaut
   etapes: Etape[];
-  discipline?: 'PSE'; // absent = Bloc 2 ; « PSE » = mission de prévention-santé-environnement (référentiel pse.json)
+  discipline?: 'PSE';
+  format?: 'entrainement'; // absent = mission dans l'aile ; « entrainement » = activité courte sur les savoirs (Q.2) // absent = Bloc 2 ; « PSE » = mission de prévention-santé-environnement (référentiel pse.json)
   variantes?: VarianteMission[]; // autres contextes possibles, tirés au hasard avec la version de base
   debriefing: string[]; // 2 ou 3 questions pour la relève de fin de mission
   [autre: string]: unknown; // champs libres (notes pour l'enseignante…)

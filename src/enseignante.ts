@@ -47,6 +47,12 @@ function etapeEnHtml(e: Etape, i: number): string {
     case 'selection':
       return `${titre}<p><em>${echapper(e.question)}</em> Réponses attendues :</p>
         <ul>${e.elements.map((el) => `<li>${echapper(el.texte)}${el.stock !== undefined ? ` (stock ${el.stock}, seuil ${el.seuil})` : ''} → <strong>${el.attendu ? 'à cocher' : 'à laisser'}</strong> <span class="points">${pointsEnTexte(el.points)}</span></li>`).join('')}</ul>`;
+    case 'qcm':
+      return `${titre}<p><em>QCM.</em> ${echapper(e.question)} <span class="points">${pointsEnTexte(e.points)}</span></p>
+        <ul>${e.options.map((o) => `<li>${o.juste ? '<strong>' : ''}${echapper(o.texte)}${o.juste ? ' ✔</strong>' : ''}</li>`).join('')}</ul>`;
+    case 'association':
+      return `${titre}<p><em>Association.</em> Paires attendues :</p>
+        <ul>${e.paires.map((p) => `<li><strong>${echapper(p.terme)}</strong> : ${echapper(p.definition)} <span class="points">${pointsEnTexte(p.points)}</span></li>`).join('')}</ul>`;
     case 'tri':
       return `${titre}<p><em>Tri.</em> Rangement attendu :</p>
         <ul>${e.elements.map((el) => `<li>${echapper(el.texte)} → <strong>${echapper(e.categories.find((c) => c.id === el.categorie)?.libelle ?? '')}</strong> <span class="points">${pointsEnTexte(el.points)}</span></li>`).join('')}</ul>`;

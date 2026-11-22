@@ -406,3 +406,9 @@ Trois lignes par session : ce qui a été fait, ce qui reste à surveiller, la p
 - **Fait** : dans la liste du Bloc 2, boutons « Toutes », « Recueillir les informations », « Relation avec le résident », « Actes de la vie quotidienne », « Entretenir et personnaliser » (les 4 familles du référentiel, titres officiels dans `familles-bloc2.json`), avec le nombre de missions. Vérifié à 390 px.
 - **À surveiller** : une mission qui travaille deux familles apparaît dans les deux.
 - **Prochaine tâche** : Q.2 (QCM, association, format entraînement).
+
+## 22/11/2026 · QCM, association et format entraînement (tâche Q.2)
+
+- **Fait** : deux nouveaux types d'étapes, `qcm` (une bonne réponse) et `association` (relier un mot à sa définition, un mot à la fois avec pastilles), dans le moteur, le validateur, l'écran et la page enseignante ; champ `format: "entrainement"` sur une mission. 2 tests, `pnpm verifier` OK (146 tests).
+- **À surveiller** : rien.
+- **Prochaine tâche** : Q.3 (choisir « Missions dans l'aile » ou « Entraînements rapides »).

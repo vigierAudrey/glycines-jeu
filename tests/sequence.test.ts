@@ -29,6 +29,10 @@ function reponseParfaite(etape: Etape): Reponse {
       return { type: 'ordre', ordre: etape.elements.map((el) => el.id) };
     case 'selection':
       return { type: 'selection', choisis: etape.elements.filter((el) => el.attendu).map((el) => el.id) };
+    case 'qcm':
+      return { type: 'qcm', choix: etape.options.findIndex((o) => o.juste) };
+    case 'association':
+      return { type: 'association', liens: Object.fromEntries(etape.paires.map((p) => [p.id, p.id])) };
     case 'tri':
       return { type: 'tri', rangements: Object.fromEntries(etape.elements.map((el) => [el.id, el.categorie])) };
   }

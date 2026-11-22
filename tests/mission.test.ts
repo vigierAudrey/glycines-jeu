@@ -152,3 +152,33 @@ describe('protocole et sélection (tâches P.4 et P.5)', () => {
     expect(r.retours.join(' ')).toContain('L\'ordre attendu');
   });
 });
+
+describe('QCM et association (Q.2)', () => {
+  const entrainement = {
+    id: 'm99-test', statut: 'valide', titre: 'Test', duree_min: 5, sequence_requise: 'S1', lieu: 'couloir', personnages: ['joueur'],
+    format: 'entrainement', competences: [{ code: 'CT3.1', critere: 'x' }], situation: '', objectif_eleve: '', debriefing: ['a', 'b'],
+    etapes: [
+      { id: 'q', type: 'qcm', consigne: '', question: 'Q ?', options: [{ texte: 'Non' }, { texte: 'Oui', juste: true }], points: { 'CT3.1': 2 }, retour: 'Parce que.' },
+      { id: 'a', type: 'association', consigne: '', paires: [
+        { id: 'p1', terme: 'A', definition: 'déf A', points: { 'CT3.1': 1 } },
+        { id: 'p2', terme: 'B', definition: 'déf B', points: { 'CT3.1': 1 } },
+        { id: 'p3', terme: 'C', definition: 'déf C', points: { 'CT3.1': 1 } }] },
+    ],
+  } as unknown as Mission;
+
+  it('un QCM rapporte ses points seulement avec la bonne réponse', () => {
+    expect(pointsMaxMission(entrainement)).toEqual({ 'CT3.1': 5 });
+    const faux = repondre(entrainement, demarrerMission(entrainement), { type: 'qcm', choix: 0 });
+    expect(faux.reussi).toBe(false);
+    expect(faux.retours[0]).toContain('La bonne réponse : Oui');
+    const juste = repondre(entrainement, demarrerMission(entrainement), { type: 'qcm', choix: 1 });
+    expect(juste.etat.points['CT3.1']).toBe(2);
+  });
+
+  it('une association compte chaque paire bien reliée', () => {
+    const apresQcm = repondre(entrainement, demarrerMission(entrainement), { type: 'qcm', choix: 1 }).etat;
+    const r = repondre(entrainement, apresQcm, { type: 'association', liens: { p1: 'p1', p2: 'p3', p3: 'p2' } });
+    expect(r.etat.points['CT3.1']).toBe(3);
+    expect(r.retours.filter((t) => t.startsWith('✔'))).toHaveLength(1);
+  });
+});

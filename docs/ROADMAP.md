@@ -119,7 +119,7 @@ Règle commune : toute nouvelle activité s'appuie sur une situation réelle des
 À faire avant la Phase 4 ter, en plusieurs fois si besoin.
 
 - [x] **Q.1** Liste du Bloc 2 : filtrer les missions par type d'action, d'après les 4 familles du référentiel (CT3 recueillir les informations, CT4 relation avec le résident, C2.1 actes de la vie quotidienne, C2.2 entretenir et personnaliser), en plus de la séquence.
-- [ ] **Q.2** Nouveaux types d'étapes pour travailler les savoirs : QCM (une bonne réponse parmi plusieurs) et association (relier un mot à sa définition). Nouveau format « entraînement » : court (3 à 5 min), sans déplacement dans l'aile.
+- [x] **Q.2** Nouveaux types d'étapes pour travailler les savoirs : QCM (une bonne réponse parmi plusieurs) et association (relier un mot à sa définition). Nouveau format « entraînement » : court (3 à 5 min), sans déplacement dans l'aile.
 - [ ] **Q.3** Écran de choix du format dans chaque matière : « Missions dans l'aile » ou « Entraînements rapides ».
 - [ ] **Q.4** Entraînements du Bloc 2, séance par séance (S1 à S7), à partir des activités interactives des cours (QCM, vrai/faux, associations, classements).
 - [ ] **Q.5** Entraînements de PSE, séance par séance, de la même façon.
