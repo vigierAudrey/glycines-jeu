@@ -454,3 +454,9 @@ Trois lignes par session : ce qui a été fait, ce qui reste à surveiller, la p
 - **Fait** : `m125` (S3-05, sommeil de M. Karim pendant les travaux) ; ses habitudes (ancien boulanger, coucher tôt, radio) ajoutées à `residents.json` depuis le cours. Deux critères communs de C2.1.2 (T.11). `pnpm verifier` OK.
 - **À surveiller** : mission en brouillon.
 - **Prochaine tâche** : T.6 (socio-esthétique, habillage, repas).
+
+## 22/11/2026 · Socio-esthétique, habillage et repas (tâche T.6)
+
+- **Fait** : `m126` (S4-04), `m127` (S4-05) et `m128` (S4-06) : six critères de C2.1.4 jamais cités, dont quatre de T.11. Doigts douloureux et bas de contention de Mme Rose, plan d'aide au repas de M. Karim et fausse route de Mme Denise repris des cours dans `residents.json`. `pnpm verifier` OK (228 tests).
+- **À surveiller** : missions en brouillon.
+- **Prochaine tâche** : T.7 (continence).

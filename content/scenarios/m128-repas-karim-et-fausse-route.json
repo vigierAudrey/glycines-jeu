@@ -1,0 +1,103 @@
+{
+  "id": "m128-repas-karim-et-fausse-route",
+  "statut": "brouillon",
+  "titre": "Le déjeuner de M. Karim",
+  "duree_min": 18,
+  "sequence_requise": "S4",
+  "lieu": "salle-a-manger",
+  "personnages": ["joueur", "karim", "denise", "infirmiere"],
+  "competences": [
+    { "code": "C2.1.4", "critere": "Relation privilégiée et sécurisante." },
+    { "code": "C2.1.4", "critere": "Adaptation des gestes aux capacités et aux besoins de la personne âgée." }
+  ],
+  "situation": "Au déjeuner, M. Karim, malvoyant, mange lentement et renverse son verre. Son plan d'aide prévoit une installation assise, ses lunettes, une présentation verbale du plateau et un gobelet adapté. À la table voisine, Mme Denise déjeune aussi.",
+  "objectif_eleve": "Installer M. Karim et son plateau selon le plan d'aide, respecter un refus sans forcer, et reconnaître une fausse route pour alerter.",
+  "note_pour_audrey": "Brouillon (tâches T.6 et T.11), d'après votre séquence 4, séance 6 (« installer et accompagner la prise du repas en sécurité ») : plan d'aide de M. Karim, plateau décrit par cadran, refus du plat, toux soudaine de Mme Denise (toux efficace ou obstruction sévère, on ne donne pas à boire, on alerte). Ces éléments ont été ajoutés aux fiches (repris_du_cours). Complément, hors cours : les répliques.",
+  "etapes": [
+    {
+      "id": "installer-karim",
+      "type": "selection",
+      "consigne": "Vous installez M. Karim pour le déjeuner.",
+      "question": "Cochez ce que vous faites, selon son plan d'aide.",
+      "elements": [
+        { "id": "assis", "texte": "Il est assis, stable, éveillé, la tête dans l'axe, la table à bonne hauteur.", "attendu": true, "points": { "C2.1.4": 1 }, "retour": "Une bonne installation protège de la fausse route." },
+        { "id": "lunettes", "texte": "Je vérifie qu'il a ses lunettes.", "attendu": true, "points": { "C2.1.4": 1 }, "retour": "Prévu par son plan d'aide." },
+        { "id": "gobelet", "texte": "Je pose le gobelet adapté et un set antidérapant.", "attendu": true, "points": { "C2.1.4": 1 }, "retour": "Les aides prévues l'aident à manger seul." },
+        { "id": "texture", "texte": "Je mixe son plat pour qu'il mange plus vite.", "attendu": false, "points": { "C2.1.4": 1 }, "retour": "Vous ne modifiez jamais seul une texture ou un régime." },
+        { "id": "deplacer", "texte": "Je range son plateau à ma façon pendant qu'il mange.", "attendu": false, "points": { "C2.1.4": 1 }, "retour": "On ne déplace pas les objets d'une personne malvoyante sans la prévenir." }
+      ]
+    },
+    {
+      "id": "presenter-plateau",
+      "type": "dialogue",
+      "consigne": "Vous posez le plateau devant M. Karim.",
+      "interlocuteur": "karim",
+      "replique": "Qu'est-ce qu'il y a aujourd'hui ? Je ne vois pas bien où sont les choses.",
+      "verbal": [
+        { "texte": "Comme une horloge : la viande est à 6 h, les légumes à 9 h, le gobelet à 2 h. Vous voulez que je vous guide la main vers le gobelet ?", "confiance": 2, "points": { "C2.1.4": 2 }, "retour": "Le repérage par cadran lui permet de manger seul, et vous lui demandez son accord avant de le guider." },
+        { "texte": "Ne vous inquiétez pas, je vais vous donner à manger.", "confiance": -2, "retour": "Il peut manger seul avec les bonnes indications : faire à sa place lui enlève son autonomie." },
+        { "texte": "C'est le plat du jour.", "confiance": 0, "retour": "Il ne sait toujours pas où sont les aliments." }
+      ],
+      "paraverbal": [
+        { "texte": "Voix calme, je parle avant de toucher quoi que ce soit.", "confiance": 1, "points": { "C2.1.4": 1 }, "retour": "Annoncer vos gestes le rassure." },
+        { "texte": "Voix rapide dans le bruit de la salle.", "confiance": -1, "retour": "Il risque de ne pas tout comprendre." },
+        { "texte": "Voix forte, comme s'il était sourd.", "confiance": -1, "retour": "Il voit mal, il entend bien." }
+      ],
+      "non_verbal": [
+        { "texte": "Je m'assieds à côté de lui, à sa hauteur.", "confiance": 1, "points": { "C2.1.4": 1 }, "retour": "Votre présence calme est sécurisante." },
+        { "texte": "Je reste debout et je repars aussitôt.", "confiance": -1, "retour": "Il reste seul face à un plateau qu'il ne voit pas bien." },
+        { "texte": "Je déplace son verre sans rien dire.", "confiance": -2, "retour": "Il ne retrouvera plus son verre." }
+      ]
+    },
+    {
+      "id": "refus-plat",
+      "type": "decision",
+      "consigne": "Après quelques bouchées, M. Karim repousse son assiette : « Je n'en veux plus. »",
+      "question": "Que faites-vous ?",
+      "choix": [
+        { "decision": "agir", "texte": "Je reformule pour vérifier, je lui propose une pause, et je respecte son choix ; je noterai ce qu'il a mangé.", "points": { "C2.1.4": 2 }, "retour": "Le refus est accueilli sans forcer ni culpabiliser, puis transmis selon le protocole." },
+        { "decision": "adapter", "texte": "J'insiste : « Encore trois bouchées, pour me faire plaisir. »", "retour": "Culpabiliser pour faire manger contourne son refus." },
+        { "decision": "alerter", "texte": "Je retire l'assiette sans rien dire.", "retour": "Vous ne vérifiez pas s'il s'agit d'un refus, d'une fatigue ou d'une difficulté." }
+      ]
+    },
+    {
+      "id": "denise-tousse",
+      "type": "decision",
+      "consigne": "À la table voisine, Mme Denise tousse soudainement, puis ne peut plus parler.",
+      "question": "Que faites-vous ?",
+      "choix": [
+        { "decision": "alerter", "texte": "J'arrête son repas, j'alerte immédiatement, et j'applique seulement les gestes pour lesquels je suis formé, selon le protocole.", "points": { "C2.1.4": 2 }, "retour": "Elle ne peut plus parler : c'est une obstruction sévère, une urgence. Alerte immédiate et protocole." },
+        { "decision": "agir", "texte": "Je lui donne un verre d'eau pour faire passer.", "retour": "On ne donne jamais à boire lors d'une fausse route." },
+        { "decision": "adapter", "texte": "J'essaie de retirer l'aliment avec mes doigts.", "retour": "Aucune exploration à l'aveugle de la bouche." }
+      ]
+    },
+    {
+      "id": "signes",
+      "type": "tri",
+      "consigne": "Après l'intervention de l'équipe, vous revoyez les deux cas avec Claire.",
+      "categories": [
+        { "id": "partielle", "libelle": "Toux efficace" },
+        { "id": "severe", "libelle": "Obstruction sévère" }
+      ],
+      "elements": [
+        { "id": "parle", "texte": "La personne tousse fort et peut parler.", "categorie": "partielle", "points": { "C2.1.4": 1 }, "retour": "On la laisse tousser, on arrête le repas, on surveille et on alerte selon le protocole." },
+        { "id": "muette", "texte": "La personne ne peut ni parler, ni tousser efficacement, ni respirer normalement.", "categorie": "severe", "points": { "C2.1.4": 1 }, "retour": "Alerte immédiate et appel des secours (15 ou 112 selon l'organisation)." },
+        { "id": "tousse-parle", "texte": "La personne tousse et répond quand on lui parle.", "categorie": "partielle", "points": { "C2.1.4": 1 }, "retour": "Elle peut parler : on ne lui donne pas à boire, on arrête le repas et on surveille." }
+      ]
+    },
+    {
+      "id": "transmettre-repas",
+      "type": "relais",
+      "consigne": "Après le repas, allez transmettre le refus de M. Karim et ce qu'il a mangé.",
+      "destinataire": "infirmiere",
+      "points": { "C2.1.4": 1 },
+      "retour": "Claire, infirmière, suit l'alimentation des résidents.",
+      "retour_erreur": "Cette personne ne suit pas l'alimentation des résidents. Qui s'en charge dans l'aile B ?"
+    }
+  ],
+  "debriefing": [
+    "Comment avez-vous permis à M. Karim de manger seul ?",
+    "Pourquoi ne pas insister quand il a refusé son plat ?",
+    "Qu'est-ce qui vous a montré que Mme Denise faisait une fausse route sévère ?"
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "id": "m126-rose-trousse-bien-etre",
+  "statut": "brouillon",
+  "titre": "La trousse de Mme Rose",
+  "duree_min": 15,
+  "sequence_requise": "S4",
+  "lieu": "chambre-rose",
+  "personnages": ["joueur", "rose"],
+  "competences": [
+    { "code": "C2.1.4", "critere": "Respect des règles d’hygiène et de sécurité, d’ergonomie." },
+    { "code": "C2.1.4", "critere": "Prise en compte du bien-être." }
+  ],
+  "situation": "Avant son rendez-vous, Mme Rose veut se coiffer et mettre sa crème pour les mains habituelle. Vous préparez le poste et la trousse avec elle.",
+  "objectif_eleve": "Choisir un matériel personnel, propre et autorisé, installer un poste confortable, et laisser Mme Rose faire les gestes qu'elle peut, sans imposer de norme esthétique.",
+  "note_pour_audrey": "Brouillon (tâches T.6 et T.11), d'après votre séquence 4, séance 4 (« bien-être socio-esthétique ») : activité 2 (trousse propre : brosse personnelle, peigne partagé non traité, produit périmé, coupe-ongles, vernis apporté sans accord) et activité 3 (poste avec miroir, siège stable, éclairage ; la personne fait les gestes possibles). Complète la mission m18 (même situation, autres critères). Complément, hors cours : les répliques de Mme Rose.",
+  "etapes": [
+    {
+      "id": "trousse",
+      "type": "selection",
+      "consigne": "Vous ouvrez la trousse de toilette posée sur la commode.",
+      "question": "Cochez ce que vous utilisez.",
+      "elements": [
+        { "id": "brosse", "texte": "Sa brosse personnelle, propre.", "attendu": true, "points": { "C2.1.4": 1 }, "retour": "Matériel personnel et propre : c'est le choix à privilégier." },
+        { "id": "creme", "texte": "Sa crème pour les mains habituelle, à son nom.", "attendu": true, "points": { "C2.1.4": 1 }, "retour": "Un produit connu, identifié et qu'elle a choisi." },
+        { "id": "miroir", "texte": "Un miroir et une serviette propre.", "attendu": true, "points": { "C2.1.4": 1 }, "retour": "Le miroir lui permet de voir et de choisir le résultat." },
+        { "id": "peigne", "texte": "Le peigne partagé du salon, qui n'a pas été nettoyé.", "attendu": false, "points": { "C2.1.4": 1 }, "retour": "Un matériel partagé non traité transmet des micro-organismes." },
+        { "id": "perime", "texte": "Une crème trouvée dans le tiroir, périmée.", "attendu": false, "points": { "C2.1.4": 1 }, "retour": "Un produit périmé ou inconnu n'est pas appliqué." },
+        { "id": "coupe-ongles", "texte": "Le coupe-ongles, pour arranger l'ongle près de la rougeur.", "attendu": false, "points": { "C2.1.4": 1 }, "retour": "Vous ne coupez pas l'ongle et vous ne soignez pas une lésion : la rougeur se transmet." },
+        { "id": "vernis", "texte": "Un vernis apporté par une camarade, sans l'accord de Mme Rose.", "attendu": false, "points": { "C2.1.4": 1 }, "retour": "Rien ne s'applique sans son accord." }
+      ]
+    },
+    {
+      "id": "installer-poste",
+      "type": "decision",
+      "consigne": "Mme Rose voudrait se coiffer debout devant le miroir de la salle d'eau.",
+      "question": "Que lui proposez-vous ?",
+      "choix": [
+        { "decision": "agir", "texte": "Je lui propose de s'asseoir sur un siège stable, face au miroir, bien éclairée, avec la brosse à portée de main.", "points": { "C2.1.4": 2 }, "retour": "Installation confortable et sûre, matériel accessible : elle peut se coiffer elle-même." },
+        { "decision": "adapter", "texte": "Je la laisse debout et je la coiffe vite pour qu'elle ne se fatigue pas.", "retour": "Elle reste debout sans appui, et vous faites à sa place un geste qu'elle peut faire." },
+        { "decision": "alerter", "texte": "Je lui dis qu'il vaut mieux attendre l'aide-soignante.", "retour": "Une coiffure simple, bien installée, fait partie de votre rôle." }
+      ]
+    },
+    {
+      "id": "rose-coiffure",
+      "type": "dialogue",
+      "consigne": "Mme Rose se coiffe. Elle n'arrive pas à atteindre l'arrière de sa tête.",
+      "interlocuteur": "rose",
+      "replique": "Derrière, je n'y arrive plus. Et puis je ne sais pas si c'est joli comme ça.",
+      "verbal": [
+        { "texte": "Voulez-vous que je vous aide juste derrière ? Vous me direz comment vous la voulez.", "confiance": 2, "points": { "C2.1.4": 2 }, "retour": "Vous aidez seulement la zone qu'elle ne peut pas atteindre, et elle garde le choix du résultat." },
+        { "texte": "Laissez-moi faire, je vais vous faire une coiffure plus moderne.", "confiance": -2, "retour": "Vous imposez votre norme esthétique : c'est elle qui choisit son apparence." },
+        { "texte": "C'est très joli, ma petite dame, on dirait une poupée.", "confiance": -1, "retour": "Valoriser, oui, mais sans infantiliser." }
+      ],
+      "paraverbal": [
+        { "texte": "Voix douce, je lui laisse le temps de répondre.", "confiance": 1, "points": { "C2.1.4": 1 }, "retour": "Elle peut exprimer ce qu'elle veut." },
+        { "texte": "Voix pressée par l'heure du rendez-vous.", "confiance": -1, "retour": "La précipitation enlève le plaisir du moment." },
+        { "texte": "Voix forte, sans me placer face à elle.", "confiance": -1, "retour": "Mme Rose est malentendante : on se place face à elle avant de parler." }
+      ],
+      "non_verbal": [
+        { "texte": "Je me place face à elle, puis je lui montre le résultat dans le miroir.", "confiance": 1, "points": { "C2.1.4": 1 }, "retour": "Le miroir lui permet de valider le résultat." },
+        { "texte": "Je prends la brosse de ses mains sans prévenir.", "confiance": -2, "retour": "On demande l'accord avant chaque geste." },
+        { "texte": "Je regarde l'horloge.", "confiance": -1, "retour": "Elle peut se sentir de trop." }
+      ]
+    },
+    {
+      "id": "bien-etre",
+      "type": "qcm",
+      "consigne": "Une camarade vous demande à quoi sert ce moment.",
+      "question": "Pourquoi accompagner un soin de bien-être socio-esthétique ?",
+      "options": [
+        { "texte": "Pour soutenir l'image de soi, le confort et l'expression personnelle de la personne.", "juste": true },
+        { "texte": "Pour que tous les résidents soient coiffés de la même façon." },
+        { "texte": "Pour gagner du temps sur la toilette." }
+      ],
+      "points": { "C2.1.4": 1 },
+      "retour": "Le bien-être socio-esthétique soutient l'image de soi : la personne choisit son apparence et peut refuser."
+    }
+  ],
+  "debriefing": [
+    "Quels objets avez-vous écartés de la trousse, et pourquoi ?",
+    "Qu'a fait Mme Rose elle-même ?",
+    "Comment avez-vous valorisé son apparence sans l'infantiliser ?"
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "id": "m127-rose-gilet-et-bas",
+  "statut": "brouillon",
+  "titre": "Un gilet, des boutons, des bas",
+  "duree_min": 18,
+  "sequence_requise": "S4",
+  "lieu": "chambre-rose",
+  "personnages": ["joueur", "rose", "infirmiere"],
+  "competences": [
+    { "code": "C2.1.4", "critere": "Relation favorisant l’autonomie." },
+    { "code": "C2.1.4", "critere": "Respect de la pudeur et de l’intimité." }
+  ],
+  "situation": "Mme Rose a choisi un gilet, mais ses doigts douloureux limitent le boutonnage. Son dossier mentionne des bas de contention prescrits, avec une aide selon le protocole. Ce matin, une rougeur nouvelle est visible sur sa jambe.",
+  "objectif_eleve": "Accompagner l'habillage en la laissant faire ce qu'elle peut, choisir une aide technique, préserver sa pudeur, et savoir arrêter l'aide aux bas pour transmettre.",
+  "note_pour_audrey": "Brouillon (tâches T.6 et T.11), d'après votre séquence 4, séance 5 (« se vêtir et se dévêtir, avec aides techniques et bas de contention ») : situation de Mme Rose, côté le plus limité vêtu en premier, aides techniques (enfile-bouton, chausse-pied long, pince), cartes de l'activité 3 (aide autorisée, arrêt et transmission, hors rôle). Ces éléments ont été ajoutés à sa fiche (repris_du_cours). Complément, hors cours : ses répliques.",
+  "etapes": [
+    {
+      "id": "pudeur",
+      "type": "decision",
+      "consigne": "Mme Rose est assise au bord du lit, en chemise de nuit. La porte de la chambre est entrouverte.",
+      "question": "Que faites-vous avant de commencer ?",
+      "choix": [
+        { "decision": "agir", "texte": "Je ferme la porte et le rideau, et je lui propose de garder une serviette sur les jambes pendant l'habillage.", "points": { "C2.1.4": 2 }, "retour": "Vous préservez sa pudeur et son intimité avant tout geste." },
+        { "decision": "adapter", "texte": "Je laisse la porte ouverte pour entendre si on m'appelle.", "retour": "Toute personne qui passe pourrait la voir se déshabiller." },
+        { "decision": "alerter", "texte": "J'attends qu'elle me demande de fermer la porte.", "retour": "Préserver l'intimité fait partie de votre rôle, sans attendre qu'elle le demande." }
+      ]
+    },
+    {
+      "id": "boutons",
+      "type": "dialogue",
+      "consigne": "Mme Rose enfile son gilet, puis s'arrête devant les boutons.",
+      "interlocuteur": "rose",
+      "replique": "Les boutons, avec mes doigts, je n'y arrive plus. Faites-le, vous.",
+      "verbal": [
+        { "texte": "Voulez-vous essayer avec un enfile-bouton ? Je vous montre, et je vous aide pour ceux qui résistent.", "confiance": 2, "points": { "C2.1.4": 2 }, "retour": "Vous proposez une aide technique qui compense la préhension limitée : elle garde l'initiative." },
+        { "texte": "D'accord, je vais vous boutonner, ça ira plus vite.", "confiance": 0, "retour": "C'est sa demande, mais une aide technique pourrait lui permettre de le faire elle-même." },
+        { "texte": "Mettez plutôt un pull, c'est plus simple.", "confiance": -2, "retour": "Elle a choisi ce gilet : le choix du vêtement lui appartient." }
+      ],
+      "paraverbal": [
+        { "texte": "Voix encourageante.", "confiance": 1, "points": { "C2.1.4": 1 }, "retour": "Encourager l'aide à essayer." },
+        { "texte": "Voix agacée par sa lenteur.", "confiance": -2, "retour": "Elle peut se sentir incapable." },
+        { "texte": "Voix neutre.", "confiance": 0, "retour": "Rien de faux, mais peu d'encouragement." }
+      ],
+      "non_verbal": [
+        { "texte": "Je me place face à elle et je lui montre le geste lentement.", "confiance": 1, "points": { "C2.1.4": 1 }, "retour": "Face à elle, elle vous entend et voit le geste." },
+        { "texte": "Je boutonne sans attendre sa réponse.", "confiance": -2, "retour": "Vous faites à sa place sans son accord." },
+        { "texte": "Je reste derrière elle.", "confiance": -1, "retour": "Elle ne voit pas le geste et entend mal." }
+      ]
+    },
+    {
+      "id": "aides-techniques",
+      "type": "association",
+      "consigne": "Reliez chaque aide technique à ce qu'elle permet.",
+      "paires": [
+        { "id": "enfile-bouton", "terme": "Enfile-bouton", "definition": "Compense une préhension limitée, si la personne peut le manipuler.", "points": { "C2.1.4": 1 } },
+        { "id": "chausse-pied", "terme": "Chausse-pied long", "definition": "Limite la flexion pour se chausser, sans remplacer une chaussure stable.", "points": { "C2.1.4": 1 } },
+        { "id": "pince", "terme": "Pince de préhension", "definition": "Aide à attraper un vêtement léger, jamais à servir d'appui.", "points": { "C2.1.4": 1 } }
+      ],
+      "retour": "Une aide technique est proposée, expliquée et utilisée avec l'accord de la personne."
+    },
+    {
+      "id": "ordre-habillage",
+      "type": "qcm",
+      "consigne": "Mme Rose a le bras droit plus douloureux.",
+      "question": "Quelle manche du gilet enfile-t-elle en premier, sauf consigne contraire ?",
+      "options": [
+        { "texte": "La manche droite, côté le plus limité.", "juste": true },
+        { "texte": "La manche gauche, côté le plus mobile." },
+        { "texte": "Peu importe." }
+      ],
+      "points": { "C2.1.4": 1 },
+      "retour": "On vêt d'abord le côté le plus limité et on dévêt d'abord le côté le plus mobile, sauf consigne individualisée."
+    },
+    {
+      "id": "bas-contention",
+      "type": "tri",
+      "consigne": "Vient le moment des bas de contention. Rangez chaque situation.",
+      "categories": [
+        { "id": "autorisee", "libelle": "Aide autorisée selon le protocole" },
+        { "id": "arret", "libelle": "J'arrête et je transmets" }
+      ],
+      "elements": [
+        { "id": "intact", "texte": "Bas intacts, prescrits, identifiés, peau sans anomalie, Mme Rose d'accord.", "categorie": "autorisee", "points": { "C2.1.4": 1 }, "retour": "Prescription, dispositif, peau et accord sont vérifiés : l'aide prévue est possible." },
+        { "id": "rougeur", "texte": "Une rougeur nouvelle sur la jambe.", "categorie": "arret", "points": { "C2.1.4": 1 }, "retour": "Un signe cutané inhabituel : on ne poursuit pas, on transmet." },
+        { "id": "douleur", "texte": "Une douleur au mollet.", "categorie": "arret", "points": { "C2.1.4": 1 }, "retour": "On ne poursuit pas : la douleur se transmet." },
+        { "id": "refus", "texte": "Mme Rose refuse les bas aujourd'hui.", "categorie": "arret", "points": { "C2.1.4": 1 }, "retour": "On ne poursuit jamais face à un refus : on le transmet." },
+        { "id": "sans-prescription", "texte": "Des bas sans prescription dans le dossier.", "categorie": "arret", "points": { "C2.1.4": 1 }, "retour": "Vous ne décidez ni de l'indication ni de la taille." }
+      ]
+    },
+    {
+      "id": "transmettre-rougeur",
+      "type": "relais",
+      "consigne": "Ce matin, il y a une rougeur nouvelle sur la jambe de Mme Rose. Vous n'avez pas posé les bas. Allez le transmettre.",
+      "destinataire": "infirmiere",
+      "points": { "C2.1.4": 1 },
+      "retour": "Claire, infirmière, observe la rougeur et décide de la suite pour les bas.",
+      "retour_erreur": "Cette personne n'est pas compétente pour une rougeur et des bas prescrits. Qui, dans l'aile B, l'est ?"
+    }
+  ],
+  "debriefing": [
+    "Qu'avez-vous fait pour préserver la pudeur de Mme Rose ?",
+    "Qu'est-ce que l'enfile-bouton lui a permis de faire seule ?",
+    "Pourquoi n'avez-vous pas posé les bas ce matin ?"
+  ]
+}
