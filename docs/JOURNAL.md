@@ -304,3 +304,9 @@ Trois lignes par session : ce qui a été fait, ce qui reste à surveiller, la p
 - **Fait** : à la demande d'Audrey, le dialogue montre « Ce que je dis », puis « Comment je le dis », puis « Ce que fait mon corps », avec les réponses déjà données en résumé (bouton « Modifier »). Transmission et tri : un élément à la fois, avec des pastilles numérotées pour revenir en arrière. Vérifié à 390 px : plus de défilement. `pnpm verifier` OK.
 - **À surveiller** : avec 8 éléments, les pastilles passent sur deux lignes sur téléphone.
 - **Prochaine tâche** : publier quand Audrey le dit.
+
+## 22/11/2026 · Publication à jour et focus clavier
+
+- **Fait** : actions GitHub de publication passées aux versions récentes (Node 24), pour supprimer l'avertissement « Node.js 20 is deprecated ». Après chaque réponse dans une question à la fois, le focus va sur la question suivante (clavier, lecteur d'écran).
+- **À surveiller** : les nouvelles versions des actions seront testées à la prochaine publication.
+- **Prochaine tâche** : 5.1 (PSE), découpée en sous-tâches.

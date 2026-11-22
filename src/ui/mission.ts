@@ -445,6 +445,12 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
     afficher();
   };
 
+  // Après une réponse, le panneau est redessiné : on place le focus sur la question suivante (ou sur le bouton
+  // de validation), pour qu'un élève au clavier ou avec un lecteur d'écran ne reparte pas du haut de la page.
+  const garderLeFocus = () => {
+    panneau.querySelector<HTMLElement>('.canal--courant .choix, .panneau__corps > .bouton--principal')?.focus({ preventScroll: true });
+  };
+
   panneau.addEventListener('click', (evenement) => {
     const cible = (evenement.target as HTMLElement).closest<HTMLElement>('button');
     if (!cible || !mission || !etat) return;
@@ -486,10 +492,12 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
     else if (d.rouvrir) {
       ouvert = d.rouvrir;
       afficher();
+      garderLeFocus();
     } else if (d.canal) {
       dialogue[d.canal] = Number(d.i);
       ouvert = null;
       afficher();
+      garderLeFocus();
     } else if (d.action === 'valider-dialogue') {
       envoyer({ type: 'dialogue', verbal: dialogue.verbal, paraverbal: dialogue.paraverbal, non_verbal: dialogue.non_verbal });
     } else if (d.classer && elementOuvert) {
@@ -501,6 +509,7 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
       natures[d.phrase] = d.nature as NaturePhrase;
       ouvert = null;
       afficher();
+      garderLeFocus();
     } else if (d.action === 'valider-transmission') envoyer({ type: 'transmission', classements: natures });
     else if (d.ordre) {
       ordreChoisi = ordreChoisi.includes(d.ordre) ? ordreChoisi.filter((id) => id !== d.ordre) : [...ordreChoisi, d.ordre];
@@ -518,6 +527,7 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
       rangements[d.tri] = d.categorie;
       ouvert = null;
       afficher();
+      garderLeFocus();
     } else if (d.action === 'valider-tri') envoyer({ type: 'tri', rangements });
     else if (d.decision !== undefined && e?.type === 'decision') envoyer({ type: 'decision', choix: Number(d.decision) });
   });
