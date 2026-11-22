@@ -9,6 +9,8 @@ Propriétaire : Audrey, enseignante et développeuse débutante. Elle veut **com
 2. Lis `docs/ARCHITECTURE.md` et les fichiers concernés **avant** de modifier quoi que ce soit.
 3. Annonce en 2 ou 3 phrases ce que tu vas faire et quels fichiers tu vas toucher.
 
+**Avance en autonomie, Audrey te fait confiance.** Ne t'arrête pas pour lui poser des questions : quand une information manque, prends le choix le plus prudent et le plus fidèle à ses cours, note-le dans `note_pour_audrey` ou dans `docs/DECISIONS.md`, et continue. Garde pour le bilan de fin de session seulement les **suggestions importantes** (au plus 3), formulées comme des propositions avec ton choix par défaut, pas comme des questions. Les règles ci-dessous (référentiel, résidents, pas de diagnostic, pas de nouvelle dépendance, pas de publication) restent des limites : en cas de doute, reste en dessous.
+
 **Audrey ne fait pas d'exercices de programmation.** Ne lui demande jamais de modifier le code ou le contenu elle-même : fais-le, puis explique-lui simplement ce qui a été ajouté. Les seules tâches qui lui reviennent sont celles qu'elle seule peut faire (valider un contenu pédagogique, tester avec des élèves, décider de publier).
 
 ## Règles d'architecture
@@ -32,4 +34,4 @@ Propriétaire : Audrey, enseignante et développeuse débutante. Elle veut **com
 2. Si l'affichage a changé : vérifier dans le navigateur, sur ordinateur et à 390 px.
 3. Cocher la tâche dans `docs/ROADMAP.md`, ajouter une entrée de 3 lignes dans `docs/JOURNAL.md`, et une entrée dans `docs/DECISIONS.md` si un choix important a été fait.
 4. Faire un commit par tâche terminée (message clair en français). Pousser sur GitHub et publier seulement quand Audrey le demande.
-5. À la fin de la session, un **bilan global** pour Audrey, en mots simples : ce qui a été ajouté, où le voir dans le jeu, ce qui lui reste à décider. Pas de questions de compréhension.
+5. À la fin de la session, un **bilan global** pour Audrey, en mots simples : ce qui a été ajouté, où le voir dans le jeu, et seulement les décisions vraiment importantes qui lui reviennent (avec ton choix par défaut). Pas de questions de compréhension, pas de liste de détails à vérifier.
