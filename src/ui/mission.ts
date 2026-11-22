@@ -7,12 +7,13 @@
 
 import * as THREE from 'three';
 import type { Contenu, ElementObserve, Etape, Mission, NaturePhrase } from '../contenu/types';
-import { bilan, demarrerMission, etapeEnCours, repondre, type Bilan, type EtatMission, type Reponse } from '../regles/mission';
+import { bilan, demarrerMission, etapeEnCours, repondre, type Bilan, type EtatMission, type Niveau, type Reponse } from '../regles/mission';
 import { estDebloquee, missionsAMontrer, SEQUENCES } from '../regles/deblocage';
 import type { Theatre } from '../scene3d/creerScene';
 import { melanger, melangerSansOrdreDeDepart } from '../regles/hasard';
 import { tirerVariante } from '../regles/variantes';
 import type { Rappel } from '../regles/consequences';
+import { comparerEstimation, PHRASES_ECART } from '../regles/positionnement';
 import { echapper } from './echapper';
 
 /** Ce que l'interface des missions demande au reste du jeu (main.ts fait le lien avec la 3D). */
@@ -86,6 +87,9 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
   // Phase d'affichage : l'intro, l'étape (l'élève répond) ou le retour (on lui explique sa réponse).
   let phase: 'intro' | 'etape' | 'retour' = 'intro';
   let rappels: Rappel[] = []; // oublis d'autres missions, montrés à l'intro
+  let estimations: Record<string, Niveau> = {}; // P.13 : niveau estimé par l'élève avant la mission (facultatif)
+  // N4 n'est possible que dans une mission de transfert : on ne le propose pas ailleurs.
+  const niveauxPossibles = (): Niveau[] => (mission?.transfert ? ['N1', 'N2', 'N3', 'N4'] : ['N1', 'N2', 'N3']);
   let retours: string[] = [];
   let reussi = false;
   let aRevoir: string[] = [];
@@ -260,6 +264,18 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
           <ul>${rappels.map((r) => `<li class="a-lire"><strong>${echapper(r.titre)}</strong> : ${echapper(r.texte)}</li>`).join('')}</ul></div>` : ''}
         <p class="a-lire">${echapper(mission.situation)}</p>
         <p class="objectif a-lire"><strong>Votre objectif :</strong> ${echapper(mission.objectif_eleve)}</p>
+        <details class="estimation">
+          <summary>Avant de commencer : où vous situez-vous ? (facultatif)</summary>
+          ${mission.competences.map((c) => `
+            <fieldset class="canal">
+              <legend class="a-lire"><strong>${echapper(c.code)}</strong> ${echapper(c.critere)}</legend>
+              <div class="rangee-boutons rangee-boutons--trois">
+                ${niveauxPossibles().map((n) => `
+                  <button type="button" class="choix" aria-pressed="${estimations[c.code] === n}" data-estimer="${echapper(c.code)}" data-niveau="${n}" title="${echapper(contenu.referentiel.niveaux[n])}">${n}</button>`).join('')}
+              </div>
+            </fieldset>`).join('')}
+          <p class="indice">${niveauxPossibles().map((n) => `<strong>${n}</strong> ${echapper(contenu.referentiel.niveaux[n])}`).join(' ')}</p>
+        </details>
         <button type="button" class="bouton bouton--principal" data-action="commencer">C'est parti</button>`;
     } else if (phase === 'retour') {
       corps = `
@@ -358,6 +374,7 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
   const commencer = (m: Mission) => {
     mission = tirerVariante(m); // P.11 : version de base ou variante de contexte, tirée au hasard
     rappels = liens.prendreRappels?.(m.id) ?? [];
+    estimations = {};
     etat = demarrerMission(mission);
     phase = 'intro';
     ordresTires.clear();
@@ -380,7 +397,11 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
     if (!cible || !mission || !etat) return;
     const e = etape();
     const d = cible.dataset;
-    if (d.action === 'commencer') {
+    if (d.estimer && d.niveau) {
+      estimations[d.estimer] = d.niveau as Niveau;
+      afficher();
+      panneau.querySelector<HTMLDetailsElement>('.estimation')?.setAttribute('open', '');
+    } else if (d.action === 'commencer') {
       phase = 'etape';
       afficher();
       if (etape()?.type === 'observation') liens.cadrerZone(mission.lieu);
@@ -489,7 +510,8 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
           <li class="a-lire">
             <span class="badge badge--niveau badge--${c.niveau}">${c.niveau}</span>
             <span><strong>${echapper(c.code)}</strong> ${echapper(c.critere)}
-            <span class="releve__sens">${echapper(contenu.referentiel.niveaux[c.niveau])}</span></span>
+            <span class="releve__sens">${echapper(contenu.referentiel.niveaux[c.niveau])}</span>
+            ${estimations[c.code] ? `<span class="releve__estimation">Vous pensiez ${estimations[c.code]}. ${PHRASES_ECART[comparerEstimation(estimations[c.code], c.niveau)]}</span>` : ''}</span>
           </li>`).join('')}
       </ul>
       <h3>Pour le débriefing</h3>
@@ -518,9 +540,9 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
       <p><strong>Situation :</strong> ${echapper(m.situation)}</p>
       <h2>Mes niveaux</h2>
       <table>
-        <thead><tr><th>Compétence</th><th>Critère officiel</th><th>Niveau</th></tr></thead>
+        <thead><tr><th>Compétence</th><th>Critère officiel</th><th>Mon estimation</th><th>Niveau</th></tr></thead>
         <tbody>${b.competences.map((c) => `
-          <tr><td>${echapper(c.code)}</td><td>${echapper(c.critere)}</td>
+          <tr><td>${echapper(c.code)}</td><td>${echapper(c.critere)}</td><td>${estimations[c.code] ?? '…'}</td>
               <td><strong>${c.niveau}</strong><br><small>${echapper(contenu.referentiel.niveaux[c.niveau])}</small></td></tr>`).join('')}
         </tbody>
       </table>

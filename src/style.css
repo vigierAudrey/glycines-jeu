@@ -428,3 +428,8 @@ html, body {
   .fiche-impression li { break-inside: avoid; margin-bottom: 4px; }
   .fiche__ligne { display: block; height: 22px; border-bottom: 1px dotted #777; }
 }
+
+/* Auto-positionnement (P.13) */
+.estimation { margin: .5rem 0; }
+.estimation summary { min-height: 44px; display: flex; align-items: center; cursor: pointer; font-weight: 600; }
+.releve__estimation { display: block; font-style: italic; margin-top: .2rem; }

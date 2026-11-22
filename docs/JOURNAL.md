@@ -256,3 +256,9 @@ Trois lignes par session : ce qui a été fait, ce qui reste à surveiller, la p
 - **Fait** : une étape peut porter un rappel `si_oubli`. Manquée, elle laisse un rappel montré une fois au début d'une autre mission (« 📌 Depuis vos dernières missions »), gardé dans le navigateur seulement. Rappels écrits pour m00, m10 et m19. 3 tests, `pnpm verifier` OK (114 tests).
 - **À surveiller** : les rappels disent ce qui n'a pas été fait et la bonne pratique, sans inventer de suite (pas de chute).
 - **Prochaine tâche** : P.13 (auto-positionnement).
+
+## 22/11/2026 · Auto-positionnement (tâche P.13)
+
+- **Fait** : à l'intro d'une mission, volet facultatif pour estimer son niveau par compétence (N1 à N3, N4 si mission de transfert). La relève dit « Vous pensiez N2. Mieux que votre estimation… » ; la fiche imprimée a une colonne « Mon estimation ». Rien n'est enregistré. `pnpm verifier` OK (115 tests).
+- **À surveiller** : affichage non vérifié au navigateur (Chromium absent) : à regarder sur téléphone.
+- **Prochaine tâche** : P.14 (mode classe).
