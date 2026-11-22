@@ -460,5 +460,10 @@ html, body {
 .pastille-question[aria-current="true"] { border-color: #6a4c93; background: #efe8f7; }
 .pastille-question:disabled { opacity: .45; cursor: default; }
 
-/* Rubrique PSE dans la liste des missions (5.1) */
-.liste-missions__titre { margin: 12px 0 4px; font-size: 1rem; }
+/* Choix de la matière à l'ouverture de la liste (Bloc 2 ou PSE) */
+.matieres { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin: 10px 0; }
+.carte-matiere { display: flex; flex-direction: column; gap: 4px; min-height: 96px; padding: 14px 16px; text-align: left; font: inherit; color: inherit; background: #f4f1f8; border: 2px solid #ddd5ea; border-radius: 14px; cursor: pointer; }
+.carte-matiere strong { font-size: 1.3rem; }
+.carte-matiere:hover, .carte-matiere:focus-visible { border-color: #6a4c93; }
+.carte-matiere:disabled { opacity: .5; cursor: default; }
+.carte-matiere__nombre { font-size: .85rem; opacity: .8; }

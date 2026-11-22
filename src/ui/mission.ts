@@ -547,43 +547,66 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
     fenetre.querySelector<HTMLElement>('button')?.focus();
   };
 
-  // Écran d'accueil et liste des missions : rangées par séquence, verrouillées tant que la séquence n'a pas été vue.
-  const ouvrirListe = (accueil = false) => {
-    const sequenceVue = liens.sequenceVue();
-    const liste = missionsAMontrer(contenu.missions, liens.avecBrouillons);
-    ouvrirFenetre(`
-      <div class="fenetre__haut">
-        <h2>${accueil ? 'Une journée aux Glycines' : 'Missions'}</h2>
-        <button type="button" class="bouton bouton--petit" data-action="fermer" aria-label="Fermer">×</button>
-      </div>
-      ${accueil ? `<p class="a-lire">Vous êtes agent accompagnant au grand âge dans l'aile B de l'EHPAD Les Glycines. Choisissez une mission. Vous pouvez aussi fermer cette fenêtre pour explorer l'aile.</p>` : ''}
-      <label class="choix-sequence">Séquence vue en cours
-        <select name="sequence">
-          ${SEQUENCES.map((s) => `<option ${s === sequenceVue ? 'selected' : ''}>${s}</option>`).join('')}
-        </select>
-      </label>
-      ${liste.length === 0 ? '<p class="indice">Aucune mission validée pour l\'instant.</p>' : ''}
-      <ul class="liste-missions">
-        ${liste.map((m, n) => {
-          const niveaux = liens.niveauxObtenus?.(m.id);
-          const ouverte = estDebloquee(m, sequenceVue);
-          const pse = m.discipline === 'PSE';
-          const titrePse = pse && liste[n - 1]?.discipline !== 'PSE'
-            ? `<li><h3 class="liste-missions__titre">PSE · Prévention santé environnement</h3></li>` : '';
-          return `${titrePse}
+  // Écran d'accueil et liste des missions. On choisit d'abord la matière (Bloc 2 ou PSE) : les deux listes ne se
+  // mélangent pas. Bloc 2 : missions rangées par séquence, verrouillées tant que la séquence n'a pas été vue.
+  // PSE : missions toujours ouvertes. Le choix de matière est gardé pendant la partie.
+  let matiere: 'bloc2' | 'pse' | null = null;
+  let accueilEnCours = false;
+  const carteMission = (m: Mission, sequenceVue: string) => {
+    const niveaux = liens.niveauxObtenus?.(m.id);
+    const ouverte = estDebloquee(m, sequenceVue);
+    const pse = m.discipline === 'PSE';
+    return `
           <li>
             <button type="button" class="carte-mission" data-mission="${echapper(m.id)}" ${ouverte ? '' : 'disabled'}>
               <strong>${ouverte ? '' : '🔒 '}${echapper(m.titre)}</strong>
-              <span>${m.duree_min} min · ${pse ? `PSE, séquence ${echapper(m.sequence_requise)}` : ouverte ? `séquence ${echapper(m.sequence_requise)}` : `après la séquence ${echapper(m.sequence_requise)}`}${m.statut === 'brouillon' ? ' · <em>brouillon</em>' : ''}</span>
+              <span>${m.duree_min} min · ${pse ? `séquence ${echapper(m.sequence_requise)} de PSE` : ouverte ? `séquence ${echapper(m.sequence_requise)}` : `après la séquence ${echapper(m.sequence_requise)}`}${m.statut === 'brouillon' ? ' · <em>brouillon</em>' : ''}</span>
               ${niveaux ? `<span class="niveaux">Dernière relève : ${echapper(niveaux)}</span>` : ''}
             </button>
           </li>`;
-        }).join('')}
-      </ul>`);
-    fenetre.querySelector<HTMLSelectElement>('select[name="sequence"]')!.addEventListener('change', (e) => {
-      liens.changerSequence((e.target as HTMLSelectElement).value);
-      ouvrirListe(accueil);
-    });
+  };
+  const ouvrirListe = (accueil = false) => {
+    accueilEnCours = accueil;
+    const sequenceVue = liens.sequenceVue();
+    const toutes = missionsAMontrer(contenu.missions, liens.avecBrouillons);
+    const bloc2 = toutes.filter((m) => m.discipline !== 'PSE');
+    const pse = toutes.filter((m) => m.discipline === 'PSE');
+    const haut = `
+      <div class="fenetre__haut">
+        ${matiere ? `<button type="button" class="bouton bouton--petit" data-action="matieres" aria-label="Revenir au choix de la matière">←</button>` : ''}
+        <h2>${matiere === 'bloc2' ? 'Missions · Bloc 2' : matiere === 'pse' ? 'Missions · PSE' : accueil ? 'Une journée aux Glycines' : 'Missions'}</h2>
+        <button type="button" class="bouton bouton--petit" data-action="fermer" aria-label="Fermer">×</button>
+      </div>`;
+    if (!matiere) {
+      ouvrirFenetre(`${haut}
+      ${accueil ? `<p class="a-lire">Vous êtes agent accompagnant au grand âge dans l'aile B de l'EHPAD Les Glycines. Choisissez une matière, puis une mission. Vous pouvez aussi fermer cette fenêtre pour explorer l'aile.</p>` : ''}
+      <div class="matieres">
+        <button type="button" class="carte-matiere" data-matiere="bloc2">
+          <strong>Bloc 2</strong>
+          <span>Accompagner la personne dans son espace privé</span>
+          <span class="carte-matiere__nombre">${bloc2.length} mission${bloc2.length > 1 ? 's' : ''}</span>
+        </button>
+        <button type="button" class="carte-matiere" data-matiere="pse" ${pse.length ? '' : 'disabled'}>
+          <strong>PSE</strong>
+          <span>Prévention santé environnement</span>
+          <span class="carte-matiere__nombre">${pse.length ? `${pse.length} mission${pse.length > 1 ? 's' : ''}` : 'bientôt'}</span>
+        </button>
+      </div>`);
+    } else {
+      const liste = matiere === 'pse' ? pse : bloc2;
+      ouvrirFenetre(`${haut}
+      ${matiere === 'bloc2' ? `<label class="choix-sequence">Séquence vue en cours
+        <select name="sequence">
+          ${SEQUENCES.map((s) => `<option ${s === sequenceVue ? 'selected' : ''}>${s}</option>`).join('')}
+        </select>
+      </label>` : '<p class="indice">Les missions de PSE sont toujours ouvertes.</p>'}
+      ${liste.length === 0 ? '<p class="indice">Aucune mission validée pour l\'instant.</p>' : ''}
+      <ul class="liste-missions">${liste.map((m) => carteMission(m, sequenceVue)).join('')}</ul>`);
+      fenetre.querySelector<HTMLSelectElement>('select[name="sequence"]')?.addEventListener('change', (e) => {
+        liens.changerSequence((e.target as HTMLSelectElement).value);
+        ouvrirListe(accueil);
+      });
+    }
     const bas = liens.basDeListe?.();
     if (bas) fenetre.querySelector('.fenetre__carte')!.append(bas);
     if (accueil) racine.dispatchEvent(new CustomEvent('panneau-affiche', { detail: fenetre }));
@@ -664,6 +687,16 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
     const cible = (evenement.target as HTMLElement).closest<HTMLElement>('button');
     if (!cible) return;
     if (cible.dataset.action === 'fermer') fenetre.hidden = true;
+    if (cible.dataset.matiere === 'bloc2' || cible.dataset.matiere === 'pse') {
+      matiere = cible.dataset.matiere;
+      ouvrirListe(accueilEnCours);
+      return;
+    }
+    if (cible.dataset.action === 'matieres') {
+      matiere = null;
+      ouvrirListe(accueilEnCours);
+      return;
+    }
     if (cible.dataset.action === 'imprimer-fiche' && dernierBilan) imprimerFiche(dernierBilan);
     const id = cible.dataset.mission;
     const m = id && contenu.missions.find((x) => x.id === id);
