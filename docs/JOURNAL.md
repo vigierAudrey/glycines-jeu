@@ -478,3 +478,9 @@ Trois lignes par session : ce qui a été fait, ce qui reste à surveiller, la p
 - **Fait** : `m131` (S3-08) et `m132` (S3-09) : cinq critères C2.2.1 jamais cités (effets personnels, relais, rangement, temps, qualité du résultat). `pnpm verifier` OK.
 - **À surveiller** : missions en brouillon ; le relais du jeu est le cadre de santé (pas de maintenance ni de service hôtelier parmi les personnages).
 - **Prochaine tâche** : T.10 (personnalisation).
+
+## 22/11/2026 · Personnalisation de l'espace (tâche T.10)
+
+- **Fait** : `m133` (S5-07 et S6-02) : critère C2.2.2 « Sécurisation de l'espace ». Le Bloc 2 cite maintenant 61 critères sur 71 (31 au début de la Phase 4 ter). `pnpm verifier` OK (233 tests).
+- **À surveiller** : mission en brouillon.
+- **Prochaine tâche** : T.11 (10 critères communs de C2.1.2, C2.1.3 et C2.1.5).

@@ -1,0 +1,106 @@
+{
+  "id": "m133-denise-fauteuil-chez-soi",
+  "statut": "brouillon",
+  "titre": "Le fauteuil de Mme Denise",
+  "duree_min": 18,
+  "sequence_requise": "S5",
+  "lieu": "chambre-denise",
+  "personnages": ["joueur", "denise", "cadre"],
+  "competences": [
+    { "code": "C2.2.2", "critere": "Sécurisation de l’espace." },
+    { "code": "C2.2.2", "critere": "Participation de la personne." }
+  ],
+  "situation": "Mme Denise veut garder près d'elle ses photos, son nécessaire de couture, sa tisane et son fauteuil. Sa fille souhaite tout ranger et retirer le fauteuil. Mme Denise se déplace avec un déambulateur et lève difficilement les bras.",
+  "objectif_eleve": "Écouter la famille sans effacer la parole de Mme Denise, vérifier ce qui rend l'espace sûr, et la faire participer à la décision.",
+  "note_pour_audrey": "Brouillon (tâche T.10), d'après votre séquence 5, séance 7 (« écouter, trier, ranger et personnaliser avec la personne » : la parole de Mme Denise reste première, hauteurs de rangement, le fauteuil demande une vérification et pas un refus automatique) et séquence 6, séance 2 (« un chez-soi » : ne pas confondre son goût et celui de la personne, vérifier circulation, stabilité, accès et confort, proposer au lieu d'imposer). Critère « Sécurisation de l'espace » encore jamais cité. Complète la mission m24. Complément, hors cours : la lampe de couture, le carton d'albums, le flacon apporté par la famille, le relais au cadre de santé et les répliques.",
+  "etapes": [
+    {
+      "id": "fille",
+      "type": "decision",
+      "consigne": "Dans le couloir, la fille de Mme Denise vous arrête : « Ce vieux fauteuil prend toute la place. Enlevez-le, et rangez tout dans l'armoire, ce sera plus net. »",
+      "question": "Que répondez-vous ?",
+      "choix": [
+        { "decision": "agir", "texte": "Je l'écoute et je note son inquiétude, puis je lui explique que nous en parlerons avec sa mère, qui décide pour sa chambre, après avoir vérifié le fauteuil.", "points": { "C2.2.2": 2 }, "retour": "La famille apporte des informations et peut signaler un risque, mais la parole de Mme Denise reste première." },
+        { "decision": "adapter", "texte": "D'accord, je l'enlève tout de suite.", "retour": "Toute suppression d'objet doit être discutée avec la personne." },
+        { "decision": "alerter", "texte": "Je lui dis que ce n'est pas son problème.", "retour": "Son avis compte aussi : on l'écoute sans effacer celui de sa mère." }
+      ]
+    },
+    {
+      "id": "denise-fauteuil",
+      "type": "dialogue",
+      "consigne": "Vous entrez chez Mme Denise. Elle est assise dans son fauteuil.",
+      "interlocuteur": "denise",
+      "replique": "Ma fille veut enlever mon fauteuil. Mais c'est là que je couds, avec ma tisane.",
+      "verbal": [
+        { "texte": "Ce fauteuil compte pour vous. On regarde ensemble comment le garder, en vérifiant que vous passez bien avec votre déambulateur ?", "confiance": 2, "points": { "C2.2.2": 2 }, "retour": "Vous reconnaissez son souhait et vous la faites participer à la recherche d'une solution sûre." },
+        { "texte": "Votre fille a raison, il faut de la place.", "confiance": -2, "retour": "Vous prenez parti sans l'écouter ni vérifier." },
+        { "texte": "Moi je le trouve joli, gardez-le.", "confiance": -1, "retour": "Votre goût n'est pas le critère : on vérifie aussi la sécurité." }
+      ],
+      "paraverbal": [
+        { "texte": "Voix calme, je lui laisse le temps.", "confiance": 1, "points": { "C2.2.2": 1 }, "retour": "Elle peut exprimer ce qui compte pour elle." },
+        { "texte": "Voix gênée, je n'ose pas en parler.", "confiance": -1, "retour": "Elle peut croire que la décision est déjà prise." },
+        { "texte": "Voix pressée.", "confiance": -1, "retour": "Elle n'a pas le temps de donner son avis." }
+      ],
+      "non_verbal": [
+        { "texte": "Je m'assieds face à elle, à sa hauteur.", "confiance": 1, "points": { "C2.2.2": 1 }, "retour": "Une écoute attentive." },
+        { "texte": "Je mesure déjà la place du fauteuil sans lui parler.", "confiance": -1, "retour": "On vérifie avec elle, pas à sa place." },
+        { "texte": "Je regarde la porte.", "confiance": -1, "retour": "Elle peut se sentir de trop." }
+      ]
+    },
+    {
+      "id": "verifier-espace",
+      "type": "selection",
+      "consigne": "Vous faites le tour de la chambre avec Mme Denise.",
+      "question": "Cochez ce que vous vérifiez pour sécuriser l'espace.",
+      "elements": [
+        { "id": "stabilite", "texte": "Le fauteuil est stable et en bon état.", "attendu": true, "points": { "C2.2.2": 1 }, "retour": "Vérifier l'état, c'est la condition pour le garder." },
+        { "id": "passage", "texte": "Le déambulateur passe autour du fauteuil, jusqu'au lit et à la salle d'eau.", "attendu": true, "points": { "C2.2.2": 1 }, "retour": "La circulation reste libre." },
+        { "id": "cable", "texte": "Le câble de la lampe de couture ne traverse pas le passage.", "attendu": true, "points": { "C2.2.2": 1 }, "retour": "Un câble au sol est un risque de chute." },
+        { "id": "eclairage", "texte": "L'éclairage est suffisant pour coudre.", "attendu": true, "points": { "C2.2.2": 1 }, "retour": "Le confort aussi compte." },
+        { "id": "photos", "texte": "Retirer les photos du mur pour faire plus net.", "attendu": false, "points": { "C2.2.2": 1 }, "retour": "Ses photos visibles sont un repère : on ne les retire pas sans raison ni accord." },
+        { "id": "couture-haut", "texte": "Mettre la couture en haut de l'armoire pour libérer la table.", "attendu": false, "points": { "C2.2.2": 1 }, "retour": "Elle lève difficilement les bras : elle ne pourrait plus l'attraper." }
+      ]
+    },
+    {
+      "id": "hauteurs",
+      "type": "tri",
+      "consigne": "Vous proposez un rangement. Placez chaque objet.",
+      "categories": [
+        { "id": "hanche-epaule", "libelle": "Entre la hanche et l'épaule" },
+        { "id": "bas", "libelle": "En partie basse" },
+        { "id": "protocole", "libelle": "Selon le protocole de l'établissement" }
+      ],
+      "elements": [
+        { "id": "tisane", "texte": "La tisane, regroupée avec sa tasse.", "categorie": "hanche-epaule", "points": { "C2.2.2": 1 }, "retour": "Un objet fréquent, à portée sans lever les bras." },
+        { "id": "couture", "texte": "La couture, dans une boîte accessible.", "categorie": "hanche-epaule", "points": { "C2.2.2": 1 }, "retour": "Accessible et rangée." },
+        { "id": "albums", "texte": "Le carton d'albums photos, lourd.", "categorie": "bas", "points": { "C2.2.2": 1 }, "retour": "Les objets lourds se rangent en bas." },
+        { "id": "flacon", "texte": "Un flacon de produit ménager apporté par la famille.", "categorie": "protocole", "points": { "C2.2.2": 1 }, "retour": "Un produit à risque suit le protocole de l'établissement." }
+      ]
+    },
+    {
+      "id": "decision-denise",
+      "type": "decision",
+      "consigne": "Le fauteuil est stable. Il faut juste le décaler un peu pour laisser passer le déambulateur.",
+      "question": "Comment décidez-vous de l'aménagement ?",
+      "choix": [
+        { "decision": "agir", "texte": "Je propose deux emplacements possibles à Mme Denise, elle choisit, et je l'explique ensuite à sa fille avec son accord.", "points": { "C2.2.2": 2 }, "retour": "Plusieurs solutions sont possibles : la personne participe à la décision." },
+        { "decision": "adapter", "texte": "Je décale le fauteuil où je pense que c'est le mieux.", "retour": "Vous proposez au lieu d'imposer : c'est elle qui choisit." },
+        { "decision": "alerter", "texte": "Je laisse sa fille décider à sa place.", "retour": "C'est la chambre de Mme Denise : sa parole reste première." }
+      ]
+    },
+    {
+      "id": "transmettre-cadre",
+      "type": "relais",
+      "consigne": "Allez transmettre le nouvel aménagement et l'inquiétude de la fille au responsable de l'aile.",
+      "destinataire": "cadre",
+      "points": { "C2.2.2": 1 },
+      "retour": "M. Lemoine, cadre de santé, est informé et pourra répondre à la famille.",
+      "retour_erreur": "Cette personne n'est pas responsable de l'aile. Qui reçoit les familles pour ce type de question ?"
+    }
+  ],
+  "debriefing": [
+    "Comment avez-vous tenu compte de la fille sans effacer la parole de Mme Denise ?",
+    "Qu'avez-vous vérifié avant de garder le fauteuil ?",
+    "Comment Mme Denise a-t-elle participé à la décision ?"
+  ]
+}

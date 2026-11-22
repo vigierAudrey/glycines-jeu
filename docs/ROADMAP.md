@@ -148,7 +148,8 @@ Bilan : les 14 compétences ont toutes au moins une mission, mais seulement 31 c
   Fait : `m130` (dossiers minute préparés par Claire : frontière du rôle, mollet gonflé, vomissements, transit, diabète, situation sans alerte), situations anonymes d'autres ailes, en brouillon.
 - [x] **T.9** Entretien : rangement, qualité du résultat, dysfonctionnement et relais, effets personnels (C2.2.1), entretien périodique (S3-08, S3-09).
   Fait : `m131` (entretien périodique : créneau, hauteur, cadre fissuré, première intervention, relais) et `m132` (remise en état complète : plan, temps, contrôle qualité, rangement), en brouillon.
-- [ ] **T.10** Personnalisation : écoute de la personne et de sa famille, sécurisation de l'espace (C2.2.2) (S5-07, S6-02).
+- [x] **T.10** Personnalisation : écoute de la personne et de sa famille, sécurisation de l'espace (C2.2.2) (S5-07, S6-02).
+  Fait : `m133` (le fauteuil de Mme Denise : écouter la fille sans effacer sa parole, vérifier l'espace, hauteurs de rangement, elle choisit), en brouillon.
 - [ ] **T.11** Critères communs de C2.1.2 à C2.1.5 encore jamais cités (relation privilégiée et sécurisante, bien-être, pudeur, adaptation des gestes) : à répartir dans les missions T.4 à T.7.
 
 ## Phase 5 · Extensions
