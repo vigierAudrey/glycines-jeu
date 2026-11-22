@@ -2,7 +2,9 @@
 
 **Règle :** l'IA enchaîne les tâches et fait un bilan global à la fin. On coche une tâche quand `pnpm verifier` passe et que le résultat a été vu dans le navigateur (ordinateur et téléphone si l'affichage change). Audrey ne fait pas d'exercices de programmation : l'IA code, puis explique simplement ce qui a été ajouté.
 
-Légende : `[x]` fait · `[ ]` à faire · 🧑‍🏫 ce qu'Audrey seule peut faire (valider un contenu pédagogique, tester avec des élèves) · 🎓 notion expliquée
+**Reprendre après une coupure (forfait épuisé) :** dire simplement « continue la feuille de route ». L'IA reprend la première tâche `[~]` (commencée), sinon la première `[ ]` qui n'est pas 🧑‍🏫. Une tâche commencée mais pas finie est marquée `[~]` avec une ligne « Reste à faire : … » juste en dessous.
+
+Légende : `[x]` fait · `[~]` commencé · `[ ]` à faire · 🧑‍🏫 ce qu'Audrey seule peut faire (valider un contenu pédagogique, tester avec des élèves) · 🎓 notion expliquée
 
 ---
 
@@ -67,6 +69,43 @@ Légende : `[x]` fait · `[ ]` à faire · 🧑‍🏫 ce qu'Audrey seule peut f
 - [x] **4.3** Page enseignante : liste des missions, compétences, questions de débriefing à imprimer.
 - [x] **4.4** Mode hors ligne (PWA) et publication sur un hébergement statique.
   Prêt ; la première publication (lancer le workflow) est à faire par Audrey quand elle le souhaite.
+
+## Phase 4 bis · Apprendre mieux (idées du 22/11/2026)
+
+Ordre de travail : de haut en bas. Chaque tâche = un commit. Les tâches 🧑‍🏫 de la phase 3 (valider m13 à m20, test avec des élèves) restent prioritaires pour Audrey ; l'IA avance ici pendant ce temps.
+Règle commune : toute nouvelle activité s'appuie sur une situation réelle des cours (`Documents\cours\CAP\CAP AAGA - Bloc 2\Sequences`), jamais inventée. Une mission `valide` modifiée repasse en `brouillon` (noté dans le journal) pour qu'Audrey la relise.
+
+### Mieux expliquer après chaque choix
+
+- [ ] **P.1** Le « pourquoi » : après une réponse incomplète, le retour rappelle le critère officiel du référentiel concerné (pris automatiquement dans la mission, rien d'inventé).
+- [ ] **P.2** Fiche de fin de mission à imprimer ou enregistrer en PDF : niveaux par compétence, critères, ce que l'élève a choisi, questions de débriefing avec des lignes pour répondre. À ranger dans un carnet de bord (stage, oral).
+
+### Nouvelles activités (types d'étapes : moteur, validateur, écran, page enseignante, tests)
+
+- [ ] **P.3** **Transmission** : l'élève trie des phrases en « fait observé », « jugement » ou « interprétation », puis garde seulement ce qui doit être transmis (C2.1.6, CT3.4). Ajoutée dans une ou deux missions qui s'y prêtent (rougeur de Mme Rose, confusion soudaine…).
+- [ ] **P.4** **Protocole** : remettre les étapes dans l'ordre (C2.1.1, C2.2.1). Le jeu prépare le TP, il ne le remplace pas.
+- [ ] **P.5** **Matériel et produits** : choisir ce qu'il faut (et écarter ce qui ne convient pas) avant un soin ou un entretien.
+- [ ] **P.6** **Réserve et stocks** : comparer stock et seuil, cocher ce qu'il faut signaler sur la fiche d'alerte (CT3.3).
+- [ ] **P.7** **Relève du matin** : lire de courtes transmissions de la nuit (document affiché dans l'étape), puis choisir par quoi commencer (CT3.1). Une nouvelle mission d'après les cours.
+- [ ] **P.8** **Personnaliser une chambre** : placer les objets du résident selon ses souhaits (C2.2.2, C2.1.2).
+- [ ] **P.9** **Secret professionnel** : une mission où un proche ou un autre résident pose une question ; l'élève choisit de taire, transmettre ou alerter (CT3.4), d'après une séance réelle.
+
+### Rejouer et relier les missions
+
+- [ ] **P.10** Ordre des réponses mélangé à chaque partie, pour qu'on ne retienne pas « c'est toujours la deuxième ».
+- [ ] **P.11** Variantes d'une même mission (moment de la journée, humeur du résident) tirées au hasard, écrites d'après les cours.
+- [ ] **P.12** Conséquences plus tard : un oubli dans une mission (tapis non signalé…) réapparaît au début d'une mission suivante, gardé dans le navigateur seulement.
+
+### Garder une trace, sans collecter de données
+
+- [ ] **P.13** Auto-positionnement : avant la mission, l'élève estime son niveau (N1 à N4) par compétence ; la relève compare avec le niveau obtenu.
+- [ ] **P.14** Mode classe (`?classe`) : grands caractères pour le vidéoprojecteur, réponses cachées jusqu'au bouton « Révéler » pour laisser la classe débattre ; la page enseignante donne le lien.
+
+### Aider les élèves qui lisent difficilement
+
+- [ ] **P.15** Pictogrammes sur les choix (agir, adapter, alerter) et sur les métiers à rejoindre pour un relais.
+- [ ] **P.16** Lexique du métier : les mots clés des textes (« transmission », « projet de vie »…) se touchent et ouvrent une définition courte, tirée des cours. 🧑‍🏫 Audrey valide les définitions.
+- [ ] **P.17** Aide en arabe : voir 5.3 (consignes et lexique d'abord).
 
 ## Phase 5 · Extensions
 

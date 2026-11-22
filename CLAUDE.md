@@ -5,7 +5,7 @@ Propriétaire : Audrey, enseignante et développeuse débutante. Elle veut **com
 
 ## Au début de chaque session
 
-1. Lis `docs/ROADMAP.md` et prends **la première tâche non cochée** (sauf si Audrey en désigne une autre). Enchaîne ensuite les tâches suivantes tant que c'est possible, sans t'arrêter entre deux tâches.
+1. Lis `docs/ROADMAP.md` et prends **la première tâche `[~]` (commencée), sinon la première non cochée qui n'est pas 🧑‍🏫** (sauf si Audrey en désigne une autre). Si la session risque de s'arrêter avant la fin d'une tâche (forfait), marque-la `[~]` avec une ligne « Reste à faire : … » et committe ce qui est stable, pour qu'une prochaine session reprenne sans rien perdre. Enchaîne ensuite les tâches suivantes tant que c'est possible, sans t'arrêter entre deux tâches.
 2. Lis `docs/ARCHITECTURE.md` et les fichiers concernés **avant** de modifier quoi que ce soit.
 3. Annonce en 2 ou 3 phrases ce que tu vas faire et quels fichiers tu vas toucher.
 
