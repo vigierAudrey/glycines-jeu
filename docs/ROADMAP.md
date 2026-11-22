@@ -122,6 +122,11 @@ Règle commune : toute nouvelle activité s'appuie sur une situation réelle des
     Fait : `m26` (chaîne de transmission, d'après S3-02) et `m27` (protection collective et individuelle, friction, d'après S3-03).
   - [x] **5.1c** Mission PSE « activité physique et TMS » (C5) d'après PSE S2.
     Fait : `m28` (postures à risque, S2-01) et `m29` (économie d'effort, aides, douleur, S2-02 et S2-03).
-  - [ ] **5.1d** Mission PSE « acteurs de prévention, suivi médical et vaccination » (C6, C7) d'après PSE S4.
+  - [x] **5.1d** Mission PSE « acteurs de prévention, suivi médical et vaccination » (C6, C7) d'après PSE S4.
+    Fait : `m30` (dalle descellée, acteurs internes, S4-01), `m31` (trois courriers, acteurs extérieurs, S4-02), `m32` (vaccination contre la grippe, S4-04).
+  - [ ] **5.1e** Mission PSE « visites médicales » (C7) d'après PSE S4-03.
+  - [ ] **5.1f** PSE S1 (contrats, droits et obligations) : ajouter les modules C1 et C2 à `pse.json`, puis une mission.
+  - [ ] **5.1g** PSE S5 (sommeil et alimentation avec des horaires décalés) : ajouter les modules A2 et A7 à `pse.json`, puis des missions.
+  - [ ] **5.1h** PSE S6 (budget, assurance, achats, étiquettes) : ajouter les modules de la thématique D utiles, puis des missions.
 - [ ] **5.2** Bloc 1 : cuisine, lingerie, entretien des espaces collectifs.
 - [-] **5.3** ~~Aide en arabe~~ : abandonnée (D-032).

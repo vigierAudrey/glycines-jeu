@@ -1,0 +1,204 @@
+{
+  "id": "m30-pse-dalle-descellee",
+  "statut": "brouillon",
+  "discipline": "PSE",
+  "titre": "Une dalle descellée : à qui le signaler ?",
+  "duree_min": 10,
+  "sequence_requise": "S4",
+  "lieu": "couloir",
+  "personnages": [
+    "joueur",
+    "cadre"
+  ],
+  "competences": [
+    {
+      "code": "PSE-C6",
+      "critere": "Identifier les acteurs de prévention interne à l’entreprise."
+    }
+  ],
+  "situation": "Premier mois de contrat aux Glycines. En poussant le chariot de linge, vous remarquez qu'une dalle du couloir de l'aile B est descellée : une collègue a déjà trébuché dessus hier. Vous voulez le signaler, mais à qui ? Un collègue vous a parlé du « CSE » et d'un « référent sécurité ».",
+  "objectif_eleve": "Reconnaître les acteurs de prévention de l'établissement, signaler le danger dans le bon ordre, à la bonne personne.",
+  "note_pour_audrey": "Brouillon écrit pour la tâche 5.1d, d'après votre séance PSE S4-01 (« Les acteurs de prévention à l'intérieur de l'entreprise ») et son activité interactive : situation, 8 missions à classer par acteur, ordre du signalement, « Je retiens » (repris tels quels). Aux Glycines, le relais « référent sécurité ou encadrement » est M. Lemoine, cadre de santé (personnage du jeu). Critère : objectif ciblé du module C6, mot pour mot. À relire avant de passer le statut à valide.",
+  "etapes": [
+    {
+      "id": "qui-fait-quoi",
+      "type": "tri",
+      "consigne": "Qui fait quoi dans la prévention ? Classez chaque mission.",
+      "categories": [
+        {
+          "id": "employeur",
+          "libelle": "Employeur",
+          "aide": "la directrice"
+        },
+        {
+          "id": "competent",
+          "libelle": "Salarié compétent",
+          "aide": "le référent sécurité"
+        },
+        {
+          "id": "cse",
+          "libelle": "CSE",
+          "aide": "les élus du personnel"
+        },
+        {
+          "id": "salarie",
+          "libelle": "Salarié",
+          "aide": "vous"
+        }
+      ],
+      "elements": [
+        {
+          "id": "evalue-les-risques-dans-le-d",
+          "texte": "Évalue les risques dans le document unique",
+          "categorie": "employeur",
+          "points": {
+            "PSE-C6": 1
+          },
+          "retour": "L'employeur est responsable de la santé et de la sécurité des salariés : il évalue les risques et finance la prévention."
+        },
+        {
+          "id": "finance-la-prevention",
+          "texte": "Finance la prévention",
+          "categorie": "employeur",
+          "points": {
+            "PSE-C6": 1
+          },
+          "retour": "L'employeur est responsable de la santé et de la sécurité des salariés : il évalue les risques et finance la prévention."
+        },
+        {
+          "id": "aide-l-employeur-pour-la-pre",
+          "texte": "Aide l'employeur pour la prévention au quotidien",
+          "categorie": "competent",
+          "points": {
+            "PSE-C6": 1
+          },
+          "retour": "Le salarié compétent est le référent de terrain désigné par l'employeur pour la prévention."
+        },
+        {
+          "id": "est-designe-par-l-employeur",
+          "texte": "Est désigné par l'employeur",
+          "categorie": "competent",
+          "points": {
+            "PSE-C6": 1
+          },
+          "retour": "Le salarié compétent est le référent de terrain désigné par l'employeur pour la prévention."
+        },
+        {
+          "id": "est-elu-par-les-salaries",
+          "texte": "Est élu par les salariés",
+          "categorie": "cse",
+          "points": {
+            "PSE-C6": 1
+          },
+          "retour": "Le CSE, élu par les salariés, inspecte les locaux, analyse les accidents et peut alerter en cas de danger grave et imminent."
+        },
+        {
+          "id": "analyse-les-accidents-du-tra",
+          "texte": "Analyse les accidents du travail",
+          "categorie": "cse",
+          "points": {
+            "PSE-C6": 1
+          },
+          "retour": "Le CSE, élu par les salariés, inspecte les locaux, analyse les accidents et peut alerter en cas de danger grave et imminent."
+        },
+        {
+          "id": "signale-la-dalle-descellee",
+          "texte": "Signale la dalle descellée",
+          "categorie": "salarie",
+          "points": {
+            "PSE-C6": 1
+          },
+          "retour": "Chaque salarié est aussi acteur de prévention : signaler une situation dangereuse protège tout le monde."
+        },
+        {
+          "id": "prend-soin-de-sa-securite-et",
+          "texte": "Prend soin de sa sécurité et de celle des autres",
+          "categorie": "salarie",
+          "points": {
+            "PSE-C6": 1
+          },
+          "retour": "Chaque salarié est aussi acteur de prévention : signaler une situation dangereuse protège tout le monde."
+        }
+      ]
+    },
+    {
+      "id": "dans-l-ordre",
+      "type": "ordre",
+      "consigne": "Remettez dans l'ordre ce qui se passe après votre découverte.",
+      "elements": [
+        {
+          "id": "je-repere-un-danger-la-dalle",
+          "texte": "Je repère un danger : la dalle descellée.",
+          "points": {
+            "PSE-C6": 1
+          }
+        },
+        {
+          "id": "je-previens-tout-de-suite-le",
+          "texte": "Je préviens tout de suite les collègues autour.",
+          "points": {
+            "PSE-C6": 1
+          }
+        },
+        {
+          "id": "je-signale-le-danger-au-refe",
+          "texte": "Je signale le danger au référent sécurité ou à l'encadrement.",
+          "points": {
+            "PSE-C6": 1
+          }
+        },
+        {
+          "id": "l-employeur-fait-reparer-et-",
+          "texte": "L'employeur fait réparer et met à jour le document unique.",
+          "points": {
+            "PSE-C6": 1
+          }
+        }
+      ],
+      "retour": "Je repère, je protège les personnes autour, je signale, et l'employeur fait réparer."
+    },
+    {
+      "id": "signaler",
+      "type": "relais",
+      "consigne": "Allez signaler la dalle descellée à la personne de l'encadrement.",
+      "destinataire": "cadre",
+      "points": {
+        "PSE-C6": 1
+      },
+      "retour": "M. Lemoine, cadre de santé, reçoit votre signalement : lieu, danger, date, personnes exposées.",
+      "retour_erreur": "Cette personne ne fait pas partie de l'encadrement. Qui organise le service dans l'aile B ?"
+    },
+    {
+      "id": "collegue",
+      "type": "decision",
+      "consigne": "Un collègue hausse les épaules : « Laisse, quelqu'un d'autre le dira. »",
+      "question": "Que lui répondez-vous ?",
+      "si_oubli": "Chaque salarié est acteur de prévention : un danger vu se signale tout de suite, à l'encadrement ou au référent sécurité.",
+      "choix": [
+        {
+          "decision": "alerter",
+          "texte": "Je le signale quand même : chaque salarié prend soin de sa sécurité et de celle des autres.",
+          "points": {
+            "PSE-C6": 2
+          },
+          "retour": "Signaler évite qu'un autre salarié ou un résident chute (Code du travail, art. L. 4122-1)."
+        },
+        {
+          "decision": "agir",
+          "texte": "Il a raison, ce n'est pas mon rôle.",
+          "retour": "Un salarié n'a pas à laisser un danger qu'il voit : il prend soin de sa sécurité et de celle des autres."
+        },
+        {
+          "decision": "adapter",
+          "texte": "Je recolle la dalle moi-même avec ce que je trouve.",
+          "retour": "Ce n'est pas une réparation à faire seul : on protège les personnes autour et on signale."
+        }
+      ]
+    }
+  ],
+  "debriefing": [
+    "Qui est responsable de la santé et de la sécurité des salariés ?",
+    "Quelle différence entre le salarié compétent et le CSE ?",
+    "Pourquoi votre signalement protège-t-il tout le monde ?"
+  ]
+}

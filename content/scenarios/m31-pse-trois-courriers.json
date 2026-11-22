@@ -1,0 +1,239 @@
+{
+  "id": "m31-pse-trois-courriers",
+  "statut": "brouillon",
+  "discipline": "PSE",
+  "titre": "Trois courriers la même semaine",
+  "duree_min": 10,
+  "sequence_requise": "S4",
+  "lieu": "poste-de-soins",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "PSE-C6",
+      "critere": "Identifier les missions des acteurs de prévention extérieurs à l’entreprise."
+    }
+  ],
+  "situation": "Aux Glycines, trois courriers arrivent la même semaine : une convocation du service de santé au travail pour votre visite, une proposition de la CARSAT pour aider à financer un lève-personne, et l'annonce du passage d'une inspectrice du travail. Une collègue s'inquiète : « L'inspectrice vient nous contrôler, nous ? »",
+  "objectif_eleve": "Reconnaître le rôle de chaque organisme extérieur et savoir à qui s'adresser.",
+  "note_pour_audrey": "Brouillon écrit pour la tâche 5.1d, d'après votre séance PSE S4-02 (« Les acteurs de prévention à l'extérieur de l'entreprise ») et son activité interactive : situation, 9 missions à classer par organisme, ordre « accident, cotisation, CARSAT », vrai/faux (repris tels quels). La collègue Karima du cours devient « une collègue ». Critère : objectif ciblé du module C6, mot pour mot. À relire avant de passer le statut à valide.",
+  "etapes": [
+    {
+      "id": "par-organisme",
+      "type": "tri",
+      "consigne": "Classez chaque mission selon l'organisme.",
+      "categories": [
+        {
+          "id": "sst",
+          "libelle": "Service de santé au travail",
+          "aide": "ma santé"
+        },
+        {
+          "id": "carsat",
+          "libelle": "CARSAT",
+          "aide": "cotisations et aides"
+        },
+        {
+          "id": "inspection",
+          "libelle": "Inspection du travail",
+          "aide": "le droit du travail"
+        }
+      ],
+      "elements": [
+        {
+          "id": "convoque-a-la-visite-d-infor",
+          "texte": "Convoque à la visite d'information et de prévention",
+          "categorie": "sst",
+          "points": {
+            "PSE-C6": 1
+          },
+          "retour": "Le service de prévention et de santé au travail suit la santé des salariés : le médecin du travail prévient, il ne soigne pas."
+        },
+        {
+          "id": "le-medecin-conseille-il-ne-s",
+          "texte": "Le médecin conseille, il ne soigne pas",
+          "categorie": "sst",
+          "points": {
+            "PSE-C6": 1
+          },
+          "retour": "Le service de prévention et de santé au travail suit la santé des salariés : le médecin du travail prévient, il ne soigne pas."
+        },
+        {
+          "id": "un-ergonome-iprp-etudie-un-p",
+          "texte": "Un ergonome (IPRP) étudie un poste",
+          "categorie": "sst",
+          "points": {
+            "PSE-C6": 1
+          },
+          "retour": "Le service de prévention et de santé au travail suit la santé des salariés : le médecin du travail prévient, il ne soigne pas."
+        },
+        {
+          "id": "fixe-le-taux-de-cotisation-a",
+          "texte": "Fixe le taux de cotisation AT/MP",
+          "categorie": "carsat",
+          "points": {
+            "PSE-C6": 1
+          },
+          "retour": "La CARSAT calcule le taux de cotisation accidents du travail des entreprises et aide à financer la prévention."
+        },
+        {
+          "id": "aide-a-financer-un-leve-pers",
+          "texte": "Aide à financer un lève-personne",
+          "categorie": "carsat",
+          "points": {
+            "PSE-C6": 1
+          },
+          "retour": "La CARSAT calcule le taux de cotisation accidents du travail des entreprises et aide à financer la prévention."
+        },
+        {
+          "id": "conseille-l-entreprise-en-pr",
+          "texte": "Conseille l'entreprise en prévention",
+          "categorie": "carsat",
+          "points": {
+            "PSE-C6": 1
+          },
+          "retour": "La CARSAT calcule le taux de cotisation accidents du travail des entreprises et aide à financer la prévention."
+        },
+        {
+          "id": "controle-l-application-du-dr",
+          "texte": "Contrôle l'application du droit du travail",
+          "categorie": "inspection",
+          "points": {
+            "PSE-C6": 1
+          },
+          "retour": "L'inspection du travail contrôle l'application du droit du travail, informe et conseille employeurs et salariés."
+        },
+        {
+          "id": "peut-constater-les-infractio",
+          "texte": "Peut constater les infractions",
+          "categorie": "inspection",
+          "points": {
+            "PSE-C6": 1
+          },
+          "retour": "L'inspection du travail contrôle l'application du droit du travail, informe et conseille employeurs et salariés."
+        },
+        {
+          "id": "informe-aussi-les-salaries",
+          "texte": "Informe aussi les salariés",
+          "categorie": "inspection",
+          "points": {
+            "PSE-C6": 1
+          },
+          "retour": "L'inspection du travail contrôle l'application du droit du travail, informe et conseille employeurs et salariés."
+        }
+      ]
+    },
+    {
+      "id": "inspectrice",
+      "type": "decision",
+      "consigne": "Votre collègue s'inquiète : « L'inspectrice vient nous contrôler, nous ? »",
+      "question": "Que lui répondez-vous ?",
+      "choix": [
+        {
+          "decision": "adapter",
+          "texte": "Elle contrôle l'application du droit du travail dans l'établissement, et elle informe aussi les salariés.",
+          "points": {
+            "PSE-C6": 2
+          },
+          "retour": "L'inspection du travail contrôle l'entreprise, informe et conseille employeurs et salariés."
+        },
+        {
+          "decision": "agir",
+          "texte": "Oui, elle vient vérifier comment nous soignons les résidents.",
+          "retour": "Ce n'est pas son rôle : elle vérifie l'application du droit du travail."
+        },
+        {
+          "decision": "agir",
+          "texte": "Elle vient fixer le taux de cotisation de l'EHPAD.",
+          "retour": "C'est la CARSAT qui fixe le taux de cotisation AT/MP."
+        }
+      ]
+    },
+    {
+      "id": "carsat",
+      "type": "ordre",
+      "consigne": "Remettez l'histoire dans l'ordre.",
+      "elements": [
+        {
+          "id": "une-collegue-se-fait-une-ent",
+          "texte": "Une collègue se fait une entorse au travail.",
+          "points": {
+            "PSE-C6": 1
+          }
+        },
+        {
+          "id": "les-accidents-augmentent-la-",
+          "texte": "Les accidents augmentent la cotisation de l'EHPAD.",
+          "points": {
+            "PSE-C6": 1
+          }
+        },
+        {
+          "id": "la-directrice-demande-consei",
+          "texte": "La directrice demande conseil à la CARSAT.",
+          "points": {
+            "PSE-C6": 1
+          }
+        },
+        {
+          "id": "la-carsat-aide-a-financer-l-",
+          "texte": "La CARSAT aide à financer l'éclairage et la formation.",
+          "points": {
+            "PSE-C6": 1
+          }
+        }
+      ],
+      "retour": "Les accidents coûtent à l'établissement ; la CARSAT conseille et aide à financer la prévention."
+    },
+    {
+      "id": "vrai",
+      "type": "selection",
+      "consigne": "Pour finir, vérifiez vos connaissances.",
+      "question": "Cochez les phrases vraies.",
+      "elements": [
+        {
+          "id": "soigne",
+          "texte": "Le médecin du travail soigne les salariés malades.",
+          "attendu": false,
+          "points": {
+            "PSE-C6": 1
+          },
+          "retour": "Faux : il prévient et conseille ; les soins relèvent du médecin traitant."
+        },
+        {
+          "id": "finance",
+          "texte": "La CARSAT peut aider à financer du matériel de prévention.",
+          "attendu": true,
+          "points": {
+            "PSE-C6": 1
+          },
+          "retour": "Vrai : c'est l'une de ses missions."
+        },
+        {
+          "id": "controle",
+          "texte": "L'inspection du travail contrôle l'entreprise.",
+          "attendu": true,
+          "points": {
+            "PSE-C6": 1
+          },
+          "retour": "Vrai : elle vérifie l'application du droit du travail."
+        },
+        {
+          "id": "raconte",
+          "texte": "Le médecin du travail raconte l'entretien à l'employeur.",
+          "attendu": false,
+          "points": {
+            "PSE-C6": 1
+          },
+          "retour": "Faux : il est soumis au secret médical."
+        }
+      ]
+    }
+  ],
+  "debriefing": [
+    "Quel organisme suit votre santé au travail ?",
+    "Quelle différence entre la CARSAT et l'inspection du travail ?",
+    "À qui vous adressez-vous pour une question sur votre contrat ou vos horaires ?"
+  ]
+}

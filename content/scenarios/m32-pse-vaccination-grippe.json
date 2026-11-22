@@ -1,0 +1,209 @@
+{
+  "id": "m32-pse-vaccination-grippe",
+  "statut": "brouillon",
+  "discipline": "PSE",
+  "titre": "Vaccin contre la grippe : me protéger, les protéger",
+  "duree_min": 10,
+  "sequence_requise": "S4",
+  "lieu": "salon",
+  "personnages": [
+    "joueur",
+    "infirmiere"
+  ],
+  "competences": [
+    {
+      "code": "PSE-C7",
+      "critere": "Expliquer l’intérêt de la vaccination pour l’individu, pour la collectivité."
+    }
+  ],
+  "situation": "Décembre aux Glycines. L'infirmière organise la campagne de vaccination contre la grippe : « Protégez-vous, protégez nos résidents. » Une collègue hésite : « Je ne suis jamais malade, et la grippe, ce n'est pas grave. » À votre visite médicale, on vous a aussi parlé du vaccin contre l'hépatite B.",
+  "objectif_eleve": "Comprendre comment le vaccin protège, pour soi et pour les autres, et savoir répondre à une collègue qui hésite.",
+  "note_pour_audrey": "Brouillon écrit pour la tâche 5.1d, d'après votre séance PSE S4-04 (« La vaccination : je me protège, je protège les résidents ») et son activité interactive : situation, 6 cartes protection individuelle ou collective, 4 étapes de la réponse immunitaire, vrai/faux (repris tels quels). La collègue Lisa du cours devient « une collègue » ; l'infirmière coordinatrice est Claire, infirmière du jeu. Critère : objectif ciblé du module C7, mot pour mot. À relire avant de passer le statut à valide.",
+  "etapes": [
+    {
+      "id": "reponse-immunitaire",
+      "type": "ordre",
+      "consigne": "Remettez dans l'ordre ce qui se passe après le vaccin.",
+      "elements": [
+        {
+          "id": "le-vaccin-apporte-un-antigen",
+          "texte": "Le vaccin apporte un antigène.",
+          "points": {
+            "PSE-C7": 1
+          }
+        },
+        {
+          "id": "le-corps-fabrique-des-antico",
+          "texte": "Le corps fabrique des anticorps.",
+          "points": {
+            "PSE-C7": 1
+          }
+        },
+        {
+          "id": "le-corps-garde-des-cellules-",
+          "texte": "Le corps garde des cellules mémoire.",
+          "points": {
+            "PSE-C7": 1
+          }
+        },
+        {
+          "id": "a-la-vraie-rencontre-la-defe",
+          "texte": "À la vraie rencontre, la défense est rapide et forte.",
+          "points": {
+            "PSE-C7": 1
+          }
+        }
+      ],
+      "retour": "Antigène, anticorps et cellules mémoire, puis réponse rapide : c'est la mémoire immunitaire."
+    },
+    {
+      "id": "pour-qui",
+      "type": "tri",
+      "consigne": "Ce que le vaccin fait pour moi, ou pour les autres ?",
+      "categories": [
+        {
+          "id": "moi",
+          "libelle": "Protection individuelle",
+          "aide": "ce que le vaccin fait pour moi"
+        },
+        {
+          "id": "autres",
+          "libelle": "Protection collective",
+          "aide": "ce que le vaccin fait pour les autres"
+        }
+      ],
+      "elements": [
+        {
+          "id": "mon-corps-fabrique-des-antic",
+          "texte": "Mon corps fabrique des anticorps",
+          "categorie": "moi",
+          "points": {
+            "PSE-C7": 1
+          },
+          "retour": "Le vaccin protège la personne vaccinée."
+        },
+        {
+          "id": "je-garde-des-cellules-memoir",
+          "texte": "Je garde des cellules mémoire",
+          "categorie": "moi",
+          "points": {
+            "PSE-C7": 1
+          },
+          "retour": "Le vaccin protège la personne vaccinée."
+        },
+        {
+          "id": "je-me-defends-vite-contre-le",
+          "texte": "Je me défends vite contre le virus",
+          "categorie": "moi",
+          "points": {
+            "PSE-C7": 1
+          },
+          "retour": "Le vaccin protège la personne vaccinée."
+        },
+        {
+          "id": "le-virus-circule-moins-dans-",
+          "texte": "Le virus circule moins dans l'EHPAD",
+          "categorie": "autres",
+          "points": {
+            "PSE-C7": 1
+          },
+          "retour": "Plus la couverture vaccinale est élevée, moins le microbe circule."
+        },
+        {
+          "id": "les-residents-fragiles-sont-",
+          "texte": "Les résidents fragiles sont moins exposés",
+          "categorie": "autres",
+          "points": {
+            "PSE-C7": 1
+          },
+          "retour": "Plus la couverture vaccinale est élevée, moins le microbe circule."
+        },
+        {
+          "id": "une-couverture-vaccinale-ele",
+          "texte": "Une couverture vaccinale élevée protège tout le monde",
+          "categorie": "autres",
+          "points": {
+            "PSE-C7": 1
+          },
+          "retour": "Plus la couverture vaccinale est élevée, moins le microbe circule."
+        }
+      ]
+    },
+    {
+      "id": "repondre-collegue",
+      "type": "decision",
+      "consigne": "Votre collègue répète : « Je ne suis jamais malade, et la grippe, ce n'est pas grave. »",
+      "question": "Que lui répondez-vous ?",
+      "si_oubli": "Le vaccin contre la grippe me protège et protège les résidents fragiles : plus on est nombreux vaccinés, moins le virus circule.",
+      "choix": [
+        {
+          "decision": "adapter",
+          "texte": "Le vaccin te protège, et il protège les résidents : leurs défenses sont affaiblies, la grippe peut être grave pour eux. Plus on est vaccinés, moins le virus circule.",
+          "points": {
+            "PSE-C7": 3
+          },
+          "retour": "Une réponse en deux parties : pour moi, pour les résidents. Se faire vacciner auprès de personnes fragiles est un acte professionnel."
+        },
+        {
+          "decision": "agir",
+          "texte": "Tu as raison, si tu n'es jamais malade, c'est inutile.",
+          "retour": "La vaccination ne protège pas que la personne vaccinée : elle limite aussi la circulation du virus vers les résidents fragiles."
+        },
+        {
+          "decision": "agir",
+          "texte": "Tu n'as pas le choix, le vaccin contre la grippe est obligatoire.",
+          "retour": "Pour le personnel, le vaccin contre la grippe est fortement recommandé chaque année ; c'est l'hépatite B qui est obligatoire pour les professionnels exposés."
+        }
+      ]
+    },
+    {
+      "id": "vrai",
+      "type": "selection",
+      "consigne": "Pour finir, vérifiez vos connaissances.",
+      "question": "Cochez les phrases vraies.",
+      "elements": [
+        {
+          "id": "antigene",
+          "texte": "Un vaccin contient un antigène.",
+          "attendu": true,
+          "points": {
+            "PSE-C7": 1
+          },
+          "retour": "Vrai : microbe tué ou atténué, ou fragment de microbe."
+        },
+        {
+          "id": "que-moi",
+          "texte": "La vaccination ne protège que la personne vaccinée.",
+          "attendu": false,
+          "points": {
+            "PSE-C7": 1
+          },
+          "retour": "Faux : elle limite aussi la circulation du microbe."
+        },
+        {
+          "id": "sans-danger",
+          "texte": "La grippe est sans danger pour une personne âgée.",
+          "attendu": false,
+          "points": {
+            "PSE-C7": 1
+          },
+          "retour": "Faux : elle peut être grave chez une personne fragile."
+        },
+        {
+          "id": "hepatite",
+          "texte": "La vaccination contre l'hépatite B est obligatoire pour les professionnels exposés.",
+          "attendu": true,
+          "points": {
+            "PSE-C7": 1
+          },
+          "retour": "Vrai : elle protège du risque lié au sang."
+        }
+      ]
+    }
+  ],
+  "debriefing": [
+    "Que fabrique le corps après un vaccin ?",
+    "Pourquoi votre vaccination protège-t-elle aussi les résidents ?",
+    "Quel vaccin est obligatoire pour les professionnels exposés au sang ?"
+  ]
+}
