@@ -448,3 +448,9 @@ Trois lignes par session : ce qui a été fait, ce qui reste à surveiller, la p
 - **Fait** : `m123` (S3-03, protocole et bionettoyage du lit) et `m124` (S3-04, trois imprévus, ergonomie, transmission sans diagnostic de panne). Deux critères C2.1.1 jamais cités. `pnpm verifier` OK (224 tests).
 - **À surveiller** : missions en brouillon.
 - **Prochaine tâche** : T.5 (sommeil et repos).
+
+## 22/11/2026 · Sommeil et repos (tâche T.5)
+
+- **Fait** : `m125` (S3-05, sommeil de M. Karim pendant les travaux) ; ses habitudes (ancien boulanger, coucher tôt, radio) ajoutées à `residents.json` depuis le cours. Deux critères communs de C2.1.2 (T.11). `pnpm verifier` OK.
+- **À surveiller** : mission en brouillon.
+- **Prochaine tâche** : T.6 (socio-esthétique, habillage, repas).

@@ -1,0 +1,103 @@
+{
+  "id": "m125-karim-bien-dormir",
+  "statut": "brouillon",
+  "titre": "Bien dormir malgré les travaux",
+  "duree_min": 18,
+  "sequence_requise": "S3",
+  "lieu": "chambre-karim",
+  "personnages": ["joueur", "karim", "infirmiere"],
+  "competences": [
+    { "code": "C2.1.2", "critere": "Relation privilégiée et sécurisante." },
+    { "code": "C2.1.2", "critere": "Prise en compte du bien-être." }
+  ],
+  "situation": "Les travaux du couloir se terminent tard et M. Karim dit dormir moins bien. Ancien boulanger, il aime se coucher tôt, se lever vers 5 h et écouter doucement la radio avant de dormir. La nuit, il se déplace avec sa canne et ses lunettes.",
+  "objectif_eleve": "Préparer avec lui un coucher sûr et personnalisé, négocier sans contraindre, et transmettre le changement de sommeil sans diagnostic.",
+  "note_pour_audrey": "Brouillon (tâches T.5 et T.11), d'après votre séquence 3, séance 5 (« bien dormir aux Glycines : rythme, confort et sécurité ») : situation de M. Karim, plan de chambre (interrupteur, appel malade, canne, lunettes, tapis, câble radio), carte refus « il veut garder la radio », rituel qui favorise l'autonomie, changement de sommeil transmis sans diagnostic. Ses habitudes ont été ajoutées à sa fiche (repris_du_cours). Deux critères communs de C2.1.2 jamais cités. Complément, hors cours : ses répliques.",
+  "etapes": [
+    {
+      "id": "karim-fatigue",
+      "type": "dialogue",
+      "consigne": "En fin d'après-midi, M. Karim vous accueille dans sa chambre. On entend encore les travaux.",
+      "interlocuteur": "karim",
+      "replique": "Avec ce bruit, je dors mal en ce moment. Et moi, je me couche tôt, j'ai toujours fait comme ça.",
+      "verbal": [
+        { "texte": "Vous vous couchez tôt depuis toujours, et le bruit vous gêne. Qu'est-ce qui vous aide à bien vous endormir ?", "confiance": 2, "points": { "C2.1.2": 2 }, "retour": "Vous reformulez et vous lui demandez ce qui l'aide, au lieu d'imposer un rituel standard." },
+        { "texte": "Tout le monde se couche après le repas du soir ici, vous allez vous habituer.", "confiance": -2, "retour": "Le même rythme pour tous ne respecte pas ses habitudes de vie." },
+        { "texte": "Les travaux vont bientôt finir.", "confiance": 0, "retour": "C'est peut-être vrai, mais vous ne cherchez pas ce qui peut l'aider dès ce soir." }
+      ],
+      "paraverbal": [
+        { "texte": "Voix calme et chaleureuse.", "confiance": 1, "points": { "C2.1.2": 1 }, "retour": "Un ton calme le rassure." },
+        { "texte": "Voix forte pour couvrir les travaux.", "confiance": -1, "retour": "Vous ajoutez du bruit au bruit." },
+        { "texte": "Voix agacée contre les travaux.", "confiance": -1, "retour": "Votre agacement peut augmenter le sien." }
+      ],
+      "non_verbal": [
+        { "texte": "Je m'assieds face à lui, sans me presser.", "confiance": 1, "points": { "C2.1.2": 1 }, "retour": "Votre disponibilité crée une relation sécurisante." },
+        { "texte": "Je prépare déjà son lit pendant qu'il parle.", "confiance": -1, "retour": "Vous agissez avant de savoir ce qu'il souhaite." },
+        { "texte": "Je soupire en regardant vers le couloir.", "confiance": -1, "retour": "Il peut croire que sa demande vous dérange." }
+      ]
+    },
+    {
+      "id": "preparer-nuit",
+      "type": "selection",
+      "consigne": "Vous préparez la chambre pour la nuit, avec son accord.",
+      "question": "Cochez ce que vous faites.",
+      "elements": [
+        { "id": "trajet", "texte": "Dégager le trajet entre le lit et la salle d'eau.", "attendu": true, "points": { "C2.1.2": 1 }, "retour": "Il se lève la nuit avec sa canne : le trajet doit être libre." },
+        { "id": "lumiere", "texte": "Laisser l'interrupteur ou une veilleuse à portée de main.", "attendu": true, "points": { "C2.1.2": 1 }, "retour": "Un éclairage accessible évite de se lever dans le noir." },
+        { "id": "aides", "texte": "Poser l'appel malade, sa canne et ses lunettes à sa portée, là où il le souhaite.", "attendu": true, "points": { "C2.1.2": 1 }, "retour": "Ses repères sécurisants restent accessibles, selon son accord." },
+        { "id": "cable", "texte": "Repositionner le câble de la radio qui traverse le passage, avec son accord.", "attendu": true, "points": { "C2.1.2": 1 }, "retour": "Le câble ne gêne plus, et la radio reste à lui." },
+        { "id": "porte-cle", "texte": "Fermer sa porte à clé pour qu'il ne soit pas dérangé.", "attendu": false, "points": { "C2.1.2": 1 }, "retour": "La sécurité et les consignes de la structure passent avant : on respecte son choix de porte dans ces limites." },
+        { "id": "ranger-lunettes", "texte": "Ranger ses lunettes dans le placard pour faire propre.", "attendu": false, "points": { "C2.1.2": 1 }, "retour": "Il en a besoin la nuit pour se déplacer en sécurité." }
+      ]
+    },
+    {
+      "id": "radio",
+      "type": "decision",
+      "consigne": "Une collègue propose d'enlever la radio pour qu'il s'endorme plus vite. M. Karim refuse : « Ma radio, je la garde. »",
+      "question": "Que faites-vous ?",
+      "choix": [
+        { "decision": "agir", "texte": "J'écoute, puis je lui propose un volume faible ou une minuterie, s'il est d'accord.", "points": { "C2.1.2": 2 }, "retour": "Une solution négociée avec lui, jamais une confiscation arbitraire." },
+        { "decision": "adapter", "texte": "Je prends la radio et je la lui rendrai demain matin.", "retour": "Confisquer un objet personnel contre son avis n'est pas une relation sécurisante." },
+        { "decision": "alerter", "texte": "Je laisse la radio au volume qu'il veut, même si ses voisins l'entendent.", "retour": "Son choix est respecté, mais il faut aussi tenir compte des autres : on cherche un compromis avec lui." }
+      ]
+    },
+    {
+      "id": "rituel",
+      "type": "qcm",
+      "consigne": "Vous préparez le rituel du coucher de M. Karim.",
+      "question": "Qui prépare ses repères pour la nuit (canne, lunettes, radio) ?",
+      "options": [
+        { "texte": "M. Karim, avec mon aide seulement si besoin.", "juste": true },
+        { "texte": "Moi seul, pour aller plus vite." },
+        { "texte": "L'équipe de nuit, plus tard." }
+      ],
+      "points": { "C2.1.2": 1 },
+      "retour": "Le laisser participer à la préparation de ses repères favorise son autonomie et le rassure."
+    },
+    {
+      "id": "transmettre-sommeil",
+      "type": "transmission",
+      "consigne": "Préparez ce que vous allez dire à l'infirmière sur le sommeil de M. Karim.",
+      "phrases": [
+        { "id": "paroles", "texte": "M. Karim m'a dit : « Avec ce bruit, je dors mal en ce moment. »", "nature": "fait", "points": { "C2.1.2": 1 }, "retour": "Ses mots exacts, sans interprétation." },
+        { "id": "travaux", "texte": "Les travaux du couloir se terminent tard en ce moment.", "nature": "fait", "points": { "C2.1.2": 1 }, "retour": "Un fait sur l'environnement, utile à l'équipe." },
+        { "id": "insomnie", "texte": "Il fait de l'insomnie.", "nature": "interpretation", "points": { "C2.1.2": 1 }, "retour": "C'est un diagnostic : vous transmettez ce qu'il a dit et ce que vous avez observé." },
+        { "id": "caprice", "texte": "Il exagère, ce n'est pas si bruyant.", "nature": "jugement", "points": { "C2.1.2": 1 }, "retour": "C'est un jugement sur ce qu'il ressent." }
+      ]
+    },
+    {
+      "id": "prevenir-claire",
+      "type": "relais",
+      "consigne": "Allez transmettre le changement de sommeil de M. Karim.",
+      "destinataire": "infirmiere",
+      "points": { "C2.1.2": 1 },
+      "retour": "Claire, infirmière, suit l'état des résidents et informera l'équipe de nuit.",
+      "retour_erreur": "Cette personne ne suit pas l'état de santé des résidents. Qui, dans l'aile B, s'en charge ?"
+    }
+  ],
+  "debriefing": [
+    "Qu'avez-vous demandé à M. Karim avant de préparer sa chambre ?",
+    "Comment avez-vous répondu à son refus pour la radio ?",
+    "Pourquoi ne pas écrire « il fait de l'insomnie » ?"
+  ]
+}

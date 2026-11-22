@@ -138,7 +138,8 @@ Bilan : les 14 compétences ont toutes au moins une mission, mais seulement 31 c
   Fait : `m121` (les volontés de M. André : écouter, je fais / je transmets / je ne décide pas, cultures sans stéréotype, divergence familiale) et `m122` (sonnette de Mme Denise hors de portée, parole d'un remplaçant : protéger, ne pas promettre le secret, faits et jugements, alerter sans enquêter), en brouillon.
 - [x] **T.4** Réfection de lit inoccupé : hygiène et ergonomie, protocoles, bionettoyage du lit (C2.1.1) (S3-03, S3-04).
   Fait : `m123` (refaire le lit de M. Karim : chariot, ordre du protocole, linge sale, commandes, temps de contact) et `m124` (taie tachée, emballage, frein, flacon sans étiquette ; hauteur de travail ; transmission sur le frein), en brouillon.
-- [ ] **T.5** Confort, sommeil et repos du résident : endormissement et réveil (C2.1.2) (S3-05).
+- [x] **T.5** Confort, sommeil et repos du résident : endormissement et réveil (C2.1.2) (S3-05).
+  Fait : `m125` (bien dormir malgré les travaux : préparer la nuit avec lui, radio négociée, rituel, transmission sans diagnostic), avec deux critères de T.11 (relation privilégiée et sécurisante, bien-être). Habitudes de sommeil de M. Karim ajoutées à sa fiche (S3-05).
 - [ ] **T.6** Socio-esthétique, habillage et aides techniques, prise des repas (C2.1.4), chacun avec un autre critère (S4-04, S4-05, S4-06).
 - [ ] **T.7** Continence : habitudes, pudeur et intimité (C2.1.5), deuxième mission (S4-07).
 - [ ] **T.8** Signes à observer : appareils digestif, urinaire, cardio-vasculaire, diabète, sans diagnostic (C2.1.6 « Respect des règles éthiques et du protocole ») (S5-01).
