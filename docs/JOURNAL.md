@@ -196,3 +196,9 @@ Trois lignes par session : ce qui a été fait, ce qui reste à surveiller, la p
 - **Fait** : le moteur (`src/regles/mission.ts`) renvoie maintenant `aRevoir`, la liste des compétences de l'étape qui n'ont pas eu tous leurs points. Sous « À retenir », un encadré « 📘 Ce qu'on attend d'un professionnel » rappelle leur critère officiel, pris dans la mission (donc mot pour mot du référentiel, rien d'inventé). Lu à voix haute comme le reste. `pnpm verifier` OK (un test de plus).
 - **À surveiller** : navigateur indisponible dans cet environnement ; à regarder par Audrey en se trompant volontairement dans une mission.
 - **Prochaine tâche** : P.2 (fiche de fin de mission à imprimer).
+
+## 22/11/2026 · Fiche de fin de mission à imprimer (tâche P.2)
+
+- **Fait** : le moteur garde le `parcours` de l'élève (pour chaque étape terminée : ce qu'il a choisi, réussi ou non). Sur la relève, le bouton « 🖨 Imprimer ma fiche » ouvre l'impression du navigateur (papier ou « Enregistrer en PDF ») avec une page propre : nom et date à écrire à la main, situation, niveaux et critères, choix étape par étape, questions de débriefing avec des lignes, « Ce que je retiens pour mon stage ». Rien n'est envoyé ni gardé en plus. `pnpm verifier` OK (96 tests).
+- **À surveiller** : navigateur indisponible ici ; à essayer par Audrey sur ordinateur et téléphone (l'aperçu avant impression suffit).
+- **Prochaine tâche** : P.3 (activité Transmission).

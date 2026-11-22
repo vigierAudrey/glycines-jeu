@@ -16,6 +16,14 @@ export interface EtatMission {
   confiance: number; // de 0 à 10
   essais: number; // nombre d'erreurs sur l'étape en cours (étape « relais »)
   decisions: Decision[]; // décisions prises, dans l'ordre (pour la relève)
+  parcours: Trace[]; // ce que l'élève a répondu, étape par étape (pour la fiche de fin de mission)
+}
+
+/** Trace d'une étape terminée : ce que l'élève a choisi, en clair. */
+export interface Trace {
+  etape: string; // id de l'étape
+  reponses: string[]; // textes choisis (pour un relais : l'id de la personne rejointe)
+  reussi: boolean; // tous les points de l'étape du premier coup
 }
 
 /** Réponse de l'élève, selon le type de l'étape en cours. */
@@ -67,6 +75,7 @@ export function demarrerMission(mission: Mission): EtatMission {
     confiance: mission.confiance_depart ?? 5,
     essais: 0,
     decisions: [],
+    parcours: [],
   };
 }
 
@@ -102,7 +111,34 @@ function suivante(mission: Mission, etape: Etape, suite?: string): string | null
   return mission.etapes[i + 1]?.id ?? null;
 }
 
+/** Ce que l'élève a choisi, en clair, pour la trace de l'étape. */
+function textesChoisis(etape: Etape, reponse: Reponse): string[] {
+  switch (etape.type) {
+    case 'dialogue': {
+      const r = reponse as Extract<Reponse, { type: 'dialogue' }>;
+      return [etape.verbal[r.verbal].texte, etape.paraverbal[r.paraverbal].texte, etape.non_verbal[r.non_verbal].texte];
+    }
+    case 'observation': {
+      const r = reponse as Extract<Reponse, { type: 'observation' }>;
+      return etape.elements.map((e) => `${e.libelle} : ${r.classements[e.id] === 'gene' ? 'gêne' : r.classements[e.id] === 'facilite' ? 'facilite' : 'non classé'}`);
+    }
+    case 'decision':
+      return [etape.choix[(reponse as Extract<Reponse, { type: 'decision' }>).choix].texte];
+    case 'relais':
+      return [(reponse as Extract<Reponse, { type: 'relais' }>).destinataire];
+  }
+}
+
 export function repondre(mission: Mission, etat: EtatMission, reponse: Reponse): Resultat {
+  const resultat = repondreEtape(mission, etat, reponse);
+  const etape = etapeEnCours(mission, etat)!;
+  // L'étape est terminée quand on a changé d'étape (un relais manqué reste sur place).
+  if (resultat.etat.etape === etat.etape && resultat.etat.essais > etat.essais) return resultat;
+  const trace: Trace = { etape: etape.id, reponses: textesChoisis(etape, reponse), reussi: resultat.reussi };
+  return { ...resultat, etat: { ...resultat.etat, parcours: [...etat.parcours, trace] } };
+}
+
+function repondreEtape(mission: Mission, etat: EtatMission, reponse: Reponse): Resultat {
   const etape = etapeEnCours(mission, etat);
   if (!etape || etape.type !== reponse.type) {
     throw new Error(`Réponse « ${reponse.type} » inattendue à l'étape « ${etat.etape} ».`);
@@ -204,6 +240,7 @@ export interface Bilan {
   competences: BilanCompetence[];
   confiance: number;
   debriefing: string[];
+  parcours: Trace[];
 }
 
 export function bilan(mission: Mission, etat: EtatMission): Bilan {
@@ -216,5 +253,6 @@ export function bilan(mission: Mission, etat: EtatMission): Bilan {
     }),
     confiance: etat.confiance,
     debriefing: mission.debriefing,
+    parcours: etat.parcours,
   };
 }

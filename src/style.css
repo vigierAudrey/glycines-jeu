@@ -400,3 +400,17 @@ html, body {
 .choix-sequence { display: flex; align-items: center; gap: 8px; margin-top: 10px; font-weight: 600; font-size: 0.9rem; }
 .choix-sequence select { min-height: 44px; padding: 0 8px; font: inherit; border: 2px solid #d9d3e3; border-radius: 10px; background: #fff; }
 .carte-mission:disabled { cursor: not-allowed; opacity: 0.6; border-color: #e6e2ec; }
+
+/* Fiche de fin de mission (tâche P.2) : invisible à l'écran, seule visible à l'impression. */
+.fiche-impression { display: none; }
+@media print {
+  html.impression, html.impression body { height: auto; overflow: visible; background: #fff; }
+  html.impression body > *:not(.fiche-impression) { display: none !important; }
+  html.impression .fiche-impression { display: block; color: #000; font-size: 11pt; }
+  .fiche-impression h1 { font-size: 16pt; margin: 0 0 6px; }
+  .fiche-impression h2 { font-size: 13pt; margin: 14px 0 6px; border-bottom: 1px solid #999; }
+  .fiche-impression table { width: 100%; border-collapse: collapse; }
+  .fiche-impression th, .fiche-impression td { border: 1px solid #999; padding: 4px; text-align: left; vertical-align: top; }
+  .fiche-impression li { break-inside: avoid; margin-bottom: 4px; }
+  .fiche__ligne { display: block; height: 22px; border-bottom: 1px dotted #777; }
+}

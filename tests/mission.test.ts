@@ -33,6 +33,13 @@ describe('moteur de mission', () => {
     expect(etat.decisions).toEqual(['agir', 'adapter']);
   });
 
+  it('le parcours garde, pour chaque étape terminée, les textes choisis (fiche de fin de mission)', () => {
+    const etat = jouer(karim, parcoursParfait);
+    expect(etat.parcours.map((t) => t.etape)).toEqual(karim.etapes.map((e) => e.id));
+    expect(etat.parcours.every((t) => t.reussi && t.reponses.length > 0)).toBe(true);
+    expect(bilan(karim, etat).parcours).toEqual(etat.parcours);
+  });
+
   it('le dialogue fait bouger la confiance, bornée entre 0 et 10', () => {
     const bien = repondre(karim, demarrerMission(karim), parcoursParfait[0] as Reponse);
     expect(bien.etat.confiance).toBe(9);

@@ -8,6 +8,7 @@ const bilan = {
   mission: karim.id,
   confiance: 7,
   debriefing: [],
+  parcours: [],
   competences: karim.competences.map((c, i) => ({ ...c, points: 0, max: 0, niveau: (['N3', 'N3', 'N2'] as const)[i] })),
 };
 

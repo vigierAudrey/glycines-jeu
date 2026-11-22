@@ -377,14 +377,62 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
       </ul>
       <h3>Pour le débriefing</h3>
       <ol class="debriefing">${b.debriefing.map((q) => `<li class="a-lire">${echapper(q)}</li>`).join('')}</ol>
-      <button type="button" class="bouton bouton--principal" data-action="fermer">Terminer</button>`);
+      <div class="rangee-boutons">
+        <button type="button" class="bouton bouton--texte" data-action="imprimer-fiche">🖨 Imprimer ma fiche</button>
+        <button type="button" class="bouton bouton--principal" data-action="fermer">Terminer</button>
+      </div>`);
+    dernierBilan = b;
     racine.dispatchEvent(new CustomEvent('panneau-affiche', { detail: fenetre }));
+  };
+
+  // ---------- Fiche de fin de mission (tâche P.2) ----------
+  // Une page à imprimer ou à enregistrer en PDF : rien n'est envoyé, l'élève écrit son nom à la main.
+  let dernierBilan: Bilan | null = null;
+  const lignes = (n: number) => '<span class="fiche__ligne"></span>'.repeat(n);
+  const imprimerFiche = (b: Bilan) => {
+    const m = contenu.missions.find((x) => x.id === b.mission)!;
+    const consigne = (id: string) => m.etapes.find((e) => e.id === id)?.consigne ?? '';
+    const typeEtape = (id: string) => m.etapes.find((e) => e.id === id)?.type;
+    const fiche = document.createElement('div');
+    fiche.className = 'fiche-impression';
+    fiche.innerHTML = `
+      <h1>Fiche de relève · ${echapper(m.titre)}</h1>
+      <p>Nom : ______________________ &nbsp; Date : ${new Date().toLocaleDateString('fr-FR')} &nbsp; Séquence ${echapper(m.sequence_requise)}</p>
+      <p><strong>Situation :</strong> ${echapper(m.situation)}</p>
+      <h2>Mes niveaux</h2>
+      <table>
+        <thead><tr><th>Compétence</th><th>Critère officiel</th><th>Niveau</th></tr></thead>
+        <tbody>${b.competences.map((c) => `
+          <tr><td>${echapper(c.code)}</td><td>${echapper(c.critere)}</td>
+              <td><strong>${c.niveau}</strong><br><small>${echapper(contenu.referentiel.niveaux[c.niveau])}</small></td></tr>`).join('')}
+        </tbody>
+      </table>
+      <h2>Ce que j'ai choisi</h2>
+      <ol>${b.parcours.map((t) => `
+        <li><strong>${echapper(consigne(t.etape))}</strong> ${t.reussi ? '✔' : '✘ à revoir'}
+          <ul>${t.reponses.map((r) => `<li>${echapper(typeEtape(t.etape) === 'relais' ? `J'ai prévenu : ${noms.get(r) ?? r}` : r)}</li>`).join('')}</ul>
+        </li>`).join('')}
+      </ol>
+      <h2>Débriefing</h2>
+      <ol class="fiche__questions">${b.debriefing.map((q) => `<li>${echapper(q)}${lignes(3)}</li>`).join('')}</ol>
+      <h2>Ce que je retiens pour mon stage</h2>
+      ${lignes(4)}`;
+    document.body.append(fiche);
+    document.documentElement.classList.add('impression');
+    const nettoyer = () => {
+      fiche.remove();
+      document.documentElement.classList.remove('impression');
+      window.removeEventListener('afterprint', nettoyer);
+    };
+    window.addEventListener('afterprint', nettoyer);
+    window.print();
   };
 
   fenetre.addEventListener('click', (evenement) => {
     const cible = (evenement.target as HTMLElement).closest<HTMLElement>('button');
     if (!cible) return;
     if (cible.dataset.action === 'fermer') fenetre.hidden = true;
+    if (cible.dataset.action === 'imprimer-fiche' && dernierBilan) imprimerFiche(dernierBilan);
     const id = cible.dataset.mission;
     const m = id && contenu.missions.find((x) => x.id === id);
     if (m) commencer(m);
