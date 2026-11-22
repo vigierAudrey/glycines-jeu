@@ -1,0 +1,325 @@
+{
+  "id": "m117-entrainement-s6-06",
+  "statut": "valide",
+  "discipline": "PSE",
+  "format": "entrainement",
+  "titre": "Bien lire une étiquette : dates, allergènes et labels",
+  "duree_min": 5,
+  "sequence_requise": "S6",
+  "lieu": "salon",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "PSE-D3",
+      "critere": "Repérer et décoder les informations utiles au choix sur une étiquette de produit à consommer pour son alimentation."
+    }
+  ],
+  "situation": "Entraînement rapide sur les notions de la séance S6-06 : Bien lire une étiquette : dates, allergènes et labels.",
+  "objectif_eleve": "Réviser les notions de la séance : répondre vite et juste, puis lire les corrections.",
+  "note_pour_audrey": "Entraînement généré pour la tâche Q.5 à partir de l'activité interactive de votre séance S6-06 (exercices repris tels quels, sans réécriture). Compétence : la compétence principale de la séance ; critère choisi par l'IA parmi les critères officiels de cette compétence (celui qui partage le plus de mots avec les exercices) : à vérifier.",
+  "etapes": [
+    {
+      "id": "association-1",
+      "type": "association",
+      "consigne": "Reliez chaque mot à sa définition.",
+      "paires": [
+        {
+          "id": "ab",
+          "terme": "AB",
+          "definition": "sans pesticides ni engrais de synthèse",
+          "points": {
+            "PSE-D3": 1
+          }
+        },
+        {
+          "id": "label-rouge",
+          "terme": "Label Rouge",
+          "definition": "qualité supérieure",
+          "points": {
+            "PSE-D3": 1
+          }
+        },
+        {
+          "id": "aop",
+          "terme": "AOP",
+          "definition": "terroir précis et savoir-faire reconnu",
+          "points": {
+            "PSE-D3": 1
+          }
+        },
+        {
+          "id": "commerce-equitable",
+          "terme": "commerce équitable",
+          "definition": "rémunération plus juste des producteurs",
+          "points": {
+            "PSE-D3": 1
+          }
+        },
+        {
+          "id": "nutri-score",
+          "terme": "Nutri-Score",
+          "definition": "qualité nutritionnelle de A à E",
+          "points": {
+            "PSE-D3": 1
+          }
+        },
+        {
+          "id": "allergene",
+          "terme": "allergène",
+          "definition": "substance qui peut déclencher une allergie",
+          "points": {
+            "PSE-D3": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "tri-2",
+      "type": "tri",
+      "consigne": "Classez chaque carte.",
+      "categories": [
+        {
+          "id": "dlc",
+          "libelle": "DLC"
+        },
+        {
+          "id": "ddm",
+          "libelle": "DDM"
+        }
+      ],
+      "elements": [
+        {
+          "id": "creme-fraiche",
+          "texte": "Crème fraîche",
+          "categorie": "dlc",
+          "points": {
+            "PSE-D3": 1
+          },
+          "retour": "Réponse attendue : DLC."
+        },
+        {
+          "id": "yaourt",
+          "texte": "Yaourt",
+          "categorie": "dlc",
+          "points": {
+            "PSE-D3": 1
+          },
+          "retour": "Réponse attendue : DLC."
+        },
+        {
+          "id": "jambon",
+          "texte": "Jambon",
+          "categorie": "dlc",
+          "points": {
+            "PSE-D3": 1
+          },
+          "retour": "Réponse attendue : DLC."
+        },
+        {
+          "id": "poisson-frais",
+          "texte": "Poisson frais",
+          "categorie": "dlc",
+          "points": {
+            "PSE-D3": 1
+          },
+          "retour": "Réponse attendue : DLC."
+        },
+        {
+          "id": "pates",
+          "texte": "Pâtes",
+          "categorie": "ddm",
+          "points": {
+            "PSE-D3": 1
+          },
+          "retour": "Réponse attendue : DDM."
+        },
+        {
+          "id": "chocolat",
+          "texte": "Chocolat",
+          "categorie": "ddm",
+          "points": {
+            "PSE-D3": 1
+          },
+          "retour": "Réponse attendue : DDM."
+        },
+        {
+          "id": "biscuits-secs",
+          "texte": "Biscuits secs",
+          "categorie": "ddm",
+          "points": {
+            "PSE-D3": 1
+          },
+          "retour": "Réponse attendue : DDM."
+        }
+      ]
+    },
+    {
+      "id": "ordre-3",
+      "type": "ordre",
+      "consigne": "Remettez dans l'ordre.",
+      "elements": [
+        {
+          "id": "je-lis-la-date-et-son-type",
+          "texte": "Je lis la date et son type.",
+          "points": {
+            "PSE-D3": 1
+          }
+        },
+        {
+          "id": "je-lis-la-liste-des-ingred",
+          "texte": "Je lis la liste des ingrédients.",
+          "points": {
+            "PSE-D3": 1
+          }
+        },
+        {
+          "id": "je-repere-les-allergenes",
+          "texte": "Je repère les allergènes.",
+          "points": {
+            "PSE-D3": 1
+          }
+        },
+        {
+          "id": "je-regarde-le-nutri-score-",
+          "texte": "Je regarde le Nutri-Score et les labels.",
+          "points": {
+            "PSE-D3": 1
+          }
+        },
+        {
+          "id": "je-respecte-le-stockage-in",
+          "texte": "Je respecte le stockage indiqué.",
+          "points": {
+            "PSE-D3": 1
+          }
+        }
+      ],
+      "retour": "Ordre repris de la séance S6-06."
+    },
+    {
+      "id": "selection-4",
+      "type": "selection",
+      "consigne": "Vrai ou faux ?",
+      "question": "Cochez les phrases vraies.",
+      "elements": [
+        {
+          "id": "apres-la-dlc-le-produit-pe",
+          "texte": "Après la DLC, le produit peut être dangereux.",
+          "attendu": true,
+          "points": {
+            "PSE-D3": 1
+          },
+          "retour": "Vrai : C'est une date de sécurité."
+        },
+        {
+          "id": "apres-la-ddm-il-faut-tout-",
+          "texte": "Après la DDM, il faut tout jeter.",
+          "attendu": false,
+          "points": {
+            "PSE-D3": 1
+          },
+          "retour": "Faux : Le produit reste sans danger si l'emballage est intact."
+        },
+        {
+          "id": "le-premier-ingredient-est-",
+          "texte": "Le premier ingrédient est le plus abondant.",
+          "attendu": true,
+          "points": {
+            "PSE-D3": 1
+          },
+          "retour": "Vrai : Ordre décroissant."
+        },
+        {
+          "id": "100-gourmand-est-un-label-",
+          "texte": "« 100 % gourmand » est un label officiel.",
+          "attendu": false,
+          "points": {
+            "PSE-D3": 1
+          },
+          "retour": "Faux : C'est un slogan."
+        },
+        {
+          "id": "les-allergenes-sont-mis-en",
+          "texte": "Les allergènes sont mis en évidence dans les ingrédients.",
+          "attendu": true,
+          "points": {
+            "PSE-D3": 1
+          },
+          "retour": "Vrai : Gras ou majuscules."
+        }
+      ]
+    },
+    {
+      "id": "qcm-5",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Combien d'allergènes majeurs ?",
+      "options": [
+        {
+          "texte": "14",
+          "juste": true
+        },
+        {
+          "texte": "50"
+        },
+        {
+          "texte": "3"
+        }
+      ],
+      "points": {
+        "PSE-D3": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S6-06 si besoin."
+    },
+    {
+      "id": "qcm-6",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "« À consommer jusqu'au » indique…",
+      "options": [
+        {
+          "texte": "un label"
+        },
+        {
+          "texte": "une DLC",
+          "juste": true
+        },
+        {
+          "texte": "une DDM"
+        }
+      ],
+      "points": {
+        "PSE-D3": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S6-06 si besoin."
+    },
+    {
+      "id": "qcm-7",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Le Nutri-Score va…",
+      "options": [
+        {
+          "texte": "de A à E",
+          "juste": true
+        },
+        {
+          "texte": "de 0 à 100"
+        },
+        {
+          "texte": "de 1 à 3"
+        }
+      ],
+      "points": {
+        "PSE-D3": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S6-06 si besoin."
+    }
+  ],
+  "debriefing": [
+    "Quelle notion de cette séance avez-vous le mieux réussie ?",
+    "Quelle notion devez-vous revoir, et dans quel document du cours ?"
+  ]
+}

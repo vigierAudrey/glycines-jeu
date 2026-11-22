@@ -418,3 +418,9 @@ Trois lignes par session : ce qui a été fait, ce qui reste à surveiller, la p
 - **Fait** : onglets « Missions dans l'aile » et « Entraînements rapides » dans chaque matière. 48 entraînements du Bloc 2 (S1 à S6), générés à partir des activités interactives des séances : classements, vrai/faux, QCM, remises en ordre, associations mot et définition, repris tels quels. Identifiants à trois chiffres autorisés. Vérifié à 390 px.
 - **À surveiller** : le critère de chaque entraînement est choisi automatiquement parmi ceux de la compétence principale de la séance (indiqué dans la note) : Audrey peut le vérifier sur la page enseignante.
 - **Prochaine tâche** : Q.5 (entraînements de PSE).
+
+## 22/11/2026 · Entraînements rapides de PSE (tâche Q.5)
+
+- **Fait** : 23 entraînements de PSE (S1 à S6), générés de la même façon à partir des activités interactives ; le module de chaque séance des séquences 4 à 6 est celui des missions déjà écrites. Le jeu compte 117 activités : 26 missions et 48 entraînements en Bloc 2, 21 missions et 23 entraînements en PSE. `pnpm verifier` OK (217 tests).
+- **À surveiller** : critères choisis automatiquement (voir les notes) ; la Phase 4 quater est terminée.
+- **Prochaine tâche** : Phase 4 ter (T.1).

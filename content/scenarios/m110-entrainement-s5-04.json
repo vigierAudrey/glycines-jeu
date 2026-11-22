@@ -1,0 +1,342 @@
+{
+  "id": "m110-entrainement-s5-04",
+  "statut": "valide",
+  "discipline": "PSE",
+  "format": "entrainement",
+  "titre": "Repérer les erreurs alimentaires et proposer des améliorations",
+  "duree_min": 5,
+  "sequence_requise": "S5",
+  "lieu": "salon",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "PSE-A7",
+      "critere": "Identifier, à partir de compositions et de répartitions de repas, les erreurs fréquentes et proposer des améliorations."
+    }
+  ],
+  "situation": "Entraînement rapide sur les notions de la séance S5-04 : Repérer les erreurs alimentaires et proposer des améliorations.",
+  "objectif_eleve": "Réviser les notions de la séance : répondre vite et juste, puis lire les corrections.",
+  "note_pour_audrey": "Entraînement généré pour la tâche Q.5 à partir de l'activité interactive de votre séance S5-04 (exercices repris tels quels, sans réécriture). Compétence : la compétence principale de la séance ; critère choisi par l'IA parmi les critères officiels de cette compétence (celui qui partage le plus de mots avec les exercices) : à vérifier.",
+  "etapes": [
+    {
+      "id": "association-1",
+      "type": "association",
+      "consigne": "Reliez chaque mot à sa définition.",
+      "paires": [
+        {
+          "id": "grignotage",
+          "terme": "grignotage",
+          "definition": "prises répétées hors des repas, sans vraie faim",
+          "points": {
+            "PSE-A7": 1
+          }
+        },
+        {
+          "id": "saut-de-repas",
+          "terme": "saut de repas",
+          "definition": "ne pas prendre un repas prévu",
+          "points": {
+            "PSE-A7": 1
+          }
+        },
+        {
+          "id": "carence",
+          "terme": "carence",
+          "definition": "manque durable d'un nutriment",
+          "points": {
+            "PSE-A7": 1
+          }
+        },
+        {
+          "id": "exces",
+          "terme": "excès",
+          "definition": "apport trop important (sucre, gras, sel)",
+          "points": {
+            "PSE-A7": 1
+          }
+        },
+        {
+          "id": "repartition-des-pris",
+          "terme": "répartition des prises",
+          "definition": "organisation des repas dans la journée",
+          "points": {
+            "PSE-A7": 1
+          }
+        },
+        {
+          "id": "boisson-energisante",
+          "terme": "boisson énergisante",
+          "definition": "boisson très sucrée et très riche en caféine",
+          "points": {
+            "PSE-A7": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "tri-2",
+      "type": "tri",
+      "consigne": "Classez chaque carte.",
+      "categories": [
+        {
+          "id": "saut-de-repas",
+          "libelle": "Saut de repas"
+        },
+        {
+          "id": "grignotage",
+          "libelle": "Grignotage"
+        },
+        {
+          "id": "exces",
+          "libelle": "Excès"
+        },
+        {
+          "id": "carences",
+          "libelle": "Carences"
+        }
+      ],
+      "elements": [
+        {
+          "id": "rien-au-petit-dejeuner",
+          "texte": "Rien au petit-déjeuner",
+          "categorie": "saut-de-repas",
+          "points": {
+            "PSE-A7": 1
+          },
+          "retour": "Réponse attendue : Saut de repas."
+        },
+        {
+          "id": "pas-de-dejeuner-avant-14-h",
+          "texte": "Pas de déjeuner avant 14 h",
+          "categorie": "saut-de-repas",
+          "points": {
+            "PSE-A7": 1
+          },
+          "retour": "Réponse attendue : Saut de repas."
+        },
+        {
+          "id": "biscuits-a-11-h-30",
+          "texte": "Biscuits à 11 h 30",
+          "categorie": "grignotage",
+          "points": {
+            "PSE-A7": 1
+          },
+          "retour": "Réponse attendue : Grignotage."
+        },
+        {
+          "id": "bonbons-devant-la-tele",
+          "texte": "Bonbons devant la télé",
+          "categorie": "grignotage",
+          "points": {
+            "PSE-A7": 1
+          },
+          "retour": "Réponse attendue : Grignotage."
+        },
+        {
+          "id": "pizza-entiere-et-soda",
+          "texte": "Pizza entière et soda",
+          "categorie": "exces",
+          "points": {
+            "PSE-A7": 1
+          },
+          "retour": "Réponse attendue : Excès."
+        },
+        {
+          "id": "kebab-frites",
+          "texte": "Kebab-frites",
+          "categorie": "exces",
+          "points": {
+            "PSE-A7": 1
+          },
+          "retour": "Réponse attendue : Excès."
+        },
+        {
+          "id": "aucun-fruit-ni-legume",
+          "texte": "Aucun fruit ni légume",
+          "categorie": "carences",
+          "points": {
+            "PSE-A7": 1
+          },
+          "retour": "Réponse attendue : Carences."
+        },
+        {
+          "id": "moins-d-un-demi-litre-d-ea",
+          "texte": "Moins d'un demi-litre d'eau",
+          "categorie": "carences",
+          "points": {
+            "PSE-A7": 1
+          },
+          "retour": "Réponse attendue : Carences."
+        }
+      ]
+    },
+    {
+      "id": "ordre-3",
+      "type": "ordre",
+      "consigne": "Remettez dans l'ordre.",
+      "elements": [
+        {
+          "id": "pas-de-petit-dejeuner",
+          "texte": "Pas de petit-déjeuner.",
+          "points": {
+            "PSE-A7": 1
+          }
+        },
+        {
+          "id": "fringale-en-fin-de-matinee",
+          "texte": "Fringale en fin de matinée.",
+          "points": {
+            "PSE-A7": 1
+          }
+        },
+        {
+          "id": "grignotage-sucre",
+          "texte": "Grignotage sucré.",
+          "points": {
+            "PSE-A7": 1
+          }
+        },
+        {
+          "id": "pic-puis-chute-d-energie",
+          "texte": "Pic puis chute d'énergie.",
+          "points": {
+            "PSE-A7": 1
+          }
+        },
+        {
+          "id": "nouveau-grignotage",
+          "texte": "Nouveau grignotage.",
+          "points": {
+            "PSE-A7": 1
+          }
+        }
+      ],
+      "retour": "Ordre repris de la séance S5-04."
+    },
+    {
+      "id": "selection-4",
+      "type": "selection",
+      "consigne": "Vrai ou faux ?",
+      "question": "Cochez les phrases vraies.",
+      "elements": [
+        {
+          "id": "sauter-le-petit-dejeuner-f",
+          "texte": "Sauter le petit-déjeuner favorise le grignotage.",
+          "attendu": true,
+          "points": {
+            "PSE-A7": 1
+          },
+          "retour": "Vrai : La fringale pousse vers le sucre."
+        },
+        {
+          "id": "une-boisson-energisante-re",
+          "texte": "Une boisson énergisante remplace un repas.",
+          "attendu": false,
+          "points": {
+            "PSE-A7": 1
+          },
+          "retour": "Faux : Elle masque la fatigue sans nourrir vraiment."
+        },
+        {
+          "id": "un-exces-repete-de-sucre-p",
+          "texte": "Un excès répété de sucre peut favoriser le diabète de type 2.",
+          "attendu": true,
+          "points": {
+            "PSE-A7": 1
+          },
+          "retour": "Vrai : C'est une conséquence à long terme."
+        },
+        {
+          "id": "un-repas-tres-gras-peut-pr",
+          "texte": "Un repas très gras peut provoquer une somnolence.",
+          "attendu": true,
+          "points": {
+            "PSE-A7": 1
+          },
+          "retour": "Vrai : La digestion est lourde."
+        },
+        {
+          "id": "une-journee-trop-riche-ne-",
+          "texte": "Une journée trop riche ne peut pas avoir de carences.",
+          "attendu": false,
+          "points": {
+            "PSE-A7": 1
+          },
+          "retour": "Faux : Elle peut manquer de vitamines et de fibres."
+        }
+      ]
+    },
+    {
+      "id": "qcm-5",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Le grignotage, c'est…",
+      "options": [
+        {
+          "texte": "faire trois repas"
+        },
+        {
+          "texte": "boire de l'eau"
+        },
+        {
+          "texte": "manger souvent hors des repas",
+          "juste": true
+        }
+      ],
+      "points": {
+        "PSE-A7": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S5-04 si besoin."
+    },
+    {
+      "id": "qcm-6",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Une conséquence à court terme d'une erreur alimentaire ?",
+      "options": [
+        {
+          "texte": "Coup de fatigue",
+          "juste": true
+        },
+        {
+          "texte": "Ostéoporose"
+        },
+        {
+          "texte": "Diabète"
+        }
+      ],
+      "points": {
+        "PSE-A7": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S5-04 si besoin."
+    },
+    {
+      "id": "qcm-7",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Une conséquence à long terme ?",
+      "options": [
+        {
+          "texte": "Bâillement"
+        },
+        {
+          "texte": "Soif"
+        },
+        {
+          "texte": "Maladies cardiovasculaires",
+          "juste": true
+        }
+      ],
+      "points": {
+        "PSE-A7": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S5-04 si besoin."
+    }
+  ],
+  "debriefing": [
+    "Quelle notion de cette séance avez-vous le mieux réussie ?",
+    "Quelle notion devez-vous revoir, et dans quel document du cours ?"
+  ]
+}

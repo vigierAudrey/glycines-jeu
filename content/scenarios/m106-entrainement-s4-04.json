@@ -1,0 +1,309 @@
+{
+  "id": "m106-entrainement-s4-04",
+  "statut": "valide",
+  "discipline": "PSE",
+  "format": "entrainement",
+  "titre": "La vaccination",
+  "duree_min": 5,
+  "sequence_requise": "S4",
+  "lieu": "salon",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "PSE-C7",
+      "critere": "Expliquer le principe de la vaccination."
+    }
+  ],
+  "situation": "Entraînement rapide sur les notions de la séance S4-04 : La vaccination.",
+  "objectif_eleve": "Réviser les notions de la séance : répondre vite et juste, puis lire les corrections.",
+  "note_pour_audrey": "Entraînement généré pour la tâche Q.5 à partir de l'activité interactive de votre séance S4-04 (exercices repris tels quels, sans réécriture). Compétence : la compétence principale de la séance ; critère choisi par l'IA parmi les critères officiels de cette compétence (celui qui partage le plus de mots avec les exercices) : à vérifier.",
+  "etapes": [
+    {
+      "id": "association-1",
+      "type": "association",
+      "consigne": "Reliez chaque mot à sa définition.",
+      "paires": [
+        {
+          "id": "antigene",
+          "terme": "antigène",
+          "definition": "élément étranger qui déclenche la fabrication d'anticorps",
+          "points": {
+            "PSE-C7": 1
+          }
+        },
+        {
+          "id": "anticorps",
+          "terme": "anticorps",
+          "definition": "substance de défense contre un microbe précis",
+          "points": {
+            "PSE-C7": 1
+          }
+        },
+        {
+          "id": "memoire-immunitaire",
+          "terme": "mémoire immunitaire",
+          "definition": "le corps se souvient du microbe",
+          "points": {
+            "PSE-C7": 1
+          }
+        },
+        {
+          "id": "couverture-vaccinale",
+          "terme": "couverture vaccinale",
+          "definition": "pourcentage de personnes vaccinées",
+          "points": {
+            "PSE-C7": 1
+          }
+        },
+        {
+          "id": "virulence-attenuee",
+          "terme": "virulence atténuée",
+          "definition": "microbe affaibli qui ne rend pas gravement malade",
+          "points": {
+            "PSE-C7": 1
+          }
+        },
+        {
+          "id": "vaccin-obligatoire",
+          "terme": "vaccin obligatoire",
+          "definition": "vaccin imposé par la loi, comme l'hépatite B",
+          "points": {
+            "PSE-C7": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "tri-2",
+      "type": "tri",
+      "consigne": "Classez chaque carte.",
+      "categories": [
+        {
+          "id": "protection-individue",
+          "libelle": "Protection individuelle"
+        },
+        {
+          "id": "protection-collectiv",
+          "libelle": "Protection collective"
+        }
+      ],
+      "elements": [
+        {
+          "id": "mon-corps-fabrique-des-ant",
+          "texte": "Mon corps fabrique des anticorps",
+          "categorie": "protection-individue",
+          "points": {
+            "PSE-C7": 1
+          },
+          "retour": "Réponse attendue : Protection individuelle."
+        },
+        {
+          "id": "je-garde-des-cellules-memo",
+          "texte": "Je garde des cellules mémoire",
+          "categorie": "protection-individue",
+          "points": {
+            "PSE-C7": 1
+          },
+          "retour": "Réponse attendue : Protection individuelle."
+        },
+        {
+          "id": "je-me-defends-vite-contre-",
+          "texte": "Je me défends vite contre le virus",
+          "categorie": "protection-individue",
+          "points": {
+            "PSE-C7": 1
+          },
+          "retour": "Réponse attendue : Protection individuelle."
+        },
+        {
+          "id": "le-virus-circule-moins-dan",
+          "texte": "Le virus circule moins dans l'EHPAD",
+          "categorie": "protection-collectiv",
+          "points": {
+            "PSE-C7": 1
+          },
+          "retour": "Réponse attendue : Protection collective."
+        },
+        {
+          "id": "les-residents-fragiles-son",
+          "texte": "Les résidents fragiles sont moins exposés",
+          "categorie": "protection-collectiv",
+          "points": {
+            "PSE-C7": 1
+          },
+          "retour": "Réponse attendue : Protection collective."
+        },
+        {
+          "id": "une-couverture-vaccinale-e",
+          "texte": "Une couverture vaccinale élevée protège tout le monde",
+          "categorie": "protection-collectiv",
+          "points": {
+            "PSE-C7": 1
+          },
+          "retour": "Réponse attendue : Protection collective."
+        }
+      ]
+    },
+    {
+      "id": "ordre-3",
+      "type": "ordre",
+      "consigne": "Remettez dans l'ordre.",
+      "elements": [
+        {
+          "id": "le-vaccin-apporte-un-antig",
+          "texte": "Le vaccin apporte un antigène.",
+          "points": {
+            "PSE-C7": 1
+          }
+        },
+        {
+          "id": "le-corps-fabrique-des-anti",
+          "texte": "Le corps fabrique des anticorps.",
+          "points": {
+            "PSE-C7": 1
+          }
+        },
+        {
+          "id": "le-corps-garde-des-cellule",
+          "texte": "Le corps garde des cellules mémoire.",
+          "points": {
+            "PSE-C7": 1
+          }
+        },
+        {
+          "id": "a-la-vraie-rencontre-la-de",
+          "texte": "À la vraie rencontre, la défense est rapide et forte.",
+          "points": {
+            "PSE-C7": 1
+          }
+        }
+      ],
+      "retour": "Ordre repris de la séance S4-04."
+    },
+    {
+      "id": "selection-4",
+      "type": "selection",
+      "consigne": "Vrai ou faux ?",
+      "question": "Cochez les phrases vraies.",
+      "elements": [
+        {
+          "id": "un-vaccin-contient-un-anti",
+          "texte": "Un vaccin contient un antigène.",
+          "attendu": true,
+          "points": {
+            "PSE-C7": 1
+          },
+          "retour": "Vrai : Microbe tué ou atténué, ou fragment de microbe."
+        },
+        {
+          "id": "la-vaccination-ne-protege-",
+          "texte": "La vaccination ne protège que la personne vaccinée.",
+          "attendu": false,
+          "points": {
+            "PSE-C7": 1
+          },
+          "retour": "Faux : Elle limite aussi la circulation du microbe."
+        },
+        {
+          "id": "la-grippe-est-sans-danger-",
+          "texte": "La grippe est sans danger pour une personne âgée.",
+          "attendu": false,
+          "points": {
+            "PSE-C7": 1
+          },
+          "retour": "Faux : Elle peut être grave chez une personne fragile."
+        },
+        {
+          "id": "la-vaccination-contre-l-he",
+          "texte": "La vaccination contre l'hépatite B est obligatoire pour les professionnels exposés.",
+          "attendu": true,
+          "points": {
+            "PSE-C7": 1
+          },
+          "retour": "Vrai : Elle protège du risque lié au sang."
+        },
+        {
+          "id": "plus-la-couverture-vaccina",
+          "texte": "Plus la couverture vaccinale est élevée, moins le microbe circule.",
+          "attendu": true,
+          "points": {
+            "PSE-C7": 1
+          },
+          "retour": "Vrai : C'est la protection collective."
+        }
+      ]
+    },
+    {
+      "id": "qcm-5",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Que contient un vaccin ?",
+      "options": [
+        {
+          "texte": "Une vitamine"
+        },
+        {
+          "texte": "Un antibiotique"
+        },
+        {
+          "texte": "Un antigène",
+          "juste": true
+        }
+      ],
+      "points": {
+        "PSE-C7": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S4-04 si besoin."
+    },
+    {
+      "id": "qcm-6",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Que fabrique le corps après le vaccin ?",
+      "options": [
+        {
+          "texte": "Des anticorps",
+          "juste": true
+        },
+        {
+          "texte": "Rien"
+        },
+        {
+          "texte": "Des antigènes"
+        }
+      ],
+      "points": {
+        "PSE-C7": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S4-04 si besoin."
+    },
+    {
+      "id": "qcm-7",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "La vaccination contre la grippe du personnel d'EHPAD est…",
+      "options": [
+        {
+          "texte": "interdite"
+        },
+        {
+          "texte": "recommandée chaque année",
+          "juste": true
+        },
+        {
+          "texte": "inutile"
+        }
+      ],
+      "points": {
+        "PSE-C7": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S4-04 si besoin."
+    }
+  ],
+  "debriefing": [
+    "Quelle notion de cette séance avez-vous le mieux réussie ?",
+    "Quelle notion devez-vous revoir, et dans quel document du cours ?"
+  ]
+}

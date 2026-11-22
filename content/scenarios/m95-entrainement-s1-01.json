@@ -1,0 +1,262 @@
+{
+  "id": "m95-entrainement-s1-01",
+  "statut": "valide",
+  "discipline": "PSE",
+  "format": "entrainement",
+  "titre": "CDI, CDD, apprentissage : je compare les contrats",
+  "duree_min": 5,
+  "sequence_requise": "S1",
+  "lieu": "salon",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "PSE-C1",
+      "critere": "Identifier les spécificités des différents contrats de travail."
+    }
+  ],
+  "situation": "Entraînement rapide sur les notions de la séance S1-01 : CDI, CDD, apprentissage : je compare les contrats.",
+  "objectif_eleve": "Réviser les notions de la séance : répondre vite et juste, puis lire les corrections.",
+  "note_pour_audrey": "Entraînement généré pour la tâche Q.5 à partir de l'activité interactive de votre séance S1-01 (exercices repris tels quels, sans réécriture). Compétence : la compétence principale de la séance ; critère choisi par l'IA parmi les critères officiels de cette compétence (celui qui partage le plus de mots avec les exercices) : à vérifier.",
+  "etapes": [
+    {
+      "id": "tri-1",
+      "type": "tri",
+      "consigne": "Sélectionne une carte puis clique le bon type de contrat.",
+      "categories": [
+        {
+          "id": "cdi",
+          "libelle": "CDI"
+        },
+        {
+          "id": "cdd",
+          "libelle": "CDD"
+        },
+        {
+          "id": "apprentissage",
+          "libelle": "Apprentissage"
+        }
+      ],
+      "elements": [
+        {
+          "id": "contrat-sans-date-de-fin-p",
+          "texte": "Contrat sans date de fin prévue",
+          "categorie": "cdi",
+          "points": {
+            "PSE-C1": 1
+          },
+          "retour": "Réponse attendue : CDI."
+        },
+        {
+          "id": "poste-durable-d-agent-acco",
+          "texte": "Poste durable d'agent accompagnant",
+          "categorie": "cdi",
+          "points": {
+            "PSE-C1": 1
+          },
+          "retour": "Réponse attendue : CDI."
+        },
+        {
+          "id": "embauche-durable-aux-glyci",
+          "texte": "Embauche durable aux Glycines",
+          "categorie": "cdi",
+          "points": {
+            "PSE-C1": 1
+          },
+          "retour": "Réponse attendue : CDI."
+        },
+        {
+          "id": "du-4-septembre-au-20-octob",
+          "texte": "Du 4 septembre au 20 octobre, remplacement",
+          "categorie": "cdd",
+          "points": {
+            "PSE-C1": 1
+          },
+          "retour": "Réponse attendue : CDD."
+        },
+        {
+          "id": "mission-de-remplacement-d-",
+          "texte": "Mission de remplacement d'une salariée absente",
+          "categorie": "cdd",
+          "points": {
+            "PSE-C1": 1
+          },
+          "retour": "Réponse attendue : CDD."
+        },
+        {
+          "id": "contrat-de-3-semaines",
+          "texte": "Contrat de 3 semaines",
+          "categorie": "cdd",
+          "points": {
+            "PSE-C1": 1
+          },
+          "retour": "Réponse attendue : CDD."
+        },
+        {
+          "id": "alterne-centre-de-formatio",
+          "texte": "Alterne centre de formation et entreprise",
+          "categorie": "apprentissage",
+          "points": {
+            "PSE-C1": 1
+          },
+          "retour": "Réponse attendue : Apprentissage."
+        },
+        {
+          "id": "prepare-un-diplome-en-trav",
+          "texte": "Prépare un diplôme en travaillant",
+          "categorie": "apprentissage",
+          "points": {
+            "PSE-C1": 1
+          },
+          "retour": "Réponse attendue : Apprentissage."
+        }
+      ]
+    },
+    {
+      "id": "tri-2",
+      "type": "tri",
+      "consigne": "Classe chaque élément sous son mot-clé.",
+      "categories": [
+        {
+          "id": "durable",
+          "libelle": "Durable"
+        },
+        {
+          "id": "temporaire",
+          "libelle": "Temporaire"
+        },
+        {
+          "id": "alternance",
+          "libelle": "Alternance"
+        }
+      ],
+      "elements": [
+        {
+          "id": "cdi",
+          "texte": "CDI",
+          "categorie": "durable",
+          "points": {
+            "PSE-C1": 1
+          },
+          "retour": "Réponse attendue : Durable."
+        },
+        {
+          "id": "poste-sans-fin-prevue",
+          "texte": "Poste sans fin prévue",
+          "categorie": "durable",
+          "points": {
+            "PSE-C1": 1
+          },
+          "retour": "Réponse attendue : Durable."
+        },
+        {
+          "id": "cdd",
+          "texte": "CDD",
+          "categorie": "temporaire",
+          "points": {
+            "PSE-C1": 1
+          },
+          "retour": "Réponse attendue : Temporaire."
+        },
+        {
+          "id": "remplacement-de-3-semaines",
+          "texte": "Remplacement de 3 semaines",
+          "categorie": "temporaire",
+          "points": {
+            "PSE-C1": 1
+          },
+          "retour": "Réponse attendue : Temporaire."
+        },
+        {
+          "id": "apprentissage",
+          "texte": "Apprentissage",
+          "categorie": "alternance",
+          "points": {
+            "PSE-C1": 1
+          },
+          "retour": "Réponse attendue : Alternance."
+        },
+        {
+          "id": "travail-formation-pour-un-",
+          "texte": "Travail + formation pour un diplôme",
+          "categorie": "alternance",
+          "points": {
+            "PSE-C1": 1
+          },
+          "retour": "Réponse attendue : Alternance."
+        }
+      ]
+    },
+    {
+      "id": "qcm-3",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Les Glycines remplacent une agente absente 3 semaines :",
+      "options": [
+        {
+          "texte": "CDI"
+        },
+        {
+          "texte": "CDD",
+          "juste": true
+        },
+        {
+          "texte": "apprentissage"
+        }
+      ],
+      "points": {
+        "PSE-C1": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S1-01 si besoin."
+    },
+    {
+      "id": "qcm-4",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Une jeune personne prépare un diplôme en travaillant :",
+      "options": [
+        {
+          "texte": "CDI"
+        },
+        {
+          "texte": "CDD"
+        },
+        {
+          "texte": "apprentissage",
+          "juste": true
+        }
+      ],
+      "points": {
+        "PSE-C1": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S1-01 si besoin."
+    },
+    {
+      "id": "qcm-5",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Les Glycines embauchent durablement un agent :",
+      "options": [
+        {
+          "texte": "CDI",
+          "juste": true
+        },
+        {
+          "texte": "CDD"
+        },
+        {
+          "texte": "apprentissage"
+        }
+      ],
+      "points": {
+        "PSE-C1": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S1-01 si besoin."
+    }
+  ],
+  "debriefing": [
+    "Quelle notion de cette séance avez-vous le mieux réussie ?",
+    "Quelle notion devez-vous revoir, et dans quel document du cours ?"
+  ]
+}

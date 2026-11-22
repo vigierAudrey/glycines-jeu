@@ -1,0 +1,316 @@
+{
+  "id": "m113-entrainement-s6-02",
+  "statut": "valide",
+  "discipline": "PSE",
+  "format": "entrainement",
+  "titre": "Épargner ou emprunter ? Le vrai coût du crédit",
+  "duree_min": 5,
+  "sequence_requise": "S6",
+  "lieu": "salon",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "PSE-D2",
+      "critere": "Expliquer les avantages et les inconvénients d’un crédit à la consommation."
+    }
+  ],
+  "situation": "Entraînement rapide sur les notions de la séance S6-02 : Épargner ou emprunter ? Le vrai coût du crédit.",
+  "objectif_eleve": "Réviser les notions de la séance : répondre vite et juste, puis lire les corrections.",
+  "note_pour_audrey": "Entraînement généré pour la tâche Q.5 à partir de l'activité interactive de votre séance S6-02 (exercices repris tels quels, sans réécriture). Compétence : la compétence principale de la séance ; critère choisi par l'IA parmi les critères officiels de cette compétence (celui qui partage le plus de mots avec les exercices) : à vérifier.",
+  "etapes": [
+    {
+      "id": "association-1",
+      "type": "association",
+      "consigne": "Reliez chaque mot à sa définition.",
+      "paires": [
+        {
+          "id": "indiquer",
+          "terme": "Indiquer",
+          "definition": "donner un renseignement",
+          "points": {
+            "PSE-D2": 1
+          }
+        },
+        {
+          "id": "decrire",
+          "terme": "Décrire",
+          "definition": "dire ce que l'on voit",
+          "points": {
+            "PSE-D2": 1
+          }
+        },
+        {
+          "id": "definir",
+          "terme": "Définir",
+          "definition": "donner le sens précis d'une notion ou d'un mot et, parfois, ajouter un exemple",
+          "points": {
+            "PSE-D2": 1
+          }
+        },
+        {
+          "id": "comparer",
+          "terme": "Comparer",
+          "definition": "présenter les points communs et les différences entre plusieurs éléments",
+          "points": {
+            "PSE-D2": 1
+          }
+        },
+        {
+          "id": "deduire",
+          "terme": "Déduire",
+          "definition": "établir une conséquence logique",
+          "points": {
+            "PSE-D2": 1
+          }
+        },
+        {
+          "id": "justifier",
+          "terme": "Justifier",
+          "definition": "trouver dans ses connaissances ou dans des documents les éléments qui montrent la réalité d'une affirmation",
+          "points": {
+            "PSE-D2": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "tri-2",
+      "type": "tri",
+      "consigne": "Classez chaque carte.",
+      "categories": [
+        {
+          "id": "epargne",
+          "libelle": "Épargne"
+        },
+        {
+          "id": "credit",
+          "libelle": "Crédit"
+        }
+      ],
+      "elements": [
+        {
+          "id": "livret-a",
+          "texte": "Livret A",
+          "categorie": "epargne",
+          "points": {
+            "PSE-D2": 1
+          },
+          "retour": "Réponse attendue : Épargne."
+        },
+        {
+          "id": "epargne-de-precaution",
+          "texte": "Épargne de précaution",
+          "categorie": "epargne",
+          "points": {
+            "PSE-D2": 1
+          },
+          "retour": "Réponse attendue : Épargne."
+        },
+        {
+          "id": "rapporte-des-interets",
+          "texte": "Rapporte des intérêts",
+          "categorie": "epargne",
+          "points": {
+            "PSE-D2": 1
+          },
+          "retour": "Réponse attendue : Épargne."
+        },
+        {
+          "id": "mensualites",
+          "texte": "Mensualités",
+          "categorie": "credit",
+          "points": {
+            "PSE-D2": 1
+          },
+          "retour": "Réponse attendue : Crédit."
+        },
+        {
+          "id": "taeg",
+          "texte": "TAEG",
+          "categorie": "credit",
+          "points": {
+            "PSE-D2": 1
+          },
+          "retour": "Réponse attendue : Crédit."
+        },
+        {
+          "id": "coute-des-interets",
+          "texte": "Coûte des intérêts",
+          "categorie": "credit",
+          "points": {
+            "PSE-D2": 1
+          },
+          "retour": "Réponse attendue : Crédit."
+        }
+      ]
+    },
+    {
+      "id": "ordre-3",
+      "type": "ordre",
+      "consigne": "Remettez dans l'ordre.",
+      "elements": [
+        {
+          "id": "un-premier-credit-pour-la-",
+          "texte": "Un premier crédit pour la voiture.",
+          "points": {
+            "PSE-D2": 1
+          }
+        },
+        {
+          "id": "un-credit-renouvelable-pou",
+          "texte": "Un crédit renouvelable pour un canapé.",
+          "points": {
+            "PSE-D2": 1
+          }
+        },
+        {
+          "id": "les-mensualites-depassent-",
+          "texte": "Les mensualités dépassent les capacités.",
+          "points": {
+            "PSE-D2": 1
+          }
+        },
+        {
+          "id": "un-credit-pour-rembourser-",
+          "texte": "Un crédit pour rembourser les crédits.",
+          "points": {
+            "PSE-D2": 1
+          }
+        },
+        {
+          "id": "dossier-de-surendettement-",
+          "texte": "Dossier de surendettement à la Banque de France.",
+          "points": {
+            "PSE-D2": 1
+          }
+        }
+      ],
+      "retour": "Ordre repris de la séance S6-02."
+    },
+    {
+      "id": "selection-4",
+      "type": "selection",
+      "consigne": "Vrai ou faux ?",
+      "question": "Cochez les phrases vraies.",
+      "elements": [
+        {
+          "id": "un-credit-a-la-consommatio",
+          "texte": "Un crédit à la consommation est gratuit.",
+          "attendu": false,
+          "points": {
+            "PSE-D2": 1
+          },
+          "retour": "Faux : Il coûte des intérêts et des frais."
+        },
+        {
+          "id": "le-taeg-permet-de-comparer",
+          "texte": "Le TAEG permet de comparer deux offres de crédit.",
+          "attendu": true,
+          "points": {
+            "PSE-D2": 1
+          },
+          "retour": "Vrai : Il regroupe tous les coûts."
+        },
+        {
+          "id": "on-peut-se-retracter-14-jo",
+          "texte": "On peut se rétracter 14 jours après la signature d'un crédit.",
+          "attendu": true,
+          "points": {
+            "PSE-D2": 1
+          },
+          "retour": "Vrai : C'est la loi."
+        },
+        {
+          "id": "l-epargne-de-precaution-se",
+          "texte": "L'épargne de précaution sert aux imprévus.",
+          "attendu": true,
+          "points": {
+            "PSE-D2": 1
+          },
+          "retour": "Vrai : Panne, soin, caution."
+        },
+        {
+          "id": "cumuler-les-credits-proteg",
+          "texte": "Cumuler les crédits protège du surendettement.",
+          "attendu": false,
+          "points": {
+            "PSE-D2": 1
+          },
+          "retour": "Faux : C'est l'inverse."
+        }
+      ]
+    },
+    {
+      "id": "qcm-5",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "24 mensualités de 110 € : total remboursé ?",
+      "options": [
+        {
+          "texte": "1 100 €"
+        },
+        {
+          "texte": "2 640 €",
+          "juste": true
+        },
+        {
+          "texte": "2 400 €"
+        }
+      ],
+      "points": {
+        "PSE-D2": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S6-02 si besoin."
+    },
+    {
+      "id": "qcm-6",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Coût du crédit pour un scooter à 2 400 € ?",
+      "options": [
+        {
+          "texte": "0 €"
+        },
+        {
+          "texte": "2 640 €"
+        },
+        {
+          "texte": "240 €",
+          "juste": true
+        }
+      ],
+      "points": {
+        "PSE-D2": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S6-02 si besoin."
+    },
+    {
+      "id": "qcm-7",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "300 € par mois pendant 8 mois, cela fait…",
+      "options": [
+        {
+          "texte": "3 000 €"
+        },
+        {
+          "texte": "1 800 €"
+        },
+        {
+          "texte": "2 400 €",
+          "juste": true
+        }
+      ],
+      "points": {
+        "PSE-D2": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S6-02 si besoin."
+    }
+  ],
+  "debriefing": [
+    "Quelle notion de cette séance avez-vous le mieux réussie ?",
+    "Quelle notion devez-vous revoir, et dans quel document du cours ?"
+  ]
+}

@@ -1,0 +1,335 @@
+{
+  "id": "m103-entrainement-s4-01",
+  "statut": "valide",
+  "discipline": "PSE",
+  "format": "entrainement",
+  "titre": "Les acteurs de prévention dans l'entreprise",
+  "duree_min": 5,
+  "sequence_requise": "S4",
+  "lieu": "salon",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "PSE-C6",
+      "critere": "Expliquer les rôles du comité social et économique (CSE) liées à la santé et sécurité au travail."
+    }
+  ],
+  "situation": "Entraînement rapide sur les notions de la séance S4-01 : Les acteurs de prévention dans l'entreprise.",
+  "objectif_eleve": "Réviser les notions de la séance : répondre vite et juste, puis lire les corrections.",
+  "note_pour_audrey": "Entraînement généré pour la tâche Q.5 à partir de l'activité interactive de votre séance S4-01 (exercices repris tels quels, sans réécriture). Compétence : la compétence principale de la séance ; critère choisi par l'IA parmi les critères officiels de cette compétence (celui qui partage le plus de mots avec les exercices) : à vérifier.",
+  "etapes": [
+    {
+      "id": "association-1",
+      "type": "association",
+      "consigne": "Reliez chaque mot à sa définition.",
+      "paires": [
+        {
+          "id": "salarie-competent",
+          "terme": "salarié compétent",
+          "definition": "salarié désigné par l'employeur pour la prévention",
+          "points": {
+            "PSE-C6": 1
+          }
+        },
+        {
+          "id": "cse",
+          "terme": "CSE",
+          "definition": "comité social et économique, élu par les salariés",
+          "points": {
+            "PSE-C6": 1
+          }
+        },
+        {
+          "id": "droit-d-alerte",
+          "terme": "droit d'alerte",
+          "definition": "prévenir l'employeur d'un danger grave et imminent",
+          "points": {
+            "PSE-C6": 1
+          }
+        },
+        {
+          "id": "document-unique",
+          "terme": "document unique",
+          "definition": "liste des risques de chaque unité de travail",
+          "points": {
+            "PSE-C6": 1
+          }
+        },
+        {
+          "id": "signalement",
+          "terme": "signalement",
+          "definition": "information pour faire connaître un danger",
+          "points": {
+            "PSE-C6": 1
+          }
+        },
+        {
+          "id": "instance-representat",
+          "terme": "instance représentative",
+          "definition": "groupe d'élus qui représente le personnel",
+          "points": {
+            "PSE-C6": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "tri-2",
+      "type": "tri",
+      "consigne": "Classez chaque carte.",
+      "categories": [
+        {
+          "id": "employeur",
+          "libelle": "Employeur"
+        },
+        {
+          "id": "salarie-competent",
+          "libelle": "Salarié compétent"
+        },
+        {
+          "id": "cse",
+          "libelle": "CSE"
+        },
+        {
+          "id": "salarie",
+          "libelle": "Salarié"
+        }
+      ],
+      "elements": [
+        {
+          "id": "evalue-les-risques-dans-le",
+          "texte": "Évalue les risques dans le document unique",
+          "categorie": "employeur",
+          "points": {
+            "PSE-C6": 1
+          },
+          "retour": "Réponse attendue : Employeur."
+        },
+        {
+          "id": "finance-la-prevention",
+          "texte": "Finance la prévention",
+          "categorie": "employeur",
+          "points": {
+            "PSE-C6": 1
+          },
+          "retour": "Réponse attendue : Employeur."
+        },
+        {
+          "id": "aide-l-employeur-pour-la-p",
+          "texte": "Aide l'employeur pour la prévention au quotidien",
+          "categorie": "salarie-competent",
+          "points": {
+            "PSE-C6": 1
+          },
+          "retour": "Réponse attendue : Salarié compétent."
+        },
+        {
+          "id": "est-designe-par-l-employeu",
+          "texte": "Est désigné par l'employeur",
+          "categorie": "salarie-competent",
+          "points": {
+            "PSE-C6": 1
+          },
+          "retour": "Réponse attendue : Salarié compétent."
+        },
+        {
+          "id": "est-elu-par-les-salaries",
+          "texte": "Est élu par les salariés",
+          "categorie": "cse",
+          "points": {
+            "PSE-C6": 1
+          },
+          "retour": "Réponse attendue : CSE."
+        },
+        {
+          "id": "analyse-les-accidents-du-t",
+          "texte": "Analyse les accidents du travail",
+          "categorie": "cse",
+          "points": {
+            "PSE-C6": 1
+          },
+          "retour": "Réponse attendue : CSE."
+        },
+        {
+          "id": "signale-la-dalle-descellee",
+          "texte": "Signale la dalle descellée",
+          "categorie": "salarie",
+          "points": {
+            "PSE-C6": 1
+          },
+          "retour": "Réponse attendue : Salarié."
+        },
+        {
+          "id": "prend-soin-de-sa-securite-",
+          "texte": "Prend soin de sa sécurité et de celle des autres",
+          "categorie": "salarie",
+          "points": {
+            "PSE-C6": 1
+          },
+          "retour": "Réponse attendue : Salarié."
+        }
+      ]
+    },
+    {
+      "id": "ordre-3",
+      "type": "ordre",
+      "consigne": "Remettez dans l'ordre.",
+      "elements": [
+        {
+          "id": "je-repere-un-danger-la-dal",
+          "texte": "Je repère un danger : la dalle descellée.",
+          "points": {
+            "PSE-C6": 1
+          }
+        },
+        {
+          "id": "je-previens-tout-de-suite-",
+          "texte": "Je préviens tout de suite les collègues autour.",
+          "points": {
+            "PSE-C6": 1
+          }
+        },
+        {
+          "id": "je-signale-le-danger-au-re",
+          "texte": "Je signale le danger au référent sécurité ou à l'encadrement.",
+          "points": {
+            "PSE-C6": 1
+          }
+        },
+        {
+          "id": "l-employeur-fait-reparer-e",
+          "texte": "L'employeur fait réparer et met à jour le document unique.",
+          "points": {
+            "PSE-C6": 1
+          }
+        }
+      ],
+      "retour": "Ordre repris de la séance S4-01."
+    },
+    {
+      "id": "selection-4",
+      "type": "selection",
+      "consigne": "Vrai ou faux ?",
+      "question": "Cochez les phrases vraies.",
+      "elements": [
+        {
+          "id": "l-employeur-est-responsabl",
+          "texte": "L'employeur est responsable de la sécurité des salariés.",
+          "attendu": true,
+          "points": {
+            "PSE-C6": 1
+          },
+          "retour": "Vrai : C'est une obligation du Code du travail."
+        },
+        {
+          "id": "le-cse-est-nomme-par-la-di",
+          "texte": "Le CSE est nommé par la directrice.",
+          "attendu": false,
+          "points": {
+            "PSE-C6": 1
+          },
+          "retour": "Faux : Il est élu par les salariés."
+        },
+        {
+          "id": "un-salarie-n-a-pas-a-signa",
+          "texte": "Un salarié n'a pas à signaler un danger qu'il voit.",
+          "attendu": false,
+          "points": {
+            "PSE-C6": 1
+          },
+          "retour": "Faux : Il prend soin de sa sécurité et de celle des autres."
+        },
+        {
+          "id": "l-employeur-declare-un-acc",
+          "texte": "L'employeur déclare un accident du travail sous 48 heures.",
+          "attendu": true,
+          "points": {
+            "PSE-C6": 1
+          },
+          "retour": "Vrai : La victime l'informe sous 24 heures."
+        },
+        {
+          "id": "le-salarie-competent-est-e",
+          "texte": "Le salarié compétent est élu par les salariés.",
+          "attendu": false,
+          "points": {
+            "PSE-C6": 1
+          },
+          "retour": "Faux : Il est désigné par l'employeur."
+        }
+      ]
+    },
+    {
+      "id": "qcm-5",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Qui est responsable de la santé et de la sécurité des salariés ?",
+      "options": [
+        {
+          "texte": "Le salarié"
+        },
+        {
+          "texte": "Le CSE"
+        },
+        {
+          "texte": "L'employeur",
+          "juste": true
+        }
+      ],
+      "points": {
+        "PSE-C6": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S4-01 si besoin."
+    },
+    {
+      "id": "qcm-6",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Qui élit le CSE ?",
+      "options": [
+        {
+          "texte": "La directrice"
+        },
+        {
+          "texte": "L'inspectrice du travail"
+        },
+        {
+          "texte": "Les salariés",
+          "juste": true
+        }
+      ],
+      "points": {
+        "PSE-C6": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S4-01 si besoin."
+    },
+    {
+      "id": "qcm-7",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "En combien de temps la victime informe-t-elle l'employeur d'un accident du travail ?",
+      "options": [
+        {
+          "texte": "24 heures",
+          "juste": true
+        },
+        {
+          "texte": "1 mois"
+        },
+        {
+          "texte": "8 jours"
+        }
+      ],
+      "points": {
+        "PSE-C6": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S4-01 si besoin."
+    }
+  ],
+  "debriefing": [
+    "Quelle notion de cette séance avez-vous le mieux réussie ?",
+    "Quelle notion devez-vous revoir, et dans quel document du cours ?"
+  ]
+}

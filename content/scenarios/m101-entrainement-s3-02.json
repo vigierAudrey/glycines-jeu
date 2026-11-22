@@ -1,0 +1,355 @@
+{
+  "id": "m101-entrainement-s3-02",
+  "statut": "valide",
+  "discipline": "PSE",
+  "format": "entrainement",
+  "titre": "Comment un microbe se transmet : la chaîne de transmission",
+  "duree_min": 5,
+  "sequence_requise": "S3",
+  "lieu": "salon",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "PSE-C4",
+      "critere": "Mettre en évidence les effets physio-pathologiques du risque."
+    }
+  ],
+  "situation": "Entraînement rapide sur les notions de la séance S3-02 : Comment un microbe se transmet : la chaîne de transmission.",
+  "objectif_eleve": "Réviser les notions de la séance : répondre vite et juste, puis lire les corrections.",
+  "note_pour_audrey": "Entraînement généré pour la tâche Q.5 à partir de l'activité interactive de votre séance S3-02 (exercices repris tels quels, sans réécriture). Compétence : la compétence principale de la séance ; critère choisi par l'IA parmi les critères officiels de cette compétence (celui qui partage le plus de mots avec les exercices) : à vérifier.",
+  "etapes": [
+    {
+      "id": "association-1",
+      "type": "association",
+      "consigne": "Reliez chaque mot à sa définition.",
+      "paires": [
+        {
+          "id": "reservoir",
+          "terme": "réservoir",
+          "definition": "lieu où l'agent biologique vit et se multiplie",
+          "points": {
+            "PSE-C4": 1
+          }
+        },
+        {
+          "id": "transmission-manupor",
+          "terme": "transmission manuportée",
+          "definition": "transmission par les mains contaminées",
+          "points": {
+            "PSE-C4": 1
+          }
+        },
+        {
+          "id": "hote-receptif",
+          "terme": "hôte réceptif",
+          "definition": "personne qui peut être contaminée",
+          "points": {
+            "PSE-C4": 1
+          }
+        },
+        {
+          "id": "porte-d-entree",
+          "terme": "porte d'entrée",
+          "definition": "endroit par où le microbe entre dans le corps",
+          "points": {
+            "PSE-C4": 1
+          }
+        },
+        {
+          "id": "effets-physiopatholo",
+          "terme": "effets physiopathologiques",
+          "definition": "perturbations du fonctionnement du corps",
+          "points": {
+            "PSE-C4": 1
+          }
+        },
+        {
+          "id": "deshydratation",
+          "terme": "déshydratation",
+          "definition": "manque d'eau dans le corps",
+          "points": {
+            "PSE-C4": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "tri-2",
+      "type": "tri",
+      "consigne": "Classez chaque carte.",
+      "categories": [
+        {
+          "id": "reservoir",
+          "libelle": "Réservoir"
+        },
+        {
+          "id": "porte-de-sortie",
+          "libelle": "Porte de sortie"
+        },
+        {
+          "id": "mode-de-transmission",
+          "libelle": "Mode de transmission"
+        },
+        {
+          "id": "porte-d-entree",
+          "libelle": "Porte d'entrée"
+        },
+        {
+          "id": "hote-receptif",
+          "libelle": "Hôte réceptif"
+        }
+      ],
+      "elements": [
+        {
+          "id": "mme-rose-malade",
+          "texte": "Mme Rose, malade",
+          "categorie": "reservoir",
+          "points": {
+            "PSE-C4": 1
+          },
+          "retour": "Réponse attendue : Réservoir."
+        },
+        {
+          "id": "les-selles-de-mme-rose",
+          "texte": "Les selles de Mme Rose",
+          "categorie": "porte-de-sortie",
+          "points": {
+            "PSE-C4": 1
+          },
+          "retour": "Réponse attendue : Porte de sortie."
+        },
+        {
+          "id": "les-vomissures",
+          "texte": "Les vomissures",
+          "categorie": "porte-de-sortie",
+          "points": {
+            "PSE-C4": 1
+          },
+          "retour": "Réponse attendue : Porte de sortie."
+        },
+        {
+          "id": "les-mains-de-lisa",
+          "texte": "Les mains de Lisa",
+          "categorie": "mode-de-transmission",
+          "points": {
+            "PSE-C4": 1
+          },
+          "retour": "Réponse attendue : Mode de transmission."
+        },
+        {
+          "id": "le-chariot-de-linge-sale",
+          "texte": "Le chariot de linge sale",
+          "categorie": "mode-de-transmission",
+          "points": {
+            "PSE-C4": 1
+          },
+          "retour": "Réponse attendue : Mode de transmission."
+        },
+        {
+          "id": "la-bouche",
+          "texte": "La bouche",
+          "categorie": "porte-d-entree",
+          "points": {
+            "PSE-C4": 1
+          },
+          "retour": "Réponse attendue : Porte d'entrée."
+        },
+        {
+          "id": "les-yeux",
+          "texte": "Les yeux",
+          "categorie": "porte-d-entree",
+          "points": {
+            "PSE-C4": 1
+          },
+          "retour": "Réponse attendue : Porte d'entrée."
+        },
+        {
+          "id": "m-andre-89-ans",
+          "texte": "M. André, 89 ans",
+          "categorie": "hote-receptif",
+          "points": {
+            "PSE-C4": 1
+          },
+          "retour": "Réponse attendue : Hôte réceptif."
+        },
+        {
+          "id": "lisa-fatiguee",
+          "texte": "Lisa, fatiguée",
+          "categorie": "hote-receptif",
+          "points": {
+            "PSE-C4": 1
+          },
+          "retour": "Réponse attendue : Hôte réceptif."
+        }
+      ]
+    },
+    {
+      "id": "ordre-3",
+      "type": "ordre",
+      "consigne": "Remettez dans l'ordre.",
+      "elements": [
+        {
+          "id": "le-virus-se-multiplie-dans",
+          "texte": "Le virus se multiplie dans l'intestin.",
+          "points": {
+            "PSE-C4": 1
+          }
+        },
+        {
+          "id": "la-paroi-de-l-intestin-est",
+          "texte": "La paroi de l'intestin est enflammée.",
+          "points": {
+            "PSE-C4": 1
+          }
+        },
+        {
+          "id": "diarrhee-et-vomissements-a",
+          "texte": "Diarrhée et vomissements apparaissent.",
+          "points": {
+            "PSE-C4": 1
+          }
+        },
+        {
+          "id": "le-corps-perd-de-l-eau-et-",
+          "texte": "Le corps perd de l'eau et des sels minéraux.",
+          "points": {
+            "PSE-C4": 1
+          }
+        },
+        {
+          "id": "la-deshydratation-s-instal",
+          "texte": "La déshydratation s'installe : fatigue, vertiges.",
+          "points": {
+            "PSE-C4": 1
+          }
+        }
+      ],
+      "retour": "Ordre repris de la séance S3-02."
+    },
+    {
+      "id": "selection-4",
+      "type": "selection",
+      "consigne": "Vrai ou faux ?",
+      "question": "Cochez les phrases vraies.",
+      "elements": [
+        {
+          "id": "casser-un-seul-maillon-suf",
+          "texte": "Casser un seul maillon suffit à arrêter la transmission.",
+          "attendu": true,
+          "points": {
+            "PSE-C4": 1
+          },
+          "retour": "Vrai : C'est le principe des précautions d'hygiène."
+        },
+        {
+          "id": "le-linge-sale-ne-peut-pas-",
+          "texte": "Le linge sale ne peut pas transmettre de microbes.",
+          "attendu": false,
+          "points": {
+            "PSE-C4": 1
+          },
+          "retour": "Faux : C'est une transmission indirecte."
+        },
+        {
+          "id": "la-gastro-enterite-est-le-",
+          "texte": "La gastro-entérite est le plus souvent due à un virus.",
+          "attendu": true,
+          "points": {
+            "PSE-C4": 1
+          },
+          "retour": "Vrai : Elle est alors très contagieuse."
+        },
+        {
+          "id": "une-personne-agee-ressent-",
+          "texte": "Une personne âgée ressent vite la soif.",
+          "attendu": false,
+          "points": {
+            "PSE-C4": 1
+          },
+          "retour": "Faux : Sa sensation de soif est souvent retardée."
+        },
+        {
+          "id": "un-hote-contamine-peut-dev",
+          "texte": "Un hôte contaminé peut devenir un nouveau réservoir.",
+          "attendu": true,
+          "points": {
+            "PSE-C4": 1
+          },
+          "retour": "Vrai : La chaîne forme une boucle."
+        }
+      ]
+    },
+    {
+      "id": "qcm-5",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Quel est le premier maillon de la chaîne ?",
+      "options": [
+        {
+          "texte": "La porte d'entrée"
+        },
+        {
+          "texte": "L'hôte réceptif"
+        },
+        {
+          "texte": "Le réservoir",
+          "juste": true
+        }
+      ],
+      "points": {
+        "PSE-C4": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S3-02 si besoin."
+    },
+    {
+      "id": "qcm-6",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Servir le goûter avec des mains contaminées, c'est une transmission…",
+      "options": [
+        {
+          "texte": "indirecte (manuportée)",
+          "juste": true
+        },
+        {
+          "texte": "directe par gouttelettes"
+        },
+        {
+          "texte": "impossible"
+        }
+      ],
+      "points": {
+        "PSE-C4": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S3-02 si besoin."
+    },
+    {
+      "id": "qcm-7",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Pourquoi la gastro-entérite déshydrate-t-elle ?",
+      "options": [
+        {
+          "texte": "On boit trop"
+        },
+        {
+          "texte": "Diarrhée et vomissements font perdre de l'eau",
+          "juste": true
+        },
+        {
+          "texte": "Le virus mange l'eau"
+        }
+      ],
+      "points": {
+        "PSE-C4": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S3-02 si besoin."
+    }
+  ],
+  "debriefing": [
+    "Quelle notion de cette séance avez-vous le mieux réussie ?",
+    "Quelle notion devez-vous revoir, et dans quel document du cours ?"
+  ]
+}

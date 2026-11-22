@@ -1,0 +1,338 @@
+{
+  "id": "m112-entrainement-s6-01",
+  "statut": "valide",
+  "discipline": "PSE",
+  "format": "entrainement",
+  "titre": "Mon budget : recettes, dépenses et la règle d'or",
+  "duree_min": 5,
+  "sequence_requise": "S6",
+  "lieu": "salon",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "PSE-D2",
+      "critere": "Identifier les différentes catégories de recettes et de dépenses d’un budget."
+    }
+  ],
+  "situation": "Entraînement rapide sur les notions de la séance S6-01 : Mon budget : recettes, dépenses et la règle d'or.",
+  "objectif_eleve": "Réviser les notions de la séance : répondre vite et juste, puis lire les corrections.",
+  "note_pour_audrey": "Entraînement généré pour la tâche Q.5 à partir de l'activité interactive de votre séance S6-01 (exercices repris tels quels, sans réécriture). Compétence : la compétence principale de la séance ; critère choisi par l'IA parmi les critères officiels de cette compétence (celui qui partage le plus de mots avec les exercices) : à vérifier.",
+  "etapes": [
+    {
+      "id": "association-1",
+      "type": "association",
+      "consigne": "Reliez chaque mot à sa définition.",
+      "paires": [
+        {
+          "id": "recette",
+          "terme": "recette",
+          "definition": "argent qui entre dans le budget",
+          "points": {
+            "PSE-D2": 1
+          }
+        },
+        {
+          "id": "revenu-social",
+          "terme": "revenu social",
+          "definition": "prime d'activité, allocations",
+          "points": {
+            "PSE-D2": 1
+          }
+        },
+        {
+          "id": "depense-incompressib",
+          "terme": "dépense incompressible",
+          "definition": "dépense fixe qu'on ne peut pas supprimer",
+          "points": {
+            "PSE-D2": 1
+          }
+        },
+        {
+          "id": "solde",
+          "terme": "solde",
+          "definition": "recettes moins dépenses",
+          "points": {
+            "PSE-D2": 1
+          }
+        },
+        {
+          "id": "budget-excedentaire",
+          "terme": "budget excédentaire",
+          "definition": "solde positif",
+          "points": {
+            "PSE-D2": 1
+          }
+        },
+        {
+          "id": "budget-deficitaire",
+          "terme": "budget déficitaire",
+          "definition": "solde négatif",
+          "points": {
+            "PSE-D2": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "tri-2",
+      "type": "tri",
+      "consigne": "Classez chaque carte.",
+      "categories": [
+        {
+          "id": "recettes",
+          "libelle": "Recettes"
+        },
+        {
+          "id": "depenses-fixes",
+          "libelle": "Dépenses fixes"
+        },
+        {
+          "id": "depenses-variables",
+          "libelle": "Dépenses variables"
+        }
+      ],
+      "elements": [
+        {
+          "id": "salaire-net",
+          "texte": "Salaire net",
+          "categorie": "recettes",
+          "points": {
+            "PSE-D2": 1
+          },
+          "retour": "Réponse attendue : Recettes."
+        },
+        {
+          "id": "prime-d-activite",
+          "texte": "Prime d'activité",
+          "categorie": "recettes",
+          "points": {
+            "PSE-D2": 1
+          },
+          "retour": "Réponse attendue : Recettes."
+        },
+        {
+          "id": "loyer",
+          "texte": "Loyer",
+          "categorie": "depenses-fixes",
+          "points": {
+            "PSE-D2": 1
+          },
+          "retour": "Réponse attendue : Dépenses fixes."
+        },
+        {
+          "id": "assurance-habitation",
+          "texte": "Assurance habitation",
+          "categorie": "depenses-fixes",
+          "points": {
+            "PSE-D2": 1
+          },
+          "retour": "Réponse attendue : Dépenses fixes."
+        },
+        {
+          "id": "abonnement-de-bus",
+          "texte": "Abonnement de bus",
+          "categorie": "depenses-fixes",
+          "points": {
+            "PSE-D2": 1
+          },
+          "retour": "Réponse attendue : Dépenses fixes."
+        },
+        {
+          "id": "courses",
+          "texte": "Courses",
+          "categorie": "depenses-variables",
+          "points": {
+            "PSE-D2": 1
+          },
+          "retour": "Réponse attendue : Dépenses variables."
+        },
+        {
+          "id": "loisirs",
+          "texte": "Loisirs",
+          "categorie": "depenses-variables",
+          "points": {
+            "PSE-D2": 1
+          },
+          "retour": "Réponse attendue : Dépenses variables."
+        },
+        {
+          "id": "vetements",
+          "texte": "Vêtements",
+          "categorie": "depenses-variables",
+          "points": {
+            "PSE-D2": 1
+          },
+          "retour": "Réponse attendue : Dépenses variables."
+        }
+      ]
+    },
+    {
+      "id": "ordre-3",
+      "type": "ordre",
+      "consigne": "Remettez dans l'ordre.",
+      "elements": [
+        {
+          "id": "je-liste-mes-recettes",
+          "texte": "Je liste mes recettes.",
+          "points": {
+            "PSE-D2": 1
+          }
+        },
+        {
+          "id": "je-liste-mes-depenses-fixe",
+          "texte": "Je liste mes dépenses fixes.",
+          "points": {
+            "PSE-D2": 1
+          }
+        },
+        {
+          "id": "je-liste-mes-depenses-vari",
+          "texte": "Je liste mes dépenses variables.",
+          "points": {
+            "PSE-D2": 1
+          }
+        },
+        {
+          "id": "je-calcule-le-solde",
+          "texte": "Je calcule le solde.",
+          "points": {
+            "PSE-D2": 1
+          }
+        },
+        {
+          "id": "j-ajuste-les-depenses-vari",
+          "texte": "J'ajuste les dépenses variables si besoin.",
+          "points": {
+            "PSE-D2": 1
+          }
+        }
+      ],
+      "retour": "Ordre repris de la séance S6-01."
+    },
+    {
+      "id": "selection-4",
+      "type": "selection",
+      "consigne": "Vrai ou faux ?",
+      "question": "Cochez les phrases vraies.",
+      "elements": [
+        {
+          "id": "le-salaire-brut-sert-a-fai",
+          "texte": "Le salaire brut sert à faire son budget.",
+          "attendu": false,
+          "points": {
+            "PSE-D2": 1
+          },
+          "retour": "Faux : C'est le salaire net qui arrive sur le compte."
+        },
+        {
+          "id": "le-loyer-est-une-depense-i",
+          "texte": "Le loyer est une dépense incompressible.",
+          "attendu": true,
+          "points": {
+            "PSE-D2": 1
+          },
+          "retour": "Vrai : On ne peut pas le supprimer."
+        },
+        {
+          "id": "un-solde-negatif-signifie-",
+          "texte": "Un solde négatif signifie un budget déficitaire.",
+          "attendu": true,
+          "points": {
+            "PSE-D2": 1
+          },
+          "retour": "Vrai : Les dépenses dépassent les recettes."
+        },
+        {
+          "id": "la-prime-d-activite-est-un",
+          "texte": "La prime d'activité est un revenu lié au travail.",
+          "attendu": false,
+          "points": {
+            "PSE-D2": 1
+          },
+          "retour": "Faux : C'est un revenu social."
+        },
+        {
+          "id": "en-cas-de-deficit-on-agit-",
+          "texte": "En cas de déficit, on agit d'abord sur les dépenses variables.",
+          "attendu": true,
+          "points": {
+            "PSE-D2": 1
+          },
+          "retour": "Vrai : Les fixes ne se suppriment pas."
+        }
+      ]
+    },
+    {
+      "id": "qcm-5",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Recettes 1 540 €, dépenses 1 027 € : le budget est…",
+      "options": [
+        {
+          "texte": "excédentaire",
+          "juste": true
+        },
+        {
+          "texte": "équilibré"
+        },
+        {
+          "texte": "déficitaire"
+        }
+      ],
+      "points": {
+        "PSE-D2": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S6-01 si besoin."
+    },
+    {
+      "id": "qcm-6",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Une dépense variable, c'est…",
+      "options": [
+        {
+          "texte": "l'assurance"
+        },
+        {
+          "texte": "le loyer"
+        },
+        {
+          "texte": "les sorties",
+          "juste": true
+        }
+      ],
+      "points": {
+        "PSE-D2": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S6-01 si besoin."
+    },
+    {
+      "id": "qcm-7",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "La règle d'or : les dépenses…",
+      "options": [
+        {
+          "texte": "ne dépassent jamais les recettes",
+          "juste": true
+        },
+        {
+          "texte": "ne comptent pas"
+        },
+        {
+          "texte": "doublent chaque mois"
+        }
+      ],
+      "points": {
+        "PSE-D2": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S6-01 si besoin."
+    }
+  ],
+  "debriefing": [
+    "Quelle notion de cette séance avez-vous le mieux réussie ?",
+    "Quelle notion devez-vous revoir, et dans quel document du cours ?"
+  ]
+}

@@ -1,0 +1,340 @@
+{
+  "id": "m109-entrainement-s5-03",
+  "statut": "valide",
+  "discipline": "PSE",
+  "format": "entrainement",
+  "titre": "Mes besoins alimentaires : manger, c'est couvrir des besoins",
+  "duree_min": 5,
+  "sequence_requise": "S5",
+  "lieu": "salon",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "PSE-A7",
+      "critere": "Expliquer les conséquences des erreurs alimentaires sur la santé de l’individu et sur son activité professionnelle."
+    }
+  ],
+  "situation": "Entraînement rapide sur les notions de la séance S5-03 : Mes besoins alimentaires : manger, c'est couvrir des besoins.",
+  "objectif_eleve": "Réviser les notions de la séance : répondre vite et juste, puis lire les corrections.",
+  "note_pour_audrey": "Entraînement généré pour la tâche Q.5 à partir de l'activité interactive de votre séance S5-03 (exercices repris tels quels, sans réécriture). Compétence : la compétence principale de la séance ; critère choisi par l'IA parmi les critères officiels de cette compétence (celui qui partage le plus de mots avec les exercices) : à vérifier.",
+  "etapes": [
+    {
+      "id": "association-1",
+      "type": "association",
+      "consigne": "Reliez chaque mot à sa définition.",
+      "paires": [
+        {
+          "id": "nutriment",
+          "terme": "nutriment",
+          "definition": "élément issu de la digestion qui passe dans le sang",
+          "points": {
+            "PSE-A7": 1
+          }
+        },
+        {
+          "id": "aliment",
+          "terme": "aliment",
+          "definition": "ce que je mets dans mon assiette",
+          "points": {
+            "PSE-A7": 1
+          }
+        },
+        {
+          "id": "facteur-de-variation",
+          "terme": "facteur de variation",
+          "definition": "ce qui fait changer les besoins",
+          "points": {
+            "PSE-A7": 1
+          }
+        },
+        {
+          "id": "etat-physiologique",
+          "terme": "état physiologique",
+          "definition": "croissance, grossesse, maladie, vieillissement",
+          "points": {
+            "PSE-A7": 1
+          }
+        },
+        {
+          "id": "groupe-alimentaire",
+          "terme": "groupe alimentaire",
+          "definition": "famille d'aliments aux nutriments proches",
+          "points": {
+            "PSE-A7": 1
+          }
+        },
+        {
+          "id": "pnns",
+          "terme": "PNNS",
+          "definition": "repères officiels d'alimentation et d'activité physique",
+          "points": {
+            "PSE-A7": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "tri-2",
+      "type": "tri",
+      "consigne": "Classez chaque carte.",
+      "categories": [
+        {
+          "id": "energetiques",
+          "libelle": "Énergétiques"
+        },
+        {
+          "id": "de-construction",
+          "libelle": "De construction"
+        },
+        {
+          "id": "fonctionnels",
+          "libelle": "Fonctionnels"
+        }
+      ],
+      "elements": [
+        {
+          "id": "glucides",
+          "texte": "Glucides",
+          "categorie": "energetiques",
+          "points": {
+            "PSE-A7": 1
+          },
+          "retour": "Réponse attendue : Énergétiques."
+        },
+        {
+          "id": "lipides",
+          "texte": "Lipides",
+          "categorie": "energetiques",
+          "points": {
+            "PSE-A7": 1
+          },
+          "retour": "Réponse attendue : Énergétiques."
+        },
+        {
+          "id": "tenir-debout-tout-le-poste",
+          "texte": "Tenir debout tout le poste",
+          "categorie": "energetiques",
+          "points": {
+            "PSE-A7": 1
+          },
+          "retour": "Réponse attendue : Énergétiques."
+        },
+        {
+          "id": "proteines",
+          "texte": "Protéines",
+          "categorie": "de-construction",
+          "points": {
+            "PSE-A7": 1
+          },
+          "retour": "Réponse attendue : De construction."
+        },
+        {
+          "id": "calcium",
+          "texte": "Calcium",
+          "categorie": "de-construction",
+          "points": {
+            "PSE-A7": 1
+          },
+          "retour": "Réponse attendue : De construction."
+        },
+        {
+          "id": "cicatrisation-d-une-plaie",
+          "texte": "Cicatrisation d'une plaie",
+          "categorie": "de-construction",
+          "points": {
+            "PSE-A7": 1
+          },
+          "retour": "Réponse attendue : De construction."
+        },
+        {
+          "id": "vitamines",
+          "texte": "Vitamines",
+          "categorie": "fonctionnels",
+          "points": {
+            "PSE-A7": 1
+          },
+          "retour": "Réponse attendue : Fonctionnels."
+        },
+        {
+          "id": "fibres",
+          "texte": "Fibres",
+          "categorie": "fonctionnels",
+          "points": {
+            "PSE-A7": 1
+          },
+          "retour": "Réponse attendue : Fonctionnels."
+        },
+        {
+          "id": "eau",
+          "texte": "Eau",
+          "categorie": "fonctionnels",
+          "points": {
+            "PSE-A7": 1
+          },
+          "retour": "Réponse attendue : Fonctionnels."
+        }
+      ]
+    },
+    {
+      "id": "ordre-3",
+      "type": "ordre",
+      "consigne": "Remettez dans l'ordre.",
+      "elements": [
+        {
+          "id": "je-mange-un-aliment",
+          "texte": "Je mange un aliment.",
+          "points": {
+            "PSE-A7": 1
+          }
+        },
+        {
+          "id": "la-digestion-le-decoupe-en",
+          "texte": "La digestion le découpe en nutriments.",
+          "points": {
+            "PSE-A7": 1
+          }
+        },
+        {
+          "id": "les-nutriments-passent-dan",
+          "texte": "Les nutriments passent dans le sang.",
+          "points": {
+            "PSE-A7": 1
+          }
+        },
+        {
+          "id": "le-sang-les-distribue-aux-",
+          "texte": "Le sang les distribue aux organes.",
+          "points": {
+            "PSE-A7": 1
+          }
+        }
+      ],
+      "retour": "Ordre repris de la séance S5-03."
+    },
+    {
+      "id": "selection-4",
+      "type": "selection",
+      "consigne": "Vrai ou faux ?",
+      "question": "Cochez les phrases vraies.",
+      "elements": [
+        {
+          "id": "un-yaourt-est-un-nutriment",
+          "texte": "Un yaourt est un nutriment.",
+          "attendu": false,
+          "points": {
+            "PSE-A7": 1
+          },
+          "retour": "Faux : C'est un aliment ; le calcium est un nutriment."
+        },
+        {
+          "id": "les-besoins-varient-avec-l",
+          "texte": "Les besoins varient avec l'âge et l'activité.",
+          "attendu": true,
+          "points": {
+            "PSE-A7": 1
+          },
+          "retour": "Vrai : Ce sont des facteurs de variation."
+        },
+        {
+          "id": "le-pnns-recommande-au-moin",
+          "texte": "Le PNNS recommande au moins 5 fruits et légumes par jour.",
+          "attendu": true,
+          "points": {
+            "PSE-A7": 1
+          },
+          "retour": "Vrai : Repère de Santé publique France."
+        },
+        {
+          "id": "une-personne-agee-n-a-plus",
+          "texte": "Une personne âgée n'a plus besoin de protéines.",
+          "attendu": false,
+          "points": {
+            "PSE-A7": 1
+          },
+          "retour": "Faux : Ses besoins en protéines restent élevés."
+        },
+        {
+          "id": "un-seul-aliment-peut-couvr",
+          "texte": "Un seul aliment peut couvrir tous les besoins.",
+          "attendu": false,
+          "points": {
+            "PSE-A7": 1
+          },
+          "retour": "Faux : C'est la variété qui assure l'équilibre."
+        }
+      ]
+    },
+    {
+      "id": "qcm-5",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Quels nutriments fournissent surtout de l'énergie ?",
+      "options": [
+        {
+          "texte": "Vitamines et eau"
+        },
+        {
+          "texte": "Calcium"
+        },
+        {
+          "texte": "Glucides et lipides",
+          "juste": true
+        }
+      ],
+      "points": {
+        "PSE-A7": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S5-03 si besoin."
+    },
+    {
+      "id": "qcm-6",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Le calcium sert surtout à…",
+      "options": [
+        {
+          "texte": "construire et entretenir les os",
+          "juste": true
+        },
+        {
+          "texte": "donner de l'énergie"
+        },
+        {
+          "texte": "rien"
+        }
+      ],
+      "points": {
+        "PSE-A7": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S5-03 si besoin."
+    },
+    {
+      "id": "qcm-7",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Combien de produits laitiers par jour pour un adulte (PNNS) ?",
+      "options": [
+        {
+          "texte": "6"
+        },
+        {
+          "texte": "2",
+          "juste": true
+        },
+        {
+          "texte": "0"
+        }
+      ],
+      "points": {
+        "PSE-A7": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S5-03 si besoin."
+    }
+  ],
+  "debriefing": [
+    "Quelle notion de cette séance avez-vous le mieux réussie ?",
+    "Quelle notion devez-vous revoir, et dans quel document du cours ?"
+  ]
+}

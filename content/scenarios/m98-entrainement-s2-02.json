@@ -1,0 +1,236 @@
+{
+  "id": "m98-entrainement-s2-02",
+  "statut": "valide",
+  "discipline": "PSE",
+  "format": "entrainement",
+  "titre": "TMS et fatigue musculaire : d’où vient la douleur ?",
+  "duree_min": 5,
+  "sequence_requise": "S2",
+  "lieu": "salon",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "PSE-C5",
+      "critere": "Identifier les facteurs de risque en relation avec l’activité physique dans une activité de travail."
+    }
+  ],
+  "situation": "Entraînement rapide sur les notions de la séance S2-02 : TMS et fatigue musculaire : d’où vient la douleur ?.",
+  "objectif_eleve": "Réviser les notions de la séance : répondre vite et juste, puis lire les corrections.",
+  "note_pour_audrey": "Entraînement généré pour la tâche Q.5 à partir de l'activité interactive de votre séance S2-02 (exercices repris tels quels, sans réécriture). Compétence : la compétence principale de la séance ; critère choisi par l'IA parmi les critères officiels de cette compétence (celui qui partage le plus de mots avec les exercices) : à vérifier.",
+  "etapes": [
+    {
+      "id": "tri-1",
+      "type": "tri",
+      "consigne": "Touche une carte puis la partie du corps qui correspond.",
+      "categories": [
+        {
+          "id": "muscle",
+          "libelle": "Muscle"
+        },
+        {
+          "id": "articulation",
+          "libelle": "Articulation"
+        },
+        {
+          "id": "tendon",
+          "libelle": "Tendon"
+        }
+      ],
+      "elements": [
+        {
+          "id": "se-contracte-pour-produire",
+          "texte": "Se contracte pour produire un mouvement",
+          "categorie": "muscle",
+          "points": {
+            "PSE-C5": 1
+          },
+          "retour": "Réponse attendue : Muscle."
+        },
+        {
+          "id": "fournit-la-force-de-l-effo",
+          "texte": "Fournit la force de l'effort",
+          "categorie": "muscle",
+          "points": {
+            "PSE-C5": 1
+          },
+          "retour": "Réponse attendue : Muscle."
+        },
+        {
+          "id": "se-fatigue-apres-un-effort",
+          "texte": "Se fatigue après un effort répété",
+          "categorie": "muscle",
+          "points": {
+            "PSE-C5": 1
+          },
+          "retour": "Réponse attendue : Muscle."
+        },
+        {
+          "id": "permet-le-mouvement-entre-",
+          "texte": "Permet le mouvement entre deux os",
+          "categorie": "articulation",
+          "points": {
+            "PSE-C5": 1
+          },
+          "retour": "Réponse attendue : Articulation."
+        },
+        {
+          "id": "zone-sollicitee-lors-d-un-",
+          "texte": "Zone sollicitée lors d'un transfert",
+          "categorie": "articulation",
+          "points": {
+            "PSE-C5": 1
+          },
+          "retour": "Réponse attendue : Articulation."
+        },
+        {
+          "id": "relie-le-muscle-a-l-os",
+          "texte": "Relie le muscle à l'os",
+          "categorie": "tendon",
+          "points": {
+            "PSE-C5": 1
+          },
+          "retour": "Réponse attendue : Tendon."
+        },
+        {
+          "id": "transmet-la-force-du-muscl",
+          "texte": "Transmet la force du muscle",
+          "categorie": "tendon",
+          "points": {
+            "PSE-C5": 1
+          },
+          "retour": "Réponse attendue : Tendon."
+        }
+      ]
+    },
+    {
+      "id": "tri-2",
+      "type": "tri",
+      "consigne": "Classe chaque signe pour savoir quand agir.",
+      "categories": [
+        {
+          "id": "fatigue-passagere",
+          "libelle": "Fatigue passagère"
+        },
+        {
+          "id": "alerte-j-agis",
+          "libelle": "Alerte : j'agis"
+        }
+      ],
+      "elements": [
+        {
+          "id": "muscles-un-peu-lourds-en-f",
+          "texte": "Muscles un peu lourds en fin de service",
+          "categorie": "fatigue-passagere",
+          "points": {
+            "PSE-C5": 1
+          },
+          "retour": "Réponse attendue : Fatigue passagère."
+        },
+        {
+          "id": "legere-raideur-qui-passe-a",
+          "texte": "Légère raideur qui passe après le repos",
+          "categorie": "fatigue-passagere",
+          "points": {
+            "PSE-C5": 1
+          },
+          "retour": "Réponse attendue : Fatigue passagère."
+        },
+        {
+          "id": "douleur-qui-revient-chaque",
+          "texte": "Douleur qui revient chaque jour",
+          "categorie": "alerte-j-agis",
+          "points": {
+            "PSE-C5": 1
+          },
+          "retour": "Réponse attendue : Alerte : j'agis."
+        },
+        {
+          "id": "douleur-des-le-debut-du-se",
+          "texte": "Douleur dès le début du service",
+          "categorie": "alerte-j-agis",
+          "points": {
+            "PSE-C5": 1
+          },
+          "retour": "Réponse attendue : Alerte : j'agis."
+        },
+        {
+          "id": "faiblesse-ou-tremblement-d",
+          "texte": "Faiblesse ou tremblement du bras",
+          "categorie": "alerte-j-agis",
+          "points": {
+            "PSE-C5": 1
+          },
+          "retour": "Réponse attendue : Alerte : j'agis."
+        },
+        {
+          "id": "douleur-qui-dure-depuis-de",
+          "texte": "Douleur qui dure depuis deux semaines",
+          "categorie": "alerte-j-agis",
+          "points": {
+            "PSE-C5": 1
+          },
+          "retour": "Réponse attendue : Alerte : j'agis."
+        }
+      ]
+    },
+    {
+      "id": "selection-3",
+      "type": "selection",
+      "consigne": "Vrai ou faux ?",
+      "question": "Cochez les phrases vraies.",
+      "elements": [
+        {
+          "id": "la-douleur-est-un-signal-d",
+          "texte": "La douleur est un signal d'alerte du corps.",
+          "attendu": true,
+          "points": {
+            "PSE-C5": 1
+          },
+          "retour": "Vrai."
+        },
+        {
+          "id": "un-tms-touche-les-muscles-",
+          "texte": "Un TMS touche les muscles, les tendons ou les articulations.",
+          "attendu": true,
+          "points": {
+            "PSE-C5": 1
+          },
+          "retour": "Vrai."
+        },
+        {
+          "id": "continuer-malgre-la-douleu",
+          "texte": "Continuer malgré la douleur fait disparaître le TMS.",
+          "attendu": false,
+          "points": {
+            "PSE-C5": 1
+          },
+          "retour": "Faux."
+        },
+        {
+          "id": "un-tms-peut-devenir-durabl",
+          "texte": "Un TMS peut devenir durable si le geste à risque se répète.",
+          "attendu": true,
+          "points": {
+            "PSE-C5": 1
+          },
+          "retour": "Vrai."
+        },
+        {
+          "id": "il-vaut-mieux-se-taire-pou",
+          "texte": "Il vaut mieux se taire pour ne pas déranger l'équipe.",
+          "attendu": false,
+          "points": {
+            "PSE-C5": 1
+          },
+          "retour": "Faux."
+        }
+      ]
+    }
+  ],
+  "debriefing": [
+    "Quelle notion de cette séance avez-vous le mieux réussie ?",
+    "Quelle notion devez-vous revoir, et dans quel document du cours ?"
+  ]
+}

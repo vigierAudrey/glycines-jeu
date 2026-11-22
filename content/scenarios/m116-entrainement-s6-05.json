@@ -1,0 +1,325 @@
+{
+  "id": "m116-entrainement-s6-05",
+  "statut": "valide",
+  "discipline": "PSE",
+  "format": "entrainement",
+  "titre": "Acheter en ligne sans se faire avoir",
+  "duree_min": 5,
+  "sequence_requise": "S6",
+  "lieu": "salon",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "PSE-D3",
+      "critere": "Expliquer les avantages et les inconvénients du e-commerce pour le consommateur."
+    }
+  ],
+  "situation": "Entraînement rapide sur les notions de la séance S6-05 : Acheter en ligne sans se faire avoir.",
+  "objectif_eleve": "Réviser les notions de la séance : répondre vite et juste, puis lire les corrections.",
+  "note_pour_audrey": "Entraînement généré pour la tâche Q.5 à partir de l'activité interactive de votre séance S6-05 (exercices repris tels quels, sans réécriture). Compétence : la compétence principale de la séance ; critère choisi par l'IA parmi les critères officiels de cette compétence (celui qui partage le plus de mots avec les exercices) : à vérifier.",
+  "etapes": [
+    {
+      "id": "association-1",
+      "type": "association",
+      "consigne": "Reliez chaque mot à sa définition.",
+      "paires": [
+        {
+          "id": "e-commerce",
+          "terme": "e-commerce",
+          "definition": "achat et vente sur internet",
+          "points": {
+            "PSE-D3": 1
+          }
+        },
+        {
+          "id": "cgv",
+          "terme": "CGV",
+          "definition": "règles de la vente",
+          "points": {
+            "PSE-D3": 1
+          }
+        },
+        {
+          "id": "delai-de-retractatio",
+          "terme": "délai de rétractation",
+          "definition": "14 jours pour annuler un achat à distance",
+          "points": {
+            "PSE-D3": 1
+          }
+        },
+        {
+          "id": "mentions-legales",
+          "terme": "mentions légales",
+          "definition": "identité du vendeur",
+          "points": {
+            "PSE-D3": 1
+          }
+        },
+        {
+          "id": "critere-de-choix",
+          "terme": "critère de choix",
+          "definition": "élément pour comparer des produits",
+          "points": {
+            "PSE-D3": 1
+          }
+        },
+        {
+          "id": "homologation",
+          "terme": "homologation",
+          "definition": "preuve qu'un casque respecte les normes",
+          "points": {
+            "PSE-D3": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "tri-2",
+      "type": "tri",
+      "consigne": "Classez chaque carte.",
+      "categories": [
+        {
+          "id": "site-fiable",
+          "libelle": "Site fiable"
+        },
+        {
+          "id": "site-douteux",
+          "libelle": "Site douteux"
+        }
+      ],
+      "elements": [
+        {
+          "id": "mentions-legales-completes",
+          "texte": "Mentions légales complètes",
+          "categorie": "site-fiable",
+          "points": {
+            "PSE-D3": 1
+          },
+          "retour": "Réponse attendue : Site fiable."
+        },
+        {
+          "id": "paiement-par-carte-securis",
+          "texte": "Paiement par carte sécurisé",
+          "categorie": "site-fiable",
+          "points": {
+            "PSE-D3": 1
+          },
+          "retour": "Réponse attendue : Site fiable."
+        },
+        {
+          "id": "avis-nombreux-et-nuances",
+          "texte": "Avis nombreux et nuancés",
+          "categorie": "site-fiable",
+          "points": {
+            "PSE-D3": 1
+          },
+          "retour": "Réponse attendue : Site fiable."
+        },
+        {
+          "id": "paiement-par-virement-uniq",
+          "texte": "Paiement par virement uniquement",
+          "categorie": "site-douteux",
+          "points": {
+            "PSE-D3": 1
+          },
+          "retour": "Réponse attendue : Site douteux."
+        },
+        {
+          "id": "prix-anormalement-bas",
+          "texte": "Prix anormalement bas",
+          "categorie": "site-douteux",
+          "points": {
+            "PSE-D3": 1
+          },
+          "retour": "Réponse attendue : Site douteux."
+        },
+        {
+          "id": "plus-que-2-en-stock",
+          "texte": "« Plus que 2 en stock ! »",
+          "categorie": "site-douteux",
+          "points": {
+            "PSE-D3": 1
+          },
+          "retour": "Réponse attendue : Site douteux."
+        },
+        {
+          "id": "avis-tous-parfaits-le-meme",
+          "texte": "Avis tous parfaits le même jour",
+          "categorie": "site-douteux",
+          "points": {
+            "PSE-D3": 1
+          },
+          "retour": "Réponse attendue : Site douteux."
+        }
+      ]
+    },
+    {
+      "id": "ordre-3",
+      "type": "ordre",
+      "consigne": "Remettez dans l'ordre.",
+      "elements": [
+        {
+          "id": "je-verifie-les-mentions-le",
+          "texte": "Je vérifie les mentions légales.",
+          "points": {
+            "PSE-D3": 1
+          }
+        },
+        {
+          "id": "je-lis-les-avis-et-les-cgv",
+          "texte": "Je lis les avis et les CGV.",
+          "points": {
+            "PSE-D3": 1
+          }
+        },
+        {
+          "id": "je-compare-avec-un-site-co",
+          "texte": "Je compare avec un site connu.",
+          "points": {
+            "PSE-D3": 1
+          }
+        },
+        {
+          "id": "je-paie-par-carte-sur-un-s",
+          "texte": "Je paie par carte sur un site sécurisé.",
+          "points": {
+            "PSE-D3": 1
+          }
+        },
+        {
+          "id": "je-garde-la-confirmation-d",
+          "texte": "Je garde la confirmation de commande.",
+          "points": {
+            "PSE-D3": 1
+          }
+        }
+      ],
+      "retour": "Ordre repris de la séance S6-05."
+    },
+    {
+      "id": "selection-4",
+      "type": "selection",
+      "consigne": "Vrai ou faux ?",
+      "question": "Cochez les phrases vraies.",
+      "elements": [
+        {
+          "id": "on-a-14-jours-apres-recept",
+          "texte": "On a 14 jours après réception pour se rétracter d'un achat en ligne.",
+          "attendu": true,
+          "points": {
+            "PSE-D3": 1
+          },
+          "retour": "Vrai : Sans se justifier."
+        },
+        {
+          "id": "payer-par-virement-a-un-in",
+          "texte": "Payer par virement à un inconnu est sûr.",
+          "attendu": false,
+          "points": {
+            "PSE-D3": 1
+          },
+          "retour": "Faux : Aucun recours possible."
+        },
+        {
+          "id": "la-retractation-s-applique",
+          "texte": "La rétractation s'applique aussi en magasin.",
+          "attendu": false,
+          "points": {
+            "PSE-D3": 1
+          },
+          "retour": "Faux : Seulement pour les achats à distance."
+        },
+        {
+          "id": "un-compte-a-rebours-sert-a",
+          "texte": "Un compte à rebours sert à empêcher de réfléchir.",
+          "attendu": true,
+          "points": {
+            "PSE-D3": 1
+          },
+          "retour": "Vrai : C'est une urgence artificielle."
+        },
+        {
+          "id": "les-cgv-se-lisent-avant-de",
+          "texte": "Les CGV se lisent avant de payer.",
+          "attendu": true,
+          "points": {
+            "PSE-D3": 1
+          },
+          "retour": "Vrai : Elles fixent les règles de la vente."
+        }
+      ]
+    },
+    {
+      "id": "qcm-5",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Délai de rétractation pour un achat en ligne ?",
+      "options": [
+        {
+          "texte": "1 an"
+        },
+        {
+          "texte": "3 jours"
+        },
+        {
+          "texte": "14 jours",
+          "juste": true
+        }
+      ],
+      "points": {
+        "PSE-D3": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S6-05 si besoin."
+    },
+    {
+      "id": "qcm-6",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Un signe d'arnaque ?",
+      "options": [
+        {
+          "texte": "Paiement par carte sécurisé"
+        },
+        {
+          "texte": "Mentions légales complètes"
+        },
+        {
+          "texte": "Paiement par virement exigé",
+          "juste": true
+        }
+      ],
+      "points": {
+        "PSE-D3": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S6-05 si besoin."
+    },
+    {
+      "id": "qcm-7",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Pour un casque, le premier critère est…",
+      "options": [
+        {
+          "texte": "la sécurité",
+          "juste": true
+        },
+        {
+          "texte": "la couleur"
+        },
+        {
+          "texte": "le prix"
+        }
+      ],
+      "points": {
+        "PSE-D3": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S6-05 si besoin."
+    }
+  ],
+  "debriefing": [
+    "Quelle notion de cette séance avez-vous le mieux réussie ?",
+    "Quelle notion devez-vous revoir, et dans quel document du cours ?"
+  ]
+}

@@ -1,0 +1,335 @@
+{
+  "id": "m100-entrainement-s3-01",
+  "statut": "valide",
+  "discipline": "PSE",
+  "format": "entrainement",
+  "titre": "Le risque biologique, risque majeur du secteur",
+  "duree_min": 5,
+  "sequence_requise": "S3",
+  "lieu": "salon",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "PSE-C4",
+      "critere": "Appliquer une démarche d’analyse simple ou à l’aide d’outils méthodologiques au risque du secteur professionnel lors d’une activité au poste de travail."
+    }
+  ],
+  "situation": "Entraînement rapide sur les notions de la séance S3-01 : Le risque biologique, risque majeur du secteur.",
+  "objectif_eleve": "Réviser les notions de la séance : répondre vite et juste, puis lire les corrections.",
+  "note_pour_audrey": "Entraînement généré pour la tâche Q.5 à partir de l'activité interactive de votre séance S3-01 (exercices repris tels quels, sans réécriture). Compétence : la compétence principale de la séance ; critère choisi par l'IA parmi les critères officiels de cette compétence (celui qui partage le plus de mots avec les exercices) : à vérifier.",
+  "etapes": [
+    {
+      "id": "association-1",
+      "type": "association",
+      "consigne": "Reliez chaque mot à sa définition.",
+      "paires": [
+        {
+          "id": "reperer",
+          "terme": "Repérer",
+          "definition": "examiner avec précision, puis lister",
+          "points": {
+            "PSE-C4": 1
+          }
+        },
+        {
+          "id": "citer",
+          "terme": "Citer",
+          "definition": "nommer précisément des éléments sans explication",
+          "points": {
+            "PSE-C4": 1
+          }
+        },
+        {
+          "id": "classer",
+          "terme": "Classer",
+          "definition": "ranger des éléments dans l'ordre ou la manière indiqué(e)",
+          "points": {
+            "PSE-C4": 1
+          }
+        },
+        {
+          "id": "identifier",
+          "terme": "Identifier",
+          "definition": "reconnaître et nommer",
+          "points": {
+            "PSE-C4": 1
+          }
+        },
+        {
+          "id": "comparer",
+          "terme": "Comparer",
+          "definition": "présenter les points communs et les différences",
+          "points": {
+            "PSE-C4": 1
+          }
+        },
+        {
+          "id": "expliquer",
+          "terme": "Expliquer",
+          "definition": "rendre clair et compréhensible par une argumentation",
+          "points": {
+            "PSE-C4": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "tri-2",
+      "type": "tri",
+      "consigne": "Classez chaque carte.",
+      "categories": [
+        {
+          "id": "danger",
+          "libelle": "Danger"
+        },
+        {
+          "id": "situation-dangereuse",
+          "libelle": "Situation dangereuse"
+        },
+        {
+          "id": "evenement-dangereux",
+          "libelle": "Événement dangereux"
+        },
+        {
+          "id": "dommage",
+          "libelle": "Dommage"
+        }
+      ],
+      "elements": [
+        {
+          "id": "virus-de-la-gastro-enterit",
+          "texte": "Virus de la gastro-entérite dans les selles",
+          "categorie": "danger",
+          "points": {
+            "PSE-C4": 1
+          },
+          "retour": "Réponse attendue : Danger."
+        },
+        {
+          "id": "bacteries-sur-le-linge-sou",
+          "texte": "Bactéries sur le linge souillé",
+          "categorie": "danger",
+          "points": {
+            "PSE-C4": 1
+          },
+          "retour": "Réponse attendue : Danger."
+        },
+        {
+          "id": "faire-un-change-sans-gants",
+          "texte": "Faire un change sans gants",
+          "categorie": "situation-dangereuse",
+          "points": {
+            "PSE-C4": 1
+          },
+          "retour": "Réponse attendue : Situation dangereuse."
+        },
+        {
+          "id": "trier-le-linge-sale-a-main",
+          "texte": "Trier le linge sale à mains nues",
+          "categorie": "situation-dangereuse",
+          "points": {
+            "PSE-C4": 1
+          },
+          "retour": "Réponse attendue : Situation dangereuse."
+        },
+        {
+          "id": "se-frotter-les-yeux-avec-d",
+          "texte": "Se frotter les yeux avec des mains contaminées",
+          "categorie": "evenement-dangereux",
+          "points": {
+            "PSE-C4": 1
+          },
+          "retour": "Réponse attendue : Événement dangereux."
+        },
+        {
+          "id": "manger-sans-s-etre-lave-le",
+          "texte": "Manger sans s'être lavé les mains",
+          "categorie": "evenement-dangereux",
+          "points": {
+            "PSE-C4": 1
+          },
+          "retour": "Réponse attendue : Événement dangereux."
+        },
+        {
+          "id": "gastro-enterite-et-arret-d",
+          "texte": "Gastro-entérite et arrêt de travail",
+          "categorie": "dommage",
+          "points": {
+            "PSE-C4": 1
+          },
+          "retour": "Réponse attendue : Dommage."
+        },
+        {
+          "id": "conjonctivite-infection-de",
+          "texte": "Conjonctivite (infection de l'œil)",
+          "categorie": "dommage",
+          "points": {
+            "PSE-C4": 1
+          },
+          "retour": "Réponse attendue : Dommage."
+        }
+      ]
+    },
+    {
+      "id": "ordre-3",
+      "type": "ordre",
+      "consigne": "Remettez dans l'ordre.",
+      "elements": [
+        {
+          "id": "le-virus-est-present-dans-",
+          "texte": "Le virus est présent dans les selles de Mme Rose.",
+          "points": {
+            "PSE-C4": 1
+          }
+        },
+        {
+          "id": "je-fais-le-change-sans-gan",
+          "texte": "Je fais le change sans gants.",
+          "points": {
+            "PSE-C4": 1
+          }
+        },
+        {
+          "id": "mes-mains-contaminees-touc",
+          "texte": "Mes mains contaminées touchent ma bouche.",
+          "points": {
+            "PSE-C4": 1
+          }
+        },
+        {
+          "id": "je-contracte-la-gastro-ent",
+          "texte": "Je contracte la gastro-entérite.",
+          "points": {
+            "PSE-C4": 1
+          }
+        }
+      ],
+      "retour": "Ordre repris de la séance S3-01."
+    },
+    {
+      "id": "selection-4",
+      "type": "selection",
+      "consigne": "Vrai ou faux ?",
+      "question": "Cochez les phrases vraies.",
+      "elements": [
+        {
+          "id": "le-secteur-de-l-aide-et-de",
+          "texte": "Le secteur de l'aide et des soins à la personne compte plus de 16 % des accidents du travail.",
+          "attendu": true,
+          "points": {
+            "PSE-C4": 1
+          },
+          "retour": "Vrai : Données 2019 de l'Assurance Maladie."
+        },
+        {
+          "id": "le-risque-biologique-est-l",
+          "texte": "Le risque biologique est le seul risque du secteur.",
+          "attendu": false,
+          "points": {
+            "PSE-C4": 1
+          },
+          "retour": "Faux : L'activité physique, les chutes et les risques psychosociaux en font aussi partie."
+        },
+        {
+          "id": "un-virus-est-un-agent-biol",
+          "texte": "Un virus est un agent biologique.",
+          "attendu": true,
+          "points": {
+            "PSE-C4": 1
+          },
+          "retour": "Vrai : Comme les bactéries et les champignons."
+        },
+        {
+          "id": "le-danger-et-le-risque-c-e",
+          "texte": "Le danger et le risque, c'est la même chose.",
+          "attendu": false,
+          "points": {
+            "PSE-C4": 1
+          },
+          "retour": "Faux : Le risque est la possibilité que le danger provoque un dommage."
+        },
+        {
+          "id": "sans-situation-dangereuse-",
+          "texte": "Sans situation dangereuse, le dommage ne peut pas se produire.",
+          "attendu": true,
+          "points": {
+            "PSE-C4": 1
+          },
+          "retour": "Vrai : C'est là que la prévention agit."
+        }
+      ]
+    },
+    {
+      "id": "qcm-5",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Quel document liste les risques de chaque poste ?",
+      "options": [
+        {
+          "texte": "Le DUERP",
+          "juste": true
+        },
+        {
+          "texte": "La fiche de paie"
+        },
+        {
+          "texte": "Le contrat de travail"
+        }
+      ],
+      "points": {
+        "PSE-C4": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S3-01 si besoin."
+    },
+    {
+      "id": "qcm-6",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Un agent biologique est…",
+      "options": [
+        {
+          "texte": "un être vivant microscopique",
+          "juste": true
+        },
+        {
+          "texte": "un produit chimique"
+        },
+        {
+          "texte": "une machine"
+        }
+      ],
+      "points": {
+        "PSE-C4": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S3-01 si besoin."
+    },
+    {
+      "id": "qcm-7",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Faire un change sans gants, c'est…",
+      "options": [
+        {
+          "texte": "un danger"
+        },
+        {
+          "texte": "une situation dangereuse",
+          "juste": true
+        },
+        {
+          "texte": "un dommage"
+        }
+      ],
+      "points": {
+        "PSE-C4": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S3-01 si besoin."
+    }
+  ],
+  "debriefing": [
+    "Quelle notion de cette séance avez-vous le mieux réussie ?",
+    "Quelle notion devez-vous revoir, et dans quel document du cours ?"
+  ]
+}

@@ -1,0 +1,323 @@
+{
+  "id": "m111-entrainement-s5-05",
+  "statut": "valide",
+  "discipline": "PSE",
+  "format": "entrainement",
+  "titre": "Choisir malin avec des horaires décalés, pour moi et pour les résidents",
+  "duree_min": 5,
+  "sequence_requise": "S5",
+  "lieu": "salon",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "PSE-A7",
+      "critere": "Indiquer les principes d’une alimentation équilibrée."
+    }
+  ],
+  "situation": "Entraînement rapide sur les notions de la séance S5-05 : Choisir malin avec des horaires décalés, pour moi et pour les résidents.",
+  "objectif_eleve": "Réviser les notions de la séance : répondre vite et juste, puis lire les corrections.",
+  "note_pour_audrey": "Entraînement généré pour la tâche Q.5 à partir de l'activité interactive de votre séance S5-05 (exercices repris tels quels, sans réécriture). Compétence : la compétence principale de la séance ; critère choisi par l'IA parmi les critères officiels de cette compétence (celui qui partage le plus de mots avec les exercices) : à vérifier.",
+  "etapes": [
+    {
+      "id": "association-1",
+      "type": "association",
+      "consigne": "Reliez chaque mot à sa définition.",
+      "paires": [
+        {
+          "id": "indiquer",
+          "terme": "Indiquer",
+          "definition": "donner un renseignement",
+          "points": {
+            "PSE-A7": 1
+          }
+        },
+        {
+          "id": "identifier",
+          "terme": "Identifier",
+          "definition": "reconnaître et nommer",
+          "points": {
+            "PSE-A7": 1
+          }
+        },
+        {
+          "id": "comparer",
+          "terme": "Comparer",
+          "definition": "présenter les points communs et les différences entre plusieurs éléments",
+          "points": {
+            "PSE-A7": 1
+          }
+        },
+        {
+          "id": "formuler",
+          "terme": "Formuler",
+          "definition": "rédiger, exprimer le résultat dans le contexte de l'exercice",
+          "points": {
+            "PSE-A7": 1
+          }
+        },
+        {
+          "id": "expliquer",
+          "terme": "Expliquer",
+          "definition": "rendre clair et compréhensible par une argumentation",
+          "points": {
+            "PSE-A7": 1
+          }
+        },
+        {
+          "id": "justifier",
+          "terme": "Justifier",
+          "definition": "trouver dans ses connaissances ou dans des documents les éléments qui montrent la réalité d'une affirmation",
+          "points": {
+            "PSE-A7": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "tri-2",
+      "type": "tri",
+      "consigne": "Classez chaque carte.",
+      "categories": [
+        {
+          "id": "choix-adapte",
+          "libelle": "Choix adapté"
+        },
+        {
+          "id": "choix-non-adapte",
+          "libelle": "Choix non adapté"
+        }
+      ],
+      "elements": [
+        {
+          "id": "riz-complet-poulet-legumes",
+          "texte": "Riz complet, poulet, légumes, eau",
+          "categorie": "choix-adapte",
+          "points": {
+            "PSE-A7": 1
+          },
+          "retour": "Réponse attendue : Choix adapté."
+        },
+        {
+          "id": "fruit-et-yaourt-a-la-pause",
+          "texte": "Fruit et yaourt à la pause",
+          "categorie": "choix-adapte",
+          "points": {
+            "PSE-A7": 1
+          },
+          "retour": "Réponse attendue : Choix adapté."
+        },
+        {
+          "id": "pain-complet-et-fromage",
+          "texte": "Pain complet et fromage",
+          "categorie": "choix-adapte",
+          "points": {
+            "PSE-A7": 1
+          },
+          "retour": "Réponse attendue : Choix adapté."
+        },
+        {
+          "id": "lasagnes-frites-mousse-sod",
+          "texte": "Lasagnes, frites, mousse, soda",
+          "categorie": "choix-non-adapte",
+          "points": {
+            "PSE-A7": 1
+          },
+          "retour": "Réponse attendue : Choix non adapté."
+        },
+        {
+          "id": "boisson-energisante",
+          "texte": "Boisson énergisante",
+          "categorie": "choix-non-adapte",
+          "points": {
+            "PSE-A7": 1
+          },
+          "retour": "Réponse attendue : Choix non adapté."
+        },
+        {
+          "id": "sandwich-charcuterie-et-ch",
+          "texte": "Sandwich charcuterie et chips",
+          "categorie": "choix-non-adapte",
+          "points": {
+            "PSE-A7": 1
+          },
+          "retour": "Réponse attendue : Choix non adapté."
+        }
+      ]
+    },
+    {
+      "id": "ordre-3",
+      "type": "ordre",
+      "consigne": "Remettez dans l'ordre.",
+      "elements": [
+        {
+          "id": "lever-et-petit-dejeuner-a-",
+          "texte": "Lever et petit-déjeuner à 5 h.",
+          "points": {
+            "PSE-A7": 1
+          }
+        },
+        {
+          "id": "collation-a-la-pause-de-9-",
+          "texte": "Collation à la pause de 9 h 45.",
+          "points": {
+            "PSE-A7": 1
+          }
+        },
+        {
+          "id": "dejeuner-equilibre-a-14-h",
+          "texte": "Déjeuner équilibré à 14 h.",
+          "points": {
+            "PSE-A7": 1
+          }
+        },
+        {
+          "id": "sieste-courte-vers-15-h",
+          "texte": "Sieste courte vers 15 h.",
+          "points": {
+            "PSE-A7": 1
+          }
+        },
+        {
+          "id": "diner-leger-a-19-h-30",
+          "texte": "Dîner léger à 19 h 30.",
+          "points": {
+            "PSE-A7": 1
+          }
+        },
+        {
+          "id": "coucher-vers-21-h-45",
+          "texte": "Coucher vers 21 h 45.",
+          "points": {
+            "PSE-A7": 1
+          }
+        }
+      ],
+      "retour": "Ordre repris de la séance S5-05."
+    },
+    {
+      "id": "selection-4",
+      "type": "selection",
+      "consigne": "Vrai ou faux ?",
+      "question": "Cochez les phrases vraies.",
+      "elements": [
+        {
+          "id": "la-perte-de-poids-d-un-res",
+          "texte": "La perte de poids d'un résident est un signal à transmettre.",
+          "attendu": true,
+          "points": {
+            "PSE-A7": 1
+          },
+          "retour": "Vrai : Elle peut annoncer une dénutrition."
+        },
+        {
+          "id": "un-menu-tres-gras-est-idea",
+          "texte": "Un menu très gras est idéal avant un poste du soir.",
+          "attendu": false,
+          "points": {
+            "PSE-A7": 1
+          },
+          "retour": "Faux : Il favorise la somnolence."
+        },
+        {
+          "id": "une-collation-est-prevue-e",
+          "texte": "Une collation est prévue et équilibrée.",
+          "attendu": true,
+          "points": {
+            "PSE-A7": 1
+          },
+          "retour": "Vrai : Contrairement au grignotage."
+        },
+        {
+          "id": "il-faut-toujours-imposer-l",
+          "texte": "Il faut toujours imposer l'heure du dîner au résident.",
+          "attendu": false,
+          "points": {
+            "PSE-A7": 1
+          },
+          "retour": "Faux : Adapter au rythme de la personne est une prévention."
+        },
+        {
+          "id": "repas-et-sommeil-s-organis",
+          "texte": "Repas et sommeil s'organisent ensemble en horaires décalés.",
+          "attendu": true,
+          "points": {
+            "PSE-A7": 1
+          },
+          "retour": "Vrai : L'un influence l'autre."
+        }
+      ]
+    },
+    {
+      "id": "qcm-5",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Quel menu choisir avant un poste du soir ?",
+      "options": [
+        {
+          "texte": "Lasagnes, frites, soda"
+        },
+        {
+          "texte": "Chips et boisson énergisante"
+        },
+        {
+          "texte": "Riz complet, poulet, légumes, eau",
+          "juste": true
+        }
+      ],
+      "points": {
+        "PSE-A7": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S5-05 si besoin."
+    },
+    {
+      "id": "qcm-6",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Pourquoi éviter le repas trop gras avant un poste ?",
+      "options": [
+        {
+          "texte": "Il rend plus fort"
+        },
+        {
+          "texte": "Il donne envie de dormir",
+          "juste": true
+        },
+        {
+          "texte": "Il n'a aucun effet"
+        }
+      ],
+      "points": {
+        "PSE-A7": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S5-05 si besoin."
+    },
+    {
+      "id": "qcm-7",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Un signe d'alerte de dénutrition ?",
+      "options": [
+        {
+          "texte": "Bon appétit"
+        },
+        {
+          "texte": "Sommeil calme"
+        },
+        {
+          "texte": "Perte de poids",
+          "juste": true
+        }
+      ],
+      "points": {
+        "PSE-A7": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S5-05 si besoin."
+    }
+  ],
+  "debriefing": [
+    "Quelle notion de cette séance avez-vous le mieux réussie ?",
+    "Quelle notion devez-vous revoir, et dans quel document du cours ?"
+  ]
+}

@@ -1,0 +1,347 @@
+{
+  "id": "m108-entrainement-s5-02",
+  "statut": "valide",
+  "discipline": "PSE",
+  "format": "entrainement",
+  "titre": "Manquer de sommeil : quels risques pour moi et pour les résidents ?",
+  "duree_min": 5,
+  "sequence_requise": "S5",
+  "lieu": "salon",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "PSE-A2",
+      "critere": "Identifier les effets et les conséquences professionnelles et sociales du manque de sommeil."
+    }
+  ],
+  "situation": "Entraînement rapide sur les notions de la séance S5-02 : Manquer de sommeil : quels risques pour moi et pour les résidents ?.",
+  "objectif_eleve": "Réviser les notions de la séance : répondre vite et juste, puis lire les corrections.",
+  "note_pour_audrey": "Entraînement généré pour la tâche Q.5 à partir de l'activité interactive de votre séance S5-02 (exercices repris tels quels, sans réécriture). Compétence : la compétence principale de la séance ; critère choisi par l'IA parmi les critères officiels de cette compétence (celui qui partage le plus de mots avec les exercices) : à vérifier.",
+  "etapes": [
+    {
+      "id": "association-1",
+      "type": "association",
+      "consigne": "Reliez chaque mot à sa définition.",
+      "paires": [
+        {
+          "id": "dette-de-sommeil",
+          "terme": "dette de sommeil",
+          "definition": "manque de sommeil accumulé",
+          "points": {
+            "PSE-A2": 1
+          }
+        },
+        {
+          "id": "somnolence",
+          "terme": "somnolence",
+          "definition": "envie de dormir dans la journée",
+          "points": {
+            "PSE-A2": 1
+          }
+        },
+        {
+          "id": "travail-poste",
+          "terme": "travail posté",
+          "definition": "postes qui se relaient : matin, soir, nuit",
+          "points": {
+            "PSE-A2": 1
+          }
+        },
+        {
+          "id": "hygiene-du-sommeil",
+          "terme": "hygiène du sommeil",
+          "definition": "habitudes qui favorisent un sommeil récupérateur",
+          "points": {
+            "PSE-A2": 1
+          }
+        },
+        {
+          "id": "prevention-individue",
+          "terme": "prévention individuelle",
+          "definition": "ce que chacun fait pour protéger sa santé",
+          "points": {
+            "PSE-A2": 1
+          }
+        },
+        {
+          "id": "melatonine",
+          "terme": "mélatonine",
+          "definition": "hormone freinée par la lumière des écrans",
+          "points": {
+            "PSE-A2": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "tri-2",
+      "type": "tri",
+      "consigne": "Classez chaque carte.",
+      "categories": [
+        {
+          "id": "ma-sante",
+          "libelle": "Ma santé"
+        },
+        {
+          "id": "mon-travail",
+          "libelle": "Mon travail"
+        },
+        {
+          "id": "les-residents-et-les",
+          "libelle": "Les résidents et les autres"
+        }
+      ],
+      "elements": [
+        {
+          "id": "defenses-affaiblies",
+          "texte": "Défenses affaiblies",
+          "categorie": "ma-sante",
+          "points": {
+            "PSE-A2": 1
+          },
+          "retour": "Réponse attendue : Ma santé."
+        },
+        {
+          "id": "irritabilite",
+          "texte": "Irritabilité",
+          "categorie": "ma-sante",
+          "points": {
+            "PSE-A2": 1
+          },
+          "retour": "Réponse attendue : Ma santé."
+        },
+        {
+          "id": "prise-de-poids-favorisee",
+          "texte": "Prise de poids favorisée",
+          "categorie": "ma-sante",
+          "points": {
+            "PSE-A2": 1
+          },
+          "retour": "Réponse attendue : Ma santé."
+        },
+        {
+          "id": "erreur-de-transmission",
+          "texte": "Erreur de transmission",
+          "categorie": "mon-travail",
+          "points": {
+            "PSE-A2": 1
+          },
+          "retour": "Réponse attendue : Mon travail."
+        },
+        {
+          "id": "gestes-moins-surs-pendant-",
+          "texte": "Gestes moins sûrs pendant un transfert",
+          "categorie": "mon-travail",
+          "points": {
+            "PSE-A2": 1
+          },
+          "retour": "Réponse attendue : Mon travail."
+        },
+        {
+          "id": "somnolence-au-volant",
+          "texte": "Somnolence au volant",
+          "categorie": "mon-travail",
+          "points": {
+            "PSE-A2": 1
+          },
+          "retour": "Réponse attendue : Mon travail."
+        },
+        {
+          "id": "moins-de-patience-avec-m-a",
+          "texte": "Moins de patience avec M. André",
+          "categorie": "les-residents-et-les",
+          "points": {
+            "PSE-A2": 1
+          },
+          "retour": "Réponse attendue : Les résidents et les autres."
+        },
+        {
+          "id": "risque-de-chute-d-un-resid",
+          "texte": "Risque de chute d'un résident",
+          "categorie": "les-residents-et-les",
+          "points": {
+            "PSE-A2": 1
+          },
+          "retour": "Réponse attendue : Les résidents et les autres."
+        },
+        {
+          "id": "tensions-dans-l-equipe",
+          "texte": "Tensions dans l'équipe",
+          "categorie": "les-residents-et-les",
+          "points": {
+            "PSE-A2": 1
+          },
+          "retour": "Réponse attendue : Les résidents et les autres."
+        }
+      ]
+    },
+    {
+      "id": "ordre-3",
+      "type": "ordre",
+      "consigne": "Remettez dans l'ordre.",
+      "elements": [
+        {
+          "id": "poste-du-soir-jusqu-a-21-h",
+          "texte": "Poste du soir jusqu'à 21 h 30.",
+          "points": {
+            "PSE-A2": 1
+          }
+        },
+        {
+          "id": "coucher-tardif-vers-1-h",
+          "texte": "Coucher tardif vers 1 h.",
+          "points": {
+            "PSE-A2": 1
+          }
+        },
+        {
+          "id": "lever-a-4-h-45",
+          "texte": "Lever à 4 h 45.",
+          "points": {
+            "PSE-A2": 1
+          }
+        },
+        {
+          "id": "nuit-de-3-h-30-dette-de-so",
+          "texte": "Nuit de 3 h 30 : dette de sommeil.",
+          "points": {
+            "PSE-A2": 1
+          }
+        },
+        {
+          "id": "somnolence-et-risque-d-err",
+          "texte": "Somnolence et risque d'erreur au poste du matin.",
+          "points": {
+            "PSE-A2": 1
+          }
+        }
+      ],
+      "retour": "Ordre repris de la séance S5-02."
+    },
+    {
+      "id": "selection-4",
+      "type": "selection",
+      "consigne": "Vrai ou faux ?",
+      "question": "Cochez les phrases vraies.",
+      "elements": [
+        {
+          "id": "un-adulte-a-besoin-d-au-mo",
+          "texte": "Un adulte a besoin d'au moins 7 heures de sommeil, en général.",
+          "attendu": true,
+          "points": {
+            "PSE-A2": 1
+          },
+          "retour": "Vrai : Repère de l'Inserm."
+        },
+        {
+          "id": "la-somnolence-augmente-le-",
+          "texte": "La somnolence augmente le risque d'accident de trajet.",
+          "attendu": true,
+          "points": {
+            "PSE-A2": 1
+          },
+          "retour": "Vrai : Elle diminue la vigilance."
+        },
+        {
+          "id": "le-cafe-le-soir-aide-a-mie",
+          "texte": "Le café le soir aide à mieux dormir.",
+          "attendu": false,
+          "points": {
+            "PSE-A2": 1
+          },
+          "retour": "Faux : La caféine perturbe le sommeil."
+        },
+        {
+          "id": "le-planning-peut-aider-a-e",
+          "texte": "Le planning peut aider à éviter l'enchaînement soir puis matin.",
+          "attendu": true,
+          "points": {
+            "PSE-A2": 1
+          },
+          "retour": "Vrai : C'est une mesure d'organisation."
+        },
+        {
+          "id": "une-sieste-de-deux-heures-",
+          "texte": "Une sieste de deux heures avant de dormir est conseillée.",
+          "attendu": false,
+          "points": {
+            "PSE-A2": 1
+          },
+          "retour": "Faux : Une sieste courte, de 20 minutes."
+        }
+      ]
+    },
+    {
+      "id": "qcm-5",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Qu'est-ce que la dette de sommeil ?",
+      "options": [
+        {
+          "texte": "Un crédit bancaire"
+        },
+        {
+          "texte": "Un manque de sommeil accumulé",
+          "juste": true
+        },
+        {
+          "texte": "Un rêve"
+        }
+      ],
+      "points": {
+        "PSE-A2": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S5-02 si besoin."
+    },
+    {
+      "id": "qcm-6",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Quel enchaînement est le plus dangereux ?",
+      "options": [
+        {
+          "texte": "Poste du matin puis repos"
+        },
+        {
+          "texte": "Deux jours de repos"
+        },
+        {
+          "texte": "Poste du soir puis poste du matin",
+          "juste": true
+        }
+      ],
+      "points": {
+        "PSE-A2": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S5-02 si besoin."
+    },
+    {
+      "id": "qcm-7",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Quelle mesure relève de l'hygiène du sommeil ?",
+      "options": [
+        {
+          "texte": "Couper les écrans 1 h avant le coucher",
+          "juste": true
+        },
+        {
+          "texte": "Regarder une série au lit"
+        },
+        {
+          "texte": "Boire du café à 20 h"
+        }
+      ],
+      "points": {
+        "PSE-A2": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S5-02 si besoin."
+    }
+  ],
+  "debriefing": [
+    "Quelle notion de cette séance avez-vous le mieux réussie ?",
+    "Quelle notion devez-vous revoir, et dans quel document du cours ?"
+  ]
+}

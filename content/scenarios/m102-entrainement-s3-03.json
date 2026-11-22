@@ -1,0 +1,384 @@
+{
+  "id": "m102-entrainement-s3-03",
+  "statut": "valide",
+  "discipline": "PSE",
+  "format": "entrainement",
+  "titre": "Je me protège et je protège les résidents",
+  "duree_min": 5,
+  "sequence_requise": "S3",
+  "lieu": "salon",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "PSE-C4",
+      "critere": "Proposer des mesures de protection collective et individuelle à partir d’une sélection."
+    }
+  ],
+  "situation": "Entraînement rapide sur les notions de la séance S3-03 : Je me protège et je protège les résidents.",
+  "objectif_eleve": "Réviser les notions de la séance : répondre vite et juste, puis lire les corrections.",
+  "note_pour_audrey": "Entraînement généré pour la tâche Q.5 à partir de l'activité interactive de votre séance S3-03 (exercices repris tels quels, sans réécriture). Compétence : la compétence principale de la séance ; critère choisi par l'IA parmi les critères officiels de cette compétence (celui qui partage le plus de mots avec les exercices) : à vérifier.",
+  "etapes": [
+    {
+      "id": "association-1",
+      "type": "association",
+      "consigne": "Reliez chaque mot à sa définition.",
+      "paires": [
+        {
+          "id": "protection-collectiv",
+          "terme": "protection collective",
+          "definition": "mesure qui protège l'ensemble des personnes en même temps",
+          "points": {
+            "PSE-C4": 1
+          }
+        },
+        {
+          "id": "protection-individue",
+          "terme": "protection individuelle",
+          "definition": "équipement porté par une seule personne",
+          "points": {
+            "PSE-C4": 1
+          }
+        },
+        {
+          "id": "isolement",
+          "terme": "isolement",
+          "definition": "limiter les contacts d'un résident malade",
+          "points": {
+            "PSE-C4": 1
+          }
+        },
+        {
+          "id": "bionettoyage",
+          "terme": "bionettoyage",
+          "definition": "nettoyage puis désinfection des surfaces",
+          "points": {
+            "PSE-C4": 1
+          }
+        },
+        {
+          "id": "friction-hydroalcool",
+          "terme": "friction hydroalcoolique",
+          "definition": "désinfection des mains en 7 étapes",
+          "points": {
+            "PSE-C4": 1
+          }
+        },
+        {
+          "id": "surblouse",
+          "terme": "surblouse",
+          "definition": "vêtement de protection porté pendant un soin",
+          "points": {
+            "PSE-C4": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "tri-2",
+      "type": "tri",
+      "consigne": "Classez chaque carte.",
+      "categories": [
+        {
+          "id": "protection-collectiv",
+          "libelle": "Protection collective"
+        },
+        {
+          "id": "protection-individue",
+          "libelle": "Protection individuelle"
+        }
+      ],
+      "elements": [
+        {
+          "id": "isolement-des-residents-ma",
+          "texte": "Isolement des résidents malades",
+          "categorie": "protection-collectiv",
+          "points": {
+            "PSE-C4": 1
+          },
+          "retour": "Réponse attendue : Protection collective."
+        },
+        {
+          "id": "circuits-linge-propre-et-l",
+          "texte": "Circuits linge propre et linge sale séparés",
+          "categorie": "protection-collectiv",
+          "points": {
+            "PSE-C4": 1
+          },
+          "retour": "Réponse attendue : Protection collective."
+        },
+        {
+          "id": "bionettoyage-des-poignees-",
+          "texte": "Bionettoyage des poignées et des rampes",
+          "categorie": "protection-collectiv",
+          "points": {
+            "PSE-C4": 1
+          },
+          "retour": "Réponse attendue : Protection collective."
+        },
+        {
+          "id": "aeration-des-locaux",
+          "texte": "Aération des locaux",
+          "categorie": "protection-collectiv",
+          "points": {
+            "PSE-C4": 1
+          },
+          "retour": "Réponse attendue : Protection collective."
+        },
+        {
+          "id": "protocole-d-hygiene-affich",
+          "texte": "Protocole d'hygiène affiché",
+          "categorie": "protection-collectiv",
+          "points": {
+            "PSE-C4": 1
+          },
+          "retour": "Réponse attendue : Protection collective."
+        },
+        {
+          "id": "report-des-visites",
+          "texte": "Report des visites",
+          "categorie": "protection-collectiv",
+          "points": {
+            "PSE-C4": 1
+          },
+          "retour": "Réponse attendue : Protection collective."
+        },
+        {
+          "id": "gants-a-usage-unique",
+          "texte": "Gants à usage unique",
+          "categorie": "protection-individue",
+          "points": {
+            "PSE-C4": 1
+          },
+          "retour": "Réponse attendue : Protection individuelle."
+        },
+        {
+          "id": "masque",
+          "texte": "Masque",
+          "categorie": "protection-individue",
+          "points": {
+            "PSE-C4": 1
+          },
+          "retour": "Réponse attendue : Protection individuelle."
+        },
+        {
+          "id": "surblouse-pour-les-changes",
+          "texte": "Surblouse pour les changes",
+          "categorie": "protection-individue",
+          "points": {
+            "PSE-C4": 1
+          },
+          "retour": "Réponse attendue : Protection individuelle."
+        },
+        {
+          "id": "friction-hydroalcoolique",
+          "texte": "Friction hydroalcoolique",
+          "categorie": "protection-individue",
+          "points": {
+            "PSE-C4": 1
+          },
+          "retour": "Réponse attendue : Protection individuelle."
+        },
+        {
+          "id": "lavage-des-mains",
+          "texte": "Lavage des mains",
+          "categorie": "protection-individue",
+          "points": {
+            "PSE-C4": 1
+          },
+          "retour": "Réponse attendue : Protection individuelle."
+        },
+        {
+          "id": "tenue-changee-chaque-jour",
+          "texte": "Tenue changée chaque jour",
+          "categorie": "protection-individue",
+          "points": {
+            "PSE-C4": 1
+          },
+          "retour": "Réponse attendue : Protection individuelle."
+        }
+      ]
+    },
+    {
+      "id": "ordre-3",
+      "type": "ordre",
+      "consigne": "Remettez dans l'ordre.",
+      "elements": [
+        {
+          "id": "paume-contre-paume",
+          "texte": "Paume contre paume",
+          "points": {
+            "PSE-C4": 1
+          }
+        },
+        {
+          "id": "dos-des-mains",
+          "texte": "Dos des mains",
+          "points": {
+            "PSE-C4": 1
+          }
+        },
+        {
+          "id": "entre-les-doigts",
+          "texte": "Entre les doigts",
+          "points": {
+            "PSE-C4": 1
+          }
+        },
+        {
+          "id": "dos-des-doigts",
+          "texte": "Dos des doigts",
+          "points": {
+            "PSE-C4": 1
+          }
+        },
+        {
+          "id": "pouces",
+          "texte": "Pouces",
+          "points": {
+            "PSE-C4": 1
+          }
+        },
+        {
+          "id": "bouts-des-doigts-et-ongles",
+          "texte": "Bouts des doigts et ongles",
+          "points": {
+            "PSE-C4": 1
+          }
+        },
+        {
+          "id": "poignets",
+          "texte": "Poignets",
+          "points": {
+            "PSE-C4": 1
+          }
+        }
+      ],
+      "retour": "Ordre repris de la séance S3-03."
+    },
+    {
+      "id": "selection-4",
+      "type": "selection",
+      "consigne": "Vrai ou faux ?",
+      "question": "Cochez les phrases vraies.",
+      "elements": [
+        {
+          "id": "la-protection-collective-p",
+          "texte": "La protection collective passe avant la protection individuelle.",
+          "attendu": true,
+          "points": {
+            "PSE-C4": 1
+          },
+          "retour": "Vrai : Code du travail, art. L. 4121-2."
+        },
+        {
+          "id": "les-gants-dispensent-de-l-",
+          "texte": "Les gants dispensent de l'hygiène des mains.",
+          "attendu": false,
+          "points": {
+            "PSE-C4": 1
+          },
+          "retour": "Faux : Après le retrait des gants, il faut se désinfecter les mains."
+        },
+        {
+          "id": "la-friction-hydroalcooliqu",
+          "texte": "La friction hydroalcoolique se fait sur des mains souillées.",
+          "attendu": false,
+          "points": {
+            "PSE-C4": 1
+          },
+          "retour": "Faux : Mains souillées : lavage à l'eau et au savon."
+        },
+        {
+          "id": "les-pouces-sont-une-zone-s",
+          "texte": "Les pouces sont une zone souvent oubliée.",
+          "attendu": true,
+          "points": {
+            "PSE-C4": 1
+          },
+          "retour": "Vrai : Avec les bouts des doigts."
+        },
+        {
+          "id": "l-isolement-d-un-resident-",
+          "texte": "L'isolement d'un résident malade agit sur le réservoir.",
+          "attendu": true,
+          "points": {
+            "PSE-C4": 1
+          },
+          "retour": "Vrai : Il limite la sortie du microbe vers les autres."
+        }
+      ]
+    },
+    {
+      "id": "qcm-5",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Quelle mesure est collective ?",
+      "options": [
+        {
+          "texte": "Séparer les circuits propre et sale",
+          "juste": true
+        },
+        {
+          "texte": "Changer de gants"
+        },
+        {
+          "texte": "Porter un masque"
+        }
+      ],
+      "points": {
+        "PSE-C4": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S3-03 si besoin."
+    },
+    {
+      "id": "qcm-6",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Combien de temps dure une friction hydroalcoolique ?",
+      "options": [
+        {
+          "texte": "20 à 30 secondes",
+          "juste": true
+        },
+        {
+          "texte": "5 secondes"
+        },
+        {
+          "texte": "5 minutes"
+        }
+      ],
+      "points": {
+        "PSE-C4": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S3-03 si besoin."
+    },
+    {
+      "id": "qcm-7",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Quel texte donne la priorité à la protection collective ?",
+      "options": [
+        {
+          "texte": "Le règlement intérieur de la cantine"
+        },
+        {
+          "texte": "Le contrat de travail"
+        },
+        {
+          "texte": "L'article L. 4121-2 du Code du travail",
+          "juste": true
+        }
+      ],
+      "points": {
+        "PSE-C4": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S3-03 si besoin."
+    }
+  ],
+  "debriefing": [
+    "Quelle notion de cette séance avez-vous le mieux réussie ?",
+    "Quelle notion devez-vous revoir, et dans quel document du cours ?"
+  ]
+}

@@ -1,0 +1,262 @@
+{
+  "id": "m96-entrainement-s1-02",
+  "statut": "valide",
+  "discipline": "PSE",
+  "format": "entrainement",
+  "titre": "Mes droits, mes obligations : je sais ce que je peux et ce que je dois faire",
+  "duree_min": 5,
+  "sequence_requise": "S1",
+  "lieu": "salon",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "PSE-C1",
+      "critere": "Identifier droit et obligation dans un contrat de travail."
+    }
+  ],
+  "situation": "Entraînement rapide sur les notions de la séance S1-02 : Mes droits, mes obligations : je sais ce que je peux et ce que je dois faire.",
+  "objectif_eleve": "Réviser les notions de la séance : répondre vite et juste, puis lire les corrections.",
+  "note_pour_audrey": "Entraînement généré pour la tâche Q.5 à partir de l'activité interactive de votre séance S1-02 (exercices repris tels quels, sans réécriture). Compétence : la compétence principale de la séance ; critère choisi par l'IA parmi les critères officiels de cette compétence (celui qui partage le plus de mots avec les exercices) : à vérifier.",
+  "etapes": [
+    {
+      "id": "tri-1",
+      "type": "tri",
+      "consigne": "Classe chaque carte dans la bonne colonne.",
+      "categories": [
+        {
+          "id": "droit-du-salarie",
+          "libelle": "Droit du salarié"
+        },
+        {
+          "id": "obligation-du-salari",
+          "libelle": "Obligation du salarié"
+        },
+        {
+          "id": "obligation-de-l-empl",
+          "libelle": "Obligation de l'employeur"
+        }
+      ],
+      "elements": [
+        {
+          "id": "recevoir-les-informations-",
+          "texte": "Recevoir les informations utiles",
+          "categorie": "droit-du-salarie",
+          "points": {
+            "PSE-C1": 1
+          },
+          "retour": "Réponse attendue : Droit du salarié."
+        },
+        {
+          "id": "etre-informe-des-regles",
+          "texte": "Être informé des règles",
+          "categorie": "droit-du-salarie",
+          "points": {
+            "PSE-C1": 1
+          },
+          "retour": "Réponse attendue : Droit du salarié."
+        },
+        {
+          "id": "etre-respecte",
+          "texte": "Être respecté",
+          "categorie": "droit-du-salarie",
+          "points": {
+            "PSE-C1": 1
+          },
+          "retour": "Réponse attendue : Droit du salarié."
+        },
+        {
+          "id": "respecter-les-horaires",
+          "texte": "Respecter les horaires",
+          "categorie": "obligation-du-salari",
+          "points": {
+            "PSE-C1": 1
+          },
+          "retour": "Réponse attendue : Obligation du salarié."
+        },
+        {
+          "id": "respecter-les-consignes-de",
+          "texte": "Respecter les consignes de sécurité",
+          "categorie": "obligation-du-salari",
+          "points": {
+            "PSE-C1": 1
+          },
+          "retour": "Réponse attendue : Obligation du salarié."
+        },
+        {
+          "id": "respecter-la-confidentiali",
+          "texte": "Respecter la confidentialité",
+          "categorie": "obligation-du-salari",
+          "points": {
+            "PSE-C1": 1
+          },
+          "retour": "Réponse attendue : Obligation du salarié."
+        },
+        {
+          "id": "respecter-le-contrat",
+          "texte": "Respecter le contrat",
+          "categorie": "obligation-de-l-empl",
+          "points": {
+            "PSE-C1": 1
+          },
+          "retour": "Réponse attendue : Obligation de l'employeur."
+        },
+        {
+          "id": "donner-les-moyens-de-trava",
+          "texte": "Donner les moyens de travailler",
+          "categorie": "obligation-de-l-empl",
+          "points": {
+            "PSE-C1": 1
+          },
+          "retour": "Réponse attendue : Obligation de l'employeur."
+        },
+        {
+          "id": "informer-sur-le-poste",
+          "texte": "Informer sur le poste",
+          "categorie": "obligation-de-l-empl",
+          "points": {
+            "PSE-C1": 1
+          },
+          "retour": "Réponse attendue : Obligation de l'employeur."
+        }
+      ]
+    },
+    {
+      "id": "tri-2",
+      "type": "tri",
+      "consigne": "À quoi correspond chaque information de l'extrait ?",
+      "categories": [
+        {
+          "id": "poste",
+          "libelle": "Poste"
+        },
+        {
+          "id": "lieu",
+          "libelle": "Lieu"
+        },
+        {
+          "id": "horaires",
+          "libelle": "Horaires"
+        },
+        {
+          "id": "regles-a-respecter",
+          "libelle": "Règles à respecter"
+        }
+      ],
+      "elements": [
+        {
+          "id": "agent-accompagnant",
+          "texte": "Agent accompagnant",
+          "categorie": "poste",
+          "points": {
+            "PSE-C1": 1
+          },
+          "retour": "Réponse attendue : Poste."
+        },
+        {
+          "id": "ehpad-les-glycines",
+          "texte": "EHPAD Les Glycines",
+          "categorie": "lieu",
+          "points": {
+            "PSE-C1": 1
+          },
+          "retour": "Réponse attendue : Lieu."
+        },
+        {
+          "id": "selon-planning",
+          "texte": "Selon planning",
+          "categorie": "horaires",
+          "points": {
+            "PSE-C1": 1
+          },
+          "retour": "Réponse attendue : Horaires."
+        },
+        {
+          "id": "reglement-interieur",
+          "texte": "Règlement intérieur",
+          "categorie": "regles-a-respecter",
+          "points": {
+            "PSE-C1": 1
+          },
+          "retour": "Réponse attendue : Règles à respecter."
+        },
+        {
+          "id": "consignes-d-hygiene-et-de-",
+          "texte": "Consignes d'hygiène et de sécurité",
+          "categorie": "regles-a-respecter",
+          "points": {
+            "PSE-C1": 1
+          },
+          "retour": "Réponse attendue : Règles à respecter."
+        },
+        {
+          "id": "confidentialite",
+          "texte": "Confidentialité",
+          "categorie": "regles-a-respecter",
+          "points": {
+            "PSE-C1": 1
+          },
+          "retour": "Réponse attendue : Règles à respecter."
+        }
+      ]
+    },
+    {
+      "id": "selection-3",
+      "type": "selection",
+      "consigne": "Vrai ou faux ?",
+      "question": "Cochez les phrases vraies.",
+      "elements": [
+        {
+          "id": "un-droit-est-ce-que-je-doi",
+          "texte": "Un droit est ce que je dois respecter.",
+          "attendu": false,
+          "points": {
+            "PSE-C1": 1
+          },
+          "retour": "Faux."
+        },
+        {
+          "id": "respecter-les-horaires-est",
+          "texte": "Respecter les horaires est une obligation du salarié.",
+          "attendu": true,
+          "points": {
+            "PSE-C1": 1
+          },
+          "retour": "Vrai."
+        },
+        {
+          "id": "en-ehpad-je-peux-raconter-",
+          "texte": "En EHPAD, je peux raconter les informations privées des résidents.",
+          "attendu": false,
+          "points": {
+            "PSE-C1": 1
+          },
+          "retour": "Faux."
+        },
+        {
+          "id": "si-je-ne-comprends-pas-une",
+          "texte": "Si je ne comprends pas une règle, je demande à un responsable.",
+          "attendu": true,
+          "points": {
+            "PSE-C1": 1
+          },
+          "retour": "Vrai."
+        },
+        {
+          "id": "arriver-en-retard-sans-pre",
+          "texte": "Arriver en retard sans prévenir respecte le contrat.",
+          "attendu": false,
+          "points": {
+            "PSE-C1": 1
+          },
+          "retour": "Faux."
+        }
+      ]
+    }
+  ],
+  "debriefing": [
+    "Quelle notion de cette séance avez-vous le mieux réussie ?",
+    "Quelle notion devez-vous revoir, et dans quel document du cours ?"
+  ]
+}

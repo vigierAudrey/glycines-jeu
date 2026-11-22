@@ -1,0 +1,340 @@
+{
+  "id": "m104-entrainement-s4-02",
+  "statut": "valide",
+  "discipline": "PSE",
+  "format": "entrainement",
+  "titre": "Les acteurs de prévention hors de l'entreprise",
+  "duree_min": 5,
+  "sequence_requise": "S4",
+  "lieu": "salon",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "PSE-C6",
+      "critere": "Identifier les missions du service de santé au travail."
+    }
+  ],
+  "situation": "Entraînement rapide sur les notions de la séance S4-02 : Les acteurs de prévention hors de l'entreprise.",
+  "objectif_eleve": "Réviser les notions de la séance : répondre vite et juste, puis lire les corrections.",
+  "note_pour_audrey": "Entraînement généré pour la tâche Q.5 à partir de l'activité interactive de votre séance S4-02 (exercices repris tels quels, sans réécriture). Compétence : la compétence principale de la séance ; critère choisi par l'IA parmi les critères officiels de cette compétence (celui qui partage le plus de mots avec les exercices) : à vérifier.",
+  "etapes": [
+    {
+      "id": "association-1",
+      "type": "association",
+      "consigne": "Reliez chaque mot à sa définition.",
+      "paires": [
+        {
+          "id": "medecin-du-travail",
+          "terme": "médecin du travail",
+          "definition": "suit la santé des salariés, sans soigner",
+          "points": {
+            "PSE-C6": 1
+          }
+        },
+        {
+          "id": "iprp",
+          "terme": "IPRP",
+          "definition": "intervenant en prévention : ergonome, toxicologue",
+          "points": {
+            "PSE-C6": 1
+          }
+        },
+        {
+          "id": "carsat",
+          "terme": "CARSAT",
+          "definition": "caisse qui gère les cotisations AT/MP et aide à la prévention",
+          "points": {
+            "PSE-C6": 1
+          }
+        },
+        {
+          "id": "inspection-du-travai",
+          "terme": "inspection du travail",
+          "definition": "service de l'État qui contrôle le droit du travail",
+          "points": {
+            "PSE-C6": 1
+          }
+        },
+        {
+          "id": "secret-medical",
+          "terme": "secret médical",
+          "definition": "obligation de ne rien révéler sur le patient",
+          "points": {
+            "PSE-C6": 1
+          }
+        },
+        {
+          "id": "cotisation-at-mp",
+          "terme": "cotisation AT/MP",
+          "definition": "somme payée pour assurer les accidents du travail",
+          "points": {
+            "PSE-C6": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "tri-2",
+      "type": "tri",
+      "consigne": "Classez chaque carte.",
+      "categories": [
+        {
+          "id": "service-de-sante-au-",
+          "libelle": "Service de santé au travail"
+        },
+        {
+          "id": "carsat",
+          "libelle": "CARSAT"
+        },
+        {
+          "id": "inspection-du-travai",
+          "libelle": "Inspection du travail"
+        }
+      ],
+      "elements": [
+        {
+          "id": "convoque-a-la-visite-d-inf",
+          "texte": "Convoque à la visite d'information et de prévention",
+          "categorie": "service-de-sante-au-",
+          "points": {
+            "PSE-C6": 1
+          },
+          "retour": "Réponse attendue : Service de santé au travail."
+        },
+        {
+          "id": "le-medecin-conseille-il-ne",
+          "texte": "Le médecin conseille, il ne soigne pas",
+          "categorie": "service-de-sante-au-",
+          "points": {
+            "PSE-C6": 1
+          },
+          "retour": "Réponse attendue : Service de santé au travail."
+        },
+        {
+          "id": "un-ergonome-iprp-etudie-un",
+          "texte": "Un ergonome (IPRP) étudie un poste",
+          "categorie": "service-de-sante-au-",
+          "points": {
+            "PSE-C6": 1
+          },
+          "retour": "Réponse attendue : Service de santé au travail."
+        },
+        {
+          "id": "fixe-le-taux-de-cotisation",
+          "texte": "Fixe le taux de cotisation AT/MP",
+          "categorie": "carsat",
+          "points": {
+            "PSE-C6": 1
+          },
+          "retour": "Réponse attendue : CARSAT."
+        },
+        {
+          "id": "aide-a-financer-un-leve-pe",
+          "texte": "Aide à financer un lève-personne",
+          "categorie": "carsat",
+          "points": {
+            "PSE-C6": 1
+          },
+          "retour": "Réponse attendue : CARSAT."
+        },
+        {
+          "id": "conseille-l-entreprise-en-",
+          "texte": "Conseille l'entreprise en prévention",
+          "categorie": "carsat",
+          "points": {
+            "PSE-C6": 1
+          },
+          "retour": "Réponse attendue : CARSAT."
+        },
+        {
+          "id": "controle-l-application-du-",
+          "texte": "Contrôle l'application du droit du travail",
+          "categorie": "inspection-du-travai",
+          "points": {
+            "PSE-C6": 1
+          },
+          "retour": "Réponse attendue : Inspection du travail."
+        },
+        {
+          "id": "peut-constater-les-infract",
+          "texte": "Peut constater les infractions",
+          "categorie": "inspection-du-travai",
+          "points": {
+            "PSE-C6": 1
+          },
+          "retour": "Réponse attendue : Inspection du travail."
+        },
+        {
+          "id": "informe-aussi-les-salaries",
+          "texte": "Informe aussi les salariés",
+          "categorie": "inspection-du-travai",
+          "points": {
+            "PSE-C6": 1
+          },
+          "retour": "Réponse attendue : Inspection du travail."
+        }
+      ]
+    },
+    {
+      "id": "ordre-3",
+      "type": "ordre",
+      "consigne": "Remettez dans l'ordre.",
+      "elements": [
+        {
+          "id": "karima-se-fait-une-entorse",
+          "texte": "Karima se fait une entorse au travail.",
+          "points": {
+            "PSE-C6": 1
+          }
+        },
+        {
+          "id": "les-accidents-augmentent-l",
+          "texte": "Les accidents augmentent la cotisation de l'EHPAD.",
+          "points": {
+            "PSE-C6": 1
+          }
+        },
+        {
+          "id": "la-directrice-demande-cons",
+          "texte": "La directrice demande conseil à la CARSAT.",
+          "points": {
+            "PSE-C6": 1
+          }
+        },
+        {
+          "id": "la-carsat-aide-a-financer-",
+          "texte": "La CARSAT aide à financer l'éclairage et la formation.",
+          "points": {
+            "PSE-C6": 1
+          }
+        }
+      ],
+      "retour": "Ordre repris de la séance S4-02."
+    },
+    {
+      "id": "selection-4",
+      "type": "selection",
+      "consigne": "Vrai ou faux ?",
+      "question": "Cochez les phrases vraies.",
+      "elements": [
+        {
+          "id": "le-medecin-du-travail-soig",
+          "texte": "Le médecin du travail soigne les salariés malades.",
+          "attendu": false,
+          "points": {
+            "PSE-C6": 1
+          },
+          "retour": "Faux : Il prévient et conseille ; les soins relèvent du médecin traitant."
+        },
+        {
+          "id": "la-carsat-peut-aider-a-fin",
+          "texte": "La CARSAT peut aider à financer du matériel de prévention.",
+          "attendu": true,
+          "points": {
+            "PSE-C6": 1
+          },
+          "retour": "Vrai : C'est l'une de ses missions."
+        },
+        {
+          "id": "l-inspection-du-travail-co",
+          "texte": "L'inspection du travail contrôle l'entreprise.",
+          "attendu": true,
+          "points": {
+            "PSE-C6": 1
+          },
+          "retour": "Vrai : Elle vérifie l'application du droit du travail."
+        },
+        {
+          "id": "le-medecin-du-travail-raco",
+          "texte": "Le médecin du travail raconte l'entretien à l'employeur.",
+          "attendu": false,
+          "points": {
+            "PSE-C6": 1
+          },
+          "retour": "Faux : Il est soumis au secret médical."
+        },
+        {
+          "id": "les-indemnites-d-un-accide",
+          "texte": "Les indemnités d'un accident du travail sont versées par la CPAM.",
+          "attendu": true,
+          "points": {
+            "PSE-C6": 1
+          },
+          "retour": "Vrai : La CARSAT gère la tarification et la prévention."
+        }
+      ]
+    },
+    {
+      "id": "qcm-5",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Qui fixe le taux de cotisation AT/MP ?",
+      "options": [
+        {
+          "texte": "La CARSAT",
+          "juste": true
+        },
+        {
+          "texte": "Le médecin du travail"
+        },
+        {
+          "texte": "L'inspection du travail"
+        }
+      ],
+      "points": {
+        "PSE-C6": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S4-02 si besoin."
+    },
+    {
+      "id": "qcm-6",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Le médecin du travail…",
+      "options": [
+        {
+          "texte": "contrôle les salaires"
+        },
+        {
+          "texte": "soigne les malades"
+        },
+        {
+          "texte": "prévient et conseille",
+          "juste": true
+        }
+      ],
+      "points": {
+        "PSE-C6": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S4-02 si besoin."
+    },
+    {
+      "id": "qcm-7",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Un ergonome est…",
+      "options": [
+        {
+          "texte": "un élu du CSE"
+        },
+        {
+          "texte": "un inspecteur"
+        },
+        {
+          "texte": "un IPRP",
+          "juste": true
+        }
+      ],
+      "points": {
+        "PSE-C6": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S4-02 si besoin."
+    }
+  ],
+  "debriefing": [
+    "Quelle notion de cette séance avez-vous le mieux réussie ?",
+    "Quelle notion devez-vous revoir, et dans quel document du cours ?"
+  ]
+}

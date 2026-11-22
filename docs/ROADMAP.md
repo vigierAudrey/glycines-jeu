@@ -123,7 +123,8 @@ Règle commune : toute nouvelle activité s'appuie sur une situation réelle des
 - [x] **Q.3** Écran de choix du format dans chaque matière : « Missions dans l'aile » ou « Entraînements rapides ».
 - [x] **Q.4** Entraînements du Bloc 2, séance par séance (S1 à S7), à partir des activités interactives des cours (QCM, vrai/faux, associations, classements).
   Fait : 48 entraînements (`m47` à `m94`), un par séance de S1 à S6 qui a une activité interactive. Critère choisi par l'IA parmi ceux de la compétence principale de la séance : à vérifier.
-- [ ] **Q.5** Entraînements de PSE, séance par séance, de la même façon.
+- [x] **Q.5** Entraînements de PSE, séance par séance, de la même façon.
+  Fait : 23 entraînements (`m95` à `m117`), de S1 à S6.
 
 ## Phase 4 ter · Couvrir tout le référentiel du Bloc 2 (bilan du 22/11/2026)
 

@@ -1,0 +1,245 @@
+{
+  "id": "m97-entrainement-s2-01",
+  "statut": "valide",
+  "discipline": "PSE",
+  "format": "entrainement",
+  "titre": "Statique / dynamique, postures à risque",
+  "duree_min": 5,
+  "sequence_requise": "S2",
+  "lieu": "salon",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "PSE-C5",
+      "critere": "Identifier les facteurs de risque en relation avec l’activité physique dans une activité de travail."
+    }
+  ],
+  "situation": "Entraînement rapide sur les notions de la séance S2-01 : Statique / dynamique, postures à risque.",
+  "objectif_eleve": "Réviser les notions de la séance : répondre vite et juste, puis lire les corrections.",
+  "note_pour_audrey": "Entraînement généré pour la tâche Q.5 à partir de l'activité interactive de votre séance S2-01 (exercices repris tels quels, sans réécriture). Compétence : la compétence principale de la séance ; critère choisi par l'IA parmi les critères officiels de cette compétence (celui qui partage le plus de mots avec les exercices) : à vérifier.",
+  "etapes": [
+    {
+      "id": "tri-1",
+      "type": "tri",
+      "consigne": "Touche une carte puis touche la bonne colonne.",
+      "categories": [
+        {
+          "id": "travail-statique",
+          "libelle": "Travail statique"
+        },
+        {
+          "id": "travail-dynamique",
+          "libelle": "Travail dynamique"
+        }
+      ],
+      "elements": [
+        {
+          "id": "rester-penche-au-dessus-du",
+          "texte": "Rester penché au-dessus du lit",
+          "categorie": "travail-statique",
+          "points": {
+            "PSE-C5": 1
+          },
+          "retour": "Réponse attendue : Travail statique."
+        },
+        {
+          "id": "maintenir-les-bras-leves-l",
+          "texte": "Maintenir les bras levés longtemps",
+          "categorie": "travail-statique",
+          "points": {
+            "PSE-C5": 1
+          },
+          "retour": "Réponse attendue : Travail statique."
+        },
+        {
+          "id": "tenir-une-position-sans-bo",
+          "texte": "Tenir une position sans bouger",
+          "categorie": "travail-statique",
+          "points": {
+            "PSE-C5": 1
+          },
+          "retour": "Réponse attendue : Travail statique."
+        },
+        {
+          "id": "pousser-un-fauteuil-roulan",
+          "texte": "Pousser un fauteuil roulant dans le couloir",
+          "categorie": "travail-dynamique",
+          "points": {
+            "PSE-C5": 1
+          },
+          "retour": "Réponse attendue : Travail dynamique."
+        },
+        {
+          "id": "repeter-des-transferts-tou",
+          "texte": "Répéter des transferts toute la journée",
+          "categorie": "travail-dynamique",
+          "points": {
+            "PSE-C5": 1
+          },
+          "retour": "Réponse attendue : Travail dynamique."
+        },
+        {
+          "id": "marcher-en-portant-du-ling",
+          "texte": "Marcher en portant du linge",
+          "categorie": "travail-dynamique",
+          "points": {
+            "PSE-C5": 1
+          },
+          "retour": "Réponse attendue : Travail dynamique."
+        }
+      ]
+    },
+    {
+      "id": "tri-2",
+      "type": "tri",
+      "consigne": "Classe chaque posture pour protéger ton corps.",
+      "categories": [
+        {
+          "id": "posture-a-risque",
+          "libelle": "Posture à risque"
+        },
+        {
+          "id": "posture-plus-sure",
+          "libelle": "Posture plus sûre"
+        }
+      ],
+      "elements": [
+        {
+          "id": "dos-rond-et-courbe",
+          "texte": "Dos rond et courbé",
+          "categorie": "posture-a-risque",
+          "points": {
+            "PSE-C5": 1
+          },
+          "retour": "Réponse attendue : Posture à risque."
+        },
+        {
+          "id": "torsion-du-tronc-avec-une-",
+          "texte": "Torsion du tronc avec une charge",
+          "categorie": "posture-a-risque",
+          "points": {
+            "PSE-C5": 1
+          },
+          "retour": "Réponse attendue : Posture à risque."
+        },
+        {
+          "id": "charge-tenue-loin-du-corps",
+          "texte": "Charge tenue loin du corps",
+          "categorie": "posture-a-risque",
+          "points": {
+            "PSE-C5": 1
+          },
+          "retour": "Réponse attendue : Posture à risque."
+        },
+        {
+          "id": "bras-au-dessus-des-epaules",
+          "texte": "Bras au-dessus des épaules longtemps",
+          "categorie": "posture-a-risque",
+          "points": {
+            "PSE-C5": 1
+          },
+          "retour": "Réponse attendue : Posture à risque."
+        },
+        {
+          "id": "dos-droit-jambes-pliees",
+          "texte": "Dos droit, jambes pliées",
+          "categorie": "posture-plus-sure",
+          "points": {
+            "PSE-C5": 1
+          },
+          "retour": "Réponse attendue : Posture plus sûre."
+        },
+        {
+          "id": "charge-gardee-pres-du-corp",
+          "texte": "Charge gardée près du corps",
+          "categorie": "posture-plus-sure",
+          "points": {
+            "PSE-C5": 1
+          },
+          "retour": "Réponse attendue : Posture plus sûre."
+        },
+        {
+          "id": "pieds-ecartes-appui-stable",
+          "texte": "Pieds écartés, appui stable",
+          "categorie": "posture-plus-sure",
+          "points": {
+            "PSE-C5": 1
+          },
+          "retour": "Réponse attendue : Posture plus sûre."
+        }
+      ]
+    },
+    {
+      "id": "qcm-3",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Le fauteuil est loin du lit. Je :",
+      "options": [
+        {
+          "texte": "je me penche en tordant le dos"
+        },
+        {
+          "texte": "je rapproche le fauteuil avant d'aider",
+          "juste": true
+        },
+        {
+          "texte": "je soulève vite pour finir"
+        }
+      ],
+      "points": {
+        "PSE-C5": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S2-01 si besoin."
+    },
+    {
+      "id": "qcm-4",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Je dois remonter Mme Rose dans son fauteuil. Je :",
+      "options": [
+        {
+          "texte": "je garde le dos rond"
+        },
+        {
+          "texte": "je plie les jambes, dos droit",
+          "juste": true
+        },
+        {
+          "texte": "je tire d'un seul coup"
+        }
+      ],
+      "points": {
+        "PSE-C5": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S2-01 si besoin."
+    },
+    {
+      "id": "qcm-5",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "La chambre est encombrée avant le transfert. Je :",
+      "options": [
+        {
+          "texte": "je commence quand même"
+        },
+        {
+          "texte": "je dégage l'espace et je prépare le trajet",
+          "juste": true
+        },
+        {
+          "texte": "j'attends le lendemain"
+        }
+      ],
+      "points": {
+        "PSE-C5": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S2-01 si besoin."
+    }
+  ],
+  "debriefing": [
+    "Quelle notion de cette séance avez-vous le mieux réussie ?",
+    "Quelle notion devez-vous revoir, et dans quel document du cours ?"
+  ]
+}

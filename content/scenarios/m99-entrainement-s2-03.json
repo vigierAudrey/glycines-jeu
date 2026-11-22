@@ -1,0 +1,258 @@
+{
+  "id": "m99-entrainement-s2-03",
+  "statut": "valide",
+  "discipline": "PSE",
+  "format": "entrainement",
+  "titre": "TP gestes et postures : économiser mes efforts",
+  "duree_min": 5,
+  "sequence_requise": "S2",
+  "lieu": "salon",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "PSE-C5",
+      "critere": "Identifier les facteurs de risque en relation avec l’activité physique dans une activité de travail."
+    }
+  ],
+  "situation": "Entraînement rapide sur les notions de la séance S2-03 : TP gestes et postures : économiser mes efforts.",
+  "objectif_eleve": "Réviser les notions de la séance : répondre vite et juste, puis lire les corrections.",
+  "note_pour_audrey": "Entraînement généré pour la tâche Q.5 à partir de l'activité interactive de votre séance S2-03 (exercices repris tels quels, sans réécriture). Compétence : la compétence principale de la séance ; critère choisi par l'IA parmi les critères officiels de cette compétence (celui qui partage le plus de mots avec les exercices) : à vérifier.",
+  "etapes": [
+    {
+      "id": "tri-1",
+      "type": "tri",
+      "consigne": "Classe chaque façon de faire.",
+      "categories": [
+        {
+          "id": "bon-principe",
+          "libelle": "Bon principe"
+        },
+        {
+          "id": "a-eviter",
+          "libelle": "À éviter"
+        }
+      ],
+      "elements": [
+        {
+          "id": "garder-le-dos-droit",
+          "texte": "Garder le dos droit",
+          "categorie": "bon-principe",
+          "points": {
+            "PSE-C5": 1
+          },
+          "retour": "Réponse attendue : Bon principe."
+        },
+        {
+          "id": "plier-les-jambes",
+          "texte": "Plier les jambes",
+          "categorie": "bon-principe",
+          "points": {
+            "PSE-C5": 1
+          },
+          "retour": "Réponse attendue : Bon principe."
+        },
+        {
+          "id": "ecarter-les-pieds-pour-etr",
+          "texte": "Écarter les pieds pour être stable",
+          "categorie": "bon-principe",
+          "points": {
+            "PSE-C5": 1
+          },
+          "retour": "Réponse attendue : Bon principe."
+        },
+        {
+          "id": "garder-la-charge-pres-du-c",
+          "texte": "Garder la charge près du corps",
+          "categorie": "bon-principe",
+          "points": {
+            "PSE-C5": 1
+          },
+          "retour": "Réponse attendue : Bon principe."
+        },
+        {
+          "id": "faire-glisser-plutot-que-s",
+          "texte": "Faire glisser plutôt que soulever",
+          "categorie": "bon-principe",
+          "points": {
+            "PSE-C5": 1
+          },
+          "retour": "Réponse attendue : Bon principe."
+        },
+        {
+          "id": "soulever-avec-le-dos-rond",
+          "texte": "Soulever avec le dos rond",
+          "categorie": "a-eviter",
+          "points": {
+            "PSE-C5": 1
+          },
+          "retour": "Réponse attendue : À éviter."
+        },
+        {
+          "id": "tourner-le-tronc-avec-la-c",
+          "texte": "Tourner le tronc avec la charge",
+          "categorie": "a-eviter",
+          "points": {
+            "PSE-C5": 1
+          },
+          "retour": "Réponse attendue : À éviter."
+        },
+        {
+          "id": "porter-la-personne-loin-du",
+          "texte": "Porter la personne loin du corps",
+          "categorie": "a-eviter",
+          "points": {
+            "PSE-C5": 1
+          },
+          "retour": "Réponse attendue : À éviter."
+        }
+      ]
+    },
+    {
+      "id": "tri-2",
+      "type": "tri",
+      "consigne": "Associe chaque besoin à l'aide adaptée.",
+      "categories": [
+        {
+          "id": "drap-de-glisse",
+          "libelle": "Drap de glisse"
+        },
+        {
+          "id": "verticalisateur",
+          "libelle": "Verticalisateur"
+        },
+        {
+          "id": "leve-personne",
+          "libelle": "Lève-personne"
+        }
+      ],
+      "elements": [
+        {
+          "id": "remonter-une-personne-dans",
+          "texte": "Remonter une personne dans son lit",
+          "categorie": "drap-de-glisse",
+          "points": {
+            "PSE-C5": 1
+          },
+          "retour": "Réponse attendue : Drap de glisse."
+        },
+        {
+          "id": "faire-glisser-sans-souleve",
+          "texte": "Faire glisser sans soulever",
+          "categorie": "drap-de-glisse",
+          "points": {
+            "PSE-C5": 1
+          },
+          "retour": "Réponse attendue : Drap de glisse."
+        },
+        {
+          "id": "accompagner-une-mise-debou",
+          "texte": "Accompagner une mise debout possible",
+          "categorie": "verticalisateur",
+          "points": {
+            "PSE-C5": 1
+          },
+          "retour": "Réponse attendue : Verticalisateur."
+        },
+        {
+          "id": "aider-le-passage-assis-ver",
+          "texte": "Aider le passage assis vers debout",
+          "categorie": "verticalisateur",
+          "points": {
+            "PSE-C5": 1
+          },
+          "retour": "Réponse attendue : Verticalisateur."
+        },
+        {
+          "id": "transfert-complet-et-secur",
+          "texte": "Transfert complet et sécurisé",
+          "categorie": "leve-personne",
+          "points": {
+            "PSE-C5": 1
+          },
+          "retour": "Réponse attendue : Lève-personne."
+        },
+        {
+          "id": "personne-qui-ne-peut-pas-s",
+          "texte": "Personne qui ne peut pas se lever seule",
+          "categorie": "leve-personne",
+          "points": {
+            "PSE-C5": 1
+          },
+          "retour": "Réponse attendue : Lève-personne."
+        }
+      ]
+    },
+    {
+      "id": "qcm-3",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Le drap de glisse est rangé, le geste sera plus long. Je :",
+      "options": [
+        {
+          "texte": "je soulève seul pour aller vite"
+        },
+        {
+          "texte": "je vais chercher le drap et je l'utilise",
+          "juste": true
+        },
+        {
+          "texte": "je tire d'un coup"
+        }
+      ],
+      "points": {
+        "PSE-C5": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S2-03 si besoin."
+    },
+    {
+      "id": "qcm-4",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Mon premier réflexe avant un transfert :",
+      "options": [
+        {
+          "texte": "commencer tout de suite"
+        },
+        {
+          "texte": "préparer et dégager l'espace",
+          "juste": true
+        },
+        {
+          "texte": "porter le plus vite possible"
+        }
+      ],
+      "points": {
+        "PSE-C5": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S2-03 si besoin."
+    },
+    {
+      "id": "qcm-5",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Je ne suis pas formé au lève-personne pour M. André. Je :",
+      "options": [
+        {
+          "texte": "je le fais seul quand même"
+        },
+        {
+          "texte": "je demande de l'aide et je respecte la consigne",
+          "juste": true
+        },
+        {
+          "texte": "j'improvise"
+        }
+      ],
+      "points": {
+        "PSE-C5": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S2-03 si besoin."
+    }
+  ],
+  "debriefing": [
+    "Quelle notion de cette séance avez-vous le mieux réussie ?",
+    "Quelle notion devez-vous revoir, et dans quel document du cours ?"
+  ]
+}

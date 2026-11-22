@@ -1,0 +1,307 @@
+{
+  "id": "m115-entrainement-s6-04",
+  "statut": "valide",
+  "discipline": "PSE",
+  "format": "entrainement",
+  "titre": "En cas de pépin : déclarer un sinistre dans les délais",
+  "duree_min": 5,
+  "sequence_requise": "S6",
+  "lieu": "salon",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "PSE-D1",
+      "critere": "Repérer les démarches à effectuer dans une situation donnée en cas de sinistre à partir d’une procédure, d’un formulaire."
+    }
+  ],
+  "situation": "Entraînement rapide sur les notions de la séance S6-04 : En cas de pépin : déclarer un sinistre dans les délais.",
+  "objectif_eleve": "Réviser les notions de la séance : répondre vite et juste, puis lire les corrections.",
+  "note_pour_audrey": "Entraînement généré pour la tâche Q.5 à partir de l'activité interactive de votre séance S6-04 (exercices repris tels quels, sans réécriture). Compétence : la compétence principale de la séance ; critère choisi par l'IA parmi les critères officiels de cette compétence (celui qui partage le plus de mots avec les exercices) : à vérifier.",
+  "etapes": [
+    {
+      "id": "association-1",
+      "type": "association",
+      "consigne": "Reliez chaque mot à sa définition.",
+      "paires": [
+        {
+          "id": "constat-amiable",
+          "terme": "constat amiable",
+          "definition": "formulaire signé par les deux conducteurs",
+          "points": {
+            "PSE-D1": 1
+          }
+        },
+        {
+          "id": "declaration-de-sinis",
+          "terme": "déclaration de sinistre",
+          "definition": "information écrite envoyée à l'assureur",
+          "points": {
+            "PSE-D1": 1
+          }
+        },
+        {
+          "id": "jour-ouvre",
+          "terme": "jour ouvré",
+          "definition": "jour travaillé, hors jours fériés",
+          "points": {
+            "PSE-D1": 1
+          }
+        },
+        {
+          "id": "indemnisation",
+          "terme": "indemnisation",
+          "definition": "somme versée par l'assureur",
+          "points": {
+            "PSE-D1": 1
+          }
+        },
+        {
+          "id": "depot-de-plainte",
+          "terme": "dépôt de plainte",
+          "definition": "démarche à la police ou à la gendarmerie",
+          "points": {
+            "PSE-D1": 1
+          }
+        },
+        {
+          "id": "sinistre",
+          "terme": "sinistre",
+          "definition": "réalisation du risque couvert",
+          "points": {
+            "PSE-D1": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "tri-2",
+      "type": "tri",
+      "consigne": "Classez chaque carte.",
+      "categories": [
+        {
+          "id": "5-jours-ouvres",
+          "libelle": "5 jours ouvrés"
+        },
+        {
+          "id": "2-jours-ouvres",
+          "libelle": "2 jours ouvrés"
+        }
+      ],
+      "elements": [
+        {
+          "id": "accident-de-scooter",
+          "texte": "Accident de scooter",
+          "categorie": "5-jours-ouvres",
+          "points": {
+            "PSE-D1": 1
+          },
+          "retour": "Réponse attendue : 5 jours ouvrés."
+        },
+        {
+          "id": "degat-des-eaux",
+          "texte": "Dégât des eaux",
+          "categorie": "5-jours-ouvres",
+          "points": {
+            "PSE-D1": 1
+          },
+          "retour": "Réponse attendue : 5 jours ouvrés."
+        },
+        {
+          "id": "incendie",
+          "texte": "Incendie",
+          "categorie": "5-jours-ouvres",
+          "points": {
+            "PSE-D1": 1
+          },
+          "retour": "Réponse attendue : 5 jours ouvrés."
+        },
+        {
+          "id": "vol-du-scooter",
+          "texte": "Vol du scooter",
+          "categorie": "2-jours-ouvres",
+          "points": {
+            "PSE-D1": 1
+          },
+          "retour": "Réponse attendue : 2 jours ouvrés."
+        },
+        {
+          "id": "cambriolage-du-studio",
+          "texte": "Cambriolage du studio",
+          "categorie": "2-jours-ouvres",
+          "points": {
+            "PSE-D1": 1
+          },
+          "retour": "Réponse attendue : 2 jours ouvrés."
+        }
+      ]
+    },
+    {
+      "id": "ordre-3",
+      "type": "ordre",
+      "consigne": "Remettez dans l'ordre.",
+      "elements": [
+        {
+          "id": "securiser-et-verifier-les-",
+          "texte": "Sécuriser et vérifier les blessés.",
+          "points": {
+            "PSE-D1": 1
+          }
+        },
+        {
+          "id": "remplir-et-signer-le-const",
+          "texte": "Remplir et signer le constat amiable.",
+          "points": {
+            "PSE-D1": 1
+          }
+        },
+        {
+          "id": "prendre-des-photos",
+          "texte": "Prendre des photos.",
+          "points": {
+            "PSE-D1": 1
+          }
+        },
+        {
+          "id": "declarer-a-l-assureur",
+          "texte": "Déclarer à l'assureur.",
+          "points": {
+            "PSE-D1": 1
+          }
+        },
+        {
+          "id": "attendre-l-accord-avant-de",
+          "texte": "Attendre l'accord avant de réparer.",
+          "points": {
+            "PSE-D1": 1
+          }
+        }
+      ],
+      "retour": "Ordre repris de la séance S6-04."
+    },
+    {
+      "id": "selection-4",
+      "type": "selection",
+      "consigne": "Vrai ou faux ?",
+      "question": "Cochez les phrases vraies.",
+      "elements": [
+        {
+          "id": "on-peut-modifier-le-consta",
+          "texte": "On peut modifier le constat après la signature.",
+          "attendu": false,
+          "points": {
+            "PSE-D1": 1
+          },
+          "retour": "Faux : On ne le modifie plus."
+        },
+        {
+          "id": "en-cas-de-vol-il-faut-depo",
+          "texte": "En cas de vol, il faut déposer plainte.",
+          "attendu": true,
+          "points": {
+            "PSE-D1": 1
+          },
+          "retour": "Vrai : Police ou gendarmerie."
+        },
+        {
+          "id": "un-arrangement-en-liquide-",
+          "texte": "Un arrangement en liquide protège mieux qu'un constat.",
+          "attendu": false,
+          "points": {
+            "PSE-D1": 1
+          },
+          "retour": "Faux : Ni preuve ni recours."
+        },
+        {
+          "id": "le-constat-peut-se-faire-s",
+          "texte": "Le constat peut se faire sur l'application e-constat.",
+          "attendu": true,
+          "points": {
+            "PSE-D1": 1
+          },
+          "retour": "Vrai : Papier ou application."
+        },
+        {
+          "id": "une-declaration-tardive-pe",
+          "texte": "Une déclaration tardive peut entraîner un refus.",
+          "attendu": true,
+          "points": {
+            "PSE-D1": 1
+          },
+          "retour": "Vrai : Si le retard cause un préjudice."
+        }
+      ]
+    },
+    {
+      "id": "qcm-5",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Délai pour déclarer un accident ?",
+      "options": [
+        {
+          "texte": "5 jours ouvrés",
+          "juste": true
+        },
+        {
+          "texte": "1 an"
+        },
+        {
+          "texte": "1 mois"
+        }
+      ],
+      "points": {
+        "PSE-D1": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S6-04 si besoin."
+    },
+    {
+      "id": "qcm-6",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Délai pour déclarer un vol ?",
+      "options": [
+        {
+          "texte": "15 jours"
+        },
+        {
+          "texte": "6 mois"
+        },
+        {
+          "texte": "2 jours ouvrés",
+          "juste": true
+        }
+      ],
+      "points": {
+        "PSE-D1": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S6-04 si besoin."
+    },
+    {
+      "id": "qcm-7",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Qui signe le constat amiable ?",
+      "options": [
+        {
+          "texte": "Les deux conducteurs",
+          "juste": true
+        },
+        {
+          "texte": "L'assureur"
+        },
+        {
+          "texte": "Le témoin seul"
+        }
+      ],
+      "points": {
+        "PSE-D1": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S6-04 si besoin."
+    }
+  ],
+  "debriefing": [
+    "Quelle notion de cette séance avez-vous le mieux réussie ?",
+    "Quelle notion devez-vous revoir, et dans quel document du cours ?"
+  ]
+}

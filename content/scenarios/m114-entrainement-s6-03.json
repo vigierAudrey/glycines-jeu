@@ -1,0 +1,300 @@
+{
+  "id": "m114-entrainement-s6-03",
+  "statut": "valide",
+  "discipline": "PSE",
+  "format": "entrainement",
+  "titre": "L'assurance : payer ensemble pour être protégé chacun",
+  "duree_min": 5,
+  "sequence_requise": "S6",
+  "lieu": "salon",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "PSE-D1",
+      "critere": "Démontrer le caractère obligatoire ou facultatif d’une assurance à partir d’un texte réglementaire."
+    }
+  ],
+  "situation": "Entraînement rapide sur les notions de la séance S6-03 : L'assurance : payer ensemble pour être protégé chacun.",
+  "objectif_eleve": "Réviser les notions de la séance : répondre vite et juste, puis lire les corrections.",
+  "note_pour_audrey": "Entraînement généré pour la tâche Q.5 à partir de l'activité interactive de votre séance S6-03 (exercices repris tels quels, sans réécriture). Compétence : la compétence principale de la séance ; critère choisi par l'IA parmi les critères officiels de cette compétence (celui qui partage le plus de mots avec les exercices) : à vérifier.",
+  "etapes": [
+    {
+      "id": "association-1",
+      "type": "association",
+      "consigne": "Reliez chaque mot à sa définition.",
+      "paires": [
+        {
+          "id": "sinistre",
+          "terme": "sinistre",
+          "definition": "réalisation du risque couvert",
+          "points": {
+            "PSE-D1": 1
+          }
+        },
+        {
+          "id": "garantie",
+          "terme": "garantie",
+          "definition": "risque couvert par le contrat",
+          "points": {
+            "PSE-D1": 1
+          }
+        },
+        {
+          "id": "franchise",
+          "terme": "franchise",
+          "definition": "somme qui reste à la charge de l'assuré",
+          "points": {
+            "PSE-D1": 1
+          }
+        },
+        {
+          "id": "clause-d-exclusion",
+          "terme": "clause d'exclusion",
+          "definition": "situation non couverte",
+          "points": {
+            "PSE-D1": 1
+          }
+        },
+        {
+          "id": "cotisation",
+          "terme": "cotisation",
+          "definition": "somme payée à l'assureur",
+          "points": {
+            "PSE-D1": 1
+          }
+        },
+        {
+          "id": "responsabilite-civil",
+          "terme": "responsabilité civile",
+          "definition": "réparer les dommages causés aux autres",
+          "points": {
+            "PSE-D1": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "tri-2",
+      "type": "tri",
+      "consigne": "Classez chaque carte.",
+      "categories": [
+        {
+          "id": "obligatoire",
+          "libelle": "Obligatoire"
+        },
+        {
+          "id": "facultative",
+          "libelle": "Facultative"
+        }
+      ],
+      "elements": [
+        {
+          "id": "assurance-habitation-du-lo",
+          "texte": "Assurance habitation du locataire",
+          "categorie": "obligatoire",
+          "points": {
+            "PSE-D1": 1
+          },
+          "retour": "Réponse attendue : Obligatoire."
+        },
+        {
+          "id": "assurance-du-scooter",
+          "texte": "Assurance du scooter",
+          "categorie": "obligatoire",
+          "points": {
+            "PSE-D1": 1
+          },
+          "retour": "Réponse attendue : Obligatoire."
+        },
+        {
+          "id": "responsabilite-civile-vie-",
+          "texte": "Responsabilité civile vie privée",
+          "categorie": "facultative",
+          "points": {
+            "PSE-D1": 1
+          },
+          "retour": "Réponse attendue : Facultative."
+        },
+        {
+          "id": "garantie-casse-ecran",
+          "texte": "Garantie casse écran",
+          "categorie": "facultative",
+          "points": {
+            "PSE-D1": 1
+          },
+          "retour": "Réponse attendue : Facultative."
+        },
+        {
+          "id": "annulation-de-voyage",
+          "texte": "Annulation de voyage",
+          "categorie": "facultative",
+          "points": {
+            "PSE-D1": 1
+          },
+          "retour": "Réponse attendue : Facultative."
+        }
+      ]
+    },
+    {
+      "id": "ordre-3",
+      "type": "ordre",
+      "consigne": "Remettez dans l'ordre.",
+      "elements": [
+        {
+          "id": "tous-les-assures-paient-un",
+          "texte": "Tous les assurés paient une cotisation.",
+          "points": {
+            "PSE-D1": 1
+          }
+        },
+        {
+          "id": "l-assureur-reunit-l-argent",
+          "texte": "L'assureur réunit l'argent dans un pot commun.",
+          "points": {
+            "PSE-D1": 1
+          }
+        },
+        {
+          "id": "quelques-assures-subissent",
+          "texte": "Quelques assurés subissent un sinistre.",
+          "points": {
+            "PSE-D1": 1
+          }
+        },
+        {
+          "id": "l-assureur-les-indemnise",
+          "texte": "L'assureur les indemnise.",
+          "points": {
+            "PSE-D1": 1
+          }
+        }
+      ],
+      "retour": "Ordre repris de la séance S6-03."
+    },
+    {
+      "id": "selection-4",
+      "type": "selection",
+      "consigne": "Vrai ou faux ?",
+      "question": "Cochez les phrases vraies.",
+      "elements": [
+        {
+          "id": "l-assurance-du-locataire-e",
+          "texte": "L'assurance du locataire est obligatoire.",
+          "attendu": true,
+          "points": {
+            "PSE-D1": 1
+          },
+          "retour": "Vrai : Loi du 6 juillet 1989."
+        },
+        {
+          "id": "un-scooter-peut-rouler-san",
+          "texte": "Un scooter peut rouler sans assurance.",
+          "attendu": false,
+          "points": {
+            "PSE-D1": 1
+          },
+          "retour": "Faux : La responsabilité civile est obligatoire."
+        },
+        {
+          "id": "la-franchise-est-payee-par",
+          "texte": "La franchise est payée par l'assureur.",
+          "attendu": false,
+          "points": {
+            "PSE-D1": 1
+          },
+          "retour": "Faux : Elle reste à la charge de l'assuré."
+        },
+        {
+          "id": "une-exclusion-empeche-l-in",
+          "texte": "Une exclusion empêche l'indemnisation.",
+          "attendu": true,
+          "points": {
+            "PSE-D1": 1
+          },
+          "retour": "Vrai : La situation n'est pas couverte."
+        },
+        {
+          "id": "la-cotisation-est-rendue-s",
+          "texte": "La cotisation est rendue s'il n'y a pas de sinistre.",
+          "attendu": false,
+          "points": {
+            "PSE-D1": 1
+          },
+          "retour": "Faux : C'est le prix de la protection."
+        }
+      ]
+    },
+    {
+      "id": "qcm-5",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Sinistre de 900 €, franchise de 150 € : l'assuré reçoit…",
+      "options": [
+        {
+          "texte": "1 050 €"
+        },
+        {
+          "texte": "900 €"
+        },
+        {
+          "texte": "750 €",
+          "juste": true
+        }
+      ],
+      "points": {
+        "PSE-D1": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S6-03 si besoin."
+    },
+    {
+      "id": "qcm-6",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Le principe de l'assurance s'appelle…",
+      "options": [
+        {
+          "texte": "l'épargne"
+        },
+        {
+          "texte": "la mutualisation",
+          "juste": true
+        },
+        {
+          "texte": "le crédit"
+        }
+      ],
+      "points": {
+        "PSE-D1": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S6-03 si besoin."
+    },
+    {
+      "id": "qcm-7",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Vol sans effraction, contrat « vol avec effraction » :",
+      "options": [
+        {
+          "texte": "double indemnisation"
+        },
+        {
+          "texte": "pas d'indemnisation",
+          "juste": true
+        },
+        {
+          "texte": "indemnisation totale"
+        }
+      ],
+      "points": {
+        "PSE-D1": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S6-03 si besoin."
+    }
+  ],
+  "debriefing": [
+    "Quelle notion de cette séance avez-vous le mieux réussie ?",
+    "Quelle notion devez-vous revoir, et dans quel document du cours ?"
+  ]
+}

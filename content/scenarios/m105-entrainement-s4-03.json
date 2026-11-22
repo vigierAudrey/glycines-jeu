@@ -1,0 +1,335 @@
+{
+  "id": "m105-entrainement-s4-03",
+  "statut": "valide",
+  "discipline": "PSE",
+  "format": "entrainement",
+  "titre": "Les visites médicales",
+  "duree_min": 5,
+  "sequence_requise": "S4",
+  "lieu": "salon",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "PSE-C7",
+      "critere": "Énoncer les intérêts des visites médicales du salarié."
+    }
+  ],
+  "situation": "Entraînement rapide sur les notions de la séance S4-03 : Les visites médicales.",
+  "objectif_eleve": "Réviser les notions de la séance : répondre vite et juste, puis lire les corrections.",
+  "note_pour_audrey": "Entraînement généré pour la tâche Q.5 à partir de l'activité interactive de votre séance S4-03 (exercices repris tels quels, sans réécriture). Compétence : la compétence principale de la séance ; critère choisi par l'IA parmi les critères officiels de cette compétence (celui qui partage le plus de mots avec les exercices) : à vérifier.",
+  "etapes": [
+    {
+      "id": "association-1",
+      "type": "association",
+      "consigne": "Reliez chaque mot à sa définition.",
+      "paires": [
+        {
+          "id": "visite-d-information",
+          "terme": "visite d'information et de prévention",
+          "definition": "première visite après l'embauche",
+          "points": {
+            "PSE-C7": 1
+          }
+        },
+        {
+          "id": "suivi-individuel-ren",
+          "terme": "suivi individuel renforcé",
+          "definition": "suivi des postes à risques particuliers",
+          "points": {
+            "PSE-C7": 1
+          }
+        },
+        {
+          "id": "aptitude",
+          "terme": "aptitude",
+          "definition": "santé compatible avec le poste",
+          "points": {
+            "PSE-C7": 1
+          }
+        },
+        {
+          "id": "visite-de-reprise",
+          "terme": "visite de reprise",
+          "definition": "visite après un arrêt long",
+          "points": {
+            "PSE-C7": 1
+          }
+        },
+        {
+          "id": "visite-a-la-demande",
+          "terme": "visite à la demande",
+          "definition": "visite demandée par le salarié",
+          "points": {
+            "PSE-C7": 1
+          }
+        },
+        {
+          "id": "amenagement-de-poste",
+          "terme": "aménagement de poste",
+          "definition": "adaptation du travail proposée par le médecin",
+          "points": {
+            "PSE-C7": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "tri-2",
+      "type": "tri",
+      "consigne": "Classez chaque carte.",
+      "categories": [
+        {
+          "id": "information-et-preve",
+          "libelle": "Information et prévention"
+        },
+        {
+          "id": "periodique",
+          "libelle": "Périodique"
+        },
+        {
+          "id": "reprise",
+          "libelle": "Reprise"
+        },
+        {
+          "id": "a-la-demande",
+          "libelle": "À la demande"
+        }
+      ],
+      "elements": [
+        {
+          "id": "je-viens-d-etre-embauche-e",
+          "texte": "Je viens d'être embauché(e)",
+          "categorie": "information-et-preve",
+          "points": {
+            "PSE-C7": 1
+          },
+          "retour": "Réponse attendue : Information et prévention."
+        },
+        {
+          "id": "j-ai-moins-de-18-ans-et-je",
+          "texte": "J'ai moins de 18 ans et je commence",
+          "categorie": "information-et-preve",
+          "points": {
+            "PSE-C7": 1
+          },
+          "retour": "Réponse attendue : Information et prévention."
+        },
+        {
+          "id": "je-travaille-au-meme-poste",
+          "texte": "Je travaille au même poste depuis 4 ans",
+          "categorie": "periodique",
+          "points": {
+            "PSE-C7": 1
+          },
+          "retour": "Réponse attendue : Périodique."
+        },
+        {
+          "id": "le-medecin-fixe-un-rendez-",
+          "texte": "Le médecin fixe un rendez-vous de suivi",
+          "categorie": "periodique",
+          "points": {
+            "PSE-C7": 1
+          },
+          "retour": "Réponse attendue : Périodique."
+        },
+        {
+          "id": "je-reprends-apres-2-mois-d",
+          "texte": "Je reprends après 2 mois de maladie",
+          "categorie": "reprise",
+          "points": {
+            "PSE-C7": 1
+          },
+          "retour": "Réponse attendue : Reprise."
+        },
+        {
+          "id": "je-reprends-apres-un-conge",
+          "texte": "Je reprends après un congé maternité",
+          "categorie": "reprise",
+          "points": {
+            "PSE-C7": 1
+          },
+          "retour": "Réponse attendue : Reprise."
+        },
+        {
+          "id": "j-ai-mal-au-dos-et-je-veux",
+          "texte": "J'ai mal au dos et je veux en parler",
+          "categorie": "a-la-demande",
+          "points": {
+            "PSE-C7": 1
+          },
+          "retour": "Réponse attendue : À la demande."
+        },
+        {
+          "id": "je-m-inquiete-pour-ma-sant",
+          "texte": "Je m'inquiète pour ma santé au travail",
+          "categorie": "a-la-demande",
+          "points": {
+            "PSE-C7": 1
+          },
+          "retour": "Réponse attendue : À la demande."
+        }
+      ]
+    },
+    {
+      "id": "ordre-3",
+      "type": "ordre",
+      "consigne": "Remettez dans l'ordre.",
+      "elements": [
+        {
+          "id": "embauche-aux-glycines",
+          "texte": "Embauche aux Glycines.",
+          "points": {
+            "PSE-C7": 1
+          }
+        },
+        {
+          "id": "visite-d-information-et-de",
+          "texte": "Visite d'information et de prévention, dans les 3 mois.",
+          "points": {
+            "PSE-C7": 1
+          }
+        },
+        {
+          "id": "visites-periodiques-au-plu",
+          "texte": "Visites périodiques, au plus tous les 5 ans.",
+          "points": {
+            "PSE-C7": 1
+          }
+        },
+        {
+          "id": "visite-de-reprise-apres-un",
+          "texte": "Visite de reprise après un arrêt long, si besoin.",
+          "points": {
+            "PSE-C7": 1
+          }
+        }
+      ],
+      "retour": "Ordre repris de la séance S4-03."
+    },
+    {
+      "id": "selection-4",
+      "type": "selection",
+      "consigne": "Vrai ou faux ?",
+      "question": "Cochez les phrases vraies.",
+      "elements": [
+        {
+          "id": "la-premiere-visite-a-lieu-",
+          "texte": "La première visite a lieu dans les 3 mois après l'embauche.",
+          "attendu": true,
+          "points": {
+            "PSE-C7": 1
+          },
+          "retour": "Vrai : Avant l'affectation pour un salarié de moins de 18 ans."
+        },
+        {
+          "id": "l-employeur-connait-le-con",
+          "texte": "L'employeur connaît le contenu de l'entretien médical.",
+          "attendu": false,
+          "points": {
+            "PSE-C7": 1
+          },
+          "retour": "Faux : Il ne reçoit qu'une attestation ou un avis."
+        },
+        {
+          "id": "un-salarie-peut-demander-a",
+          "texte": "Un salarié peut demander à voir le médecin du travail.",
+          "attendu": true,
+          "points": {
+            "PSE-C7": 1
+          },
+          "retour": "Vrai : C'est la visite à la demande."
+        },
+        {
+          "id": "la-visite-medicale-ne-sert",
+          "texte": "La visite médicale ne sert à rien si l'on n'est pas malade.",
+          "attendu": false,
+          "points": {
+            "PSE-C7": 1
+          },
+          "retour": "Faux : Elle prévient et dépiste tôt les atteintes."
+        },
+        {
+          "id": "apres-30-jours-d-arret-pou",
+          "texte": "Après 30 jours d'arrêt pour accident du travail, la visite de reprise est obligatoire.",
+          "attendu": true,
+          "points": {
+            "PSE-C7": 1
+          },
+          "retour": "Vrai : Code du travail, R. 4624-31."
+        }
+      ]
+    },
+    {
+      "id": "qcm-5",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Dans quel délai a lieu la visite d'information et de prévention ?",
+      "options": [
+        {
+          "texte": "Jamais"
+        },
+        {
+          "texte": "3 mois",
+          "juste": true
+        },
+        {
+          "texte": "3 ans"
+        }
+      ],
+      "points": {
+        "PSE-C7": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S4-03 si besoin."
+    },
+    {
+      "id": "qcm-6",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Au plus tous les combien est-elle renouvelée ?",
+      "options": [
+        {
+          "texte": "20 ans"
+        },
+        {
+          "texte": "5 ans",
+          "juste": true
+        },
+        {
+          "texte": "10 ans"
+        }
+      ],
+      "points": {
+        "PSE-C7": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S4-03 si besoin."
+    },
+    {
+      "id": "qcm-7",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Après 10 jours d'arrêt pour accident du travail, la visite de reprise est…",
+      "options": [
+        {
+          "texte": "obligatoire"
+        },
+        {
+          "texte": "pas obligatoire",
+          "juste": true
+        },
+        {
+          "texte": "interdite"
+        }
+      ],
+      "points": {
+        "PSE-C7": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S4-03 si besoin."
+    }
+  ],
+  "debriefing": [
+    "Quelle notion de cette séance avez-vous le mieux réussie ?",
+    "Quelle notion devez-vous revoir, et dans quel document du cours ?"
+  ]
+}

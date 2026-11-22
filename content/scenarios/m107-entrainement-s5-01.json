@@ -1,0 +1,309 @@
+{
+  "id": "m107-entrainement-s5-01",
+  "statut": "valide",
+  "discipline": "PSE",
+  "format": "entrainement",
+  "titre": "Une nuit de sommeil : cycles, phases et rôles",
+  "duree_min": 5,
+  "sequence_requise": "S5",
+  "lieu": "salon",
+  "personnages": [
+    "joueur"
+  ],
+  "competences": [
+    {
+      "code": "PSE-A2",
+      "critere": "Présenter les rôles du sommeil."
+    }
+  ],
+  "situation": "Entraînement rapide sur les notions de la séance S5-01 : Une nuit de sommeil : cycles, phases et rôles.",
+  "objectif_eleve": "Réviser les notions de la séance : répondre vite et juste, puis lire les corrections.",
+  "note_pour_audrey": "Entraînement généré pour la tâche Q.5 à partir de l'activité interactive de votre séance S5-01 (exercices repris tels quels, sans réécriture). Compétence : la compétence principale de la séance ; critère choisi par l'IA parmi les critères officiels de cette compétence (celui qui partage le plus de mots avec les exercices) : à vérifier.",
+  "etapes": [
+    {
+      "id": "association-1",
+      "type": "association",
+      "consigne": "Reliez chaque mot à sa définition.",
+      "paires": [
+        {
+          "id": "rythme-circadien",
+          "terme": "rythme circadien",
+          "definition": "rythme d'environ 24 heures",
+          "points": {
+            "PSE-A2": 1
+          }
+        },
+        {
+          "id": "melatonine",
+          "terme": "mélatonine",
+          "definition": "hormone qui favorise l'endormissement",
+          "points": {
+            "PSE-A2": 1
+          }
+        },
+        {
+          "id": "cycle-du-sommeil",
+          "terme": "cycle du sommeil",
+          "definition": "suite des phases, environ 90 minutes",
+          "points": {
+            "PSE-A2": 1
+          }
+        },
+        {
+          "id": "rythme-biologique",
+          "terme": "rythme biologique",
+          "definition": "phénomène du corps qui se répète régulièrement",
+          "points": {
+            "PSE-A2": 1
+          }
+        },
+        {
+          "id": "recuperation-physiqu",
+          "terme": "récupération physique",
+          "definition": "réparation du corps pendant le sommeil",
+          "points": {
+            "PSE-A2": 1
+          }
+        },
+        {
+          "id": "recuperation-mentale",
+          "terme": "récupération mentale",
+          "definition": "tri des souvenirs et apaisement des émotions",
+          "points": {
+            "PSE-A2": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "tri-2",
+      "type": "tri",
+      "consigne": "Classez chaque carte.",
+      "categories": [
+        {
+          "id": "sommeil-lent-profond",
+          "libelle": "Sommeil lent profond"
+        },
+        {
+          "id": "sommeil-paradoxal",
+          "libelle": "Sommeil paradoxal"
+        }
+      ],
+      "elements": [
+        {
+          "id": "reparation-des-muscles-et-",
+          "texte": "Réparation des muscles et des tissus",
+          "categorie": "sommeil-lent-profond",
+          "points": {
+            "PSE-A2": 1
+          },
+          "retour": "Réponse attendue : Sommeil lent profond."
+        },
+        {
+          "id": "defenses-renforcees",
+          "texte": "Défenses renforcées",
+          "categorie": "sommeil-lent-profond",
+          "points": {
+            "PSE-A2": 1
+          },
+          "retour": "Réponse attendue : Sommeil lent profond."
+        },
+        {
+          "id": "le-corps-est-tres-difficil",
+          "texte": "Le corps est très difficile à réveiller",
+          "categorie": "sommeil-lent-profond",
+          "points": {
+            "PSE-A2": 1
+          },
+          "retour": "Réponse attendue : Sommeil lent profond."
+        },
+        {
+          "id": "tri-des-souvenirs-de-la-jo",
+          "texte": "Tri des souvenirs de la journée",
+          "categorie": "sommeil-paradoxal",
+          "points": {
+            "PSE-A2": 1
+          },
+          "retour": "Réponse attendue : Sommeil paradoxal."
+        },
+        {
+          "id": "reves-et-gestion-des-emoti",
+          "texte": "Rêves et gestion des émotions",
+          "categorie": "sommeil-paradoxal",
+          "points": {
+            "PSE-A2": 1
+          },
+          "retour": "Réponse attendue : Sommeil paradoxal."
+        },
+        {
+          "id": "le-cerveau-est-tres-actif",
+          "texte": "Le cerveau est très actif",
+          "categorie": "sommeil-paradoxal",
+          "points": {
+            "PSE-A2": 1
+          },
+          "retour": "Réponse attendue : Sommeil paradoxal."
+        }
+      ]
+    },
+    {
+      "id": "ordre-3",
+      "type": "ordre",
+      "consigne": "Remettez dans l'ordre.",
+      "elements": [
+        {
+          "id": "endormissement",
+          "texte": "Endormissement",
+          "points": {
+            "PSE-A2": 1
+          }
+        },
+        {
+          "id": "sommeil-lent-leger",
+          "texte": "Sommeil lent léger",
+          "points": {
+            "PSE-A2": 1
+          }
+        },
+        {
+          "id": "sommeil-lent-profond",
+          "texte": "Sommeil lent profond",
+          "points": {
+            "PSE-A2": 1
+          }
+        },
+        {
+          "id": "sommeil-paradoxal",
+          "texte": "Sommeil paradoxal",
+          "points": {
+            "PSE-A2": 1
+          }
+        }
+      ],
+      "retour": "Ordre repris de la séance S5-01."
+    },
+    {
+      "id": "selection-4",
+      "type": "selection",
+      "consigne": "Vrai ou faux ?",
+      "question": "Cochez les phrases vraies.",
+      "elements": [
+        {
+          "id": "une-nuit-compte-plusieurs-",
+          "texte": "Une nuit compte plusieurs cycles de sommeil.",
+          "attendu": true,
+          "points": {
+            "PSE-A2": 1
+          },
+          "retour": "Vrai : 3 à 6 cycles d'environ 90 minutes."
+        },
+        {
+          "id": "la-lumiere-des-ecrans-aide",
+          "texte": "La lumière des écrans aide à s'endormir.",
+          "attendu": false,
+          "points": {
+            "PSE-A2": 1
+          },
+          "retour": "Faux : Elle freine la mélatonine."
+        },
+        {
+          "id": "le-sommeil-profond-domine-",
+          "texte": "Le sommeil profond domine en fin de nuit.",
+          "attendu": false,
+          "points": {
+            "PSE-A2": 1
+          },
+          "retour": "Faux : Il domine en début de nuit."
+        },
+        {
+          "id": "le-sommeil-paradoxal-aide-",
+          "texte": "Le sommeil paradoxal aide la mémoire.",
+          "attendu": true,
+          "points": {
+            "PSE-A2": 1
+          },
+          "retour": "Vrai : Le cerveau trie les souvenirs."
+        },
+        {
+          "id": "le-rythme-circadien-dure-e",
+          "texte": "Le rythme circadien dure environ 24 heures.",
+          "attendu": true,
+          "points": {
+            "PSE-A2": 1
+          },
+          "retour": "Vrai : Il suit l'alternance jour et nuit."
+        }
+      ]
+    },
+    {
+      "id": "qcm-5",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Combien dure environ un cycle de sommeil ?",
+      "options": [
+        {
+          "texte": "90 minutes",
+          "juste": true
+        },
+        {
+          "texte": "5 heures"
+        },
+        {
+          "texte": "10 minutes"
+        }
+      ],
+      "points": {
+        "PSE-A2": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S5-01 si besoin."
+    },
+    {
+      "id": "qcm-6",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Quelle hormone favorise l'endormissement ?",
+      "options": [
+        {
+          "texte": "La mélatonine",
+          "juste": true
+        },
+        {
+          "texte": "L'insuline"
+        },
+        {
+          "texte": "L'adrénaline"
+        }
+      ],
+      "points": {
+        "PSE-A2": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S5-01 si besoin."
+    },
+    {
+      "id": "qcm-7",
+      "type": "qcm",
+      "consigne": "Choisissez la bonne réponse.",
+      "question": "Quand le cerveau fabrique-t-il la mélatonine ?",
+      "options": [
+        {
+          "texte": "Dans l'obscurité",
+          "juste": true
+        },
+        {
+          "texte": "Jamais"
+        },
+        {
+          "texte": "En pleine lumière"
+        }
+      ],
+      "points": {
+        "PSE-A2": 1
+      },
+      "retour": "À revoir dans la trace écrite de la séance S5-01 si besoin."
+    }
+  ],
+  "debriefing": [
+    "Quelle notion de cette séance avez-vous le mieux réussie ?",
+    "Quelle notion devez-vous revoir, et dans quel document du cours ?"
+  ]
+}
