@@ -1,0 +1,135 @@
+{
+  "note": "Mots du métier qui se touchent dans les textes des missions (tâche P.16). Chaque définition est reprise mot pour mot de la rubrique « Lexique » de la séance indiquée dans « source ». Les termes médicaux ne sont pas repris. À valider par Audrey.",
+  "mots": [
+    {
+      "mot": "Accessibilité",
+      "definition": "Possibilité d'atteindre et d'utiliser facilement un objet.",
+      "source": "S5-07"
+    },
+    {
+      "mot": "Adhésion",
+      "definition": "Accord recherché auprès de la personne après une information compréhensible.",
+      "source": "S3-02"
+    },
+    {
+      "mot": "Arbitrage",
+      "definition": "Recherche d'une solution quand les souhaits diffèrent.",
+      "source": "S5-07"
+    },
+    {
+      "mot": "Changement inhabituel",
+      "definition": "Modification nouvelle ou différente des habitudes de la personne.",
+      "source": "S1-05"
+    },
+    {
+      "mot": "Déambulateur",
+      "definition": "Cadre de marche apportant plusieurs points d’appui ; son modèle et son réglage doivent être adaptés à la personne.",
+      "source": "S4-02"
+    },
+    {
+      "mot": "Détergent",
+      "definition": "Produit destiné à décoller et éliminer des salissures selon ses conditions d’emploi.",
+      "source": "S3-06"
+    },
+    {
+      "mot": "Détergent-désinfectant",
+      "definition": "Produit combinant nettoyage et action désinfectante uniquement dans les conditions validées sur sa fiche.",
+      "source": "S3-06"
+    },
+    {
+      "mot": "Effet personnel",
+      "definition": "Objet appartenant à la personne et relevant de sa vie privée.",
+      "source": "S2-04"
+    },
+    {
+      "mot": "Entretien journalier",
+      "definition": "Entretien courant réalisé selon la fréquence prévue pour maintenir la propreté des espaces utilisés.",
+      "source": "S3-01"
+    },
+    {
+      "mot": "Intimité",
+      "definition": "Espace physique et personnel protégé du regard et des intrusions, selon le souhait de la personne.",
+      "source": "S4-07"
+    },
+    {
+      "mot": "Lien affectif",
+      "definition": "Relation importante entretenue avec un proche ou une personne choisie.",
+      "source": "S2-04"
+    },
+    {
+      "mot": "Lit médicalisé",
+      "definition": "Lit réglable doté de fonctions facilitant le confort, la sécurité et certaines interventions.",
+      "source": "S3-02"
+    },
+    {
+      "mot": "Lève-personne",
+      "definition": "Appareil équipé d’une sangle permettant de transférer une personne qui ne porte pas son poids, selon la notice et le protocole de la structure.",
+      "source": "S4-02"
+    },
+    {
+      "mot": "Personnalisation",
+      "definition": "Adaptation de l’espace aux choix, goûts, besoins et capacités de la personne.",
+      "source": "S2-04"
+    },
+    {
+      "mot": "Plan d’entretien",
+      "definition": "Document qui précise zones, fréquences, techniques, produits, responsabilités et traçabilité.",
+      "source": "S3-07"
+    },
+    {
+      "mot": "Projet de vie",
+      "definition": "Projet individuel construit avec la personne à partir de ses habitudes, besoins et souhaits.",
+      "source": "S1-03"
+    },
+    {
+      "mot": "Protocole",
+      "definition": "Document de l’établissement qui indique le matériel, les produits et les étapes à respecter.",
+      "source": "S2-08"
+    },
+    {
+      "mot": "Pudeur",
+      "definition": "Besoin de protéger son corps, son intimité et son exposition au regard d’autrui.",
+      "source": "S4-05"
+    },
+    {
+      "mot": "Relais",
+      "definition": "Professionnel ou service compétent à solliciter.",
+      "source": "S1-02"
+    },
+    {
+      "mot": "Secret professionnel",
+      "definition": "Obligation de protéger les informations confidentielles connues dans sa fonction.",
+      "source": "S2-06"
+    },
+    {
+      "mot": "Seuil d’alerte",
+      "definition": "Quantité restante à partir de laquelle l’article doit être signalé.",
+      "source": "S2-10"
+    },
+    {
+      "mot": "Source fiable",
+      "definition": "Information identifiable, datée, pertinente et vérifiable.",
+      "source": "S1-01"
+    },
+    {
+      "mot": "Temps de contact",
+      "definition": "Durée pendant laquelle un produit doit rester sur la surface selon son étiquette ou sa fiche technique pour obtenir l’effet annoncé.",
+      "source": "S3-03"
+    },
+    {
+      "mot": "Transmission factuelle",
+      "definition": "Message précis décrivant l’observation, le contexte et l’action sans supposition ni diagnostic.",
+      "source": "S3-04"
+    },
+    {
+      "mot": "Traçabilité",
+      "definition": "Trace datée permettant de retrouver une action ou une information.",
+      "source": "S1-07"
+    },
+    {
+      "mot": "Tutelle",
+      "definition": "Mesure dans laquelle la personne peut être représentée pour certains actes.",
+      "source": "S1-04"
+    }
+  ]
+}

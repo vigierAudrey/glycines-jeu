@@ -282,10 +282,18 @@ export interface Mission {
   [autre: string]: unknown; // champs libres (notes pour l'enseignante…)
 }
 
+/** Mot du métier défini dans les cours (rubrique « Lexique » d'une séance). */
+export interface EntreeLexique {
+  mot: string;
+  definition: string; // mot pour mot depuis le cours
+  source: string; // séance, ex. « S2-10 »
+}
+
 export interface Contenu {
   referentiel: Referentiel;
   lieux: Lieu[];
   residents: Resident[];
   personnel: MembrePersonnel[];
   missions: Mission[];
+  lexique?: EntreeLexique[]; // mots du métier qui se touchent dans les textes (P.16)
 }

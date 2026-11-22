@@ -101,6 +101,12 @@ racine.innerHTML = `
   </section>
 
   <section>
+    <h2>Lexique du métier (${contenu.lexique?.length ?? 0} mots touchables dans les missions)</h2>
+    <p class="meta">Définitions reprises mot pour mot des rubriques « Lexique » des séances. Fichier : content/lexique.json.</p>
+    <ul>${(contenu.lexique ?? []).map((l) => `<li><strong>${echapper(l.mot)}</strong> : ${echapper(l.definition)} <span class="meta">(${echapper(l.source)})</span></li>`).join('')}</ul>
+  </section>
+
+  <section>
     <h2>Missions (${missions.length})</h2>
     ${missions.map(missionEnHtml).join('')}
   </section>`;

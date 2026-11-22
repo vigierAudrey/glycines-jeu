@@ -110,7 +110,8 @@ Règle commune : toute nouvelle activité s'appuie sur une situation réelle des
 ### Aider les élèves qui lisent difficilement
 
 - [x] **P.15** Pictogrammes sur les choix (agir, adapter, alerter) et sur les métiers à rejoindre pour un relais.
-- [ ] **P.16** Lexique du métier : les mots clés des textes (« transmission », « projet de vie »…) se touchent et ouvrent une définition courte, tirée des cours. 🧑‍🏫 Audrey valide les définitions.
+- [x] **P.16** Lexique du métier : les mots clés des textes (« transmission », « projet de vie »…) se touchent et ouvrent une définition courte, tirée des cours. 🧑‍🏫 Audrey valide les définitions.
+  Fait : `content/lexique.json`, 26 mots repris mot pour mot des rubriques « Lexique » des séances (termes médicaux exclus). Reste pour Audrey : relire la liste (page enseignante).
 - [ ] **P.17** Aide en arabe : voir 5.3 (consignes et lexique d'abord).
 
 ## Phase 5 · Extensions

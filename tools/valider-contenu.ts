@@ -21,6 +21,7 @@ export function lireContenuDepuisDisque(racine = 'content'): Contenu {
     residents: lire('personnages/residents.json').residents,
     personnel: lire('personnages/personnel.json').personnel,
     missions: lireDossier('scenarios'),
+    lexique: lire('lexique.json').mots,
   };
 }
 

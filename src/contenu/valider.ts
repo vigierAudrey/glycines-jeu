@@ -29,6 +29,16 @@ export function validerContenu(contenu: Contenu): Probleme[] {
     if (c.criteres_officiels.length === 0) signaler('referentiel', `${c.code} n'a aucun critère officiel.`);
   }
 
+  // ---------- Lexique ----------
+  const motsVus = new Set<string>();
+  for (const l of contenu.lexique ?? []) {
+    const cle = l.mot?.toLowerCase();
+    if (!cle || motsVus.has(cle)) signaler('lexique', `Mot « ${l.mot} » manquant ou en double.`);
+    motsVus.add(cle);
+    if (!l.definition?.trim()) signaler('lexique', `« ${l.mot} » : définition manquante.`);
+    if (!/^S[1-7]-\d{2}$/.test(l.source ?? '')) signaler('lexique', `« ${l.mot} » : source « ${l.source} » attendue sous la forme S2-10.`);
+  }
+
   // ---------- Lieux ----------
   const idsZones = new Set<string>();
   for (const lieu of contenu.lieux) {

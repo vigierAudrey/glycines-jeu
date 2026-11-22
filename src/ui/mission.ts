@@ -14,6 +14,7 @@ import { melanger, melangerSansOrdreDeDepart } from '../regles/hasard';
 import { tirerVariante } from '../regles/variantes';
 import type { Rappel } from '../regles/consequences';
 import { comparerEstimation, PHRASES_ECART } from '../regles/positionnement';
+import { decouperAvecLexique } from '../regles/lexique';
 import { echapper } from './echapper';
 
 /** Ce que l'interface des missions demande au reste du jeu (main.ts fait le lien avec la 3D). */
@@ -63,6 +64,12 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
     ...contenu.personnel.map((p): [string, string] => [p.id, p.joueur ? 'Vous' : `${p.prenom} (${p.sigle})`]),
   ]);
   const residents = new Set(contenu.residents.map((r) => r.id));
+  // Lexique (P.16) : les mots du métier deviennent des boutons qui ouvrent leur définition (tirée des cours).
+  const lexique = contenu.lexique ?? [];
+  const avecLexique = (texte: string) =>
+    decouperAvecLexique(texte, lexique)
+      .map((m) => (m.entree ? `<button type="button" class="mot" data-mot="${echapper(m.entree.mot)}">${echapper(m.texte)}</button>` : echapper(m.texte)))
+      .join('');
 
   // ---------- Éléments HTML ----------
   const panneau = document.createElement('section');
@@ -182,7 +189,7 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
       }
       case 'decision':
         return `
-          <p class="question a-lire">${echapper(e.question)}</p>
+          <p class="question a-lire">${avecLexique(e.question)}</p>
           ${dansLOrdreTire(e.id, e.choix).map(({ el: o, i }) => `
             <button type="button" class="choix choix--decision" data-decision="${i}">
               <span class="badge badge--${o.decision}"><span aria-hidden="true">${PICTOS_DECISION[o.decision]}</span> ${NOMS_DECISION[o.decision]}</span> ${echapper(o.texte)}
@@ -222,7 +229,7 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
       }
       case 'selection':
         return `
-          <p class="question a-lire">${echapper(e.question)}</p>
+          <p class="question a-lire">${avecLexique(e.question)}</p>
           ${dansLOrdreTire(e.id, e.elements).map(({ el }) => `
             <button type="button" class="choix choix--coche" aria-pressed="${choisis.has(el.id)}" data-selection="${echapper(el.id)}">
               <span class="coche" aria-hidden="true">${choisis.has(el.id) ? '☑' : '☐'}</span>
@@ -268,8 +275,8 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
         <h2 class="panneau__titre a-lire">${echapper(mission.titre)}</h2>
         ${rappels.length ? `<div class="pourquoi"><p class="pourquoi__titre a-lire">📌 Depuis vos dernières missions :</p>
           <ul>${rappels.map((r) => `<li class="a-lire"><strong>${echapper(r.titre)}</strong> : ${echapper(r.texte)}</li>`).join('')}</ul></div>` : ''}
-        <p class="a-lire">${echapper(mission.situation)}</p>
-        <p class="objectif a-lire"><strong>Votre objectif :</strong> ${echapper(mission.objectif_eleve)}</p>
+        <p class="a-lire">${avecLexique(mission.situation)}</p>
+        <p class="objectif a-lire"><strong>Votre objectif :</strong> ${avecLexique(mission.objectif_eleve)}</p>
         <details class="estimation">
           <summary>Avant de commencer : où vous situez-vous ? (facultatif)</summary>
           ${mission.competences.map((c) => `
@@ -290,7 +297,7 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
     } else if (phase === 'retour') {
       corps = `
         <p class="retour ${reussi ? 'retour--bien' : 'retour--erreur'} a-lire">${reussi ? 'Bien joué.' : 'À retenir :'}</p>
-        <ul class="retours">${retours.map((r) => `<li class="a-lire">${echapper(r)}</li>`).join('')}</ul>
+        <ul class="retours">${retours.map((r) => `<li class="a-lire">${avecLexique(r)}</li>`).join('')}</ul>
         ${criteresARevoir()}
         <button type="button" class="bouton bouton--principal" data-action="continuer">${etat.etape ? 'Continuer' : 'Voir la relève'}</button>`;
     } else if (e) {
@@ -298,7 +305,7 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
         ? `<div class="document"><p class="document__titre a-lire">📋 ${echapper(e.document.titre)}</p>
              <ul>${e.document.lignes.map((l) => `<li class="a-lire">${echapper(l)}</li>`).join('')}</ul></div>`
         : '';
-      corps = `${doc}<p class="consigne a-lire">${echapper(e.consigne)}</p>${contenuEtape(e)}`;
+      corps = `${doc}<p class="consigne a-lire">${avecLexique(e.consigne)}</p>${contenuEtape(e)}`;
     }
     panneau.innerHTML = `
       <div class="panneau__haut">
@@ -408,6 +415,23 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
     if (!cible || !mission || !etat) return;
     const e = etape();
     const d = cible.dataset;
+    if (d.mot) {
+      // La définition s'ouvre sous la phrase, sans redessiner le panneau (on garde ses choix et sa lecture).
+      const deja = panneau.querySelector<HTMLElement>('.definition');
+      const memeMot = deja?.dataset.mot === d.mot;
+      deja?.remove();
+      const entree = lexique.find((l) => l.mot === d.mot);
+      if (!entree || memeMot) return;
+      const def = document.createElement('p');
+      def.className = 'definition a-lire';
+      def.dataset.mot = entree.mot;
+      def.setAttribute('role', 'note');
+      def.innerHTML = `📖 <strong>${echapper(entree.mot)}</strong> : ${echapper(entree.definition)} <span class="definition__source">(cours ${echapper(entree.source)})</span>`;
+      const hote = cible.closest('p, li');
+      if (hote?.tagName === 'LI') hote.append(def);
+      else (hote ?? cible).after(def);
+      return;
+    }
     if (d.estimer && d.niveau) {
       estimations[d.estimer] = d.niveau as Niveau;
       afficher();

@@ -274,3 +274,9 @@ Trois lignes par session : ce qui a été fait, ce qui reste à surveiller, la p
 - **Fait** : ✋ Agir, 🔄 Adapter, 📣 Alerter sur les choix ; un pictogramme par métier (🩺 infirmière, 🤝 aide-soignante, 📋 cadre, 🧹 ASH, 🎨 animatrice) dans « Qui est qui ? », la bulle et pendant un relais (liste des métiers). Emojis du système : aucune dépendance. `pnpm verifier` OK.
 - **À surveiller** : le rendu des emojis varie selon le téléphone.
 - **Prochaine tâche** : P.16 (lexique du métier).
+
+## 22/11/2026 · Lexique du métier (tâche P.16)
+
+- **Fait** : 26 mots du métier (projet de vie, tutelle, protocole, seuil d'alerte, intimité…) se touchent dans les textes des missions et ouvrent leur définition, reprise mot pour mot de la rubrique « Lexique » de la séance (source affichée). Liste complète sur la page enseignante. 3 tests, `pnpm verifier` OK (118 tests).
+- **À surveiller** : termes médicaux volontairement exclus ; Audrey relit la liste.
+- **Prochaine tâche** : P.17 (aide en arabe, voir 5.3).
