@@ -490,3 +490,9 @@ Trois lignes par session : ce qui a été fait, ce qui reste à surveiller, la p
 - **Fait** : `m134` (S4-03) et `m135` (S3-05, S3-02), critères ajoutés à `m125` et `m129`. Le Bloc 2 cite les 71 critères du référentiel ; la Phase 4 ter est terminée (18 missions, `m118` à `m135`, en brouillon). `pnpm verifier` OK (235 tests).
 - **À surveiller** : les 18 nouvelles missions sont à valider par Audrey.
 - **Prochaine tâche** : 5.2 (Bloc 1).
+
+## 23/11/2026 · Validation des missions m118 à m135
+
+- **Fait** : Audrey valide les 18 missions de la Phase 4 ter, passées en statut `valide` ; publication demandée.
+- **À surveiller** : premiers retours des élèves sur les nouvelles missions.
+- **Prochaine tâche** : 5.2 (Bloc 1), en attente des cours.
