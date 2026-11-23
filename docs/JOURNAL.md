@@ -496,3 +496,9 @@ Trois lignes par session : ce qui a été fait, ce qui reste à surveiller, la p
 - **Fait** : Audrey valide les 18 missions de la Phase 4 ter, passées en statut `valide` ; publication demandée.
 - **À surveiller** : premiers retours des élèves sur les nouvelles missions.
 - **Prochaine tâche** : 5.2 (Bloc 1), en attente des cours.
+
+## 23/11/2026 · Page enseignante et mode classe
+
+- **Fait** : page enseignante rangée comme le jeu, fiches repliables, liens « Ouvrir » et « Copier » par séquence, boutons « Jouer » et « La projeter » sur chaque fiche ; mode classe tout ouvert ; lien `?mission=` (D-035). Vérifié à 390 px et sur ordinateur.
+- **À surveiller** : retour d'Audrey en classe.
+- **Prochaine tâche** : 5.2 (Bloc 1), en attente des cours.

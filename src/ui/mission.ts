@@ -50,6 +50,8 @@ export interface InterfaceMission {
   personneTouchee: (id: string) => boolean;
   /** Ouvre la liste des missions (`accueil` : avec le mot de bienvenue). */
   ouvrirListe: (accueil?: boolean) => void;
+  /** Lance directement une mission (lien de la page enseignante : index.html?mission=m12). Renvoie false si elle n'existe pas. */
+  ouvrirMission: (id: string) => boolean;
 }
 
 const CANAUX = [
@@ -590,13 +592,14 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
   let accueilEnCours = false;
   const carteMission = (m: Mission, sequenceVue: string) => {
     const niveaux = liens.niveauxObtenus?.(m.id);
-    const ouverte = estDebloquee(m, sequenceVue);
+    // Mode classe : l'enseignante projette le jeu, toutes les missions sont ouvertes.
+    const ouverte = liens.modeClasse || estDebloquee(m, sequenceVue);
     const pse = m.discipline === 'PSE';
     return `
           <li>
             <button type="button" class="carte-mission" data-mission="${echapper(m.id)}" ${ouverte ? '' : 'disabled'}>
               <strong>${ouverte ? '' : '🔒 '}${echapper(m.titre)}</strong>
-              <span>${m.duree_min} min · ${pse ? `séquence ${echapper(m.sequence_requise)} de PSE` : ouverte ? `séquence ${echapper(m.sequence_requise)}` : `après la séquence ${echapper(m.sequence_requise)}`}${m.statut === 'brouillon' ? ' · <em>brouillon</em>' : ''}</span>
+              <span>${m.duree_min} min · ${pse ? `séquence ${echapper(m.sequence_requise)} de PSE` : ouverte ? `séquence ${echapper(m.sequence_requise)}` : `s'ouvre quand « Séquence vue en cours » est sur ${echapper(m.sequence_requise)}`}${m.statut === 'brouillon' ? ' · <em>brouillon</em>' : ''}</span>
               ${niveaux ? `<span class="niveaux">Dernière relève : ${echapper(niveaux)}</span>` : ''}
             </button>
           </li>`;
@@ -645,12 +648,13 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
       const titreFamille = familles.find((f) => f.prefixe === famille)?.titre;
       ouvrirFenetre(`${haut}
       ${onglets}
-      ${matiere === 'bloc2' ? `<label class="choix-sequence">Séquence vue en cours
+      ${matiere === 'bloc2' && liens.modeClasse ? '<p class="indice">Mode classe : toutes les missions sont ouvertes.</p>' : ''}
+      ${matiere === 'bloc2' && !liens.modeClasse ? `<label class="choix-sequence">Séquence vue en cours
         <select name="sequence">
           ${SEQUENCES.map((s) => `<option ${s === sequenceVue ? 'selected' : ''}>${s}</option>`).join('')}
         </select>
-      </label>
-      <div class="familles" role="group" aria-label="Type d'action">
+      </label>` : ''}
+      ${matiere === 'bloc2' ? `<div class="familles" role="group" aria-label="Type d'action">
         <button type="button" class="famille" aria-pressed="${famille === null}" data-famille="">Toutes <span class="famille__nombre">${bloc2.length}</span></button>
         ${familles.map((f) => `<button type="button" class="famille" aria-pressed="${famille === f.prefixe}" data-famille="${echapper(f.prefixe)}">${echapper(f.court)} <span class="famille__nombre">${bloc2.filter((m) => dansFamille(m, f.prefixe)).length}</span></button>`).join('')}
       </div>
@@ -859,5 +863,13 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
       return true;
     },
     ouvrirListe,
+    ouvrirMission: (id) => {
+      const m = contenu.missions.find((x) => x.id === id || x.id.startsWith(`${id}-`));
+      if (!m) return false;
+      matiere = m.discipline === 'PSE' ? 'pse' : 'bloc2';
+      formatListe = m.format === 'entrainement' ? 'entrainements' : 'missions';
+      commencer(m);
+      return true;
+    },
   };
 }

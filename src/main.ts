@@ -112,8 +112,10 @@ ecouterTouchers(theatre, personnages.children, ({ personnage, sol }) => {
   if (sol && allerVers) allerVers(sol.x, sol.z);
 });
 
-// Au lancement, l'écran d'accueil propose les missions.
-missions.ouvrirListe(true);
+// Au lancement, l'écran d'accueil propose les missions, sauf si le lien de la page enseignante désigne une mission
+// (index.html?mission=m12) : elle démarre directement.
+const missionDemandee = new URLSearchParams(location.search).get('mission');
+if (!missionDemandee || !missions.ouvrirMission(missionDemandee)) missions.ouvrirListe(true);
 
 // Version publiée : un service worker garde une copie du jeu pour jouer sans réseau (public/sw.js).
 // Pas en développement : il garderait d'anciennes versions des fichiers pendant qu'on les modifie.

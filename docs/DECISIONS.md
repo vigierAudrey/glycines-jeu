@@ -200,3 +200,9 @@ On ne redessine que si la vue change (batterie des téléphones). Les étiquette
 - **Décision** : avec l'accord d'Audrey, `content/referentiel/bloc2.json` a été corrigé : 17 libellés de critères repris exactement du JO du 14 mars 2023 (le fichier venait de la matrice des cours, qui avait reformulé certains critères), et le critère fusionné « Relation privilégiée et sécurisante favorisant l’autonomie » séparé en deux, comme dans le JO.
 - **Pourquoi** : une mission doit citer le critère officiel mot pour mot ; vérification dans `docs/VERIFICATION_REFERENTIEL.md`.
 - **Comment** : comparaison automatique avec le texte du PDF officiel (68 critères sur 68 retrouvés), missions mises à jour, validateur et tests au vert. La règle « ne jamais modifier `bloc2.json` » reste valable : toute autre modification demande à nouveau l'accord d'Audrey.
+
+## D-035 · Mode classe tout ouvert, lien direct vers une mission · 23/11/2026
+
+- **Décision** : en mode classe (`?classe`), toutes les missions du Bloc 2 sont ouvertes, quelle que soit la séquence. Un lien `index.html?mission=m12` lance directement une mission. La page enseignante est rangée comme le jeu (matière, format, séquence), avec des fiches repliables et les boutons « Jouer » et « La projeter ».
+- **Pourquoi** : Audrey projetait le jeu et trouvait des missions verrouillées sans savoir comment les ouvrir. Il n'y a pas de code : c'est l'adresse qui ouvre les missions.
+- **Limite acceptée** : un élève qui connaît ces adresses peut tout ouvrir. Le déblocage par séquence sert à guider, pas à contrôler.
