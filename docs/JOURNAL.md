@@ -502,3 +502,9 @@ Trois lignes par session : ce qui a été fait, ce qui reste à surveiller, la p
 - **Fait** : page enseignante rangée comme le jeu, fiches repliables, liens « Ouvrir » et « Copier » par séquence, boutons « Jouer » et « La projeter » sur chaque fiche ; mode classe tout ouvert ; lien `?mission=` (D-035). Vérifié à 390 px et sur ordinateur.
 - **À surveiller** : retour d'Audrey en classe.
 - **Prochaine tâche** : 5.2 (Bloc 1), en attente des cours.
+
+## 24/11/2026 · Export du bilan
+
+- **Fait** : « Mon bilan » : champs prénom, nom, classe ; boutons « Tableau pour LibreOffice ou Excel » (CSV) et « Fichier de données » (JSON) ; nom reporté sur la fiche imprimée (D-036). Tests ajoutés, vérifié à 390 px et sur ordinateur.
+- **À surveiller** : ouverture du CSV sur les ordinateurs du lycée.
+- **Prochaine tâche** : bloc « Bilans de la classe » sur la page enseignante (lire les fichiers JSON des élèves), si Audrey le souhaite ; sinon 5.2 (Bloc 1).

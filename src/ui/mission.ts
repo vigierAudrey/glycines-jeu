@@ -16,6 +16,7 @@ import type { Rappel } from '../regles/consequences';
 import { comparerEstimation, PHRASES_ECART } from '../regles/positionnement';
 import { decouperAvecLexique } from '../regles/lexique';
 import { bilanGlobal } from '../regles/bilanGlobal';
+import { bilanEnCsv, bilanEnJson, nomDeFichier, type Eleve } from '../regles/exportBilan';
 import type { Progression } from '../regles/sauvegarde';
 import { echapper } from './echapper';
 
@@ -782,17 +783,52 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
               </span>
             </li>`).join('')}
         </ul>`).join('')}
-      <div class="rangee-boutons">
+      <h3>Mettre mon nom et garder mon bilan</h3>
+      <p class="indice">Ton nom sert seulement à remplir la fiche ou le fichier. Il n'est ni envoyé ni gardé dans le jeu.</p>
+      <div class="identite-bilan">
+        <label>Prénom <input name="prenom" autocomplete="off" maxlength="40"></label>
+        <label>Nom <input name="nom" autocomplete="off" maxlength="40"></label>
+        <label>Classe <input name="classe" autocomplete="off" maxlength="20"></label>
+      </div>
+      <div class="rangee-boutons rangee-boutons--export">
         <button type="button" class="bouton bouton--principal" data-action="imprimer-bilan">🖨 Imprimer ou enregistrer en PDF</button>
-      </div>`);
+        <button type="button" class="bouton" data-action="telecharger-csv">📊 Tableau pour LibreOffice ou Excel</button>
+        <button type="button" class="bouton" data-action="telecharger-json">🗂 Fichier de données (pour l'enseignante)</button>
+      </div>
+      <p class="indice">Le fichier va dans le dossier « Téléchargements » (sur iPhone : app Fichiers). Tu peux ensuite le déposer sur l'ENT ou Pronote.</p>`);
+  };
+  // Identité tapée dans « Mon bilan » (vide si rien n'est tapé). Rien n'est gardé après la fermeture.
+  const eleveTape = (): Eleve => {
+    const valeur = (nom: string) => fenetre.querySelector<HTMLInputElement>(`.identite-bilan input[name="${nom}"]`)?.value.trim() ?? '';
+    return { prenom: valeur('prenom'), nom: valeur('nom'), classe: valeur('classe') };
+  };
+  // Fabrique le fichier sur l'appareil et le propose au téléchargement (aucun envoi).
+  const telecharger = (texte: string, nomFichier: string, type: string) => {
+    const url = URL.createObjectURL(new Blob([texte], { type }));
+    const lien = document.createElement('a');
+    lien.href = url;
+    lien.download = nomFichier;
+    document.body.append(lien);
+    lien.click();
+    lien.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+  };
+  const exporterBilan = (format: 'csv' | 'json') => {
+    const eleve = eleveTape();
+    const maintenant = new Date();
+    const dateIso = `${maintenant.getFullYear()}-${String(maintenant.getMonth() + 1).padStart(2, '0')}-${String(maintenant.getDate()).padStart(2, '0')}`;
+    const parties = partiesBilan();
+    if (format === 'csv') telecharger(bilanEnCsv(parties, eleve, maintenant.toLocaleDateString('fr-FR')), nomDeFichier(eleve, dateIso, 'csv'), 'text/csv;charset=utf-8');
+    else telecharger(bilanEnJson(parties, eleve, dateIso, liens.progression?.() ?? {}, contenu.missions), nomDeFichier(eleve, dateIso, 'json'), 'application/json');
   };
   const imprimerBilan = () => {
     const parties = partiesBilan();
+    const eleve = eleveTape();
     const fiche = document.createElement('div');
     fiche.className = 'fiche-impression';
     fiche.innerHTML = `
       <h1>Mon bilan de compétences · Une journée aux Glycines</h1>
-      <p>Nom : ______________________ &nbsp; Classe : __________ &nbsp; Date : ${new Date().toLocaleDateString('fr-FR')}</p>
+      <p>Nom : ${eleve.nom || eleve.prenom ? `<strong>${echapper(`${eleve.prenom} ${eleve.nom}`.trim())}</strong>` : '______________________'} &nbsp; Classe : ${eleve.classe ? `<strong>${echapper(eleve.classe)}</strong>` : '__________'} &nbsp; Date : ${new Date().toLocaleDateString('fr-FR')}</p>
       <p>${echapper(contenu.referentiel.diplome)}. Niveaux : ${(['N1', 'N2', 'N3', 'N4'] as const).map((n) => `<strong>${n}</strong> ${echapper(contenu.referentiel.niveaux[n])}`).join(' ')}</p>
       ${parties.map((p) => `
         <h2>${echapper(p.titre)}</h2>
@@ -838,6 +874,8 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
     if (cible.dataset.action === 'imprimer-fiche' && dernierBilan) imprimerFiche(dernierBilan);
     if (cible.dataset.action === 'mon-bilan') return ouvrirBilan();
     if (cible.dataset.action === 'imprimer-bilan') return imprimerBilan();
+    if (cible.dataset.action === 'telecharger-csv') return exporterBilan('csv');
+    if (cible.dataset.action === 'telecharger-json') return exporterBilan('json');
     if (cible.dataset.action === 'retour-liste') return ouvrirListe(accueilEnCours);
     const id = cible.dataset.mission;
     const m = id && contenu.missions.find((x) => x.id === id);

@@ -206,3 +206,10 @@ On ne redessine que si la vue change (batterie des téléphones). Les étiquette
 - **Décision** : en mode classe (`?classe`), toutes les missions du Bloc 2 sont ouvertes, quelle que soit la séquence. Un lien `index.html?mission=m12` lance directement une mission. La page enseignante est rangée comme le jeu (matière, format, séquence), avec des fiches repliables et les boutons « Jouer » et « La projeter ».
 - **Pourquoi** : Audrey projetait le jeu et trouvait des missions verrouillées sans savoir comment les ouvrir. Il n'y a pas de code : c'est l'adresse qui ouvre les missions.
 - **Limite acceptée** : un élève qui connaît ces adresses peut tout ouvrir. Le déblocage par séquence sert à guider, pas à contrôler.
+
+## D-036 · Export du bilan en tableur (CSV) et en données (JSON) · 24/11/2026
+
+- **Décision** : dans « Mon bilan », l'élève peut taper prénom, nom et classe, puis imprimer (ou PDF), télécharger un tableau CSV (s'ouvre dans LibreOffice Calc ou Excel) ou un fichier JSON (données complètes avec le code de reprise). Le nom remplit aussi la fiche imprimée.
+- **Pourquoi** : Audrey veut récupérer les bilans de ses 20 élèves alors que le jeu en ligne est anonyme. C'est l'élève qui met son nom et qui remet le fichier (ENT, Pronote) : rien n'est envoyé, rien n'est gardé.
+- **Choix** : CSV plutôt qu'ODS (aucune bibliothèque à ajouter), séparateur « ; » et UTF-8 avec marque d'ordre pour les accents ; pas de TXT (le CSV s'ouvre aussi dans un éditeur de texte). Le nom n'est pas gardé dans le navigateur (ordinateurs partagés au lycée).
+- **Limite** : le navigateur range le fichier dans « Téléchargements » (ou demande où l'enregistrer) ; un site ne peut pas écrire tout seul dans « Documents ».

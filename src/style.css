@@ -476,6 +476,12 @@ html, body {
 .bilan__ligne { display: flex; gap: 10px; align-items: flex-start; padding: 6px 0; border-bottom: 1px solid #eee8f3; }
 .bilan__ligne .badge, .bilan__vide { flex: 0 0 auto; min-width: 64px; text-align: center; }
 .bilan__vide { font-size: .8rem; opacity: .6; padding-top: 2px; }
+.identite-bilan { display: flex; flex-wrap: wrap; gap: 8px; margin: 4px 0 10px; }
+.identite-bilan label { display: grid; gap: 4px; flex: 1 1 140px; min-width: 0; font-size: .9rem; }
+.identite-bilan input { width: 100%; box-sizing: border-box; min-width: 0; min-height: 44px; padding: 0 10px; font: inherit; border: 2px solid #d9d3e3; border-radius: 10px; }
+.rangee-boutons--export { flex-direction: column; }
+.rangee-boutons--export .bouton { width: 100%; }
+.identite-bilan input:focus-visible { outline: 3px solid var(--violet); outline-offset: 1px; }
 .bilan__detail { display: block; font-size: .85rem; opacity: .8; margin-top: 2px; }
 
 /* Q.1 : choisir les missions du Bloc 2 par type d'action (familles du référentiel) */
