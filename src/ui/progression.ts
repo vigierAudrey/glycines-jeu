@@ -153,7 +153,11 @@ export function suivreProgression(missions: Mission[]): SuiviProgression {
     confirmation.hidden = !messageReprise;
     messageReprise = '';
 
-    bloc.append(titre, confirmation, actuel, formulaire, etiquetteFichier);
+    const conseil = document.createElement('p');
+    conseil.className = 'indice';
+    conseil.textContent = "Ordinateur du lycée qui efface tout ? Reprenez avec le fichier téléchargé depuis « 📄 Mon bilan ». Pensez à le télécharger à la fin de chaque séance.";
+
+    bloc.append(titre, confirmation, actuel, formulaire, etiquetteFichier, conseil);
     return bloc;
   };
 

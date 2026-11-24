@@ -520,3 +520,9 @@ Trois lignes par session : ce qui a été fait, ce qui reste à surveiller, la p
 - **Fait** : code et fichier repris même si une mission a changé (elle seule est « à refaire ») ; bouton « Reprendre avec mon fichier de bilan » sous le code de reprise ; règle de stabilité dans CLAUDE.md (D-038). Tests ajoutés, vérifié à 390 px et sur ordinateur.
 - **À surveiller** : ordinateurs du lycée qui effacent les données à la déconnexion.
 - **Prochaine tâche** : 5.2 (Bloc 1), en attente des cours.
+
+## 24/11/2026 · Conseil à l'élève et publication
+
+- **Fait** : phrase pour l'élève dans « Mon bilan » et sous le code de reprise : télécharger le fichier de bilan à chaque séance pour retrouver sa progression ; bouton renommé « Fichier de données (à garder) » ; vouvoiement harmonisé. Publié.
+- **À surveiller** : les élèves gardent-ils leur fichier d'une séance à l'autre ?
+- **Prochaine tâche** : 5.2 (Bloc 1), en attente des cours.

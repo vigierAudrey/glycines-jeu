@@ -784,7 +784,7 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
             </li>`).join('')}
         </ul>`).join('')}
       <h3>Mettre mon nom et garder mon bilan</h3>
-      <p class="indice">Ton nom sert seulement à remplir la fiche ou le fichier. Il n'est ni envoyé ni gardé dans le jeu.</p>
+      <p class="indice">Votre nom sert seulement à remplir la fiche ou le fichier. Il n'est ni envoyé ni gardé dans le jeu.</p>
       <div class="identite-bilan">
         <label>Prénom <input name="prenom" autocomplete="off" maxlength="40"></label>
         <label>Nom <input name="nom" autocomplete="off" maxlength="40"></label>
@@ -793,9 +793,10 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
       <div class="rangee-boutons rangee-boutons--export">
         <button type="button" class="bouton bouton--principal" data-action="imprimer-bilan">🖨 Imprimer ou enregistrer en PDF</button>
         <button type="button" class="bouton" data-action="telecharger-csv">📊 Tableau pour LibreOffice ou Excel</button>
-        <button type="button" class="bouton" data-action="telecharger-json">🗂 Fichier de données (pour l'enseignante)</button>
+        <button type="button" class="bouton" data-action="telecharger-json">🗂 Fichier de données (à garder)</button>
       </div>
-      <p class="indice">Le fichier va dans le dossier « Téléchargements » (sur iPhone : app Fichiers). Tu peux ensuite le déposer sur l'ENT ou Pronote.</p>`);
+      <p class="conseil-fichier">💾 <strong>À la fin de chaque séance, téléchargez votre « Fichier de données » et gardez-le</strong> (ENT, Pronote ou clé USB). Si l'ordinateur efface tout, ou si vous changez d'appareil, ce fichier vous permet de retrouver votre progression : bouton « Reprendre avec mon fichier de bilan », en bas de la liste des missions.</p>
+      <p class="indice">Le fichier va dans le dossier « Téléchargements » (sur iPhone : app Fichiers).</p>`);
   };
   // Identité tapée dans « Mon bilan » (vide si rien n'est tapé). Rien n'est gardé après la fermeture.
   const eleveTape = (): Eleve => {
