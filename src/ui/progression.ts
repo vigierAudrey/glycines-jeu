@@ -5,7 +5,8 @@
 import type { Mission } from '../contenu/types';
 import type { Bilan } from '../regles/mission';
 import { lireSequence } from '../regles/deblocage';
-import { decoderCode, encoderCode, enregistrerBilan, type Progression } from '../regles/sauvegarde';
+import { decoderCode, encoderCode, enregistrerBilan, phraseIgnorees, type Progression } from '../regles/sauvegarde';
+import { lireFichierBilan } from '../regles/bilanClasse';
 import { rappelsAMontrer, rappelsApresMission, type Rappel } from '../regles/consequences';
 
 const CLE = 'glycines-progression-v1';
@@ -66,6 +67,8 @@ export function suivreProgression(missions: Mission[]): SuiviProgression {
   let sequence = lireSequence(new URLSearchParams(location.search).get('sequence')) ?? lireSequence(lireTexte(CLE_SEQUENCE)) ?? 'S1';
   ecrireTexte(CLE_SEQUENCE, sequence);
 
+  // Message après une reprise : la liste est redessinée, il est donc gardé ici pour le bloc suivant.
+  let messageReprise = '';
   const blocCode = (rafraichir: () => void) => {
     const bloc = document.createElement('section');
     bloc.className = 'code-reprise';
@@ -103,6 +106,13 @@ export function suivreProgression(missions: Mission[]): SuiviProgression {
     message.className = 'code-reprise__message';
     message.setAttribute('role', 'status');
     formulaire.append(etiquette, bouton, message);
+    // Reprise : on ajoute la progression lue à celle de cet appareil, puis on redessine la liste.
+    const reprendre = (lue: Progression, ignorees?: string[]) => {
+      progression = { ...progression, ...lue };
+      ecrire(progression);
+      messageReprise = `Progression reprise. ${phraseIgnorees(ignorees)}`.trim();
+      rafraichir();
+    };
     formulaire.addEventListener('submit', (evenement) => {
       evenement.preventDefault();
       const resultat = decoderCode(champ.value, missions);
@@ -110,12 +120,40 @@ export function suivreProgression(missions: Mission[]): SuiviProgression {
         message.textContent = resultat.erreur;
         return;
       }
-      progression = { ...progression, ...resultat.progression };
+      reprendre(resultat.progression, resultat.ignorees);
+    });
+
+    // Ou avec le fichier téléchargé depuis « Mon bilan » (pratique quand l'ordinateur du lycée a tout effacé).
+    const etiquetteFichier = document.createElement('label');
+    etiquetteFichier.className = 'bouton bouton--texte code-reprise__fichier';
+    etiquetteFichier.textContent = '📂 Reprendre avec mon fichier de bilan (.json)';
+    const champFichier = document.createElement('input');
+    champFichier.type = 'file';
+    champFichier.accept = '.json,application/json';
+    etiquetteFichier.append(champFichier);
+    champFichier.addEventListener('change', async () => {
+      const fichier = champFichier.files?.[0];
+      champFichier.value = '';
+      if (!fichier) return;
+      const lu = fichier.size > 1_000_000 ? { erreur: 'Fichier trop gros.' } : lireFichierBilan(await fichier.text(), missions);
+      if ('erreur' in lu) {
+        message.textContent = lu.erreur;
+        return;
+      }
+      progression = { ...progression, ...lu.bilan.progression };
       ecrire(progression);
+      messageReprise = `Progression reprise. ${lu.avertissement ?? ''}`.trim();
       rafraichir();
     });
 
-    bloc.append(titre, actuel, formulaire);
+    const confirmation = document.createElement('p');
+    confirmation.className = 'code-reprise__confirmation';
+    confirmation.setAttribute('role', 'status');
+    confirmation.textContent = messageReprise;
+    confirmation.hidden = !messageReprise;
+    messageReprise = '';
+
+    bloc.append(titre, confirmation, actuel, formulaire, etiquetteFichier);
     return bloc;
   };
 

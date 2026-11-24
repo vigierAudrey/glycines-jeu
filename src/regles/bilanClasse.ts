@@ -11,7 +11,7 @@ import type { Mission, Referentiel } from '../contenu/types';
 import { bilanGlobal } from './bilanGlobal';
 import { cellule, type Eleve } from './exportBilan';
 import type { Niveau } from './mission';
-import { decoderCode, type Progression } from './sauvegarde';
+import { decoderCode, phraseIgnorees, type Progression } from './sauvegarde';
 
 export interface BilanEleve {
   eleve: Eleve;
@@ -19,7 +19,8 @@ export interface BilanEleve {
   progression: Progression;
 }
 
-export type Lecture = { bilan: BilanEleve } | { erreur: string };
+/** `avertissement` : le bilan est lu, mais des missions ont changé depuis et ne sont pas comptées. */
+export type Lecture = { bilan: BilanEleve; avertissement?: string } | { erreur: string };
 
 /** Lit un fichier .json produit par « Mon bilan ». */
 export function lireFichierBilan(texte: string, missions: Mission[]): Lecture {
@@ -36,7 +37,8 @@ export function lireFichierBilan(texte: string, missions: Mission[]): Lecture {
   const code = typeof d.code_reprise === 'string' ? d.code_reprise : '';
   const progression = code ? decoderCode(code, missions) : { progression: {} };
   if ('erreur' in progression) return { erreur: progression.erreur };
-  return { bilan: { eleve, date: /^\d{4}-\d{2}-\d{2}$/.test(String(d.date)) ? String(d.date) : '', progression: progression.progression } };
+  const bilan = { eleve, date: /^\d{4}-\d{2}-\d{2}$/.test(String(d.date)) ? String(d.date) : '', progression: progression.progression };
+  return 'ignorees' in progression && progression.ignorees ? { bilan, avertissement: phraseIgnorees(progression.ignorees) } : { bilan };
 }
 
 /** Lit une ligne « Prénom Nom ; CODE » (ou avec une tabulation, copiée d'un tableur). Le nom est gardé tel quel. */
@@ -45,7 +47,8 @@ export function lireLigneCode(ligne: string, missions: Mission[]): Lecture {
   if (!nom || !code) return { erreur: `Ligne « ${ligne.trim()} » : il faut le nom, un point-virgule, puis le code.` };
   const lu = decoderCode(code, missions);
   if ('erreur' in lu) return { erreur: `${nom} : ${lu.erreur}` };
-  return { bilan: { eleve: { prenom: '', nom: nom.slice(0, 60), classe: '' }, date: '', progression: lu.progression } };
+  const bilan = { eleve: { prenom: '', nom: nom.slice(0, 60), classe: '' }, date: '', progression: lu.progression };
+  return lu.ignorees ? { bilan, avertissement: `${nom} : ${phraseIgnorees(lu.ignorees)}` } : { bilan };
 }
 
 const cleEleve = (e: Eleve) => `${e.prenom} ${e.nom} ${e.classe}`.trim().toLocaleLowerCase('fr').replace(/\s+/g, ' ');

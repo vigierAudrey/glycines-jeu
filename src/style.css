@@ -405,6 +405,10 @@ html, body {
   border-radius: 10px;
 }
 .code-reprise__formulaire input:focus-visible { outline: 3px solid var(--violet); outline-offset: 1px; }
+.code-reprise__fichier { display: flex; align-items: center; min-height: 44px; margin-top: 8px; cursor: pointer; position: relative; }
+.code-reprise__fichier input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+.code-reprise__fichier:focus-within { outline: 3px solid var(--violet); outline-offset: 2px; }
+.code-reprise__confirmation { margin: 4px 0; padding: 6px 10px; border-radius: 8px; background: #eef6f0; color: #2f6d47; font-weight: 600; }
 .code-reprise__message { flex-basis: 100%; margin: 0; color: #9b3a1a; font-weight: 600; }
 
 /* Bouton 🔊 pendant la lecture (src/ui/voix.ts). */

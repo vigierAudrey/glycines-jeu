@@ -66,6 +66,7 @@ a.petit { display: inline-flex; align-items: center; color: inherit; text-decora
 .messages { list-style: none; padding: 0; margin: 8px 0; }
 .messages li { margin: 2px 0; }
 .messages .erreur { color: #9b3a1a; }
+.messages .avertissement { color: #8a5a00; }
 .defilement { overflow-x: auto; }
 .tableau-classe { border-collapse: collapse; font-size: 0.9rem; }
 .tableau-classe th, .tableau-classe td { border: 1px solid #e2d8f1; padding: 4px 6px; text-align: center; white-space: nowrap; }

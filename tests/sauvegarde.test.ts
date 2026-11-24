@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { decoderCode, encoderCode, enregistrerBilan, prefixeMission } from '../src/regles/sauvegarde';
+import { decoderCode, encoderCode, enregistrerBilan, phraseIgnorees, prefixeMission } from '../src/regles/sauvegarde';
 import { lireContenuDepuisDisque } from '../tools/valider-contenu';
 
 const missions = lireContenuDepuisDisque().missions;
@@ -34,4 +34,17 @@ describe('code de reprise', () => {
   });
 
   it('refuse un code vide', () => expect(decoderCode('', missions)).toHaveProperty('erreur'));
+
+  it('garde le reste quand une mission a changé ou disparu depuis le code (nouvelle version du jeu)', () => {
+    const autre = missions.find((m) => m.id !== karim.id)!;
+    const avant = { ...progression, [autre.id]: Object.fromEntries(autre.competences.map((c) => [c.code, 'N2' as const])) };
+    const code = encoderCode(avant, missions);
+    // Nouvelle version : Karim a une compétence de moins, l'autre mission est inchangée.
+    const karimModifiee = { ...karim, competences: karim.competences.slice(1) };
+    const apres = missions.map((m) => (m.id === karim.id ? karimModifiee : m));
+    expect(decoderCode(code, apres)).toEqual({ progression: { [autre.id]: avant[autre.id] }, ignorees: ['M00'] });
+    // Mission retirée du jeu : même chose.
+    expect(decoderCode(code, missions.filter((m) => m.id !== karim.id))).toEqual({ progression: { [autre.id]: avant[autre.id] }, ignorees: ['M00'] });
+    expect(phraseIgnorees(['M00'])).toMatch(/Une mission a changé .*M00.* à refaire/);
+  });
 });

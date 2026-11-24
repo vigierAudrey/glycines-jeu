@@ -514,3 +514,9 @@ Trois lignes par session : ce qui a été fait, ce qui reste à surveiller, la p
 - **Fait** : export du bilan publié en ligne ; bloc « Bilans de la classe » sur la page enseignante (fichiers .json ou codes de reprise, tableau par compétence, CSV, impression A4) (D-037). Tests ajoutés, vérifié à 390 px, sur ordinateur et à l'impression.
 - **À surveiller** : premier essai avec les fichiers de vrais élèves.
 - **Prochaine tâche** : 5.2 (Bloc 1), en attente des cours.
+
+## 24/11/2026 · Progression protégée
+
+- **Fait** : code et fichier repris même si une mission a changé (elle seule est « à refaire ») ; bouton « Reprendre avec mon fichier de bilan » sous le code de reprise ; règle de stabilité dans CLAUDE.md (D-038). Tests ajoutés, vérifié à 390 px et sur ordinateur.
+- **À surveiller** : ordinateurs du lycée qui effacent les données à la déconnexion.
+- **Prochaine tâche** : 5.2 (Bloc 1), en attente des cours.

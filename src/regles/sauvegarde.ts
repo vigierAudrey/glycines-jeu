@@ -36,7 +36,12 @@ export function encoderCode(progression: Progression, missions: Mission[]): stri
   return `${corps}.${cle(corps)}`;
 }
 
-export function decoderCode(code: string, missions: Mission[]): { progression: Progression } | { erreur: string } {
+/**
+ * Relit un code de reprise. La clé de contrôle protège contre les fautes de frappe.
+ * Si le jeu a changé depuis le code (mission retirée, ou dont les compétences ont changé), cette mission est
+ * mise de côté dans `ignorees` (à refaire) : le reste de la progression est quand même repris.
+ */
+export function decoderCode(code: string, missions: Mission[]): { progression: Progression; ignorees?: string[] } | { erreur: string } {
   const propre = code.toUpperCase().replace(/\s+/g, '');
   const morceaux = propre.split('.');
   const controle = morceaux.pop();
@@ -44,12 +49,22 @@ export function decoderCode(code: string, missions: Mission[]): { progression: P
   if (cle(morceaux.join('.')) !== controle) return { erreur: 'Code incorrect : vérifiez chaque caractère.' };
 
   const progression: Progression = {};
+  const ignorees: string[] = [];
   for (const morceau of morceaux) {
     const [, prefixe, chiffres] = /^([A-Z0-9]+)-([1-4]+)$/.exec(morceau) ?? [];
+    if (!prefixe) return { erreur: 'Code incorrect : vérifiez chaque caractère.' };
     const mission = missions.find((m) => prefixeMission(m.id) === prefixe);
-    if (!mission) return { erreur: `Mission « ${prefixe ?? morceau} » inconnue dans cette version du jeu.` };
-    if (chiffres.length !== mission.competences.length) return { erreur: `La mission ${prefixe} a changé depuis ce code.` };
+    if (!mission || chiffres.length !== mission.competences.length) {
+      ignorees.push(prefixe);
+      continue;
+    }
     progression[mission.id] = Object.fromEntries(mission.competences.map((c, i) => [c.code, NIVEAUX[Number(chiffres[i]) - 1]]));
   }
-  return { progression };
+  return ignorees.length ? { progression, ignorees } : { progression };
 }
+
+/** Phrase pour l'élève ou l'enseignante quand des missions ont été mises de côté. */
+export const phraseIgnorees = (ignorees: string[] = []) =>
+  ignorees.length
+    ? `${ignorees.length === 1 ? 'Une mission a changé' : `${ignorees.length} missions ont changé`} depuis ce code (${ignorees.join(', ')}) : ${ignorees.length === 1 ? 'elle est à refaire' : 'elles sont à refaire'}. Le reste est bien repris.`
+    : '';

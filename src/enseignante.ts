@@ -252,6 +252,7 @@ function ajouterLectures(lectures: { origine: string; lecture: ReturnType<typeof
     else {
       bilans = ajouterBilan(bilans, lecture.bilan);
       ajoutes++;
+      if (lecture.avertissement) lignes.push(`<li class="avertissement">${origine ? `${echapper(origine)} : ` : ''}${echapper(lecture.avertissement)}</li>`);
     }
   }
   if (ajoutes) lignes.unshift(`<li>${ajoutes} bilan${ajoutes > 1 ? 's' : ''} ajouté${ajoutes > 1 ? 's' : ''}.</li>`);

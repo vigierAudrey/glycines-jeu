@@ -219,3 +219,9 @@ On ne redessine que si la vue change (batterie des téléphones). Les étiquette
 - **Décision** : bloc « Bilans de la classe » sur la page enseignante. Audrey y dépose les fichiers .json des élèves (plusieurs d'un coup, ou glissés), ou colle des lignes « Nom ; code de reprise ». Elle obtient un tableau par partie (Bloc 2, PSE) : une ligne par élève, le meilleur niveau par compétence, le nombre de missions faites. Elle peut le télécharger en CSV (LibreOffice ou Excel) ou l'imprimer seul.
 - **Pourquoi** : rassembler 20 bilans sans compte, sans serveur et sans collecte de données (D-036).
 - **Choix** : la progression est relue à partir du code de reprise contrôlé par sa clé, jamais crue sur parole (un fichier retouché est refusé). Le même élève remis deux fois : on garde le fichier le plus récent. Rien n'est gardé dans le navigateur : en fermant la page, le tableau disparaît.
+
+## D-038 · Les mises à jour ne font pas perdre la progression · 24/11/2026
+
+- **Constat** : publier une nouvelle version n'efface pas la progression (elle est gardée dans le navigateur, liée à l'adresse du site). Les vrais risques : une mission publiée modifiée (les anciens codes étaient refusés en entier), et les ordinateurs du lycée qui effacent tout à la déconnexion.
+- **Décision** : un code ou un fichier dont une mission a changé est quand même repris ; seule cette mission est mise de côté (« à refaire »), avec un message. L'élève peut reprendre avec son fichier de bilan (.json) au lieu de recopier le code. Règle ajoutée dans CLAUDE.md : ne jamais renommer la clé de stockage, ni changer l'identifiant ou les compétences d'une mission publiée.
+- **Conseil pour la classe** : faire télécharger le fichier de bilan en fin de séance (sur l'ENT ou une clé USB), surtout sur les ordinateurs du lycée.

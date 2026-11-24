@@ -23,6 +23,7 @@ Propriétaire : Audrey, enseignante et développeuse débutante. Elle veut **com
 - Aucun diagnostic dans le jeu : l'élève observe, adapte dans son rôle, transmet.
 - Pas de nouvelle dépendance sans l'expliquer et sans l'accord d'Audrey. Préférer gratuit, open source, léger.
 - Pas de réécriture massive d'une partie qui fonctionne.
+- **Ne jamais faire perdre leur progression aux élèves** (D-038). La progression vit dans le navigateur (`localStorage`, clé `glycines-progression-v1`) et dans les codes et fichiers de bilan. Donc : ne jamais renommer cette clé ni changer l'adresse du site ; ne jamais changer l'identifiant (préfixe `mNN`) d'une mission publiée ni le redonner à une autre ; ne pas changer le nombre ou l'ordre des compétences d'une mission publiée (sinon elle est « à refaire » pour les élèves qui l'avaient faite : à éviter, et à signaler à Audrey si c'est indispensable). Corriger un texte, une option, des points ou ajouter des missions ne pose aucun problème.
 
 ## Contraintes produit
 
