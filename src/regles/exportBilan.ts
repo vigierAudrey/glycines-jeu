@@ -16,7 +16,7 @@ export interface Eleve {
 }
 
 /** Une cellule de tableur : entre guillemets, et jamais lue comme une formule (=, +, -, @ en tête). */
-function cellule(valeur: string): string {
+export function cellule(valeur: string): string {
   const texte = /^[=+\-@\t\r]/.test(valeur) ? `'${valeur}` : valeur;
   return `"${texte.replace(/"/g, '""')}"`;
 }

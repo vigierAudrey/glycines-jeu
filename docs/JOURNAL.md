@@ -508,3 +508,9 @@ Trois lignes par session : ce qui a été fait, ce qui reste à surveiller, la p
 - **Fait** : « Mon bilan » : champs prénom, nom, classe ; boutons « Tableau pour LibreOffice ou Excel » (CSV) et « Fichier de données » (JSON) ; nom reporté sur la fiche imprimée (D-036). Tests ajoutés, vérifié à 390 px et sur ordinateur.
 - **À surveiller** : ouverture du CSV sur les ordinateurs du lycée.
 - **Prochaine tâche** : bloc « Bilans de la classe » sur la page enseignante (lire les fichiers JSON des élèves), si Audrey le souhaite ; sinon 5.2 (Bloc 1).
+
+## 24/11/2026 · Bilans de la classe
+
+- **Fait** : export du bilan publié en ligne ; bloc « Bilans de la classe » sur la page enseignante (fichiers .json ou codes de reprise, tableau par compétence, CSV, impression A4) (D-037). Tests ajoutés, vérifié à 390 px, sur ordinateur et à l'impression.
+- **À surveiller** : premier essai avec les fichiers de vrais élèves.
+- **Prochaine tâche** : 5.2 (Bloc 1), en attente des cours.

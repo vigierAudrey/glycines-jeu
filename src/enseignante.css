@@ -56,3 +56,38 @@ details.mission > summary { display: flex; flex-direction: column; gap: 2px; mar
 a.petit { display: inline-flex; align-items: center; color: inherit; text-decoration: none; }
 .sequences__boutons { white-space: nowrap; text-align: right; }
 @media (max-width: 600px) { .sequences__adresse { display: none; } .sommaire { position: static; } }
+
+/* Bilans de la classe : fichiers des élèves lus sur place, tableau élèves × compétences. */
+.depot { display: grid; justify-items: center; gap: 4px; padding: 18px 12px; border: 2px dashed #b9a6d8; border-radius: 12px; background: #faf8fd; cursor: pointer; text-align: center; font-weight: 700; color: #3b2a5c; }
+.depot--survol { background: #efe9f7; border-color: #7b5ea7; }
+.depot input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+.depot:focus-within { outline: 3px solid #7b5ea7; outline-offset: 2px; }
+.codes textarea { width: 100%; box-sizing: border-box; font: 0.95rem ui-monospace, Menlo, Consolas, monospace; border: 2px solid #d9d3e3; border-radius: 10px; padding: 8px; margin: 4px 0 8px; }
+.messages { list-style: none; padding: 0; margin: 8px 0; }
+.messages li { margin: 2px 0; }
+.messages .erreur { color: #9b3a1a; }
+.defilement { overflow-x: auto; }
+.tableau-classe { border-collapse: collapse; font-size: 0.9rem; }
+.tableau-classe th, .tableau-classe td { border: 1px solid #e2d8f1; padding: 4px 6px; text-align: center; white-space: nowrap; }
+.tableau-classe tbody th { text-align: left; position: sticky; left: 0; background: #fff; }
+.niveau { display: inline-block; min-width: 28px; padding: 1px 4px; border-radius: 6px; color: #fff; font-weight: 700; font-size: 0.8rem; }
+.niveau--N1 { background: #8a8f98; }
+.niveau--N2 { background: #a35f12; }
+.niveau--N3 { background: #2f7d4f; }
+.niveau--N4 { background: #7b5ea7; }
+.legende summary { font-weight: 600; font-size: 0.9rem; }
+@media print {
+  .bilans-classe { display: none; }
+  .impression-classe .enseignante > :not(#classe), .impression-classe #classe > :not([data-resultat]), .impression-classe #classe .actions { display: none; }
+  .impression-classe .bilans-classe { display: block; }
+  .impression-classe .defilement { overflow: visible; }
+  .impression-classe .enseignante { max-width: none; padding: 0; }
+  .impression-classe .tableau-classe { width: 100%; font-size: 0.7rem; }
+  .impression-classe .tableau-classe th, .impression-classe .tableau-classe td { white-space: normal; padding: 2px; }
+  .impression-classe .niveau { min-width: 0; padding: 0 2px; font-size: inherit; }
+  .impression-classe .tableau-classe .meta { font-size: inherit; margin: 0; }
+  .impression-classe .tableau-classe thead th:nth-child(n+3) { word-break: break-all; }
+  .impression-classe .legende > *:not(summary) { display: block; }
+  .tableau-classe tbody th { position: static; }
+  .niveau { color: #000; background: none; border: 1px solid #000; }
+}

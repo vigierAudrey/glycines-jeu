@@ -9,6 +9,7 @@ import { chargerContenu } from './contenu/charger';
 import type { Etape, Mission, Option, Points } from './contenu/types';
 import { dansFamille, SEQUENCES } from './regles/deblocage';
 import { NOMS_NATURE, pointsMaxMission } from './regles/mission';
+import { ajouterBilan, classeEnCsv, lireFichierBilan, lireLigneCode, nomAffiche, tableauxClasse, type BilanEleve } from './regles/bilanClasse';
 import { echapper } from './ui/echapper';
 
 const contenu = chargerContenu();
@@ -139,9 +140,28 @@ racine.innerHTML = `
     <p class="meta" id="copie" role="status"></p>
   </section>
 
+  <section class="bilans-classe" id="classe">
+    <h2>Bilans de la classe</h2>
+    <p>Les élèves téléchargent leur bilan depuis « 📄 Mon bilan » (bouton « 🗂 Fichier de données ») et vous le remettent (ENT, Pronote, clé USB). Ajoutez ici tous les fichiers d'un coup : vous obtenez le meilleur niveau de chaque élève pour chaque compétence.</p>
+    <p class="meta">Tout est lu sur cet ordinateur : rien n'est envoyé ni gardé. En fermant la page, le tableau disparaît (téléchargez-le avant).</p>
+    <label class="depot" data-depot>
+      <input type="file" accept=".json,application/json" multiple data-fichiers>
+      <span>📂 Choisir les fichiers .json des élèves</span>
+      <span class="meta">ou les glisser ici</span>
+    </label>
+    <details class="codes">
+      <summary>Ou coller des codes de reprise</summary>
+      <p class="meta">Une ligne par élève : le nom, un point-virgule, puis le code. Exemple : <code>Dupont Léa ; M01-332.M05-23.K7</code></p>
+      <textarea rows="5" data-codes spellcheck="false"></textarea>
+      <button type="button" class="petit" data-action="ajouter-codes">Ajouter ces élèves</button>
+    </details>
+    <ul class="messages" data-messages role="status"></ul>
+    <div data-resultat></div>
+  </section>
+
   <nav class="sommaire" aria-label="Sommaire">
     ${rangees.map((mat) => `<div><strong>${mat.titre}</strong>${mat.formats.filter((f) => f.nombre).map((f) => `<a href="#${f.ancre}">${f.titre} (${f.nombre})</a>`).join('')}</div>`).join('')}
-    <div><strong>Repères</strong><a href="#niveaux">Niveaux N1 à N4</a><a href="#lexique">Lexique</a></div>
+    <div><strong>Repères</strong><a href="#classe">Bilans de la classe</a><a href="#niveaux">Niveaux N1 à N4</a><a href="#lexique">Lexique</a></div>
   </nav>
 
   ${rangees.map((mat) => `
@@ -182,5 +202,126 @@ racine.addEventListener('click', (evenement) => {
     );
   }
 });
+// ---------- Bilans de la classe ----------
+// Les bilans restent dans cette variable : rien n'est gardé dans le navigateur, rien n'est envoyé.
+const partiesReferentiel = [
+  { titre: 'Bloc 2', referentiel: contenu.referentiel },
+  ...(contenu.referentielPse ? [{ titre: 'PSE', referentiel: contenu.referentielPse }] : []),
+];
+let bilans: BilanEleve[] = [];
+const zoneClasse = racine.querySelector<HTMLElement>('#classe')!;
+const messages = zoneClasse.querySelector<HTMLElement>('[data-messages]')!;
+const resultat = zoneClasse.querySelector<HTMLElement>('[data-resultat]')!;
+
+function afficherClasse() {
+  if (!bilans.length) {
+    resultat.innerHTML = '';
+    return;
+  }
+  const tableaux = tableauxClasse(bilans, contenu.missions, partiesReferentiel);
+  resultat.innerHTML = `
+    <h3>${bilans.length} élève${bilans.length > 1 ? 's' : ''}</h3>
+    <div class="actions">
+      <button type="button" class="petit" data-action="classe-csv">📊 Télécharger le tableau (LibreOffice ou Excel)</button>
+      <button type="button" class="petit" data-action="classe-imprimer">🖨 Imprimer le tableau</button>
+      <button type="button" class="petit" data-action="classe-vider">Vider</button>
+    </div>
+    ${tableaux.map((t) => `
+      <h4>${echapper(t.titre)}</h4>
+      <div class="defilement">
+        <table class="tableau-classe">
+          <thead><tr><th>Élève</th><th>Missions faites</th>${t.competences.map((c) => `<th title="${echapper(c.intitule)}">${echapper(c.code)}</th>`).join('')}</tr></thead>
+          <tbody>${t.lignes.map((l) => `
+            <tr><th>${echapper(nomAffiche(l.eleve))}${l.eleve.classe ? ` <span class="meta">${echapper(l.eleve.classe)}</span>` : ''}${l.date ? `<br><span class="meta">${echapper(new Date(l.date).toLocaleDateString('fr-FR'))}</span>` : ''}</th>
+              <td>${l.missionsFaites}</td>
+              ${l.niveaux.map((n) => `<td>${n ? `<span class="niveau niveau--${n}">${n}</span>` : '<span class="meta">·</span>'}</td>`).join('')}</tr>`).join('')}
+          </tbody>
+        </table>
+      </div>
+      <details class="legende"><summary>Que veulent dire les codes ?</summary>
+        <ul>${t.competences.map((c) => `<li><strong>${echapper(c.code)}</strong> ${echapper(c.intitule)}</li>`).join('')}</ul>
+      </details>`).join('')}
+    <p class="meta">Meilleur niveau obtenu dans le jeu, toutes missions confondues. « · » : compétence pas encore travaillée.</p>`;
+}
+
+function ajouterLectures(lectures: { origine: string; lecture: ReturnType<typeof lireLigneCode> }[]) {
+  const lignes: string[] = [];
+  let ajoutes = 0;
+  for (const { origine, lecture } of lectures) {
+    if ('erreur' in lecture) lignes.push(`<li class="erreur">${origine ? `${echapper(origine)} : ` : ''}${echapper(lecture.erreur)}</li>`);
+    else {
+      bilans = ajouterBilan(bilans, lecture.bilan);
+      ajoutes++;
+    }
+  }
+  if (ajoutes) lignes.unshift(`<li>${ajoutes} bilan${ajoutes > 1 ? 's' : ''} ajouté${ajoutes > 1 ? 's' : ''}.</li>`);
+  messages.innerHTML = lignes.join('');
+  afficherClasse();
+}
+
+async function lireFichiers(fichiers: FileList | File[]) {
+  const liste = [...fichiers];
+  const lectures = await Promise.all(liste.map(async (f) => ({
+    origine: f.name,
+    lecture: f.size > 1_000_000 ? { erreur: 'fichier trop gros.' } : lireFichierBilan(await f.text(), contenu.missions),
+  })));
+  ajouterLectures(lectures);
+}
+
+const champFichiers = zoneClasse.querySelector<HTMLInputElement>('[data-fichiers]')!;
+champFichiers.addEventListener('change', () => {
+  if (champFichiers.files) void lireFichiers(champFichiers.files);
+  champFichiers.value = '';
+});
+const depot = zoneClasse.querySelector<HTMLElement>('[data-depot]')!;
+depot.addEventListener('dragover', (e) => {
+  e.preventDefault();
+  depot.classList.add('depot--survol');
+});
+depot.addEventListener('dragleave', () => depot.classList.remove('depot--survol'));
+depot.addEventListener('drop', (e) => {
+  e.preventDefault();
+  depot.classList.remove('depot--survol');
+  if (e.dataTransfer?.files.length) void lireFichiers(e.dataTransfer.files);
+});
+
+zoneClasse.addEventListener('click', (evenement) => {
+  const action = (evenement.target as HTMLElement).closest<HTMLElement>('button')?.dataset.action;
+  if (action === 'ajouter-codes') {
+    const zone = zoneClasse.querySelector<HTMLTextAreaElement>('[data-codes]')!;
+    const lignes = zone.value.split(/\r?\n/).filter((l) => l.trim());
+    ajouterLectures(lignes.map((l) => ({ origine: '', lecture: lireLigneCode(l, contenu.missions) })));
+    if (lignes.length) zone.value = '';
+  }
+  if (action === 'classe-vider') {
+    bilans = [];
+    messages.innerHTML = '';
+    afficherClasse();
+  }
+  if (action === 'classe-csv') {
+    const url = URL.createObjectURL(new Blob([classeEnCsv(tableauxClasse(bilans, contenu.missions, partiesReferentiel))], { type: 'text/csv;charset=utf-8' }));
+    const lien = document.createElement('a');
+    lien.href = url;
+    lien.download = `bilans-classe-glycines-${new Date().toISOString().slice(0, 10)}.csv`;
+    document.body.append(lien);
+    lien.click();
+    lien.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+  }
+  if (action === 'classe-imprimer') {
+    // Seul le tableau de la classe est imprimé (voir enseignante.css, .impression-classe).
+    document.documentElement.classList.add('impression-classe');
+    zoneClasse.querySelectorAll<HTMLDetailsElement>('.legende').forEach((d) => (d.open = true));
+    const nettoyer = () => {
+      document.documentElement.classList.remove('impression-classe');
+      window.removeEventListener('afterprint', nettoyer);
+    };
+    window.addEventListener('afterprint', nettoyer);
+    window.print();
+  }
+});
+
 // À l'impression, toutes les fiches sont dépliées.
-window.addEventListener('beforeprint', () => toutesLesFiches().forEach((d) => (d.open = true)));
+window.addEventListener('beforeprint', () => {
+  if (!document.documentElement.classList.contains('impression-classe')) toutesLesFiches().forEach((d) => (d.open = true));
+});

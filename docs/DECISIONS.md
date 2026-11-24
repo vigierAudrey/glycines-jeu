@@ -213,3 +213,9 @@ On ne redessine que si la vue change (batterie des téléphones). Les étiquette
 - **Pourquoi** : Audrey veut récupérer les bilans de ses 20 élèves alors que le jeu en ligne est anonyme. C'est l'élève qui met son nom et qui remet le fichier (ENT, Pronote) : rien n'est envoyé, rien n'est gardé.
 - **Choix** : CSV plutôt qu'ODS (aucune bibliothèque à ajouter), séparateur « ; » et UTF-8 avec marque d'ordre pour les accents ; pas de TXT (le CSV s'ouvre aussi dans un éditeur de texte). Le nom n'est pas gardé dans le navigateur (ordinateurs partagés au lycée).
 - **Limite** : le navigateur range le fichier dans « Téléchargements » (ou demande où l'enregistrer) ; un site ne peut pas écrire tout seul dans « Documents ».
+
+## D-037 · Bilans de la classe sur la page enseignante · 24/11/2026
+
+- **Décision** : bloc « Bilans de la classe » sur la page enseignante. Audrey y dépose les fichiers .json des élèves (plusieurs d'un coup, ou glissés), ou colle des lignes « Nom ; code de reprise ». Elle obtient un tableau par partie (Bloc 2, PSE) : une ligne par élève, le meilleur niveau par compétence, le nombre de missions faites. Elle peut le télécharger en CSV (LibreOffice ou Excel) ou l'imprimer seul.
+- **Pourquoi** : rassembler 20 bilans sans compte, sans serveur et sans collecte de données (D-036).
+- **Choix** : la progression est relue à partir du code de reprise contrôlé par sa clé, jamais crue sur parole (un fichier retouché est refusé). Le même élève remis deux fois : on garde le fichier le plus récent. Rien n'est gardé dans le navigateur : en fermant la page, le tableau disparaît.

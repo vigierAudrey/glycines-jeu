@@ -136,7 +136,7 @@ L'interface ne calcule rien : elle envoie la réponse au moteur (`repondre`) et 
 
 ## Page enseignante (`enseignante.html`)
 
-Adresse : `http://localhost:5173/enseignante.html` (ou `enseignante.html` à côté de `index.html` une fois publié). Elle montre toutes les missions, brouillons compris : situation, compétences et critères, points maximum, **réponses attendues** étape par étape (la réponse qui rapporte le plus), questions de débriefing. Le bouton « Imprimer » donne une version papier sans le bloc du lien. Le bloc « Lien pour la classe » fabrique l'adresse `index.html?sequence=S…` à donner aux élèves. Elle n'est pas reliée au jeu : les élèves n'y ont pas accès par un bouton (mais elle n'est pas secrète).
+Adresse : `http://localhost:5173/enseignante.html` (ou `enseignante.html` à côté de `index.html` une fois publié). Elle montre toutes les missions, brouillons compris : situation, compétences et critères, points maximum, **réponses attendues** étape par étape (la réponse qui rapporte le plus), questions de débriefing. Le bouton « Imprimer » donne une version papier sans le bloc du lien. Le bloc « Lien pour la classe » fabrique l'adresse `index.html?sequence=S…` à donner aux élèves. Elle n'est pas reliée au jeu : les élèves n'y ont pas accès par un bouton (mais elle n'est pas secrète). Le bloc « Bilans de la classe » lit les fichiers .json remis par les élèves (ou des lignes « Nom ; code ») et dresse un tableau élèves × compétences, téléchargeable en CSV ou imprimable seul (classe `impression-classe`). Logique dans `src/regles/bilanClasse.ts` ; rien n'est envoyé ni gardé (D-037).
 
 ## Jouer sans réseau (PWA)
 
