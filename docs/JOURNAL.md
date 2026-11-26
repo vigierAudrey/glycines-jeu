@@ -532,3 +532,9 @@ Trois lignes par session : ce qui a été fait, ce qui reste à surveiller, la p
 - **Fait** : bouton « 📄 Mon bilan » dans la barre du haut, à côté de « Missions » (toujours visible), et sur l'écran de fin de mission. Sur téléphone, le titre de la barre est masqué pour que les boutons tiennent sur deux lignes. Vérifié à 390 px et sur ordinateur. Publié.
 - **À surveiller** : les élèves trouvent-ils les exports (tableur, fichier de données) sans aide ?
 - **Prochaine tâche** : 5.2 (Bloc 1), en attente des cours.
+
+## 26/11/2026 · Nom obligatoire et « Tout garder »
+
+- **Fait** : prénom et nom obligatoires avant tout téléchargement dans « Mon bilan » ; bouton « Tout garder : PDF + tableau + fichier de données » (D-039). Testé à 390 px et sur ordinateur (deux fichiers nommés + impression). Publié.
+- **À surveiller** : sur iPhone, plusieurs téléchargements d'un coup peuvent être moins fluides ; les boutons séparés restent là.
+- **Prochaine tâche** : 5.2 (Bloc 1), en attente des cours.

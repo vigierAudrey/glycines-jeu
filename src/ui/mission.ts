@@ -794,19 +794,32 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
             </li>`).join('')}
         </ul>`).join('')}
       <h3>Mettre mon nom et garder mon bilan</h3>
-      <p class="indice">Votre nom sert seulement à remplir la fiche ou le fichier. Il n'est ni envoyé ni gardé dans le jeu.</p>
+      <p class="indice">Votre nom sert seulement à remplir la fiche et les fichiers. Il n'est ni envoyé ni gardé dans le jeu.</p>
       <div class="identite-bilan">
-        <label>Prénom <input name="prenom" autocomplete="off" maxlength="40"></label>
-        <label>Nom <input name="nom" autocomplete="off" maxlength="40"></label>
+        <label>Prénom (obligatoire) <input name="prenom" autocomplete="off" maxlength="40" required></label>
+        <label>Nom (obligatoire) <input name="nom" autocomplete="off" maxlength="40" required></label>
         <label>Classe <input name="classe" autocomplete="off" maxlength="20"></label>
       </div>
+      <p class="nom-manquant" role="status">✏️ Écrivez votre prénom et votre nom pour pouvoir télécharger votre bilan.</p>
       <div class="rangee-boutons rangee-boutons--export">
-        <button type="button" class="bouton bouton--principal" data-action="imprimer-bilan">🖨 Imprimer ou enregistrer en PDF</button>
-        <button type="button" class="bouton" data-action="telecharger-csv">📊 Tableau pour LibreOffice ou Excel</button>
-        <button type="button" class="bouton" data-action="telecharger-json">🗂 Fichier de données (à garder)</button>
+        <button type="button" class="bouton bouton--principal" data-action="tout-telecharger" data-export disabled>⬇ Tout garder : PDF + tableau + fichier de données</button>
+        <p class="indice">Le navigateur peut demander d'autoriser plusieurs téléchargements : répondez « Autoriser ». Puis choisissez « Enregistrer en PDF » dans la fenêtre d'impression.</p>
+        <p class="indice">Ou un seul à la fois :</p>
+        <button type="button" class="bouton" data-action="imprimer-bilan" data-export disabled>🖨 Imprimer ou enregistrer en PDF</button>
+        <button type="button" class="bouton" data-action="telecharger-csv" data-export disabled>📊 Tableau pour LibreOffice ou Excel</button>
+        <button type="button" class="bouton" data-action="telecharger-json" data-export disabled>🗂 Fichier de données (à garder)</button>
       </div>
       <p class="conseil-fichier">💾 <strong>À la fin de chaque séance, téléchargez votre « Fichier de données » et gardez-le</strong> (ENT, Pronote ou clé USB). Si l'ordinateur efface tout, ou si vous changez d'appareil, ce fichier vous permet de retrouver votre progression : bouton « Reprendre avec mon fichier de bilan », en bas de la liste des missions.</p>
       <p class="indice">Le fichier va dans le dossier « Téléchargements » (sur iPhone : app Fichiers).</p>`);
+    // Prénom et nom obligatoires : les boutons de téléchargement restent grisés tant qu'ils ne sont pas écrits,
+    // pour que chaque fiche et chaque fichier rendu à l'enseignante porte bien le nom de l'élève.
+    const verifierNom = () => {
+      const { prenom, nom } = eleveTape();
+      const complet = prenom !== '' && nom !== '';
+      fenetre.querySelectorAll<HTMLButtonElement>('[data-export]').forEach((b) => (b.disabled = !complet));
+      fenetre.querySelector<HTMLElement>('.nom-manquant')!.hidden = complet;
+    };
+    fenetre.querySelector('.identite-bilan')?.addEventListener('input', verifierNom);
   };
   // Identité tapée dans « Mon bilan » (vide si rien n'est tapé). Rien n'est gardé après la fermeture.
   const eleveTape = (): Eleve => {
@@ -831,6 +844,12 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
     const parties = partiesBilan();
     if (format === 'csv') telecharger(bilanEnCsv(parties, eleve, maintenant.toLocaleDateString('fr-FR')), nomDeFichier(eleve, dateIso, 'csv'), 'text/csv;charset=utf-8');
     else telecharger(bilanEnJson(parties, eleve, dateIso, liens.progression?.() ?? {}, contenu.missions), nomDeFichier(eleve, dateIso, 'json'), 'application/json');
+  };
+  // Les trois d'un coup : les deux fichiers tout de suite (même clic), puis la fenêtre d'impression pour le PDF.
+  const toutTelecharger = () => {
+    exporterBilan('json');
+    exporterBilan('csv');
+    setTimeout(imprimerBilan, 800);
   };
   const imprimerBilan = () => {
     const parties = partiesBilan();
@@ -884,6 +903,7 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
     }
     if (cible.dataset.action === 'imprimer-fiche' && dernierBilan) imprimerFiche(dernierBilan);
     if (cible.dataset.action === 'mon-bilan') return ouvrirBilan();
+    if (cible.dataset.action === 'tout-telecharger') return toutTelecharger();
     if (cible.dataset.action === 'imprimer-bilan') return imprimerBilan();
     if (cible.dataset.action === 'telecharger-csv') return exporterBilan('csv');
     if (cible.dataset.action === 'telecharger-json') return exporterBilan('json');

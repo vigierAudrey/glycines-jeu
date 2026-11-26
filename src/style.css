@@ -493,6 +493,10 @@ html, body {
 .identite-bilan input { width: 100%; box-sizing: border-box; min-width: 0; min-height: 44px; padding: 0 10px; font: inherit; border: 2px solid #d9d3e3; border-radius: 10px; }
 .rangee-boutons--export { flex-direction: column; }
 .rangee-boutons--export .bouton { width: 100%; }
+.rangee-boutons--export .indice { margin: 0; }
+.rangee-boutons--export .bouton:disabled { opacity: .45; cursor: not-allowed; }
+.nom-manquant { margin: 0 0 8px; padding: 8px 10px; border-radius: 10px; background: #fdecec; border-left: 4px solid #c0392b; font-weight: 600; }
+.nom-manquant[hidden] { display: none; }
 .identite-bilan input:focus-visible { outline: 3px solid var(--violet); outline-offset: 1px; }
 .bilan__detail { display: block; font-size: .85rem; opacity: .8; margin-top: 2px; }
 

@@ -225,3 +225,9 @@ On ne redessine que si la vue change (batterie des téléphones). Les étiquette
 - **Constat** : publier une nouvelle version n'efface pas la progression (elle est gardée dans le navigateur, liée à l'adresse du site). Les vrais risques : une mission publiée modifiée (les anciens codes étaient refusés en entier), et les ordinateurs du lycée qui effacent tout à la déconnexion.
 - **Décision** : un code ou un fichier dont une mission a changé est quand même repris ; seule cette mission est mise de côté (« à refaire »), avec un message. L'élève peut reprendre avec son fichier de bilan (.json) au lieu de recopier le code. Règle ajoutée dans CLAUDE.md : ne jamais renommer la clé de stockage, ni changer l'identifiant ou les compétences d'une mission publiée.
 - **Conseil pour la classe** : faire télécharger le fichier de bilan en fin de séance (sur l'ENT ou une clé USB), surtout sur les ordinateurs du lycée.
+
+## D-039 · Nom obligatoire et « Tout garder » dans Mon bilan · 26/11/2026
+
+- **Demande d'Audrey** : être sûre que chaque bilan rendu porte le nom de l'élève, et récupérer les trois formats d'un coup.
+- **Décision** : dans « Mon bilan », les boutons de téléchargement restent grisés tant que le prénom et le nom ne sont pas écrits (la classe reste facultative). Un bouton principal « Tout garder » télécharge le fichier de données (.json) et le tableau (.csv), puis ouvre l'impression pour le PDF. Les trois boutons séparés restent en dessous, en secours.
+- **Limite** : le PDF passe forcément par la fenêtre d'impression (« Enregistrer en PDF »), le jeu ne peut pas le créer seul sans nouvelle bibliothèque. Le navigateur peut demander une fois d'autoriser plusieurs téléchargements.
