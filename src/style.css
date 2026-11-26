@@ -397,9 +397,17 @@ html, body {
 .debriefing { margin: 0; padding-left: 22px; display: grid; gap: 6px; }
 
 /* Code de reprise (src/ui/progression.ts), sous la liste des missions. */
-.code-reprise { margin-top: 14px; padding-top: 10px; border-top: 1px solid #e6e2ec; font-size: 0.9rem; }
-.code-reprise h3 { margin: 0 0 4px; }
-.code-reprise__code { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 1.1rem; letter-spacing: 0.05em; user-select: all; }
+.code-reprise { margin-top: 14px; padding: 10px 12px; border-radius: 12px; background: #fff7e0; border: 2px solid #e0a526; font-size: 0.9rem; }
+.code-reprise h3 { margin: 0 0 6px; }
+.code-reprise__actuel { margin: 6px 0 10px; }
+.code-reprise__actuel p { margin: 4px 0 0; font-size: .9rem; }
+.code-reprise__code { display: inline-block; padding: 4px 10px; border-radius: 8px; background: #fff; border: 2px dashed #e0a526; font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 1.35rem; letter-spacing: 0.06em; user-select: all; overflow-wrap: anywhere; }
+.reprise-repliee { margin: 8px 0; border-radius: 12px; background: #fff7e0; border: 2px solid #e0a526; }
+.reprise-repliee summary { min-height: 44px; display: flex; align-items: center; padding: 0 12px; cursor: pointer; font-weight: 700; overflow-wrap: anywhere; }
+.reprise-repliee .code-reprise { margin: 0; border: 0; padding-top: 0; }
+.reprise-repliee .code-reprise h3 { display: none; }
+.reprise-repliee summary::after { content: '▾'; margin-left: auto; padding-left: 8px; }
+.reprise-repliee[open] summary::after { content: '▴'; }
 .code-reprise__formulaire { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 8px; }
 .code-reprise__formulaire label { display: grid; gap: 4px; flex: 1; min-width: 180px; }
 .code-reprise__formulaire input {

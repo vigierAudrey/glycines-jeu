@@ -75,14 +75,16 @@ export function suivreProgression(missions: Mission[]): SuiviProgression {
     const code = encoderCode(progression, missions);
 
     const titre = document.createElement('h3');
-    titre.textContent = 'Code de reprise';
-    const actuel = document.createElement('p');
+    titre.textContent = '🔑 Mon code de reprise';
+    const actuel = document.createElement('div');
     if (code) {
-      actuel.append('Pour continuer sur un autre appareil, notez ce code : ');
+      actuel.className = 'code-reprise__actuel';
       const fort = document.createElement('strong');
       fort.className = 'code-reprise__code';
       fort.textContent = code;
-      actuel.append(fort);
+      const explication = document.createElement('p');
+      explication.textContent = 'Notez ce code (sur papier ou dans votre téléphone) : il permet de retrouver votre progression sur un autre appareil. Il change après chaque mission.';
+      actuel.append(fort, explication);
     } else {
       actuel.textContent = 'Terminez une mission pour obtenir un code.';
     }

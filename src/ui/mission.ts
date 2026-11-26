@@ -16,6 +16,7 @@ import type { Rappel } from '../regles/consequences';
 import { comparerEstimation, PHRASES_ECART } from '../regles/positionnement';
 import { decouperAvecLexique } from '../regles/lexique';
 import { bilanGlobal } from '../regles/bilanGlobal';
+import { encoderCode } from '../regles/sauvegarde';
 import { bilanEnCsv, bilanEnJson, nomDeFichier, type Eleve } from '../regles/exportBilan';
 import type { Progression } from '../regles/sauvegarde';
 import { echapper } from './echapper';
@@ -684,8 +685,19 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
       bouton.textContent = '📄 Mon bilan : toutes mes compétences';
       fenetre.querySelector('.fenetre__carte')!.append(bouton);
     }
+    // Code de reprise : en bas de l'écran d'accueil (court, donc visible) ; dans une liste de missions (longue),
+    // replié tout en haut avec le code dans le titre, pour ne pas avoir à descendre.
     const bas = liens.basDeListe?.();
-    if (bas) fenetre.querySelector('.fenetre__carte')!.append(bas);
+    if (bas && !matiere) fenetre.querySelector('.fenetre__carte')!.append(bas);
+    else if (bas) {
+      const replie = document.createElement('details');
+      replie.className = 'reprise-repliee';
+      const resume = document.createElement('summary');
+      const code = liens.progression ? encoderCode(liens.progression(), contenu.missions) : '';
+      resume.textContent = code ? `🔑 Mon code de reprise : ${code}` : '🔑 Reprendre avec un code ou un fichier';
+      replie.append(resume, bas);
+      fenetre.querySelector('.fenetre__haut')!.after(replie);
+    }
     if (accueil) racine.dispatchEvent(new CustomEvent('panneau-affiche', { detail: fenetre }));
   };
 
@@ -782,6 +794,7 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
   const badge = (n?: Niveau) => (n ? `<span class="badge badge--niveau badge--${n}">${n}</span>` : '<span class="bilan__vide">pas encore</span>');
   const ouvrirBilan = () => {
     const parties = partiesBilan();
+    const codeActuel = liens.progression ? encoderCode(liens.progression(), contenu.missions) : '';
     ouvrirFenetre(`
       <div class="fenetre__haut">
         <button type="button" class="bouton bouton--petit" data-action="retour-liste" aria-label="Revenir aux missions">←</button>
@@ -808,7 +821,8 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
             <button type="button" class="bouton" data-action="telecharger-json" data-export disabled>🗂 Fichier de données (à garder)</button>
           </div>
         </details>
-        <p class="conseil-fichier">💾 <strong>À la fin de chaque séance, gardez votre « Fichier de données »</strong> (ENT, Pronote ou clé USB). Si l'ordinateur efface tout, ou si vous changez d'appareil, il vous permet de retrouver votre progression : bouton « Reprendre avec mon fichier de bilan », en bas de la liste des missions. Votre nom n'est ni envoyé ni gardé dans le jeu.</p>
+        ${codeActuel ? `<div class="code-reprise__actuel"><span>🔑 Mon code de reprise :</span> <strong class="code-reprise__code">${echapper(codeActuel)}</strong><p>Notez-le aussi : il permet de reprendre sur un autre appareil (bloc « 🔑 Mon code de reprise », sur l'écran d'accueil et en haut des listes de missions).</p></div>` : ''}
+        <p class="conseil-fichier">💾 <strong>À la fin de chaque séance, gardez votre « Fichier de données »</strong> (ENT, Pronote ou clé USB). Si l'ordinateur efface tout, ou si vous changez d'appareil, il vous permet de retrouver votre progression : bouton « Reprendre avec mon fichier de bilan », dans le bloc « 🔑 Mon code de reprise ». Votre nom n'est ni envoyé ni gardé dans le jeu.</p>
       </section>
       <h3>Que veulent dire les niveaux ?</h3>
       <ul class="legende-niveaux">

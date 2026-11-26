@@ -544,3 +544,9 @@ Trois lignes par session : ce qui a été fait, ce qui reste à surveiller, la p
 - **Fait** : nom, prénom et « Tout garder » en haut de « Mon bilan » (les formats séparés repliés dessous) ; légende N1 à N4 avec un mot simple et la phrase du référentiel, aussi sur le PDF (D-040). Vérifié à 390 px et sur ordinateur. Publié.
 - **À surveiller** : les mots choisis pour les niveaux correspondent-ils à la grille d'évaluation d'Audrey ?
 - **Prochaine tâche** : 5.2 (Bloc 1), en attente des cours.
+
+## 26/11/2026 · Code de reprise plus visible
+
+- **Fait** : bloc « 🔑 Mon code de reprise » encadré en jaune, code en gros ; sur l'écran d'accueil sous les matières, replié tout en haut des listes de missions (code dans le titre), et rappelé dans « Mon bilan ». Vérifié à 390 px et sur ordinateur. Publié.
+- **À surveiller** : les élèves notent-ils leur code ?
+- **Prochaine tâche** : 5.2 (Bloc 1), en attente des cours.
