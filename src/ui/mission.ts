@@ -772,6 +772,13 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
     { titre: contenu.referentiel.bloc, referentiel: contenu.referentiel },
     ...(contenu.referentielPse ? [{ titre: 'PSE · Prévention santé environnement', referentiel: contenu.referentielPse }] : []),
   ]);
+  // Lecture simple des niveaux pour l'élève (la phrase officielle du référentiel est affichée à côté).
+  const SENS_NIVEAU: Record<Niveau, string> = {
+    N1: 'Pas encore acquis',
+    N2: 'En cours d\'acquisition',
+    N3: 'Acquis',
+    N4: 'Maîtrisé et transféré',
+  };
   const badge = (n?: Niveau) => (n ? `<span class="badge badge--niveau badge--${n}">${n}</span>` : '<span class="bilan__vide">pas encore</span>');
   const ouvrirBilan = () => {
     const parties = partiesBilan();
@@ -781,7 +788,35 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
         <h2>Mon bilan</h2>
         <button type="button" class="bouton bouton--petit" data-action="fermer" aria-label="Fermer">×</button>
       </div>
-      <p class="indice">Le meilleur niveau obtenu pour chaque compétence, et le détail par mission. Gardé sur cet appareil seulement.</p>
+      <section class="garder-bilan">
+        <h3>Mettre mon nom et garder mon bilan</h3>
+        <div class="identite-bilan">
+          <label>Prénom (obligatoire) <input name="prenom" autocomplete="off" maxlength="40" required></label>
+          <label>Nom (obligatoire) <input name="nom" autocomplete="off" maxlength="40" required></label>
+          <label>Classe <input name="classe" autocomplete="off" maxlength="20"></label>
+        </div>
+        <p class="nom-manquant" role="status">✏️ Écrivez votre prénom et votre nom pour pouvoir télécharger votre bilan.</p>
+        <div class="rangee-boutons rangee-boutons--export">
+          <button type="button" class="bouton bouton--principal" data-action="tout-telecharger" data-export disabled>⬇ Tout garder : PDF + tableau + fichier de données</button>
+          <p class="indice">Si le navigateur demande d'autoriser plusieurs téléchargements, répondez « Autoriser ». Pour le PDF, choisissez « Enregistrer en PDF » dans la fenêtre d'impression. Les fichiers vont dans « Téléchargements » (sur iPhone : app Fichiers).</p>
+        </div>
+        <details class="un-seul">
+          <summary>Ou un seul format à la fois</summary>
+          <div class="rangee-boutons rangee-boutons--export">
+            <button type="button" class="bouton" data-action="imprimer-bilan" data-export disabled>🖨 Imprimer ou enregistrer en PDF</button>
+            <button type="button" class="bouton" data-action="telecharger-csv" data-export disabled>📊 Tableau pour LibreOffice ou Excel</button>
+            <button type="button" class="bouton" data-action="telecharger-json" data-export disabled>🗂 Fichier de données (à garder)</button>
+          </div>
+        </details>
+        <p class="conseil-fichier">💾 <strong>À la fin de chaque séance, gardez votre « Fichier de données »</strong> (ENT, Pronote ou clé USB). Si l'ordinateur efface tout, ou si vous changez d'appareil, il vous permet de retrouver votre progression : bouton « Reprendre avec mon fichier de bilan », en bas de la liste des missions. Votre nom n'est ni envoyé ni gardé dans le jeu.</p>
+      </section>
+      <h3>Que veulent dire les niveaux ?</h3>
+      <ul class="legende-niveaux">
+        ${(['N1', 'N2', 'N3', 'N4'] as const).map((n) => `
+          <li><span class="badge badge--niveau badge--${n}">${n}</span>
+            <span><strong>${SENS_NIVEAU[n]}</strong> · ${echapper(contenu.referentiel.niveaux[n])}</span></li>`).join('')}
+      </ul>
+      <p class="indice">N4 ne s'obtient que dans les missions de transfert (situation nouvelle). Ci-dessous : le meilleur niveau obtenu pour chaque compétence, et le détail par mission. Gardé sur cet appareil seulement.</p>
       ${parties.map((p) => `
         <h3>${echapper(p.titre)}</h3>
         <ul class="bilan">
@@ -792,25 +827,7 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
                 ${l.resultats.length ? `<span class="bilan__detail">${l.resultats.map((r) => `${echapper(r.titre)} : ${r.niveau}`).join(' · ')}</span>` : ''}
               </span>
             </li>`).join('')}
-        </ul>`).join('')}
-      <h3>Mettre mon nom et garder mon bilan</h3>
-      <p class="indice">Votre nom sert seulement à remplir la fiche et les fichiers. Il n'est ni envoyé ni gardé dans le jeu.</p>
-      <div class="identite-bilan">
-        <label>Prénom (obligatoire) <input name="prenom" autocomplete="off" maxlength="40" required></label>
-        <label>Nom (obligatoire) <input name="nom" autocomplete="off" maxlength="40" required></label>
-        <label>Classe <input name="classe" autocomplete="off" maxlength="20"></label>
-      </div>
-      <p class="nom-manquant" role="status">✏️ Écrivez votre prénom et votre nom pour pouvoir télécharger votre bilan.</p>
-      <div class="rangee-boutons rangee-boutons--export">
-        <button type="button" class="bouton bouton--principal" data-action="tout-telecharger" data-export disabled>⬇ Tout garder : PDF + tableau + fichier de données</button>
-        <p class="indice">Le navigateur peut demander d'autoriser plusieurs téléchargements : répondez « Autoriser ». Puis choisissez « Enregistrer en PDF » dans la fenêtre d'impression.</p>
-        <p class="indice">Ou un seul à la fois :</p>
-        <button type="button" class="bouton" data-action="imprimer-bilan" data-export disabled>🖨 Imprimer ou enregistrer en PDF</button>
-        <button type="button" class="bouton" data-action="telecharger-csv" data-export disabled>📊 Tableau pour LibreOffice ou Excel</button>
-        <button type="button" class="bouton" data-action="telecharger-json" data-export disabled>🗂 Fichier de données (à garder)</button>
-      </div>
-      <p class="conseil-fichier">💾 <strong>À la fin de chaque séance, téléchargez votre « Fichier de données » et gardez-le</strong> (ENT, Pronote ou clé USB). Si l'ordinateur efface tout, ou si vous changez d'appareil, ce fichier vous permet de retrouver votre progression : bouton « Reprendre avec mon fichier de bilan », en bas de la liste des missions.</p>
-      <p class="indice">Le fichier va dans le dossier « Téléchargements » (sur iPhone : app Fichiers).</p>`);
+        </ul>`).join('')}`);
     // Prénom et nom obligatoires : les boutons de téléchargement restent grisés tant qu'ils ne sont pas écrits,
     // pour que chaque fiche et chaque fichier rendu à l'enseignante porte bien le nom de l'élève.
     const verifierNom = () => {
@@ -859,7 +876,7 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
     fiche.innerHTML = `
       <h1>Mon bilan de compétences · Une journée aux Glycines</h1>
       <p>Nom : ${eleve.nom || eleve.prenom ? `<strong>${echapper(`${eleve.prenom} ${eleve.nom}`.trim())}</strong>` : '______________________'} &nbsp; Classe : ${eleve.classe ? `<strong>${echapper(eleve.classe)}</strong>` : '__________'} &nbsp; Date : ${new Date().toLocaleDateString('fr-FR')}</p>
-      <p>${echapper(contenu.referentiel.diplome)}. Niveaux : ${(['N1', 'N2', 'N3', 'N4'] as const).map((n) => `<strong>${n}</strong> ${echapper(contenu.referentiel.niveaux[n])}`).join(' ')}</p>
+      <p>${echapper(contenu.referentiel.diplome)}. Niveaux : ${(['N1', 'N2', 'N3', 'N4'] as const).map((n) => `<strong>${n} ${SENS_NIVEAU[n]}</strong> (${echapper(contenu.referentiel.niveaux[n])})`).join(' · ')}</p>
       ${parties.map((p) => `
         <h2>${echapper(p.titre)}</h2>
         <table>

@@ -497,6 +497,14 @@ html, body {
 .rangee-boutons--export .bouton:disabled { opacity: .45; cursor: not-allowed; }
 .nom-manquant { margin: 0 0 8px; padding: 8px 10px; border-radius: 10px; background: #fdecec; border-left: 4px solid #c0392b; font-weight: 600; }
 .nom-manquant[hidden] { display: none; }
+.garder-bilan { margin: 8px 0 14px; padding: 10px 12px; border-radius: 12px; background: #f6f2fb; border: 2px solid #d9d3e3; }
+.garder-bilan h3 { margin-top: 0; }
+.un-seul { margin: 6px 0; }
+.legende-niveaux { list-style: none; margin: 0 0 6px; padding: 0; display: grid; gap: 6px; }
+.legende-niveaux li { display: flex; align-items: flex-start; gap: 10px; }
+.legende-niveaux .badge { flex: 0 0 auto; min-width: 44px; text-align: center; }
+.un-seul summary { min-height: 44px; display: flex; align-items: center; cursor: pointer; color: var(--violet); font-weight: 600; }
+.un-seul .rangee-boutons--export { margin-top: 4px; }
 .identite-bilan input:focus-visible { outline: 3px solid var(--violet); outline-offset: 1px; }
 .bilan__detail { display: block; font-size: .85rem; opacity: .8; margin-top: 2px; }
 

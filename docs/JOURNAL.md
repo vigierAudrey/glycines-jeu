@@ -538,3 +538,9 @@ Trois lignes par session : ce qui a été fait, ce qui reste à surveiller, la p
 - **Fait** : prénom et nom obligatoires avant tout téléchargement dans « Mon bilan » ; bouton « Tout garder : PDF + tableau + fichier de données » (D-039). Testé à 390 px et sur ordinateur (deux fichiers nommés + impression). Publié.
 - **À surveiller** : sur iPhone, plusieurs téléchargements d'un coup peuvent être moins fluides ; les boutons séparés restent là.
 - **Prochaine tâche** : 5.2 (Bloc 1), en attente des cours.
+
+## 26/11/2026 · Mon bilan réorganisé et niveaux expliqués
+
+- **Fait** : nom, prénom et « Tout garder » en haut de « Mon bilan » (les formats séparés repliés dessous) ; légende N1 à N4 avec un mot simple et la phrase du référentiel, aussi sur le PDF (D-040). Vérifié à 390 px et sur ordinateur. Publié.
+- **À surveiller** : les mots choisis pour les niveaux correspondent-ils à la grille d'évaluation d'Audrey ?
+- **Prochaine tâche** : 5.2 (Bloc 1), en attente des cours.

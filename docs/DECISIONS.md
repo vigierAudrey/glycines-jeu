@@ -231,3 +231,9 @@ On ne redessine que si la vue change (batterie des téléphones). Les étiquette
 - **Demande d'Audrey** : être sûre que chaque bilan rendu porte le nom de l'élève, et récupérer les trois formats d'un coup.
 - **Décision** : dans « Mon bilan », les boutons de téléchargement restent grisés tant que le prénom et le nom ne sont pas écrits (la classe reste facultative). Un bouton principal « Tout garder » télécharge le fichier de données (.json) et le tableau (.csv), puis ouvre l'impression pour le PDF. Les trois boutons séparés restent en dessous, en secours.
 - **Limite** : le PDF passe forcément par la fenêtre d'impression (« Enregistrer en PDF »), le jeu ne peut pas le créer seul sans nouvelle bibliothèque. Le navigateur peut demander une fois d'autoriser plusieurs téléchargements.
+
+## D-040 · Lecture simple des niveaux N1 à N4 · 26/11/2026
+
+- **Demande d'Audrey** : rappeler à quoi correspondent les niveaux, pour savoir si une compétence est maîtrisée.
+- **Décision** : dans « Mon bilan » (en haut de la liste) et sur le PDF, chaque niveau a un mot simple à côté de la phrase officielle du référentiel : N1 « Pas encore acquis », N2 « En cours d'acquisition », N3 « Acquis », N4 « Maîtrisé et transféré ». Choix par défaut : N3 = acquis (autonome en situation connue). Si votre grille d'évaluation dit autre chose, ces mots se changent facilement.
+- **Aussi** : le bloc « nom, prénom, téléchargement » est remonté tout en haut de « Mon bilan ».
