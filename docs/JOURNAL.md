@@ -526,3 +526,9 @@ Trois lignes par session : ce qui a été fait, ce qui reste à surveiller, la p
 - **Fait** : phrase pour l'élève dans « Mon bilan » et sous le code de reprise : télécharger le fichier de bilan à chaque séance pour retrouver sa progression ; bouton renommé « Fichier de données (à garder) » ; vouvoiement harmonisé. Publié.
 - **À surveiller** : les élèves gardent-ils leur fichier d'une séance à l'autre ?
 - **Prochaine tâche** : 5.2 (Bloc 1), en attente des cours.
+
+## 26/11/2026 · Bouton « Mon bilan » plus visible
+
+- **Fait** : bouton « 📄 Mon bilan » dans la barre du haut, à côté de « Missions » (toujours visible), et sur l'écran de fin de mission. Sur téléphone, le titre de la barre est masqué pour que les boutons tiennent sur deux lignes. Vérifié à 390 px et sur ordinateur. Publié.
+- **À surveiller** : les élèves trouvent-ils les exports (tableur, fichier de données) sans aide ?
+- **Prochaine tâche** : 5.2 (Bloc 1), en attente des cours.

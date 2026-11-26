@@ -82,7 +82,14 @@ html, body {
   box-shadow: var(--ombre);
 }
 .barre__titre { margin: 0; font-size: 1rem; }
-.barre__actions { display: flex; gap: 6px; }
+.barre__actions { display: flex; flex-wrap: wrap; gap: 6px; }
+/* Téléphone en portrait : la place manque pour le titre et les six boutons (Missions, Mon bilan, vues, Qui est qui ?).
+   On masque le titre (l'écran d'accueil le donne déjà) : les boutons tiennent sur deux lignes, comme avant. */
+@media (max-width: 480px) {
+  .barre { padding: 6px; }
+  .barre__titre { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .barre__actions { gap: 4px; }
+}
 
 .bouton {
   min-width: 44px;

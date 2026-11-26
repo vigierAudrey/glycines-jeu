@@ -98,6 +98,15 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
   bouton.textContent = 'Missions';
   bouton.addEventListener('click', () => ouvrirListe());
   racine.querySelector('.barre__actions')?.prepend(bouton);
+  // « Mon bilan » toujours visible dans la barre du haut, à côté de « Missions » (exports PDF, tableur, fichier).
+  if (liens.progression) {
+    const boutonBilan = document.createElement('button');
+    boutonBilan.type = 'button';
+    boutonBilan.className = 'bouton bouton--texte bouton--mission';
+    boutonBilan.textContent = '📄 Mon bilan';
+    boutonBilan.addEventListener('click', () => ouvrirBilan());
+    bouton.after(boutonBilan);
+  }
 
   // ---------- État de la partie ----------
   let mission: Mission | null = null;
@@ -701,6 +710,7 @@ export function monterMissions(racine: HTMLElement, theatre: Theatre, contenu: C
       <ol class="debriefing">${b.debriefing.map((q) => `<li class="a-lire">${echapper(q)}</li>`).join('')}</ol>
       <div class="rangee-boutons">
         <button type="button" class="bouton bouton--texte" data-action="imprimer-fiche">🖨 Imprimer ma fiche</button>
+        ${liens.progression ? '<button type="button" class="bouton bouton--texte" data-action="mon-bilan">📄 Mon bilan</button>' : ''}
         <button type="button" class="bouton bouton--principal" data-action="fermer">Terminer</button>
       </div>`);
     dernierBilan = b;
